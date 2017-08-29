@@ -7,21 +7,16 @@ Welcome to the Premiere Scripting Guide!
 
     1 - Introduction/index
     1 - Introduction/extendscript-overview
-    1 - Introduction/scripting-for-specific-applications
+    1 - Introduction/how-to-execute-scripts
 
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 2 - The ExtendScript Toolkit
+    :caption: Chapter 2 - App object
 
-    2 - ExtendScript Toolkit/index
-    2 - ExtendScript Toolkit/configuring-the-toolkit-window
-    2 - ExtendScript Toolkit/selecting-scripts
-    2 - ExtendScript Toolkit/the-script-editor
-    2 - ExtendScript Toolkit/debugging-in-the-toolkit
-    2 - ExtendScript Toolkit/code-profiling-for-optimization
-    2 - ExtendScript Toolkit/inspecting-object-models
-
+    2 - App object/index
+    2 - App object/application
+    
 .. toctree::
     :maxdepth: 2
     :caption: Chapter 3 - File System Access
