@@ -9,9 +9,9 @@ Application object
 
 **Description**
 
-Provides access to objects and application settings within the After Effects application. The single global object is always available by its name, app.
+Provides access to objects and application settings within the Premiere Pro application. The single global object is always available by its name, **app**.
 
-Attributes of the Application object provide access to specific objects within After Effects. Methods of the Application object can create a project, open an existing project, control Watch Folder mode, purge memory, and quit the After Effects application. When the After Effects application quits, it closes the open project, prompting the user to save or discard changes as necessary, and creates a project file as necessary.
+Attributes of the Application object provide access to specific objects within Premiere Pro. Methods of the Application object can create, open and close projects, access other APIs available from the PPro DOM (Anywhere, Team Projects, Encoder), and quit Premiere Pro. 
 
 ----
 
@@ -19,89 +19,20 @@ Attributes of the Application object provide access to specific objects within A
 Attributes
 ==========
 
-.. _app.activeViewer:
+.. _app.version:
 
-app.activeViewer
+app.version
 *********************************************
 
-``app.activeViewer``
+``app.version``
 
 **Description**
 
-The Viewer object for the currently focused or active-focused viewer (Composition, Layer, or Footage) panel. Returns null if no viewers are open.
+The version of Premiere Pro, providing the API.
 
 **Type**
 
-Viewer object; read-only.
-
-----
-
-.. _app.availableGPUAccelTypes:
-
-app.availableGPUAccelTypes
-*********************************************
-
-``app.availableGPUAccelTypes``
-
-.. note::
-   This functionality was added in After Effects 14.0 (CC 2017)
-
-**Description**
-
-The Viewer object for the currently focused or active-focused viewer (Composition, Layer, or Footage) panel.
-
-Use this in conjunction with ``app.project.gpuAccelType`` to set the value for Project Settings > Video Rendering and Effects > Use.
-
-**Type**
-
-Array of ``GpuAccelType`` enums, or null if no viewers are open; Read-only. One of:
-
-- ``CUDA``
-- ``Metal``
-- ``OPENCL``
-- ``SOFTWARE``
-
-**Example**
-The following sample code checks the current computer's available GPU acceleration types, and sets it to Metal if available::
-
-    // app.availableGPUAccelTypes returns GPU acceleration types available on the current system.
-    // You can use this to check before setting the GPU acceleration type.
-    {
-        var newType = GpuAccelType.METAL;
-
-        // Before trying to set, check which GPU acceleration types are available on the current system.
-        var canSet = false;
-        var currentOptions = app.availableGPUAccelTypes;
-        for (op in currentOptions) {
-            if (currentOptions[op] == newType)
-                canSet = true;
-        }
-
-        if (canSet) {
-            // Set the GPU acceleration type.
-            app.project.gpuAccelType = newType
-        }
-        else {
-            alert("Metal is not available on this OS.");
-        }
-    }
-
-----
-
-.. _app.buildName:
-
-app.buildName
-*********************************************
-
-``app.buildName``
-
-**Description**
-
-The name of the build of After Effects being run, used internally by Adobe for testing and troubleshooting.
-
-**Type**
-
-String; read-only.
+Floating point; read-only.
 
 ----
 
@@ -114,7 +45,7 @@ app.buildNumber
 
 **Description**
 
-The number of the build of After Effects being run, used internally by Adobe for testing and troubleshooting.
+The number of the build of Premiere Pro being run.
 
 **Type**
 
@@ -122,208 +53,40 @@ Integer; read-only.
 
 ----
 
-.. _app.effects:
+.. _app.getPProPrefPath:
 
-app.effects
+app.getPProPrefPath
 *********************************************
 
-``app.effects``
+``app.getPProPrefPath``
 
 **Description**
 
-The effects available in the application.
+The path containing the currently active "Adobe Premiere Pro Prefs" file.
 
 **Type**
 
-Array, with each element containing the following properties; read-only:
-
-===============  ===========================================================
-``displayName``  String representing the localized display name of the
-                 effect as seen in the Effect menu.
-``category``     String representing the localized category label as seen
-                 in the Effect menu. This can be "" for synthetic effects
-                 that aren't normally shown to the user.
-``matchName``    String representing the internal unique name for the effect.
-                 This name does not change between versions of After Effects.
-                 Use this value to apply the effect.
-``version``      Effect's internal version string.
-                 This value might be different than the version number the
-                 plug-in vendor decides to show in the effect's about box.
-===============  ===========================================================
-
-**Example**
-
-::
-
-  var effectName = app.effects[12].displayName;
+String; read-only.
 
 ----
 
-.. _app.exitAfterLaunchAndEval:
+.. _app.getPProSysPrefPath:
 
-app.exitAfterLaunchAndEval
+app.getPProSysPrefPath
 *********************************************
 
-``app.exitAfterLaunchAndEval``
+``app.getPProSysPrefPath``
 
 **Description**
 
-This attribute is used only when executing a script from a command line on Windows. When the application is launched from the command line, the ``–r`` or ``–s`` command line flag causes the application to run a script (from a file or from a string, respectively). If this attribute is set to true, After Effects will exit after the script is run; if it is false, the application will remain open. This attribute only has an effect when After Effects is run from the Windows command line. It has no effect in Mac OS.
+The path containing Premiere Pro's active configuration files, not specific to a given user.
 
 **Type**
 
-Boolean; read/write.
+String; read-only.
 
 ----
 
-.. _app.exitCode:
-
-app.exitCode
-*********************************************
-
-``app.exitCode``
-
-**Description**
-
-A numeric status code used when executing a script externally (that is, from a command line or AppleScript).
-
--  In Windows, the value is returned on the command line when After Effects was launched on the command line (using the ``afterfx`` or ``afterfx –m`` command), and a script was specified with the ``–r`` or ``–s`` option.
-
--  in Mac OS, the value is returned as the AppleScript ``DoScript`` result for each script.
-
-In both Mac OS and Windows, the value is set to 0 (``EXIT_SUCCESS``) at the beginning of each script evaluation. In the event of an error while the script is running, the script can set this to a positive integer that indicates what error occurred.
-
-**Type**
-
-Integer; read/write.
-
-**Example**
-
-::
-
-  app.exitCode = 2; // on quit, if value is 2, an error has occurred
-
-----
-
-.. _app.isoLanguage:
-
-app.isoLanguage
-*********************************************
-
-``app.isoLanguage``
-
-**Description**
-
-A string indicating the locale (language and regional designations) After Effects is running.
-
-.. note::
-   ``$.locale`` returns the operating system language, not the language of the After Effects application.
-
-**Type**
-
-String; read-only. Some common values include:
-
--  ``en_US`` for English (United States)
--  ``de_DE`` for German (Germany)
--  ``es_ES`` for Spanish (Spain)
--  ``fr_FR`` for French (France)
--  ``it_IT`` for Italian (Italy)
--  ``ja_JP`` for Japanese (Japan)
--  ``ko_KR`` for Korean (Korea)
-
-**Example**
-
-::
-
-  var lang = app.isoLanguage;
-  if (lang == "en_US") {
-    alert("After Effects is running in English.");
-  }
-  elseif (lang == "fr_FR") {
-    alert("After Effects is running in French.");
-  }
-  else {
-    alert("After Effects is running in English or French.");
-  }
-
-----
-
-.. _app.isRenderEngine:
-
-app.isRenderEngine
-*********************************************
-
-``app.isRenderEngine``
-
-**Description**
-
-True if After Effects is running as a render engine.
-
-**Type**
-
-Boolean; read-only.
-
-----
-
-.. _app.isWatchFolder:
-
-app.isWatchFolder
-*********************************************
-
-``app.isWatchFolder``
-
-**Description**
-
-True if the Watch Folder dialog box is currently displayed and the application is currently watching a folder for rendering.
-
-**Type**
-
-Boolean; read-only.
-
-----
-
-.. _app.memoryInUse:
-
-app.memoryInUse
-*********************************************
-
-``app.memoryInUse``
-
-**Description**
-
-The number of bytes of memory currently used by this application.
-
-**Type**
-
-Number; read-only.
-
-----
-
-.. _app.onError:
-
-app.onError
-*********************************************
-
-``app.onError``
-
-**Description**
-
-The name of a callback function that is called when an error occurs. By creating a function and assigning it to this attribute, you can respond to errors systematically; for example, you can close and restart the application, noting the error in a log file if it occurred during rendering. See :ref:`RenderQueue.render`. The callback function is passed the error string and a severity string. It should not return any value.
-
-**Type**
-
-A function name string, or null if no function is assigned; read/write.
-
-**Example**
-
-::
-
-  function err(errString) {
-    alert(errString) ;
-  }
-  app.onError = err;
-
-----
 
 .. _app.project:
 
@@ -334,89 +97,128 @@ app.project
 
 **Description**
 
-The project that is currently loaded. See :ref:`Project`.
-
-**Type**
-
-Project object; read-only.
-
-----
-
-.. _app.saveProjectOnCrash:
-
-app.saveProjectOnCrash
-*********************************************
-
-``app.saveProjectOnCrash``
-
-**Description**
-
-When true (the default), After Effects attempts to display a dialog box that allows you to save the current project if an error causes the application to quit unexpectedly. Set to false to suppress this dialog box and quit without saving.
-
-**Type**
-
-Boolean; read/write.
-
-----
-
-.. _app.settings:
-
-app.settings
-*********************************************
-
-``app.settings``
-
-**Description**
-
-The currently loaded settings. See :ref:`Settings`.
-
-**Type**
-
-Settings object; read-only.
-
-----
-
-.. _app.version:
-
-app.version
-*********************************************
-
-``app.version``
-
-.. note::
-   This functionality was added in After Effects 12.0 (CC)
-
-**Description**
-
-An alphanumeric string indicating which version of After Effects is running.
+The currently active project. Before Premiere Pro 12.0, this pointed at the *only* project; in 12.0, this points to the currently active project.
 
 **Type**
 
 String; read-only.
 
-**Example**
+----
 
-::
+.. _app.projects:
 
-  var ver = app.version;
-  alert("This machine is running version" + ver + "of AfterEffects.");
+app.projects
+*********************************************
 
------
+``app.projects``
+
+**Description**
+
+An Array referencing all open projects.
+
+**Type**
+
+Array (of Project objects); read-only.
+
+----
+
+.. _app.anywhere:
+
+app.anywhere
+*********************************************
+
+``app.anywhere``
+
+**Description**
+
+An Anywhere object, providing access to connected Anywhere servers, through the Premiere Pro DOM. 
+
+**Type**
+Anywhere object; read-only.
+----
+
+.. _app.Encoder:
+
+app.Encoder
+*********************************************
+
+``app.Encoder``
+
+**Description**
+
+An Encoder object, providing access to Adobe Media Encoder (as used by Premiere Pro), through the Premiere Pro DOM. 
+
+**Type**
+
+Encoder object; read-only.
+
+----
+
+.. _app.properties:
+
+app.properties
+*********************************************
+
+``app.properties``
+
+**Description**
+
+The properties object provides methods to access and modify preference values.
+
+**Type**
+
+properties object; read-only.
+
+----
+
+.. _app.sourceMonitor:
+
+app.sourceMonitor
+*********************************************
+
+``app.sourceMonitor``
+
+**Description**
+
+Provides access to Source monitor.
+
+**Type**
+
+sourceMonitor object; read-only.
+
+----
+
+.. _app.userGuid:
+
+app.userGuid
+*********************************************
+
+``app.userGuid``
+
+**Description**
+
+userGuid which uniquely identifies the user.
+
+**Type**
+
+GUID; read-only.
+
+----
 
 =======
 Methods
 =======
 
-.. _app.activate:
+.. _app.isDocumentOpen:
 
-app.activate()
+app.isDocumentOpen()
 *********************************************
 
-``app.activate()``
+``app.isDocumentOpen()``
 
 **Description**
 
-Opens the application main window if it is minimized or iconified, and brings it to the front of the desktop.
+Determines whether there are any projects currently open.
 
 **Parameters**
 
@@ -424,20 +226,20 @@ None.
 
 **Returns**
 
-Nothing.
+Returns **true** if at least 1 project is open; otherwise **false**.
 
 ----
 
-.. _app.beginSuppressDialogs:
+.. _app.isDocument:
 
-app.beginSuppressDialogs()
+app.isDocument(path)
 *********************************************
 
-``app.beginSuppressDialogs()``
+``app.isDocument(path)``
 
 **Description**
 
-Begins suppression of script error dialog boxes in the user interface. Use `app.endSuppressDialogs()`_ to resume the display of error dialogs.
+Determines whether the file at path can be opened as a Premiere Pro project.
 
 **Parameters**
 
@@ -445,308 +247,53 @@ None.
 
 **Returns**
 
-Nothing.
+Returns **true** if file is openeable.
 
 ----
 
-.. _app.beginUndoGroup:
+.. _app.openDocument:
 
-app.beginUndoGroup()
+app.openDocument(path)
 *********************************************
 
-``app.beginUndoGroup(undoString)``
+``app.openDocument(path)``
 
 **Description**
 
-Marks the beginning of an undo group, which allows a script to logically group all of its actions as a single undoable action (for use with the Edit > Undo/Redo menu items). Use the `app.endUndoGroup()`_ method to mark the end of the group.
-
-``beginUndoGroup()`` and ``endUndoGroup()`` pairs can be nested. Groups within groups become part of the larger group, and will undo correctly. In this case, the names of inner groups are ignored.
+Opens the file at the specified path, as a Premiere Pro project.
 
 **Parameters**
 
-==============  ==========================================
-``undoString``  The text that will appear for the Undo command in the
-                Edit menu (that is, "Undo ")
-==============  ==========================================
+path
 
 **Returns**
 
-Nothing.
+Returns **true** if file was successfully opened.
 
 ----
 
-.. _app.cancelTask:
 
-app.cancelTask()
+.. _app.openFCPXML:
+
+app.openFCPXML(path, projPath)
 *********************************************
 
-``app.cancelTask(taskID)``
+``app.openFCPXML(path, projPath)``
 
 **Description**
 
-Removes the specified task from the queue of tasks scheduled for delayed execution.
+Opens an FCP XML file at path, as a Premiere Pro project (specified in projPath).
 
 **Parameters**
 
-==========  =============================
-``taskID``  An integer that identifies the task, as returned by
-            `app.scheduleTask()`_.
-==========  =============================
+path, projPath.
 
 **Returns**
 
-Nothing.
+Returns **true** if file was successfully opened as a Premiere Pro project.
 
 ----
 
-.. _app.endSuppressDialogs:
-
-app.endSuppressDialogs()
-*********************************************
-
-``app.endSuppressDialogs(alert)``
-
-**Description**
-
-Ends the suppression of script error dialog boxes in the user interface. Error dialogs are displayed by default;call this method only if `app.beginSuppressDialogs()`_ has previously been called.
-
-**Parameters**
-
-============  =========  ==============================================
-``alert``     Boolean;   when true, errors that have occurred following
-                         the call to ``beginSuppressDialogs()`` are
-                         displayed in adialog box.
-============  =========  ==============================================
-
-**Returns**
-
-Nothing.
-
-----
-
-.. _app.endUndoGroup:
-
-app.endUndoGroup()
-*********************************************
-
-``app.endUndoGroup()``
-
-**Description**
-
-Marks the end of an undo group begun with the `app.beginUndoGroup()`_ method. You can use this method to place an end to an undo group in the middle of a script, should you wish to use more than one undo group for a single script. If you are using only a single undo group for a given script, you do not need to use this method; in its absence at the end of a script, the system will close the undo group automatically. Calling this method without having set a ``beginUndoGroup()`` method yields an error.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Nothing.
-
-----
-
-.. _app.endWatchFolder:
-
-app.endWatchFolder()
-*********************************************
-
-``app.endWatchFolder()``
-
-**Description**
-
-Ends Watch Folder mode.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Nothing.
-
-**See also**
-
-- `app.watchFolder()`_
-- `app.parseSwatchFile()`_
-- `app.isWatchFolder`_
-
-----
-
-.. _app.newProject:
-
-app.newProject()
-*********************************************
-
-``app.newProject()``
-
-**Description**
-
-Creates a new project in After Effects, replicating the File > New > New Project menu command. If the current project has been edited, the user is prompted to save it. If the user cancels out of the Save dialog box, the new project is not created and the method returns null. Use ``app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES)`` to close the current project before opening a new one. See :ref:`project.close`
-
-**Parameters**
-
-None.
-
-**Returns**
-
-A new Project object, or null if no new project is created.
-
-**Example**
-
-::
-
-    app.project.close(CloseOptions.DO_NOT_SAVE_CHANGES);
-    app.newProject();
-
-----
-
-.. _app.open:
-
-app.open()
-*********************************************
-
-|  ``app.open()``
-|  ``app.open(file)``
-
-**Description**
-
-Opens a project.
-
-**Parameters**
-
-=========  =========  ==============================
-``file``   Optional   An ExtendScript File object for the project file
-                      to open. If not supplied, the method prompts the user
-                      to select a project file.
-=========  =========  ==============================
-
-**Returns**
-
-A new Project object for the specified project, or null if the user cancels the Open dialog box.
-
-**Example**
-
-::
-
-  var my_file = new File("../my_folder/my_test.aep");
-  if (my_file.exists) {
-    new_project = app.open(my_file); if (new_project) {
-      alert(new_project.file.name);
-    }
-  }
-
-----
-
-.. _app.parseSwatchFile:
-
-app.parseSwatchFile()
-*********************************************
-
-``app.parseSwatchFile(file)``
-
-**Description**
-
-Loads color swatch data from an Adobe Swatch Exchange (ASE) file.
-
-**Parameters**
-
-========  ============================
-``file``  The file specification, an ExtendScript ``File`` object.
-========  ============================
-
-**Returns**
-
-The swatch data, in this format:
-
-+------------------------+---------------------------------------------------+
-| ``data.majorVersion``  | The ASE version number.                           |
-| ``data.minorVersion``  |                                                   |
-+------------------------+---------------------------------------------------+
-| ``data.values``        | An array of Swatch Value.                         |
-+------------------------+---------------------------------------------------+
-| ``SwatchValue.type``   |  One of "RGB", "CMYK", "LAB", "Gray"              |
-+------------------------+---------------------------------------------------+
-| ``SwatchValue.r``      | When ``type = "RGB"``, the color values in the    |
-|                        | range ``[0.0..1.0]``.                             |
-| ``SwatchValue.g``      | 0, 0, 0 is Black.                                 |
-| ``SwatchValue.b``      |                                                   |
-+------------------------+---------------------------------------------------+
-| ``SwatchValue.c``      | When ``type`` = "CMYK", the color values in the   |
-|                        | range  [0.0..1.0].                                |
-| ``SwatchValue.m``      | 0, 0, 0, 0 is White.                              |
-| ``SwatchValue.y``      |                                                   |
-| ``SwatchValue.k``      |                                                   |
-+------------------------+---------------------------------------------------+
-| ``SwatchValue.L``      | When ``type = "LAB"``, the color values.          |
-| ``SwatchValue.a``      | ``L`` is in the range [0.0..1.0]. ``a`` and ``b`` |
-|                        | are in the range [-128.0..+128.0]                 |
-| ``SwatchValue.b``      | 0, 0, 0 is Black.                                 |
-| ``SwatchValue.value``  | When ``type = "Gray"``, the ``value`` range is    |
-|                        | [0.0..1.0]. 0.0 is Black.                         |
-+------------------------+---------------------------------------------------+
-
-----
-
-.. _app.pauseWatchFolder:
-
-app.pauseWatchFolder()
-*********************************************
-
-``app.pauseWatchFolder(pause)``
-
-**Description**
-
-Pauses or resumes the search of the target watch folder for items to render.
-
-**Parameters**
-
-=========  ============================
-``pause``  True to pause, false to resume.
-=========  ============================
-
-**Returns**
-
-Nothing.
-
-**See also**
-
-- `app.isWatchFolder`_
-- `app.watchFolder()`_
-- `app.endWatchFolder()`_
-
-----
-
-.. _app.purge:
-
-app.purge()
-*********************************************
-
-``app.purge(target)``
-
-**Description**
-
-Purges unused data of the specified types from memory. Replicates the Purge options in the Edit menu.
-
-**Parameters**
-
-+------------+---------------------------------------------------------------+
-| ``target`` | The type of elements to purge from memory; a PurgeTarget      |
-|            | enumerated value, one of:                                     |
-|            |                                                               |
-|            | - ``PurgeTarget.ALL_CACHES``: Purges all data that After      |
-|            |   Effects has cached to physical memory.                      |
-|            | - ``PurgeTarget.UNDO_CACHES``: Purges all data saved in the   |
-|            |   undo cache.                                                 |
-|            | - ``PurgeTarget.SNAPSHOT_CACHES``: Purges all data cached as  |
-|            |   composition/layer snapshots.                                |
-|            | - ``PurgeTarget.IMAGE_CACHES`` : Purges all saved image data. |
-+------------+---------------------------------------------------------------+
-
-**Returns**
-
-Nothing.
-
-----
 
 .. _app.quit:
 
@@ -757,7 +304,7 @@ app.quit()
 
 **Description**
 
-Quits the After Effects application.
+Quits Premiere Pro; user will be prompted to save any changes to project.
 
 **Parameters**
 
@@ -769,53 +316,20 @@ Nothing.
 
 ----
 
-.. _app.scheduleTask:
+.. _app.trace:
 
-app.scheduleTask()
+app.trace()
 *********************************************
 
-``app.scheduleTask(stringToExecute, delay, repeat)``
+``app.trace()``
 
 **Description**
 
-Schedules the specified JavaScript for delayed execution.
+Writes a string to Premiere Pro's debug console.
 
 **Parameters**
 
-===================   ==============================================
-``stringToExecute``   A string containing JavaScript to be executed.
-``delay``             A number of milliseconds to wait before executing
-                      the JavaScript. A floating-point value.
-``repeat``            When true, execute the script repeatedly, with the
-                      specified delay between each execution. When false the
-                      script is executed only once.
-===================   ==============================================
-
-**Returns**
-
-Integer, a unique identifier for this task, which can be used to cancel it with `app.cancelTask()`_.
-
-----
-
-.. _app.setMemoryUsageLimits:
-
-app.setMemoryUsageLimits()
-*********************************************
-
-``app.setMemoryUsageLimits(imageCachePercentage, maximumMemoryPercentage)``
-
-**Description**
-
-Sets memory usage limits as in the Memory & Cache preferences area. For both values, if installed RAM is less than a given amount (``n`` gigabytes), the value is a percentage of the installed RAM, and is otherwise a percentage of ``n``. The value of ``n`` is: 2 GB for 32-bit Windows, 4 GB for 64-bit Windows, 3.5 GB for Mac OS.
-
-**Parameters**
-
-===========================  ==============================================
-``imageCachePercentage``     Floating-point value, the percentage of memory
-                             assigned to image cache.
-``maximumMemoryPercentage``  Floating-point value, the maximum usable
-                             percentage of memory.
-===========================  ==============================================
+None.
 
 **Returns**
 
@@ -823,60 +337,142 @@ Nothing.
 
 ----
 
-.. _app.setSavePreferencesOnQuit:
+.. _app.setSDKEventMessage:
 
-app.setSavePreferencesOnQuit()
+app.setSDKEventMessage()
 *********************************************
 
-``app.setSavePreferencesOnQuit(doSave)``
+``app.setSDKEventMessage(message, decorator)``
 
 **Description**
 
-Set or clears the flag that determines whether preferences are saved when the application is closed.
+Writes a string to Premiere Pro's Events panel. 
 
 **Parameters**
 
-==========  ====================================
-``doSave``  When true, preferences saved on quit, when false they are not.
-==========  ====================================
+message is a string; decorator can be either 'info', 'warning' or 'error'.
 
 **Returns**
 
-Nothing.
+Returns 'true' if successful.
 
 ----
 
-.. _app.watchFolder:
 
-app.watchFolder()
+.. _app.setScratchDiskPath:
+
+app.setScratchDiskPath()
 *********************************************
 
-``app.watchFolder(folder_object_to_watch)``
+``app.setScratchDiskPath(path, whichScratchValueToSet)``
 
 **Description**
 
-Starts a Watch Folder (network rendering) process pointed at a specified folder.
+Specifies the path to be used for one of Premiere Pro's scratch disk paths. 
 
 **Parameters**
 
-==========================  ====================================
-``folder_object_to_watch``  The ExtendScript Folder object for the folder to
-                            watch.
-==========================  ====================================
++----------------------------+---------------------------------------------------+
+| ``path``                   | The new path to be used.                          |
++----------------------------+---------------------------------------------------+
+| ``whichScratchValueToSet`` | Must be one of the following:                     |
+|                            | ``FirstAudioCaptureFolder``                       |
+|                            | ``FirstVideoCaptureFolder``                       |
+|                            | ``FirstAudioPreviewFolder``                       |
+|                            | ``FirstAutoSaveFolder``                           |
+|                            | ``FirstCCLibrariesFolder``                        |
++----------------------------+---------------------------------------------------+
 
 **Returns**
 
+Returns 'true' if successful.
+
+----
+
+.. _app.enableQE:
+
+app.enableQE()
+*********************************************
+
+|  ``app.enableQE()``
+
+**Description**
+
+Enables Premiere Pro's QE DOM. 
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns true if QE DOM was enabled.
+
+----
+
+.. _app.setExtensionPersistent:
+
+app.setExtensionPersistent(ExtensionID, persist)
+*********************************************
+
+``app.setExtensionPersistent(ExtensionID, persist)``
+
+**Description**
+
+Controls whether the extension with the given ExtensionID remains persistent in memory, throughout the Premiere Pro session.
+
+**Parameters**
+
+================  =========================================================
+``extensionID``   Which extension to modify.
+================  =========================================================
+``persist``       Pass 1 to keep extension in memory, 0 to allow unloading.
+================  =========================================================
+
+**Returns**
 Nothing.
+----
 
-**Example**
+.. _app.getEnableProxies:
 
-::
+app.getEnableProxies()
+*********************************************
 
-  var theFolder = new Folder("c:/tool");
-  app.watchFolder(theFolder);
+``app.getEnableProxies()``
 
-**See also**
+**Description**
 
-- `app.endWatchFolder()`_
-- `app.parseSwatchFile()`_
-- `app.isWatchFolder`_
+Determines whether proxy usage is currently enabled.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns 1 if proxies are enabled, 0 of they are not.
+
+----
+
+
+.. _app.setEnableProxies:
+
+app.setEnableProxies(enabled)
+*********************************************
+
+``app.setEnableProxies(enabled)``
+
+**Description**
+
+Determines whether proxy usage is currently enabled.
+
+**Parameters**
+
+================  =========================================================
+``enabled``       1 turns proxies on, 0 turns them off.
+================  =========================================================
+
+**Returns**
+
+Returns 1 if proxy enablement was changed.
+
