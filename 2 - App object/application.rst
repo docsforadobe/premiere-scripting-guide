@@ -3,7 +3,7 @@
 .. _Application:
 
 Application object
-################################################
+==================
 
 ``app``
 
@@ -413,7 +413,7 @@ Returns true if QE DOM was enabled.
 .. _app.setExtensionPersistent:
 
 app.setExtensionPersistent(ExtensionID, persist)
-*********************************************
+************************************************
 
 ``app.setExtensionPersistent(ExtensionID, persist)``
 
