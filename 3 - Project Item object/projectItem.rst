@@ -2,7 +2,6 @@
 
 .. _projectItem:
 
-===================
 Project Item object
 ===================
 
@@ -140,7 +139,7 @@ The Team Projects Asset ID of the project item.
 **Type**
 String; read-only.
 
-
+----
 
 =======
 Methods
