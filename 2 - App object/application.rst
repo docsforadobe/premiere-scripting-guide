@@ -21,7 +21,7 @@ Attributes
 
 .. _app.version:
 
-app.version
+version
 *********************************************
 
 ``app.version``
@@ -38,7 +38,7 @@ Floating point; read-only.
 
 .. _app.buildNumber:
 
-app.buildNumber
+buildNumber
 *********************************************
 
 ``app.buildNumber``
@@ -55,7 +55,7 @@ Integer; read-only.
 
 .. _app.getPProPrefPath:
 
-app.getPProPrefPath
+getPProPrefPath
 *********************************************
 
 ``app.getPProPrefPath``
@@ -72,7 +72,7 @@ String; read-only.
 
 .. _app.getPProSysPrefPath:
 
-app.getPProSysPrefPath
+getPProSysPrefPath
 *********************************************
 
 ``app.getPProSysPrefPath``
@@ -90,7 +90,7 @@ String; read-only.
 
 .. _app.project:
 
-app.project
+project
 *********************************************
 
 ``app.project``
@@ -107,7 +107,7 @@ String; read-only.
 
 .. _app.projects:
 
-app.projects
+projects
 *********************************************
 
 ``app.projects``
@@ -124,7 +124,7 @@ Array (of Project objects); read-only.
 
 .. _app.anywhere:
 
-app.anywhere
+anywhere
 *********************************************
 
 ``app.anywhere``
@@ -139,7 +139,7 @@ Anywhere object; read-only.
 
 .. _app.Encoder:
 
-app.Encoder
+Encoder
 *********************************************
 
 ``app.Encoder``
@@ -156,7 +156,7 @@ Encoder object; read-only.
 
 .. _app.properties:
 
-app.properties
+properties
 *********************************************
 
 ``app.properties``
@@ -173,7 +173,7 @@ properties object; read-only.
 
 .. _app.sourceMonitor:
 
-app.sourceMonitor
+sourceMonitor
 *********************************************
 
 ``app.sourceMonitor``
@@ -190,7 +190,7 @@ sourceMonitor object; read-only.
 
 .. _app.userGuid:
 
-app.userGuid
+userGuid
 *********************************************
 
 ``app.userGuid``
@@ -211,7 +211,7 @@ Methods
 
 .. _app.isDocumentOpen:
 
-app.isDocumentOpen()
+isDocumentOpen()
 *********************************************
 
 ``app.isDocumentOpen()``
@@ -232,7 +232,7 @@ Returns **true** if at least 1 project is open; otherwise **false**.
 
 .. _app.isDocument:
 
-app.isDocument(path)
+isDocument(path)
 *********************************************
 
 ``app.isDocument(path)``
@@ -253,7 +253,7 @@ Returns **true** if file is openeable.
 
 .. _app.openDocument:
 
-app.openDocument(path)
+openDocument(path)
 *********************************************
 
 ``app.openDocument(path)``
@@ -275,7 +275,7 @@ Returns **true** if file was successfully opened.
 
 .. _app.openFCPXML:
 
-app.openFCPXML(path, projPath)
+openFCPXML(path, projPath)
 *********************************************
 
 ``app.openFCPXML(path, projPath)``
@@ -297,7 +297,7 @@ Returns **true** if file was successfully opened as a Premiere Pro project.
 
 .. _app.quit:
 
-app.quit()
+quit()
 *********************************************
 
 ``app.quit()``
@@ -318,7 +318,7 @@ Nothing.
 
 .. _app.trace:
 
-app.trace()
+trace()
 *********************************************
 
 ``app.trace()``
@@ -339,7 +339,7 @@ Nothing.
 
 .. _app.setSDKEventMessage:
 
-app.setSDKEventMessage()
+setSDKEventMessage()
 *********************************************
 
 ``app.setSDKEventMessage(message, decorator)``
@@ -361,7 +361,7 @@ Returns 'true' if successful.
 
 .. _app.setScratchDiskPath:
 
-app.setScratchDiskPath()
+setScratchDiskPath()
 *********************************************
 
 ``app.setScratchDiskPath(path, whichScratchValueToSet)``
@@ -391,7 +391,7 @@ Returns 'true' if successful.
 
 .. _app.enableQE:
 
-app.enableQE()
+enableQE()
 *********************************************
 
 |  ``app.enableQE()``
@@ -412,7 +412,7 @@ Returns true if QE DOM was enabled.
 
 .. _app.setExtensionPersistent:
 
-app.setExtensionPersistent(ExtensionID, persist)
+setExtensionPersistent(ExtensionID, persist)
 ************************************************
 
 ``app.setExtensionPersistent(ExtensionID, persist)``
@@ -435,7 +435,7 @@ Nothing.
 
 .. _app.getEnableProxies:
 
-app.getEnableProxies()
+getEnableProxies()
 *********************************************
 
 ``app.getEnableProxies()``
@@ -457,7 +457,7 @@ Returns 1 if proxies are enabled, 0 of they are not.
 
 .. _app.setEnableProxies:
 
-app.setEnableProxies(enabled)
+setEnableProxies(enabled)
 *********************************************
 
 ``app.setEnableProxies(enabled)``
