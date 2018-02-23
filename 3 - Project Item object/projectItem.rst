@@ -141,6 +141,24 @@ String; read-only.
 
 ----
 
+.. _projectItem.startTime:
+
+startTime
+*********************************************
+
+``projectItem.startTime``
+
+**Description**
+
+The start time of the project item. 
+
+**Type**
+
+A ``Time`` object, read only.
+
+----
+
+
 =======
 Methods
 =======
@@ -192,7 +210,7 @@ Returns **0** if creation of bin was successful.
 renameBin()
 *********************************************
 
-``projectItem.renameBin(String newName)``
+``projectItem.renameBin(newName)``
 
 **Description**
 
@@ -255,7 +273,7 @@ A String containing all XMP metadata, serialized.
 setXMPMetadata()
 *********************************************
 
-``projectItem.setXMPMetadata(String newXMP)``
+``projectItem.setXMPMetadata(newXMPAsString)``
 
 **Description**
 
@@ -507,16 +525,16 @@ Returns **0** if the project item has been successfully set to scale to frame si
 createSubClip()
 *********************************************
 
-``projectItem.createSubClip()``
+``projectItem.createSubClip(subclipName, startTime, endTime,hasHardBoundaries, takeAudio, takeVideo)``
 
 **Description**
 
-Turns on scaling to frame size, for when media from this project item is inserted into a sequence.
+Creates a new project item for a sub-clip of the existing project item.
 
 **Parameters**
 
 +----------------------------+---------------------------------------------------+
-| ``name``                   | Name of new subclip.                              |
+| ``subclipName``            | Name of new subclip.                              |
 +----------------------------+---------------------------------------------------+
 | ``startTime``              | Start time of subclip, in **Ticks**.              |
 +----------------------------+---------------------------------------------------+
@@ -541,7 +559,7 @@ Returns a project item representing the new subclip, or 0 if creation failed.
 findItemsMatchingMediaPath()
 *********************************************
 
-``projectItem.findItemsMatchingMediaPath(String matchPath, int ignoreSubClips)``
+``projectItem.findItemsMatchingMediaPath(pathToMatch, ignoreSubClips)``
 
 **Description**
 
@@ -550,7 +568,7 @@ Returns an array of project items, all of which reference the same media path.
 **Parameters**
 
 +----------------------------+---------------------------------------------------+
-| ``matchPath``              | Path to match, as **String**.                     |
+| ``pathToMatch``            | Path to match, as **String**.                     |
 +----------------------------+---------------------------------------------------+
 | ``ignoreSubClips``         | 0 or 1; if 1, no subclips will be returned.       |
 +----------------------------+---------------------------------------------------+
@@ -642,3 +660,168 @@ The path the the newly-assigned media (as String), and an **int** indicating whe
 **Returns**
 
 Returns **0** if successful.
+
+----
+
+.. _projectItem.IsSequence:
+
+IsSequence()
+*********************************************
+
+``projectItem.IsSequence()``
+
+**Description**
+
+Indicates whether the project item refers to a sequence.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns ``true`` if the project item is a sequence, ``false`` if it isn't.
+
+----
+
+.. _projectItem.setStartTime:
+
+setStartTime()
+*********************************************
+
+``projectItem.setStartTime(timeInTicks)``
+
+**Description**
+
+Assigns a new start time to the project item
+
+**Parameters**
+
+New starting time, represented in ticks.
+
+**Returns**
+
+Returns ``0`` if successful.
+
+----
+
+.. _projectItem.getOutPoint:
+
+getOutPoint()
+*********************************************
+
+``projectItem.getOutPoint(mediaType)``
+
+**Description**
+
+Retrieves the current out point for specified media type. 
+
+**Parameters**
+
+mediaType is an ``int``; pass ``1`` for video only, or ``2`` for audio only. If no ``mediaType`` is passed, function gets the out point for all media.
+
+**Returns**
+
+Returns a ``Time`` object.
+
+----
+
+.. _projectItem.setOutPoint:
+
+setOutPoint()
+*********************************************
+
+``projectItem.setOutPoint(timeInTicks, mediaType)``
+
+**Description**
+
+Sets the out point to ``timeInTicks``, for specified media types. ``mediaType`` defaults to all; pass ``1`` for video only, or ``2`` for audio only.
+
+**Parameters**
+
+A ``Time`` object, and an ``int``; pass ``1`` for video only, or ``2`` for audio only. If no ``mediaType`` is passed, function sets the out point for all media.
+
+**Returns**
+
+Returns ``0`` if successful.
+
+
+----
+
+.. _projectItem.clearOutPoint:
+
+clearOutPoint()
+*********************************************
+
+``projectItem.clearOutPoint()``
+
+**Description**
+
+Clears any assigned out point; the project item will then start at ``startTime``.
+
+**Parameters**
+
+None
+
+**Returns**
+
+Returns ``0`` if successful.
+
+----
+
+.. _projectItem.getColorLabel:
+
+getColorLabel()
+*********************************************
+
+``projectItem.getColorLabel()``
+
+**Description**
+
+Retrieves the project item's color label.
+
+**Parameters**
+
+None.
+
+**Returns**
+
++------------+---------------------+
+| labelColor | - 0 = Violet        |
+|            | - 1 = Iris          |
+|            | - 2 = Caribbean     |
+|            | - 3 = Lavender      |
+|            | - 4 = Cerulean      |
+|            | - 5 = Forest        |
+|            | - 6 = Rose          |
+|            | - 7 = Mango         |
+|            | - 8 = Purple        |
+|            | - 9 = Blue          |
+|            | - 10 = Teal         |
+|            | - 11 = Magenta      |
+|            | - 12 = Tan          |
+|            | - 13 = Green        |
+|            | - 14 = Brown        |
+|            | - 15= Yellow        |
++------------+---------------------+
+
+----
+
+.. _projectItem.setColorLabel:
+
+setColorLabel()
+*********************************************
+
+``projectItem.setColorLabel(newLabelColor)``
+
+**Description**
+
+Sets the project item's color label.
+
+**Parameters**
+
+New label color; see projectItem.getColorLabel_.
+
+**Returns**
+
+0 if successful.
