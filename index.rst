@@ -18,7 +18,13 @@ Welcome to the Premiere Scripting Guide!
     
 .. toctree::
     :maxdepth: 2
+    :caption: Chapter 3 - Project object
+
+    3 - Project object/project
+    
+.. toctree::
+    :maxdepth: 2
     :caption: Chapter 3 - Project Item object
 
-    3 - Project Item object/projectItem
+    4 - Project Item object/projectItem
     
