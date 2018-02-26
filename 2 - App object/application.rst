@@ -152,6 +152,43 @@ An Encoder object, providing access to Adobe Media Encoder (as used by Premiere 
 
 Encoder object; read-only.
 
+
+----
+
+.. _app.projectManager:
+
+projectManager
+*********************************************
+
+``app.projectManager``
+
+**Description**
+
+A projectManager object, providing access to project management functions within Premiere Pro.
+
+**Type**
+
+projectManager object; read-only.
+
+
+----
+
+.. _app.userGuid:
+
+userGuid
+*********************************************
+
+``app.userGuid``
+
+**Description**
+
+A unique identifier for the currently logged-in Creative Cloud user.
+
+**Type**
+
+userGuid object; read-only.
+
+
 ----
 
 .. _app.properties:
@@ -186,24 +223,6 @@ Provides access to Source monitor.
 
 sourceMonitor object; read-only.
 
-----
-
-.. _app.userGuid:
-
-userGuid
-*********************************************
-
-``app.userGuid``
-
-**Description**
-
-userGuid which uniquely identifies the user.
-
-**Type**
-
-GUID; read-only.
-
-----
 
 =======
 Methods
