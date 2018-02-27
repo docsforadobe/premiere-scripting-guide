@@ -69,3 +69,9 @@ Welcome to the Premiere Scripting Guide!
     :caption: Chapter 11 - Encoder object
 
     11 - Encoder object/encoder
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Chapter 12 - Marker object
+
+    12 - Marker object/marker

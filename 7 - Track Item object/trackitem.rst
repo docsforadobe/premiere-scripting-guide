@@ -11,8 +11,6 @@ Track Item object
 
 The **trackItem** object represents an item on a video or audio track, within a sequence.
 
-----
-
 ==========
 Attributes
 ==========
