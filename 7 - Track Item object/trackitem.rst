@@ -174,7 +174,6 @@ The projectItem from which the media is being drawn.
 
 A **projectItem**. 
 
-
 ----
 
 .. _trackItem.components:

@@ -51,3 +51,9 @@ Welcome to the Premiere Scripting Guide!
     :caption: Chapter 8 - Component object
 
     8 - Component object/component
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Chapter 9 - Component Parameter object
+
+    9 - Component Parameter object/componentparam
