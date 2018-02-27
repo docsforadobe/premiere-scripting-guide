@@ -57,3 +57,9 @@ Welcome to the Premiere Scripting Guide!
     :caption: Chapter 9 - Component Parameter object
 
     9 - Component Parameter object/componentparam
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Chapter 10 - Anywhere object
+
+    10 - Anywhere object/anywhere
