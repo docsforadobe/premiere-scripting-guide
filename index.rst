@@ -45,3 +45,9 @@ Welcome to the Premiere Scripting Guide!
     :caption: Chapter 7 - Track Item object
 
     7 - Track Item object/trackitem
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Chapter 8 - Component object
+
+    8 - Component object/component
