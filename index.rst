@@ -33,3 +33,9 @@ Welcome to the Premiere Scripting Guide!
     :caption: Chapter 5 - Sequence object
 
     5 - Sequence object/sequence
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Chapter 6 - Track object
+
+    6 - Track object/track

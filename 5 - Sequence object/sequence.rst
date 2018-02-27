@@ -201,6 +201,7 @@ Set the starting time of the sequence.
 **Parameters**
 
 An integer, specifying the new zero point, in Ticks.
+
 **Type**
 
 Integer; read-only.
