@@ -63,3 +63,9 @@ Welcome to the Premiere Scripting Guide!
     :caption: Chapter 10 - Anywhere object
 
     10 - Anywhere object/anywhere
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Chapter 11 - Encoder object
+
+    11 - Encoder object/encoder
