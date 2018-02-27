@@ -79,7 +79,7 @@ clips
 
 **Description**
 
-An array of clip objects, contained within the track, in temporal order.
+An array of trackItem objects, contained within the track, in temporal order.
 
 **Type**
 
