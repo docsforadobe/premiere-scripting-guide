@@ -48,7 +48,7 @@ source_suffix = '.rst'
 master_doc = 'index'
 
 # General information about the project.
-project = u'Premiere Scripting Guide'
+project = u'Premiere Pro Scripting Guide'
 copyright = u'2018, Adobe Systems Incorporated'
 author = u'Adobe Systems Incorporated'
 
