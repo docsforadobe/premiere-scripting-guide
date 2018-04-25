@@ -97,7 +97,7 @@ project
 
 **Description**
 
-The currently active project. Before Premiere Pro 12.0, this pointed at the *only* project; in 12.0, this points to the currently active project.
+The currently active project. Before Premiere Pro 12.0, this pointed at the *only* project; after 12.0, this points to the currently active project.
 
 **Type**
 
