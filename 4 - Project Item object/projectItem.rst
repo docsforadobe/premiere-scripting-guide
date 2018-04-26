@@ -315,7 +315,7 @@ A String containing all Premiere Pro private project metadata, serialized.
 setProjectMetadata()
 *********************************************
 
-``projectItem.setProjectMetadata(String newPrivateProjectMetadata)``
+``projectItem.setProjectMetadata(String newPrivateProjectMetadata, arrayOfUpdatedFields)``
 
 **Description**
 
@@ -323,7 +323,7 @@ Sets the private project metadata associated with the project item.
 
 **Parameters**
 
-A String representing the new, serialized private project metadata.
+A String representing the new, serialized private project metadata, and an array containing the names of the fields to be updated.
 
 **Returns**
 
