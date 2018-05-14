@@ -141,24 +141,6 @@ String; read-only.
 
 ----
 
-.. _projectItem.startTime:
-
-startTime
-*********************************************
-
-``projectItem.startTime``
-
-**Description**
-
-The start time of the project item. 
-
-**Type**
-
-A ``Time`` object, read only.
-
-----
-
-
 =======
 Methods
 =======
@@ -246,6 +228,29 @@ None.
 Returns **0** if deletion was successful.
 
 ----
+
+.. _projectItem.getStartTime():
+
+getstartTime()
+*********************************************
+
+``projectItem.getStartTime()``
+
+**Description**
+
+Returns a Time object, representing the start time of the project item. 
+
+**Parameters**
+
+None.
+
+**Returns**
+
+A ``Time`` object.
+
+----
+
+
 
 .. _projectItem.getXMPMetadata:
 
