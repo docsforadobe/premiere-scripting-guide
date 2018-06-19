@@ -208,6 +208,27 @@ Returns **0** if renaming bin was successful.
 
 ----
 
+.. _projectItem.moveBin:
+
+moveBin()
+*********************************************
+
+``projectItem.moveBin(newParentBinProjectItem)``
+
+**Description**
+
+Moves the projectItem into a new parent bin.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns **0** if move was successful.
+
+----
+
 .. _projectItem.deleteBin:
 
 deleteBin()
