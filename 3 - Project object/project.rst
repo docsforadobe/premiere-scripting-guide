@@ -151,7 +151,7 @@ Returns **true** if successful, **false** if not.
 importFiles()
 *********************************************
 
-``project.importFiles(arrayOfFilePathsToImport, suppressUI, importAsNumberedStills, targetBin)``
+``project.importFiles(arrayOfFilePathsToImport, suppressUI, targetBin, importAsNumberedStills)``
 
 **Description**
 
