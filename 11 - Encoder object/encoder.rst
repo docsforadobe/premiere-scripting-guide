@@ -85,7 +85,7 @@ Makes Adobe Media Encoder render the specified sequence, with the specified sett
 +------------------------------+---------------------------------------------------+
 | ``presetPath``               | **String**, path to preset (.epr) file.           |
 +------------------------------+---------------------------------------------------+
-| ``workArea``                 | Integer denoting work area to be used:            |
+| ``workArea``                 | **Integer** denoting work area to be used:        |
 |                              |    - 0 ENCODE_ENTIRE                              |
 |                              |    - 1 ENCODE_IN_TO_OUT                           |
 |                              |    - 2 ENCODE_WORK_AREA                           |

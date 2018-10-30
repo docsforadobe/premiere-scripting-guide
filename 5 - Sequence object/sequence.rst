@@ -274,7 +274,7 @@ Methods
 getPlayerPosition()
 *********************************************
 
-``projectItem.getPlayerPosition()``
+``sequence.getPlayerPosition()``
 
 **Description**
 
@@ -298,7 +298,7 @@ Returns a Time object, representing the current player position.
 setPlayerPosition(newTimeInTicks)
 *********************************************
 
-``projectItem.setPlayerPosition()``
+``sequence.setPlayerPosition()``
 
 **Description**
 
@@ -319,7 +319,7 @@ Returns **0** if successful.
 getInPoint()
 *********************************************
 
-``projectItem.getInPoint()``
+``sequence.getInPoint()``
 
 **Description**
 
@@ -340,7 +340,7 @@ Returns a Real representing the in point, in seconds.
 getOutPoint()
 *********************************************
 
-``projectItem.getOutPoint()``
+``sequence.getOutPoint()``
 
 **Description**
 
@@ -362,7 +362,7 @@ Returns a Real representing the out point, in seconds.
 getInPointAsTime()
 *********************************************
 
-``projectItem.getInPointAsTime()``
+``sequence.getInPointAsTime()``
 
 **Description**
 
@@ -383,7 +383,7 @@ Returns a Time representing the in point, in seconds.
 getOutPointAsTime()
 *********************************************
 
-``projectItem.getOutPointAsTime()``
+``sequence.getOutPointAsTime()``
 
 **Description**
 
@@ -405,7 +405,7 @@ Returns a Time representing the out point, in seconds.
 setInPoint(newTimeInTicks)
 *********************************************
 
-``projectItem.setInPoint()``
+``sequence.setInPoint()``
 
 **Description**
 
@@ -426,7 +426,7 @@ Returns **0** if successful.
 setOutPoint(newTimeInTicks)
 *********************************************
 
-``projectItem.setOutPoint()``
+``sequence.setOutPoint()``
 
 **Description**
 
@@ -447,7 +447,7 @@ Returns **0** if successful.
 clone()
 *********************************************
 
-``projectItem.clone()``
+``sequence.clone()``
 
 **Description**
 
@@ -468,7 +468,7 @@ Returns a **Sequence** if successful, **0** if not.
 exportAsProject(outputPath)
 *********************************************
 
-``projectItem.exportAsProject(outputPath)``
+``sequence.exportAsProject(outputPath)``
 
 **Description**
 
@@ -489,7 +489,7 @@ Returns 0 if successful.
 exportAsFinalCutProXML(outputPath)
 *********************************************
 
-``projectItem.exportAsFinalCutProXML(outputPath)``
+``sequence.exportAsFinalCutProXML(outputPath)``
 
 **Description**
 
@@ -510,7 +510,7 @@ Returns 0 if successful.
 exportAsMediaDirect(outputPath)
 *********************************************
 
-``projectItem.exportAsMediaDirect(outputPath, presetPath, workAreaType)``
+``sequence.exportAsMediaDirect(outputPath, presetPath, workAreaType)``
 
 **Description**
 
@@ -542,7 +542,7 @@ Returns 0 if successful.
 getExportFileExtension()
 *********************************************
 
-``projectItem.getExportFileExtension(outputPresetPath)``
+``sequence.getExportFileExtension(outputPresetPath)``
 
 **Description**
 
@@ -556,3 +556,144 @@ String ``outputPresetPath`` specifying the output preset to be used.
 
 Returns a **String** containing the output file extension, or **0** if unsuccessful.
 
+
+----
+
+.. _sequence.getSettings:
+
+getSettings()
+*********************************************
+
+``sequence.getSettings()``
+
+**Description**
+
+Retrieves the settings of the current sequence.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a sequence settings structure.
+
+
+
+
++----------------------------+------------------------------------------------------------+
+| ``audioChannelCount``      | The number of audio channels in the sequence.              |
++----------------------------+------------------------------------------------------------+
+| ``audioChannelType``       | Audio channel type in use. One of the following:           |
+|                            |    - 0 AUDIOCHANNELTYPE_Mono                               |
+|                            |    - 1 AUDIOCHANNELTYPE_Stereo                             |
+|                            |    - 2 AUDIOCHANNELTYPE_51                                 |
+|                            |    - 3 AUDIOCHANNELTYPE_Multichannel                       |
+|                            |    - 4 AUDIOCHANNELTYPE_4Channel                           |
+|                            |    - 5 AUDIOCHANNELTYPE_8Channel                           |
++----------------------------+------------------------------------------------------------+
+| ``audioDisplayFormat``     | Audio timecode display format. One of the following:       |
+|                            |    - 100 TIMEDISPLAY_24Timecode                            |
+|                            |    - 101 TIMEDISPLAY_25Timecode                            |
+|                            |    - 102 TIMEDISPLAY_2997DropTimecode                      |
+|                            |    - 103 TIMEDISPLAY_2997NonDropTimecode                   |
+|                            |    - 104 TIMEDISPLAY_30Timecode                            |
+|                            |    - 105 TIMEDISPLAY_50Timecode                            |
+|                            |    - 106 TIMEDISPLAY_5994DropTimecode                      |
+|                            |    - 107 TIMEDISPLAY_5994NonDropTimecode                   |
+|                            |    - 108 TIMEDISPLAY_60Timecode                            |
+|                            |    - 109 TIMEDISPLAY_Frames                                |
+|                            |    - 110 TIMEDISPLAY_23976Timecode                         |
+|                            |    - 111 TIMEDISPLAY_16mmFeetFrames                        |
+|                            |    - 112 TIMEDISPLAY_35mmFeetFrames                        |
+|                            |    - 113 TIMEDISPLAY_48Timecode                            |
+|                            |    - 200 TIMEDISPLAY_AudioSamplesTimecode                  |
+|                            |    - 201 TIMEDISPLAY_AudioMsTimecode                       |
++----------------------------+------------------------------------------------------------+
+| ``audioSampleRate``        | The audio sample rate in the sequence, as an ``int``.      |
++----------------------------+------------------------------------------------------------+
+| ``compositeLinearColor``   | Whether sequence is composited in linear color. 1 if true. |
++----------------------------+------------------------------------------------------------+
+| ``editingMode``            | The GUID of the editing mode in use.                       |
++----------------------------+------------------------------------------------------------+
+| ``maximumBitDepth``        | Whether sequence is composited at maximum depth; 1 if true.|
++----------------------------+------------------------------------------------------------+
+| ``maximumRenderQuality``   | Whether sequence is rendered at maximum quality; 1 if true.|
++----------------------------+------------------------------------------------------------+
+| ``previewCodec``           | Four character code of preview codec in use.               |
++----------------------------+------------------------------------------------------------+
+| ``previewFrameWidth``      | Width of preview frame.                                    |
++----------------------------+------------------------------------------------------------+
+| ``previewFrameHeight``     | Height of preview frame.                                   |
++----------------------------+------------------------------------------------------------+
+| ``videoDisplayFormat``     | Video time display format. One of the following:           |
+|                            |    - 100 TIMEDISPLAY_24Timecode                            |
+|                            |    - 101 TIMEDISPLAY_25Timecode                            |
+|                            |    - 102 TIMEDISPLAY_2997DropTimecode                      |
+|                            |    - 103 TIMEDISPLAY_2997NonDropTimecode                   |
+|                            |    - 104 TIMEDISPLAY_30Timecode                            |
+|                            |    - 105 TIMEDISPLAY_50Timecode                            |
+|                            |    - 106 TIMEDISPLAY_5994DropTimecode                      |
+|                            |    - 107 TIMEDISPLAY_5994NonDropTimecode                   |
+|                            |    - 108 TIMEDISPLAY_60Timecode                            |
+|                            |    - 109 TIMEDISPLAY_Frames                                |
+|                            |    - 110 TIMEDISPLAY_23976Timecode                         |
+|                            |    - 111 TIMEDISPLAY_16mmFeetFrames                        |
+|                            |    - 112 TIMEDISPLAY_35mmFeetFrames                        |
+|                            |    - 113 TIMEDISPLAY_48Timecode                            |
+|                            |    - 200 TIMEDISPLAY_AudioSamplesTimecode                  |
+|                            |    - 201 TIMEDISPLAY_AudioMsTimecode                       |
++----------------------------+------------------------------------------------------------+
+| ``videoFieldType``         |  Video field type in use in sequence. One of these:        |
+|                            |    - -1 FIELDTYPE_DEFAULT                                  |
+|                            |    - 0 FIELDTYPE_PROGRESSIVE                               |
+|                            |    - 1 ALPHACHANNEL_UPPERFIRST                             |
+|                            |    - 2 ALPHACHANNEL_LOWERFIRST                             |
++----------------------------+------------------------------------------------------------+
+| ``videoFrameHeight``       | Height of sequence video frame.                            |
++----------------------------+------------------------------------------------------------+
+| ``videoFrameWidth``        | Height of sequence video frame.                            |
++----------------------------+------------------------------------------------------------+
+| ``videoPixelAspectRatio``  | The pixel aspect ratio, as floating point.                 |
++----------------------------+------------------------------------------------------------+
+| ``vrHorzCapturedView``     |                                                            |
++----------------------------+------------------------------------------------------------+
+| ``vrVertCapturedView``     |                                                            |
++----------------------------+------------------------------------------------------------+
+| ``vrLayout``               | The layout of footage in use, for VR. One of these:        |
+|                            |    - 0 VR_LAYOUT_MONOSCOPIC                                |
+|                            |    - 1 VR_LAYOUT_STEREO_OVER_UNDER                         |
+|                            |    - 2 VR_LAYOUT_STEREO_SIDE_BY_SIDE                       |
++----------------------------+------------------------------------------------------------+
+| ``vrProjection``           | The projection type in use, for VR footage. One of these:  |
+|                            |    - 0 VR_LAYOUT_MONOSCOPIC                                |
+|                            |    - 1 VR_LAYOUT_STEREO_OVER_UNDER                         |
+|                            |    - 2 VR_LAYOUT_STEREO_SIDE_BY_SIDE                       |
++----------------------------+------------------------------------------------------------+
+| ``videoFieldType``         | Field type in sequence. One of the following:              |
+|                            |    - -1 FIELDTYPE_DEFAULT                                  |
+|                            |    - 0 FIELDTYPE_PROGRESSIVE                               |
+|                            |    - 1 ALPHACHANNEL_UPPERFIRST                             |
+|                            |    - 2 ALPHACHANNEL_LOWERFIRST                             |
++----------------------------+------------------------------------------------------------+
+
+----
+
+.. _sequence.createSubsequence:
+
+createSubsequence(ignoreChannelMapping)
+*********************************************
+
+``sequence.createSubsequence(ignoreChannelMapping)``
+
+**Description**
+
+Creates a new sequence, which is a sub-sequence of the existing sequence. 
+
+**Parameters**
+
+A ``Boolean`` indicating whether the new sequence should ignore the channel mapping present in the original sequence.
+
+**Returns**
+
+Returns 0 if successful.

@@ -237,4 +237,73 @@ If selectionState is **1**, the trackItem will be selected; if **0**, it will be
 Returns **0** if successful.
 
 
+----
+
+.. _trackItem.isReversed:
+
+isReversed
+*********************************************
+
+``trackItem.isReversed()``
+
+**Description**
+
+Returns whether the trackItem is reversed.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns **1** if ``trackItem`` is reversed; **0** if not.
+
+
+
+----
+
+.. _trackItem.getSpeed:
+
+getSpeed
+*********************************************
+
+``trackItem.getSpeed()``
+
+**Description**
+
+Returns the speed multiplier applied to the ``trackItem``.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns the speed multiplier applied to the ``trackItem``, as a ``float``. No speed adjustment = 1.
+
+
+
+
+----
+
+.. _trackItem.isAdjustmentLayer:
+
+isAdjustmentLayer
+*********************************************
+
+``trackItem.isAdjustmentLayer()``
+
+**Description**
+
+Returns wheter the ``trackItem`` is an adjustment layer.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns ``true`` if the trackitem is an adjustment layer; ``false`` if not.
+
+
 

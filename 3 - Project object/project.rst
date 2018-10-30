@@ -634,3 +634,23 @@ Changes the specified scratch disk path to a new path.
 
 Returns  **0** if unsuccessful.
 
+----
+
+.. _project.consolidateDuplicates:
+
+consolidateDuplicates()
+*********************************************
+
+``project.consolidateDuplicates()``
+
+**Description**
+
+Invokes Premiere Pro's "Consolidate Duplicate Footage" functionality, as available from the UI.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns  **0** if successful.

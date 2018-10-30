@@ -851,3 +851,83 @@ New label color; see projectItem.getColorLabel_.
 **Returns**
 
 0 if successful.
+
+
+----
+
+.. _projectItem.getFootageInterpretation:
+
+getFootageInterpretation()
+*********************************************
+
+``projectItem.getFootageInterpretation()``
+
+**Description**
+
+Returns a structure describing the current interpretation of the projectItem.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+A footage interpretation structure, or ``0`` if unsuccessful. 
+
++----------------------------+------------------------------------------------------------+
+| ``alphaUsage``             | Alpha, will be one of the following:                       |
+|                            |    - 0 ALPHACHANNEL_NONE                                   |
+|                            |    - 1 ALPHACHANNEL_STRAIGHT                               |
+|                            |    - 2 ALPHACHANNEL_PREMULTIPLIED                          |
+|                            |    - 3 ALPHACHANNEL_IGNORE                                 |
++----------------------------+------------------------------------------------------------+
+| ``fieldType``              | Field type, one of the following:                          |
+|                            |    - -1 FIELDTYPE_DEFAULT                                  |
+|                            |    - 0 FIELDTYPE_PROGRESSIVE                               |
+|                            |    - 1 ALPHACHANNEL_UPPERFIRST                             |
+|                            |    - 2 ALPHACHANNEL_LOWERFIRST                             |
++----------------------------+------------------------------------------------------------+
+| ``ignoreAlpha``            | ``true`` or ``false``.                                     |
++----------------------------+------------------------------------------------------------+
+| ``invertAlpha``            | ``true`` or ``false``.                                     |
++----------------------------+------------------------------------------------------------+
+| ``frameRate``              | Frame rate as floating point value.                        |
++----------------------------+------------------------------------------------------------+
+| ``pixelAspectRatio``       | Pixel aspect ratio as floating point value.                |
++----------------------------+------------------------------------------------------------+
+| ``removePulldown``         | ``true`` or ``false``.                                     |
++----------------------------+------------------------------------------------------------+
+| ``vrConformProjectionType``| The projection type in use, for VR footage. One of these:  |
+|                            |    - 0 VR_CONFORM_PROJECTION_NONE                          |
+|                            |    - 1 VR_CONFORM_PROJECTION_EQUIRECTANGULAR               |
++----------------------------+------------------------------------------------------------+
+| ``vrLayoutType``           | The layout of footage in use, for VR. One of these:        |
+|                            |    - 0 VR_LAYOUT_MONOSCOPIC                                |
+|                            |    - 1 VR_LAYOUT_STEREO_OVER_UNDER                         |
+|                            |    - 2 VR_LAYOUT_STEREO_SIDE_BY_SIDE                       |
++----------------------------+------------------------------------------------------------+
+| ``vrHorizontalView``       | The horizontal view in use, for VR footage.                |
++----------------------------+------------------------------------------------------------+
+| ``vrVerticalView``         | The vertical view in use, for VR footage.                  |
++----------------------------+------------------------------------------------------------+
+
+----
+
+.. _projectItem.setFootageInterpretation:
+
+setFootageInterpretation()
+*********************************************
+
+``projectItem.setFootageInterpretation(newInterpretation)``
+
+**Description**
+
+Returns a structure describing the current interpretation of the projectItem.
+
+**Parameters**
+
+A footage interpretation structure.
+
+**Returns**
+
+``0`` if successful. 

@@ -75,3 +75,9 @@ Welcome to the Premiere Scripting Guide!
     :caption: Chapter 12 - Marker object
 
     12 - Marker object/marker
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Chapter 13 - Source object
+
+    13 - Source object/source
