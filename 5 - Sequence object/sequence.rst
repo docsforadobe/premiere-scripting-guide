@@ -676,6 +676,28 @@ Returns a sequence settings structure.
 |                            |    - 1 ALPHACHANNEL_UPPERFIRST                             |
 |                            |    - 2 ALPHACHANNEL_LOWERFIRST                             |
 +----------------------------+------------------------------------------------------------+
+----
+
+.. _sequence.setSettings:
+
+setSettings()
+*********************************************
+
+``sequence.setSettings(sequenceSettings)``
+
+**Description**
+
+Sets the settings of the current sequence. *[Editorial: I apologize for any perceived pedantry; sometimes, obvious documentation needs to be obvious. -bbb]*
+
+**Parameters**
+
+``sequenceSettings`` is a sequence settings structure, obtained via `sequence.getSettings_`.  
+
+**Returns**
+
+Returns 0 if successful.
+
+
 
 ----
 
