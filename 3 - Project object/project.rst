@@ -159,7 +159,7 @@ Imports media from the specified file paths.
 
 **Parameters**
 
-A valid ``sequenceID``.
+An ``array`` of file paths to be imported, a ``boolean`` indicating whether warning dialogs should be suppressed, a ``boolean`` indicating whether the file paths should be interpreted as a sequence of numbered stills, and a ``projectItem`` object for the bin into which the files should be imported.
 
 **Returns**
 
