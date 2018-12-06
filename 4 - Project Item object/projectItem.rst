@@ -542,7 +542,7 @@ None.
 
 **Returns**
 
-Returns **0** if the project item has been successfully set to scale to frame size.
+Undefined return value. 
 
 ----
 
