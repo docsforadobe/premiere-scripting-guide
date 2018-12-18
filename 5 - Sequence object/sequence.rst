@@ -507,14 +507,14 @@ Returns 0 if successful.
 
 .. _sequence.exportAsMediaDirect:
 
-exportAsMediaDirect(outputPath)
+exportAsMediaDirect(outputPath, presetPath, workAreaType)
 *********************************************
 
 ``sequence.exportAsMediaDirect(outputPath, presetPath, workAreaType)``
 
 **Description**
 
-Creates a new FCP XML representation of the sequence, and its constituent media.
+Renders the sequence to the specified output path, using the specified output preset (.epr file), and honoring the specified work area type.
 
 **Parameters**
 
@@ -529,7 +529,7 @@ Creates a new FCP XML representation of the sequence, and its constituent media.
 |                            |    - 2 ENCODE_WORK_AREA                           |
 +----------------------------+---------------------------------------------------+
 
-String ``outputPath`` specifying the output path for the new FCP XML file.
+String ``outputPath`` specifying the output path, to which to render the media.
 
 **Returns**
 
