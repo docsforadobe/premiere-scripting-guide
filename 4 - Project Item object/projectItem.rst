@@ -931,3 +931,47 @@ A footage interpretation structure.
 **Returns**
 
 ``0`` if successful. 
+
+----
+
+.. _projectItem.isOffline:
+
+isOffline()
+*********************************************
+
+``projectItem.isOffline()``
+
+**Description**
+
+Returns a Boolean indicating whether the project item is offline.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Boolean, ``true`` if offline. 
+
+
+----
+
+.. _projectItem.setOffline:
+
+setOffline()
+*********************************************
+
+``projectItem.setOffline()``
+
+**Description**
+
+Makes the project item offline.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+``true`` if successful. 
+
