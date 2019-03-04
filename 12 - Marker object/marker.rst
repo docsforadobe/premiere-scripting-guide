@@ -252,3 +252,67 @@ None.
 **Returns**
 
 Returns a ``String`` containing the frame target, or **0** if unsuccessful.
+
+
+----
+
+.. _marker.getColorByIndex:
+
+getColorByIndex
+*********************************************
+
+``marker.getColorByIndex(markerIndex)``
+
+**Description**
+
+Gets the marker color index. (added in CC 2019)
+
+**Parameters**
+
+===================   ==============================================
+
+``markerIndex``       Index of the marker to be read.
+
+===================   ==============================================
+
+**Returns**
+
+Returns the color index as an ``Integer``.
+
+
+----
+
+.. _marker.setColorByIndex:
+
+setColorByIndex
+*********************************************
+
+``marker.setColorByIndex(colorIndex, markerIndex)``
+
+**Description**
+
+Sets the marker color by index. Color indexies listed below. (added in CC 2019) 
+
+* 0 = Green
+* 1 = Red
+* 2 = Purple
+* 3 = Orange
+* 4 = Yellow
+* 5 = White
+* 6 = Blue
+* 7 = Cyan
+
+**Parameters**
+
+===================   ==============================================
+
+``colorIndex``        Index of the color to apply to the marker.
+
+``markerIndex``        Index of the marker to be set.
+
+===================   ==============================================
+
+
+**Returns**
+
+Returns ``undefined``.
