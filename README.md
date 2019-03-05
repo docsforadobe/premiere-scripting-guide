@@ -1,6 +1,6 @@
 # README #
 
-This is a starter repo for the Premiere Scripting Guide. Things to note:
+This is a repo for the Premiere Scripting Guide. Things to note:
 
 - `./index.html` is the main Table of Contents, and the root of the site. I've left in entries from the JS Tools Guide for reference on structure.
 - `./1 - Introduction/`

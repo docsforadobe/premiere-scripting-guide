@@ -168,7 +168,7 @@ A projectManager object, providing access to project management functions within
 
 **Type**
 
-projectManager object; read-only.
+projectManager object; some members read-only, some read-write.
 
 
 ----

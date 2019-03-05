@@ -81,3 +81,9 @@ Welcome to the Premiere Scripting Guide!
     :caption: Chapter 13 - Source object
 
     13 - Source object/source
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Chapter 14 - ProjectManager object
+
+    14 - ProjectManager object/projectmanager
