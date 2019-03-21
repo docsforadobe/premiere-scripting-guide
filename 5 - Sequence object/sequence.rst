@@ -626,6 +626,11 @@ Returns a sequence settings structure.
 +----------------------------+------------------------------------------------------------+
 | ``previewFrameHeight``     | Height of preview frame.                                   |
 +----------------------------+------------------------------------------------------------+
+| ``previewFileFormat``      | Path to the output preset (.epr file) being used for       |
+|                            | preview file rendering.                                    |
+| 							 |                                                            |
+| 							 |                                                            |
++----------------------------+------------------------------------------------------------+
 | ``videoDisplayFormat``     | Video time display format. One of the following:           |
 |                            |    - 100 TIMEDISPLAY_24Timecode                            |
 |                            |    - 101 TIMEDISPLAY_25Timecode                            |

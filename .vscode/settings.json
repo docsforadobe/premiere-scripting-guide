@@ -1,4 +1,4 @@
 {
-    "restructuredtext.confPath": "/Users/bbb/premiere-scripting-guide",
+    "restructuredtext.confPath": "${workspaceFolder}",
     "restructuredtext.workspaceRoot": "/Users/bbb/premiere-scripting-guide"
 }
