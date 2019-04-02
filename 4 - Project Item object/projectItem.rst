@@ -88,12 +88,12 @@ Enumeration; read-only.
 ----
 
 
-.. _projectItem.nodeID:
+.. _projectItem.nodeId:
 
-nodeID
+nodeId
 *********************************************
 
-``projectItem.nodeID``
+``projectItem.nodeId``
 
 **Description**
 
