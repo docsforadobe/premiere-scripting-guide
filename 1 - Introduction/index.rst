@@ -3,7 +3,7 @@
 Introduction
 ============
 
-This reference is to serve as a public compendium of information about the methods and members available via the API. 
+This reference is a public compendium of information about the methods and members available via the API. 
 
 Premiere Pro provides an ExtendScript-based API, allowing for broad control of the entire application. ExtendScript can access and manipulation of most project elements, including metadata, exporting and rendering options.
 

@@ -22,9 +22,9 @@ The PProPanel sample exercises Premiere Pro's ExtendScript API: https://github.c
 Development and debugging tools
 -------------------------------
 
-The ExtendScript Toolkit (ESTK) remains the best (and only) ExtendScript debugger available.
+ExtendScript Toolkit (ESTK) will no longer be updated by Adobe; the recommended debugging environment for ExtendScript is to use Microsoft Visual Studio Code, and Adobe's ExtendScript debugging extension:
 
-  http://www.adobe.com/products/extendscript-toolkit.html
+https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug
 
-ESTK can be used to execute stand-alone scripts in Premiere Pro, and debug ExtendScript invoked from within CEP panels. Commonly, developers test individual functions in ESTK, then debug them 'in context' running from within a CEP panel.
+Both ESTK and VSCode with our extension can be used to execute stand-alone scripts in Premiere Pro, and debug ExtendScript invoked from within CEP panels.
 
