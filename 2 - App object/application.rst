@@ -114,7 +114,7 @@ projects
 
 **Description**
 
-An Array referencing all open projects.
+An array referencing all open projects.
 
 **Type**
 
