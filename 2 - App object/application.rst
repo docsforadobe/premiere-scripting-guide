@@ -114,7 +114,7 @@ projects
 
 **Description**
 
-An array referencing all open projects.
+An array referencing all open projects; use `numProjects` to determine array size.
 
 **Type**
 
