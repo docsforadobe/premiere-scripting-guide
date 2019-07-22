@@ -495,3 +495,24 @@ Determines whether proxy usage is currently enabled.
 
 Returns 1 if proxy enablement was changed.
 
+----
+
+
+.. _app.setEnableTranscodeOnIngest:
+
+setEnableTranscodeOnIngest(newState)
+*********************************************
+
+``app.setEnableTranscodeOnIngest(path, projPath)``
+
+**Description**
+
+Sets whether or not Premiere Pro transcodes or generates proxies for newly-added project items.
+
+**Parameters**
+
+newState, a `boolean` indicating whether or not Premiere Pro should transcode or generate proxies, when new media is added to the project.
+
+**Returns**
+
+Returns a `boolean` indicating whether transcoding upon ingest is enabled.
