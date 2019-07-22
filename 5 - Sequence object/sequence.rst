@@ -508,7 +508,7 @@ Returns 0 if successful.
 .. _sequence.exportAsMediaDirect:
 
 exportAsMediaDirect(outputPath, presetPath, workAreaType)
-*********************************************************
+*********************************************
 
 ``sequence.exportAsMediaDirect(outputPath, presetPath, workAreaType)``
 
@@ -628,6 +628,8 @@ Returns a sequence settings structure.
 +----------------------------+------------------------------------------------------------+
 | ``previewFileFormat``      | Path to the output preset (.epr file) being used for       |
 |                            | preview file rendering.                                    |
+| 							 |                                                            |
+| 							 |                                                            |
 +----------------------------+------------------------------------------------------------+
 | ``videoDisplayFormat``     | Video time display format. One of the following:           |
 |                            |    - 100 TIMEDISPLAY_24Timecode                            |
@@ -679,7 +681,6 @@ Returns a sequence settings structure.
 |                            |    - 1 ALPHACHANNEL_UPPERFIRST                             |
 |                            |    - 2 ALPHACHANNEL_LOWERFIRST                             |
 +----------------------------+------------------------------------------------------------+
-
 ----
 
 .. _sequence.setSettings:
