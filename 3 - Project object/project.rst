@@ -622,12 +622,12 @@ Changes the specified scratch disk path to a new path.
 | ``newPath``                | New path value.                                   |
 +----------------------------+---------------------------------------------------+
 | ``whichScratchDiskPath``   | Must be one of the following:                     |
-|                            |  - FirstVideoCaptureFolder                        |
-|                            |  - FirstAudioPreviewFolder                        |
-|                            |  - FirstAutoSaveFolder                            |
-|                            |  - FirstCCLibrariesFolder                         |
-|                            |  - FirstVideoCaptureFolder                        |
-|                            |  - FirstAudioCaptureFolder                        |
+|                            |  - ``ScratchDiskType.FirstVideoCaptureFolder``    |
+|                            |  - ``ScratchDiskType.FirstAudioPreviewFolder``    |
+|                            |  - ``ScratchDiskType.FirstAutoSaveFolder``        |
+|                            |  - ``ScratchDiskType.FirstCCLibrariesFolder``     |
+|                            |  - ``ScratchDiskType.FirstVideoCaptureFolder``    |
+|                            |  - ``ScratchDiskType.FirstAudioCaptureFolder``    |
 +----------------------------+---------------------------------------------------+
 
 **Returns**
