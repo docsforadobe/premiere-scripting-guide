@@ -8,10 +8,10 @@ Application object
 ``app``
 
 **Description**
+Provides access to objects and application settings within Premiere Pro.
+The single global object is always available by its name, **app**.
 
-Provides access to objects and application settings within the Premiere Pro application. The single global object is always available by its name, **app**.
 
-Attributes of the Application object provide access to specific objects within Premiere Pro. Methods of the Application object can create, open and close projects, access other APIs available from the PPro DOM (Anywhere, Team Projects, Encoder), and quit Premiere Pro. 
 
 ----
 
@@ -79,7 +79,7 @@ getPProSysPrefPath
 
 **Description**
 
-The path containing Premiere Pro's active configuration files, not specific to a given user.
+Premiere Pro's active configuration files, not specific to a given user.
 
 **Type**
 
@@ -97,7 +97,7 @@ project
 
 **Description**
 
-The currently active project. Before Premiere Pro 12.0, this pointed at the *only* project; after 12.0, this points to the currently active project.
+The currently active project.
 
 **Type**
 
@@ -114,7 +114,7 @@ projects
 
 **Description**
 
-An array referencing all open projects; use `numProjects` to determine array size.
+An array referencing all open projects; `numProjects` contains size.
 
 **Type**
 
@@ -131,7 +131,7 @@ anywhere
 
 **Description**
 
-An Anywhere object, providing access to connected Anywhere servers, through the Premiere Pro DOM. 
+An Anywhere object, providing access to available Anywhere servers.
 
 **Type**
 Anywhere object; read-only.
@@ -146,7 +146,7 @@ Encoder
 
 **Description**
 
-An Encoder object, providing access to Adobe Media Encoder (as used by Premiere Pro), through the Premiere Pro DOM. 
+Provides access to Adobe Media Encoder (on the same system).
 
 **Type**
 
@@ -164,7 +164,7 @@ projectManager
 
 **Description**
 
-A projectManager object, providing access to project management functions within Premiere Pro.
+Provides access to project management functions within Premiere Pro.
 
 **Type**
 
@@ -301,7 +301,7 @@ openFCPXML(path, projPath)
 
 **Description**
 
-Opens an FCP XML file at path, as a Premiere Pro project (specified in projPath).
+Opens an FCP XML file as a Premiere Pro project (specified in projPath).
 
 **Parameters**
 
@@ -365,7 +365,7 @@ setSDKEventMessage()
 
 **Description**
 
-Writes a string to Premiere Pro's Events panel. 
+Writes a string to Premiere Pro's Events panel.
 
 **Parameters**
 
@@ -387,20 +387,20 @@ setScratchDiskPath()
 
 **Description**
 
-Specifies the path to be used for one of Premiere Pro's scratch disk paths. 
+Specifies the path to be used for one of Premiere Pro's scratch disk paths.
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``path``                   | The new path to be used.                          |
-+----------------------------+---------------------------------------------------+
-| ``whichScratchValueToSet`` | Must be one of the following:                     |
-|                            | ``FirstAudioCaptureFolder``                       |
-|                            | ``FirstVideoCaptureFolder``                       |
-|                            | ``FirstAudioPreviewFolder``                       |
-|                            | ``FirstAutoSaveFolder``                           |
-|                            | ``FirstCCLibrariesFolder``                        |
-+----------------------------+---------------------------------------------------+
++----------------------------+-----------------------------------------------+
+| ``path``                   | The new path to be used.                      |
++----------------------------+-----------------------------------------------+
+| ``whichScratchValueToSet`` | Must be one of the following:                 |
+|                            | ``FirstAudioCaptureFolder``                   |
+|                            | ``FirstVideoCaptureFolder``                   |
+|                            | ``FirstAudioPreviewFolder``                   |
+|                            | ``FirstAutoSaveFolder``                       |
+|                            | ``FirstCCLibrariesFolder``                    |
++----------------------------+-----------------------------------------------+
 
 **Returns**
 
@@ -417,7 +417,7 @@ enableQE()
 
 **Description**
 
-Enables Premiere Pro's QE DOM. 
+Enables Premiere Pro's QE DOM.
 
 **Parameters**
 
@@ -438,7 +438,7 @@ setExtensionPersistent(ExtensionID, persist)
 
 **Description**
 
-Controls whether the extension with the given ExtensionID remains persistent in memory, throughout the Premiere Pro session.
+Whether extension with the given ExtensionID persists, within this session.
 
 **Parameters**
 

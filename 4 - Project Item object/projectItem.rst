@@ -9,7 +9,7 @@ Project Item object
 
 **Description**
 
-Each item in a given Premiere Pro project is a **projectItem**. The root item of each project is also, itself, a **projectItem**.
+Each item in a project is a **projectItem**, including the project root.
 
 ----
 
@@ -60,7 +60,7 @@ treePath
 
 **Description**
 
-The path within the project, to the current location of the project item. For example, an .mxf file located in a bin named "MXF", within a bin named "Media", would have a tree path of 
+The current project location of the project item. For example, an .mxf file located in a bin named "MXF", within a bin named "Media", would have a tree path of
 
     **\\ProjectName.prproj\\Media\\MXF\\filename.mxf**
 
@@ -134,7 +134,7 @@ teamProjectsAssetId
 
 **Description**
 
-The Team Projects Asset ID of the project item. 
+The Team Projects Asset ID of the project item.
 
 **Type**
 String; read-only.
@@ -154,7 +154,7 @@ createSmartBin()
 
 **Description**
 
-Creates a smart bin (also known as a search bin), within the project item. Only works within project items which are bins. 
+Creates a search bin; only works for bin project items.
 
 **Parameters**
 
@@ -175,7 +175,7 @@ createBin()
 
 **Description**
 
-Creates an empty bin, within the project item. Only works within project items which are bins. 
+Creates an empty bin, within the project item. Only works within project items which are bins.
 
 **Parameters**
 
@@ -250,12 +250,12 @@ Returns **0** if deletion was successful.
 
 ----
 
-.. _projectItem.getStartTime():
+.. _projectItem.startTime():
 
-getstartTime()
+startTime()
 *********************************************
 
-``projectItem.getStartTime()``
+``projectItem.startTime()``
 
 **Description**
 
@@ -930,7 +930,7 @@ A footage interpretation structure.
 
 **Returns**
 
-``0`` if successful. 
+``0`` if successful.
 
 ----
 
@@ -951,7 +951,7 @@ None.
 
 **Returns**
 
-Boolean, ``true`` if offline. 
+Boolean, ``true`` if offline.
 
 
 ----
@@ -973,5 +973,5 @@ None.
 
 **Returns**
 
-``true`` if successful. 
+``true`` if successful.
 
