@@ -26,7 +26,7 @@ children
 
 **Description**
 
-A read-only array of project items, which are themselves contained within the specified project item.
+An array of project items, contained within the specified project item.
 
 **Type**
 
@@ -60,7 +60,7 @@ treePath
 
 **Description**
 
-The current project location of the project item. For example, an .mxf file located in a bin named "MXF", within a bin named "Media", would have a tree path of
+The current project location of the project item. Example:
 
     **\\ProjectName.prproj\\Media\\MXF\\filename.mxf**
 
@@ -79,7 +79,7 @@ type
 
 **Description**
 
-The type of the project Item. Value will be one of the following: **CLIP**, **BIN**, **ROOT**, or **FILE**.
+Will be **CLIP**, **BIN**, **ROOT**, or **FILE**.
 
 **Type**
 
@@ -99,7 +99,7 @@ nodeId
 
 A unique ID assigned to the project item, upon its addition to the project.
 
-**NOTE**: This allows for differentiation between two different project items, associated with the same source media.
+**NOTE**: Distinguish between references to the same source media.
 
 **Type**
 
@@ -116,11 +116,11 @@ videoComponents
 
 **Description**
 
-An array of video components associated with the 'Master Clip' of this project item.
+Video components for the 'Master Clip' of this project item.
 
 **Type**
 
-Array of video components. While the parameters associated with these components are read/write, this array of components is, itself, read-only.
+This array is read-only; the components are not.
 
 
 ----
@@ -175,11 +175,11 @@ createBin()
 
 **Description**
 
-Creates an empty bin, within the project item. Only works within project items which are bins.
+Creates an empty bin, within the project item. Only works within bins.
 
 **Parameters**
 
-Name of new bin. 
+Name of new bin.
 
 **Returns**
 
@@ -196,11 +196,11 @@ renameBin()
 
 **Description**
 
-Changes name of bin. Only works on project items which are bins. 
+Changes name of bin. Only works on project items which are bins.
 
 **Parameters**
 
-New bin name. 
+New bin name.
 
 **Returns**
 
@@ -238,7 +238,7 @@ deleteBin()
 
 **Description**
 
-Deletes a bin, **AND ALL ITS CONTENTS**, from the project. Only works on project items which are bins. 
+Deletes a bin, **AND ALL ITS CONTENTS**, from the project.
 
 **Parameters**
 
@@ -259,7 +259,7 @@ startTime()
 
 **Description**
 
-Returns a Time object, representing the start time of the project item. 
+Returns a Time object, representing start time.
 
 **Parameters**
 
@@ -290,7 +290,7 @@ None.
 
 **Returns**
 
-A String containing all XMP metadata, serialized. 
+A String containing all XMP metadata, serialized.
 
 ----
 
@@ -324,7 +324,7 @@ getProjectMetadata()
 
 **Description**
 
-Retrieves Premiere Pro's private project metadata associated with the project item, as a String. **NOTE** While this data is also valid XMP, it is distinct from the XMP metadata associated with the media. 
+Retrieves metadata associated with the project item. Distinct from media XMP.
 
 **Parameters**
 
@@ -332,7 +332,7 @@ None.
 
 **Returns**
 
-A String containing all Premiere Pro private project metadata, serialized. 
+A String containing all Premiere Pro private project metadata, serialized.
 
 ----
 
@@ -374,7 +374,7 @@ None.
 
 **Returns**
 
-An array of markers associated with the project item, or **0** if there are no markers. 
+An array of markers associated with the project item, or **0** if there are no markers.
 
 ----
 
@@ -395,7 +395,7 @@ None.
 
 **Returns**
 
-An array of markers associated with the project item, or **0** if there are no markers. 
+An array of markers associated with the project item, or **0** if there are no markers.
 
 ----
 
@@ -450,7 +450,7 @@ changeMediaPath()
 
 **Description**
 
-Updates the project item to point to a new media path. 
+Updates the project item to point to a new media path.
 
 **Parameters**
 
@@ -471,7 +471,7 @@ select()
 
 **Description**
 
-Sets the project item (which must be a bin), as the target for subsequent imports into the project. 
+Sets the project item (which must be a bin), as the target for subsequent imports into the project.
 
 **Parameters**
 
@@ -479,7 +479,7 @@ None.
 
 **Returns**
 
-Returns **0** if the project item has successfully been made the target, for subsequent imports. 
+Returns **0** if the project item has successfully been made the target, for subsequent imports.
 
 ----
 
@@ -542,7 +542,7 @@ None.
 
 **Returns**
 
-Undefined return value. 
+Undefined return value.
 
 ----
 
@@ -740,7 +740,7 @@ getOutPoint()
 
 **Description**
 
-Retrieves the current out point for specified media type. 
+Retrieves the current out point for specified media type.
 
 **Parameters**
 
@@ -872,7 +872,7 @@ None.
 
 **Returns**
 
-A footage interpretation structure, or ``0`` if unsuccessful. 
+A footage interpretation structure, or ``0`` if unsuccessful.
 
 +----------------------------+------------------------------------------------------------+
 | ``alphaUsage``             | Alpha, will be one of the following:                       |
