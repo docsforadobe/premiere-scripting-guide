@@ -279,7 +279,7 @@ None.
 
 **Returns**
 
-Returns the speed multiplier applied to the ``trackItem``, as a ``float``. No speed adjustment = 1.
+Returns the speed multiplier applied to the ``trackItem``, as a ``float``. No speed adjustment = ``1``.
 
 
 
