@@ -1,4 +1,4 @@
 {
-    "restructuredtext.confPath": "${workspaceFolder}",
     "restructuredtext.workspaceRoot": "${workspaceFolder}"
+    "restructuredtext.confPath": "${workspaceFolder}",
 }

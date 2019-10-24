@@ -689,12 +689,12 @@ Returns **0** if successful.
 
 ----
 
-.. _projectItem.IsSequence:
+.. _projectItem.isSequence:
 
 IsSequence()
 *********************************************
 
-``projectItem.IsSequence()``
+``projectItem.isSequence()``
 
 **Description**
 
