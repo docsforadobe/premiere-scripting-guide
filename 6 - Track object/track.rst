@@ -170,7 +170,7 @@ A ``projectItem`` from which to get media, and the time at which to add it, in T
 
 **Returns**
 
-Returns 0 if successful.
+None.
 
 ----
 
