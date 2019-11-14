@@ -61,7 +61,7 @@ mediaType
 
 **Description**
 
-The type of media, contained in this track. 
+The type of media, contained in this track.
 
 **Type**
 
