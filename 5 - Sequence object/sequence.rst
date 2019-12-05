@@ -9,7 +9,7 @@ Sequence object
 
 **Description**
 
-The **Sequence** object represents sequences of media (a.k.a. "timelines"), in Premiere Pro. 
+The **Sequence** object represents sequences of media (a.k.a. "timelines"), in Premiere Pro.
 
 ----
 
@@ -286,7 +286,7 @@ None
 
 **Returns**
 
-Returns a Time object, representing the current player position. 
+Returns a Time object, representing the current player position.
 
 
 
@@ -302,11 +302,11 @@ setPlayerPosition(newTimeInTicks)
 
 **Description**
 
-Specifies a new player position, in Ticks.
+Specifies a new player position, in Ticks, as a String.
 
 **Parameters**
 
-An integer, **newTimeInTicks**.
+A String referenced the **newTimeInTicks**.
 
 **Returns**
 
@@ -695,7 +695,7 @@ Sets the settings of the current sequence. *[Editorial: I apologize for any perc
 
 **Parameters**
 
-``sequenceSettings`` is a sequence settings structure, obtained via `sequence.getSettings_`.  
+``sequenceSettings`` is a sequence settings structure, obtained via `sequence.getSettings_`.
 
 **Returns**
 
@@ -714,7 +714,7 @@ createSubsequence(ignoreChannelMapping)
 
 **Description**
 
-Creates a new sequence, which is a sub-sequence of the existing sequence. 
+Creates a new sequence, which is a sub-sequence of the existing sequence.
 
 **Parameters**
 
