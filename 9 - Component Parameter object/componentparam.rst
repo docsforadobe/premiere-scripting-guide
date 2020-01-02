@@ -412,3 +412,23 @@ A ``Time`` at which the interpretation type should be set (and which must corres
 
 Returns **0** if successful.
 
+----
+
+.. _componentParam.getValueAtTime:
+
+getValueAtTime
+*********************************************
+
+``componentParam.getValueAtTime(time)``
+
+**Description**
+
+Retrieves the value of the component parameter stream, at the specified time. If the value is between two keyframes then interpolation takes place.
+
+**Parameters**
+
+A ``Time`` from which the value should be retrieved;
+
+**Returns**
+
+Returns the value of the component parameter stream at ``time``, or **0** if unsuccessful.
