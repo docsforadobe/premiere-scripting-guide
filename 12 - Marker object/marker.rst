@@ -265,7 +265,7 @@ getColorByIndex
 
 **Description**
 
-Gets the marker color index. (added in CC 2019)
+Gets the marker color index. (added in 13.x)
 
 **Parameters**
 
@@ -291,7 +291,7 @@ setColorByIndex
 
 **Description**
 
-Sets the marker color by index. Color indexies listed below. (added in CC 2019) 
+Sets the marker color by index. Color indexies listed below. (added in 13.x)
 
 * 0 = Green
 * 1 = Red

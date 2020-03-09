@@ -495,3 +495,27 @@ Determines whether proxy usage is currently enabled.
 
 Returns 1 if proxy enablement was changed.
 
+----
+
+
+.. _app.newProject:
+
+newProject(projPath)
+*********************************************
+
+``app.newProject(projPath)``
+
+**Description**
+
+Creates a new .prproj project, at the specified path.
+
+**Parameters**
+
+================  =================================================================================================
+``projPath``       **String** containing full path to new project; a .prproj extension will be added, if necessary.
+================  =================================================================================================
+
+**Returns**
+
+Returns **true** if successful.
+

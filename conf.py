@@ -49,7 +49,7 @@ master_doc = 'index'
 
 # General information about the project.
 project = u'Premiere Pro Scripting Guide'
-copyright = u'2019, Adobe Systems Incorporated'
+copyright = u'2020, Adobe Systems Incorporated'
 author = u'Adobe Systems Incorporated'
 
 # The version info for the project you're documenting, acts as replacement for

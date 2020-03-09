@@ -25,7 +25,7 @@ clipTransferOption
 
 **Description**
 
-The specified setting for clip transfer. Value will be one of the following: 
+The specified setting for clip transfer. Value will be one of the following:
 
 +-----------------------------------+---------------------------------------------------+
 | ``CLIP_TRANSFER_COPY``            | Copy entire source media.                         |
@@ -42,7 +42,7 @@ clipTranscoderOption
 
 **Description**
 
-The specified setting for clip transcode. Value will be one of the following: 
+The specified setting for clip transcode. Value will be one of the following:
 
 +-----------------------------------+---------------------------------------------------+
 | ``CLIP_TRANSCODE_MATCH_PRESET``   | Transcode using the specified preset.             |
@@ -73,7 +73,7 @@ If non-zero, exclude unused project items from the exported project.
 
 Boolean; read/write.
 
----- 
+----
 
 .. _ProjectManager.handleFrameCount:
 
@@ -186,7 +186,7 @@ affectedSequences
 
 **Description**
 
-An `Array` of `Sequence` objects, to be exported. 
+An `Array` of `Sequence` objects, to be exported.
 
 **Type**
 

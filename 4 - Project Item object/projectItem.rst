@@ -731,6 +731,28 @@ Returns ``0`` if successful.
 
 ----
 
+.. _projectItem.getInPoint:
+
+getInPoint()
+*********************************************
+
+``projectItem.getInPoint()``
+
+**Description**
+
+Obtains the current project item in point.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+A ``Time`` object, containing the in point.
+
+
+----
+
 .. _projectItem.getOutPoint:
 
 getOutPoint()

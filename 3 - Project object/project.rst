@@ -81,7 +81,7 @@ A ``projectItem`` representing the "root" of the project.
 
 **Type**
 
-A **projectItem**; this will always be of type ``ProjectItemType_BIN``. 
+A **projectItem**; this will always be of type ``ProjectItemType_BIN``.
 
 
 ----
@@ -204,7 +204,7 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 
 *String* containing the full path to the containing project file, and an *Array* of sequenceIDs.
 
-*Array* of names of Compositions within the specified project, to be imported. 
+*Array* of names of Compositions within the specified project, to be imported.
 
 *projectItem* referencing the destination bin for this import.
 
@@ -497,7 +497,7 @@ closeDocument()
 
 **Description**
 
-Closes this project. 
+Closes this project.
 
 **Parameters**
 
@@ -570,7 +570,7 @@ getProjectPanelMetadata()
 
 **Description**
 
-Returns the current layout of the Project panel. 
+Returns the current layout of the Project panel.
 
 **Parameters**
 
@@ -593,7 +593,7 @@ setProjectPanelMetadata()
 
 **Description**
 
-Returns the current layout of the Project panel. 
+Returns the current layout of the Project panel.
 
 **Parameters**
 
@@ -654,3 +654,132 @@ None.
 **Returns**
 
 Returns  **0** if successful.
+
+----
+
+.. _project.isSharedLocationCopyEnabled:
+
+isSharedLocationCopyEnabled()
+*********************************************
+
+``project.isSharedLocationCopyEnabled()``
+
+**Description**
+
+Determines whether copying to a shared location is enabled, for this project.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns  **true** if copying is enabled; **false** if not.
+
+----
+
+.. _project.getSharedLocation:
+
+getSharedLocation()
+*********************************************
+
+``project.getSharedLocation()``
+
+**Description**
+
+Returns the path to the location to which shared files are to be copied.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a **String** containing the path.
+
+----
+
+.. _project.newSequence:
+
+newSequence(sequenceName, pathToSequencePreset)
+***********************************************
+
+``project.newSequence(sequenceName, pathToSequencePreset)``
+
+**Description**
+
+Creates a new sequence with the given name, based on the specified preset (.sqpreset file).
+
+**Parameters**
+
++----------------------------+---------------------------------------------------+
+| ``sequenceName``           | **String**, Name of new sequence.                 |
++----------------------------+---------------------------------------------------+
+| ``pathToSequencePreset``   | **String**, path to .sqpreset file.               |
++----------------------------+---------------------------------------------------+
+
+**Returns**
+
+Returns a **Sequence**, or **0** if unsuccessful.
+
+----
+
+.. _project.newBarsAndTone:
+
+newBarsAndTone(sequenceName, pathToSequencePreset)
+**************************************************
+
+``project.newBarsAndTone(width, height, timeBase, PARNum, PARDen, audioSampleRate, name);``
+
+**Description**
+
+Creates a new sequence with the given name, based on the specified preset (.sqpreset file).
+
+**Parameters**
+
++----------------------------+---------------------------------------------------+
+| ``width``                  |                                                   |
++----------------------------+---------------------------------------------------+
+| ``height``                 |                                                   |
++----------------------------+---------------------------------------------------+
+| ``timeBase``               | Timebase of new project item. One of these:       |
++----------------------------+---------------------------------------------------+
+| ``PARNum``                 | Pixel aspect ration numerator.                    |
++----------------------------+---------------------------------------------------+
+| ``PARDen``	             | Pixel aspect ration denominator.                  |
++----------------------------+---------------------------------------------------+
+| ``audioSampleRate``        | audio sample rate.                                |
++----------------------------+---------------------------------------------------+
+| ``name``                   | **String**, Name of new project item.             |
++----------------------------+---------------------------------------------------+
+
+**Returns**
+
+Returns a **projectItem** for the new bars and tone, or **0** if unsuccessful.
+
+----
+
+.. _project.createNewSequenceFromClips:
+
+createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin)
+*****************************************************************************
+
+``project.createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin);``
+
+**Description**
+
+Creates a new sequence with the given name, in the specified destination bin, and sequentially inserts project items into it.
+
+**Parameters**
+
++----------------------------+---------------------------------------------------+
+| ``sequenceName``           | Optional; Name of created sequence.               |
++----------------------------+---------------------------------------------------+
+| ``arrayOfProjectItems``    | Array of projectItems to be inserted in sequence. |
++----------------------------+---------------------------------------------------+
+| ``destinationBin``         | Optional; bin to contain sequence.                |
++----------------------------+---------------------------------------------------+
+
+**Returns**
+
+Returns **true** if successful.

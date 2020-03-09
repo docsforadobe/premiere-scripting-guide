@@ -15,19 +15,19 @@ Welcome to the Premiere Pro Scripting Guide!
     :caption: Chapter 2 - App object
 
     2 - App object/application
-    
+
 .. toctree::
     :maxdepth: 2
     :caption: Chapter 3 - Project object
 
     3 - Project object/project
-    
+
 .. toctree::
     :maxdepth: 2
     :caption: Chapter 4 - Project Item object
 
     4 - Project Item object/projectItem
-    
+
 .. toctree::
     :maxdepth: 2
     :caption: Chapter 5 - Sequence object
