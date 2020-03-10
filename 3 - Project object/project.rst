@@ -536,7 +536,7 @@ Adds a new field of the specified type to Premiere Pro's private project metadat
 
 **Returns**
 
-Returns **0** if successful.
+Returns **true** if successful, **undefined** if unsuccessful.
 
 ----
 
