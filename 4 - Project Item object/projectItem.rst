@@ -997,3 +997,24 @@ None.
 
 ``true`` if successful.
 
+
+----
+
+.. _projectItem.getAudioChannelMapping:
+
+getAudioChannelMapping()
+*********************************************
+
+``projectItem.getAudioChannelMapping()``
+
+**Description**
+
+Retrieves the audio channel mapping currently applied to this **projectItem**.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+An audioChannelMapping object, or ``0`` if unsuccessful.

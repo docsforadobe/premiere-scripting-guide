@@ -87,3 +87,9 @@ Welcome to the Premiere Pro Scripting Guide!
     :caption: Chapter 14 - ProjectManager object
 
     14 - ProjectManager object/projectmanager
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Chapter 15 - AudioChannelMapping object
+
+    15 - AudioChannelMapping object/audiochannelmapping
