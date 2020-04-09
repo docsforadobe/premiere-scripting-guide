@@ -657,7 +657,7 @@ Returns a sequence settings structure.
 +----------------------------+------------------------------------------------------------+
 | ``videoFrameWidth``        | Height of sequence video frame.                            |
 +----------------------------+------------------------------------------------------------+
-| ``videoPixelAspectRatio``  | The pixel aspect ratio, as floating point.                 |
+| ``videoPixelAspectRatio``  | The pixel aspect ratio, as a ratio, as a String.           |
 +----------------------------+------------------------------------------------------------+
 | ``vrHorzCapturedView``     |                                                            |
 +----------------------------+------------------------------------------------------------+
