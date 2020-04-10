@@ -4,7 +4,7 @@ Welcome to the Premiere Pro Scripting Guide!
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 1 - Introduction
+    :caption: Introduction
 
     1 - Introduction/index
     1 - Introduction/extendscript-overview
@@ -12,84 +12,84 @@ Welcome to the Premiere Pro Scripting Guide!
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 2 - App object
+    :caption: App object
 
     2 - App object/application
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 3 - Project object
+    :caption: Project object
 
     3 - Project object/project
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 4 - Project Item object
+    :caption: Project Item object
 
     4 - Project Item object/projectItem
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 5 - Sequence object
+    :caption: Sequence object
 
     5 - Sequence object/sequence
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 6 - Track object
+    :caption: Track object
 
     6 - Track object/track
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 7 - Track Item object
+    :caption: Track Item object
 
     7 - Track Item object/trackitem
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 8 - Component object
+    :caption: Component object
 
     8 - Component object/component
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 9 - Component Parameter object
+    :caption: Component Parameter object
 
     9 - Component Parameter object/componentparam
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 10 - Anywhere object
+    :caption: Anywhere object
 
     10 - Anywhere object/anywhere
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 11 - Encoder object
+    :caption: Encoder object
 
     11 - Encoder object/encoder
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 12 - Marker object
+    :caption: Marker object
 
     12 - Marker object/marker
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 13 - Source object
+    :caption: Source object
 
     13 - Source object/source
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 14 - ProjectManager object
+    :caption: ProjectManager object
 
     14 - ProjectManager object/projectmanager
 
 .. toctree::
     :maxdepth: 2
-    :caption: Chapter 15 - AudioChannelMapping object
+    :caption: AudioChannelMapping object
 
     15 - AudioChannelMapping object/audiochannelmapping
