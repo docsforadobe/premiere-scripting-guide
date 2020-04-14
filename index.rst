@@ -93,3 +93,9 @@ Welcome to the Premiere Pro Scripting Guide!
     :caption: AudioChannelMapping object
 
     15 - AudioChannelMapping object/audiochannelmapping
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Productions object
+
+    16 - Productions object/productions
