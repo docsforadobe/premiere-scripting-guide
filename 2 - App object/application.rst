@@ -272,8 +272,8 @@ Returns **true** if file is openeable.
 
 .. _app.openDocument:
 
-openDocument(path)
-*********************************************
+openDocument(pathToDocument, optionalSuppressConversionDialog, optionalBypassLocateFileDialog, optionalBypassWarningDialog, optionalDoNotAddToMRUList)
+******************************************************************************************************************************************************
 
 ``app.openDocument(path)``
 
@@ -283,7 +283,7 @@ Opens the file at the specified path, as a Premiere Pro project.
 
 **Parameters**
 
-path
+pathToDocument, and 1-4 optional (boolean) parameters.
 
 **Returns**
 
