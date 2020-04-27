@@ -783,3 +783,24 @@ Creates a new sequence with the given name, in the specified destination bin, an
 **Returns**
 
 Returns **true** if successful.
+
+----
+
+.. _project.setEnableTranscodeOnIngest:
+
+setEnableTranscodeOnIngest(newBooleanValue)
+*****************************************************************************
+
+``project.setEnableTranscodeOnIngest(FirstAutoSaveFolder);``
+
+**Description**
+
+Controls the enablement of transcode-upon-ingest behavior, for the given project.
+
+**Parameters**
+
+A Boolean indicating the desired state.
+
+**Returns**
+
+Returns **true** if successful.

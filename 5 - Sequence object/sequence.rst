@@ -707,8 +707,8 @@ Returns 0 if successful.
 
 .. _sequence.createSubsequence:
 
-createSubsequence(ignoreChannelMapping)
-*********************************************
+createSubsequence()
+***********************************************
 
 ``sequence.createSubsequence(ignoreChannelMapping)``
 
@@ -723,3 +723,33 @@ A ``Boolean`` indicating whether the new sequence should ignore the channel mapp
 **Returns**
 
 Returns 0 if successful.
+
+----
+
+.. _sequence.performCutDetectionOnSelection:
+
+performCutDetectionOnSelection()
+*******************************************************************************************************
+
+``sequence.performCutDetectionOnSelection(actionDesired, ApplyCutsToLinkedAudio, sensitivity);``
+
+**Description**
+
+Performs cut detection on the sequence selection. 
+
+**Parameters**
+
+
+
+
++----------------------------+------------------------------------------------------------------------+
+| ``actionDesired``          | `'CreateMarkers'` or `'ApplyCuts'`.                                    |
++----------------------------+------------------------------------------------------------------------+
+| ``ApplyCutsToLinkedAudio`` | Boolean.                                                               |
++----------------------------+------------------------------------------------------------------------+
+| ``sensitivity``            | `'LowSensitivity'`, `'MediumSensitivity'`, or `'HighSensitivity'`.     |
++----------------------------+------------------------------------------------------------------------+
+
+**Returns**
+
+Returns `true` if successful.

@@ -519,3 +519,48 @@ Creates a new .prproj project, at the specified path.
 
 Returns **true** if successful.
 
+
+----
+
+
+.. _app.getWorkspaces:
+
+getWorkspaces
+*********************************************
+
+``app.getWorkspaces()``
+
+**Description**
+
+Obtain an array of the workspaces available.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns an Array of workspaces if successful, `null` if unsuccessful.
+
+----
+
+
+.. _app.setWorkspace:
+
+setWorkspace
+*********************************************
+
+``app.setWorkspace(indexOfWorkspace)``
+
+**Description**
+
+Obtain an array of the workspaces available.
+
+**Parameters**
+
+Integer specifying which workspace (from the array returned by getWorkspaces()) to enable.
+
+**Returns**
+
+Returns true if successful.
+
