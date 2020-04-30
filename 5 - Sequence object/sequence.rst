@@ -753,3 +753,34 @@ Performs cut detection on the sequence selection.
 **Returns**
 
 Returns `true` if successful.
+
+----
+
+.. _sequence.autoReframeSequence:
+
+autoReframeSequence()
+*******************************************************************************************************
+
+``sequence.autoReframeSequence(numerator, denominator, motionPreset, newName, useNestedSequences);``
+
+**Description**
+
+Generates a new, auto-reframed sequence. 
+
+**Parameters**
+
++----------------------------+------------------------------------------------------------------------+
+| ``numerator``              | Numerator of desired frame aspect ratio.                               |
++----------------------------+------------------------------------------------------------------------+
+| ``denominator``            | Denominator of desired frame aspect ratio.                             |
++----------------------------+------------------------------------------------------------------------+
+| ``motionPreset``           | Valid values: `'slower'`, `'default'`, or `'faster'` motion.           |
++----------------------------+------------------------------------------------------------------------+
+| ``newName``                | Name for newly-created sequence.                                       |
++----------------------------+------------------------------------------------------------------------+
+| ``useNestedSequences``     | Boolean indicating whether to honor nested sequence.                   |
++----------------------------+------------------------------------------------------------------------+
+
+**Returns**
+
+Returns the new Sequence object, if successful; `0` if unsuccessful.
