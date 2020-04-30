@@ -782,7 +782,7 @@ Creates a new sequence with the given name, in the specified destination bin, an
 
 **Returns**
 
-Returns **true** if successful.
+Returns the newly-created Sequence object if successful; `0` if unsuccessful.
 
 ----
 
