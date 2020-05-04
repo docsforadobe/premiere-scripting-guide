@@ -101,7 +101,7 @@ The currently active project.
 
 **Type**
 
-String; read-only.
+Project object.
 
 ----
 
@@ -118,7 +118,7 @@ An array referencing all open projects; `numProjects` contains size.
 
 **Type**
 
-Array (of Project objects); read-only.
+Array (of Project objects).
 
 ----
 
@@ -131,10 +131,10 @@ anywhere
 
 **Description**
 
-An Anywhere object, providing access to available Anywhere servers.
+An Anywhere object, providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).
 
 **Type**
-Anywhere object; read-only.
+Anywhere object.
 ----
 
 .. _app.Encoder:
@@ -150,7 +150,7 @@ Provides access to Adobe Media Encoder (on the same system).
 
 **Type**
 
-Encoder object; read-only.
+Encoder object.
 
 
 ----
@@ -168,7 +168,7 @@ Provides access to project management functions within Premiere Pro.
 
 **Type**
 
-projectManager object; some members read-only, some read-write.
+projectManager object.
 
 
 ----
@@ -221,7 +221,7 @@ Provides access to Source monitor.
 
 **Type**
 
-sourceMonitor object; read-only.
+sourceMonitor object.
 
 
 =======
@@ -266,13 +266,13 @@ None.
 
 **Returns**
 
-Returns **true** if file is openeable.
+Returns **true** if file can be opened as a Premiere Pro project.
 
 ----
 
 .. _app.openDocument:
 
-openDocument(pathToDocument, optionalSuppressConversionDialog, optionalBypassLocateFileDialog, optionalBypassWarningDialog, optionalDoNotAddToMRUList)
+openDocument()
 ******************************************************************************************************************************************************
 
 ``app.openDocument(path)``
@@ -283,7 +283,17 @@ Opens the file at the specified path, as a Premiere Pro project.
 
 **Parameters**
 
-pathToDocument, and 1-4 optional (boolean) parameters.
++---------------------------------------+------------------------------------------------------------------------+
+| ``pathToDocument``                    | Full path to the document to be opened.                                |
++---------------------------------------+------------------------------------------------------------------------+
+| ``optionalSuppressConversionDialog``  | Suppress project conversion dialog?                                    |
++---------------------------------------+------------------------------------------------------------------------+
+| ``optionalBypassLocateFileDialog``    | Bypass the locate file dialog?                                         |
++---------------------------------------+------------------------------------------------------------------------+
+| ``optionalBypassWarningDialog``       | Bypass warning dialog?                                                 |
++---------------------------------------+------------------------------------------------------------------------+
+| ``optionalDoNotAddToMRUList``         | Skip adding this file, to the most recently used list?                 |
++---------------------------------------+------------------------------------------------------------------------+
 
 **Returns**
 
@@ -352,7 +362,7 @@ None.
 
 **Returns**
 
-Nothing.
+Returns **true** if trace was added.
 
 ----
 
@@ -431,7 +441,7 @@ Returns true if QE DOM was enabled.
 
 .. _app.setExtensionPersistent:
 
-setExtensionPersistent(ExtensionID, persist)
+setExtensionPersistent()
 ************************************************
 
 ``app.setExtensionPersistent(ExtensionID, persist)``
@@ -442,14 +452,16 @@ Whether extension with the given ExtensionID persists, within this session.
 
 **Parameters**
 
-================  =========================================================
-``extensionID``   Which extension to modify.
-================  =========================================================
-``persist``       Pass 1 to keep extension in memory, 0 to allow unloading.
-================  =========================================================
++--------------------------------------------------------------------------------+
+| ``extensionID``   | Which extension to modify.                                 |
++--------------------------------------------------------------------------------+
+| ``persist``       | Pass 1 to keep extension in memory, 0 to allow unloading.  |
++--------------------------------------------------------------------------------+
 
 **Returns**
-Nothing.
+
+Returns **true** if successful. 
+
 ----
 
 .. _app.getEnableProxies:
