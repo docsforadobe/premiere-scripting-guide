@@ -35,7 +35,7 @@ audioChannelsType
 
 **Description**
 
-The type of the audio contained in this channel. Will be either ``AUDIOCHANNELTYPE_Mono``, ``AUDIOCHANNELTYPE_Stereo``, or ``AUDIOCHANNELTYPE_51``.
+The type of the audio contained in this channel. Will be 0, 1 or 2, corresponding to ``AUDIOCHANNELTYPE_Mono``, ``AUDIOCHANNELTYPE_Stereo``, or ``AUDIOCHANNELTYPE_51``.
 
 =======
 Methods
