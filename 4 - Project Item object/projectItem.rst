@@ -137,9 +137,25 @@ teamProjectsAssetId
 The Team Projects Asset ID of the project item.
 
 **Type**
+
 String; read-only.
 
 ----
+
+.. _projectItem.getAudioChannelMapping:
+
+getAudioChannelMapping
+*********************************************
+
+``projectItem.getAudioChannelMapping``
+
+**Description**
+
+The audio channel mapping currently applied to this **projectItem**.
+
+**Type**
+
+An audioChannelMapping object.
 
 =======
 Methods
@@ -997,24 +1013,3 @@ None.
 
 ``true`` if successful.
 
-
-----
-
-.. _projectItem.getAudioChannelMapping:
-
-getAudioChannelMapping()
-*********************************************
-
-``projectItem.getAudioChannelMapping()``
-
-**Description**
-
-Retrieves the audio channel mapping currently applied to this **projectItem**.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-An audioChannelMapping object, or ``0`` if unsuccessful.
