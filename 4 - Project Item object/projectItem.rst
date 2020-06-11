@@ -790,6 +790,29 @@ Returns a ``Time`` object.
 
 ----
 
+.. _projectItem.setInPoint:
+
+setInPoint()
+*********************************************
+
+``projectItem.setInPoint(timeInTicks, mediaType)``
+
+**Description**
+
+Sets the in point to ``timeInTicks``, for specified media types. 
+
+**Parameters**
+
+A ``Time`` object, and an ``int`` determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
+
+**Returns**
+
+Returns ``0`` if successful.
+
+
+
+----
+
 .. _projectItem.setOutPoint:
 
 setOutPoint()
@@ -799,11 +822,11 @@ setOutPoint()
 
 **Description**
 
-Sets the out point to ``timeInTicks``, for specified media types. ``mediaType`` defaults to all; pass ``1`` for video only, or ``2`` for audio only.
+Sets the out point to ``timeInTicks``, for specified media types. 
 
 **Parameters**
 
-A ``Time`` object, and an ``int``; pass ``1`` for video only, or ``2`` for audio only. If no ``mediaType`` is passed, function sets the out point for all media.
+A ``Time`` object, and an ``int`` determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
 
 **Returns**
 
