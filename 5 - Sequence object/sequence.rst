@@ -726,12 +726,12 @@ Returns 0 if successful.
 
 ----
 
-.. _sequence.performCutDetectionOnSelection:
+.. _sequence.performSceneEditDetectionOnSelection:
 
-performCutDetectionOnSelection()
+performSceneEditDetectionOnSelection()
 *******************************************************************************************************
 
-``sequence.performCutDetectionOnSelection(actionDesired, ApplyCutsToLinkedAudio, sensitivity);``
+``sequence.performSceneEditDetectionOnSelection(actionDesired, ApplyCutsToLinkedAudio, sensitivity);``
 
 **Description**
 
