@@ -722,9 +722,53 @@ None.
 
 **Returns**
 
-Returns ``true`` if the project item is a sequence, ``false`` if it isn't.
+Returns ``true`` if the project item is a sequence, or a multicam clip, or a merged clip. Returns ``false`` if it isn't any of those.
 
 ----
+
+.. _projectItem.isMulticamClip:
+
+IsMulticamClip()
+*********************************************
+
+``projectItem.isMulticamClip()``
+
+**Description**
+
+Indicates whether the project item refers to a multicam clip.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns ``true`` if the project item is a multicam clip, ``false`` if it isn't. 
+
+----
+
+.. _projectItem.isMergedClip:
+
+isMergedClip()
+*********************************************
+
+``projectItem.isMergedClip()``
+
+**Description**
+
+Indicates whether the project item refers to a merged clip.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns ``true`` if the project item is a merged clip, ``false`` if it isn't. 
+
+----
+
+
 
 .. _projectItem.setStartTime:
 
