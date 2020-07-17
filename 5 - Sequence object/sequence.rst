@@ -784,3 +784,27 @@ Generates a new, auto-reframed sequence.
 **Returns**
 
 Returns the new Sequence object, if successful; `0` if unsuccessful.
+
+----
+
+.. _sequence.isDoneAnalyzingForVideoEffects:
+
+isDoneAnalyzingForVideoEffects()
+*******************************************************************************************************
+
+``sequence.isDoneAnalyzingForVideoEffects();``
+
+**Description**
+
+Returns whether or not the sequence is done analyzing for video effects.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns ``true`` if analysis is complete.
+
+
+
