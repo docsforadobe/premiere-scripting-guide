@@ -804,3 +804,66 @@ A Boolean indicating the desired state.
 **Returns**
 
 Returns **true** if successful.
+
+----
+
+.. _project.getSupportedGraphicsWhiteLuminances:
+
+getSupportedGraphicsWhiteLuminances()
+*****************************************************************************
+
+``project.getSupportedGraphicsWhiteLuminances();``
+
+**Description**
+
+Retrieves the supported graphics white luminance values, for this project.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns an array of graphics white settings supported by the project; Currently it returns (100, 203, 300)
+
+----
+
+.. _project.getGraphicsWhiteLuminance:
+
+getGraphicsWhiteLuminance()
+*****************************************************************************
+
+``project.getGraphicsWhiteLuminance();``
+
+**Description**
+
+Retrieves the current graphics white luminance value, for this project.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns the currently selected graphics white value.
+
+----
+
+.. _project.setGraphicsWhiteLuminance:
+
+setGraphicsWhiteLuminance(int newValue)
+*****************************************************************************
+
+``project.setGraphicsWhiteLuminance(newValue);``
+
+**Description**
+
+Sets the current graphics white luminance value, for this project. 
+
+**Parameters**
+
+An integer specifying the value to be used; must be a value provided by ``getSupportedGraphicsWhiteLuminances()``.
+
+**Returns**
+
+Returns true if successful.
