@@ -126,10 +126,6 @@ Makes Adobe Media Encoder render (optionally, a specified range from) the specif
 +------------------------------+---------------------------------------------------+
 | ``boolRemoveUponCompletion`` | If **1**, job will be removed once complete.      |
 +------------------------------+---------------------------------------------------+
-| ``inPoint``    (optional)    | A **Time**, for the in point of new file.         |
-+------------------------------+---------------------------------------------------+
-| ``outPoint``   (optional)    | A **Time**, for the out point of new file.        |
-+------------------------------+---------------------------------------------------+
 
 **Returns**
 
