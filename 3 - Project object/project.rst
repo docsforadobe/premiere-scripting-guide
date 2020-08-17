@@ -17,6 +17,23 @@ Represents a Premiere Pro project. As of Premiere Pro 12.0, multiple projects ma
 Attributes
 ==========
 
+.. _projectname.activeSequence:
+
+activeSequence
+*********************************************
+
+``project.activeSequence``
+
+**Description**
+
+The currently active sequence, within the project.
+
+**Type**
+
+a ``sequence`` object, or ``0`` if no sequence is currently active.
+
+----
+
 .. _project.documentID:
 
 documentID
@@ -83,7 +100,6 @@ A ``projectItem`` representing the "root" of the project.
 
 A **projectItem**; this will always be of type ``ProjectItemType_BIN``.
 
-
 ----
 
 .. _projectname.sequences:
@@ -101,91 +117,351 @@ The sequences within the project.
 
 An array of ``sequence`` objects.
 
-
 ----
-
-.. _projectname.activeSequence:
-
-activeSequence
-*********************************************
-
-``project.activeSequence``
-
-**Description**
-
-The currently active sequence, within the project.
-
-**Type**
-
-a ``sequence`` object, or ``0`` if no sequence is currently active.
-
 
 =======
 Methods
 =======
 
-.. _project.openSequence:
+.. _project.addPropertyToProjectMetadataSchema:
 
-openSequence()
+addPropertyToProjectMetadataSchema()
 *********************************************
 
-``project.openSequence(sequenceID)``
+``project.addPropertyToProjectMetadataSchema(propertyName, propertyLabel, propertyType)``
 
 **Description**
 
-Makes the sequence with the provided sequence ID, active. This will open the sequence in the Timeline panel.
+Adds a new field of the specified type to Premiere Pro's private project metadata schema.
 
 **Parameters**
 
-A valid ``sequenceID``.
++----------------------------+---------------------------------------------------+
+| ``propertyName``           | **String**, Name of property to be added.         |
++----------------------------+---------------------------------------------------+
+| ``propertyLabel``          | **String**, Label of property to be added.        |
++----------------------------+---------------------------------------------------+
+| ``propertyType``           | Must be one of the following:                     |
+|                            |    - 0 Integer                                    |
+|                            |    - 1 Real                                       |
+|                            |    - 2 String                                     |
+|                            |    - 3 Boolean                                    |
++----------------------------+---------------------------------------------------+
 
 **Returns**
 
-Returns **true** if successful, **false** if not.
-
-
-----
-
-.. _project.importFiles:
-
-importFiles()
-*********************************************
-
-``project.importFiles(arrayOfFilePathsToImport, suppressUI, targetBin, importAsNumberedStills)``
-
-**Description**
-
-Imports media from the specified file paths.
-
-**Parameters**
-
-An ``array`` of full, platform-specific file paths to be imported, a ``boolean`` indicating whether warning dialogs should be suppressed, a ``projectItem`` object for the bin into which the files should be imported, and a ``boolean`` indicating whether the file paths should be interpreted as a sequence of numbered stills.
-
-**Returns**
-
-Returns **true** if successful, **false** if not.
+Returns **true** if successful, **undefined** if unsuccessful.
 
 ----
 
-.. _project.importSequences:
+.. _project.closeDocument:
 
-importSequences()
+closeDocument()
 *********************************************
 
-``project.importSequences(pathOfContainingProject, arrayOfSequenceIDs)``
+``project.closeDocument(saveFirst, promptIfDirty)``
 
 **Description**
 
-Imports an array of sequences (with specified sequenceIDs), from the specified project, into the current project.
+Closes this project.
 
 **Parameters**
 
-*String* containing the full path to the containing project file, and an *Array* of sequenceIDs.
+Two **ints**; If **saveFirst** is 1, the project will be saved before closing. If **promptIfDirty** is 1, the user will be asked whether they want to save changes first.
 
 **Returns**
 
 Returns **0** if successful.
 
+----
+
+.. _project.consolidateDuplicates:
+
+consolidateDuplicates()
+*********************************************
+
+``project.consolidateDuplicates()``
+
+**Description**
+
+Invokes Premiere Pro's "Consolidate Duplicate Footage" functionality, as available from the UI.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns  **0** if successful.
+
+----
+
+.. _project.createNewSequence:
+
+createNewSequence()
+*********************************************
+
+``project.createNewSequence(sequenceName, sequenceID)``
+
+**Description**
+
+Creates a new sequence with the specified ID.
+
+**Parameters**
+
+*String* name of sequence.
+
+*GUID* uniquely identifying this sequence.
+
+**Returns**
+
+Returns a **Sequence** object if creation was successful, or **0** if unsuccessful.
+
+----
+
+.. _project.createNewSequenceFromClips:
+
+createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin)
+*****************************************************************************
+
+``project.createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin);``
+
+**Description**
+
+Creates a new sequence with the given name, in the specified destination bin, and sequentially inserts project items into it.
+
+**Parameters**
+
++----------------------------+---------------------------------------------------+
+| ``sequenceName``           | Optional; Name of created sequence.               |
++----------------------------+---------------------------------------------------+
+| ``arrayOfProjectItems``    | Array of projectItems to be inserted in sequence. |
++----------------------------+---------------------------------------------------+
+| ``destinationBin``         | Optional; bin to contain sequence.                |
++----------------------------+---------------------------------------------------+
+
+**Returns**
+
+Returns the newly-created Sequence object if successful; `0` if unsuccessful.
+
+----
+
+.. _project.deleteSequence:
+
+deleteSequence()
+*********************************************
+
+``project.deleteSequence(sequenceToDelete)``
+
+**Description**
+
+Deletes the specified sequence from the project.
+
+**Parameters**
+
+The **Sequence** to delete.
+
+**Returns**
+
+Returns 0 if successful.
+
+----
+
+.. _project.exportAAF:
+
+exportAAF()
+*********************************************
+
+``project.exportAAF(sequenceToExport, outputPath, mixdownVideo, explodeToMono, sampleRate, bitsPerSample, embedAudio, audioFileFormat, trimSources, handleFrames, presetPath, renderAudioEffects, includeClipCopies, preserveParentFolder)``
+
+**Description**
+
+Exports an AAF file of the specified sequence, using the specified settings.
+
+**Parameters**
+
++----------------------------+---------------------------------------------------+
+| ``sequence``               | Specifies the sequence to be output.              |
++----------------------------+---------------------------------------------------+
+| ``filePath``               | Complete output path for .aaf file.               |
++----------------------------+---------------------------------------------------+
+| ``mixdownVideo``           | If **1**, render video before export.             |
++----------------------------+---------------------------------------------------+
+| ``explodeToMono``          | If **1**, breaks out stereo tracks to mono.       |
++----------------------------+---------------------------------------------------+
+| ``sampleRate``             | Specifies the sample rate of output audio.        |
++----------------------------+---------------------------------------------------+
+| ``bitsPerSample``          | Specifies the bits per sample of audio output.    |
++----------------------------+---------------------------------------------------+
+| ``embedAudio``             | If **1**, audio is embedded, if **0**, external.  |
++----------------------------+---------------------------------------------------+
+| ``audioFileFormat``        | **0** is AIFF, **1** is WAV.                      |
++----------------------------+---------------------------------------------------+
+| ``trimSources``            | If **1**, trim audio files before export.         |
++----------------------------+---------------------------------------------------+
+| ``handleFrames``           | Number of handle frames (from 0 to 1000).         |
++----------------------------+---------------------------------------------------+
+| ``presetPath``             | Complete path to Export preset (.epr file).       |
++----------------------------+---------------------------------------------------+
+| ``renderAudioEffects``     | If **1**, render audio effects before export.     |
++----------------------------+---------------------------------------------------+
+| ``includeClipCopies``      | If **1**, include each copy of a clip.            |
++----------------------------+---------------------------------------------------+
+| ``preserveParentFolder``   | If **1**, preserves the parent folder, in output. |
++----------------------------+---------------------------------------------------+
+
+**Returns**
+
+Returns **0** if successful.
+
+----
+
+.. _project.exportFinalCutProXML:
+
+exportFinalCutProXML()
+*********************************************
+
+``project.exportFinalCutProXML(outputPath, suppressUI)``
+
+**Description**
+
+Exports an FCP XML representation of the entire project, to the specified output path.
+
+**Parameters**
+
+Full output path of .xml file, as a *String*.
+
+The suppressUI param is an *Int*; if **1**, no warnings or alerts will be shown, during the export.
+
+**Returns**
+
+Returns 0 if successful.
+
+----
+
+.. _project.exportTimeline:
+
+exportTimeline()
+*********************************************
+
+``project.exportTimeline(exportControllerName)``
+
+**Description**
+
+Exports the currently active sequence, using an Export Controller plug-in with the specified name.
+
+**Parameters**
+
+A **String** containing the name of the Export Controller plug-in to be used. To use the Premiere Pro SDK example Export Controller, the value would be "SDK Export Controller".
+
+**Returns**
+
+Returns **0** if successful, or an error code if not.
+
+----
+
+.. _project.getGraphicsWhiteLuminance:
+
+getGraphicsWhiteLuminance()
+*****************************************************************************
+
+``project.getGraphicsWhiteLuminance();``
+
+**Description**
+
+Retrieves the current graphics white luminance value, for this project.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns the currently selected graphics white value.
+
+----
+
+.. _project.getInsertionBin:
+
+getInsertionBin()
+*********************************************
+
+``project.getInsertionBin()``
+
+**Description**
+
+Returns a **projectItem** referencing the bin into which import will occur.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a **projectItem** if successful, **0** if not.
+
+----
+
+.. _project.getProjectPanelMetadata:
+
+getProjectPanelMetadata()
+*********************************************
+
+``project.getProjectPanelMetadata()``
+
+**Description**
+
+Returns the current layout of the Project panel.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a **String** representing the current Project panel layout, or **0** if unsuccessful.
+
+----
+
+.. _project.getSharedLocation:
+
+getSharedLocation()
+*********************************************
+
+``project.getSharedLocation()``
+
+**Description**
+
+Returns the path to the location to which shared files are to be copied.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a **String** containing the path.
+
+----
+
+.. _project.getSupportedGraphicsWhiteLuminances:
+
+getSupportedGraphicsWhiteLuminances()
+*****************************************************************************
+
+``project.getSupportedGraphicsWhiteLuminances();``
+
+**Description**
+
+Retrieves the supported graphics white luminance values, for this project.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns an array of graphics white settings supported by the project; Currently it returns (100, 203, 300)
 
 ----
 
@@ -235,98 +511,170 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 
 Returns **0** if successful.
 
-
 ----
 
-.. _project.createNewSequence:
+.. _project.importFiles:
 
-createNewSequence()
+importFiles()
 *********************************************
 
-``project.createNewSequence(sequenceName, sequenceID)``
+``project.importFiles(arrayOfFilePathsToImport, suppressUI, targetBin, importAsNumberedStills)``
 
 **Description**
 
-Creates a new sequence with the specified ID.
+Imports media from the specified file paths.
 
 **Parameters**
 
-*String* name of sequence.
-
-*GUID* uniquely identifying this sequence.
+An ``array`` of full, platform-specific file paths to be imported, a ``boolean`` indicating whether warning dialogs should be suppressed, a ``projectItem`` object for the bin into which the files should be imported, and a ``boolean`` indicating whether the file paths should be interpreted as a sequence of numbered stills.
 
 **Returns**
 
-Returns a **Sequence** object if creation was successful, or **0** if unsuccessful.
-
+Returns **true** if successful, **false** if not.
 
 ----
 
-.. _project.deleteSequence:
+.. _project.importSequences:
 
-deleteSequence()
+importSequences()
 *********************************************
 
-``project.deleteSequence(sequenceToDelete)``
+``project.importSequences(pathOfContainingProject, arrayOfSequenceIDs)``
 
 **Description**
 
-Deletes the specified sequence from the project.
+Imports an array of sequences (with specified sequenceIDs), from the specified project, into the current project.
 
 **Parameters**
 
-The **Sequence** to delete.
+*String* containing the full path to the containing project file, and an *Array* of sequenceIDs.
 
 **Returns**
 
-Returns 0 if successful.
-
-
+Returns **0** if successful.
 
 ----
 
-.. _project.exportFinalCutProXML:
+.. _project.isSharedLocationCopyEnabled:
 
-exportFinalCutProXML()
+isSharedLocationCopyEnabled()
 *********************************************
 
-``project.exportFinalCutProXML(outputPath, suppressUI)``
+``project.isSharedLocationCopyEnabled()``
 
 **Description**
 
-Exports an FCP XML representation of the entire project, to the specified output path.
+Determines whether copying to a shared location is enabled, for this project.
 
 **Parameters**
 
-Full output path of .xml file, as a *String*.
-
-The suppressUI param is an *Int*; if **1**, no warnings or alerts will be shown, during the export.
+None.
 
 **Returns**
 
-Returns 0 if successful.
-
+Returns  **true** if copying is enabled; **false** if not.
 
 ----
 
-.. _project.exportTimeline:
+.. _project.newBarsAndTone:
 
-exportTimeline()
-*********************************************
+newBarsAndTone(sequenceName, pathToSequencePreset)
+**************************************************
 
-``project.exportTimeline(exportControllerName)``
+``project.newBarsAndTone(width, height, timeBase, PARNum, PARDen, audioSampleRate, name);``
 
 **Description**
 
-Exports the currently active sequence, using an Export Controller plug-in with the specified name.
+Creates a new sequence with the given name, based on the specified preset (.sqpreset file).
 
 **Parameters**
 
-A **String** containing the name of the Export Controller plug-in to be used. To use the Premiere Pro SDK example Export Controller, the value would be "SDK Export Controller".
++----------------------------+---------------------------------------------------+
+| ``width``                  |                                                   |
++----------------------------+---------------------------------------------------+
+| ``height``                 |                                                   |
++----------------------------+---------------------------------------------------+
+| ``timeBase``               | Timebase of new project item. One of these:       |
++----------------------------+---------------------------------------------------+
+| ``PARNum``                 | Pixel aspect ration numerator.                    |
++----------------------------+---------------------------------------------------+
+| ``PARDen``	             | Pixel aspect ration denominator.                  |
++----------------------------+---------------------------------------------------+
+| ``audioSampleRate``        | audio sample rate.                                |
++----------------------------+---------------------------------------------------+
+| ``name``                   | **String**, Name of new project item.             |
++----------------------------+---------------------------------------------------+
 
 **Returns**
 
-Returns **0** if successful, or an error code if not.
+Returns a **projectItem** for the new bars and tone, or **0** if unsuccessful.
+
+----
+
+.. _project.newSequence:
+
+newSequence(sequenceName, pathToSequencePreset)
+***********************************************
+
+``project.newSequence(sequenceName, pathToSequencePreset)``
+
+**Description**
+
+Creates a new sequence with the given name, based on the specified preset (.sqpreset file).
+
+**Parameters**
+
++----------------------------+---------------------------------------------------+
+| ``sequenceName``           | **String**, Name of new sequence.                 |
++----------------------------+---------------------------------------------------+
+| ``pathToSequencePreset``   | **String**, path to .sqpreset file.               |
++----------------------------+---------------------------------------------------+
+
+**Returns**
+
+Returns a **Sequence**, or **0** if unsuccessful.
+
+----
+
+.. _project.openSequence:
+
+openSequence()
+*********************************************
+
+``project.openSequence(sequenceID)``
+
+**Description**
+
+Makes the sequence with the provided sequence ID, active. This will open the sequence in the Timeline panel.
+
+**Parameters**
+
+A valid ``sequenceID``.
+
+**Returns**
+
+Returns **true** if successful, **false** if not.
+
+----
+
+.. _project.pauseGrowing:
+
+pauseGrowing()
+*********************************************
+
+``project.pauseGrowing(pausedOrNot)``
+
+**Description**
+
+Pauses (and resumes) growing file capture.
+
+**Parameters**
+
+An **int**; if 1, growing files are enabled.
+
+**Returns**
+
+Returns **0** if successful.
 
 ----
 
@@ -369,54 +717,22 @@ Exports an OMF file of the specified sequence, using the specified settings.
 
 Returns **0** if successful.
 
-
 ----
 
-.. _project.exportAAF:
+.. _project.save:
 
-exportAAF()
+save()
 *********************************************
 
-``project.exportAAF(sequenceToExport, outputPath, mixdownVideo, explodeToMono, sampleRate, bitsPerSample, embedAudio, audioFileFormat, trimSources, handleFrames, presetPath, renderAudioEffects, includeClipCopies, preserveParentFolder)``
+``project.save()``
 
 **Description**
 
-Exports an AAF file of the specified sequence, using the specified settings.
+Saves the project, at its current path.
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``sequence``               | Specifies the sequence to be output.              |
-+----------------------------+---------------------------------------------------+
-| ``filePath``               | Complete output path for .aaf file.               |
-+----------------------------+---------------------------------------------------+
-| ``mixdownVideo``           | If **1**, render video before export.             |
-+----------------------------+---------------------------------------------------+
-| ``explodeToMono``          | If **1**, breaks out stereo tracks to mono.       |
-+----------------------------+---------------------------------------------------+
-| ``sampleRate``             | Specifies the sample rate of output audio.        |
-+----------------------------+---------------------------------------------------+
-| ``bitsPerSample``          | Specifies the bits per sample of audio output.    |
-+----------------------------+---------------------------------------------------+
-| ``embedAudio``             | If **1**, audio is embedded, if **0**, external.  |
-+----------------------------+---------------------------------------------------+
-| ``audioFileFormat``        | **0** is AIFF, **1** is WAV.                      |
-+----------------------------+---------------------------------------------------+
-| ``trimSources``            | If **1**, trim audio files before export.         |
-+----------------------------+---------------------------------------------------+
-| ``handleFrames``           | Number of handle frames (from 0 to 1000).         |
-+----------------------------+---------------------------------------------------+
-| ``presetPath``             | Complete path to Export preset (.epr file).       |
-+----------------------------+---------------------------------------------------+
-| ``renderAudioEffects``     | If **1**, render audio effects before export.     |
-+----------------------------+---------------------------------------------------+
-| ``includeClipCopies``      | If **1**, include each copy of a clip.            |
-+----------------------------+---------------------------------------------------+
-| ``preserveParentFolder``   | If **1**, preserves the parent folder, in output. |
-+----------------------------+---------------------------------------------------+
-
-
-
+None.
 
 **Returns**
 
@@ -445,142 +761,45 @@ Returns **0** if successful, or an error code if not.
 
 ----
 
-.. _project.save:
+.. _project.setEnableTranscodeOnIngest:
 
-save()
-*********************************************
+setEnableTranscodeOnIngest(newBooleanValue)
+*****************************************************************************
 
-``project.save()``
+``project.setEnableTranscodeOnIngest(FirstAutoSaveFolder);``
 
 **Description**
 
-Saves the project, at its current path.
+Controls the enablement of transcode-upon-ingest behavior, for the given project.
 
 **Parameters**
 
-None.
+A Boolean indicating the desired state.
 
 **Returns**
 
-Returns **0** if successful.
-
+Returns **true** if successful.
 
 ----
 
-.. _project.pauseGrowing:
+.. _project.setGraphicsWhiteLuminance:
 
-pauseGrowing()
-*********************************************
+setGraphicsWhiteLuminance(int newValue)
+*****************************************************************************
 
-``project.pauseGrowing(pausedOrNot)``
-
-**Description**
-
-Pauses (and resumes) growing file capture.
-
-**Parameters**
-
-An **int**; if 1, growing files are enabled.
-
-**Returns**
-
-Returns **0** if successful.
-
-----
-
-.. _project.closeDocument:
-
-closeDocument()
-*********************************************
-
-``project.closeDocument(saveFirst, promptIfDirty)``
+``project.setGraphicsWhiteLuminance(newValue);``
 
 **Description**
 
-Closes this project.
+Sets the current graphics white luminance value, for this project. 
 
 **Parameters**
 
-Two **ints**; If **saveFirst** is 1, the project will be saved before closing. If **promptIfDirty** is 1, the user will be asked whether they want to save changes first.
+An integer specifying the value to be used; must be a value provided by ``getSupportedGraphicsWhiteLuminances()``.
 
 **Returns**
 
-Returns **0** if successful.
-
-----
-
-.. _project.addPropertyToProjectMetadataSchema:
-
-addPropertyToProjectMetadataSchema()
-*********************************************
-
-``project.addPropertyToProjectMetadataSchema(propertyName, propertyLabel, propertyType)``
-
-**Description**
-
-Adds a new field of the specified type to Premiere Pro's private project metadata schema.
-
-**Parameters**
-
-+----------------------------+---------------------------------------------------+
-| ``propertyName``           | **String**, Name of property to be added.         |
-+----------------------------+---------------------------------------------------+
-| ``propertyLabel``          | **String**, Label of property to be added.        |
-+----------------------------+---------------------------------------------------+
-| ``propertyType``           | Must be one of the following:                     |
-|                            |    - 0 Integer                                    |
-|                            |    - 1 Real                                       |
-|                            |    - 2 String                                     |
-|                            |    - 3 Boolean                                    |
-+----------------------------+---------------------------------------------------+
-
-**Returns**
-
-Returns **true** if successful, **undefined** if unsuccessful.
-
-----
-
-.. _project.getInsertionBin:
-
-getInsertionBin()
-*********************************************
-
-``project.getInsertionBin()``
-
-**Description**
-
-Returns a **projectItem** referencing the bin into which import will occur.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns a **projectItem** if successful, **0** if not.
-
-----
-
-.. _project.getProjectPanelMetadata:
-
-getProjectPanelMetadata()
-*********************************************
-
-``project.getProjectPanelMetadata()``
-
-**Description**
-
-Returns the current layout of the Project panel.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns a **String** representing the current Project panel layout, or **0** if unsuccessful.
-
-
+Returns true if successful.
 
 ----
 
@@ -633,237 +852,3 @@ Changes the specified scratch disk path to a new path.
 **Returns**
 
 Returns  **0** if unsuccessful.
-
-----
-
-.. _project.consolidateDuplicates:
-
-consolidateDuplicates()
-*********************************************
-
-``project.consolidateDuplicates()``
-
-**Description**
-
-Invokes Premiere Pro's "Consolidate Duplicate Footage" functionality, as available from the UI.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns  **0** if successful.
-
-----
-
-.. _project.isSharedLocationCopyEnabled:
-
-isSharedLocationCopyEnabled()
-*********************************************
-
-``project.isSharedLocationCopyEnabled()``
-
-**Description**
-
-Determines whether copying to a shared location is enabled, for this project.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns  **true** if copying is enabled; **false** if not.
-
-----
-
-.. _project.getSharedLocation:
-
-getSharedLocation()
-*********************************************
-
-``project.getSharedLocation()``
-
-**Description**
-
-Returns the path to the location to which shared files are to be copied.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns a **String** containing the path.
-
-----
-
-.. _project.newSequence:
-
-newSequence(sequenceName, pathToSequencePreset)
-***********************************************
-
-``project.newSequence(sequenceName, pathToSequencePreset)``
-
-**Description**
-
-Creates a new sequence with the given name, based on the specified preset (.sqpreset file).
-
-**Parameters**
-
-+----------------------------+---------------------------------------------------+
-| ``sequenceName``           | **String**, Name of new sequence.                 |
-+----------------------------+---------------------------------------------------+
-| ``pathToSequencePreset``   | **String**, path to .sqpreset file.               |
-+----------------------------+---------------------------------------------------+
-
-**Returns**
-
-Returns a **Sequence**, or **0** if unsuccessful.
-
-----
-
-.. _project.newBarsAndTone:
-
-newBarsAndTone(sequenceName, pathToSequencePreset)
-**************************************************
-
-``project.newBarsAndTone(width, height, timeBase, PARNum, PARDen, audioSampleRate, name);``
-
-**Description**
-
-Creates a new sequence with the given name, based on the specified preset (.sqpreset file).
-
-**Parameters**
-
-+----------------------------+---------------------------------------------------+
-| ``width``                  |                                                   |
-+----------------------------+---------------------------------------------------+
-| ``height``                 |                                                   |
-+----------------------------+---------------------------------------------------+
-| ``timeBase``               | Timebase of new project item. One of these:       |
-+----------------------------+---------------------------------------------------+
-| ``PARNum``                 | Pixel aspect ration numerator.                    |
-+----------------------------+---------------------------------------------------+
-| ``PARDen``	             | Pixel aspect ration denominator.                  |
-+----------------------------+---------------------------------------------------+
-| ``audioSampleRate``        | audio sample rate.                                |
-+----------------------------+---------------------------------------------------+
-| ``name``                   | **String**, Name of new project item.             |
-+----------------------------+---------------------------------------------------+
-
-**Returns**
-
-Returns a **projectItem** for the new bars and tone, or **0** if unsuccessful.
-
-----
-
-.. _project.createNewSequenceFromClips:
-
-createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin)
-*****************************************************************************
-
-``project.createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin);``
-
-**Description**
-
-Creates a new sequence with the given name, in the specified destination bin, and sequentially inserts project items into it.
-
-**Parameters**
-
-+----------------------------+---------------------------------------------------+
-| ``sequenceName``           | Optional; Name of created sequence.               |
-+----------------------------+---------------------------------------------------+
-| ``arrayOfProjectItems``    | Array of projectItems to be inserted in sequence. |
-+----------------------------+---------------------------------------------------+
-| ``destinationBin``         | Optional; bin to contain sequence.                |
-+----------------------------+---------------------------------------------------+
-
-**Returns**
-
-Returns the newly-created Sequence object if successful; `0` if unsuccessful.
-
-----
-
-.. _project.setEnableTranscodeOnIngest:
-
-setEnableTranscodeOnIngest(newBooleanValue)
-*****************************************************************************
-
-``project.setEnableTranscodeOnIngest(FirstAutoSaveFolder);``
-
-**Description**
-
-Controls the enablement of transcode-upon-ingest behavior, for the given project.
-
-**Parameters**
-
-A Boolean indicating the desired state.
-
-**Returns**
-
-Returns **true** if successful.
-
-----
-
-.. _project.getSupportedGraphicsWhiteLuminances:
-
-getSupportedGraphicsWhiteLuminances()
-*****************************************************************************
-
-``project.getSupportedGraphicsWhiteLuminances();``
-
-**Description**
-
-Retrieves the supported graphics white luminance values, for this project.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns an array of graphics white settings supported by the project; Currently it returns (100, 203, 300)
-
-----
-
-.. _project.getGraphicsWhiteLuminance:
-
-getGraphicsWhiteLuminance()
-*****************************************************************************
-
-``project.getGraphicsWhiteLuminance();``
-
-**Description**
-
-Retrieves the current graphics white luminance value, for this project.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns the currently selected graphics white value.
-
-----
-
-.. _project.setGraphicsWhiteLuminance:
-
-setGraphicsWhiteLuminance(int newValue)
-*****************************************************************************
-
-``project.setGraphicsWhiteLuminance(newValue);``
-
-**Description**
-
-Sets the current graphics white luminance value, for this project. 
-
-**Parameters**
-
-An integer specifying the value to be used; must be a value provided by ``getSupportedGraphicsWhiteLuminances()``.
-
-**Returns**
-
-Returns true if successful.

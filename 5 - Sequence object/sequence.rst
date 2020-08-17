@@ -17,21 +17,71 @@ The **Sequence** object represents sequences of media (a.k.a. "timelines"), in P
 Attributes
 ==========
 
-.. _sequence.name:
+.. _sequence.audioTracks:
 
-name
+audioTracks
 *********************************************
 
-``sequence.name``
+``sequence.audioTracks``
 
 **Description**
 
-The name of the sequence.
+An array of audio tracks, within the sequence.
 
 **Type**
 
-String; read/write.
+Array; read-only.
 
+----
+
+.. _sequence.end:
+
+end
+*********************************************
+
+``sequence.end``
+
+**Description**
+
+The time, in Ticks, of the end of the sequence.
+
+**Type**
+
+Integer; read-only.
+
+----
+
+.. _sequence.frameSizeHorizontal:
+
+frameSizeHorizontal
+*********************************************
+
+``sequence.frameSizeHorizontal``
+
+**Description**
+
+The horizontal width of frames, from the sequence.
+
+**Type**
+
+Integer; read-only.
+
+----
+
+.. _sequence.frameSizeVertical:
+
+frameSizeVertical
+*********************************************
+
+``sequence.frameSizeVertical``
+
+**Description**
+
+The vertical height of frames, from the sequence.
+
+**Type**
+
+Integer; read-only.
 
 ----
 
@@ -52,6 +102,57 @@ Integer, read-only.
 
 ----
 
+.. _sequence.markers:
+
+markers
+*********************************************
+
+``sequence.markers``
+
+**Description**
+
+The markers associated with this sequence.
+
+**Type**
+
+Array; read-only.
+
+----
+
+.. _sequence.name:
+
+name
+*********************************************
+
+``sequence.name``
+
+**Description**
+
+The name of the sequence.
+
+**Type**
+
+String; read/write.
+
+----
+
+.. _sequence.projectItem:
+
+projectItem
+*********************************************
+
+``sequence.projectItem``
+
+**Description**
+
+The projectItem associated with this sequence.
+
+**Type**
+
+**projectItem**; read-only.
+
+----
+
 .. _sequence.sequenceID:
 
 sequenceID
@@ -66,124 +167,6 @@ The unique identifier assigned to this sequence, at the time of its creation.
 **Type**
 
 String; read-only.
-
-
-----
-
-.. _sequence.audioTracks:
-
-audioTracks
-*********************************************
-
-``sequence.audioTracks``
-
-**Description**
-
-An array of audio tracks, within the sequence.
-
-**Type**
-
-Array; read-only.
-
-
-
-----
-
-.. _sequence.videoTracks:
-
-videoTracks
-*********************************************
-
-``sequence.videoTracks``
-
-**Description**
-
-An array of video tracks, within the sequence.
-
-**Type**
-
-Array; read-only.
-
-
-
-----
-
-.. _sequence.frameSizeHorizontal:
-
-frameSizeHorizontal
-*********************************************
-
-``sequence.frameSizeHorizontal``
-
-**Description**
-
-The horizontal width of frames, from the sequence.
-
-**Type**
-
-Integer; read-only.
-
-
-----
-
-.. _sequence.frameSizeVertical:
-
-frameSizeVertical
-*********************************************
-
-``sequence.frameSizeVertical``
-
-**Description**
-
-The vertical height of frames, from the sequence.
-
-**Type**
-
-Integer; read-only.
-
-
-
-
-
-
-
-
-
-----
-
-.. _sequence.timebase:
-
-timebase
-*********************************************
-
-``sequence.timebase``
-
-**Description**
-
-The number of Ticks per frame, in the sequence.
-
-**Type**
-
-Integer; read-only.
-
-
-
-----
-
-.. _sequence.zeroPoint:
-
-zeroPoint
-*********************************************
-
-``sequence.zeroPoint``
-
-**Description**
-
-The starting time, in Ticks, of the sequence.
-
-**Type**
-
-Integer; read-only.
 
 ----
 
@@ -212,233 +195,89 @@ Returns **0** if successful.
 
 ----
 
-.. _sequence.end:
+.. _sequence.timebase:
 
-end
+timebase
 *********************************************
 
-``sequence.end``
+``sequence.timebase``
 
 **Description**
 
-The time, in Ticks, of the end of the sequence.
+The number of Ticks per frame, in the sequence.
 
 **Type**
 
 Integer; read-only.
 
-
-
 ----
 
-.. _sequence.markers:
+.. _sequence.videoTracks:
 
-markers
+videoTracks
 *********************************************
 
-``sequence.markers``
+``sequence.videoTracks``
 
 **Description**
 
-The markers associated with this sequence.
+An array of video tracks, within the sequence.
 
 **Type**
 
 Array; read-only.
 
-
 ----
 
-.. _sequence.projectItem:
+.. _sequence.zeroPoint:
 
-projectItem
+zeroPoint
 *********************************************
 
-``sequence.projectItem``
+``sequence.zeroPoint``
 
 **Description**
 
-The projectItem associated with this sequence.
+The starting time, in Ticks, of the sequence.
 
 **Type**
 
-**projectItem**; read-only.
+Integer; read-only.
 
+----
 
 =======
 Methods
 =======
 
-.. _sequence.getPlayerPosition:
+.. _sequence.autoReframeSequence:
 
-getPlayerPosition()
-*********************************************
+autoReframeSequence()
+*******************************************************************************************************
 
-``sequence.getPlayerPosition()``
-
-**Description**
-
-Retrieves the current player position, in Ticks.
-
-**Parameters**
-
-None
-
-**Returns**
-
-Returns a Time object, representing the current player position.
-
-
-
-----
-
-
-.. _sequence.setPlayerPosition:
-
-setPlayerPosition(newTimeInTicks)
-*********************************************
-
-``sequence.setPlayerPosition()``
+``sequence.autoReframeSequence(numerator, denominator, motionPreset, newName, useNestedSequences);``
 
 **Description**
 
-Specifies a new player position, in Ticks, as a String.
+Generates a new, auto-reframed sequence. 
 
 **Parameters**
 
-A String referenced the **newTimeInTicks**.
++----------------------------+------------------------------------------------------------------------+
+| ``numerator``              | Numerator of desired frame aspect ratio.                               |
++----------------------------+------------------------------------------------------------------------+
+| ``denominator``            | Denominator of desired frame aspect ratio.                             |
++----------------------------+------------------------------------------------------------------------+
+| ``motionPreset``           | Valid values: `'slower'`, `'default'`, or `'faster'` motion.           |
++----------------------------+------------------------------------------------------------------------+
+| ``newName``                | Name for newly-created sequence.                                       |
++----------------------------+------------------------------------------------------------------------+
+| ``useNestedSequences``     | Boolean indicating whether to honor nested sequence.                   |
++----------------------------+------------------------------------------------------------------------+
 
 **Returns**
 
-Returns **0** if successful.
-
-----
-
-.. _sequence.getInPoint:
-
-getInPoint()
-*********************************************
-
-``sequence.getInPoint()``
-
-**Description**
-
-Retrieves the current sequence in point, in seconds.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns a Real representing the in point, in seconds.
-
-----
-
-.. _sequence.getOutPoint:
-
-getOutPoint()
-*********************************************
-
-``sequence.getOutPoint()``
-
-**Description**
-
-Retrieves the current sequence out point, in seconds.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns a Real representing the out point, in seconds.
-
-
-----
-
-.. _sequence.getInPointAsTime:
-
-getInPointAsTime()
-*********************************************
-
-``sequence.getInPointAsTime()``
-
-**Description**
-
-Retrieves the current sequence in point.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns a Time representing the in point, in seconds.
-
-----
-
-.. _sequence.getOutPointAsTime:
-
-getOutPointAsTime()
-*********************************************
-
-``sequence.getOutPointAsTime()``
-
-**Description**
-
-Retrieves the current sequence out point.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns a Time representing the out point, in seconds.
-
-
-----
-
-.. _sequence.setInPoint:
-
-setInPoint(newTimeInTicks)
-*********************************************
-
-``sequence.setInPoint()``
-
-**Description**
-
-Specifies a new sequence in point.
-
-**Parameters**
-
-An integer, **newTimeInTicks**.
-
-**Returns**
-
-Returns **0** if successful.
-
-----
-
-.. _sequence.setOutPoint:
-
-setOutPoint(newTimeInTicks)
-*********************************************
-
-``sequence.setOutPoint()``
-
-**Description**
-
-Specifies a new sequence out point.
-
-**Parameters**
-
-An integer, **newTimeInTicks**.
-
-**Returns**
-
-Returns **0** if successful.
+Returns the new Sequence object, if successful; `0` if unsuccessful.
 
 ----
 
@@ -463,20 +302,20 @@ Returns a **Sequence** if successful, **0** if not.
 
 ----
 
-.. _sequence.exportAsProject:
+.. _sequence.createSubsequence:
 
-exportAsProject(outputPath)
-*********************************************
+createSubsequence()
+***********************************************
 
-``sequence.exportAsProject(outputPath)``
+``sequence.createSubsequence(ignoreChannelMapping)``
 
 **Description**
 
-Creates a new project containing only the given sequence, and its constituent media.
+Creates a new sequence, which is a sub-sequence of the existing sequence.
 
 **Parameters**
 
-String ``outputPath`` specifying the output path for the new project.
+A ``Boolean`` indicating whether the new sequence should ignore the channel mapping present in the original sequence.
 
 **Returns**
 
@@ -537,6 +376,27 @@ Returns 0 if successful.
 
 ----
 
+.. _sequence.exportAsProject:
+
+exportAsProject(outputPath)
+*********************************************
+
+``sequence.exportAsProject(outputPath)``
+
+**Description**
+
+Creates a new project containing only the given sequence, and its constituent media.
+
+**Parameters**
+
+String ``outputPath`` specifying the output path for the new project.
+
+**Returns**
+
+Returns 0 if successful.
+
+----
+
 .. _sequence.getExportFileExtension:
 
 getExportFileExtension()
@@ -556,6 +416,110 @@ String ``outputPresetPath`` specifying the output preset to be used.
 
 Returns a **String** containing the output file extension, or **0** if unsuccessful.
 
+----
+
+.. _sequence.getInPoint:
+
+getInPoint()
+*********************************************
+
+``sequence.getInPoint()``
+
+**Description**
+
+Retrieves the current sequence in point, in seconds.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a Real representing the in point, in seconds.
+
+----
+
+.. _sequence.getInPointAsTime:
+
+getInPointAsTime()
+*********************************************
+
+``sequence.getInPointAsTime()``
+
+**Description**
+
+Retrieves the current sequence in point.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a Time representing the in point, in seconds.
+
+----
+
+.. _sequence.getOutPoint:
+
+getOutPoint()
+*********************************************
+
+``sequence.getOutPoint()``
+
+**Description**
+
+Retrieves the current sequence out point, in seconds.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a Real representing the out point, in seconds.
+
+----
+
+.. _sequence.getOutPointAsTime:
+
+getOutPointAsTime()
+*********************************************
+
+``sequence.getOutPointAsTime()``
+
+**Description**
+
+Retrieves the current sequence out point.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a Time representing the out point, in seconds.
+
+----
+
+.. _sequence.getPlayerPosition:
+
+getPlayerPosition()
+*********************************************
+
+``sequence.getPlayerPosition()``
+
+**Description**
+
+Retrieves the current player position, in Ticks.
+
+**Parameters**
+
+None
+
+**Returns**
+
+Returns a Time object, representing the current player position.
 
 ----
 
@@ -577,9 +541,6 @@ None.
 **Returns**
 
 Returns a sequence settings structure.
-
-
-
 
 +----------------------------+------------------------------------------------------------+
 | ``audioChannelCount``      | The number of audio channels in the sequence.              |
@@ -682,111 +643,6 @@ Returns a sequence settings structure.
 
 ----
 
-.. _sequence.setSettings:
-
-setSettings()
-*********************************************
-
-``sequence.setSettings(sequenceSettings)``
-
-**Description**
-
-Sets the settings of the current sequence. *[Editorial: I apologize for any perceived pedantry; sometimes, obvious documentation needs to be obvious. -bbb]*
-
-**Parameters**
-
-``sequenceSettings`` is a sequence settings structure, obtained via `sequence.getSettings_`.
-
-**Returns**
-
-Returns 0 if successful.
-
-
-
-----
-
-.. _sequence.createSubsequence:
-
-createSubsequence()
-***********************************************
-
-``sequence.createSubsequence(ignoreChannelMapping)``
-
-**Description**
-
-Creates a new sequence, which is a sub-sequence of the existing sequence.
-
-**Parameters**
-
-A ``Boolean`` indicating whether the new sequence should ignore the channel mapping present in the original sequence.
-
-**Returns**
-
-Returns 0 if successful.
-
-----
-
-.. _sequence.performSceneEditDetectionOnSelection:
-
-performSceneEditDetectionOnSelection()
-*******************************************************************************************************
-
-``sequence.performSceneEditDetectionOnSelection(actionDesired, ApplyCutsToLinkedAudio, sensitivity);``
-
-**Description**
-
-Performs cut detection on the sequence selection. 
-
-**Parameters**
-
-
-
-
-+----------------------------+------------------------------------------------------------------------+
-| ``actionDesired``          | `'CreateMarkers'` or `'ApplyCuts'`.                                    |
-+----------------------------+------------------------------------------------------------------------+
-| ``ApplyCutsToLinkedAudio`` | Boolean.                                                               |
-+----------------------------+------------------------------------------------------------------------+
-| ``sensitivity``            | `'LowSensitivity'`, `'MediumSensitivity'`, or `'HighSensitivity'`.     |
-+----------------------------+------------------------------------------------------------------------+
-
-**Returns**
-
-Returns `true` if successful.
-
-----
-
-.. _sequence.autoReframeSequence:
-
-autoReframeSequence()
-*******************************************************************************************************
-
-``sequence.autoReframeSequence(numerator, denominator, motionPreset, newName, useNestedSequences);``
-
-**Description**
-
-Generates a new, auto-reframed sequence. 
-
-**Parameters**
-
-+----------------------------+------------------------------------------------------------------------+
-| ``numerator``              | Numerator of desired frame aspect ratio.                               |
-+----------------------------+------------------------------------------------------------------------+
-| ``denominator``            | Denominator of desired frame aspect ratio.                             |
-+----------------------------+------------------------------------------------------------------------+
-| ``motionPreset``           | Valid values: `'slower'`, `'default'`, or `'faster'` motion.           |
-+----------------------------+------------------------------------------------------------------------+
-| ``newName``                | Name for newly-created sequence.                                       |
-+----------------------------+------------------------------------------------------------------------+
-| ``useNestedSequences``     | Boolean indicating whether to honor nested sequence.                   |
-+----------------------------+------------------------------------------------------------------------+
-
-**Returns**
-
-Returns the new Sequence object, if successful; `0` if unsuccessful.
-
-----
-
 .. _sequence.isDoneAnalyzingForVideoEffects:
 
 isDoneAnalyzingForVideoEffects()
@@ -806,5 +662,113 @@ None.
 
 Returns ``true`` if analysis is complete.
 
+----
 
+.. _sequence.performSceneEditDetectionOnSelection:
 
+performSceneEditDetectionOnSelection()
+*******************************************************************************************************
+
+``sequence.performSceneEditDetectionOnSelection(actionDesired, ApplyCutsToLinkedAudio, sensitivity);``
+
+**Description**
+
+Performs cut detection on the sequence selection. 
+
+**Parameters**
+
++----------------------------+------------------------------------------------------------------------+
+| ``actionDesired``          | `'CreateMarkers'` or `'ApplyCuts'`.                                    |
++----------------------------+------------------------------------------------------------------------+
+| ``ApplyCutsToLinkedAudio`` | Boolean.                                                               |
++----------------------------+------------------------------------------------------------------------+
+| ``sensitivity``            | `'LowSensitivity'`, `'MediumSensitivity'`, or `'HighSensitivity'`.     |
++----------------------------+------------------------------------------------------------------------+
+
+**Returns**
+
+Returns `true` if successful.
+
+----
+
+.. _sequence.setInPoint:
+
+setInPoint(newTimeInTicks)
+*********************************************
+
+``sequence.setInPoint()``
+
+**Description**
+
+Specifies a new sequence in point.
+
+**Parameters**
+
+An integer, **newTimeInTicks**.
+
+**Returns**
+
+Returns **0** if successful.
+
+----
+
+.. _sequence.setOutPoint:
+
+setOutPoint(newTimeInTicks)
+*********************************************
+
+``sequence.setOutPoint()``
+
+**Description**
+
+Specifies a new sequence out point.
+
+**Parameters**
+
+An integer, **newTimeInTicks**.
+
+**Returns**
+
+Returns **0** if successful.
+
+----
+
+.. _sequence.setPlayerPosition:
+
+setPlayerPosition(newTimeInTicks)
+*********************************************
+
+``sequence.setPlayerPosition()``
+
+**Description**
+
+Specifies a new player position, in Ticks, as a String.
+
+**Parameters**
+
+A String referenced the **newTimeInTicks**.
+
+**Returns**
+
+Returns **0** if successful.
+
+----
+
+.. _sequence.setSettings:
+
+setSettings()
+*********************************************
+
+``sequence.setSettings(sequenceSettings)``
+
+**Description**
+
+Sets the settings of the current sequence. *[Editorial: I apologize for any perceived pedantry; sometimes, obvious documentation needs to be obvious. -bbb]*
+
+**Parameters**
+
+``sequenceSettings`` is a sequence settings structure, obtained via `sequence.getSettings_`.
+
+**Returns**
+
+Returns 0 if successful.

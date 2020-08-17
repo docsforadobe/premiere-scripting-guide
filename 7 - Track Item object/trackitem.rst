@@ -15,21 +15,20 @@ The **trackItem** object represents an item on a video or audio track, within a 
 Attributes
 ==========
 
-.. _trackItem.name:
+.. _trackItem.components:
 
-name
+components
 *********************************************
 
-``trackItem.name``
+``trackItem.components``
 
 **Description**
 
-The name of the track item.
+The components associated with this trackItem. This can include intrinsic transformations, as well as video and audio effects.
 
 **Type**
 
-String; read/write.
-
+An Array of components; read-only.
 
 ----
 
@@ -50,23 +49,6 @@ Time object, read-only.
 
 ----
 
-.. _trackItem.start:
-
-start
-*********************************************
-
-``trackItem.start``
-
-**Description**
-
-The starting time of the trackItem. Note: This may differ, from the trackItem's in point.
-
-**Type**
-
-Time object, read/write.
-
-----
-
 .. _trackItem.end:
 
 end
@@ -81,7 +63,6 @@ The ending time of the trackItem. Note: This may differ, from the trackItem's ou
 **Type**
 
 Time object, read/write.
-
 
 ----
 
@@ -100,43 +81,6 @@ The in point for media, in this trackItem.
 
 Time object, read/write.
 
-
-----
-
-.. _trackItem.outPoint:
-
-outPoint
-*********************************************
-
-``trackItem.outPoint``
-
-**Description**
-
-The out point for media, in this trackItem.
-
-**Type**
-
-Time object, read/write.
-
-
-
-----
-
-.. _trackItem.type:
-
-type
-*********************************************
-
-``trackItem.type``
-
-**Description**
-
-The type of media provided by this trackItem.
-
-**Type**
-
-**1** means video, **2** means audio.
-
 ----
 
 .. _trackItem.mediaType:
@@ -154,6 +98,39 @@ The mediaType of media provided by this trackItem.
 
 This will either be **"audio"** or **"video"**.
 
+----
+
+.. _trackItem.name:
+
+name
+*********************************************
+
+``trackItem.name``
+
+**Description**
+
+The name of the track item.
+
+**Type**
+
+String; read/write.
+
+----
+
+.. _trackItem.outPoint:
+
+outPoint
+*********************************************
+
+``trackItem.outPoint``
+
+**Description**
+
+The out point for media, in this trackItem.
+
+**Type**
+
+Time object, read/write.
 
 ----
 
@@ -174,27 +151,106 @@ A **projectItem**.
 
 ----
 
-.. _trackItem.components:
+.. _trackItem.start:
 
-components
+start
 *********************************************
 
-``trackItem.components``
+``trackItem.start``
 
 **Description**
 
-The components associated with this trackItem. This can include intrinsic transformations, as well as video and audio effects.
+The starting time of the trackItem. Note: This may differ, from the trackItem's in point.
 
 **Type**
 
-An Array of components; read-only.
+Time object, read/write.
 
+----
 
+.. _trackItem.type:
+
+type
+*********************************************
+
+``trackItem.type``
+
+**Description**
+
+The type of media provided by this trackItem.
+
+**Type**
+
+**1** means video, **2** means audio.
+
+----
 
 =======
 Methods
 =======
 
+.. _trackItem.getSpeed:
+
+getSpeed
+*********************************************
+
+``trackItem.getSpeed()``
+
+**Description**
+
+Returns the speed multiplier applied to the ``trackItem``.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns the speed multiplier applied to the ``trackItem``, as a ``float``. No speed adjustment = ``1``.
+
+----
+
+.. _trackItem.isAdjustmentLayer:
+
+isAdjustmentLayer
+*********************************************
+
+``trackItem.isAdjustmentLayer()``
+
+**Description**
+
+Returns wheter the ``trackItem`` is an adjustment layer.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns ``true`` if the trackitem is an adjustment layer; ``false`` if not.
+
+----
+
+.. _trackItem.isReversed:
+
+isReversed
+*********************************************
+
+``trackItem.isReversed()``
+
+**Description**
+
+Returns whether the trackItem is reversed.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns **1** if ``trackItem`` is reversed; **0** if not.
+
+----
 
 .. _trackItem.isSelected:
 
@@ -235,75 +291,3 @@ If selectionState is **1**, the trackItem will be selected; if **0**, it will be
 **Returns**
 
 Returns **0** if successful.
-
-
-----
-
-.. _trackItem.isReversed:
-
-isReversed
-*********************************************
-
-``trackItem.isReversed()``
-
-**Description**
-
-Returns whether the trackItem is reversed.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns **1** if ``trackItem`` is reversed; **0** if not.
-
-
-
-----
-
-.. _trackItem.getSpeed:
-
-getSpeed
-*********************************************
-
-``trackItem.getSpeed()``
-
-**Description**
-
-Returns the speed multiplier applied to the ``trackItem``.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns the speed multiplier applied to the ``trackItem``, as a ``float``. No speed adjustment = ``1``.
-
-
-
-
-----
-
-.. _trackItem.isAdjustmentLayer:
-
-isAdjustmentLayer
-*********************************************
-
-``trackItem.isAdjustmentLayer()``
-
-**Description**
-
-Returns wheter the ``trackItem`` is an adjustment layer.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns ``true`` if the trackitem is an adjustment layer; ``false`` if not.
-
-
-

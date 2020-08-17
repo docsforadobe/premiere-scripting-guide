@@ -11,9 +11,24 @@ AudioChannelMapping
 
 The AudioChannelMapping object defines the audio channel mapping applied to a given **projectItem**.
 
+----
+
 ==========
 Attributes
 ==========
+
+.. _AudioChannelMapping.audioChannelsType:
+
+audioChannelsType
+*********************************************
+
+``AudioChannelMapping.audioChannelsType``
+
+**Description**
+
+The type of the audio contained in this channel. Will be 0, 1 or 2, corresponding to ``AUDIOCHANNELTYPE_Mono``, ``AUDIOCHANNELTYPE_Stereo``, or ``AUDIOCHANNELTYPE_51``.
+
+----
 
 .. AudioChannelMapping.audioClipsNumber:
 
@@ -26,16 +41,7 @@ audioClipsNumber
 
 The number of audio clips associated with this audio channel.
 
-.. _AudioChannelMapping.audioChannelsType:
-
-audioChannelsType
-*********************************************
-
-``AudioChannelMapping.audioChannelsType``
-
-**Description**
-
-The type of the audio contained in this channel. Will be 0, 1 or 2, corresponding to ``AUDIOCHANNELTYPE_Mono``, ``AUDIOCHANNELTYPE_Stereo``, or ``AUDIOCHANNELTYPE_51``.
+----
 
 =======
 Methods

@@ -8,10 +8,9 @@ Application object
 ``app``
 
 **Description**
+
 Provides access to objects and application settings within Premiere Pro.
 The single global object is always available by its name, **app**.
-
-
 
 ----
 
@@ -19,20 +18,20 @@ The single global object is always available by its name, **app**.
 Attributes
 ==========
 
-.. _app.version:
+.. _app.anywhere:
 
-version
+anywhere
 *********************************************
 
-``app.version``
+``app.anywhere``
 
 **Description**
 
-The version of Premiere Pro, providing the API.
+An Anywhere object, providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).
 
 **Type**
 
-Floating point; read-only.
+Anywhere object.
 
 ----
 
@@ -50,6 +49,23 @@ The number of the build of Premiere Pro being run.
 **Type**
 
 Integer; read-only.
+
+----
+
+.. _app.Encoder:
+
+Encoder
+*********************************************
+
+``app.Encoder``
+
+**Description**
+
+Provides access to Adobe Media Encoder (on the same system).
+
+**Type**
+
+Encoder object.
 
 ----
 
@@ -87,7 +103,6 @@ String; read-only.
 
 ----
 
-
 .. _app.project:
 
 project
@@ -102,6 +117,25 @@ The currently active project.
 **Type**
 
 Project object.
+
+----
+
+
+.. _app.projectManager:
+
+projectManager
+*********************************************
+
+``app.projectManager``
+
+**Description**
+
+Provides access to project management functions within Premiere Pro.
+
+**Type**
+
+projectManager object.
+
 
 ----
 
@@ -122,74 +156,6 @@ Array (of Project objects).
 
 ----
 
-.. _app.anywhere:
-
-anywhere
-*********************************************
-
-``app.anywhere``
-
-**Description**
-
-An Anywhere object, providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).
-
-**Type**
-Anywhere object.
-----
-
-.. _app.Encoder:
-
-Encoder
-*********************************************
-
-``app.Encoder``
-
-**Description**
-
-Provides access to Adobe Media Encoder (on the same system).
-
-**Type**
-
-Encoder object.
-
-
-----
-
-.. _app.projectManager:
-
-projectManager
-*********************************************
-
-``app.projectManager``
-
-**Description**
-
-Provides access to project management functions within Premiere Pro.
-
-**Type**
-
-projectManager object.
-
-
-----
-
-.. _app.userGuid:
-
-userGuid
-*********************************************
-
-``app.userGuid``
-
-**Description**
-
-A unique identifier for the currently logged-in Creative Cloud user.
-
-**Type**
-
-userGuid object; read-only.
-
-
-----
 
 .. _app.properties:
 
@@ -223,10 +189,129 @@ Provides access to Source monitor.
 
 sourceMonitor object.
 
+----
+
+.. _app.userGuid:
+
+userGuid
+*********************************************
+
+``app.userGuid``
+
+**Description**
+
+A unique identifier for the currently logged-in Creative Cloud user.
+
+**Type**
+
+userGuid object; read-only.
+
+----
+
+.. _app.version:
+
+version
+*********************************************
+
+``app.version``
+
+**Description**
+
+The version of Premiere Pro, providing the API.
+
+**Type**
+
+Floating point; read-only.
+
+----
 
 =======
 Methods
 =======
+
+.. _app.enableQE:
+
+enableQE()
+*********************************************
+
+|  ``app.enableQE()``
+
+**Description**
+
+Enables Premiere Pro's QE DOM.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns true if QE DOM was enabled.
+
+----
+
+.. _app.getEnableProxies:
+
+getEnableProxies()
+*********************************************
+
+``app.getEnableProxies()``
+
+**Description**
+
+Determines whether proxy usage is currently enabled.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns 1 if proxies are enabled, 0 of they are not.
+
+----
+
+.. _app.getWorkspaces:
+
+getWorkspaces
+*********************************************
+
+``app.getWorkspaces()``
+
+**Description**
+
+Obtain an array of the workspaces available.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns an Array of workspaces if successful, `null` if unsuccessful.
+
+----
+
+.. _app.isDocument:
+
+isDocument(path)
+*********************************************
+
+``app.isDocument(path)``
+
+**Description**
+
+Determines whether the file at path can be opened as a Premiere Pro project.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns **true** if file can be opened as a Premiere Pro project.
+
+----
 
 .. _app.isDocumentOpen:
 
@@ -249,24 +334,26 @@ Returns **true** if at least 1 project is open; otherwise **false**.
 
 ----
 
-.. _app.isDocument:
+.. _app.newProject:
 
-isDocument(path)
+newProject(projPath)
 *********************************************
 
-``app.isDocument(path)``
+``app.newProject(projPath)``
 
 **Description**
 
-Determines whether the file at path can be opened as a Premiere Pro project.
+Creates a new .prproj project, at the specified path.
 
 **Parameters**
 
-None.
+================  =================================================================================================
+``projPath``       **String** containing full path to new project; a .prproj extension will be added, if necessary.
+================  =================================================================================================
 
 **Returns**
 
-Returns **true** if file can be opened as a Premiere Pro project.
+Returns **true** if successful.
 
 ----
 
@@ -301,7 +388,6 @@ Returns **true** if file was successfully opened.
 
 ----
 
-
 .. _app.openFCPXML:
 
 openFCPXML(path, projPath)
@@ -322,7 +408,6 @@ path, projPath.
 Returns **true** if file was successfully opened as a Premiere Pro project.
 
 ----
-
 
 .. _app.quit:
 
@@ -345,48 +430,53 @@ Nothing.
 
 ----
 
-.. _app.trace:
+.. _app.setEnableProxies:
 
-trace()
+setEnableProxies(enabled)
 *********************************************
 
-``app.trace()``
+``app.setEnableProxies(enabled)``
 
 **Description**
 
-Writes a string to Premiere Pro's debug console.
+Determines whether proxy usage is currently enabled.
 
 **Parameters**
 
-None.
+================  =========================================================
+``enabled``       1 turns proxies on, 0 turns them off.
+================  =========================================================
 
 **Returns**
 
-Returns **true** if trace was added.
+Returns 1 if proxy enablement was changed.
 
 ----
 
-.. _app.setSDKEventMessage:
+.. _app.setExtensionPersistent:
 
-setSDKEventMessage()
-*********************************************
+setExtensionPersistent()
+************************************************
 
-``app.setSDKEventMessage(message, decorator)``
+``app.setExtensionPersistent(ExtensionID, persist)``
 
 **Description**
 
-Writes a string to Premiere Pro's Events panel.
+Whether extension with the given ExtensionID persists, within this session.
 
 **Parameters**
 
-message is a string; decorator can be either 'info', 'warning' or 'error'.
++--------------------------------------------------------------------------------+
+| ``extensionID``   | Which extension to modify.                                 |
++--------------------------------------------------------------------------------+
+| ``persist``       | Pass 1 to keep extension in memory, 0 to allow unloading.  |
++--------------------------------------------------------------------------------+
 
 **Returns**
 
-Returns 'true' if successful.
+Returns **true** if successful. 
 
 ----
-
 
 .. _app.setScratchDiskPath:
 
@@ -418,144 +508,26 @@ Returns 'true' if successful.
 
 ----
 
-.. _app.enableQE:
+.. _app.setSDKEventMessage:
 
-enableQE()
+setSDKEventMessage()
 *********************************************
 
-|  ``app.enableQE()``
+``app.setSDKEventMessage(message, decorator)``
 
 **Description**
 
-Enables Premiere Pro's QE DOM.
+Writes a string to Premiere Pro's Events panel.
 
 **Parameters**
 
-None.
+message is a string; decorator can be either 'info', 'warning' or 'error'.
 
 **Returns**
 
-Returns true if QE DOM was enabled.
+Returns 'true' if successful.
 
 ----
-
-.. _app.setExtensionPersistent:
-
-setExtensionPersistent()
-************************************************
-
-``app.setExtensionPersistent(ExtensionID, persist)``
-
-**Description**
-
-Whether extension with the given ExtensionID persists, within this session.
-
-**Parameters**
-
-+--------------------------------------------------------------------------------+
-| ``extensionID``   | Which extension to modify.                                 |
-+--------------------------------------------------------------------------------+
-| ``persist``       | Pass 1 to keep extension in memory, 0 to allow unloading.  |
-+--------------------------------------------------------------------------------+
-
-**Returns**
-
-Returns **true** if successful. 
-
-----
-
-.. _app.getEnableProxies:
-
-getEnableProxies()
-*********************************************
-
-``app.getEnableProxies()``
-
-**Description**
-
-Determines whether proxy usage is currently enabled.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns 1 if proxies are enabled, 0 of they are not.
-
-----
-
-
-.. _app.setEnableProxies:
-
-setEnableProxies(enabled)
-*********************************************
-
-``app.setEnableProxies(enabled)``
-
-**Description**
-
-Determines whether proxy usage is currently enabled.
-
-**Parameters**
-
-================  =========================================================
-``enabled``       1 turns proxies on, 0 turns them off.
-================  =========================================================
-
-**Returns**
-
-Returns 1 if proxy enablement was changed.
-
-----
-
-
-.. _app.newProject:
-
-newProject(projPath)
-*********************************************
-
-``app.newProject(projPath)``
-
-**Description**
-
-Creates a new .prproj project, at the specified path.
-
-**Parameters**
-
-================  =================================================================================================
-``projPath``       **String** containing full path to new project; a .prproj extension will be added, if necessary.
-================  =================================================================================================
-
-**Returns**
-
-Returns **true** if successful.
-
-
-----
-
-
-.. _app.getWorkspaces:
-
-getWorkspaces
-*********************************************
-
-``app.getWorkspaces()``
-
-**Description**
-
-Obtain an array of the workspaces available.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns an Array of workspaces if successful, `null` if unsuccessful.
-
-----
-
 
 .. _app.setWorkspace:
 
@@ -576,3 +548,23 @@ Integer specifying which workspace (from the array returned by getWorkspaces()) 
 
 Returns true if successful.
 
+----
+
+.. _app.trace:
+
+trace()
+*********************************************
+
+``app.trace()``
+
+**Description**
+
+Writes a string to Premiere Pro's debug console.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns **true** if trace was added.

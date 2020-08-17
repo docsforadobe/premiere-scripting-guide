@@ -11,6 +11,7 @@ Source object
 
 The Source object represents Premiere Pro's Source monitor.
 
+----
 
 ==========
 Attributes
@@ -18,30 +19,11 @@ Attributes
 
 None.
 
+----
+
 =======
 Methods
 =======
-
-.. _source.closeClip:
-
-closeClip
-*********************************************
-
-``source.closeClip()``
-
-**Description**
-
-Closes the front-most clip in the Source monitor.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns **0** if successful.
-
-----
 
 .. _source.closeAllClips:
 
@@ -53,6 +35,27 @@ closeAllClips
 **Description**
 
 Closes all clips in the Source monitor.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns **0** if successful.
+
+----
+
+.. _source.closeClip:
+
+closeClip
+*********************************************
+
+``source.closeClip()``
+
+**Description**
+
+Closes the front-most clip in the Source monitor.
 
 **Parameters**
 
@@ -105,7 +108,6 @@ The absolute path to the file to open.
 Returns 0 if successful.
 
 ----
-
 
 .. _source.openProjectItem:
 

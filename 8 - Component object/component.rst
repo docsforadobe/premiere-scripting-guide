@@ -32,7 +32,6 @@ The name of the component, as it is displayed to the user. Localized.
 
 String; read-only.
 
-
 ----
 
 .. _component.matchName:
@@ -66,4 +65,3 @@ The properties of the component in question; typically, these are effect paramet
 **Type**
 
 Array of components, read-only.
-

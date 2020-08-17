@@ -11,6 +11,7 @@ Component Parameter object
 
 The **component parameter** object represents a parameter associated with a component, applied to a trackItem.
 
+----
 
 ==========
 Attributes
@@ -31,11 +32,32 @@ The name of the component parameter, as it is displayed to the user. Localized.
 
 String; read-only.
 
+----
 
 =======
 Methods
 =======
 
+.. _componentParam.addKey:
+
+addKey
+*********************************************
+
+``componentParam.addKey(time)``
+
+**Description**
+
+Adds a keyframe to the component parameter stream, at the specified time. Note: This can only be set on parameters which support keyframing.
+
+**Parameters**
+
+A **Time** value, indicating when the keyframe should be added.
+
+**Returns**
+
+Returns **0** if successful.
+
+----
 
 .. _componentParam.areKeyframesSupported:
 
@@ -55,48 +77,6 @@ None.
 **Returns**
 
 Returns ``true`` if trackItem is selected; ``false`` if not.
-
-----
-
-.. _componentParam.isTimeVarying:
-
-isTimeVarying
-*********************************************
-
-``componentParam.isTimeVarying()``
-
-**Description**
-
-Retrieves whether the component parameter varies, over time. 
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns ``true`` if the parameter varies over time; ``false`` if not.
-
-----
-
-.. _componentParam.setTimeVarying:
-
-setTimeVarying
-*********************************************
-
-``componentParam.setTimeVarying(boolVary)``
-
-**Description**
-
-Sets whether the component parameter varies, over time. Note: This can only be set on parameters which support keyframing.
-
-**Parameters**
-
-If ``boolVary`` is **true**, component parameter will vary over time; if **false**, it won't.
-
-**Returns**
-
-Returns **0** if successful.
 
 ----
 
@@ -121,6 +101,27 @@ Returns a **Time** value, indicating when the closest keyframe is.
 
 ----
 
+.. _componentParam.findNextKey:
+
+findNextKey
+*********************************************
+
+``componentParam.findNextKey(timeToCheck)``
+
+**Description**
+
+Returns the keyframe temporally subsequent to the provided ``timeToCheck``. Note: This can only be set on parameters which support keyframing.
+
+**Parameters**
+
+Starts search from ``timeToCheck``.
+
+**Returns**
+
+Returns a **Time** value, indicating when the closest keyframe is, or **0** if there is no available subsequent keyframe.
+
+----
+
 .. _componentParam.findPreviousKey:
 
 findPreviousKey
@@ -142,24 +143,24 @@ Returns a **Time** value, indicating when the closest keyframe is, or **0** if t
 
 ----
 
-.. _componentParam.findNextKey:
+.. _componentParam.getColorValue:
 
-findNextKey
+getColorValue
 *********************************************
 
-``componentParam.findNextKey(timeToCheck)``
+``componentParam.getColorValue()``
 
 **Description**
 
-Returns the keyframe temporally subsequent to the provided ``timeToCheck``. Note: This can only be set on parameters which support keyframing.
+Obtains the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
 
 **Parameters**
 
-Starts search from ``timeToCheck``.
+The ``newValue`` must be of the appropriate type for the component parameter stream; passing **1** for ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream.
 
 **Returns**
 
-Returns a **Time** value, indicating when the closest keyframe is, or **0** if there is no available subsequent keyframe.
+Returns a **Color** containing the values found in the component parameter stream, or **0** if unsuccessful.
 
 ----
 
@@ -182,27 +183,89 @@ None.
 
 Returns an **Array** of **Time** values, indicating at what time each keyframe occurs, or **0** if no keyframes are available.
 
-
 ----
 
-.. _componentParam.addKey:
+.. _componentParam.getValue:
 
-addKey
+getValue
 *********************************************
 
-``componentParam.addKey(time)``
+``componentParam.getValue()``
 
 **Description**
 
-Adds a keyframe to the component parameter stream, at the specified time. Note: This can only be set on parameters which support keyframing.
+Obtains the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
 
 **Parameters**
 
-A **Time** value, indicating when the keyframe should be added.
+None.
 
 **Returns**
 
-Returns **0** if successful.
+Returns the value of the component parameter stream; the return varies with stream type.
+
+----
+
+.. _componentParam.getValueAtKey:
+
+getValueAtKey
+*********************************************
+
+``componentParam.getValueAtKey(time)``
+
+**Description**
+
+Retrieves the value of the component parameter stream, at the specified keyframe time. Note: Can only be used with keyframeable parameter streams.
+
+**Parameters**
+
+A ``Time`` from which the keyframe value should be retrieved;
+
+**Returns**
+
+Returns the value of the component parameter stream at ``time``, or **0** if unsuccessful.
+
+----
+
+.. _componentParam.getValueAtTime:
+
+getValueAtTime
+*********************************************
+
+``componentParam.getValueAtTime(time)``
+
+**Description**
+
+Retrieves the value of the component parameter stream, at the specified time. If the value is between two keyframes then interpolation takes place.
+
+**Parameters**
+
+A ``Time`` from which the value should be retrieved;
+
+**Returns**
+
+Returns the value of the component parameter stream at ``time``, or **0** if unsuccessful.
+
+----
+
+.. _componentParam.isTimeVarying:
+
+isTimeVarying
+*********************************************
+
+``componentParam.isTimeVarying()``
+
+**Description**
+
+Retrieves whether the component parameter varies, over time. 
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns ``true`` if the parameter varies over time; ``false`` if not.
 
 ----
 
@@ -248,70 +311,6 @@ Returns **0** if successful.
 
 ----
 
-.. _componentParam.getValue:
-
-getValue
-*********************************************
-
-``componentParam.getValue()``
-
-**Description**
-
-Obtains the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns the value of the component parameter stream; the return varies with stream type.
-
-----
-
-.. _componentParam.setValue:
-
-setValue
-*********************************************
-
-``componentParam.setValue(newValue, boolUpdateUI)``
-
-**Description**
-
-Obtains the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
-
-**Parameters**
-
-The ``newValue`` must be of the appropriate type for the component parameter stream; passing **1** for ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream.
-
-**Returns**
-
-Returns **0** if successful.
-
-----
-
-.. _componentParam.getColorValue:
-
-getColorValue
-*********************************************
-
-``componentParam.getColorValue()``
-
-**Description**
-
-Obtains the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
-
-**Parameters**
-
-The ``newValue`` must be of the appropriate type for the component parameter stream; passing **1** for ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream.
-
-**Returns**
-
-Returns a **Color** containing the values found in the component parameter stream, or **0** if unsuccessful.
-
-
-----
-
 .. _componentParam.setColorValue:
 
 setColorValue
@@ -326,49 +325,6 @@ Sets the values within a component parameter stream, representing a Color.
 **Parameters**
 
 Integers representing the alpha, red, green and blue values to be used in the component parameter stream; ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream.
-
-**Returns**
-
-Returns **0** if successful.
-
-
-----
-
-.. _componentParam.getValueAtKey:
-
-getValueAtKey
-*********************************************
-
-``componentParam.getValueAtKey(time)``
-
-**Description**
-
-Retrieves the value of the component parameter stream, at the specified keyframe time. Note: Can only be used with keyframeable parameter streams.
-
-**Parameters**
-
-A ``Time`` from which the keyframe value should be retrieved;
-
-**Returns**
-
-Returns the value of the component parameter stream at ``time``, or **0** if unsuccessful.
-
-----
-
-.. _componentParam.setValueAtKey:
-
-setValueAtKey
-*********************************************
-
-``componentParam.setValueAtKey(time, newValue, boolUpdateUI)``
-
-**Description**
-
-Sets the value of the component parameter stream, at the specified keyframe time. Note: Can only be used with keyframeable parameter streams.
-
-**Parameters**
-
-A ``Time`` at which the keyframe value should be set, and a ``newValue`` representing the value to be stored at the keyframe time; ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream..
 
 **Returns**
 
@@ -406,7 +362,26 @@ A ``Time`` at which the interpretation type should be set (and which must corres
 |                            |    - 8 kfInterpMode_TimeTransitionEnd             |
 +----------------------------+---------------------------------------------------+
 
+**Returns**
 
+Returns **0** if successful.
+
+----
+
+.. _componentParam.setTimeVarying:
+
+setTimeVarying
+*********************************************
+
+``componentParam.setTimeVarying(boolVary)``
+
+**Description**
+
+Sets whether the component parameter varies, over time. Note: This can only be set on parameters which support keyframing.
+
+**Parameters**
+
+If ``boolVary`` is **true**, component parameter will vary over time; if **false**, it won't.
 
 **Returns**
 
@@ -414,21 +389,42 @@ Returns **0** if successful.
 
 ----
 
-.. _componentParam.getValueAtTime:
+.. _componentParam.setValue:
 
-getValueAtTime
+setValue
 *********************************************
 
-``componentParam.getValueAtTime(time)``
+``componentParam.setValue(newValue, boolUpdateUI)``
 
 **Description**
 
-Retrieves the value of the component parameter stream, at the specified time. If the value is between two keyframes then interpolation takes place.
+Obtains the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
 
 **Parameters**
 
-A ``Time`` from which the value should be retrieved;
+The ``newValue`` must be of the appropriate type for the component parameter stream; passing **1** for ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream.
 
 **Returns**
 
-Returns the value of the component parameter stream at ``time``, or **0** if unsuccessful.
+Returns **0** if successful.
+
+----
+
+.. _componentParam.setValueAtKey:
+
+setValueAtKey
+*********************************************
+
+``componentParam.setValueAtKey(time, newValue, boolUpdateUI)``
+
+**Description**
+
+Sets the value of the component parameter stream, at the specified keyframe time. Note: Can only be used with keyframeable parameter streams.
+
+**Parameters**
+
+A ``Time`` at which the keyframe value should be set, and a ``newValue`` representing the value to be stored at the keyframe time; ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream..
+
+**Returns**
+
+Returns **0** if successful.
