@@ -456,7 +456,7 @@ None.
 
 **Returns**
 
-Returns a Time representing the in point, in seconds.
+Returns a :ref:`time` representing the in point, in seconds.
 
 ----
 
@@ -498,7 +498,7 @@ None.
 
 **Returns**
 
-Returns a Time representing the out point, in seconds.
+Returns a :ref:`time` representing the out point, in seconds.
 
 ----
 
@@ -519,7 +519,7 @@ None
 
 **Returns**
 
-Returns a Time object, representing the current player position.
+Returns a :ref:`time`, representing the current player position.
 
 ----
 

@@ -43,11 +43,11 @@ Marker.end
 
 **Description**
 
-A **Time** object containing the value of the ending of the marker.
+A :ref:`time` containing the value of the ending of the marker.
 
 **Type**
 
-``Time``; read/write.
+:ref:`time`; read/write.
 
 ----
 
@@ -94,11 +94,11 @@ Marker.start
 
 **Description**
 
-A **Time** object containing the value of the beginning of the marker.
+A :ref:`time` containing the value of the beginning of the marker.
 
 **Type**
 
-``Time``; read/write.
+:ref:`time`; read/write.
 
 ----
 

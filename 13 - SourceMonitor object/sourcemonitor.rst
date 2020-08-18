@@ -84,7 +84,7 @@ None.
 
 **Returns**
 
-Returns a ``Time`` object containing the position of the Source monitor's current time indicator. 
+Returns a :ref:`time` containing the position of the Source monitor's current time indicator. 
 
 ----
 

@@ -502,7 +502,7 @@ None.
 
 **Returns**
 
-A ``Time`` object, containing the in point.
+A :ref:`time`, containing the in point.
 
 ----
 
@@ -565,7 +565,7 @@ mediaType is an ``int``; pass ``1`` for video only, or ``2`` for audio only. If 
 
 **Returns**
 
-Returns a ``Time`` object.
+Returns a :ref:`time`.
 
 ----
 
@@ -876,7 +876,7 @@ Sets the in point to ``timeInTicks``, for specified media types.
 
 **Parameters**
 
-A ``Time`` object, and an ``int`` determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
+A :ref:`time`, and an ``int`` determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
 
 **Returns**
 
@@ -918,7 +918,7 @@ Sets the out point to ``timeInTicks``, for specified media types.
 
 **Parameters**
 
-A ``Time`` object, and an ``int`` determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
+A :ref:`time`, and an ``int`` determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
 
 **Returns**
 
@@ -1061,7 +1061,7 @@ ProjectItem.startTime()
 
 **Description**
 
-Returns a Time object, representing start time.
+Returns a :ref:`time`, representing start time.
 
 **Parameters**
 
@@ -1069,4 +1069,4 @@ None.
 
 **Returns**
 
-A ``Time`` object.
+:ref:`time`.

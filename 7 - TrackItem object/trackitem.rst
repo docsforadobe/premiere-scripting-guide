@@ -50,7 +50,7 @@ The duration of the trackItem.
 
 **Type**
 
-Time object, read-only.
+:ref:`time`, read-only.
 
 ----
 
@@ -68,7 +68,7 @@ The ending time of the trackItem. Note: This may differ, from the trackItem's ou
 
 **Type**
 
-Time object, read/write.
+:ref:`time`, read/write.
 
 ----
 
@@ -86,7 +86,7 @@ The in point for media, in this trackItem.
 
 **Type**
 
-Time object, read/write.
+:ref:`time`, read/write.
 
 ----
 
@@ -140,7 +140,7 @@ The out point for media, in this trackItem.
 
 **Type**
 
-Time object, read/write.
+:ref:`time`, read/write.
 
 ----
 
@@ -176,7 +176,7 @@ The starting time of the trackItem. Note: This may differ, from the trackItem's 
 
 **Type**
 
-Time object, read/write.
+:ref:`time`, read/write.
 
 ----
 

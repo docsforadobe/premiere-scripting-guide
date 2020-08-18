@@ -100,3 +100,9 @@ Welcome to the Premiere Pro Scripting Guide!
     :caption: Productions object
 
     16 - Productions object/productions
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Time object
+
+    17 - Time object/time
