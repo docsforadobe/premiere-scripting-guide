@@ -9,7 +9,7 @@ AudioChannelMapping
 
 **Description**
 
-The AudioChannelMapping object defines the audio channel mapping applied to a given **projectItem**.
+The AudioChannelMapping object defines the audio channel mapping applied to a given :ref:`projectItem`.
 
 ----
 

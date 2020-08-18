@@ -122,7 +122,7 @@ Open a project item in the Source monitor.
 
 **Parameters**
 
-The ``projectItem`` to open.
+The :ref:`projectItem` to open.
 
 **Returns**
 

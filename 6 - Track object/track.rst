@@ -9,7 +9,7 @@ Track object
 
 **Description**
 
-The **Track** object represents a video or audio track, within a sequence.
+The **Track** object represents a video or audio track, within a :ref:`sequence`.
 
 ----
 
@@ -26,7 +26,7 @@ clips
 
 **Description**
 
-An array of trackItem objects, contained within the track, in temporal order.
+An array of :ref:`Track item <trackItem>` objects, contained within the track, in temporal order.
 
 **Type**
 
@@ -115,11 +115,11 @@ insertClip()
 
 **Description**
 
-Adds a 'clip' (media segment from a projectItem) to the track, at the specified time. Media will be inserted, at that time.
+Adds a 'clip' (media segment from a :ref:`projectItem`) to the track, at the specified time. Media will be inserted, at that time.
 
 **Parameters**
 
-A ``projectItem`` from which to get media, and the time at which to add it, in Ticks.
+A :ref:`projectItem` from which to get media, and the time at which to add it, in Ticks.
 
 **Returns**
 
@@ -157,11 +157,11 @@ overwriteClip()
 
 **Description**
 
-Adds a 'clip' (media segment from a projectItem) to the track, at the specified time. This will overwrite any existing media, at that time.
+Adds a 'clip' (media segment from a :ref:`projectItem`) to the track, at the specified time. This will overwrite any existing media, at that time.
 
 **Parameters**
 
-A ``projectItem`` from which to get media, and the time at which to add it, in Ticks.
+A :ref:`projectItem` from which to get media, and the time at which to add it, in Ticks.
 
 **Returns**
 

@@ -26,7 +26,7 @@ affectedSequences
 
 **Description**
 
-An `Array` of `Sequence` objects, to be exported.
+An `Array` of :ref:`Sequence <sequence>` objects, to be exported.
 
 **Type**
 
@@ -223,7 +223,7 @@ includeAllSequences
 
 **Description**
 
-If `true`, export all sequences in the exported project.
+If `true`, export all :ref:`Sequences <sequence>` in the exported project.
 
 **Type**
 
@@ -295,7 +295,7 @@ closeClip()
 
 **Description**
 
-Closes the front-most clip in the Source monitor.
+Closes the front-most clip in the :ref:`Source monitor <source>`.
 
 **Parameters**
 

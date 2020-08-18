@@ -9,7 +9,7 @@ Component Parameter object
 
 **Description**
 
-The **component parameter** object represents a parameter associated with a component, applied to a trackItem.
+The **component parameter** object represents a parameter associated with a component, applied to a :ref:`trackItem`.
 
 ----
 

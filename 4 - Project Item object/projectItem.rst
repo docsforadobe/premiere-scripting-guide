@@ -513,7 +513,7 @@ getMarkers()
 
 **Description**
 
-Retrieves the markers associated with this project item.
+Retrieves the :ref:`Marker <marker>` objects associated with this project item.
 
 **Parameters**
 
@@ -521,7 +521,7 @@ None.
 
 **Returns**
 
-An array of markers associated with the project item, or **0** if there are no markers.
+An array of :ref:`Marker <marker>` objects associated with the project item, or **0** if there are no markers.
 
 ----
 
@@ -723,7 +723,7 @@ isSequence()
 
 **Description**
 
-Indicates whether the project item refers to a sequence.
+Indicates whether the project item refers to a :ref:`sequence`.
 
 **Parameters**
 
@@ -731,7 +731,7 @@ None.
 
 **Returns**
 
-Returns ``true`` if the project item is a sequence, or a multicam clip, or a merged clip. Returns ``false`` if it isn't any of those.
+Returns ``true`` if the project item is a :ref:`sequence`, or a multicam clip, or a merged clip. Returns ``false`` if it isn't any of those.
 
 ----
 

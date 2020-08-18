@@ -111,7 +111,7 @@ markers
 
 **Description**
 
-The markers associated with this sequence.
+The :ref:`Marker <marker>` objects associated with this sequence.
 
 **Type**
 
@@ -145,7 +145,7 @@ projectItem
 
 **Description**
 
-The projectItem associated with this sequence.
+The :ref:`projectItem` associated with this sequence.
 
 **Type**
 
@@ -298,7 +298,7 @@ None.
 
 **Returns**
 
-Returns a **Sequence** if successful, **0** if not.
+Returns a :ref:`sequence` if successful, **0** if not.
 
 ----
 
@@ -385,7 +385,7 @@ exportAsProject()
 
 **Description**
 
-Creates a new project containing only the given sequence, and its constituent media.
+Creates a new :ref:`project` containing only the given sequence, and its constituent media.
 
 **Parameters**
 
@@ -767,7 +767,7 @@ Sets the settings of the current sequence. *[Editorial: I apologize for any perc
 
 **Parameters**
 
-``sequenceSettings`` is a sequence settings structure, obtained via `sequence.getSettings_`.
+``sequenceSettings`` is a sequence settings structure, obtained via :ref:`sequence.getSettings() <sequence.getSettings>`.
 
 **Returns**
 

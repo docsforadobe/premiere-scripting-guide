@@ -26,11 +26,11 @@ activeSequence
 
 **Description**
 
-The currently active sequence, within the project.
+The currently active :ref:`sequence`, within the project.
 
 **Type**
 
-a ``sequence`` object, or ``0`` if no sequence is currently active.
+a :ref:`sequence`, or ``0`` if no sequence is currently active.
 
 ----
 
@@ -94,11 +94,11 @@ rootItem
 
 **Description**
 
-A ``projectItem`` representing the "root" of the project.
+A :ref:`projectItem` representing the "root" of the project.
 
 **Type**
 
-A **projectItem**; this will always be of type ``ProjectItemType_BIN``.
+A :ref:`projectItem`; this will always be of type ``ProjectItemType_BIN``.
 
 ----
 
@@ -115,7 +115,7 @@ The sequences within the project.
 
 **Type**
 
-An array of ``sequence`` objects.
+An array of :ref:`Sequence <sequence>` objects.
 
 ----
 
@@ -205,7 +205,7 @@ createNewSequence()
 
 **Description**
 
-Creates a new sequence with the specified ID.
+Creates a new :ref:`sequence` with the specified ID.
 
 **Parameters**
 
@@ -215,7 +215,7 @@ Creates a new sequence with the specified ID.
 
 **Returns**
 
-Returns a **Sequence** object if creation was successful, or **0** if unsuccessful.
+Returns a :ref:`sequence` if creation was successful, or **0** if unsuccessful.
 
 ----
 
@@ -228,7 +228,7 @@ createNewSequenceFromClips()
 
 **Description**
 
-Creates a new sequence with the given name, in the specified destination bin, and sequentially inserts project items into it.
+Creates a new :ref:`sequence` with the given name, in the specified destination bin, and sequentially inserts project items into it.
 
 **Parameters**
 
@@ -242,7 +242,7 @@ Creates a new sequence with the given name, in the specified destination bin, an
 
 **Returns**
 
-Returns the newly-created Sequence object if successful; `0` if unsuccessful.
+Returns the newly-created :ref:`sequence` if successful; `0` if unsuccessful.
 
 ----
 
@@ -255,11 +255,11 @@ deleteSequence()
 
 **Description**
 
-Deletes the specified sequence from the project.
+Deletes the specified :ref:`sequence` from the project.
 
 **Parameters**
 
-The **Sequence** to delete.
+The :ref:`sequence` to delete.
 
 **Returns**
 
@@ -276,7 +276,7 @@ exportAAF()
 
 **Description**
 
-Exports an AAF file of the specified sequence, using the specified settings.
+Exports an AAF file of the specified :ref:`sequence`, using the specified settings.
 
 **Parameters**
 
@@ -348,7 +348,7 @@ exportOMF()
 
 **Description**
 
-Exports an OMF file of the specified sequence, using the specified settings.
+Exports an OMF file of the specified :ref:`sequence`, using the specified settings.
 
 **Parameters**
 
@@ -389,7 +389,7 @@ exportTimeline()
 
 **Description**
 
-Exports the currently active sequence, using an Export Controller plug-in with the specified name.
+Exports the currently active :ref:`sequence`, using an Export Controller plug-in with the specified name.
 
 **Parameters**
 
@@ -431,7 +431,7 @@ getInsertionBin()
 
 **Description**
 
-Returns a **projectItem** referencing the bin into which import will occur.
+Returns a :ref:`projectItem` referencing the bin into which import will occur.
 
 **Parameters**
 
@@ -439,7 +439,7 @@ None.
 
 **Returns**
 
-Returns a **projectItem** if successful, **0** if not.
+Returns a :ref:`projectItem` if successful, **0** if not.
 
 ----
 
@@ -567,7 +567,7 @@ Imports media from the specified file paths.
 
 **Parameters**
 
-An ``array`` of full, platform-specific file paths to be imported, a ``boolean`` indicating whether warning dialogs should be suppressed, a ``projectItem`` object for the bin into which the files should be imported, and a ``boolean`` indicating whether the file paths should be interpreted as a sequence of numbered stills.
+An ``array`` of full, platform-specific file paths to be imported, a ``boolean`` indicating whether warning dialogs should be suppressed, a :ref:`projectItem` for the bin into which the files should be imported, and a ``boolean`` indicating whether the file paths should be interpreted as a sequence of numbered stills.
 
 **Returns**
 
@@ -584,7 +584,7 @@ importSequences()
 
 **Description**
 
-Imports an array of sequences (with specified sequenceIDs), from the specified project, into the current project.
+Imports an array of :ref:`sequence <sequence>` objects (with specified sequenceIDs), from the specified project, into the current project.
 
 **Parameters**
 
@@ -626,7 +626,7 @@ newBarsAndTone()
 
 **Description**
 
-Creates a new sequence with the given name, based on the specified preset (.sqpreset file).
+Creates a new :ref:`sequence` with the given name, based on the specified preset (.sqpreset file).
 
 **Parameters**
 
@@ -648,7 +648,7 @@ Creates a new sequence with the given name, based on the specified preset (.sqpr
 
 **Returns**
 
-Returns a **projectItem** for the new bars and tone, or **0** if unsuccessful.
+Returns a :ref:`projectItem` for the new bars and tone, or **0** if unsuccessful.
 
 ----
 
@@ -661,7 +661,7 @@ newSequence()
 
 **Description**
 
-Creates a new sequence with the given name, based on the specified preset (.sqpreset file).
+Creates a new :ref:`sequence` with the given name, based on the specified preset (.sqpreset file).
 
 **Parameters**
 
@@ -673,7 +673,7 @@ Creates a new sequence with the given name, based on the specified preset (.sqpr
 
 **Returns**
 
-Returns a **Sequence**, or **0** if unsuccessful.
+Returns a :ref:`sequence`, or **0** if unsuccessful.
 
 ----
 
@@ -686,7 +686,7 @@ openSequence()
 
 **Description**
 
-Makes the sequence with the provided sequence ID, active. This will open the sequence in the Timeline panel.
+Makes the :ref:`sequence` with the provided sequence ID, active. This will open the sequence in the Timeline panel.
 
 **Parameters**
 

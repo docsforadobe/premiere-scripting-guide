@@ -9,7 +9,7 @@ Marker object
 
 **Description**
 
-Both projectItems and sequences have associated **marker** objects, which represent their associated markers.
+Both :ref:`Project items <projectItem>` and :ref:`sequences <sequence>` have associated **marker** objects, which represent their associated markers.
 
 ----
 

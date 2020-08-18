@@ -27,11 +27,11 @@ anywhere
 
 **Description**
 
-An Anywhere object, providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).
+An :ref:`anywhere`, providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).
 
 **Type**
 
-Anywhere object.
+:ref:`anywhere`.
 
 ----
 
@@ -65,7 +65,7 @@ Provides access to Adobe Media Encoder (on the same system).
 
 **Type**
 
-Encoder object.
+:ref:`encoder`.
 
 ----
 
@@ -116,7 +116,7 @@ The currently active project.
 
 **Type**
 
-Project object.
+:ref:`project`.
 
 ----
 
@@ -133,8 +133,7 @@ Provides access to project management functions within Premiere Pro.
 
 **Type**
 
-projectManager object.
-
+:ref:`projectManager`.
 
 ----
 
@@ -151,7 +150,7 @@ An array referencing all open projects; `numProjects` contains size.
 
 **Type**
 
-Array (of Project objects).
+Array of :ref:`Project <project>` objects.
 
 ----
 
@@ -299,7 +298,7 @@ isDocument()
 
 **Description**
 
-Determines whether the file at path can be opened as a Premiere Pro project.
+Determines whether the file at path can be opened as a Premiere Pro :ref:`project <project>`.
 
 **Parameters**
 
@@ -320,7 +319,7 @@ isDocumentOpen()
 
 **Description**
 
-Determines whether there are any projects currently open.
+Determines whether there are any :ref:`projects <project>` currently open.
 
 **Parameters**
 
@@ -341,7 +340,7 @@ newProject()
 
 **Description**
 
-Creates a new .prproj project, at the specified path.
+Creates a new .prproj :ref:`project`, at the specified path.
 
 **Parameters**
 
@@ -364,7 +363,7 @@ openDocument()
 
 **Description**
 
-Opens the file at the specified path, as a Premiere Pro project.
+Opens the file at the specified path, as a Premiere Pro :ref:`project`.
 
 **Parameters**
 
@@ -395,7 +394,7 @@ openFCPXML()
 
 **Description**
 
-Opens an FCP XML file as a Premiere Pro project (specified in projPath).
+Opens an FCP XML file as a Premiere Pro :ref:`project` (specified in projPath).
 
 **Parameters**
 
@@ -403,7 +402,7 @@ path, projPath.
 
 **Returns**
 
-Returns **true** if file was successfully opened as a Premiere Pro project.
+Returns **true** if file was successfully opened as a Premiere Pro :ref:`project`.
 
 ----
 
@@ -416,7 +415,7 @@ quit()
 
 **Description**
 
-Quits Premiere Pro; user will be prompted to save any changes to project.
+Quits Premiere Pro; user will be prompted to save any changes to :ref:`project`.
 
 **Parameters**
 

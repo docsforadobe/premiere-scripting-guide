@@ -72,12 +72,12 @@ encodeProjectItem()
 
 **Description**
 
-Makes Adobe Media Encoder render (optionally, a specified range from) the specified projectItem, with the specified settings.
+Makes Adobe Media Encoder render (optionally, a specified range from) the specified :ref:`projectItem`, with the specified settings.
 
 **Parameters**
 
 +------------------------------+---------------------------------------------------+
-| ``projectItem``              | The **projectItem** to render.                    |
+| ``projectItem``              | projectItem to render.                            |
 +------------------------------+---------------------------------------------------+
 | ``fullOutputPath``           | **String**, path to output file.                  |
 +------------------------------+---------------------------------------------------+
@@ -106,7 +106,7 @@ encodeSequence()
 
 **Description**
 
-Makes Adobe Media Encoder render the specified sequence, with the specified settings.
+Makes Adobe Media Encoder render the specified :ref:`sequence`, with the specified settings.
 
 **Parameters**
 

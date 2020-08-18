@@ -9,7 +9,9 @@ Track Item object
 
 **Description**
 
-The **trackItem** object represents an item on a video or audio track, within a sequence.
+The **trackItem** object represents an item on a video or audio track, within a :ref:`sequence`.
+
+----
 
 ==========
 Attributes
@@ -143,11 +145,11 @@ projectItem
 
 **Description**
 
-The projectItem from which the media is being drawn.
+The :ref:`projectItem` from which the media is being drawn.
 
 **Type**
 
-A **projectItem**. 
+A :ref:`projectItem`. 
 
 ----
 
