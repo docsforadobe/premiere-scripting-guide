@@ -7,6 +7,7 @@ Welcome to the Premiere Pro Scripting Guide!
     :caption: Introduction
 
     1 - Introduction/index
+    1 - Introduction/changelog
     1 - Introduction/extendscript-overview
     1 - Introduction/how-to-execute-scripts
 
