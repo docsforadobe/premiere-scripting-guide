@@ -19,7 +19,7 @@ Attributes
 
 .. _component.displayName:
 
-name
+displayName
 *********************************************
 
 ``component.displayName``
@@ -36,7 +36,7 @@ String; read-only.
 
 .. _component.matchName:
 
-name
+matchName
 *********************************************
 
 ``component.matchName``

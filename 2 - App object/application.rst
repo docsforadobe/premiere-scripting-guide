@@ -155,7 +155,6 @@ Array (of Project objects).
 
 ----
 
-
 .. _app.properties:
 
 properties

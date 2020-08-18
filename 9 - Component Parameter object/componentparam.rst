@@ -19,7 +19,7 @@ Attributes
 
 .. _componentParam.displayName:
 
-name
+displayName
 *********************************************
 
 ``componentParam.displayName``
