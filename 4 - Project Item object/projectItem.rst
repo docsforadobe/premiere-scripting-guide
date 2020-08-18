@@ -19,7 +19,7 @@ Attributes
 
 .. _projectItem.children:
 
-children
+ProjectItem.children
 *********************************************
 
 ``projectItem.children``
@@ -36,7 +36,7 @@ Array; read-only.
 
 .. _projectItem.getAudioChannelMapping:
 
-getAudioChannelMapping
+ProjectItem.getAudioChannelMapping
 *********************************************
 
 ``projectItem.getAudioChannelMapping``
@@ -53,7 +53,7 @@ An audioChannelMapping object.
 
 .. _projectItem.name:
 
-name
+ProjectItem.name
 *********************************************
 
 ``projectItem.name``
@@ -70,7 +70,7 @@ String; read/write.
 
 .. _projectItem.nodeId:
 
-nodeId
+ProjectItem.nodeId
 *********************************************
 
 ``projectItem.nodeId``
@@ -89,7 +89,7 @@ String; read-only.
 
 .. _projectItem.teamProjectsAssetId:
 
-teamProjectsAssetId
+ProjectItem.teamProjectsAssetId
 *********************************************
 
 ``projectItem.teamProjectsAssetId``
@@ -106,7 +106,7 @@ String; read-only.
 
 .. _projectItem.treePath:
 
-treePath
+ProjectItem.treePath
 *********************************************
 
 ``projectItem.treePath``
@@ -125,7 +125,7 @@ String; read-only.
 
 .. _projectItem.type:
 
-type
+ProjectItem.type
 *********************************************
 
 ``projectItem.type``
@@ -142,7 +142,7 @@ Enumeration; read-only.
 
 .. _projectItem.videoComponents:
 
-videoComponents
+ProjectItem.videoComponents
 *********************************************
 
 ``projectItem.videoComponents``
@@ -163,7 +163,7 @@ Methods
 
 .. _projectItem.attachProxy:
 
-attachProxy()
+ProjectItem.attachProxy()
 *********************************************
 
 ``projectItem.attachProxy(String newMediaPath, int isHiRes)``
@@ -184,7 +184,7 @@ Returns **0** if successful.
 
 .. _projectItem.canChangeMediaPath:
 
-canChangeMediaPath()
+ProjectItem.canChangeMediaPath()
 *********************************************
 
 ``projectItem.canChangeMediaPath()``
@@ -205,7 +205,7 @@ Boolean; **true** if media can be replaced, **false** if not.
 
 .. _projectItem.canProxy:
 
-canProxy()
+ProjectItem.canProxy()
 *********************************************
 
 ``projectItem.canProxy()``
@@ -226,7 +226,7 @@ Returns **true** if the project item permits a proxy to be attached; **false** i
 
 .. _projectItem.changeMediaPath:
 
-changeMediaPath()
+ProjectItem.changeMediaPath()
 *********************************************
 
 ``projectItem.changeMediaPath(String newPath)``
@@ -247,7 +247,7 @@ Returns **0** if replacement was successful.
 
 .. _projectItem.clearOutPoint:
 
-clearOutPoint()
+ProjectItem.clearOutPoint()
 *********************************************
 
 ``projectItem.clearOutPoint()``
@@ -268,7 +268,7 @@ Returns ``0`` if successful.
 
 .. _projectItem.createBin:
 
-createBin()
+ProjectItem.createBin()
 *********************************************
 
 ``projectItem.createBin(String nameOfNewBin)``
@@ -289,7 +289,7 @@ Returns **0** if creation of bin was successful.
 
 .. _projectItem.createSmartBin:
 
-createSmartBin()
+ProjectItem.createSmartBin()
 *********************************************
 
 ``projectItem.createSmartBin(String nameOfNewBin, String queryString)``
@@ -310,7 +310,7 @@ Returns **0** if creation if smart bin was successful.
 
 .. _projectItem.createSubClip:
 
-createSubClip()
+ProjectItem.createSubClip()
 *********************************************
 
 ``projectItem.createSubClip(subclipName, startTime, endTime,hasHardBoundaries, takeAudio, takeVideo)``
@@ -343,7 +343,7 @@ Returns a project item representing the new subclip, or 0 if creation failed.
 
 .. _projectItem.deleteBin:
 
-deleteBin()
+ProjectItem.deleteBin()
 *********************************************
 
 ``projectItem.deleteBin()``
@@ -364,7 +364,7 @@ Returns **0** if deletion was successful.
 
 .. _projectItem.findItemsMatchingMediaPath:
 
-findItemsMatchingMediaPath()
+ProjectItem.findItemsMatchingMediaPath()
 *********************************************
 
 ``projectItem.findItemsMatchingMediaPath(pathToMatch, ignoreSubClips)``
@@ -389,7 +389,7 @@ Returns an array of project items, or **0** if no project items matching the ``m
 
 .. _projectItem.getColorLabel:
 
-getColorLabel()
+ProjectItem.getColorLabel()
 *********************************************
 
 ``projectItem.getColorLabel()``
@@ -427,7 +427,7 @@ None.
 
 .. _projectItem.getFootageInterpretation:
 
-getFootageInterpretation()
+ProjectItem.getFootageInterpretation()
 *********************************************
 
 ``projectItem.getFootageInterpretation()``
@@ -485,7 +485,7 @@ A footage interpretation structure, or ``0`` if unsuccessful.
 
 .. _projectItem.getInPoint:
 
-getInPoint()
+ProjectItem.getInPoint()
 *********************************************
 
 ``projectItem.getInPoint()``
@@ -506,7 +506,7 @@ A ``Time`` object, containing the in point.
 
 .. _projectItem.getMarkers:
 
-getMarkers()
+ProjectItem.getMarkers()
 *********************************************
 
 ``projectItem.getMarkers()``
@@ -527,7 +527,7 @@ An array of :ref:`Marker <marker>` objects associated with the project item, or 
 
 .. _projectItem.getMediaPath:
 
-getMediaPath()
+ProjectItem.getMediaPath()
 *********************************************
 
 ``projectItem.getMediaPath()``
@@ -548,7 +548,7 @@ A String containing the path to the media associate with the project item.
 
 .. _projectItem.getOutPoint:
 
-getOutPoint()
+ProjectItem.getOutPoint()
 *********************************************
 
 ``projectItem.getOutPoint(mediaType)``
@@ -569,7 +569,7 @@ Returns a ``Time`` object.
 
 .. _projectItem.getProjectMetadata:
 
-getProjectMetadata()
+ProjectItem.getProjectMetadata()
 *********************************************
 
 ``projectItem.getProjectMetadata()``
@@ -590,7 +590,7 @@ A String containing all Premiere Pro private project metadata, serialized.
 
 .. _projectItem.getProxyPath:
 
-getProxyPath()
+ProjectItem.getProxyPath()
 *********************************************
 
 ``projectItem.getProxyPath()``
@@ -611,7 +611,7 @@ Returns the path (as **String**) to the proxy media associated with the proxy it
 
 .. _projectItem.getXMPMetadata:
 
-getXMPMetadata()
+ProjectItem.getXMPMetadata()
 *********************************************
 
 ``projectItem.getXMPMetadata()``
@@ -632,7 +632,7 @@ A String containing all XMP metadata, serialized.
 
 .. _projectItem.hasProxy:
 
-hasProxy()
+ProjectItem.hasProxy()
 *********************************************
 
 ``projectItem.hasProxy()``
@@ -653,7 +653,7 @@ Returns **true** if the project item has a proxy attached; **false** if not.
 
 .. _projectItem.isMergedClip:
 
-isMergedClip()
+ProjectItem.isMergedClip()
 *********************************************
 
 ``projectItem.isMergedClip()``
@@ -674,7 +674,7 @@ Returns ``true`` if the project item is a merged clip, ``false`` if it isn't.
 
 .. _projectItem.isMulticamClip:
 
-isMulticamClip()
+ProjectItem.isMulticamClip()
 *********************************************
 
 ``projectItem.isMulticamClip()``
@@ -695,7 +695,7 @@ Returns ``true`` if the project item is a multicam clip, ``false`` if it isn't.
 
 .. _projectItem.isOffline:
 
-isOffline()
+ProjectItem.isOffline()
 *********************************************
 
 ``projectItem.isOffline()``
@@ -716,7 +716,7 @@ Boolean, ``true`` if offline.
 
 .. _projectItem.isSequence:
 
-isSequence()
+ProjectItem.isSequence()
 *********************************************
 
 ``projectItem.isSequence()``
@@ -737,7 +737,7 @@ Returns ``true`` if the project item is a :ref:`sequence`, or a multicam clip, o
 
 .. _projectItem.moveBin:
 
-moveBin()
+ProjectItem.moveBin()
 *********************************************
 
 ``projectItem.moveBin(newParentBinProjectItem)``
@@ -758,7 +758,7 @@ Returns **0** if move was successful.
 
 .. _projectItem.refreshMedia:
 
-refreshMedia()
+ProjectItem.refreshMedia()
 *********************************************
 
 ``projectItem.refreshMedia()``
@@ -779,7 +779,7 @@ An array of markers associated with the project item, or **0** if there are no m
 
 .. _projectItem.renameBin:
 
-renameBin()
+ProjectItem.renameBin()
 *********************************************
 
 ``projectItem.renameBin(newName)``
@@ -800,7 +800,7 @@ Returns **0** if renaming bin was successful.
 
 .. _projectItem.select:
 
-select()
+ProjectItem.select()
 *********************************************
 
 ``projectItem.select()``
@@ -821,7 +821,7 @@ Returns **0** if the project item has successfully been made the target, for sub
 
 .. _projectItem.setColorLabel:
 
-setColorLabel()
+ProjectItem.setColorLabel()
 *********************************************
 
 ``projectItem.setColorLabel(newLabelColor)``
@@ -842,7 +842,7 @@ New label color; see projectItem.getColorLabel_.
 
 .. _projectItem.setFootageInterpretation:
 
-setFootageInterpretation()
+ProjectItem.setFootageInterpretation()
 *********************************************
 
 ``projectItem.setFootageInterpretation(newInterpretation)``
@@ -863,7 +863,7 @@ A footage interpretation structure.
 
 .. _projectItem.setInPoint:
 
-setInPoint()
+ProjectItem.setInPoint()
 *********************************************
 
 ``projectItem.setInPoint(timeInTicks, mediaType)``
@@ -884,7 +884,7 @@ Returns ``0`` if successful.
 
 .. _projectItem.setOffline:
 
-setOffline()
+ProjectItem.setOffline()
 *********************************************
 
 ``projectItem.setOffline()``
@@ -905,7 +905,7 @@ None.
 
 .. _projectItem.setOutPoint:
 
-setOutPoint()
+ProjectItem.setOutPoint()
 *********************************************
 
 ``projectItem.setOutPoint(timeInTicks, mediaType)``
@@ -926,7 +926,7 @@ Returns ``0`` if successful.
 
 .. _projectItem.setOverrideFrameRate:
 
-setOverrideFrameRate()
+ProjectItem.setOverrideFrameRate()
 *********************************************
 
 ``projectItem.setOverrideFrameRate(float newFrameRate)``
@@ -947,7 +947,7 @@ Returns **0** if the frame rate has successfully been changed.
 
 .. _projectItem.setOverridePixelAspectRatio:
 
-setOverridePixelAspectRatio()
+ProjectItem.setOverridePixelAspectRatio()
 *********************************************
 
 ``projectItem.setOverridePixelAspectRatio(int numerator, int denominator)``
@@ -968,7 +968,7 @@ Returns **0** if the aspect ratio has successfully been changed.
 
 .. _projectItem.setProjectMetadata:
 
-setProjectMetadata()
+ProjectItem.setProjectMetadata()
 *********************************************
 
 ``projectItem.setProjectMetadata(String newPrivateProjectMetadata, arrayOfUpdatedFields)``
@@ -989,7 +989,7 @@ Returns 0 if update was successful.
 
 .. _projectItem.setScaleToFrameSize:
 
-setScaleToFrameSize()
+ProjectItem.setScaleToFrameSize()
 *********************************************
 
 ``projectItem.setScaleToFrameSize()``
@@ -1010,7 +1010,7 @@ Undefined return value.
 
 .. _projectItem.setStartTime:
 
-setStartTime()
+ProjectItem.setStartTime()
 *********************************************
 
 ``projectItem.setStartTime(timeInTicks)``
@@ -1031,7 +1031,7 @@ Returns ``0`` if successful.
 
 .. _projectItem.setXMPMetadata:
 
-setXMPMetadata()
+ProjectItem.setXMPMetadata()
 *********************************************
 
 ``projectItem.setXMPMetadata(newXMPAsString)``
@@ -1052,7 +1052,7 @@ Returns 0 if update was successful.
 
 .. _projectItem.startTime():
 
-startTime()
+ProjectItem.startTime()
 *********************************************
 
 ``projectItem.startTime()``

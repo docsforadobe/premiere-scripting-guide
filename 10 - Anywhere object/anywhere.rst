@@ -27,7 +27,7 @@ Methods
 
 .. _anywhere.getAuthenticationToken:
 
-getAuthenticationToken()
+Anywhere.getAuthenticationToken()
 *********************************************
 
 ``anywhere.getAuthenticationToken()``
@@ -48,8 +48,8 @@ A **String** containing the login token, or **0** if unsuccessful.
 
 .. _anywhere.getCurrentEditingSessionActiveSequenceURL:
 
-getCurrentEditingSessionActiveSequenceURL()
-*********************************************
+Anywhere.getCurrentEditingSessionActiveSequenceURL()
+******************************************************
 
 ``anywhere.getCurrentEditingSessionActiveSequenceURL()``
 
@@ -69,8 +69,8 @@ Returns a **String** containing the asset's URL, or **0** if unsuccessful (inclu
 
 .. _anywhere.getCurrentEditingSessionSelectionURL:
 
-getCurrentEditingSessionSelectionURL()
-*********************************************
+Anywhere.getCurrentEditingSessionSelectionURL()
+******************************************************
 
 ``anywhere.getCurrentEditingSessionSelectionURL()``
 
@@ -90,7 +90,7 @@ Returns a **String** containing the asset's URL, or **0** if unsuccessful (inclu
 
 .. _anywhere.getCurrentEditingSessionURL:
 
-getCurrentEditingSessionURL()
+Anywhere.getCurrentEditingSessionURL()
 *********************************************
 
 ``anywhere.getCurrentEditingSessionURL()``
@@ -111,7 +111,7 @@ Returns a **String** containing the production's URL, or **0** if unsuccessful.
 
 .. _anywhere.isProductionOpen:
 
-isProductionOpen()
+Anywhere.isProductionOpen()
 *********************************************
 
 ``anywhere.isProductionOpen()``
@@ -132,7 +132,7 @@ Returns ``true`` if a production is open; ``false`` if not.
 
 .. _anywhere.listProductions:
 
-listProductions()
+Anywhere.listProductions()
 *********************************************
 
 ``anywhere.listProductions()``
@@ -151,7 +151,7 @@ Returns an Array of **Strings** containing the names of avialable productions, o
 
 .. _anywhere.openProduction:
 
-openProduction()
+Anywhere.openProduction()
 *********************************************
 
 ``anywhere.openProduction(productionURL)``
@@ -172,7 +172,7 @@ Returns **0** if successful.
 
 .. _anywhere.setAuthenticationToken:
 
-setAuthenticationToken()
+Anywhere.setAuthenticationToken()
 *********************************************
 
 ``anywhere.setAuthenticationToken(token, emailAddress)``

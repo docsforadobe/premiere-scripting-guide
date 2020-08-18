@@ -20,7 +20,7 @@ Attributes
 
 .. _app.anywhere:
 
-anywhere
+app.anywhere
 *********************************************
 
 ``app.anywhere``
@@ -37,7 +37,7 @@ An :ref:`anywhere`, providing access to available Anywhere servers. Only availab
 
 .. _app.buildNumber:
 
-buildNumber
+app.buildNumber
 *********************************************
 
 ``app.buildNumber``
@@ -54,7 +54,7 @@ Integer; read-only.
 
 .. _app.encoder:
 
-encoder
+app.encoder
 *********************************************
 
 ``app.encoder``
@@ -71,7 +71,7 @@ Provides access to Adobe Media Encoder (on the same system).
 
 .. _app.getPProPrefPath:
 
-getPProPrefPath
+app.getPProPrefPath
 *********************************************
 
 ``app.getPProPrefPath``
@@ -88,7 +88,7 @@ String; read-only.
 
 .. _app.getPProSysPrefPath:
 
-getPProSysPrefPath
+app.getPProSysPrefPath
 *********************************************
 
 ``app.getPProSysPrefPath``
@@ -105,7 +105,7 @@ String; read-only.
 
 .. _app.project:
 
-project
+app.project
 *********************************************
 
 ``app.project``
@@ -122,7 +122,7 @@ The currently active project.
 
 .. _app.projectManager:
 
-projectManager
+app.projectManager
 *********************************************
 
 ``app.projectManager``
@@ -139,7 +139,7 @@ Provides access to project management functions within Premiere Pro.
 
 .. _app.projects:
 
-projects
+app.projects
 *********************************************
 
 ``app.projects``
@@ -156,7 +156,7 @@ Array of :ref:`Project <project>` objects.
 
 .. _app.properties:
 
-properties
+app.properties
 *********************************************
 
 ``app.properties``
@@ -173,7 +173,7 @@ properties object; read-only.
 
 .. _app.sourceMonitor:
 
-sourceMonitor
+app.sourceMonitor
 *********************************************
 
 ``app.sourceMonitor``
@@ -190,7 +190,7 @@ Provides access to :ref:`Source monitor <source>`.
 
 .. _app.userGuid:
 
-userGuid
+app.userGuid
 *********************************************
 
 ``app.userGuid``
@@ -207,7 +207,7 @@ userGuid object; read-only.
 
 .. _app.version:
 
-version
+app.version
 *********************************************
 
 ``app.version``
@@ -228,7 +228,7 @@ Methods
 
 .. _app.enableQE:
 
-enableQE()
+app.enableQE()
 *********************************************
 
 |  ``app.enableQE()``
@@ -249,7 +249,7 @@ Returns true if QE DOM was enabled.
 
 .. _app.getEnableProxies:
 
-getEnableProxies()
+app.getEnableProxies()
 *********************************************
 
 ``app.getEnableProxies()``
@@ -270,7 +270,7 @@ Returns 1 if proxies are enabled, 0 of they are not.
 
 .. _app.getWorkspaces:
 
-getWorkspaces()
+app.getWorkspaces()
 *********************************************
 
 ``app.getWorkspaces()``
@@ -291,7 +291,7 @@ Returns an Array of workspaces if successful, `null` if unsuccessful.
 
 .. _app.isDocument:
 
-isDocument()
+app.isDocument()
 *********************************************
 
 ``app.isDocument(path)``
@@ -312,7 +312,7 @@ Returns **true** if file can be opened as a Premiere Pro :ref:`project <project>
 
 .. _app.isDocumentOpen:
 
-isDocumentOpen()
+app.isDocumentOpen()
 *********************************************
 
 ``app.isDocumentOpen()``
@@ -333,7 +333,7 @@ Returns **true** if at least 1 project is open; otherwise **false**.
 
 .. _app.newProject:
 
-newProject()
+app.newProject()
 *********************************************
 
 ``app.newProject(projPath)``
@@ -356,7 +356,7 @@ Returns **true** if successful.
 
 .. _app.openDocument:
 
-openDocument()
+app.openDocument()
 ******************************************************************************************************************************************************
 
 ``app.openDocument(path)``
@@ -387,7 +387,7 @@ Returns **true** if file was successfully opened.
 
 .. _app.openFCPXML:
 
-openFCPXML()
+app.openFCPXML()
 *********************************************
 
 ``app.openFCPXML(path, projPath)``
@@ -408,7 +408,7 @@ Returns **true** if file was successfully opened as a Premiere Pro :ref:`project
 
 .. _app.quit:
 
-quit()
+app.quit()
 *********************************************
 
 ``app.quit()``
@@ -429,7 +429,7 @@ Nothing.
 
 .. _app.setEnableProxies:
 
-setEnableProxies()
+app.setEnableProxies()
 *********************************************
 
 ``app.setEnableProxies(enabled)``
@@ -452,7 +452,7 @@ Returns 1 if proxy enablement was changed.
 
 .. _app.setExtensionPersistent:
 
-setExtensionPersistent()
+app.setExtensionPersistent()
 ************************************************
 
 ``app.setExtensionPersistent(ExtensionID, persist)``
@@ -477,7 +477,7 @@ Returns **true** if successful.
 
 .. _app.setScratchDiskPath:
 
-setScratchDiskPath()
+app.setScratchDiskPath()
 *********************************************
 
 ``app.setScratchDiskPath(path, whichScratchValueToSet)``
@@ -507,7 +507,7 @@ Returns 'true' if successful.
 
 .. _app.setSDKEventMessage:
 
-setSDKEventMessage()
+app.setSDKEventMessage()
 *********************************************
 
 ``app.setSDKEventMessage(message, decorator)``
@@ -528,7 +528,7 @@ Returns 'true' if successful.
 
 .. _app.setWorkspace:
 
-setWorkspace()
+app.setWorkspace()
 *********************************************
 
 ``app.setWorkspace(indexOfWorkspace)``
@@ -549,7 +549,7 @@ Returns true if successful.
 
 .. _app.trace:
 
-trace()
+app.trace()
 *********************************************
 
 ``app.trace()``

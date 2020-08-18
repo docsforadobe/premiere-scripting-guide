@@ -19,7 +19,7 @@ Attributes
 
 .. _componentParam.displayName:
 
-displayName
+ComponentParam.displayName
 *********************************************
 
 ``componentParam.displayName``
@@ -40,7 +40,7 @@ Methods
 
 .. _componentParam.addKey:
 
-addKey()
+ComponentParam.addKey()
 *********************************************
 
 ``componentParam.addKey(time)``
@@ -61,7 +61,7 @@ Returns **0** if successful.
 
 .. _componentParam.areKeyframesSupported:
 
-areKeyframesSupported()
+ComponentParam.areKeyframesSupported()
 *********************************************
 
 ``componentParam.areKeyframesSupported()``
@@ -82,7 +82,7 @@ Returns ``true`` if trackItem is selected; ``false`` if not.
 
 .. _componentParam.findNearestKey:
 
-findNearestKey()
+ComponentParam.findNearestKey()
 *********************************************
 
 ``componentParam.findNearestKey(timeToCheck, thresholdInTicks)``
@@ -103,7 +103,7 @@ Returns a **Time** value, indicating when the closest keyframe is.
 
 .. _componentParam.findNextKey:
 
-findNextKey()
+ComponentParam.findNextKey()
 *********************************************
 
 ``componentParam.findNextKey(timeToCheck)``
@@ -124,7 +124,7 @@ Returns a **Time** value, indicating when the closest keyframe is, or **0** if t
 
 .. _componentParam.findPreviousKey:
 
-findPreviousKey()
+ComponentParam.findPreviousKey()
 *********************************************
 
 ``componentParam.findPreviousKey(timeToCheck)``
@@ -145,7 +145,7 @@ Returns a **Time** value, indicating when the closest keyframe is, or **0** if t
 
 .. _componentParam.getColorValue:
 
-getColorValue()
+ComponentParam.getColorValue()
 *********************************************
 
 ``componentParam.getColorValue()``
@@ -166,7 +166,7 @@ Returns a **Color** containing the values found in the component parameter strea
 
 .. _componentParam.getKeys:
 
-getKeys()
+ComponentParam.getKeys()
 *********************************************
 
 ``componentParam.getKeys()``
@@ -187,7 +187,7 @@ Returns an **Array** of **Time** values, indicating at what time each keyframe o
 
 .. _componentParam.getValue:
 
-getValue()
+ComponentParam.getValue()
 *********************************************
 
 ``componentParam.getValue()``
@@ -208,7 +208,7 @@ Returns the value of the component parameter stream; the return varies with stre
 
 .. _componentParam.getValueAtKey:
 
-getValueAtKey()
+ComponentParam.getValueAtKey()
 *********************************************
 
 ``componentParam.getValueAtKey(time)``
@@ -229,7 +229,7 @@ Returns the value of the component parameter stream at ``time``, or **0** if uns
 
 .. _componentParam.getValueAtTime:
 
-getValueAtTime()
+ComponentParam.getValueAtTime()
 *********************************************
 
 ``componentParam.getValueAtTime(time)``
@@ -250,7 +250,7 @@ Returns the value of the component parameter stream at ``time``, or **0** if uns
 
 .. _componentParam.isTimeVarying:
 
-isTimeVarying()
+ComponentParam.isTimeVarying()
 *********************************************
 
 ``componentParam.isTimeVarying()``
@@ -271,7 +271,7 @@ Returns ``true`` if the parameter varies over time; ``false`` if not.
 
 .. _componentParam.removeKey:
 
-removeKey()
+ComponentParam.removeKey()
 *********************************************
 
 ``componentParam.removeKey(time)``
@@ -292,7 +292,7 @@ Returns **0** if successful.
 
 .. _componentParam.removeKeyRange:
 
-removeKeyRange()
+ComponentParam.removeKeyRange()
 *********************************************
 
 ``componentParam.removeKeyRange(startTime, endTime)``
@@ -313,7 +313,7 @@ Returns **0** if successful.
 
 .. _componentParam.setColorValue:
 
-setColorValue()
+ComponentParam.setColorValue()
 *********************************************
 
 ``componentParam.setColorValue(intAlpha, intRed, intGreen, intBlue, boolUpdateUI)``
@@ -334,7 +334,7 @@ Returns **0** if successful.
 
 .. _componentParam.setInterpolationTypeAtKey:
 
-setInterpolationTypeAtKey()
+ComponentParam.setInterpolationTypeAtKey()
 *********************************************
 
 ``componentParam.setInterpolationTypeAtKey(time, interpretationType)``
@@ -370,7 +370,7 @@ Returns **0** if successful.
 
 .. _componentParam.setTimeVarying:
 
-setTimeVarying()
+ComponentParam.setTimeVarying()
 *********************************************
 
 ``componentParam.setTimeVarying(boolVary)``
@@ -391,7 +391,7 @@ Returns **0** if successful.
 
 .. _componentParam.setValue:
 
-setValue()
+ComponentParam.setValue()
 *********************************************
 
 ``componentParam.setValue(newValue, boolUpdateUI)``
@@ -412,7 +412,7 @@ Returns **0** if successful.
 
 .. _componentParam.setValueAtKey:
 
-setValueAtKey()
+ComponentParam.setValueAtKey()
 *********************************************
 
 ``componentParam.setValueAtKey(time, newValue, boolUpdateUI)``

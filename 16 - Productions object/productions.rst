@@ -19,7 +19,7 @@ Attributes
 
 .. _production.name:
 
-name
+Production.name
 *********************************************
 
 ``Production.name``
@@ -32,8 +32,8 @@ The name of the production.
 
 .. _production.path:
 
-path
-****
+Production.path
+****************
 
 ``Production.path``
 
@@ -45,8 +45,8 @@ The path to the Production folder.
 
 .. _production.projects:
 
-projects
-********
+Production.projects
+***************************
 
 ``Production.projects``
 
@@ -62,7 +62,7 @@ Methods
 
 .. _production.addProject:
 
-addProject()
+Production.addProject()
 *********************************************
 
 ``app.production.addProject(srcProjectPath, destProjectPath);``
@@ -83,7 +83,7 @@ Returns **true** if successful.
 
 .. _production.close:
 
-close()
+Production.close()
 *********************************************
 
 ``app.production.close();``
@@ -104,8 +104,8 @@ Returns **true** if successful.
 
 .. _production.getLocked:
 
-getLocked()
-******************
+Production.getLocked()
+**************************
 
 ``app.production.getLocked();``
 
@@ -125,7 +125,7 @@ Returns **true** if the Production is locked, **false** if it is unlocked.
 
 .. _production.moveToTrash:
 
-moveToTrash()
+Production.moveToTrash()
 *********************************************
 
 ``app.production.moveToTrash(projectOrFolderPath, suppressUI, saveProject);``
@@ -146,7 +146,7 @@ Returns **true** if successful.
 
 .. _production.setLocked:
 
-setLocked()
+Production.setLocked()
 *********************************************
 
 ``app.production.setLocked(newLockState);``

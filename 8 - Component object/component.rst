@@ -19,7 +19,7 @@ Attributes
 
 .. _component.displayName:
 
-displayName
+Component.displayName
 *********************************************
 
 ``component.displayName``
@@ -36,7 +36,7 @@ String; read-only.
 
 .. _component.matchName:
 
-matchName
+Component.matchName
 *********************************************
 
 ``component.matchName``
@@ -53,7 +53,7 @@ String; read-only.
 
 .. _component.properties:
 
-properties
+Component.properties
 *********************************************
 
 ``component.properties``

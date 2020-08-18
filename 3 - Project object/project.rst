@@ -19,7 +19,7 @@ Attributes
 
 .. _project.activeSequence:
 
-activeSequence
+Project.activeSequence
 *********************************************
 
 ``project.activeSequence``
@@ -36,7 +36,7 @@ a :ref:`sequence`, or ``0`` if no sequence is currently active.
 
 .. _project.documentID:
 
-documentID
+Project.documentID
 *********************************************
 
 ``project.documentID``
@@ -53,7 +53,7 @@ GUID; read-only.
 
 .. _project.name:
 
-name
+Project.name
 *********************************************
 
 ``project.name``
@@ -70,7 +70,7 @@ String; read-only.
 
 .. _project.path:
 
-path
+Project.path
 *********************************************
 
 ``project.path``
@@ -87,7 +87,7 @@ String; read-only.
 
 .. _project.rootItem:
 
-rootItem
+Project.rootItem
 *********************************************
 
 ``project.rootItem``
@@ -104,7 +104,7 @@ A :ref:`projectItem`; this will always be of type ``ProjectItemType_BIN``.
 
 .. _project.sequences:
 
-sequences
+Project.sequences
 *********************************************
 
 ``project.sequences``
@@ -125,7 +125,7 @@ Methods
 
 .. _project.addPropertyToProjectMetadataSchema:
 
-addPropertyToProjectMetadataSchema()
+Project.addPropertyToProjectMetadataSchema()
 *********************************************
 
 ``project.addPropertyToProjectMetadataSchema(propertyName, propertyLabel, propertyType)``
@@ -156,7 +156,7 @@ Returns **true** if successful, **undefined** if unsuccessful.
 
 .. _project.closeDocument:
 
-closeDocument()
+Project.closeDocument()
 *********************************************
 
 ``project.closeDocument(saveFirst, promptIfDirty)``
@@ -177,7 +177,7 @@ Returns **0** if successful.
 
 .. _project.consolidateDuplicates:
 
-consolidateDuplicates()
+Project.consolidateDuplicates()
 *********************************************
 
 ``project.consolidateDuplicates()``
@@ -198,7 +198,7 @@ Returns  **0** if successful.
 
 .. _project.createNewSequence:
 
-createNewSequence()
+Project.createNewSequence()
 *********************************************
 
 ``project.createNewSequence(sequenceName, sequenceID)``
@@ -221,7 +221,7 @@ Returns a :ref:`sequence` if creation was successful, or **0** if unsuccessful.
 
 .. _project.createNewSequenceFromClips:
 
-createNewSequenceFromClips()
+Project.createNewSequenceFromClips()
 *****************************************************************************
 
 ``project.createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin);``
@@ -248,7 +248,7 @@ Returns the newly-created :ref:`sequence` if successful; `0` if unsuccessful.
 
 .. _project.deleteSequence:
 
-deleteSequence()
+Project.deleteSequence()
 *********************************************
 
 ``project.deleteSequence(sequenceToDelete)``
@@ -269,7 +269,7 @@ Returns 0 if successful.
 
 .. _project.exportAAF:
 
-exportAAF()
+Project.exportAAF()
 *********************************************
 
 ``project.exportAAF(sequenceToExport, outputPath, mixdownVideo, explodeToMono, sampleRate, bitsPerSample, embedAudio, audioFileFormat, trimSources, handleFrames, presetPath, renderAudioEffects, includeClipCopies, preserveParentFolder)``
@@ -318,7 +318,7 @@ Returns **0** if successful.
 
 .. _project.exportFinalCutProXML:
 
-exportFinalCutProXML()
+Project.exportFinalCutProXML()
 *********************************************
 
 ``project.exportFinalCutProXML(outputPath, suppressUI)``
@@ -341,7 +341,7 @@ Returns 0 if successful.
 
 .. _project.exportOMF:
 
-exportOMF()
+Project.exportOMF()
 *********************************************
 
 ``project.exportOMF(sequence, outputPath, omfTitle, sampleRate, bitsPerSample, audioEncapsulated, audioFileFormat, trimAudioFiles, handleFrames, includePan)``
@@ -382,7 +382,7 @@ Returns **0** if successful.
 
 .. _project.exportTimeline:
 
-exportTimeline()
+Project.exportTimeline()
 *********************************************
 
 ``project.exportTimeline(exportControllerName)``
@@ -403,7 +403,7 @@ Returns **0** if successful, or an error code if not.
 
 .. _project.getGraphicsWhiteLuminance:
 
-getGraphicsWhiteLuminance()
+Project.getGraphicsWhiteLuminance()
 *****************************************************************************
 
 ``project.getGraphicsWhiteLuminance();``
@@ -424,7 +424,7 @@ Returns the currently selected graphics white value.
 
 .. _project.getInsertionBin:
 
-getInsertionBin()
+Project.getInsertionBin()
 *********************************************
 
 ``project.getInsertionBin()``
@@ -445,7 +445,7 @@ Returns a :ref:`projectItem` if successful, **0** if not.
 
 .. _project.getProjectPanelMetadata:
 
-getProjectPanelMetadata()
+Project.getProjectPanelMetadata()
 *********************************************
 
 ``project.getProjectPanelMetadata()``
@@ -466,7 +466,7 @@ Returns a **String** representing the current Project panel layout, or **0** if 
 
 .. _project.getSharedLocation:
 
-getSharedLocation()
+Project.getSharedLocation()
 *********************************************
 
 ``project.getSharedLocation()``
@@ -487,7 +487,7 @@ Returns a **String** containing the path.
 
 .. _project.getSupportedGraphicsWhiteLuminances:
 
-getSupportedGraphicsWhiteLuminances()
+Project.getSupportedGraphicsWhiteLuminances()
 *****************************************************************************
 
 ``project.getSupportedGraphicsWhiteLuminances();``
@@ -508,7 +508,7 @@ Returns an array of graphics white settings supported by the project; Currently 
 
 .. _project.importAEComps:
 
-importAEComps()
+Project.importAEComps()
 *********************************************
 
 ``project.importAEComps(pathOfContainingProject, arrayOfCompNames, optionalTargetBin)``
@@ -533,7 +533,7 @@ Returns **0** if successful.
 
 .. _project.importAllAEComps:
 
-importAllAEComps()
+Project.importAllAEComps()
 *********************************************
 
 ``project.importAllAEComps(pathOfContainingProject, optionalTargetBin)``
@@ -556,7 +556,7 @@ Returns **0** if successful.
 
 .. _project.importFiles:
 
-importFiles()
+Project.importFiles()
 *********************************************
 
 ``project.importFiles(arrayOfFilePathsToImport, suppressUI, targetBin, importAsNumberedStills)``
@@ -577,7 +577,7 @@ Returns **true** if successful, **false** if not.
 
 .. _project.importSequences:
 
-importSequences()
+Project.importSequences()
 *********************************************
 
 ``project.importSequences(pathOfContainingProject, arrayOfSequenceIDs)``
@@ -598,7 +598,7 @@ Returns **0** if successful.
 
 .. _project.isSharedLocationCopyEnabled:
 
-isSharedLocationCopyEnabled()
+Project.isSharedLocationCopyEnabled()
 *********************************************
 
 ``project.isSharedLocationCopyEnabled()``
@@ -619,7 +619,7 @@ Returns  **true** if copying is enabled; **false** if not.
 
 .. _project.newBarsAndTone:
 
-newBarsAndTone()
+Project.newBarsAndTone()
 **************************************************
 
 ``project.newBarsAndTone(width, height, timeBase, PARNum, PARDen, audioSampleRate, name);``
@@ -654,7 +654,7 @@ Returns a :ref:`projectItem` for the new bars and tone, or **0** if unsuccessful
 
 .. _project.newSequence:
 
-newSequence()
+Project.newSequence()
 ***********************************************
 
 ``project.newSequence(sequenceName, pathToSequencePreset)``
@@ -679,7 +679,7 @@ Returns a :ref:`sequence`, or **0** if unsuccessful.
 
 .. _project.openSequence:
 
-openSequence()
+Project.openSequence()
 *********************************************
 
 ``project.openSequence(sequenceID)``
@@ -700,7 +700,7 @@ Returns **true** if successful, **false** if not.
 
 .. _project.pauseGrowing:
 
-pauseGrowing()
+Project.pauseGrowing()
 *********************************************
 
 ``project.pauseGrowing(pausedOrNot)``
@@ -721,7 +721,7 @@ Returns **0** if successful.
 
 .. _project.save:
 
-save()
+Project.save()
 *********************************************
 
 ``project.save()``
@@ -742,7 +742,7 @@ Returns **0** if successful.
 
 .. _project.saveAs:
 
-saveAs()
+Project.saveAs()
 *********************************************
 
 ``project.saveAs(pathToNewProject)``
@@ -763,7 +763,7 @@ Returns **0** if successful, or an error code if not.
 
 .. _project.setEnableTranscodeOnIngest:
 
-setEnableTranscodeOnIngest()
+Project.setEnableTranscodeOnIngest()
 *****************************************************************************
 
 ``project.setEnableTranscodeOnIngest(FirstAutoSaveFolder);``
@@ -784,7 +784,7 @@ Returns **true** if successful.
 
 .. _project.setGraphicsWhiteLuminance:
 
-setGraphicsWhiteLuminance()
+Project.setGraphicsWhiteLuminance()
 *****************************************************************************
 
 ``project.setGraphicsWhiteLuminance(newValue);``
@@ -805,7 +805,7 @@ Returns true if successful.
 
 .. _project.setProjectPanelMetadata:
 
-setProjectPanelMetadata()
+Project.setProjectPanelMetadata()
 *********************************************
 
 ``project.setProjectPanelMetadata(updatedLayoutAsString)``
@@ -826,7 +826,7 @@ Returns  **0** if unsuccessful.
 
 .. _project.setScratchDiskPath:
 
-setScratchDiskPath()
+Project.setScratchDiskPath()
 *********************************************
 
 ``project.setScratchDiskPath(newPath, whichScratchDiskPath)``

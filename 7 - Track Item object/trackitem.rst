@@ -19,7 +19,7 @@ Attributes
 
 .. _trackItem.components:
 
-components
+TrackItem.components
 *********************************************
 
 ``trackItem.components``
@@ -36,7 +36,7 @@ An Array of components; read-only.
 
 .. _trackItem.duration:
 
-duration
+TrackItem.duration
 *********************************************
 
 ``trackItem.duration``
@@ -53,7 +53,7 @@ Time object, read-only.
 
 .. _trackItem.end:
 
-end
+TrackItem.end
 *********************************************
 
 ``trackItem.end``
@@ -70,7 +70,7 @@ Time object, read/write.
 
 .. _trackItem.inPoint:
 
-inPoint
+TrackItem.inPoint
 *********************************************
 
 ``trackItem.inPoint``
@@ -87,7 +87,7 @@ Time object, read/write.
 
 .. _trackItem.mediaType:
 
-mediaType
+TrackItem.mediaType
 *********************************************
 
 ``trackItem.mediaType``
@@ -104,7 +104,7 @@ This will either be **"audio"** or **"video"**.
 
 .. _trackItem.name:
 
-name
+TrackItem.name
 *********************************************
 
 ``trackItem.name``
@@ -121,7 +121,7 @@ String; read/write.
 
 .. _trackItem.outPoint:
 
-outPoint
+TrackItem.outPoint
 *********************************************
 
 ``trackItem.outPoint``
@@ -138,7 +138,7 @@ Time object, read/write.
 
 .. _trackItem.projectItem:
 
-projectItem
+TrackItem.projectItem
 *********************************************
 
 ``trackItem.projectItem``
@@ -155,7 +155,7 @@ A :ref:`projectItem`.
 
 .. _trackItem.start:
 
-start
+TrackItem.start
 *********************************************
 
 ``trackItem.start``
@@ -172,7 +172,7 @@ Time object, read/write.
 
 .. _trackItem.type:
 
-type
+TrackItem.type
 *********************************************
 
 ``trackItem.type``
@@ -193,7 +193,7 @@ Methods
 
 .. _trackItem.getSpeed:
 
-getSpeed()
+TrackItem.getSpeed()
 *********************************************
 
 ``trackItem.getSpeed()``
@@ -214,7 +214,7 @@ Returns the speed multiplier applied to the ``trackItem``, as a ``float``. No sp
 
 .. _trackItem.isAdjustmentLayer:
 
-isAdjustmentLayer()
+TrackItem.isAdjustmentLayer()
 *********************************************
 
 ``trackItem.isAdjustmentLayer()``
@@ -235,7 +235,7 @@ Returns ``true`` if the trackitem is an adjustment layer; ``false`` if not.
 
 .. _trackItem.isReversed:
 
-isReversed()
+TrackItem.isReversed()
 *********************************************
 
 ``trackItem.isReversed()``
@@ -256,7 +256,7 @@ Returns **1** if ``trackItem`` is reversed; **0** if not.
 
 .. _trackItem.isSelected:
 
-isSelected()
+TrackItem.isSelected()
 *********************************************
 
 ``trackItem.isSelected()``
@@ -277,7 +277,7 @@ Returns ``true`` if trackItem is selected; ``false`` if not.
 
 .. _trackItem.setSelected:
 
-setSelected()
+TrackItem.setSelected()
 *********************************************
 
 ``trackItem.setSelected(selectionState, updateUI)``

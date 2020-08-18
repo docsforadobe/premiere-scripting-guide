@@ -19,7 +19,7 @@ Attributes
 
 .. _track.clips:
 
-clips
+Track.clips
 *********************************************
 
 ``track.clips``
@@ -36,7 +36,7 @@ Array; read-only.
 
 .. _track.id:
 
-id
+Track.id
 *********************************************
 
 ``track.id``
@@ -53,7 +53,7 @@ Integer, read-only.
 
 .. _track.mediaType:
 
-mediaType
+Track.mediaType
 *********************************************
 
 ``track.mediaType``
@@ -70,7 +70,7 @@ String, read-only; valid values are ``Audio`` and ``Video``.
 
 .. _track.name:
 
-name
+Track.name
 *********************************************
 
 ``track.name``
@@ -87,7 +87,7 @@ String; read-only.
 
 .. _track.transitions:
 
-transitions
+Track.transitions
 *********************************************
 
 ``track.transitions``
@@ -108,7 +108,7 @@ Methods
 
 .. _track.insertClip:
 
-insertClip()
+Track.insertClip()
 *********************************************
 
 ``track.insertClip(srcProjectItem, time)``
@@ -129,7 +129,7 @@ None.
 
 .. _track.isMuted:
 
-isMuted()
+Track.isMuted()
 *********************************************
 
 ``track.isMuted()``
@@ -150,7 +150,7 @@ Returns **true** if track is currently muted; **false** if not.
 
 .. _track.overwriteClip:
 
-overwriteClip()
+Track.overwriteClip()
 *********************************************
 
 ``track.overwriteClip(srcProjectItem, time)``
@@ -171,7 +171,7 @@ Returns ``true``.
 
 .. _track.setMute:
 
-setMute()
+Track.setMute()
 *********************************************
 
 ``track.setMute(isMuted)``

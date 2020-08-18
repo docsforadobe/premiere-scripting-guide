@@ -19,7 +19,7 @@ Attributes
 
 .. _sequence.audioTracks:
 
-audioTracks
+Sequence.audioTracks
 *********************************************
 
 ``sequence.audioTracks``
@@ -36,7 +36,7 @@ Array; read-only.
 
 .. _sequence.end:
 
-end
+Sequence.end
 *********************************************
 
 ``sequence.end``
@@ -53,7 +53,7 @@ Integer; read-only.
 
 .. _sequence.frameSizeHorizontal:
 
-frameSizeHorizontal
+Sequence.frameSizeHorizontal
 *********************************************
 
 ``sequence.frameSizeHorizontal``
@@ -70,7 +70,7 @@ Integer; read-only.
 
 .. _sequence.frameSizeVertical:
 
-frameSizeVertical
+Sequence.frameSizeVertical
 *********************************************
 
 ``sequence.frameSizeVertical``
@@ -87,7 +87,7 @@ Integer; read-only.
 
 .. _sequence.id:
 
-id
+Sequence.id
 *********************************************
 
 ``sequence.id``
@@ -104,7 +104,7 @@ Integer, read-only.
 
 .. _sequence.markers:
 
-markers
+Sequence.markers
 *********************************************
 
 ``sequence.markers``
@@ -121,7 +121,7 @@ Array; read-only.
 
 .. _sequence.name:
 
-name
+Sequence.name
 *********************************************
 
 ``sequence.name``
@@ -138,7 +138,7 @@ String; read/write.
 
 .. _sequence.projectItem:
 
-projectItem
+Sequence.projectItem
 *********************************************
 
 ``sequence.projectItem``
@@ -155,7 +155,7 @@ The :ref:`projectItem` associated with this sequence.
 
 .. _sequence.sequenceID:
 
-sequenceID
+Sequence.sequenceID
 *********************************************
 
 ``sequence.sequenceID``
@@ -172,7 +172,7 @@ String; read-only.
 
 .. _sequence.setZeroPoint:
 
-setZeroPoint
+Sequence.setZeroPoint
 *********************************************
 
 ``sequence.setZeroPoint(newZeroPoint)``
@@ -197,7 +197,7 @@ Returns **0** if successful.
 
 .. _sequence.timebase:
 
-timebase
+Sequence.timebase
 *********************************************
 
 ``sequence.timebase``
@@ -214,7 +214,7 @@ Integer; read-only.
 
 .. _sequence.videoTracks:
 
-videoTracks
+Sequence.videoTracks
 *********************************************
 
 ``sequence.videoTracks``
@@ -231,7 +231,7 @@ Array; read-only.
 
 .. _sequence.zeroPoint:
 
-zeroPoint
+Sequence.zeroPoint
 *********************************************
 
 ``sequence.zeroPoint``
@@ -252,7 +252,7 @@ Methods
 
 .. _sequence.autoReframeSequence:
 
-autoReframeSequence()
+Sequence.autoReframeSequence()
 *******************************************************************************************************
 
 ``sequence.autoReframeSequence(numerator, denominator, motionPreset, newName, useNestedSequences);``
@@ -283,7 +283,7 @@ Returns the new Sequence object, if successful; `0` if unsuccessful.
 
 .. _sequence.clone:
 
-clone()
+Sequence.clone()
 *********************************************
 
 ``sequence.clone()``
@@ -304,7 +304,7 @@ Returns a :ref:`sequence` if successful, **0** if not.
 
 .. _sequence.createSubsequence:
 
-createSubsequence()
+Sequence.createSubsequence()
 ***********************************************
 
 ``sequence.createSubsequence(ignoreChannelMapping)``
@@ -325,7 +325,7 @@ Returns 0 if successful.
 
 .. _sequence.exportAsFinalCutProXML:
 
-exportAsFinalCutProXML()
+Sequence.exportAsFinalCutProXML()
 *********************************************
 
 ``sequence.exportAsFinalCutProXML(outputPath)``
@@ -346,7 +346,7 @@ Returns 0 if successful.
 
 .. _sequence.exportAsMediaDirect:
 
-exportAsMediaDirect()
+Sequence.exportAsMediaDirect()
 *********************************************************
 
 ``sequence.exportAsMediaDirect(outputPath, presetPath, workAreaType)``
@@ -378,7 +378,7 @@ Returns 0 if successful.
 
 .. _sequence.exportAsProject:
 
-exportAsProject()
+Sequence.exportAsProject()
 *********************************************
 
 ``sequence.exportAsProject(outputPath)``
@@ -399,7 +399,7 @@ Returns 0 if successful.
 
 .. _sequence.getExportFileExtension:
 
-getExportFileExtension()
+Sequence.getExportFileExtension()
 *********************************************
 
 ``sequence.getExportFileExtension(outputPresetPath)``
@@ -420,7 +420,7 @@ Returns a **String** containing the output file extension, or **0** if unsuccess
 
 .. _sequence.getInPoint:
 
-getInPoint()
+Sequence.getInPoint()
 *********************************************
 
 ``sequence.getInPoint()``
@@ -441,7 +441,7 @@ Returns a Real representing the in point, in seconds.
 
 .. _sequence.getInPointAsTime:
 
-getInPointAsTime()
+Sequence.getInPointAsTime()
 *********************************************
 
 ``sequence.getInPointAsTime()``
@@ -462,7 +462,7 @@ Returns a Time representing the in point, in seconds.
 
 .. _sequence.getOutPoint:
 
-getOutPoint()
+Sequence.getOutPoint()
 *********************************************
 
 ``sequence.getOutPoint()``
@@ -483,7 +483,7 @@ Returns a Real representing the out point, in seconds.
 
 .. _sequence.getOutPointAsTime:
 
-getOutPointAsTime()
+Sequence.getOutPointAsTime()
 *********************************************
 
 ``sequence.getOutPointAsTime()``
@@ -504,7 +504,7 @@ Returns a Time representing the out point, in seconds.
 
 .. _sequence.getPlayerPosition:
 
-getPlayerPosition()
+Sequence.getPlayerPosition()
 *********************************************
 
 ``sequence.getPlayerPosition()``
@@ -525,7 +525,7 @@ Returns a Time object, representing the current player position.
 
 .. _sequence.getSettings:
 
-getSettings()
+Sequence.getSettings()
 *********************************************
 
 ``sequence.getSettings()``
@@ -645,7 +645,7 @@ Returns a sequence settings structure.
 
 .. _sequence.isDoneAnalyzingForVideoEffects:
 
-isDoneAnalyzingForVideoEffects()
+Sequence.isDoneAnalyzingForVideoEffects()
 *******************************************************************************************************
 
 ``sequence.isDoneAnalyzingForVideoEffects();``
@@ -666,7 +666,7 @@ Returns ``true`` if analysis is complete.
 
 .. _sequence.performSceneEditDetectionOnSelection:
 
-performSceneEditDetectionOnSelection()
+Sequence.performSceneEditDetectionOnSelection()
 *******************************************************************************************************
 
 ``sequence.performSceneEditDetectionOnSelection(actionDesired, ApplyCutsToLinkedAudio, sensitivity);``
@@ -693,7 +693,7 @@ Returns `true` if successful.
 
 .. _sequence.setInPoint:
 
-setInPoint()
+Sequence.setInPoint()
 *********************************************
 
 ``sequence.setInPoint(newTimeInTicks)``
@@ -714,7 +714,7 @@ Returns **0** if successful.
 
 .. _sequence.setOutPoint:
 
-setOutPoint()
+Sequence.setOutPoint()
 *********************************************
 
 ``sequence.setOutPoint(newTimeInTicks)``
@@ -735,7 +735,7 @@ Returns **0** if successful.
 
 .. _sequence.setPlayerPosition:
 
-setPlayerPosition()
+Sequence.setPlayerPosition()
 *********************************************
 
 ``sequence.setPlayerPosition(newTimeInTicks)``
@@ -756,7 +756,7 @@ Returns **0** if successful.
 
 .. _sequence.setSettings:
 
-setSettings()
+Sequence.setSettings()
 *********************************************
 
 ``sequence.setSettings(sequenceSettings)``

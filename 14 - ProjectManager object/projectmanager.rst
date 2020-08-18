@@ -19,7 +19,7 @@ Attributes
 
 .. _projectManager.affectedSequences:
 
-affectedSequences
+ProjectManager.affectedSequences
 *********************************************
 
 ``ProjectManager.affectedSequences``
@@ -36,7 +36,7 @@ Array; read-write.
 
 .. _projectManager.clipTranscoderOption:
 
-clipTranscoderOption
+ProjectManager.clipTranscoderOption
 *********************************************
 
 ``ProjectManager.clipTranscoderOption``
@@ -61,7 +61,7 @@ String; read/write.
 
 .. _projectManager.clipTransferOption:
 
-clipTransferOption
+ProjectManager.clipTransferOption
 *********************************************
 
 ``ProjectManager.clipTransferOption``
@@ -80,7 +80,7 @@ The specified setting for clip transfer. Value will be one of the following:
 
 .. _projectManager.convertAECompsToClips:
 
-convertAECompsToClips
+ProjectManager.convertAECompsToClips
 *********************************************
 
 ``ProjectManager.convertAECompsToClips``
@@ -97,7 +97,7 @@ Boolean; read/write.
 
 .. _projectManager.convertImageSequencesToClips:
 
-convertImageSequencesToClips
+ProjectManager.convertImageSequencesToClips
 *********************************************
 
 ``ProjectManager.convertImageSequencesToClips``
@@ -114,7 +114,7 @@ Boolean; read/write.
 
 .. _projectManager.convertSyntheticsToClips:
 
-convertSyntheticsToClips
+ProjectManager.convertSyntheticsToClips
 *********************************************
 
 ``ProjectManager.convertSyntheticsToClips``
@@ -131,7 +131,7 @@ Boolean; read/write.
 
 .. _projectManager.copyToPreventAlphaLoss:
 
-copyToPreventAlphaLoss
+ProjectManager.copyToPreventAlphaLoss
 *********************************************
 
 ``ProjectManager.copyToPreventAlphaLoss``
@@ -148,7 +148,7 @@ Boolean; read/write.
 
 .. _projectManager.destinationPath:
 
-destinationPath
+ProjectManager.destinationPath
 *********************************************
 
 ``ProjectManager.destinationPath``
@@ -165,7 +165,7 @@ String; read/write.
 
 .. _projectManager.encoderPresetFilePath:
 
-encoderPresetFilePath
+ProjectManager.encoderPresetFilePath
 *********************************************
 
 ``ProjectManager.encoderPresetFilePath``
@@ -182,7 +182,7 @@ String; read-write.
 
 .. _projectManager.excludeUnused:
 
-excludeUnused
+ProjectManager.excludeUnused
 *********************************************
 
 ``ProjectManager.excludeUnused``
@@ -199,7 +199,7 @@ Boolean; read/write.
 
 .. _projectManager.handleFrameCount:
 
-handleFrameCount
+ProjectManager.handleFrameCount
 *********************************************
 
 ``ProjectManager.handleFrameCount``
@@ -216,7 +216,7 @@ Integer; read/write.
 
 .. _projectManager.includeAllSequences:
 
-includeAllSequences
+ProjectManager.includeAllSequences
 *********************************************
 
 ``ProjectManager.includeAllSequences``
@@ -233,7 +233,7 @@ Boolean; read/write.
 
 .. _projectManager.includeConformedAudio:
 
-includeConformedAudio
+ProjectManager.includeConformedAudio
 *********************************************
 
 ``ProjectManager.includeConformedAudio``
@@ -250,7 +250,7 @@ Boolean; read/write.
 
 .. _projectManager.includePreviews:
 
-includePreviews
+ProjectManager.includePreviews
 *********************************************
 
 ``ProjectManager.includePreviews``
@@ -267,7 +267,7 @@ Boolean; read/write.
 
 .. _projectManager.renameMedia:
 
-renameMedia
+ProjectManager.renameMedia
 *********************************************
 
 ``ProjectManager.renameMedia``
@@ -288,7 +288,7 @@ Methods
 
 .. _projectManager.closeClip:
 
-closeClip()
+ProjectManager.closeClip()
 *********************************************
 
 ``source.closeClip()``

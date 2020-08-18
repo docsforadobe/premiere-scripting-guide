@@ -19,7 +19,7 @@ Attributes
 
 .. _marker.comments:
 
-comments
+Marker.comments
 *********************************************
 
 ``marker.comments``
@@ -36,7 +36,7 @@ String; read/write.
 
 .. _marker.end:
 
-end
+Marker.end
 *********************************************
 
 ``marker.end``
@@ -53,7 +53,7 @@ A **Time** object containing the value of the ending of the marker.
 
 .. _marker.guid:
 
-guid
+Marker.guid
 *********************************************
 
 ``marker.guid``
@@ -70,7 +70,7 @@ String; read-only.
 
 .. _marker.name:
 
-name
+Marker.name
 *********************************************
 
 ``marker.name``
@@ -87,7 +87,7 @@ String; read/write.
 
 .. _marker.start:
 
-start
+Marker.start
 *********************************************
 
 ``marker.start``
@@ -104,7 +104,7 @@ A **Time** object containing the value of the beginning of the marker.
 
 .. _marker.type:
 
-type
+Marker.type
 *********************************************
 
 ``marker.type``
@@ -125,7 +125,7 @@ Methods
 
 .. _marker.getColorByIndex:
 
-getColorByIndex()
+Marker.getColorByIndex()
 *********************************************
 
 ``marker.getColorByIndex(markerIndex)``
@@ -150,7 +150,7 @@ Returns the color index as an ``Integer``.
 
 .. _marker.getWebLinkFrameTarget:
 
-getWebLinkFrameTarget()
+Marker.getWebLinkFrameTarget()
 *********************************************
 
 ``marker.getWebLinkFrameTarget()``
@@ -171,7 +171,7 @@ Returns a ``String`` containing the frame target, or **0** if unsuccessful.
 
 .. _marker.getWebLinkURL:
 
-getWebLinkURL()
+Marker.getWebLinkURL()
 *********************************************
 
 ``marker.getWebLinkURL()``
@@ -192,7 +192,7 @@ Returns a ``String`` containing the URL, or **0** if unsuccessful.
 
 .. _marker.setColorByIndex:
 
-setColorByIndex()
+Marker.setColorByIndex()
 *********************************************
 
 ``marker.setColorByIndex(colorIndex, markerIndex)``
@@ -228,7 +228,7 @@ Returns ``undefined``.
 
 .. _marker.setTypeAsChapter:
 
-setTypeAsChapter()
+Marker.setTypeAsChapter()
 *********************************************
 
 ``marker.setTypeAsChapter()``
@@ -249,7 +249,7 @@ Returns **0** if successful.
 
 .. _marker.setTypeAsComment:
 
-setTypeAsComment()
+Marker.setTypeAsComment()
 *********************************************
 
 ``marker.setTypeAsComment()``
@@ -270,7 +270,7 @@ Returns **0** if successful.
 
 .. _marker.setTypeAsSegmentation:
 
-setTypeAsSegmentation()
+Marker.setTypeAsSegmentation()
 *********************************************
 
 ``marker.setTypeAsSegmentation()``
@@ -291,7 +291,7 @@ Returns **0** if successful.
 
 .. _marker.setTypeAsWebLink:
 
-setTypeAsWebLink()
+Marker.setTypeAsWebLink()
 *********************************************
 
 ``marker.setTypeAsWebLink()``

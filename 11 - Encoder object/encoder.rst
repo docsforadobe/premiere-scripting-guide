@@ -27,7 +27,7 @@ Methods
 
 .. _encoder.encodeFile:
 
-encodeFile()
+Encoder.encodeFile()
 *********************************************
 
 ``encoder.encodeFile(fileToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
@@ -65,7 +65,7 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 
 .. _encoder.encodeProjectItem:
 
-encodeProjectItem()
+Encoder.encodeProjectItem()
 *********************************************
 
 ``encoder.encodeProjectItem(projectItem, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
@@ -99,7 +99,7 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 
 .. _encoder.encodeSequence:
 
-encodeSequence()
+Encoder.encodeSequence()
 *********************************************
 
 ``encoder.encodeSequence(sequenceToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
@@ -133,7 +133,7 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 
 .. _encoder.launchEncoder:
 
-launchEncoder()
+Encoder.launchEncoder()
 *********************************************
 
 ``encoder.launchEncoder()``
@@ -154,7 +154,7 @@ Returns **0** if successful.
 
 .. _encoder.setEmbeddedXMPEnabled:
 
-setEmbeddedXMPEnabled()
+Encoder.setEmbeddedXMPEnabled()
 *********************************************
 
 ``encoder.setEmbeddedXMPEnabled(enabledOrNot)``
@@ -177,7 +177,7 @@ Note: Premiere Pro and Adobe Media Encoder will output sidecar XMP for some file
 
 .. _encoder.setSidecarXMPEnabled:
 
-setSidecarXMPEnabled()
+Encoder.setSidecarXMPEnabled()
 *********************************************
 
 ``encoder.setSidecarXMPEnabled(enabledOrNot)``
@@ -198,7 +198,7 @@ Returns **0** if successful.
 
 .. _encoder.startBatch:
 
-startBatch()
+Encoder.startBatch()
 *********************************************
 
 ``encoder.startBatch()``

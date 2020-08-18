@@ -19,7 +19,7 @@ Attributes
 
 .. _audioChannelMapping.audioChannelsType:
 
-audioChannelsType
+AudioChannelMapping.audioChannelsType
 *********************************************
 
 ``AudioChannelMapping.audioChannelsType``
@@ -32,7 +32,7 @@ The type of the audio contained in this channel. Will be 0, 1 or 2, correspondin
 
 .. _audioChannelMapping.audioClipsNumber:
 
-audioClipsNumber
+AudioChannelMapping.audioClipsNumber
 *********************************************
 
 ``AudioChannelMapping.audioClipsNumber``
@@ -49,7 +49,7 @@ Methods
 
 .. _audioChannelMapping.setMappingForChannel:
 
-setMappingForChannel()
+AudioChannelMapping.setMappingForChannel()
 *********************************************
 
 ``mapping.setMappingForChannel(intChannelIndex, intSourceChannelIndex)``
