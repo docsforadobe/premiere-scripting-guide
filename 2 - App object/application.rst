@@ -180,11 +180,11 @@ sourceMonitor
 
 **Description**
 
-Provides access to Source monitor.
+Provides access to :ref:`Source monitor <source>`.
 
 **Type**
 
-sourceMonitor object.
+:ref:`source`.
 
 ----
 
@@ -306,7 +306,7 @@ None.
 
 **Returns**
 
-Returns **true** if file can be opened as a Premiere Pro project.
+Returns **true** if file can be opened as a Premiere Pro :ref:`project <project>`.
 
 ----
 
