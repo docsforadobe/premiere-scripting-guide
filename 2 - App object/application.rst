@@ -35,12 +35,12 @@ An :ref:`anywhere`, providing access to available Anywhere servers. Only availab
 
 ----
 
-.. _app.buildNumber:
+.. _app.build:
 
-app.buildNumber
+app.build
 *********************************************
 
-``app.buildNumber``
+``app.build``
 
 **Description**
 
@@ -86,12 +86,12 @@ String; read-only.
 
 ----
 
-.. _app.getPProSysPrefPath:
+.. _app.getPProSystemPrefPath:
 
-app.getPProSysPrefPath
+app.getPProSystemPrefPath
 *********************************************
 
-``app.getPProSysPrefPath``
+``app.getPProSystemPrefPath``
 
 **Description**
 
