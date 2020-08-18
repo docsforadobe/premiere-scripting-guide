@@ -2,7 +2,7 @@
 
 .. _trackItem:
 
-Track Item object
+TrackItem object
 ===================
 
 |	``app.project.sequences[index].audioTracks[index].clips[index]``

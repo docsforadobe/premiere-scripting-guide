@@ -25,9 +25,9 @@ Welcome to the Premiere Pro Scripting Guide!
 
 .. toctree::
     :maxdepth: 2
-    :caption: Project Item object
+    :caption: ProjectItem object
 
-    4 - Project Item object/projectItem
+    4 - ProjectItem object/projectItem
 
 .. toctree::
     :maxdepth: 2
@@ -43,9 +43,9 @@ Welcome to the Premiere Pro Scripting Guide!
 
 .. toctree::
     :maxdepth: 2
-    :caption: Track Item object
+    :caption: TrackItem object
 
-    7 - Track Item object/trackitem
+    7 - TrackItem object/trackitem
 
 .. toctree::
     :maxdepth: 2

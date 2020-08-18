@@ -2,7 +2,7 @@
 
 .. _projectItem:
 
-Project Item object
+ProjectItem object
 ===================
 
 ``app.project.rootItem.children[index]``
