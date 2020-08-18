@@ -180,11 +180,11 @@ app.sourceMonitor
 
 **Description**
 
-Provides access to :ref:`Source monitor <source>`.
+Provides access to :ref:`sourceMonitor`.
 
 **Type**
 
-:ref:`source`.
+:ref:`sourceMonitor`.
 
 ----
 

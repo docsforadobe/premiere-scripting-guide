@@ -79,9 +79,9 @@ Welcome to the Premiere Pro Scripting Guide!
 
 .. toctree::
     :maxdepth: 2
-    :caption: Source object
+    :caption: SourceMonitor object
 
-    13 - Source object/source
+    13 - SourceMonitor object/sourcemonitor
 
 .. toctree::
     :maxdepth: 2

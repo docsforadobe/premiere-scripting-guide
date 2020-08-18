@@ -1,8 +1,8 @@
 .. highlight:: javascript
 
-.. _Source:
+.. _SourceMonitor:
 
-Source object
+SourceMonitor object
 ==========================
 
 ``app.sourceMonitor``
@@ -25,9 +25,9 @@ None.
 Methods
 =======
 
-.. _source.closeAllClips:
+.. _sourceMonitor.closeAllClips:
 
-Source.closeAllClips()
+SourceMonitor.closeAllClips()
 *********************************************
 
 ``app.sourceMonitor.closeAllClips()``
@@ -46,9 +46,9 @@ Returns **0** if successful.
 
 ----
 
-.. _source.closeClip:
+.. _sourceMonitor.closeClip:
 
-Source.closeClip()
+SourceMonitor.closeClip()
 *********************************************
 
 ``app.sourceMonitor.closeClip()``
@@ -67,9 +67,9 @@ Returns **0** if successful.
 
 ----
 
-.. _source.getPosition:
+.. _sourceMonitor.getPosition:
 
-Source.getPosition()
+SourceMonitor.getPosition()
 *********************************************
 
 ``app.sourceMonitor.getPosition()``
@@ -88,9 +88,9 @@ Returns a ``Time`` object containing the position of the Source monitor's curren
 
 ----
 
-.. _source.openFilePath:
+.. _sourceMonitor.openFilePath:
 
-Source.openFilePath()
+SourceMonitor.openFilePath()
 *********************************************
 
 ``app.sourceMonitor.openFilePath(absolutePathToFile)``
@@ -109,9 +109,9 @@ Returns 0 if successful.
 
 ----
 
-.. _source.openProjectItem:
+.. _sourceMonitor.openProjectItem:
 
-Source.openProjectItem()
+SourceMonitor.openProjectItem()
 *********************************************
 
 ``app.sourceMonitor.openProjectItem(projectItem)``
@@ -130,9 +130,9 @@ Returns 0 if successful.
 
 ----
 
-.. _source.play:
+.. _sourceMonitor.play:
 
-Source.play()
+SourceMonitor.play()
 *********************************************
 
 ``app.sourceMonitor.play(playbackSpeed)``
