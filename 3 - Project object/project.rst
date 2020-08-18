@@ -43,11 +43,11 @@ Project.documentID
 
 **Description**
 
-A read-only unique identifier for this project.
+A unique identifier for this project, in format of ``xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx``.
 
 **Type**
 
-GUID; read-only.
+String; read-only.
 
 ----
 
@@ -82,6 +82,14 @@ The file path of the project.
 **Type**
 
 String; read-only.
+
+**Example**
+
+Get a path of a curently active project
+
+.. code:: javascript
+
+	app.project.path; // /Users/USERNAME/Desktop/Project.prproj
 
 ----
 
@@ -690,7 +698,7 @@ Makes the :ref:`sequence` with the provided sequence ID, active. This will open 
 
 **Parameters**
 
-A valid ``sequenceID``.
+A valid :ref:`sequence.id`.
 
 **Returns**
 

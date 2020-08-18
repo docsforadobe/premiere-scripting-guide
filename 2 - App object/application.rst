@@ -48,7 +48,15 @@ The number of the build of Premiere Pro being run.
 
 **Type**
 
-Integer; read-only.
+String; read-only.
+
+**Example**
+
+Get a build version of current application *(Adobe Premiere Pro version 14.3.1 (Build 45))*
+
+.. code:: javascript
+
+	parseInt(app.build); // 45
 
 ----
 
@@ -84,6 +92,14 @@ The path containing the currently active "Adobe Premiere Pro Prefs" file.
 
 String; read-only.
 
+**Example**
+
+Get a path to a currently active preference file
+
+.. code:: javascript
+
+	app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
+
 ----
 
 .. _app.getPProSystemPrefPath:
@@ -100,6 +116,14 @@ Premiere Pro's active configuration files, not specific to a given user.
 **Type**
 
 String; read-only.
+
+**Example**
+
+Get a path to a currently active configuration folder
+
+.. code:: javascript
+
+	app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 
 ----
 
@@ -201,7 +225,7 @@ A unique identifier for the currently logged-in Creative Cloud user.
 
 **Type**
 
-userGuid object; read-only.
+String; read-only.
 
 ----
 
@@ -218,7 +242,15 @@ The version of Premiere Pro, providing the API.
 
 **Type**
 
-Floating point; read-only.
+String; read-only.
+
+**Example**
+
+Get a version of a current application *(Adobe Premiere Pro version 14.3.1 (Build 45))*
+
+.. code:: javascript
+
+	app.version; // 14.3.1
 
 ----
 
@@ -302,11 +334,22 @@ Determines whether the file at path can be opened as a Premiere Pro :ref:`projec
 
 **Parameters**
 
-None.
+A path as a ``String`` to a file to test.
 
 **Returns**
 
 Returns **true** if file can be opened as a Premiere Pro :ref:`project <project>`.
+
+**Example**
+
+Test for valid project files
+
+.. code:: javascript
+
+	app.isDocument('~/Desktop/myProject.prproj'); // true
+	app.isDocument('~/Desktop/textFile.txt');     // false
+	app.isDocument('~/Desktop/footageFile.mov');  // false
+	app.isDocument('~/Desktop/imageFile.mov');    // false
 
 ----
 
@@ -357,7 +400,7 @@ Returns **true** if successful.
 .. _app.openDocument:
 
 app.openDocument()
-******************************************************************************************************************************************************
+***********************
 
 ``app.openDocument(path)``
 

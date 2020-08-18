@@ -404,6 +404,8 @@ None.
 
 **Returns**
 
+``Number``, one of
+
 +------------+---------------------+
 | labelColor | - 0 = Violet        |
 |            | - 1 = Iris          |
@@ -832,7 +834,7 @@ Sets the project item's color label.
 
 **Parameters**
 
-New label color; see projectItem.getColorLabel_.
+New label color; see :ref:`projectItem.getColorLabel`.
 
 **Returns**
 
