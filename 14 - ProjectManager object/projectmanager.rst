@@ -17,7 +17,7 @@ The ProjectManager object exposes Premiere Pro's Project Manager, for project co
 Attributes
 ==========
 
-.. _ProjectManager.affectedSequences:
+.. _projectManager.affectedSequences:
 
 affectedSequences
 *********************************************
@@ -34,7 +34,7 @@ Array; read-write.
 
 ----
 
-.. _ProjectManager.clipTranscoderOption:
+.. _projectManager.clipTranscoderOption:
 
 clipTranscoderOption
 *********************************************
@@ -59,7 +59,7 @@ String; read/write.
 
 ----
 
-.. _ProjectManager.clipTransferOption:
+.. _projectManager.clipTransferOption:
 
 clipTransferOption
 *********************************************
@@ -78,7 +78,7 @@ The specified setting for clip transfer. Value will be one of the following:
 
 ----
 
-.. _ProjectManager.convertAECompsToClips:
+.. _projectManager.convertAECompsToClips:
 
 convertAECompsToClips
 *********************************************
@@ -95,7 +95,7 @@ Boolean; read/write.
 
 ----
 
-.. _ProjectManager.convertImageSequencesToClips:
+.. _projectManager.convertImageSequencesToClips:
 
 convertImageSequencesToClips
 *********************************************
@@ -112,7 +112,7 @@ Boolean; read/write.
 
 ----
 
-.. _ProjectManager.convertSyntheticsToClips:
+.. _projectManager.convertSyntheticsToClips:
 
 convertSyntheticsToClips
 *********************************************
@@ -129,7 +129,7 @@ Boolean; read/write.
 
 ----
 
-.. _ProjectManager.copyToPreventAlphaLoss:
+.. _projectManager.copyToPreventAlphaLoss:
 
 copyToPreventAlphaLoss
 *********************************************
@@ -146,7 +146,7 @@ Boolean; read/write.
 
 ----
 
-.. _ProjectManager.destinationPath:
+.. _projectManager.destinationPath:
 
 destinationPath
 *********************************************
@@ -163,7 +163,7 @@ String; read/write.
 
 ----
 
-.. _ProjectManager.encoderPresetFilePath:
+.. _projectManager.encoderPresetFilePath:
 
 encoderPresetFilePath
 *********************************************
@@ -180,7 +180,7 @@ String; read-write.
 
 ----
 
-.. _ProjectManager.excludeUnused:
+.. _projectManager.excludeUnused:
 
 excludeUnused
 *********************************************
@@ -197,7 +197,7 @@ Boolean; read/write.
 
 ----
 
-.. _ProjectManager.handleFrameCount:
+.. _projectManager.handleFrameCount:
 
 handleFrameCount
 *********************************************
@@ -214,7 +214,7 @@ Integer; read/write.
 
 ----
 
-.. _ProjectManager.includeAllSequences:
+.. _projectManager.includeAllSequences:
 
 includeAllSequences
 *********************************************
@@ -231,7 +231,7 @@ Boolean; read/write.
 
 ----
 
-.. _ProjectManager.includeConformedAudio:
+.. _projectManager.includeConformedAudio:
 
 includeConformedAudio
 *********************************************
@@ -248,7 +248,7 @@ Boolean; read/write.
 
 ----
 
-.. _ProjectManager.includePreviews:
+.. _projectManager.includePreviews:
 
 includePreviews
 *********************************************
@@ -265,7 +265,7 @@ Boolean; read/write.
 
 ----
 
-.. _ProjectManager.renameMedia:
+.. _projectManager.renameMedia:
 
 renameMedia
 *********************************************
@@ -286,7 +286,7 @@ Boolean; read/write.
 Methods
 =======
 
-.. _ProjectManager.closeClip:
+.. _projectManager.closeClip:
 
 closeClip()
 *********************************************

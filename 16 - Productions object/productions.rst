@@ -17,7 +17,7 @@ The Production object lets ExtendScript access and manipulate productions, inser
 Attributes
 ==========
 
-.. production.name:
+.. _production.name:
 
 name
 *********************************************
@@ -30,7 +30,7 @@ The name of the production.
 
 ----
 
-.. _Production.path:
+.. _production.path:
 
 path
 ****
@@ -43,7 +43,7 @@ The path to the Production folder.
 
 ----
 
-.. _Production.projects:
+.. _production.projects:
 
 projects
 ********
@@ -60,7 +60,7 @@ An array of the projects containined within the Production, which are currently 
 Methods
 =======
 
-.. _Production.addProject:
+.. _production.addProject:
 
 addProject()
 *********************************************
@@ -81,7 +81,7 @@ Returns **true** if successful.
 
 ----
 
-.. _Production.close:
+.. _production.close:
 
 close()
 *********************************************
@@ -102,7 +102,7 @@ Returns **true** if successful.
 
 ----
 
-.. _Production.getLocked:
+.. _production.getLocked:
 
 getLocked()
 ******************
@@ -123,7 +123,7 @@ Returns **true** if the Production is locked, **false** if it is unlocked.
 
 ----
 
-.. _Production.moveToTrash:
+.. _production.moveToTrash:
 
 moveToTrash()
 *********************************************
@@ -144,7 +144,7 @@ Returns **true** if successful.
 
 ----
 
-.. _Production.setLocked:
+.. _production.setLocked:
 
 setLocked()
 *********************************************

@@ -17,7 +17,7 @@ The AudioChannelMapping object defines the audio channel mapping applied to a gi
 Attributes
 ==========
 
-.. _AudioChannelMapping.audioChannelsType:
+.. _audioChannelMapping.audioChannelsType:
 
 audioChannelsType
 *********************************************
@@ -30,7 +30,7 @@ The type of the audio contained in this channel. Will be 0, 1 or 2, correspondin
 
 ----
 
-.. AudioChannelMapping.audioClipsNumber:
+.. _audioChannelMapping.audioClipsNumber:
 
 audioClipsNumber
 *********************************************
@@ -47,7 +47,7 @@ The number of audio clips associated with this audio channel.
 Methods
 =======
 
-.. _AudioChannelMapping.setMappingForChannel:
+.. _audioChannelMapping.setMappingForChannel:
 
 setMappingForChannel()
 *********************************************

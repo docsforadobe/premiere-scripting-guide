@@ -17,7 +17,7 @@ Represents a Premiere Pro project. As of Premiere Pro 12.0, multiple projects ma
 Attributes
 ==========
 
-.. _projectname.activeSequence:
+.. _project.activeSequence:
 
 activeSequence
 *********************************************
@@ -51,7 +51,7 @@ GUID; read-only.
 
 ----
 
-.. _projectname.name:
+.. _project.name:
 
 name
 *********************************************
@@ -68,7 +68,7 @@ String; read-only.
 
 ----
 
-.. _projectname.path:
+.. _project.path:
 
 path
 *********************************************
@@ -85,7 +85,7 @@ String; read-only.
 
 ----
 
-.. _projectname.rootItem:
+.. _project.rootItem:
 
 rootItem
 *********************************************
@@ -102,7 +102,7 @@ A **projectItem**; this will always be of type ``ProjectItemType_BIN``.
 
 ----
 
-.. _projectname.sequences:
+.. _project.sequences:
 
 sequences
 *********************************************

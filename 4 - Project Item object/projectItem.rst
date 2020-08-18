@@ -51,7 +51,7 @@ An audioChannelMapping object.
 
 ----
 
-.. name:
+.. _projectItem.name:
 
 name
 *********************************************
