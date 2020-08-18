@@ -52,12 +52,12 @@ Integer; read-only.
 
 ----
 
-.. _app.Encoder:
+.. _app.encoder:
 
-Encoder
+encoder
 *********************************************
 
-``app.Encoder``
+``app.encoder``
 
 **Description**
 
@@ -119,7 +119,6 @@ The currently active project.
 Project object.
 
 ----
-
 
 .. _app.projectManager:
 

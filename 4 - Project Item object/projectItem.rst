@@ -674,7 +674,7 @@ Returns ``true`` if the project item is a merged clip, ``false`` if it isn't.
 
 .. _projectItem.isMulticamClip:
 
-IsMulticamClip()
+isMulticamClip()
 *********************************************
 
 ``projectItem.isMulticamClip()``
@@ -716,7 +716,7 @@ Boolean, ``true`` if offline.
 
 .. _projectItem.isSequence:
 
-IsSequence()
+isSequence()
 *********************************************
 
 ``projectItem.isSequence()``

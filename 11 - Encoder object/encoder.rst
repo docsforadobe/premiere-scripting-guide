@@ -25,12 +25,12 @@ None.
 Methods
 =======
 
-.. _encoder.EncodeFile:
+.. _encoder.encodeFile:
 
-EncodeFile
+encodeFile
 *********************************************
 
-``encoder.EncodeFile(fileToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
+``encoder.encodeFile(fileToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
 
 **Description**
 

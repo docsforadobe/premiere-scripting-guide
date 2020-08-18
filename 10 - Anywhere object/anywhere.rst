@@ -46,12 +46,12 @@ A **String** containing the login token, or **0** if unsuccessful.
 
 ----
 
-.. _anywhere.GetCurrentEditingSessionActiveSequenceURL:
+.. _anywhere.getCurrentEditingSessionActiveSequenceURL:
 
-GetCurrentEditingSessionActiveSequenceURL
+getCurrentEditingSessionActiveSequenceURL
 *********************************************
 
-``anywhere.GetCurrentEditingSessionActiveSequenceURL()``
+``anywhere.getCurrentEditingSessionActiveSequenceURL()``
 
 **Description**
 
@@ -67,12 +67,12 @@ Returns a **String** containing the asset's URL, or **0** if unsuccessful (inclu
 
 ----
 
-.. _anywhere.GetCurrentEditingSessionSelectionURL:
+.. _anywhere.getCurrentEditingSessionSelectionURL:
 
-GetCurrentEditingSessionSelectionURL
+getCurrentEditingSessionSelectionURL
 *********************************************
 
-``anywhere.GetCurrentEditingSessionSelectionURL()``
+``anywhere.getCurrentEditingSessionSelectionURL()``
 
 **Description**
 
