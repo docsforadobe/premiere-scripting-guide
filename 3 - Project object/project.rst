@@ -339,6 +339,47 @@ Returns 0 if successful.
 
 ----
 
+.. _project.exportOMF:
+
+exportOMF()
+*********************************************
+
+``project.exportOMF(sequence, outputPath, omfTitle, sampleRate, bitsPerSample, audioEncapsulated, audioFileFormat, trimAudioFiles, handleFrames, includePan)``
+
+**Description**
+
+Exports an OMF file of the specified sequence, using the specified settings.
+
+**Parameters**
+
++----------------------------+---------------------------------------------------+
+| ``sequence``               | Specifies the sequence to be output.              |
++----------------------------+---------------------------------------------------+
+| ``filePath``               | Complete output path for .omf file.               |
++----------------------------+---------------------------------------------------+
+| ``omfTitle``               | **String** with which to title the OMF.           |
++----------------------------+---------------------------------------------------+
+| ``sampleRate``             | Specifies the sample rate of output audio.        |
++----------------------------+---------------------------------------------------+
+| ``bitsPerSample``          | Specifies the bits per sample of audio output.    |
++----------------------------+---------------------------------------------------+
+| ``audioEncapsulated``      | If **1**, audio is embedded, if **0**, external.  |
++----------------------------+---------------------------------------------------+
+| ``audioFileFormat``        | **0** is AIFF, **1** is WAV.                      |
++----------------------------+---------------------------------------------------+
+| ``trimAudioFiles``         | **1** means yes, trim audio files.                |
++----------------------------+---------------------------------------------------+
+| ``handleFrames``           | Number of handle frames (from 0 to 1000).         |
++----------------------------+---------------------------------------------------+
+| ``includePan``             | **1** means include pan info; **0** means don't.  |
++----------------------------+---------------------------------------------------+
+
+**Returns**
+
+Returns **0** if successful.
+
+----
+
 .. _project.exportTimeline:
 
 exportTimeline()
@@ -671,47 +712,6 @@ Pauses (and resumes) growing file capture.
 **Parameters**
 
 An **int**; if 1, growing files are enabled.
-
-**Returns**
-
-Returns **0** if successful.
-
-----
-
-.. _project.exportOMF:
-
-project.exportOMF()
-*********************************************
-
-``project.exportOMF(sequence, outputPath, omfTitle, sampleRate, bitsPerSample, audioEncapsulated, audioFileFormat, trimAudioFiles, handleFrames, includePan)``
-
-**Description**
-
-Exports an OMF file of the specified sequence, using the specified settings.
-
-**Parameters**
-
-+----------------------------+---------------------------------------------------+
-| ``sequence``               | Specifies the sequence to be output.              |
-+----------------------------+---------------------------------------------------+
-| ``filePath``               | Complete output path for .omf file.               |
-+----------------------------+---------------------------------------------------+
-| ``omfTitle``               | **String** with which to title the OMF.           |
-+----------------------------+---------------------------------------------------+
-| ``sampleRate``             | Specifies the sample rate of output audio.        |
-+----------------------------+---------------------------------------------------+
-| ``bitsPerSample``          | Specifies the bits per sample of audio output.    |
-+----------------------------+---------------------------------------------------+
-| ``audioEncapsulated``      | If **1**, audio is embedded, if **0**, external.  |
-+----------------------------+---------------------------------------------------+
-| ``audioFileFormat``        | **0** is AIFF, **1** is WAV.                      |
-+----------------------------+---------------------------------------------------+
-| ``trimAudioFiles``         | **1** means yes, trim audio files.                |
-+----------------------------+---------------------------------------------------+
-| ``handleFrames``           | Number of handle frames (from 0 to 1000).         |
-+----------------------------+---------------------------------------------------+
-| ``includePan``             | **1** means include pan info; **0** means don't.  |
-+----------------------------+---------------------------------------------------+
 
 **Returns**
 
