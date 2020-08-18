@@ -5,7 +5,8 @@
 Component Parameter object
 ==========================
 
-``Component Parameter``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index]``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index]``
 
 **Description**
 
@@ -22,7 +23,8 @@ Attributes
 ComponentParam.displayName
 *********************************************
 
-``componentParam.displayName``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].displayName``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].displayName``
 
 **Description**
 
@@ -43,7 +45,8 @@ Methods
 ComponentParam.addKey()
 *********************************************
 
-``componentParam.addKey(time)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].addKey(time)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].addKey(time)``
 
 **Description**
 
@@ -64,7 +67,8 @@ Returns **0** if successful.
 ComponentParam.areKeyframesSupported()
 *********************************************
 
-``componentParam.areKeyframesSupported()``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].areKeyframesSupported()``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].areKeyframesSupported()``
 
 **Description**
 
@@ -85,7 +89,8 @@ Returns ``true`` if trackItem is selected; ``false`` if not.
 ComponentParam.findNearestKey()
 *********************************************
 
-``componentParam.findNearestKey(timeToCheck, thresholdInTicks)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].findNearestKey(timeToCheck, thresholdInTicks)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findNearestKey(timeToCheck, thresholdInTicks)``
 
 **Description**
 
@@ -106,7 +111,8 @@ Returns a **Time** value, indicating when the closest keyframe is.
 ComponentParam.findNextKey()
 *********************************************
 
-``componentParam.findNextKey(timeToCheck)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].findNextKey(timeToCheck)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findNextKey(timeToCheck)``
 
 **Description**
 
@@ -127,7 +133,8 @@ Returns a **Time** value, indicating when the closest keyframe is, or **0** if t
 ComponentParam.findPreviousKey()
 *********************************************
 
-``componentParam.findPreviousKey(timeToCheck)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].findPreviousKey(timeToCheck)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findPreviousKey(timeToCheck)``
 
 **Description**
 
@@ -148,7 +155,8 @@ Returns a **Time** value, indicating when the closest keyframe is, or **0** if t
 ComponentParam.getColorValue()
 *********************************************
 
-``componentParam.getColorValue()``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getColorValue()``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getColorValue()``
 
 **Description**
 
@@ -169,7 +177,8 @@ Returns a **Color** containing the values found in the component parameter strea
 ComponentParam.getKeys()
 *********************************************
 
-``componentParam.getKeys()``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getKeys()``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getKeys()``
 
 **Description**
 
@@ -190,7 +199,8 @@ Returns an **Array** of **Time** values, indicating at what time each keyframe o
 ComponentParam.getValue()
 *********************************************
 
-``componentParam.getValue()``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getValue()``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getValue()``
 
 **Description**
 
@@ -211,7 +221,8 @@ Returns the value of the component parameter stream; the return varies with stre
 ComponentParam.getValueAtKey()
 *********************************************
 
-``componentParam.getValueAtKey(time)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getValueAtKey(time)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getValueAtKey(time)``
 
 **Description**
 
@@ -232,7 +243,8 @@ Returns the value of the component parameter stream at ``time``, or **0** if uns
 ComponentParam.getValueAtTime()
 *********************************************
 
-``componentParam.getValueAtTime(time)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getValueAtTime(time)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getValueAtTime(time)``
 
 **Description**
 
@@ -253,7 +265,8 @@ Returns the value of the component parameter stream at ``time``, or **0** if uns
 ComponentParam.isTimeVarying()
 *********************************************
 
-``componentParam.isTimeVarying()``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].isTimeVarying()``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].isTimeVarying()``
 
 **Description**
 
@@ -274,7 +287,8 @@ Returns ``true`` if the parameter varies over time; ``false`` if not.
 ComponentParam.removeKey()
 *********************************************
 
-``componentParam.removeKey(time)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].removeKey(time)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].removeKey(time)``
 
 **Description**
 
@@ -295,7 +309,8 @@ Returns **0** if successful.
 ComponentParam.removeKeyRange()
 *********************************************
 
-``componentParam.removeKeyRange(startTime, endTime)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].removeKeyRange(startTime, endTime)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].removeKeyRange(startTime, endTime)``
 
 **Description**
 
@@ -316,7 +331,8 @@ Returns **0** if successful.
 ComponentParam.setColorValue()
 *********************************************
 
-``componentParam.setColorValue(intAlpha, intRed, intGreen, intBlue, boolUpdateUI)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setColorValue(intAlpha, intRed, intGreen, intBlue, boolUpdateUI)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setColorValue(intAlpha, intRed, intGreen, intBlue, boolUpdateUI)``
 
 **Description**
 
@@ -337,7 +353,8 @@ Returns **0** if successful.
 ComponentParam.setInterpolationTypeAtKey()
 *********************************************
 
-``componentParam.setInterpolationTypeAtKey(time, interpretationType)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType)``
 
 **Description**
 
@@ -373,7 +390,8 @@ Returns **0** if successful.
 ComponentParam.setTimeVarying()
 *********************************************
 
-``componentParam.setTimeVarying(boolVary)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setTimeVarying(boolVary)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setTimeVarying(boolVary)``
 
 **Description**
 
@@ -394,7 +412,8 @@ Returns **0** if successful.
 ComponentParam.setValue()
 *********************************************
 
-``componentParam.setValue(newValue, boolUpdateUI)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setValue(newValue, boolUpdateUI)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValue(newValue, boolUpdateUI)``
 
 **Description**
 
@@ -415,7 +434,8 @@ Returns **0** if successful.
 ComponentParam.setValueAtKey()
 *********************************************
 
-``componentParam.setValueAtKey(time, newValue, boolUpdateUI)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setValueAtKey(time, newValue, boolUpdateUI)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValueAtKey(time, newValue, boolUpdateUI)``
 
 **Description**
 

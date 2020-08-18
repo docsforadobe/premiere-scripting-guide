@@ -5,7 +5,8 @@
 Track Item object
 ===================
 
-``Track Item``
+|	``app.project.sequences[index].audioTracks[index].clips[index]``
+|	``app.project.sequences[index].videoTracks[index].clips[index]``
 
 **Description**
 
@@ -22,7 +23,8 @@ Attributes
 TrackItem.components
 *********************************************
 
-``trackItem.components``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components``
 
 **Description**
 
@@ -39,7 +41,8 @@ An Array of components; read-only.
 TrackItem.duration
 *********************************************
 
-``trackItem.duration``
+|	``app.project.sequences[index].audioTracks[index].clips[index].duration``
+|	``app.project.sequences[index].videoTracks[index].clips[index].duration``
 
 **Description**
 
@@ -56,7 +59,8 @@ Time object, read-only.
 TrackItem.end
 *********************************************
 
-``trackItem.end``
+|	``app.project.sequences[index].audioTracks[index].clips[index].end``
+|	``app.project.sequences[index].videoTracks[index].clips[index].end``
 
 **Description**
 
@@ -73,7 +77,8 @@ Time object, read/write.
 TrackItem.inPoint
 *********************************************
 
-``trackItem.inPoint``
+|	``app.project.sequences[index].audioTracks[index].clips[index].inPoint``
+|	``app.project.sequences[index].videoTracks[index].clips[index].inPoint``
 
 **Description**
 
@@ -90,7 +95,8 @@ Time object, read/write.
 TrackItem.mediaType
 *********************************************
 
-``trackItem.mediaType``
+|	``app.project.sequences[index].audioTracks[index].clips[index].mediaType``
+|	``app.project.sequences[index].videoTracks[index].clips[index].mediaType``
 
 **Description**
 
@@ -107,7 +113,8 @@ This will either be **"audio"** or **"video"**.
 TrackItem.name
 *********************************************
 
-``trackItem.name``
+|	``app.project.sequences[index].audioTracks[index].clips[index].name``
+|	``app.project.sequences[index].videoTracks[index].clips[index].name``
 
 **Description**
 
@@ -124,7 +131,8 @@ String; read/write.
 TrackItem.outPoint
 *********************************************
 
-``trackItem.outPoint``
+|	``app.project.sequences[index].audioTracks[index].clips[index].outPoint``
+|	``app.project.sequences[index].videoTracks[index].clips[index].outPoint``
 
 **Description**
 
@@ -141,7 +149,8 @@ Time object, read/write.
 TrackItem.projectItem
 *********************************************
 
-``trackItem.projectItem``
+|	``app.project.sequences[index].audioTracks[index].clips[index].projectItem``
+|	``app.project.sequences[index].videoTracks[index].clips[index].projectItem``
 
 **Description**
 
@@ -158,7 +167,8 @@ A :ref:`projectItem`.
 TrackItem.start
 *********************************************
 
-``trackItem.start``
+|	``app.project.sequences[index].audioTracks[index].clips[index].start``
+|	``app.project.sequences[index].videoTracks[index].clips[index].start``
 
 **Description**
 
@@ -175,7 +185,8 @@ Time object, read/write.
 TrackItem.type
 *********************************************
 
-``trackItem.type``
+|	``app.project.sequences[index].audioTracks[index].clips[index].type``
+|	``app.project.sequences[index].videoTracks[index].clips[index].type``
 
 **Description**
 
@@ -196,7 +207,8 @@ Methods
 TrackItem.getSpeed()
 *********************************************
 
-``trackItem.getSpeed()``
+|	``app.project.sequences[index].audioTracks[index].clips[index].getSpeed()``
+|	``app.project.sequences[index].videoTracks[index].clips[index].getSpeed()``
 
 **Description**
 
@@ -217,7 +229,8 @@ Returns the speed multiplier applied to the ``trackItem``, as a ``float``. No sp
 TrackItem.isAdjustmentLayer()
 *********************************************
 
-``trackItem.isAdjustmentLayer()``
+|	``app.project.sequences[index].audioTracks[index].clips[index].isAdjustmentLayer()``
+|	``app.project.sequences[index].videoTracks[index].clips[index].isAdjustmentLayer()``
 
 **Description**
 
@@ -238,7 +251,8 @@ Returns ``true`` if the trackitem is an adjustment layer; ``false`` if not.
 TrackItem.isReversed()
 *********************************************
 
-``trackItem.isReversed()``
+|	``app.project.sequences[index].audioTracks[index].clips[index].isReversed()``
+|	``app.project.sequences[index].videoTracks[index].clips[index].isReversed()``
 
 **Description**
 
@@ -259,7 +273,8 @@ Returns **1** if ``trackItem`` is reversed; **0** if not.
 TrackItem.isSelected()
 *********************************************
 
-``trackItem.isSelected()``
+|	``app.project.sequences[index].audioTracks[index].clips[index].isSelected()``
+|	``app.project.sequences[index].videoTracks[index].clips[index].isSelected()``
 
 **Description**
 
@@ -280,7 +295,8 @@ Returns ``true`` if trackItem is selected; ``false`` if not.
 TrackItem.setSelected()
 *********************************************
 
-``trackItem.setSelected(selectionState, updateUI)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].setSelected(selectionState, updateUI)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].setSelected(selectionState, updateUI)``
 
 **Description**
 

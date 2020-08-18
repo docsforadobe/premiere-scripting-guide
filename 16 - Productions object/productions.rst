@@ -5,7 +5,7 @@
 Production
 ==========
 
-``Production``
+``app.production``
 
 **Description**
 
@@ -22,7 +22,7 @@ Attributes
 Production.name
 *********************************************
 
-``Production.name``
+``app.production.name``
 
 **Description**
 
@@ -35,7 +35,7 @@ The name of the production.
 Production.path
 ****************
 
-``Production.path``
+``app.production.path``
 
 **Description**
 
@@ -48,7 +48,7 @@ The path to the Production folder.
 Production.projects
 ***************************
 
-``Production.projects``
+``app.production.projects``
 
 **Description**
 
@@ -65,7 +65,7 @@ Methods
 Production.addProject()
 *********************************************
 
-``app.production.addProject(srcProjectPath, destProjectPath);``
+``app.production.addProject(srcProjectPath, destProjectPath)``
 
 **Description**
 
@@ -86,7 +86,7 @@ Returns **true** if successful.
 Production.close()
 *********************************************
 
-``app.production.close();``
+``app.production.close()``
 
 **Description**
 
@@ -107,7 +107,7 @@ Returns **true** if successful.
 Production.getLocked()
 **************************
 
-``app.production.getLocked();``
+``app.production.getLocked()``
 
 **Description**
 
@@ -128,7 +128,7 @@ Returns **true** if the Production is locked, **false** if it is unlocked.
 Production.moveToTrash()
 *********************************************
 
-``app.production.moveToTrash(projectOrFolderPath, suppressUI, saveProject);``
+``app.production.moveToTrash(projectOrFolderPath, suppressUI, saveProject)``
 
 **Description**
 
@@ -149,7 +149,7 @@ Returns **true** if successful.
 Production.setLocked()
 *********************************************
 
-``app.production.setLocked(newLockState);``
+``app.production.setLocked(newLockState)``
 
 **Description**
 

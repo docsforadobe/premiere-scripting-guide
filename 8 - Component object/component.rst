@@ -5,7 +5,8 @@
 Component object
 ===================
 
-``Component``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index]``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index]``
 
 **Description**
 
@@ -22,7 +23,8 @@ Attributes
 Component.displayName
 *********************************************
 
-``component.displayName``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].displayName``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].displayName``
 
 **Description**
 
@@ -39,7 +41,8 @@ String; read-only.
 Component.matchName
 *********************************************
 
-``component.matchName``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].matchName``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].matchName``
 
 **Description**
 
@@ -56,7 +59,8 @@ String; read-only.
 Component.properties
 *********************************************
 
-``component.properties``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties``
 
 **Description**
 

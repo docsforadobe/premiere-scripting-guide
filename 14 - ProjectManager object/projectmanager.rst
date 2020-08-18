@@ -5,7 +5,7 @@
 ProjectManager object
 ==========================
 
-``ProjectManager``
+``app.projectManager.options``
 
 **Description**
 
@@ -22,7 +22,7 @@ Attributes
 ProjectManager.affectedSequences
 *********************************************
 
-``ProjectManager.affectedSequences``
+``app.projectManager.options.affectedSequences``
 
 **Description**
 
@@ -39,7 +39,7 @@ Array; read-write.
 ProjectManager.clipTranscoderOption
 *********************************************
 
-``ProjectManager.clipTranscoderOption``
+``app.projectManager.options.clipTranscoderOption``
 
 **Description**
 
@@ -64,7 +64,7 @@ String; read/write.
 ProjectManager.clipTransferOption
 *********************************************
 
-``ProjectManager.clipTransferOption``
+``app.projectManager.options.clipTransferOption``
 
 **Description**
 
@@ -83,7 +83,7 @@ The specified setting for clip transfer. Value will be one of the following:
 ProjectManager.convertAECompsToClips
 *********************************************
 
-``ProjectManager.convertAECompsToClips``
+``app.projectManager.options.convertAECompsToClips``
 
 **Description**
 
@@ -100,7 +100,7 @@ Boolean; read/write.
 ProjectManager.convertImageSequencesToClips
 *********************************************
 
-``ProjectManager.convertImageSequencesToClips``
+``app.projectManager.options.convertImageSequencesToClips``
 
 **Description**
 
@@ -117,7 +117,7 @@ Boolean; read/write.
 ProjectManager.convertSyntheticsToClips
 *********************************************
 
-``ProjectManager.convertSyntheticsToClips``
+``app.projectManager.options.convertSyntheticsToClips``
 
 **Description**
 
@@ -134,7 +134,7 @@ Boolean; read/write.
 ProjectManager.copyToPreventAlphaLoss
 *********************************************
 
-``ProjectManager.copyToPreventAlphaLoss``
+``app.projectManager.options.copyToPreventAlphaLoss``
 
 **Description**
 
@@ -151,7 +151,7 @@ Boolean; read/write.
 ProjectManager.destinationPath
 *********************************************
 
-``ProjectManager.destinationPath``
+``app.projectManager.options.destinationPath``
 
 **Description**
 
@@ -168,7 +168,7 @@ String; read/write.
 ProjectManager.encoderPresetFilePath
 *********************************************
 
-``ProjectManager.encoderPresetFilePath``
+``app.projectManager.options.encoderPresetFilePath``
 
 **Description**
 
@@ -185,7 +185,7 @@ String; read-write.
 ProjectManager.excludeUnused
 *********************************************
 
-``ProjectManager.excludeUnused``
+``app.projectManager.options.excludeUnused``
 
 **Description**
 
@@ -202,7 +202,7 @@ Boolean; read/write.
 ProjectManager.handleFrameCount
 *********************************************
 
-``ProjectManager.handleFrameCount``
+``app.projectManager.options.handleFrameCount``
 
 **Description**
 
@@ -219,7 +219,7 @@ Integer; read/write.
 ProjectManager.includeAllSequences
 *********************************************
 
-``ProjectManager.includeAllSequences``
+``app.projectManager.options.includeAllSequences``
 
 **Description**
 
@@ -236,7 +236,7 @@ Boolean; read/write.
 ProjectManager.includeConformedAudio
 *********************************************
 
-``ProjectManager.includeConformedAudio``
+``app.projectManager.options.includeConformedAudio``
 
 **Description**
 
@@ -253,7 +253,7 @@ Boolean; read/write.
 ProjectManager.includePreviews
 *********************************************
 
-``ProjectManager.includePreviews``
+``app.projectManager.options.includePreviews``
 
 **Description**
 
@@ -270,7 +270,7 @@ Boolean; read/write.
 ProjectManager.renameMedia
 *********************************************
 
-``ProjectManager.renameMedia``
+``app.projectManager.options.renameMedia``
 
 **Description**
 
@@ -279,28 +279,3 @@ If `true`, perform renaming as part of the export process.
 **Type**
 
 Boolean; read/write.
-
-----
-
-=======
-Methods
-=======
-
-.. _projectManager.closeClip:
-
-ProjectManager.closeClip()
-*********************************************
-
-``source.closeClip()``
-
-**Description**
-
-Closes the front-most clip in the :ref:`Source monitor <source>`.
-
-**Parameters**
-
-None.
-
-**Returns**
-
-Returns **0** if successful.

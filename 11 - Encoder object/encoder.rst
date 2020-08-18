@@ -5,7 +5,7 @@
 Encoder object
 ==========================
 
-``encoder``
+``app.encoder``
 
 **Description**
 
@@ -30,7 +30,7 @@ Methods
 Encoder.encodeFile()
 *********************************************
 
-``encoder.encodeFile(fileToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
+``app.encoder.encodeFile(fileToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
 
 **Description**
 
@@ -68,7 +68,7 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 Encoder.encodeProjectItem()
 *********************************************
 
-``encoder.encodeProjectItem(projectItem, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
+``app.encoder.encodeProjectItem(projectItem, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
 
 **Description**
 
@@ -102,7 +102,7 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 Encoder.encodeSequence()
 *********************************************
 
-``encoder.encodeSequence(sequenceToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
+``app.encoder.encodeSequence(sequenceToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
 
 **Description**
 
@@ -136,7 +136,7 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 Encoder.launchEncoder()
 *********************************************
 
-``encoder.launchEncoder()``
+``app.encoder.launchEncoder()``
 
 **Description**
 
@@ -157,7 +157,7 @@ Returns **0** if successful.
 Encoder.setEmbeddedXMPEnabled()
 *********************************************
 
-``encoder.setEmbeddedXMPEnabled(enabledOrNot)``
+``app.encoder.setEmbeddedXMPEnabled(enabledOrNot)``
 
 **Description**
 
@@ -180,7 +180,7 @@ Note: Premiere Pro and Adobe Media Encoder will output sidecar XMP for some file
 Encoder.setSidecarXMPEnabled()
 *********************************************
 
-``encoder.setSidecarXMPEnabled(enabledOrNot)``
+``app.encoder.setSidecarXMPEnabled(enabledOrNot)``
 
 **Description**
 
@@ -201,7 +201,7 @@ Returns **0** if successful.
 Encoder.startBatch()
 *********************************************
 
-``encoder.startBatch()``
+``app.encoder.startBatch()``
 
 **Description**
 

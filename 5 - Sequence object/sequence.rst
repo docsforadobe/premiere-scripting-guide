@@ -5,7 +5,7 @@
 Sequence object
 ===================
 
-``Sequence``
+``app.project.sequences[index]``
 
 **Description**
 
@@ -22,7 +22,7 @@ Attributes
 Sequence.audioTracks
 *********************************************
 
-``sequence.audioTracks``
+``app.project.sequences[index].audioTracks``
 
 **Description**
 
@@ -39,7 +39,7 @@ Array; read-only.
 Sequence.end
 *********************************************
 
-``sequence.end``
+``app.project.sequences[index].end``
 
 **Description**
 
@@ -56,7 +56,7 @@ Integer; read-only.
 Sequence.frameSizeHorizontal
 *********************************************
 
-``sequence.frameSizeHorizontal``
+``app.project.sequences[index].frameSizeHorizontal``
 
 **Description**
 
@@ -73,7 +73,7 @@ Integer; read-only.
 Sequence.frameSizeVertical
 *********************************************
 
-``sequence.frameSizeVertical``
+``app.project.sequences[index].frameSizeVertical``
 
 **Description**
 
@@ -90,7 +90,7 @@ Integer; read-only.
 Sequence.id
 *********************************************
 
-``sequence.id``
+``app.project.sequences[index].id``
 
 **Description**
 
@@ -107,7 +107,7 @@ Integer, read-only.
 Sequence.markers
 *********************************************
 
-``sequence.markers``
+``app.project.sequences[index].markers``
 
 **Description**
 
@@ -124,7 +124,7 @@ Array; read-only.
 Sequence.name
 *********************************************
 
-``sequence.name``
+``app.project.sequences[index].name``
 
 **Description**
 
@@ -141,7 +141,7 @@ String; read/write.
 Sequence.projectItem
 *********************************************
 
-``sequence.projectItem``
+``app.project.sequences[index].projectItem``
 
 **Description**
 
@@ -158,7 +158,7 @@ The :ref:`projectItem` associated with this sequence.
 Sequence.sequenceID
 *********************************************
 
-``sequence.sequenceID``
+``app.project.sequences[index].sequenceID``
 
 **Description**
 
@@ -175,7 +175,7 @@ String; read-only.
 Sequence.setZeroPoint
 *********************************************
 
-``sequence.setZeroPoint(newZeroPoint)``
+``app.project.sequences[index].setZeroPoint(newZeroPoint)``
 
 **Description**
 
@@ -200,7 +200,7 @@ Returns **0** if successful.
 Sequence.timebase
 *********************************************
 
-``sequence.timebase``
+``app.project.sequences[index].timebase``
 
 **Description**
 
@@ -217,7 +217,7 @@ Integer; read-only.
 Sequence.videoTracks
 *********************************************
 
-``sequence.videoTracks``
+``app.project.sequences[index].videoTracks``
 
 **Description**
 
@@ -234,7 +234,7 @@ Array; read-only.
 Sequence.zeroPoint
 *********************************************
 
-``sequence.zeroPoint``
+``app.project.sequences[index].zeroPoint``
 
 **Description**
 
@@ -255,7 +255,7 @@ Methods
 Sequence.autoReframeSequence()
 *******************************************************************************************************
 
-``sequence.autoReframeSequence(numerator, denominator, motionPreset, newName, useNestedSequences);``
+``app.project.sequences[index].autoReframeSequence(numerator, denominator, motionPreset, newName, useNestedSequences)``
 
 **Description**
 
@@ -286,7 +286,7 @@ Returns the new Sequence object, if successful; `0` if unsuccessful.
 Sequence.clone()
 *********************************************
 
-``sequence.clone()``
+``app.project.sequences[index].clone()``
 
 **Description**
 
@@ -307,7 +307,7 @@ Returns a :ref:`sequence` if successful, **0** if not.
 Sequence.createSubsequence()
 ***********************************************
 
-``sequence.createSubsequence(ignoreChannelMapping)``
+``app.project.sequences[index].createSubsequence(ignoreChannelMapping)``
 
 **Description**
 
@@ -328,7 +328,7 @@ Returns 0 if successful.
 Sequence.exportAsFinalCutProXML()
 *********************************************
 
-``sequence.exportAsFinalCutProXML(outputPath)``
+``app.project.sequences[index].exportAsFinalCutProXML(outputPath)``
 
 **Description**
 
@@ -349,7 +349,7 @@ Returns 0 if successful.
 Sequence.exportAsMediaDirect()
 *********************************************************
 
-``sequence.exportAsMediaDirect(outputPath, presetPath, workAreaType)``
+``app.project.sequences[index].exportAsMediaDirect(outputPath, presetPath, workAreaType)``
 
 **Description**
 
@@ -381,7 +381,7 @@ Returns 0 if successful.
 Sequence.exportAsProject()
 *********************************************
 
-``sequence.exportAsProject(outputPath)``
+``app.project.sequences[index].exportAsProject(outputPath)``
 
 **Description**
 
@@ -402,7 +402,7 @@ Returns 0 if successful.
 Sequence.getExportFileExtension()
 *********************************************
 
-``sequence.getExportFileExtension(outputPresetPath)``
+``app.project.sequences[index].getExportFileExtension(outputPresetPath)``
 
 **Description**
 
@@ -423,7 +423,7 @@ Returns a **String** containing the output file extension, or **0** if unsuccess
 Sequence.getInPoint()
 *********************************************
 
-``sequence.getInPoint()``
+``app.project.sequences[index].getInPoint()``
 
 **Description**
 
@@ -444,7 +444,7 @@ Returns a Real representing the in point, in seconds.
 Sequence.getInPointAsTime()
 *********************************************
 
-``sequence.getInPointAsTime()``
+``app.project.sequences[index].getInPointAsTime()``
 
 **Description**
 
@@ -465,7 +465,7 @@ Returns a Time representing the in point, in seconds.
 Sequence.getOutPoint()
 *********************************************
 
-``sequence.getOutPoint()``
+``app.project.sequences[index].getOutPoint()``
 
 **Description**
 
@@ -486,7 +486,7 @@ Returns a Real representing the out point, in seconds.
 Sequence.getOutPointAsTime()
 *********************************************
 
-``sequence.getOutPointAsTime()``
+``app.project.sequences[index].getOutPointAsTime()``
 
 **Description**
 
@@ -507,7 +507,7 @@ Returns a Time representing the out point, in seconds.
 Sequence.getPlayerPosition()
 *********************************************
 
-``sequence.getPlayerPosition()``
+``app.project.sequences[index].getPlayerPosition()``
 
 **Description**
 
@@ -528,7 +528,7 @@ Returns a Time object, representing the current player position.
 Sequence.getSettings()
 *********************************************
 
-``sequence.getSettings()``
+``app.project.sequences[index].getSettings()``
 
 **Description**
 
@@ -648,7 +648,7 @@ Returns a sequence settings structure.
 Sequence.isDoneAnalyzingForVideoEffects()
 *******************************************************************************************************
 
-``sequence.isDoneAnalyzingForVideoEffects();``
+``app.project.sequences[index].isDoneAnalyzingForVideoEffects()``
 
 **Description**
 
@@ -669,7 +669,7 @@ Returns ``true`` if analysis is complete.
 Sequence.performSceneEditDetectionOnSelection()
 *******************************************************************************************************
 
-``sequence.performSceneEditDetectionOnSelection(actionDesired, ApplyCutsToLinkedAudio, sensitivity);``
+``app.project.sequences[index].performSceneEditDetectionOnSelection(actionDesired, ApplyCutsToLinkedAudio, sensitivity)``
 
 **Description**
 
@@ -696,7 +696,7 @@ Returns `true` if successful.
 Sequence.setInPoint()
 *********************************************
 
-``sequence.setInPoint(newTimeInTicks)``
+``app.project.sequences[index].setInPoint(newTimeInTicks)``
 
 **Description**
 
@@ -717,7 +717,7 @@ Returns **0** if successful.
 Sequence.setOutPoint()
 *********************************************
 
-``sequence.setOutPoint(newTimeInTicks)``
+``app.project.sequences[index].setOutPoint(newTimeInTicks)``
 
 **Description**
 
@@ -738,7 +738,7 @@ Returns **0** if successful.
 Sequence.setPlayerPosition()
 *********************************************
 
-``sequence.setPlayerPosition(newTimeInTicks)``
+``app.project.sequences[index].setPlayerPosition(newTimeInTicks)``
 
 **Description**
 
@@ -759,7 +759,7 @@ Returns **0** if successful.
 Sequence.setSettings()
 *********************************************
 
-``sequence.setSettings(sequenceSettings)``
+``app.project.sequences[index].setSettings(sequenceSettings)``
 
 **Description**
 

@@ -5,7 +5,7 @@
 Project Item object
 ===================
 
-``projectItem``
+``app.project.rootItem.children[index]``
 
 **Description**
 
@@ -22,7 +22,7 @@ Attributes
 ProjectItem.children
 *********************************************
 
-``projectItem.children``
+``app.project.rootItem.children[index].children``
 
 **Description**
 
@@ -39,7 +39,7 @@ Array; read-only.
 ProjectItem.getAudioChannelMapping
 *********************************************
 
-``projectItem.getAudioChannelMapping``
+``app.project.rootItem.children[index].getAudioChannelMapping``
 
 **Description**
 
@@ -56,7 +56,7 @@ An audioChannelMapping object.
 ProjectItem.name
 *********************************************
 
-``projectItem.name``
+``app.project.rootItem.children[index].name``
 
 **Description**
 
@@ -73,7 +73,7 @@ String; read/write.
 ProjectItem.nodeId
 *********************************************
 
-``projectItem.nodeId``
+``app.project.rootItem.children[index].nodeId``
 
 **Description**
 
@@ -92,7 +92,7 @@ String; read-only.
 ProjectItem.teamProjectsAssetId
 *********************************************
 
-``projectItem.teamProjectsAssetId``
+``app.project.rootItem.children[index].teamProjectsAssetId``
 
 **Description**
 
@@ -109,7 +109,7 @@ String; read-only.
 ProjectItem.treePath
 *********************************************
 
-``projectItem.treePath``
+``app.project.rootItem.children[index].treePath``
 
 **Description**
 
@@ -128,7 +128,7 @@ String; read-only.
 ProjectItem.type
 *********************************************
 
-``projectItem.type``
+``app.project.rootItem.children[index].type``
 
 **Description**
 
@@ -145,7 +145,7 @@ Enumeration; read-only.
 ProjectItem.videoComponents
 *********************************************
 
-``projectItem.videoComponents``
+``app.project.rootItem.children[index].videoComponents``
 
 **Description**
 
@@ -166,7 +166,7 @@ Methods
 ProjectItem.attachProxy()
 *********************************************
 
-``projectItem.attachProxy(String newMediaPath, int isHiRes)``
+``app.project.rootItem.children[index].attachProxy(String newMediaPath, int isHiRes)``
 
 **Description**
 
@@ -187,7 +187,7 @@ Returns **0** if successful.
 ProjectItem.canChangeMediaPath()
 *********************************************
 
-``projectItem.canChangeMediaPath()``
+``app.project.rootItem.children[index].canChangeMediaPath()``
 
 **Description**
 
@@ -208,7 +208,7 @@ Boolean; **true** if media can be replaced, **false** if not.
 ProjectItem.canProxy()
 *********************************************
 
-``projectItem.canProxy()``
+``app.project.rootItem.children[index].canProxy()``
 
 **Description**
 
@@ -229,7 +229,7 @@ Returns **true** if the project item permits a proxy to be attached; **false** i
 ProjectItem.changeMediaPath()
 *********************************************
 
-``projectItem.changeMediaPath(String newPath)``
+``app.project.rootItem.children[index].changeMediaPath(String newPath)``
 
 **Description**
 
@@ -250,7 +250,7 @@ Returns **0** if replacement was successful.
 ProjectItem.clearOutPoint()
 *********************************************
 
-``projectItem.clearOutPoint()``
+``app.project.rootItem.children[index].clearOutPoint()``
 
 **Description**
 
@@ -271,7 +271,7 @@ Returns ``0`` if successful.
 ProjectItem.createBin()
 *********************************************
 
-``projectItem.createBin(String nameOfNewBin)``
+``app.project.rootItem.children[index].createBin(String nameOfNewBin)``
 
 **Description**
 
@@ -292,7 +292,7 @@ Returns **0** if creation of bin was successful.
 ProjectItem.createSmartBin()
 *********************************************
 
-``projectItem.createSmartBin(String nameOfNewBin, String queryString)``
+``app.project.rootItem.children[index].createSmartBin(String nameOfNewBin, String queryString)``
 
 **Description**
 
@@ -313,7 +313,7 @@ Returns **0** if creation if smart bin was successful.
 ProjectItem.createSubClip()
 *********************************************
 
-``projectItem.createSubClip(subclipName, startTime, endTime,hasHardBoundaries, takeAudio, takeVideo)``
+``app.project.rootItem.children[index].createSubClip(subclipName, startTime, endTime,hasHardBoundaries, takeAudio, takeVideo)``
 
 **Description**
 
@@ -346,7 +346,7 @@ Returns a project item representing the new subclip, or 0 if creation failed.
 ProjectItem.deleteBin()
 *********************************************
 
-``projectItem.deleteBin()``
+``app.project.rootItem.children[index].deleteBin()``
 
 **Description**
 
@@ -367,7 +367,7 @@ Returns **0** if deletion was successful.
 ProjectItem.findItemsMatchingMediaPath()
 *********************************************
 
-``projectItem.findItemsMatchingMediaPath(pathToMatch, ignoreSubClips)``
+``app.project.rootItem.children[index].findItemsMatchingMediaPath(pathToMatch, ignoreSubClips)``
 
 **Description**
 
@@ -392,7 +392,7 @@ Returns an array of project items, or **0** if no project items matching the ``m
 ProjectItem.getColorLabel()
 *********************************************
 
-``projectItem.getColorLabel()``
+``app.project.rootItem.children[index].getColorLabel()``
 
 **Description**
 
@@ -430,7 +430,7 @@ None.
 ProjectItem.getFootageInterpretation()
 *********************************************
 
-``projectItem.getFootageInterpretation()``
+``app.project.rootItem.children[index].getFootageInterpretation()``
 
 **Description**
 
@@ -488,7 +488,7 @@ A footage interpretation structure, or ``0`` if unsuccessful.
 ProjectItem.getInPoint()
 *********************************************
 
-``projectItem.getInPoint()``
+``app.project.rootItem.children[index].getInPoint()``
 
 **Description**
 
@@ -509,7 +509,7 @@ A ``Time`` object, containing the in point.
 ProjectItem.getMarkers()
 *********************************************
 
-``projectItem.getMarkers()``
+``app.project.rootItem.children[index].getMarkers()``
 
 **Description**
 
@@ -530,7 +530,7 @@ An array of :ref:`Marker <marker>` objects associated with the project item, or 
 ProjectItem.getMediaPath()
 *********************************************
 
-``projectItem.getMediaPath()``
+``app.project.rootItem.children[index].getMediaPath()``
 
 **Description**
 
@@ -551,7 +551,7 @@ A String containing the path to the media associate with the project item.
 ProjectItem.getOutPoint()
 *********************************************
 
-``projectItem.getOutPoint(mediaType)``
+``app.project.rootItem.children[index].getOutPoint(mediaType)``
 
 **Description**
 
@@ -572,7 +572,7 @@ Returns a ``Time`` object.
 ProjectItem.getProjectMetadata()
 *********************************************
 
-``projectItem.getProjectMetadata()``
+``app.project.rootItem.children[index].getProjectMetadata()``
 
 **Description**
 
@@ -593,7 +593,7 @@ A String containing all Premiere Pro private project metadata, serialized.
 ProjectItem.getProxyPath()
 *********************************************
 
-``projectItem.getProxyPath()``
+``app.project.rootItem.children[index].getProxyPath()``
 
 **Description**
 
@@ -614,7 +614,7 @@ Returns the path (as **String**) to the proxy media associated with the proxy it
 ProjectItem.getXMPMetadata()
 *********************************************
 
-``projectItem.getXMPMetadata()``
+``app.project.rootItem.children[index].getXMPMetadata()``
 
 **Description**
 
@@ -635,7 +635,7 @@ A String containing all XMP metadata, serialized.
 ProjectItem.hasProxy()
 *********************************************
 
-``projectItem.hasProxy()``
+``app.project.rootItem.children[index].hasProxy()``
 
 **Description**
 
@@ -656,7 +656,7 @@ Returns **true** if the project item has a proxy attached; **false** if not.
 ProjectItem.isMergedClip()
 *********************************************
 
-``projectItem.isMergedClip()``
+``app.project.rootItem.children[index].isMergedClip()``
 
 **Description**
 
@@ -677,7 +677,7 @@ Returns ``true`` if the project item is a merged clip, ``false`` if it isn't.
 ProjectItem.isMulticamClip()
 *********************************************
 
-``projectItem.isMulticamClip()``
+``app.project.rootItem.children[index].isMulticamClip()``
 
 **Description**
 
@@ -698,7 +698,7 @@ Returns ``true`` if the project item is a multicam clip, ``false`` if it isn't.
 ProjectItem.isOffline()
 *********************************************
 
-``projectItem.isOffline()``
+``app.project.rootItem.children[index].isOffline()``
 
 **Description**
 
@@ -719,7 +719,7 @@ Boolean, ``true`` if offline.
 ProjectItem.isSequence()
 *********************************************
 
-``projectItem.isSequence()``
+``app.project.rootItem.children[index].isSequence()``
 
 **Description**
 
@@ -740,7 +740,7 @@ Returns ``true`` if the project item is a :ref:`sequence`, or a multicam clip, o
 ProjectItem.moveBin()
 *********************************************
 
-``projectItem.moveBin(newParentBinProjectItem)``
+``app.project.rootItem.children[index].moveBin(newParentBinProjectItem)``
 
 **Description**
 
@@ -761,7 +761,7 @@ Returns **0** if move was successful.
 ProjectItem.refreshMedia()
 *********************************************
 
-``projectItem.refreshMedia()``
+``app.project.rootItem.children[index].refreshMedia()``
 
 **Description**
 
@@ -782,7 +782,7 @@ An array of markers associated with the project item, or **0** if there are no m
 ProjectItem.renameBin()
 *********************************************
 
-``projectItem.renameBin(newName)``
+``app.project.rootItem.children[index].renameBin(newName)``
 
 **Description**
 
@@ -803,7 +803,7 @@ Returns **0** if renaming bin was successful.
 ProjectItem.select()
 *********************************************
 
-``projectItem.select()``
+``app.project.rootItem.children[index].select()``
 
 **Description**
 
@@ -824,7 +824,7 @@ Returns **0** if the project item has successfully been made the target, for sub
 ProjectItem.setColorLabel()
 *********************************************
 
-``projectItem.setColorLabel(newLabelColor)``
+``app.project.rootItem.children[index].setColorLabel(newLabelColor)``
 
 **Description**
 
@@ -845,7 +845,7 @@ New label color; see projectItem.getColorLabel_.
 ProjectItem.setFootageInterpretation()
 *********************************************
 
-``projectItem.setFootageInterpretation(newInterpretation)``
+``app.project.rootItem.children[index].setFootageInterpretation(newInterpretation)``
 
 **Description**
 
@@ -866,7 +866,7 @@ A footage interpretation structure.
 ProjectItem.setInPoint()
 *********************************************
 
-``projectItem.setInPoint(timeInTicks, mediaType)``
+``app.project.rootItem.children[index].setInPoint(timeInTicks, mediaType)``
 
 **Description**
 
@@ -887,7 +887,7 @@ Returns ``0`` if successful.
 ProjectItem.setOffline()
 *********************************************
 
-``projectItem.setOffline()``
+``app.project.rootItem.children[index].setOffline()``
 
 **Description**
 
@@ -908,7 +908,7 @@ None.
 ProjectItem.setOutPoint()
 *********************************************
 
-``projectItem.setOutPoint(timeInTicks, mediaType)``
+``app.project.rootItem.children[index].setOutPoint(timeInTicks, mediaType)``
 
 **Description**
 
@@ -929,7 +929,7 @@ Returns ``0`` if successful.
 ProjectItem.setOverrideFrameRate()
 *********************************************
 
-``projectItem.setOverrideFrameRate(float newFrameRate)``
+``app.project.rootItem.children[index].setOverrideFrameRate(float newFrameRate)``
 
 **Description**
 
@@ -950,7 +950,7 @@ Returns **0** if the frame rate has successfully been changed.
 ProjectItem.setOverridePixelAspectRatio()
 *********************************************
 
-``projectItem.setOverridePixelAspectRatio(int numerator, int denominator)``
+``app.project.rootItem.children[index].setOverridePixelAspectRatio(int numerator, int denominator)``
 
 **Description**
 
@@ -971,7 +971,7 @@ Returns **0** if the aspect ratio has successfully been changed.
 ProjectItem.setProjectMetadata()
 *********************************************
 
-``projectItem.setProjectMetadata(String newPrivateProjectMetadata, arrayOfUpdatedFields)``
+``app.project.rootItem.children[index].setProjectMetadata(String newPrivateProjectMetadata, arrayOfUpdatedFields)``
 
 **Description**
 
@@ -992,7 +992,7 @@ Returns 0 if update was successful.
 ProjectItem.setScaleToFrameSize()
 *********************************************
 
-``projectItem.setScaleToFrameSize()``
+``app.project.rootItem.children[index].setScaleToFrameSize()``
 
 **Description**
 
@@ -1013,7 +1013,7 @@ Undefined return value.
 ProjectItem.setStartTime()
 *********************************************
 
-``projectItem.setStartTime(timeInTicks)``
+``app.project.rootItem.children[index].setStartTime(timeInTicks)``
 
 **Description**
 
@@ -1034,7 +1034,7 @@ Returns ``0`` if successful.
 ProjectItem.setXMPMetadata()
 *********************************************
 
-``projectItem.setXMPMetadata(newXMPAsString)``
+``app.project.rootItem.children[index].setXMPMetadata(newXMPAsString)``
 
 **Description**
 
@@ -1055,7 +1055,7 @@ Returns 0 if update was successful.
 ProjectItem.startTime()
 *********************************************
 
-``projectItem.startTime()``
+``app.project.rootItem.children[index].startTime()``
 
 **Description**
 

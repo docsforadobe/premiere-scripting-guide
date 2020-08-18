@@ -5,7 +5,7 @@
 Source object
 ==========================
 
-``Source``
+``app.sourceMonitor``
 
 **Description**
 
@@ -30,7 +30,7 @@ Methods
 Source.closeAllClips()
 *********************************************
 
-``source.closeAllClips()``
+``app.sourceMonitor.closeAllClips()``
 
 **Description**
 
@@ -51,7 +51,7 @@ Returns **0** if successful.
 Source.closeClip()
 *********************************************
 
-``source.closeClip()``
+``app.sourceMonitor.closeClip()``
 
 **Description**
 
@@ -72,7 +72,7 @@ Returns **0** if successful.
 Source.getPosition()
 *********************************************
 
-``source.getPosition()``
+``app.sourceMonitor.getPosition()``
 
 **Description**
 
@@ -93,7 +93,7 @@ Returns a ``Time`` object containing the position of the Source monitor's curren
 Source.openFilePath()
 *********************************************
 
-``source.openFilePath(absolutePathToFile)``
+``app.sourceMonitor.openFilePath(absolutePathToFile)``
 
 **Description**
 
@@ -114,7 +114,7 @@ Returns 0 if successful.
 Source.openProjectItem()
 *********************************************
 
-``source.openProjectItem(projectItem)``
+``app.sourceMonitor.openProjectItem(projectItem)``
 
 **Description**
 
@@ -135,7 +135,7 @@ Returns 0 if successful.
 Source.play()
 *********************************************
 
-``source.play(playbackSpeed)``
+``app.sourceMonitor.play(playbackSpeed)``
 
 **Description**
 

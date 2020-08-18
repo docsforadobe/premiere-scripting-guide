@@ -5,7 +5,7 @@
 Marker object
 ==========================
 
-``Marker``
+``app.project.activeSequence.getFirstMarker()``
 
 **Description**
 
@@ -22,7 +22,7 @@ Attributes
 Marker.comments
 *********************************************
 
-``marker.comments``
+``app.project.activeSequence.getFirstMarker().comments``
 
 **Description**
 
@@ -39,7 +39,7 @@ String; read/write.
 Marker.end
 *********************************************
 
-``marker.end``
+``app.project.activeSequence.getFirstMarker().end``
 
 **Description**
 
@@ -56,7 +56,7 @@ A **Time** object containing the value of the ending of the marker.
 Marker.guid
 *********************************************
 
-``marker.guid``
+``app.project.activeSequence.getFirstMarker().guid``
 
 **Description**
 
@@ -73,7 +73,7 @@ String; read-only.
 Marker.name
 *********************************************
 
-``marker.name``
+``app.project.activeSequence.getFirstMarker().name``
 
 **Description**
 
@@ -90,7 +90,7 @@ String; read/write.
 Marker.start
 *********************************************
 
-``marker.start``
+``app.project.activeSequence.getFirstMarker().start``
 
 **Description**
 
@@ -107,7 +107,7 @@ A **Time** object containing the value of the beginning of the marker.
 Marker.type
 *********************************************
 
-``marker.type``
+``app.project.activeSequence.getFirstMarker().type``
 
 **Description**
 
@@ -128,7 +128,7 @@ Methods
 Marker.getColorByIndex()
 *********************************************
 
-``marker.getColorByIndex(markerIndex)``
+``app.project.activeSequence.getFirstMarker().getColorByIndex(markerIndex)``
 
 **Description**
 
@@ -153,7 +153,7 @@ Returns the color index as an ``Integer``.
 Marker.getWebLinkFrameTarget()
 *********************************************
 
-``marker.getWebLinkFrameTarget()``
+``app.project.activeSequence.getFirstMarker().getWebLinkFrameTarget()``
 
 **Description**
 
@@ -174,7 +174,7 @@ Returns a ``String`` containing the frame target, or **0** if unsuccessful.
 Marker.getWebLinkURL()
 *********************************************
 
-``marker.getWebLinkURL()``
+``app.project.activeSequence.getFirstMarker().getWebLinkURL()``
 
 **Description**
 
@@ -195,7 +195,7 @@ Returns a ``String`` containing the URL, or **0** if unsuccessful.
 Marker.setColorByIndex()
 *********************************************
 
-``marker.setColorByIndex(colorIndex, markerIndex)``
+``app.project.activeSequence.getFirstMarker().setColorByIndex(colorIndex, markerIndex)``
 
 **Description**
 
@@ -231,7 +231,7 @@ Returns ``undefined``.
 Marker.setTypeAsChapter()
 *********************************************
 
-``marker.setTypeAsChapter()``
+``app.project.activeSequence.getFirstMarker().setTypeAsChapter()``
 
 **Description**
 
@@ -252,7 +252,7 @@ Returns **0** if successful.
 Marker.setTypeAsComment()
 *********************************************
 
-``marker.setTypeAsComment()``
+``app.project.activeSequence.getFirstMarker().setTypeAsComment()``
 
 **Description**
 
@@ -273,7 +273,7 @@ Returns **0** if successful.
 Marker.setTypeAsSegmentation()
 *********************************************
 
-``marker.setTypeAsSegmentation()``
+``app.project.activeSequence.getFirstMarker().setTypeAsSegmentation()``
 
 **Description**
 
@@ -294,7 +294,7 @@ Returns **0** if successful.
 Marker.setTypeAsWebLink()
 *********************************************
 
-``marker.setTypeAsWebLink()``
+``app.project.activeSequence.getFirstMarker().setTypeAsWebLink()``
 
 **Description**
 

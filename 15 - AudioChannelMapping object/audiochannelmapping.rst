@@ -5,7 +5,7 @@
 AudioChannelMapping
 ===================
 
-``AudioChannelMapping``
+``app.project.rootItem.children[index].getAudioChannelMapping()``
 
 **Description**
 
@@ -22,7 +22,7 @@ Attributes
 AudioChannelMapping.audioChannelsType
 *********************************************
 
-``AudioChannelMapping.audioChannelsType``
+``app.project.rootItem.children[index].getAudioChannelMapping().audioChannelsType``
 
 **Description**
 
@@ -35,7 +35,7 @@ The type of the audio contained in this channel. Will be 0, 1 or 2, correspondin
 AudioChannelMapping.audioClipsNumber
 *********************************************
 
-``AudioChannelMapping.audioClipsNumber``
+``app.project.rootItem.children[index].getAudioChannelMapping().audioClipsNumber``
 
 **Description**
 
@@ -52,7 +52,7 @@ Methods
 AudioChannelMapping.setMappingForChannel()
 *********************************************
 
-``mapping.setMappingForChannel(intChannelIndex, intSourceChannelIndex)``
+``app.project.rootItem.children[index].setMappingForChannel(intChannelIndex, intSourceChannelIndex)``
 
 **Description**
 

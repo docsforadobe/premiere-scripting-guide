@@ -5,7 +5,7 @@
 Project object
 ===================
 
-``project``
+``app.project``
 
 **Description**
 
@@ -22,7 +22,7 @@ Attributes
 Project.activeSequence
 *********************************************
 
-``project.activeSequence``
+``app.project.activeSequence``
 
 **Description**
 
@@ -39,7 +39,7 @@ a :ref:`sequence`, or ``0`` if no sequence is currently active.
 Project.documentID
 *********************************************
 
-``project.documentID``
+``app.project.documentID``
 
 **Description**
 
@@ -56,7 +56,7 @@ GUID; read-only.
 Project.name
 *********************************************
 
-``project.name``
+``app.project.name``
 
 **Description**
 
@@ -73,7 +73,7 @@ String; read-only.
 Project.path
 *********************************************
 
-``project.path``
+``app.project.path``
 
 **Description**
 
@@ -90,7 +90,7 @@ String; read-only.
 Project.rootItem
 *********************************************
 
-``project.rootItem``
+``app.project.rootItem``
 
 **Description**
 
@@ -107,7 +107,7 @@ A :ref:`projectItem`; this will always be of type ``ProjectItemType_BIN``.
 Project.sequences
 *********************************************
 
-``project.sequences``
+``app.project.sequences``
 
 **Description**
 
@@ -128,7 +128,7 @@ Methods
 Project.addPropertyToProjectMetadataSchema()
 *********************************************
 
-``project.addPropertyToProjectMetadataSchema(propertyName, propertyLabel, propertyType)``
+``app.project.addPropertyToProjectMetadataSchema(propertyName, propertyLabel, propertyType)``
 
 **Description**
 
@@ -159,7 +159,7 @@ Returns **true** if successful, **undefined** if unsuccessful.
 Project.closeDocument()
 *********************************************
 
-``project.closeDocument(saveFirst, promptIfDirty)``
+``app.project.closeDocument(saveFirst, promptIfDirty)``
 
 **Description**
 
@@ -180,7 +180,7 @@ Returns **0** if successful.
 Project.consolidateDuplicates()
 *********************************************
 
-``project.consolidateDuplicates()``
+``app.project.consolidateDuplicates()``
 
 **Description**
 
@@ -201,7 +201,7 @@ Returns  **0** if successful.
 Project.createNewSequence()
 *********************************************
 
-``project.createNewSequence(sequenceName, sequenceID)``
+``app.project.createNewSequence(sequenceName, sequenceID)``
 
 **Description**
 
@@ -224,7 +224,7 @@ Returns a :ref:`sequence` if creation was successful, or **0** if unsuccessful.
 Project.createNewSequenceFromClips()
 *****************************************************************************
 
-``project.createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin);``
+``app.project.createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin);``
 
 **Description**
 
@@ -251,7 +251,7 @@ Returns the newly-created :ref:`sequence` if successful; `0` if unsuccessful.
 Project.deleteSequence()
 *********************************************
 
-``project.deleteSequence(sequenceToDelete)``
+``app.project.deleteSequence(sequenceToDelete)``
 
 **Description**
 
@@ -272,7 +272,7 @@ Returns 0 if successful.
 Project.exportAAF()
 *********************************************
 
-``project.exportAAF(sequenceToExport, outputPath, mixdownVideo, explodeToMono, sampleRate, bitsPerSample, embedAudio, audioFileFormat, trimSources, handleFrames, presetPath, renderAudioEffects, includeClipCopies, preserveParentFolder)``
+``app.project.exportAAF(sequenceToExport, outputPath, mixdownVideo, explodeToMono, sampleRate, bitsPerSample, embedAudio, audioFileFormat, trimSources, handleFrames, presetPath, renderAudioEffects, includeClipCopies, preserveParentFolder)``
 
 **Description**
 
@@ -321,7 +321,7 @@ Returns **0** if successful.
 Project.exportFinalCutProXML()
 *********************************************
 
-``project.exportFinalCutProXML(outputPath, suppressUI)``
+``app.project.exportFinalCutProXML(outputPath, suppressUI)``
 
 **Description**
 
@@ -344,7 +344,7 @@ Returns 0 if successful.
 Project.exportOMF()
 *********************************************
 
-``project.exportOMF(sequence, outputPath, omfTitle, sampleRate, bitsPerSample, audioEncapsulated, audioFileFormat, trimAudioFiles, handleFrames, includePan)``
+``app.project.exportOMF(sequence, outputPath, omfTitle, sampleRate, bitsPerSample, audioEncapsulated, audioFileFormat, trimAudioFiles, handleFrames, includePan)``
 
 **Description**
 
@@ -385,7 +385,7 @@ Returns **0** if successful.
 Project.exportTimeline()
 *********************************************
 
-``project.exportTimeline(exportControllerName)``
+``app.project.exportTimeline(exportControllerName)``
 
 **Description**
 
@@ -406,7 +406,7 @@ Returns **0** if successful, or an error code if not.
 Project.getGraphicsWhiteLuminance()
 *****************************************************************************
 
-``project.getGraphicsWhiteLuminance();``
+``app.project.getGraphicsWhiteLuminance();``
 
 **Description**
 
@@ -427,7 +427,7 @@ Returns the currently selected graphics white value.
 Project.getInsertionBin()
 *********************************************
 
-``project.getInsertionBin()``
+``app.project.getInsertionBin()``
 
 **Description**
 
@@ -448,7 +448,7 @@ Returns a :ref:`projectItem` if successful, **0** if not.
 Project.getProjectPanelMetadata()
 *********************************************
 
-``project.getProjectPanelMetadata()``
+``app.project.getProjectPanelMetadata()``
 
 **Description**
 
@@ -469,7 +469,7 @@ Returns a **String** representing the current Project panel layout, or **0** if 
 Project.getSharedLocation()
 *********************************************
 
-``project.getSharedLocation()``
+``app.project.getSharedLocation()``
 
 **Description**
 
@@ -490,7 +490,7 @@ Returns a **String** containing the path.
 Project.getSupportedGraphicsWhiteLuminances()
 *****************************************************************************
 
-``project.getSupportedGraphicsWhiteLuminances();``
+``app.project.getSupportedGraphicsWhiteLuminances();``
 
 **Description**
 
@@ -511,7 +511,7 @@ Returns an array of graphics white settings supported by the project; Currently 
 Project.importAEComps()
 *********************************************
 
-``project.importAEComps(pathOfContainingProject, arrayOfCompNames, optionalTargetBin)``
+``app.project.importAEComps(pathOfContainingProject, arrayOfCompNames, optionalTargetBin)``
 
 **Description**
 
@@ -536,7 +536,7 @@ Returns **0** if successful.
 Project.importAllAEComps()
 *********************************************
 
-``project.importAllAEComps(pathOfContainingProject, optionalTargetBin)``
+``app.project.importAllAEComps(pathOfContainingProject, optionalTargetBin)``
 
 **Description**
 
@@ -559,7 +559,7 @@ Returns **0** if successful.
 Project.importFiles()
 *********************************************
 
-``project.importFiles(arrayOfFilePathsToImport, suppressUI, targetBin, importAsNumberedStills)``
+``app.project.importFiles(arrayOfFilePathsToImport, suppressUI, targetBin, importAsNumberedStills)``
 
 **Description**
 
@@ -580,7 +580,7 @@ Returns **true** if successful, **false** if not.
 Project.importSequences()
 *********************************************
 
-``project.importSequences(pathOfContainingProject, arrayOfSequenceIDs)``
+``app.project.importSequences(pathOfContainingProject, arrayOfSequenceIDs)``
 
 **Description**
 
@@ -601,7 +601,7 @@ Returns **0** if successful.
 Project.isSharedLocationCopyEnabled()
 *********************************************
 
-``project.isSharedLocationCopyEnabled()``
+``app.project.isSharedLocationCopyEnabled()``
 
 **Description**
 
@@ -622,7 +622,7 @@ Returns  **true** if copying is enabled; **false** if not.
 Project.newBarsAndTone()
 **************************************************
 
-``project.newBarsAndTone(width, height, timeBase, PARNum, PARDen, audioSampleRate, name);``
+``app.project.newBarsAndTone(width, height, timeBase, PARNum, PARDen, audioSampleRate, name);``
 
 **Description**
 
@@ -657,7 +657,7 @@ Returns a :ref:`projectItem` for the new bars and tone, or **0** if unsuccessful
 Project.newSequence()
 ***********************************************
 
-``project.newSequence(sequenceName, pathToSequencePreset)``
+``app.project.newSequence(sequenceName, pathToSequencePreset)``
 
 **Description**
 
@@ -682,7 +682,7 @@ Returns a :ref:`sequence`, or **0** if unsuccessful.
 Project.openSequence()
 *********************************************
 
-``project.openSequence(sequenceID)``
+``app.project.openSequence(sequenceID)``
 
 **Description**
 
@@ -703,7 +703,7 @@ Returns **true** if successful, **false** if not.
 Project.pauseGrowing()
 *********************************************
 
-``project.pauseGrowing(pausedOrNot)``
+``app.project.pauseGrowing(pausedOrNot)``
 
 **Description**
 
@@ -724,7 +724,7 @@ Returns **0** if successful.
 Project.save()
 *********************************************
 
-``project.save()``
+``app.project.save()``
 
 **Description**
 
@@ -745,7 +745,7 @@ Returns **0** if successful.
 Project.saveAs()
 *********************************************
 
-``project.saveAs(pathToNewProject)``
+``app.project.saveAs(pathToNewProject)``
 
 **Description**
 
@@ -766,7 +766,7 @@ Returns **0** if successful, or an error code if not.
 Project.setEnableTranscodeOnIngest()
 *****************************************************************************
 
-``project.setEnableTranscodeOnIngest(FirstAutoSaveFolder);``
+``app.project.setEnableTranscodeOnIngest(FirstAutoSaveFolder);``
 
 **Description**
 
@@ -787,7 +787,7 @@ Returns **true** if successful.
 Project.setGraphicsWhiteLuminance()
 *****************************************************************************
 
-``project.setGraphicsWhiteLuminance(newValue);``
+``app.project.setGraphicsWhiteLuminance(newValue);``
 
 **Description**
 
@@ -808,7 +808,7 @@ Returns true if successful.
 Project.setProjectPanelMetadata()
 *********************************************
 
-``project.setProjectPanelMetadata(updatedLayoutAsString)``
+``app.project.setProjectPanelMetadata(updatedLayoutAsString)``
 
 **Description**
 
@@ -829,7 +829,7 @@ Returns  **0** if unsuccessful.
 Project.setScratchDiskPath()
 *********************************************
 
-``project.setScratchDiskPath(newPath, whichScratchDiskPath)``
+``app.project.setScratchDiskPath(newPath, whichScratchDiskPath)``
 
 **Description**
 
