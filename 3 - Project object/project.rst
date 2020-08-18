@@ -221,7 +221,7 @@ Returns a **Sequence** object if creation was successful, or **0** if unsuccessf
 
 .. _project.createNewSequenceFromClips:
 
-createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin)
+createNewSequenceFromClips()
 *****************************************************************************
 
 ``project.createNewSequenceFromClips(sequenceName, arrayOfProjectItems, destinationBin);``
@@ -578,7 +578,7 @@ Returns  **true** if copying is enabled; **false** if not.
 
 .. _project.newBarsAndTone:
 
-newBarsAndTone(sequenceName, pathToSequencePreset)
+newBarsAndTone()
 **************************************************
 
 ``project.newBarsAndTone(width, height, timeBase, PARNum, PARDen, audioSampleRate, name);``
@@ -613,7 +613,7 @@ Returns a **projectItem** for the new bars and tone, or **0** if unsuccessful.
 
 .. _project.newSequence:
 
-newSequence(sequenceName, pathToSequencePreset)
+newSequence()
 ***********************************************
 
 ``project.newSequence(sequenceName, pathToSequencePreset)``
@@ -763,7 +763,7 @@ Returns **0** if successful, or an error code if not.
 
 .. _project.setEnableTranscodeOnIngest:
 
-setEnableTranscodeOnIngest(newBooleanValue)
+setEnableTranscodeOnIngest()
 *****************************************************************************
 
 ``project.setEnableTranscodeOnIngest(FirstAutoSaveFolder);``
@@ -784,7 +784,7 @@ Returns **true** if successful.
 
 .. _project.setGraphicsWhiteLuminance:
 
-setGraphicsWhiteLuminance(int newValue)
+setGraphicsWhiteLuminance()
 *****************************************************************************
 
 ``project.setGraphicsWhiteLuminance(newValue);``

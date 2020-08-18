@@ -191,7 +191,7 @@ Methods
 
 .. _trackItem.getSpeed:
 
-getSpeed
+getSpeed()
 *********************************************
 
 ``trackItem.getSpeed()``
@@ -212,7 +212,7 @@ Returns the speed multiplier applied to the ``trackItem``, as a ``float``. No sp
 
 .. _trackItem.isAdjustmentLayer:
 
-isAdjustmentLayer
+isAdjustmentLayer()
 *********************************************
 
 ``trackItem.isAdjustmentLayer()``
@@ -233,7 +233,7 @@ Returns ``true`` if the trackitem is an adjustment layer; ``false`` if not.
 
 .. _trackItem.isReversed:
 
-isReversed
+isReversed()
 *********************************************
 
 ``trackItem.isReversed()``
@@ -254,7 +254,7 @@ Returns **1** if ``trackItem`` is reversed; **0** if not.
 
 .. _trackItem.isSelected:
 
-isSelected
+isSelected()
 *********************************************
 
 ``trackItem.isSelected()``
@@ -275,7 +275,7 @@ Returns ``true`` if trackItem is selected; ``false`` if not.
 
 .. _trackItem.setSelected:
 
-setSelected
+setSelected()
 *********************************************
 
 ``trackItem.setSelected(selectionState, updateUI)``

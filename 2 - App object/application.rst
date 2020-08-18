@@ -272,7 +272,7 @@ Returns 1 if proxies are enabled, 0 of they are not.
 
 .. _app.getWorkspaces:
 
-getWorkspaces
+getWorkspaces()
 *********************************************
 
 ``app.getWorkspaces()``
@@ -293,7 +293,7 @@ Returns an Array of workspaces if successful, `null` if unsuccessful.
 
 .. _app.isDocument:
 
-isDocument(path)
+isDocument()
 *********************************************
 
 ``app.isDocument(path)``
@@ -335,7 +335,7 @@ Returns **true** if at least 1 project is open; otherwise **false**.
 
 .. _app.newProject:
 
-newProject(projPath)
+newProject()
 *********************************************
 
 ``app.newProject(projPath)``
@@ -389,7 +389,7 @@ Returns **true** if file was successfully opened.
 
 .. _app.openFCPXML:
 
-openFCPXML(path, projPath)
+openFCPXML()
 *********************************************
 
 ``app.openFCPXML(path, projPath)``
@@ -431,7 +431,7 @@ Nothing.
 
 .. _app.setEnableProxies:
 
-setEnableProxies(enabled)
+setEnableProxies()
 *********************************************
 
 ``app.setEnableProxies(enabled)``
@@ -530,7 +530,7 @@ Returns 'true' if successful.
 
 .. _app.setWorkspace:
 
-setWorkspace
+setWorkspace()
 *********************************************
 
 ``app.setWorkspace(indexOfWorkspace)``

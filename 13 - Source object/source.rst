@@ -27,7 +27,7 @@ Methods
 
 .. _source.closeAllClips:
 
-closeAllClips
+closeAllClips()
 *********************************************
 
 ``source.closeAllClips()``
@@ -48,7 +48,7 @@ Returns **0** if successful.
 
 .. _source.closeClip:
 
-closeClip
+closeClip()
 *********************************************
 
 ``source.closeClip()``
@@ -69,7 +69,7 @@ Returns **0** if successful.
 
 .. _source.getPosition:
 
-getPosition
+getPosition()
 *********************************************
 
 ``source.getPosition()``
@@ -90,7 +90,7 @@ Returns a ``Time`` object containing the position of the Source monitor's curren
 
 .. _source.openFilePath:
 
-openFilePath
+openFilePath()
 *********************************************
 
 ``source.openFilePath(absolutePathToFile)``
@@ -111,7 +111,7 @@ Returns 0 if successful.
 
 .. _source.openProjectItem:
 
-openProjectItem
+openProjectItem()
 *********************************************
 
 ``source.openProjectItem(projectItem)``
@@ -132,7 +132,7 @@ Returns 0 if successful.
 
 .. _source.play:
 
-play
+play()
 *********************************************
 
 ``source.play(playbackSpeed)``

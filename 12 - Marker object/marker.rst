@@ -125,7 +125,7 @@ Methods
 
 .. _marker.getColorByIndex:
 
-getColorByIndex
+getColorByIndex()
 *********************************************
 
 ``marker.getColorByIndex(markerIndex)``
@@ -150,7 +150,7 @@ Returns the color index as an ``Integer``.
 
 .. _marker.getWebLinkFrameTarget:
 
-getWebLinkFrameTarget
+getWebLinkFrameTarget()
 *********************************************
 
 ``marker.getWebLinkFrameTarget()``
@@ -171,7 +171,7 @@ Returns a ``String`` containing the frame target, or **0** if unsuccessful.
 
 .. _marker.getWebLinkURL:
 
-getWebLinkURL
+getWebLinkURL()
 *********************************************
 
 ``marker.getWebLinkURL()``
@@ -192,7 +192,7 @@ Returns a ``String`` containing the URL, or **0** if unsuccessful.
 
 .. _marker.setColorByIndex:
 
-setColorByIndex
+setColorByIndex()
 *********************************************
 
 ``marker.setColorByIndex(colorIndex, markerIndex)``
@@ -228,7 +228,7 @@ Returns ``undefined``.
 
 .. _marker.setTypeAsChapter:
 
-setTypeAsChapter
+setTypeAsChapter()
 *********************************************
 
 ``marker.setTypeAsChapter()``
@@ -249,7 +249,7 @@ Returns **0** if successful.
 
 .. _marker.setTypeAsComment:
 
-setTypeAsComment
+setTypeAsComment()
 *********************************************
 
 ``marker.setTypeAsComment()``
@@ -270,7 +270,7 @@ Returns **0** if successful.
 
 .. _marker.setTypeAsSegmentation:
 
-setTypeAsSegmentation
+setTypeAsSegmentation()
 *********************************************
 
 ``marker.setTypeAsSegmentation()``
@@ -291,7 +291,7 @@ Returns **0** if successful.
 
 .. _marker.setTypeAsWebLink:
 
-setTypeAsWebLink
+setTypeAsWebLink()
 *********************************************
 
 ``marker.setTypeAsWebLink()``

@@ -27,7 +27,7 @@ Methods
 
 .. _anywhere.getAuthenticationToken:
 
-getAuthenticationToken
+getAuthenticationToken()
 *********************************************
 
 ``anywhere.getAuthenticationToken()``
@@ -48,7 +48,7 @@ A **String** containing the login token, or **0** if unsuccessful.
 
 .. _anywhere.getCurrentEditingSessionActiveSequenceURL:
 
-getCurrentEditingSessionActiveSequenceURL
+getCurrentEditingSessionActiveSequenceURL()
 *********************************************
 
 ``anywhere.getCurrentEditingSessionActiveSequenceURL()``
@@ -69,7 +69,7 @@ Returns a **String** containing the asset's URL, or **0** if unsuccessful (inclu
 
 .. _anywhere.getCurrentEditingSessionSelectionURL:
 
-getCurrentEditingSessionSelectionURL
+getCurrentEditingSessionSelectionURL()
 *********************************************
 
 ``anywhere.getCurrentEditingSessionSelectionURL()``
@@ -90,7 +90,7 @@ Returns a **String** containing the asset's URL, or **0** if unsuccessful (inclu
 
 .. _anywhere.getCurrentEditingSessionURL:
 
-getCurrentEditingSessionURL
+getCurrentEditingSessionURL()
 *********************************************
 
 ``anywhere.getCurrentEditingSessionURL()``
@@ -111,7 +111,7 @@ Returns a **String** containing the production's URL, or **0** if unsuccessful.
 
 .. _anywhere.isProductionOpen:
 
-isProductionOpen
+isProductionOpen()
 *********************************************
 
 ``anywhere.isProductionOpen()``
@@ -132,7 +132,7 @@ Returns ``true`` if a production is open; ``false`` if not.
 
 .. _anywhere.listProductions:
 
-listProductions
+listProductions()
 *********************************************
 
 ``anywhere.listProductions()``
@@ -151,7 +151,7 @@ Returns an Array of **Strings** containing the names of avialable productions, o
 
 .. _anywhere.openProduction:
 
-openProduction
+openProduction()
 *********************************************
 
 ``anywhere.openProduction(productionURL)``
@@ -172,7 +172,7 @@ Returns **0** if successful.
 
 .. _anywhere.setAuthenticationToken:
 
-setAuthenticationToken
+setAuthenticationToken()
 *********************************************
 
 ``anywhere.setAuthenticationToken(token, emailAddress)``

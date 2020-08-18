@@ -288,7 +288,7 @@ Methods
 
 .. _ProjectManager.closeClip:
 
-closeClip
+closeClip()
 *********************************************
 
 ``source.closeClip()``

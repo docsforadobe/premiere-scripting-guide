@@ -49,7 +49,7 @@ Methods
 
 .. _AudioChannelMapping.setMappingForChannel:
 
-setMappingForChannel
+setMappingForChannel()
 *********************************************
 
 ``mapping.setMappingForChannel(intChannelIndex, intSourceChannelIndex)``

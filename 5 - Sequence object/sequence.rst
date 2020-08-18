@@ -325,7 +325,7 @@ Returns 0 if successful.
 
 .. _sequence.exportAsFinalCutProXML:
 
-exportAsFinalCutProXML(outputPath)
+exportAsFinalCutProXML()
 *********************************************
 
 ``sequence.exportAsFinalCutProXML(outputPath)``
@@ -346,7 +346,7 @@ Returns 0 if successful.
 
 .. _sequence.exportAsMediaDirect:
 
-exportAsMediaDirect(outputPath, presetPath, workAreaType)
+exportAsMediaDirect()
 *********************************************************
 
 ``sequence.exportAsMediaDirect(outputPath, presetPath, workAreaType)``
@@ -378,7 +378,7 @@ Returns 0 if successful.
 
 .. _sequence.exportAsProject:
 
-exportAsProject(outputPath)
+exportAsProject()
 *********************************************
 
 ``sequence.exportAsProject(outputPath)``
@@ -693,10 +693,10 @@ Returns `true` if successful.
 
 .. _sequence.setInPoint:
 
-setInPoint(newTimeInTicks)
+setInPoint()
 *********************************************
 
-``sequence.setInPoint()``
+``sequence.setInPoint(newTimeInTicks)``
 
 **Description**
 
@@ -714,10 +714,10 @@ Returns **0** if successful.
 
 .. _sequence.setOutPoint:
 
-setOutPoint(newTimeInTicks)
+setOutPoint()
 *********************************************
 
-``sequence.setOutPoint()``
+``sequence.setOutPoint(newTimeInTicks)``
 
 **Description**
 
@@ -735,10 +735,10 @@ Returns **0** if successful.
 
 .. _sequence.setPlayerPosition:
 
-setPlayerPosition(newTimeInTicks)
+setPlayerPosition()
 *********************************************
 
-``sequence.setPlayerPosition()``
+``sequence.setPlayerPosition(newTimeInTicks)``
 
 **Description**
 

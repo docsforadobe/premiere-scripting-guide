@@ -62,7 +62,7 @@ Methods
 
 .. _Production.addProject:
 
-addProject
+addProject()
 *********************************************
 
 ``app.production.addProject(srcProjectPath, destProjectPath);``
@@ -83,7 +83,7 @@ Returns **true** if successful.
 
 .. _Production.close:
 
-close
+close()
 *********************************************
 
 ``app.production.close();``
@@ -104,8 +104,8 @@ Returns **true** if successful.
 
 .. _Production.getLocked:
 
-getLocked
-*********
+getLocked()
+******************
 
 ``app.production.getLocked();``
 
@@ -125,7 +125,7 @@ Returns **true** if the Production is locked, **false** if it is unlocked.
 
 .. _Production.moveToTrash:
 
-moveToTrash
+moveToTrash()
 *********************************************
 
 ``app.production.moveToTrash(projectOrFolderPath, suppressUI, saveProject);``
@@ -146,7 +146,7 @@ Returns **true** if successful.
 
 .. _Production.setLocked:
 
-setLocked
+setLocked()
 *********************************************
 
 ``app.production.setLocked(newLockState);``
