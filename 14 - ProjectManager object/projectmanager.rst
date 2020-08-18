@@ -30,7 +30,7 @@ An `Array` of :ref:`Sequence <sequence>` objects, to be exported.
 
 **Type**
 
-Array; read-write.
+Array; read/write.
 
 ----
 
