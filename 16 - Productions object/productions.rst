@@ -28,6 +28,10 @@ Production.name
 
 The name of the production.
 
+**Type**
+
+String.
+
 ----
 
 .. _production.path:
@@ -39,7 +43,11 @@ Production.path
 
 **Description**
 
-The path to the Production folder. 
+The path to the Production folder.
+
+**Type**
+
+String.
 
 ----
 
@@ -54,6 +62,9 @@ Production.projects
 
 An array of the projects containined within the Production, which are currently open. Does not include non-open projects.
 
+**Type**
+
+(ProjectCollection object).
 ----
 
 =======

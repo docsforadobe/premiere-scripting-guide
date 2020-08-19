@@ -77,6 +77,56 @@ Provides access to Adobe Media Encoder (on the same system).
 
 ----
 
+.. _app.getAppPrefPath:
+
+app.getAppPrefPath
+*********************************************
+
+``app.getAppPrefPath``
+
+**Description**
+
+The path containing the currently active "Adobe Premiere Pro Prefs" file.
+
+**Type**
+
+String; read-only.
+
+**Example**
+
+Get a path to a currently active preference file
+
+.. code:: javascript
+
+	app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
+
+----
+
+.. _app.getAppSystemPrefPath:
+
+app.getAppSystemPrefPath
+*********************************************
+
+``app.getAppSystemPrefPath``
+
+**Description**
+
+Premiere Pro's active configuration files, not specific to a given user.
+
+**Type**
+
+String; read-only.
+
+**Example**
+
+Get a path to a currently active configuration folder
+
+.. code:: javascript
+
+	app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
+
+----
+
 .. _app.getPProPrefPath:
 
 app.getPProPrefPath
@@ -127,6 +177,98 @@ Get a path to a currently active configuration folder
 
 ----
 
+.. _app.learnPanelContentDirPath:
+
+app.learnPanelContentDirPath
+*********************************************
+
+``app.learnPanelContentDirPath``
+
+**Description**
+
+Get the Learn panel's contents directory path.
+
+**Type**
+
+String; read-only.
+
+**Example**
+
+Get a path to a Learn panel's directory
+
+.. code:: javascript
+
+	app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/
+
+----
+
+.. _app.learnPanelExampleProjectDirPath:
+
+app.learnPanelExampleProjectDirPath
+*********************************************
+
+``app.learnPanelExampleProjectDirPath``
+
+**Description**
+
+Get the Learn panel's example projects directory path.
+
+**Type**
+
+String; read-only.
+
+**Example**
+
+Get a path to a Learn panel's example projects' directory
+
+.. code:: javascript
+
+	app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/
+
+----
+
+.. _app.metadata:
+
+app.metadata
+*********************************************
+
+``app.metadata``
+
+**Description**
+
+Get applications Metadata object.
+
+**Type**
+
+Metadata object; read-only.
+
+----
+
+.. _app.path:
+
+app.path
+*********************************************
+
+``app.path``
+
+**Description**
+
+Get a path to applications executable file.
+
+**Type**
+
+String; read-only.
+
+**Example**
+
+Get a path to applications executable file.
+
+.. code:: javascript
+
+	app.path; // /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
+
+----
+
 .. _app.project:
 
 app.project
@@ -174,7 +316,7 @@ An array referencing all open projects; `numProjects` contains size.
 
 **Type**
 
-Array of :ref:`Project <project>` objects.
+Array of :ref:`Project <project>` objects; (ProjectCollection object).
 
 ----
 
@@ -191,7 +333,7 @@ The properties object provides methods to access and modify preference values.
 
 **Type**
 
-properties object; read-only.
+properties object; read-only; (Properties object).
 
 ----
 
@@ -263,7 +405,7 @@ Methods
 app.enableQE()
 *********************************************
 
-|  ``app.enableQE()``
+``app.enableQE()``
 
 **Description**
 

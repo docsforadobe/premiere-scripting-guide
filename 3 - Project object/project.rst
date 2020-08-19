@@ -34,6 +34,23 @@ a :ref:`sequence`, or ``0`` if no sequence is currently active.
 
 ----
 
+.. _project.cloudProjectlocalID:
+
+Project.cloudProjectlocalID
+*********************************************
+
+``app.project.cloudProjectlocalID``
+
+**Description**
+
+The ID of cloud project.
+
+**Type**
+
+String; read/only.
+
+----
+
 .. _project.documentID:
 
 Project.documentID
@@ -48,6 +65,23 @@ A unique identifier for this project, in format of ``xxxxxxxx-xxxx-xxxx-xxxx-xxx
 **Type**
 
 String; read-only.
+
+----
+
+.. _project.isCloudProject:
+
+Project.isCloudProject
+*********************************************
+
+``app.project.isCloudProject``
+
+**Description**
+
+Check whether the project is cloud project.
+
+**Type**
+
+Boolean; read-only.
 
 ----
 
@@ -123,7 +157,7 @@ The sequences within the project.
 
 **Type**
 
-An array of :ref:`Sequence <sequence>` objects.
+An array of :ref:`Sequence <sequence>` objects; (SequenceCollection object).
 
 ----
 

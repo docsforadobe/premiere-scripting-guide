@@ -32,7 +32,7 @@ The components associated with this trackItem. This can include intrinsic transf
 
 **Type**
 
-An Array of components; read-only.
+An Array of components; read-only; (ComponentCollection object).
 
 ----
 
@@ -90,6 +90,24 @@ The in point for media, in this trackItem.
 
 ----
 
+.. _trackItem.matchName:
+
+TrackItem.matchName
+*********************************************
+
+|	``app.project.sequences[index].audioTracks[index].clips[index].matchName``
+|	``app.project.sequences[index].videoTracks[index].clips[index].matchName``
+
+**Description**
+
+*Add a description*
+
+**Type**
+
+String; read-only.
+
+----
+
 .. _trackItem.mediaType:
 
 TrackItem.mediaType
@@ -104,7 +122,7 @@ The mediaType of media provided by this trackItem.
 
 **Type**
 
-This will either be **"audio"** or **"video"**.
+String, either **Audio** or **Video**.
 
 ----
 
@@ -123,6 +141,24 @@ The name of the track item.
 **Type**
 
 String; read/write.
+
+----
+
+.. _trackItem.nodeId:
+
+TrackItem.nodeId
+*********************************************
+
+|	``app.project.sequences[index].audioTracks[index].clips[index].nodeId``
+|	``app.project.sequences[index].videoTracks[index].clips[index].nodeId``
+
+**Description**
+
+*Add a description*
+
+**Type**
+
+String.
 
 ----
 
@@ -194,7 +230,7 @@ The type of media provided by this trackItem.
 
 **Type**
 
-**1** means video, **2** means audio.
+Number, **1** means video, **2** means audio.
 
 ----
 

@@ -30,7 +30,7 @@ An array of project items, contained within the specified project item.
 
 **Type**
 
-Array; read-only.
+Array; read-only; (ProjectItemCollection object).
 
 ----
 
@@ -48,6 +48,44 @@ The audio channel mapping currently applied to this **projectItem**.
 **Type**
 
 An audioChannelMapping object.
+
+----
+
+.. _projectItem.getOverrideColorSpaceList:
+
+ProjectItem.getOverrideColorSpaceList
+*********************************************
+
+``app.project.rootItem.children[index].getOverrideColorSpaceList``
+
+**Description**
+
+*Add a description*
+
+Returns an object, containing similar data
+
+.. code:: javascript
+
+	{
+		value: [
+			sRGB,
+			BT.601 (NTSC),
+			BT.601 (PAL),
+			BT.709,
+			BT.709 (Scene),
+			BT.2020,
+			BT.2020 (Scene),
+			BT.2100 PQ,
+			BT.2100 PQ (Scene),
+			BT.2100 HLG,
+			BT.2100 HLG (Scene),
+			DCDM XYZ,
+		]
+	};
+
+**Type**
+
+Javascript Object.
 
 ----
 
@@ -136,24 +174,7 @@ Will be **CLIP**, **BIN**, **ROOT**, or **FILE**.
 
 **Type**
 
-Enumeration; read-only.
-
-----
-
-.. _projectItem.videoComponents:
-
-ProjectItem.videoComponents
-*********************************************
-
-``app.project.rootItem.children[index].videoComponents``
-
-**Description**
-
-Video components for the 'Master Clip' of this project item.
-
-**Type**
-
-This array is read-only; the components are not.
+Enumerated value; read-only.
 
 ----
 
@@ -1070,3 +1091,20 @@ None.
 **Returns**
 
 :ref:`time`.
+
+----
+
+.. _projectItem.videoComponents:
+
+ProjectItem.videoComponents()
+*********************************************
+
+``app.project.rootItem.children[index].videoComponents()``
+
+**Description**
+
+Video components for the 'Master Clip' of this project item.
+
+**Type**
+
+This array is read-only; the components are not.

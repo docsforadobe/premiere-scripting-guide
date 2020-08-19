@@ -17,6 +17,23 @@ The **Sequence** object represents sequences of media (a.k.a. "timelines"), in P
 Attributes
 ==========
 
+.. _sequence.audioDisplayFormat:
+
+Sequence.audioDisplayFormat
+*********************************************
+
+``app.project.sequences[index].audioDisplayFormat``
+
+**Description**
+
+*Add a description*
+
+**Type**
+
+Number.
+
+----
+
 .. _sequence.audioTracks:
 
 Sequence.audioTracks
@@ -30,7 +47,7 @@ An array of audio tracks, within the sequence.
 
 **Type**
 
-Array; read-only.
+Array; read-only; (TrackCollection object).
 
 ----
 
@@ -115,7 +132,7 @@ The :ref:`Marker <marker>` objects associated with this sequence.
 
 **Type**
 
-Array; read-only.
+Array; read-only; (MarkerCollection object).
 
 ----
 
@@ -162,7 +179,7 @@ Sequence.sequenceID
 
 **Description**
 
-The unique identifier assigned to this sequence, at the time of its creation.
+The unique identifier assigned to this sequence, at the time of its creation, in form of ``xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx``.
 
 **Type**
 
@@ -187,6 +204,23 @@ String; read-only.
 
 ----
 
+.. _sequence.videoDisplayFormat:
+
+Sequence.videoDisplayFormat
+*********************************************
+
+``app.project.sequences[index].videoDisplayFormat``
+
+**Description**
+
+*Add a description*
+
+**Type**
+
+Number.
+
+----
+
 .. _sequence.videoTracks:
 
 Sequence.videoTracks
@@ -200,7 +234,7 @@ An array of video tracks, within the sequence.
 
 **Type**
 
-Array; read-only.
+Array; read-only; (TrackCollection object).
 
 ----
 

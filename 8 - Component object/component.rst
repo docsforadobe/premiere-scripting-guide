@@ -68,4 +68,4 @@ The properties of the component in question; typically, these are effect paramet
 
 **Type**
 
-Array of components, read-only.
+Array of components, read-only; (ComponentParamCollection object).
