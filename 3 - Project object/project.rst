@@ -157,7 +157,7 @@ The sequences within the project.
 
 **Type**
 
-An array of :ref:`Sequence <sequence>` objects; (SequenceCollection object).
+:ref:`sequenceCollection`, read-only.
 
 ----
 

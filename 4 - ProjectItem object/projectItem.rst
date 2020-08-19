@@ -30,7 +30,7 @@ An array of project items, contained within the specified project item.
 
 **Type**
 
-Array; read-only; (ProjectItemCollection object).
+:ref:`projectItemCollection`, read-only.
 
 ----
 
@@ -544,7 +544,7 @@ None.
 
 **Returns**
 
-An array of :ref:`Marker <marker>` objects associated with the project item, or **0** if there are no markers.
+:ref:`markerCollection`, read-only;
 
 ----
 
@@ -1107,4 +1107,4 @@ Video components for the 'Master Clip' of this project item.
 
 **Type**
 
-This array is read-only; the components are not.
+:ref:`componentCollection`, read-only.

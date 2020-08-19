@@ -47,7 +47,7 @@ An array of audio tracks, within the sequence.
 
 **Type**
 
-Array; read-only; (TrackCollection object).
+:ref:`trackCollection`, read-only;
 
 ----
 
@@ -132,7 +132,7 @@ The :ref:`Marker <marker>` objects associated with this sequence.
 
 **Type**
 
-Array; read-only; (MarkerCollection object).
+:ref:`markerCollection`, read-only;
 
 ----
 
@@ -234,7 +234,7 @@ An array of video tracks, within the sequence.
 
 **Type**
 
-Array; read-only; (TrackCollection object).
+:ref:`trackCollection`, read-only;
 
 ----
 

@@ -316,7 +316,7 @@ An array referencing all open projects; `numProjects` contains size.
 
 **Type**
 
-Array of :ref:`Project <project>` objects; (ProjectCollection object).
+:ref:`projectCollection`, read-only.
 
 ----
 

@@ -106,3 +106,16 @@ Welcome to the Premiere Pro Scripting Guide!
     :caption: Time object
 
     17 - Time object/time
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Collections
+
+    18 - Collection/collection
+    18 - Collection/componentcollection
+    18 - Collection/markercollection
+    18 - Collection/projectcollection
+    18 - Collection/projectitemcollection
+    18 - Collection/sequencecollection
+    18 - Collection/trackcollection
+    18 - Collection/trackitemcollection

@@ -32,7 +32,7 @@ An array of :ref:`Track item <trackItem>` objects, contained within the track, i
 
 **Type**
 
-Array; read-only; (TrackItemCollection object).
+:ref:`trackItemCollection`, read-only;
 
 ----
 
@@ -104,7 +104,7 @@ An array of transitions objects, contained within the track, in temporal order.
 
 **Type**
 
-Array; read-only; (TrackItemCollection object).
+:ref:`trackItemCollection`, read-only;
 
 ----
 

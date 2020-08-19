@@ -64,7 +64,8 @@ An array of the projects containined within the Production, which are currently 
 
 **Type**
 
-(ProjectCollection object).
+:ref:`projectCollection`, read-only.
+
 ----
 
 =======

@@ -32,7 +32,7 @@ The components associated with this trackItem. This can include intrinsic transf
 
 **Type**
 
-An Array of components; read-only; (ComponentCollection object).
+:ref:`componentCollection`, read-only;
 
 ----
 
