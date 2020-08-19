@@ -47,7 +47,7 @@ The time, in Ticks, of the end of the sequence.
 
 **Type**
 
-Integer; read-only.
+String; read-only.
 
 ----
 
@@ -170,31 +170,6 @@ String; read-only.
 
 ----
 
-.. _sequence.setZeroPoint:
-
-Sequence.setZeroPoint
-*********************************************
-
-``app.project.sequences[index].setZeroPoint(newZeroPoint)``
-
-**Description**
-
-Set the starting time of the sequence.
-
-**Parameters**
-
-An integer, specifying the new zero point, in ticks, as a String.
-
-**Type**
-
-Integer; read-only.
-
-**Returns**
-
-Returns **0** if successful.
-
-----
-
 .. _sequence.timebase:
 
 Sequence.timebase
@@ -208,7 +183,7 @@ The number of Ticks per frame, in the sequence.
 
 **Type**
 
-Integer; read-only.
+String; read-only.
 
 ----
 
@@ -242,7 +217,7 @@ The starting time, in Ticks, of the sequence.
 
 **Type**
 
-Integer; read-only.
+String; read-only.
 
 ----
 
@@ -772,3 +747,26 @@ Sets the settings of the current sequence. *[Editorial: I apologize for any perc
 **Returns**
 
 Returns 0 if successful.
+
+.. _sequence.setZeroPoint:
+
+Sequence.setZeroPoint()
+*********************************************
+
+``app.project.sequences[index].setZeroPoint(newZeroPoint)``
+
+**Description**
+
+Set the starting time of the sequence.
+
+**Parameters**
+
+An integer, specifying the new zero point, in ticks, as a String.
+
+**Type**
+
+Integer; read-only.
+
+**Returns**
+
+Returns **0** if successful.
