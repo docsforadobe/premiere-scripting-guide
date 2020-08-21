@@ -28,6 +28,7 @@ Welcome to the Premiere Pro Scripting Guide!
     general/production
     general/project
     general/projectmanager
+    general/properties
     general/sourcemonitor
 
 .. toctree::

@@ -333,7 +333,7 @@ The properties object provides methods to access and modify preference values.
 
 **Type**
 
-properties object; read-only; (Properties object).
+:ref:`properties`, read-only;
 
 ----
 
