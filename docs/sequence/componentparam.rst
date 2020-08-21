@@ -2,7 +2,7 @@
 
 .. _componentParam:
 
-Component Parameter object
+ComponentParam object
 ==========================
 
 |	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index]``
