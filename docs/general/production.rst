@@ -1,9 +1,9 @@
 .. highlight:: javascript
 
-.. Productions:
+.. Production:
 
-Production
-==========
+Production object
+===================
 
 ``app.production``
 
