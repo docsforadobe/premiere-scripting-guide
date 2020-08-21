@@ -119,3 +119,9 @@ Welcome to the Premiere Pro Scripting Guide!
     18 - Collection/sequencecollection
     18 - Collection/trackcollection
     18 - Collection/trackitemcollection
+
+.. toctree::
+    :maxdepth: 2
+    :caption: Metadata object
+
+    19 - Metadata object/metadata

@@ -240,7 +240,7 @@ Get applications Metadata object.
 
 **Type**
 
-Metadata object; read-only.
+:ref:`metadata`, read-only.
 
 ----
 
