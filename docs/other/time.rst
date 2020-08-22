@@ -5,7 +5,7 @@
 Time object
 ===================
 
-``app.project.rootItem.children[index].getInPoint()``
+``myTime = new Time();``
 
 **Description**
 
@@ -22,7 +22,7 @@ Attributes
 Time.seconds
 *********************************************
 
-``app.project.rootItem.children[index].getInPoint().seconds``
+``myTime.seconds``
 
 **Description**
 
@@ -39,7 +39,7 @@ Number.
 Time.ticks
 *********************************************
 
-``app.project.rootItem.children[index].getInPoint().ticks``
+``myTime.ticks``
 
 **Description**
 
@@ -60,7 +60,7 @@ Methods
 Time.getFormatted()
 *********************************************
 
-``app.project.rootItem.children[index].getInPoint().getFormatted(frameRate, displayFormat)``
+``myTime.getFormatted(frameRate, displayFormat)``
 
 **Description**
 
@@ -81,7 +81,7 @@ Time.getFormatted()
 Time.setSecondsAsFraction()
 *********************************************
 
-``app.project.rootItem.children[index].getInPoint().setSecondsAsFraction()``
+``myTime.setSecondsAsFraction()``
 
 **Description**
 
