@@ -451,7 +451,7 @@ app.getWorkspaces()
 
 **Description**
 
-Obtain an array of the workspaces available.
+Obtains an array of available workspaces as Strings.
 
 **Parameters**
 
@@ -459,7 +459,28 @@ None.
 
 **Returns**
 
-Returns an Array of workspaces if successful, `null` if unsuccessful.
+``Array`` if successful, ``null`` if unsuccessful.
+
+**Example**
+
+Get a list of available workspaces.
+
+.. code:: javascript
+
+	app.getWorkspaces();
+	/* [
+		"All Panels",
+		"Assembly",
+		"Audio",
+		"Color",
+		"Editing",
+		"Effects",
+		"Graphics",
+		"Learning",
+		"Libraries",
+		"Metalogging",
+		"Production"
+	]; */
 
 ----
 
@@ -716,19 +737,36 @@ Returns 'true' if successful.
 app.setWorkspace()
 *********************************************
 
-``app.setWorkspace(indexOfWorkspace)``
+``app.setWorkspace(workspace)``
 
 **Description**
 
-Obtain an array of the workspaces available.
+Set workspace as active. Use :ref:`app.getWorkspaces` to get a list of all available workspaces.
 
 **Parameters**
 
-Integer specifying which workspace (from the array returned by getWorkspaces()) to enable.
+=============  ==========  ==============================
+argument       type        description
+=============  ==========  ==============================
+``workspace``  ``String``  The name of the workspace
+=============  ==========  ==============================
 
 **Returns**
 
-Returns true if successful.
+``Boolean``.
+
+**Example**
+
+Activate `Editing` workspace.
+
+.. code:: javascript
+
+    var workspace = 'Editing';
+    if (app.setWorkspace(workspace)) {
+        alert('Workspace changed to "' + workspace + '"');
+    } else {
+        alert('Could not set "' + workspace + '" workspace');
+    }
 
 ----
 
