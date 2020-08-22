@@ -85,7 +85,12 @@ Copies a project from some other location, into the Production directory.
 
 **Parameters**
 
-Path to the source project, specified destination path for added project.
+===================  ===========  =======================
+Argument             Type         Description
+===================  ===========  =======================
+``srcProjectPath``   ``String``   A path to the source project.
+``destProjectPath``  ``String``   A destination path for added project.
+===================  ===========  =======================
 
 **Returns**
 
@@ -148,7 +153,13 @@ Moves the specified path ("bin") or .prproj into the Production's Trash folder.
 
 **Parameters**
 
-Path to the source project or path, and booleans specifying whether or not to suppress any resultant Premiere Pro UI, and whether to save the project(s) first.
+=======================  ===========  =======================
+Argument                 Type         Description
+=======================  ===========  =======================
+``projectOrFolderPath``  ``String``   A path to the source project.
+``suppressUI``           ``Boolean``  Whether to suppress any resultant dialogues.
+``saveProject``          ``Boolean``  Whether to save the project(s) first.
+=======================  ===========  =======================
 
 **Returns**
 
@@ -161,7 +172,7 @@ Returns **true** if successful.
 Production.setLocked()
 *********************************************
 
-``app.production.setLocked(newLockState)``
+``app.production.setLocked(locked)``
 
 **Description**
 
@@ -169,7 +180,11 @@ Sets the lock state of the Production
 
 **Parameters**
 
-Boolean corresponding to desired new lock state.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``locked``        ``Boolean``  Desired lock state.
+================  ===========  =======================
 
 **Returns**
 

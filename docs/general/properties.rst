@@ -60,7 +60,7 @@ Checks whether a given property exists in preferences.
 **Parameters**
 
 ============  ==========  ===================
-parameter     type        description
+Argument      Type        Description
 ============  ==========  ===================
 ``property``  ``String``  A property to check
 ============  ==========  ===================
@@ -99,7 +99,7 @@ Returns a property value.
 **Parameters**
 
 ============  ==========  =============================
-parameter     type        description
+Argument      Type        Description
 ============  ==========  =============================
 ``property``  ``String``  A property to get a value for
 ============  ==========  =============================
@@ -130,7 +130,7 @@ Get label name at a given index:
 Properties.isPropertyReadOnly()
 *********************************************
 
-``app.properties.isPropertyReadOnly()``
+``app.properties.isPropertyReadOnly(property)``
 
 **Description**
 
@@ -138,7 +138,11 @@ Checks whether a given property can be overwritten by the user. Returns `false` 
 
 **Parameters**
 
-``property`` as a string.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``property``      ``String``   A property to check.
+================  ===========  =======================
 
 **Returns**
 
@@ -160,7 +164,7 @@ Set property value.
 **Parameters**
 
 ====================  ===========  ================================================
-parameter             type         description
+Argument              Type         Description
 ====================  ===========  ================================================
 ``property``          ``String``   A property to create
 ``value``             ``Any``      A value for a property

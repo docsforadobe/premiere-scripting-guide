@@ -497,7 +497,11 @@ Determines whether the file at path can be opened as a Premiere Pro :ref:`projec
 
 **Parameters**
 
-A path as a ``String`` to a file to test.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``path``          ``String``   A path to a file.
+================  ===========  =======================
 
 **Returns**
 
@@ -542,7 +546,7 @@ Returns **true** if at least 1 project is open; otherwise **false**.
 app.newProject()
 *********************************************
 
-``app.newProject(projPath)``
+``app.newProject(path)``
 
 **Description**
 
@@ -550,9 +554,11 @@ Creates a new .prproj :ref:`project`, at the specified path.
 
 **Parameters**
 
-================  =================================================================================================
-``projPath``       **String** containing full path to new project; a .prproj extension will be added, if necessary.
-================  =================================================================================================
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``path``          ``String``   A full path to new project; a .prproj extension will be added, if necessary.
+================  ===========  =======================
 
 **Returns**
 
@@ -573,17 +579,15 @@ Opens the file at the specified path, as a Premiere Pro :ref:`project`.
 
 **Parameters**
 
-+---------------------------------------+------------------------------------------------------------------------+
-| ``pathToDocument``                    | Full path to the document to be opened.                                |
-+---------------------------------------+------------------------------------------------------------------------+
-| ``optionalSuppressConversionDialog``  | Suppress project conversion dialog?                                    |
-+---------------------------------------+------------------------------------------------------------------------+
-| ``optionalBypassLocateFileDialog``    | Bypass the locate file dialog?                                         |
-+---------------------------------------+------------------------------------------------------------------------+
-| ``optionalBypassWarningDialog``       | Bypass warning dialog?                                                 |
-+---------------------------------------+------------------------------------------------------------------------+
-| ``optionalDoNotAddToMRUList``         | Skip adding this file, to the most recently used list?                 |
-+---------------------------------------+------------------------------------------------------------------------+
+====================================  ===========  =======================
+Argument                              Type         Description
+====================================  ===========  =======================
+``path``                              ``String``   Full path to the document to be opened. 
+``suppressConversionDialog``          ``Boolean``  Optional. Suppress project conversion dialog.
+``bypassLocateFileDialog``            ``Boolean``  Optional. Bypass the locate file dialog.
+``bypassWarningDialog``               ``Boolean``  Optional. Bypass warning dialog.
+``doNotAddToMRUList``                 ``Boolean``  Optional. Skip adding this file to the Most Recently Used List.
+====================================  ===========  =======================
 
 **Returns**
 
@@ -604,7 +608,12 @@ Opens an FCP XML file as a Premiere Pro :ref:`project` (specified in projPath).
 
 **Parameters**
 
-path, projPath.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``path``          ``String``   
+``projPath``      ``String``   
+================  ===========  =======================
 
 **Returns**
 
@@ -646,9 +655,11 @@ Determines whether proxy usage is currently enabled.
 
 **Parameters**
 
-================  =========================================================
-``enabled``       1 turns proxies on, 0 turns them off.
-================  =========================================================
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``enabled``       ``Integer``  ``1`` turns proxies on, ``0`` turns them off.
+================  ===========  =======================
 
 **Returns**
 
@@ -661,19 +672,20 @@ Returns 1 if proxy enablement was changed.
 app.setExtensionPersistent()
 ************************************************
 
-``app.setExtensionPersistent(ExtensionID, persist)``
+``app.setExtensionPersistent(extensionID, persist)``
 
 **Description**
 
-Whether extension with the given ExtensionID persists, within this session.
+Whether extension with the given extensionID persists, within this session.
 
 **Parameters**
 
-+--------------------------------------------------------------------------------+
-| ``extensionID``   | Which extension to modify.                                 |
-+--------------------------------------------------------------------------------+
-| ``persist``       | Pass 1 to keep extension in memory, 0 to allow unloading.  |
-+--------------------------------------------------------------------------------+
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``extensionID``   ``String``   Which extension to modify.
+``persist``       ``Integer``  Pass ``1`` to keep extension in memory, ``0`` to allow unloading.
+================  ===========  =======================
 
 **Returns**
 
@@ -694,16 +706,18 @@ Specifies the path to be used for one of Premiere Pro's scratch disk paths.
 
 **Parameters**
 
-+----------------------------+-----------------------------------------------+
-| ``path``                   | The new path to be used.                      |
-+----------------------------+-----------------------------------------------+
-| ``whichScratchValueToSet`` | Must be one of the following:                 |
-|                            | ``FirstAudioCaptureFolder``                   |
-|                            | ``FirstVideoCaptureFolder``                   |
-|                            | ``FirstAudioPreviewFolder``                   |
-|                            | ``FirstAutoSaveFolder``                       |
-|                            | ``FirstCCLibrariesFolder``                    |
-+----------------------------+-----------------------------------------------+
+==========================  ===========  =======================
+Argument                    Type         Description
+==========================  ===========  =======================
+``path``                    ``String``   The new path to be used.
+``whichScratchValueToSet``  ``type``     Must be one of the following: 
+
+                                         | ``FirstAudioCaptureFolder``
+                                         | ``FirstVideoCaptureFolder``
+                                         | ``FirstAudioPreviewFolder``
+                                         | ``FirstAutoSaveFolder``
+                                         | ``FirstCCLibrariesFolder``
+==========================  ===========  =======================
 
 **Returns**
 
@@ -724,7 +738,16 @@ Writes a string to Premiere Pro's Events panel.
 
 **Parameters**
 
-message is a string; decorator can be either 'info', 'warning' or 'error'.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``message``       ``String``   A message to display.
+``decorator``     ``String``   Decorator, one of:
+
+                               | ``info``
+                               | ``warning``
+                               | ``error``
+================  ===========  =======================
 
 **Returns**
 
@@ -746,9 +769,9 @@ Set workspace as active. Use :ref:`app.getWorkspaces` to get a list of all avail
 **Parameters**
 
 =============  ==========  ==============================
-argument       type        description
+Argument       Type        Description
 =============  ==========  ==============================
-``workspace``  ``String``  The name of the workspace
+``workspace``  ``String``  The name of the workspace.
 =============  ==========  ==============================
 
 **Returns**

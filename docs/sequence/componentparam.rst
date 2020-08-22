@@ -54,7 +54,11 @@ Adds a keyframe to the component parameter stream, at the specified time. Note: 
 
 **Parameters**
 
-A **Time** value, indicating when the keyframe should be added.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          :ref:`time`  When the keyframe should be added.
+================  ===========  =======================
 
 **Returns**
 
@@ -89,8 +93,8 @@ Returns ``true`` if trackItem is selected; ``false`` if not.
 ComponentParam.findNearestKey()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].findNearestKey(timeToCheck, thresholdInTicks)``
-|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findNearestKey(timeToCheck, thresholdInTicks)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].findNearestKey(timeToCheck, threshold)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findNearestKey(timeToCheck, threshold)``
 
 **Description**
 
@@ -98,7 +102,12 @@ Sets whether the component parameter varies, over time. Note: This can only be s
 
 **Parameters**
 
-Starts search from ``timeToCheck``, for ``thresholdInTicks`` temporal distance, in either direction.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``timeToCheck``                Start search from a given time
+``threshold``                  A temporal distance, in either direction, in **ticks**.
+================  ===========  =======================
 
 **Returns**
 
@@ -120,7 +129,11 @@ Returns the keyframe temporally subsequent to the provided ``timeToCheck``. Note
 
 **Parameters**
 
-Starts search from ``timeToCheck``.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``timeToCheck``                Start search from a given time.
+================  ===========  =======================
 
 **Returns**
 
@@ -142,7 +155,11 @@ Returns the keyframe temporally previous to the provided ``timeToCheck``. Note: 
 
 **Parameters**
 
-Starts search from ``timeToCheck``.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``timeToCheck``                Start search from a given time.
+================  ===========  =======================
 
 **Returns**
 
@@ -164,7 +181,7 @@ Obtains the value of the component parameter stream. Note: This can only work on
 
 **Parameters**
 
-The ``newValue`` must be of the appropriate type for the component parameter stream; passing **1** for ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream.
+None.
 
 **Returns**
 
@@ -230,7 +247,11 @@ Retrieves the value of the component parameter stream, at the specified keyframe
 
 **Parameters**
 
-A ``Time`` from which the keyframe value should be retrieved;
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          :ref:`time`  A time from which the keyframe value should be retrieved.
+================  ===========  =======================
 
 **Returns**
 
@@ -252,7 +273,11 @@ Retrieves the value of the component parameter stream, at the specified time. If
 
 **Parameters**
 
-A ``Time`` from which the value should be retrieved;
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          :ref:`time`  A time from which the keyframe value should be retrieved.
+================  ===========  =======================
 
 **Returns**
 
@@ -296,7 +321,11 @@ Removes a keyframe on the component parameter stream, at the specified time. Not
 
 **Parameters**
 
-A **Time** value, indicating when the keyframe should be removed.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          :ref:`time`  A time value, indicating when the keyframe should be removed.
+================  ===========  =======================
 
 **Returns**
 
@@ -318,7 +347,12 @@ Removes all keyframes from the component parameter stream, between the specified
 
 **Parameters**
 
-**Time** values, indicating at what times (inclusive) to begin and eng the removal of keyframes from the component parameter stream.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``startTime``     :ref:`time`  At what times (inclusive) to begin the removal of keyframes.
+``endTime``       :ref:`time`  at what times to end the removal of keyframes.
+================  ===========  =======================
 
 **Returns**
 
@@ -331,8 +365,8 @@ Returns **0** if successful.
 ComponentParam.setColorValue()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setColorValue(intAlpha, intRed, intGreen, intBlue, boolUpdateUI)``
-|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setColorValue(intAlpha, intRed, intGreen, intBlue, boolUpdateUI)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setColorValue(alpha, red, green, blue, updateUI)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setColorValue(alpha, red, green, blue, updateUI)``
 
 **Description**
 
@@ -340,7 +374,15 @@ Sets the values within a component parameter stream, representing a Color.
 
 **Parameters**
 
-Integers representing the alpha, red, green and blue values to be used in the component parameter stream; ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``alpha``         ``Integer``  Alpha value.
+``red``           ``Integer``  Red value.
+``green``         ``Integer``  Green value.
+``blue``          ``Integer``  Blue value.
+``updateUI``      ``Integer``  Force to update UI after updating the value of the stream.
+================  ===========  =======================
 
 **Returns**
 
@@ -362,22 +404,22 @@ Specifies the interpolation typ to be assigned to the keyframe, at the specified
 
 **Parameters**
 
-A ``Time`` at which the interpretation type should be set (and which must correspond to an extant keyframe), and an ``interpretationType`` being set.
+=======================  ===========  =======================
+Argument                 Type         Description
+=======================  ===========  =======================
+``time``                 :ref:`time`  A time  of keyframe to modify.
+``interpretationType``   ``type``     Must be one of the following: 
 
-+----------------------------+---------------------------------------------------+
-| ``Time``                   | **Time** of keyframe to modify.                   |
-+----------------------------+---------------------------------------------------+
-| ``interpretationType``     | Must be one of the following:                     |
-|                            |    - 0 kfInterpMode_Linear                        |
-|                            |    - 1 kfInterpMode_EaseIn_Obsolete               |
-|                            |    - 2 kfInterpMode_EaseOut_Obsolete              |
-|                            |    - 3 kfInterpMode_EaseInEaseOut_Obsolete        |
-|                            |    - 4 kfInterpMode_Hold                          |
-|                            |    - 5 kfInterpMode_Bezier                        |
-|                            |    - 6 kfInterpMode_Time                          |
-|                            |    - 7 kfInterpMode_TimeTransitionStart           |
-|                            |    - 8 kfInterpMode_TimeTransitionEnd             |
-+----------------------------+---------------------------------------------------+
+                                      - 0 ``kfInterpMode_Linear``
+                                      - 1 ``kfInterpMode_EaseIn_Obsolete``
+                                      - 2 ``kfInterpMode_EaseOut_Obsolete``
+                                      - 3 ``kfInterpMode_EaseInEaseOut_Obsolete``
+                                      - 4 ``kfInterpMode_Hold``
+                                      - 5 ``kfInterpMode_Bezier``
+                                      - 6 ``kfInterpMode_Time``
+                                      - 7 ``kfInterpMode_TimeTransitionStart``
+                                      - 8 ``kfInterpMode_TimeTransitionEnd``
+=======================  ===========  =======================
 
 **Returns**
 
@@ -390,8 +432,8 @@ Returns **0** if successful.
 ComponentParam.setTimeVarying()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setTimeVarying(boolVary)``
-|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setTimeVarying(boolVary)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setTimeVarying(varying)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setTimeVarying(varying)``
 
 **Description**
 
@@ -399,7 +441,11 @@ Sets whether the component parameter varies, over time. Note: This can only be s
 
 **Parameters**
 
-If ``boolVary`` is **true**, component parameter will vary over time; if **false**, it won't.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``varying``       ``Boolean``  If ``true``, component parameter will vary over time; if ``false``, it won't.
+================  ===========  =======================
 
 **Returns**
 
@@ -412,8 +458,8 @@ Returns **0** if successful.
 ComponentParam.setValue()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setValue(newValue, boolUpdateUI)``
-|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValue(newValue, boolUpdateUI)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setValue(value, updateUI)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValue(value, updateUI)``
 
 **Description**
 
@@ -421,7 +467,12 @@ Obtains the value of the component parameter stream. Note: This can only work on
 
 **Parameters**
 
-The ``newValue`` must be of the appropriate type for the component parameter stream; passing **1** for ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``value``                      Must be of the appropriate type for the component parameter stream.
+``updateUI``      ``Integer``  If ``1``, will force Premiere Pro to update UI, after updating the value of the stream.
+================  ===========  =======================
 
 **Returns**
 
@@ -434,8 +485,8 @@ Returns **0** if successful.
 ComponentParam.setValueAtKey()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setValueAtKey(time, newValue, boolUpdateUI)``
-|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValueAtKey(time, newValue, boolUpdateUI)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setValueAtKey(time, value, updateUI)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValueAtKey(time, value, updateUI)``
 
 **Description**
 
@@ -443,7 +494,13 @@ Sets the value of the component parameter stream, at the specified keyframe time
 
 **Parameters**
 
-A ``Time`` at which the keyframe value should be set, and a ``newValue`` representing the value to be stored at the keyframe time; ``boolUpdateUI`` will force Premiere Pro to update its UI, after updating the value of the stream..
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          :ref:`time`  A time at which the keyframe value should be set.
+``value``                      A value to be set.
+``updateUI``      ``Integer``  If ``1``, will force Premiere Pro to update UI, after updating the value of the stream.
+================  ===========  =======================
 
 **Returns**
 

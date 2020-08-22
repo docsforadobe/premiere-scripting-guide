@@ -331,8 +331,8 @@ Returns ``true`` if trackItem is selected; ``false`` if not.
 TrackItem.setSelected()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].clips[index].setSelected(selectionState, updateUI)``
-|	``app.project.sequences[index].videoTracks[index].clips[index].setSelected(selectionState, updateUI)``
+|	``app.project.sequences[index].audioTracks[index].clips[index].setSelected(state, updateUI)``
+|	``app.project.sequences[index].videoTracks[index].clips[index].setSelected(state, updateUI)``
 
 **Description**
 
@@ -340,7 +340,12 @@ Sets the selection state of the trackItem.
 
 **Parameters**
 
-If selectionState is **1**, the trackItem will be selected; if **0**, it will be deselected. If updateUI is **1**, the Premiere Pro UI will be updated after this function call is made.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``state``         ``Integer``  If ``1``, the track item will be selected; if ``0``, it will be deselected.
+``updateUI``      ``Integer``  If ``1``, the Premiere Pro UI will be updated after this function call is made.
+================  ===========  =======================
 
 **Returns**
 

@@ -93,7 +93,7 @@ Returns a :ref:`time` containing the position of the Source monitor's current ti
 SourceMonitor.openFilePath()
 *********************************************
 
-``app.sourceMonitor.openFilePath(absolutePathToFile)``
+``app.sourceMonitor.openFilePath(path)``
 
 **Description**
 
@@ -101,7 +101,11 @@ Open a file in the Source monitor.
 
 **Parameters**
 
-The absolute path to the file to open.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``path``          ``String``   A path to the file to open.
+================  ===========  =======================
 
 **Returns**
 
@@ -122,7 +126,11 @@ Open a project item in the Source monitor.
 
 **Parameters**
 
-The :ref:`projectItem` to open.
+================  ==================  =======================
+Argument          Type                Description
+================  ==================  =======================
+``projectItem``   :ref:`projectItem`  A project item to open.
+================  ==================  =======================
 
 **Returns**
 
@@ -143,7 +151,11 @@ Begins playing back the Source monitor, at the specified playback speed.
 
 **Parameters**
 
-A ``float`` representing the playback speed.
+==================  ===========  =======================
+Argument            Type         Description
+==================  ===========  =======================
+``playbackSpeed``   ``Float``    The playback speed.
+==================  ===========  =======================
 
 **Returns**
 

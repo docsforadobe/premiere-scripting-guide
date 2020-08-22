@@ -52,7 +52,7 @@ Methods
 AudioChannelMapping.setMappingForChannel()
 *********************************************
 
-``app.project.rootItem.children[index].setMappingForChannel(intChannelIndex, intSourceChannelIndex)``
+``app.project.rootItem.children[index].setMappingForChannel(channelIndex, sourceChannelIndex)``
 
 **Description**
 
@@ -60,7 +60,12 @@ Maps a source channel to the specified channel index.
 
 **Parameters**
 
-Index of channel to be mapped, index of source channel to map.
+=======================  ===========  =======================
+Argument                 Type         Description
+=======================  ===========  =======================
+``channelIndex``         ``Integer``  The index of a channel to be mapped.
+``sourceChannelIndex``   ``Integer``  The index of a source channel to map.
+=======================  ===========  =======================
 
 **Returns**
 

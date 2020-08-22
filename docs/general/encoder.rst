@@ -30,7 +30,7 @@ Methods
 Encoder.encodeFile()
 *********************************************
 
-``app.encoder.encodeFile(fileToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
+``app.encoder.encodeFile(filePath, outputPath, presetPath, workArea, removeUponCompletion)``
 
 **Description**
 
@@ -38,24 +38,22 @@ Makes Adobe Media Encoder render (optionally, a specified range from) the specif
 
 **Parameters**
 
-+------------------------------+---------------------------------------------------+
-| ``fileToRender``             | **String** of file path, to render.               |
-+------------------------------+---------------------------------------------------+
-| ``fullOutputPath``           | **String**, path to output file.                  |
-+------------------------------+---------------------------------------------------+
-| ``presetPath``               | **String**, path to preset (.epr) file.           |
-+------------------------------+---------------------------------------------------+
-| ``workArea``                 | Integer denoting work area to be used:            |
-|                              |    - 0 ENCODE_ENTIRE                              |
-|                              |    - 1 ENCODE_IN_TO_OUT                           |
-|                              |    - 2 ENCODE_WORK_AREA                           |
-+------------------------------+---------------------------------------------------+
-| ``boolRemoveUponCompletion`` | If **1**, job will be removed once complete.      |
-+------------------------------+---------------------------------------------------+
-| ``inPoint``                  | A **Time**, for the in point of new file.         |
-+------------------------------+---------------------------------------------------+
-| ``outPoint``                 | A **Time**, for the out point of new file.        |
-+------------------------------+---------------------------------------------------+
+============================  ===========  =======================
+Argument                      Type         Description
+============================  ===========  =======================
+``filePath``                  ``String``   A path to a file to render.
+``outputPath``                ``String``   A path to an output file.
+``presetPath``                ``String``   A path to a preset (.epr) file.
+``workArea``                  ``Integer``  Integer denoting work area to be used:
+
+                                           - 0 - ``ENCODE_ENTIRE``
+                                           - 1 - ``ENCODE_IN_TO_OUT``
+                                           - 2 - ``ENCODE_WORK_AREA``
+
+``removeUponCompletion``      ``Integer``  If ``1``, job will be removed once complete.
+``inPoint``                   Time         A **Time**, for the in point of new file. 
+``outPoint``                  Time         A **Time**, for the out point of new file. 
+============================  ===========  =======================
 
 **Returns**
 
@@ -68,7 +66,7 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 Encoder.encodeProjectItem()
 *********************************************
 
-``app.encoder.encodeProjectItem(projectItem, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
+``app.encoder.encodeProjectItem(projectItem, outputPath, presetPath, workArea, removeUponCompletion)``
 
 **Description**
 
@@ -76,20 +74,20 @@ Makes Adobe Media Encoder render (optionally, a specified range from) the specif
 
 **Parameters**
 
-+------------------------------+---------------------------------------------------+
-| ``projectItem``              | projectItem to render.                            |
-+------------------------------+---------------------------------------------------+
-| ``fullOutputPath``           | **String**, path to output file.                  |
-+------------------------------+---------------------------------------------------+
-| ``presetPath``               | **String**, path to preset (.epr) file.           |
-+------------------------------+---------------------------------------------------+
-| ``workArea``                 | Integer denoting work area to be used:            |
-|                              |    - 0 ENCODE_ENTIRE                              |
-|                              |    - 1 ENCODE_IN_TO_OUT                           |
-|                              |    - 2 ENCODE_WORK_AREA                           |
-+------------------------------+---------------------------------------------------+
-| ``boolRemoveUponCompletion`` | If **1**, job will be removed once complete.      |
-+------------------------------+---------------------------------------------------+
+============================  ==================  =======================
+Argument                      Type                Description
+============================  ==================  =======================
+``projectItem``               :ref:`projectItem`  A project item to render. 
+``outputPath``                ``String``          A path to an output file.
+``presetPath``                ``String``          A path to a preset (.epr) file.
+``workArea``                  ``Integer``         Integer denoting work area to be used:
+
+                                                  - 0 - ``ENCODE_ENTIRE``
+                                                  - 1 - ``ENCODE_IN_TO_OUT``
+                                                  - 2 - ``ENCODE_WORK_AREA``
+
+``removeUponCompletion``      ``Integer``         If ``1``, job will be removed once complete.
+============================  ==================  =======================
 
 **Returns**
 
@@ -102,7 +100,7 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 Encoder.encodeSequence()
 *********************************************
 
-``app.encoder.encodeSequence(sequenceToRender, fullOutputPath, presetPath, workArea, boolRemoveUponCompletion)``
+``app.encoder.encodeSequence(sequence, outputPath, presetPath, workArea, removeUponCompletion)``
 
 **Description**
 
@@ -110,20 +108,20 @@ Makes Adobe Media Encoder render the specified :ref:`sequence`, with the specifi
 
 **Parameters**
 
-+------------------------------+---------------------------------------------------+
-| ``sequenceToRender``         | The **sequence** to render.                       |
-+------------------------------+---------------------------------------------------+
-| ``fullOutputPath``           | **String**, path to output file.                  |
-+------------------------------+---------------------------------------------------+
-| ``presetPath``               | **String**, path to preset (.epr) file.           |
-+------------------------------+---------------------------------------------------+
-| ``workArea``                 | **Integer** denoting work area to be used:        |
-|                              |    - 0 ENCODE_ENTIRE                              |
-|                              |    - 1 ENCODE_IN_TO_OUT                           |
-|                              |    - 2 ENCODE_WORK_AREA                           |
-+------------------------------+---------------------------------------------------+
-| ``boolRemoveUponCompletion`` | If **1**, job will be removed once complete.      |
-+------------------------------+---------------------------------------------------+
+============================  ==================  =======================
+Argument                      Type                Description
+============================  ==================  =======================
+``sequence``                  :ref:`sequence`     A sequence to render. 
+``outputPath``                ``String``          A path to an output file.
+``presetPath``                ``String``          A path to a preset (.epr) file.
+``workArea``                  ``Integer``         Integer denoting work area to be used:
+
+                                                  - 0 - ``ENCODE_ENTIRE``
+                                                  - 1 - ``ENCODE_IN_TO_OUT``
+                                                  - 2 - ``ENCODE_WORK_AREA``
+
+``removeUponCompletion``      ``Integer``         If ``1``, job will be removed once complete.
+============================  ==================  =======================
 
 **Returns**
 
@@ -157,7 +155,7 @@ Returns **0** if successful.
 Encoder.setEmbeddedXMPEnabled()
 *********************************************
 
-``app.encoder.setEmbeddedXMPEnabled(enabledOrNot)``
+``app.encoder.setEmbeddedXMPEnabled(enabled)``
 
 **Description**
 
@@ -165,7 +163,11 @@ Determines whether embedded XMP metadata, will be output.
 
 **Parameters**
 
-Pass **1** to enable sidecar output, **0** to disable.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``enabled``       ``Integer``  Pass ``1`` to enable sidecar output, ``0`` to disable.
+================  ===========  =======================
 
 **Returns**
 
@@ -180,7 +182,7 @@ Note: Premiere Pro and Adobe Media Encoder will output sidecar XMP for some file
 Encoder.setSidecarXMPEnabled()
 *********************************************
 
-``app.encoder.setSidecarXMPEnabled(enabledOrNot)``
+``app.encoder.setSidecarXMPEnabled(enabled)``
 
 **Description**
 
@@ -188,7 +190,11 @@ Determines whether a sidecar file containing XMP metadata, will be output.
 
 **Parameters**
 
-Pass **1** to enable sidecar output, **0** to disable.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``enabled``       ``Integer``  Pass ``1`` to enable sidecar output, ``0`` to disable.
+================  ===========  =======================
 
 **Returns**
 

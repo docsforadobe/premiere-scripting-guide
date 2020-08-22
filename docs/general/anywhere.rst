@@ -143,6 +143,8 @@ Retrieves production names, available to the current user, on the current server
 
 **Parameters**
 
+None.
+
 **Returns**
 
 Returns an Array of **Strings** containing the names of avialable productions, or 0 if unsuccessful.
@@ -162,7 +164,11 @@ Opens the production at the specified URL.
 
 **Parameters**
 
-A **String** containing the url of the production to open. 
+=================  ===========  =======================
+Argument           Type         Description
+=================  ===========  =======================
+``productionURL``  ``String``   The url of the production to open.
+=================  ===========  =======================
 
 **Returns**
 
@@ -183,7 +189,12 @@ Logs the specified email address into the server, using the provided token.
 
 **Parameters**
 
-Takes an authorization ``token``, and the associated email address.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``token``         ``String``   An authorization token.
+``emailAddress``  ``String``   The associated email address.
+================  ===========  =======================
 
 **Returns**
 

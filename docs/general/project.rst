@@ -178,17 +178,18 @@ Adds a new field of the specified type to Premiere Pro's private project metadat
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``propertyName``           | **String**, Name of property to be added.         |
-+----------------------------+---------------------------------------------------+
-| ``propertyLabel``          | **String**, Label of property to be added.        |
-+----------------------------+---------------------------------------------------+
-| ``propertyType``           | Must be one of the following:                     |
-|                            |    - 0 Integer                                    |
-|                            |    - 1 Real                                       |
-|                            |    - 2 String                                     |
-|                            |    - 3 Boolean                                    |
-+----------------------------+---------------------------------------------------+
+=================  ===========  =======================
+Argument           Type         Description
+=================  ===========  =======================
+``propertyName``   ``String``   A name of property to be added. 
+``propertyLabel``  ``String``   A label of property to be added.
+``propertyType``                Must be one of the following:
+
+                                - 0 ``Integer``
+                                - 1 ``Real``
+                                - 2 ``String``
+                                - 3 ``Boolean``
+=================  ===========  =======================
 
 **Returns**
 
@@ -209,7 +210,12 @@ Closes this project.
 
 **Parameters**
 
-Two **ints**; If **saveFirst** is 1, the project will be saved before closing. If **promptIfDirty** is 1, the user will be asked whether they want to save changes first.
+=================  ===========  =======================
+Argument           Type         Description
+=================  ===========  =======================
+``saveFirst``      ``Integer``  If ``1``, the project will be saved before closing.
+``promptIfDirty``  ``Integer``  If ``1``, the user will be asked whether they want to save changes first.
+=================  ===========  =======================
 
 **Returns**
 
@@ -251,9 +257,12 @@ Creates a new :ref:`sequence` with the specified ID.
 
 **Parameters**
 
-*String* name of sequence.
-
-*GUID* uniquely identifying this sequence.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``sequenceName``  ``String``   A name of a sequence.
+``sequenceID``    ``String``   An uniquely identifying ID for a new sequence.
+================  ===========  =======================
 
 **Returns**
 
@@ -274,13 +283,13 @@ Creates a new :ref:`sequence` with the given name, in the specified destination 
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``sequenceName``           | Optional; Name of created sequence.               |
-+----------------------------+---------------------------------------------------+
-| ``arrayOfProjectItems``    | Array of projectItems to be inserted in sequence. |
-+----------------------------+---------------------------------------------------+
-| ``destinationBin``         | Optional; bin to contain sequence.                |
-+----------------------------+---------------------------------------------------+
+=======================  =====================================================  =======================
+Argument                 Type                                                   Description
+=======================  =====================================================  =======================
+``sequenceName``         ``String``                                             Optional. A name for a new sequence.
+``arrayOfProjectItems``  ``Array`` of :ref:`ProjectItem <projectItem>` objects  An array of project items to be inserted into sequence.
+``destinationBin``       :ref:`projectItem`                                     Optional. A bin to contain sequence. 
+=======================  =====================================================  =======================
 
 **Returns**
 
@@ -293,7 +302,7 @@ Returns the newly-created :ref:`sequence` if successful; `0` if unsuccessful.
 Project.deleteSequence()
 *********************************************
 
-``app.project.deleteSequence(sequenceToDelete)``
+``app.project.deleteSequence(sequence)``
 
 **Description**
 
@@ -301,7 +310,11 @@ Deletes the specified :ref:`sequence` from the project.
 
 **Parameters**
 
-The :ref:`sequence` to delete.
+================  ===============  =======================
+Argument          Type             Description
+================  ===============  =======================
+``sequence``      :ref:`sequence`  A sequence to delete.
+================  ===============  =======================
 
 **Returns**
 
@@ -322,35 +335,24 @@ Exports an AAF file of the specified :ref:`sequence`, using the specified settin
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``sequence``               | Specifies the sequence to be output.              |
-+----------------------------+---------------------------------------------------+
-| ``filePath``               | Complete output path for .aaf file.               |
-+----------------------------+---------------------------------------------------+
-| ``mixdownVideo``           | If **1**, render video before export.             |
-+----------------------------+---------------------------------------------------+
-| ``explodeToMono``          | If **1**, breaks out stereo tracks to mono.       |
-+----------------------------+---------------------------------------------------+
-| ``sampleRate``             | Specifies the sample rate of output audio.        |
-+----------------------------+---------------------------------------------------+
-| ``bitsPerSample``          | Specifies the bits per sample of audio output.    |
-+----------------------------+---------------------------------------------------+
-| ``embedAudio``             | If **1**, audio is embedded, if **0**, external.  |
-+----------------------------+---------------------------------------------------+
-| ``audioFileFormat``        | **0** is AIFF, **1** is WAV.                      |
-+----------------------------+---------------------------------------------------+
-| ``trimSources``            | If **1**, trim audio files before export.         |
-+----------------------------+---------------------------------------------------+
-| ``handleFrames``           | Number of handle frames (from 0 to 1000).         |
-+----------------------------+---------------------------------------------------+
-| ``presetPath``             | Complete path to Export preset (.epr file).       |
-+----------------------------+---------------------------------------------------+
-| ``renderAudioEffects``     | If **1**, render audio effects before export.     |
-+----------------------------+---------------------------------------------------+
-| ``includeClipCopies``      | If **1**, include each copy of a clip.            |
-+----------------------------+---------------------------------------------------+
-| ``preserveParentFolder``   | If **1**, preserves the parent folder, in output. |
-+----------------------------+---------------------------------------------------+
+========================  =================  =======================
+Argument                  Type               Description
+========================  =================  =======================
+``sequence``              :ref:`sequence`    A sequence to export.
+``filePath``              ``String``         An output path for .aaf file. 
+``mixdownVideo``          ``Integer``        If ``1``, render video before export. 
+``explodeToMono``         ``Integer``        If ``1``, breaks out stereo tracks to mono.
+``sampleRate``                               The sample rate of output audio. 
+``bitsPerSample``                            The bits per sample of audio output. 
+``embedAudio``            ``Integer``        If ``1``, audio is embedded, if ``0``, external.
+``audioFileFormat``       ``Integer``        ``0`` is AIFF, ``1`` is WAV.  
+``trimSources``           ``Integer``        If ``1``, trim audio files before export. 
+``handleFrames``          ``Integer``        The number of handle frames (from 0 to 1000).
+``presetPath``            ``String``         A path to export preset (.epr) file. 
+``renderAudioEffects``    ``Integer``        If ``1``, render audio effects before export.
+``includeClipCopies``     ``Integer``        If ``1``, include each copy of a clip. 
+``preserveParentFolder``  ``Integer``        If ``1``, preserves the parent folder, in output. 
+========================  =================  =======================
 
 **Returns**
 
@@ -371,9 +373,12 @@ Exports an FCP XML representation of the entire project, to the specified output
 
 **Parameters**
 
-Full output path of .xml file, as a *String*.
-
-The suppressUI param is an *Int*; if **1**, no warnings or alerts will be shown, during the export.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``outputPath``    ``String``   An output path for .xml file.
+``suppressUI``    ``Integer``  If ``1``, no warnings or alerts will be shown, during the export.
+================  ===========  =======================
 
 **Returns**
 
@@ -394,27 +399,20 @@ Exports an OMF file of the specified :ref:`sequence`, using the specified settin
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``sequence``               | Specifies the sequence to be output.              |
-+----------------------------+---------------------------------------------------+
-| ``filePath``               | Complete output path for .omf file.               |
-+----------------------------+---------------------------------------------------+
-| ``omfTitle``               | **String** with which to title the OMF.           |
-+----------------------------+---------------------------------------------------+
-| ``sampleRate``             | Specifies the sample rate of output audio.        |
-+----------------------------+---------------------------------------------------+
-| ``bitsPerSample``          | Specifies the bits per sample of audio output.    |
-+----------------------------+---------------------------------------------------+
-| ``audioEncapsulated``      | If **1**, audio is embedded, if **0**, external.  |
-+----------------------------+---------------------------------------------------+
-| ``audioFileFormat``        | **0** is AIFF, **1** is WAV.                      |
-+----------------------------+---------------------------------------------------+
-| ``trimAudioFiles``         | **1** means yes, trim audio files.                |
-+----------------------------+---------------------------------------------------+
-| ``handleFrames``           | Number of handle frames (from 0 to 1000).         |
-+----------------------------+---------------------------------------------------+
-| ``includePan``             | **1** means include pan info; **0** means don't.  |
-+----------------------------+---------------------------------------------------+
+======================  =================  =======================
+Argument                Type               Description
+======================  =================  =======================
+``sequence``            :ref:`sequence`    The sequence to be output. 
+``filePath``            ``String``         An output path for .omf file.
+``omfTitle``            ``String``         The title of the OMF.
+``sampleRate``                             The sample rate of output audio. 
+``bitsPerSample``                          The bits per sample of audio output. 
+``audioEncapsulated``   ``Integer``        If ``1``, audio is embedded, if ``0``, external. 
+``audioFileFormat``     ``Integer``        ``0`` is AIFF, ``1`` is WAV.
+``trimAudioFiles``      ``Integer``        ``1`` means yes, trim audio files. 
+``handleFrames``        ``Integer``        Number of handle frames (from 0 to 1000). 
+``includePan``          ``Integer``        ``1`` means include pan info; ``0`` means don't. 
+======================  =================  =======================
 
 **Returns**
 
@@ -435,7 +433,11 @@ Exports the currently active :ref:`sequence`, using an Export Controller plug-in
 
 **Parameters**
 
-A **String** containing the name of the Export Controller plug-in to be used. To use the Premiere Pro SDK example Export Controller, the value would be "SDK Export Controller".
+=========================  ===========  =======================
+Argument                   Type         Description
+=========================  ===========  =======================
+``exportControllerName``   ``String``   The name of the Export Controller plug-in to be used. To use the Premiere Pro SDK example Export Controller, the value would be "SDK Export Controller".
+=========================  ===========  =======================
 
 **Returns**
 
@@ -553,7 +555,7 @@ Returns an array of graphics white settings supported by the project; Currently 
 Project.importAEComps()
 *********************************************
 
-``app.project.importAEComps(pathOfContainingProject, arrayOfCompNames, optionalTargetBin)``
+``app.project.importAEComps(path, compNames, targetBin)``
 
 **Description**
 
@@ -561,11 +563,13 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 
 **Parameters**
 
-*String* containing the full path to the containing project file, and an *Array* of sequenceIDs.
-
-*Array* of names of Compositions within the specified project, to be imported.
-
-*projectItem* referencing the destination bin for this import.
+======================  ===================  =======================
+Argument                Type                 Description
+======================  ===================  =======================
+``path``                ``String``           A path to the After Effects .aep project file.
+``compNames``           ``Array``            Names of compositions within the specified project, to be imported.
+``targetBin``           :ref:`projectItem`   Optional. The destination bin for this import.
+======================  ===================  =======================
 
 **Returns**
 
@@ -578,7 +582,7 @@ Returns **0** if successful.
 Project.importAllAEComps()
 *********************************************
 
-``app.project.importAllAEComps(pathOfContainingProject, optionalTargetBin)``
+``app.project.importAllAEComps(path, targetBin)``
 
 **Description**
 
@@ -586,9 +590,12 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 
 **Parameters**
 
-*String* containing the full path to the containing project file.
-
-*projectItem* referencing the destination bin for this import.
+================  ==================  =======================
+Argument          Type                Description
+================  ==================  =======================
+``path``          ``String``          A path to After Effects .aep project file.
+``targetBin``     :ref:`projectItem`  Optional. The destination bin for this import.
+================  ==================  =======================
 
 **Returns**
 
@@ -601,7 +608,7 @@ Returns **0** if successful.
 Project.importFiles()
 *********************************************
 
-``app.project.importFiles(arrayOfFilePathsToImport, suppressUI, targetBin, importAsNumberedStills)``
+``app.project.importFiles(filePaths, suppressUI, targetBin, importAsNumberedStills)``
 
 **Description**
 
@@ -609,7 +616,14 @@ Imports media from the specified file paths.
 
 **Parameters**
 
-An ``array`` of full, platform-specific file paths to be imported, a ``boolean`` indicating whether warning dialogs should be suppressed, a :ref:`projectItem` for the bin into which the files should be imported, and a ``boolean`` indicating whether the file paths should be interpreted as a sequence of numbered stills.
+============================  ==================  =======================
+Argument                      Type                Description
+============================  ==================  =======================
+``filePaths``                 ``Array``           An array of the file paths to be imported.
+``suppressUI``                ``Boolean``         Whether warning dialogs should be suppressed.
+``targetBin``                 :ref:`projectItem`  The bin into which the files should be imported.
+``importAsNumberedStills``    ``Boolean``         Whether the file paths should be interpreted as a sequence of numbered stills.
+============================  ==================  =======================
 
 **Returns**
 
@@ -622,7 +636,7 @@ Returns **true** if successful, **false** if not.
 Project.importSequences()
 *********************************************
 
-``app.project.importSequences(pathOfContainingProject, arrayOfSequenceIDs)``
+``app.project.importSequences(path, sequenceIDs)``
 
 **Description**
 
@@ -630,7 +644,12 @@ Imports an array of :ref:`sequence <sequence>` objects (with specified sequenceI
 
 **Parameters**
 
-*String* containing the full path to the containing project file, and an *Array* of sequenceIDs.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``path``          ``String``   A path to a project file.
+``sequenceIDs``   ``Array``    An array of sequence IDs to import.
+================  ===========  =======================
 
 **Returns**
 
@@ -664,7 +683,7 @@ Returns  **true** if copying is enabled; **false** if not.
 Project.newBarsAndTone()
 **************************************************
 
-``app.project.newBarsAndTone(width, height, timeBase, PARNum, PARDen, audioSampleRate, name);``
+``app.project.newBarsAndTone(width, height, timeBase, PARNum, PARDen, audioSampleRate, name)``
 
 **Description**
 
@@ -672,21 +691,17 @@ Creates a new :ref:`sequence` with the given name, based on the specified preset
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``width``                  |                                                   |
-+----------------------------+---------------------------------------------------+
-| ``height``                 |                                                   |
-+----------------------------+---------------------------------------------------+
-| ``timeBase``               | Timebase of new project item. One of these:       |
-+----------------------------+---------------------------------------------------+
-| ``PARNum``                 | Pixel aspect ration numerator.                    |
-+----------------------------+---------------------------------------------------+
-| ``PARDen``	             | Pixel aspect ration denominator.                  |
-+----------------------------+---------------------------------------------------+
-| ``audioSampleRate``        | audio sample rate.                                |
-+----------------------------+---------------------------------------------------+
-| ``name``                   | **String**, Name of new project item.             |
-+----------------------------+---------------------------------------------------+
+====================  ===========  =======================
+Argument              Type         Description
+====================  ===========  =======================
+``width``             ``Integer``   
+``height``            ``Integer``   
+``timeBase``                       A timebase for a new project item.
+``PARNum``            ``Integer``  Pixel aspect ration numerator. 
+``PARDen``            ``Integer``  Pixel aspect ration denominator. 
+``audioSampleRate``                Audio sample rate. 
+``name``              ``String``   Name for a new project item. 
+====================  ===========  =======================
 
 **Returns**
 
@@ -699,7 +714,7 @@ Returns a :ref:`projectItem` for the new bars and tone, or **0** if unsuccessful
 Project.newSequence()
 ***********************************************
 
-``app.project.newSequence(sequenceName, pathToSequencePreset)``
+``app.project.newSequence(name, pathToSequencePreset)``
 
 **Description**
 
@@ -707,11 +722,12 @@ Creates a new :ref:`sequence` with the given name, based on the specified preset
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``sequenceName``           | **String**, Name of new sequence.                 |
-+----------------------------+---------------------------------------------------+
-| ``pathToSequencePreset``   | **String**, path to .sqpreset file.               |
-+----------------------------+---------------------------------------------------+
+=========================  ===========  =======================
+Argument                   Type         Description
+=========================  ===========  =======================
+``name``                   ``String``   Name for a new sequence. 
+``pathToSequencePreset``   ``String``   A path to a preset .sqpreset file. 
+=========================  ===========  =======================
 
 **Returns**
 
@@ -732,7 +748,11 @@ Makes the :ref:`sequence` with the provided sequence ID, active. This will open 
 
 **Parameters**
 
-A valid :ref:`sequence.id`.
+================  ==================  =======================
+Argument          Type                Description
+================  ==================  =======================
+``sequenceID``    :ref:`sequence.id`  A valid sequence ID that should be opened.
+================  ==================  =======================
 
 **Returns**
 
@@ -745,7 +765,7 @@ Returns **true** if successful, **false** if not.
 Project.pauseGrowing()
 *********************************************
 
-``app.project.pauseGrowing(pausedOrNot)``
+``app.project.pauseGrowing(pause)``
 
 **Description**
 
@@ -753,7 +773,11 @@ Pauses (and resumes) growing file capture.
 
 **Parameters**
 
-An **int**; if 1, growing files are enabled.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``pause``         ``Integer``  If ``1``, growing files are enabled.
+================  ===========  =======================
 
 **Returns**
 
@@ -787,7 +811,7 @@ Returns **0** if successful.
 Project.saveAs()
 *********************************************
 
-``app.project.saveAs(pathToNewProject)``
+``app.project.saveAs(path)``
 
 **Description**
 
@@ -795,7 +819,11 @@ Exports the current project to a new unique file path, opens the project from th
 
 **Parameters**
 
-A **String** specifying the new path.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``path``          ``String``   A path to a new file.
+================  ===========  =======================
 
 **Returns**
 
@@ -808,7 +836,7 @@ Returns **0** if successful, or an error code if not.
 Project.setEnableTranscodeOnIngest()
 *****************************************************************************
 
-``app.project.setEnableTranscodeOnIngest(FirstAutoSaveFolder);``
+``app.project.setEnableTranscodeOnIngest(state);``
 
 **Description**
 
@@ -816,7 +844,11 @@ Controls the enablement of transcode-upon-ingest behavior, for the given project
 
 **Parameters**
 
-A Boolean indicating the desired state.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``state``         ``Boolean``  The desired state.
+================  ===========  =======================
 
 **Returns**
 
@@ -829,7 +861,7 @@ Returns **true** if successful.
 Project.setGraphicsWhiteLuminance()
 *****************************************************************************
 
-``app.project.setGraphicsWhiteLuminance(newValue);``
+``app.project.setGraphicsWhiteLuminance(value)``
 
 **Description**
 
@@ -837,7 +869,11 @@ Sets the current graphics white luminance value, for this project.
 
 **Parameters**
 
-An integer specifying the value to be used; must be a value provided by ``getSupportedGraphicsWhiteLuminances()``.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``value``         ``Integer``  The value to be used; must be a value provided by :ref:`project.getSupportedGraphicsWhiteLuminances`.
+================  ===========  =======================
 
 **Returns**
 
@@ -850,7 +886,7 @@ Returns true if successful.
 Project.setProjectPanelMetadata()
 *********************************************
 
-``app.project.setProjectPanelMetadata(updatedLayoutAsString)``
+``app.project.setProjectPanelMetadata(layout)``
 
 **Description**
 
@@ -858,7 +894,11 @@ Returns the current layout of the Project panel.
 
 **Parameters**
 
-**updatedLayoutAsString** represents the desired Project panel layout. Note: The only known method for generating a valid layout string, is setting the Project panel as desired then using project.getProjectPanelMetadata_.
+=========================  ===========  =======================
+Argument                   Type         Description
+=========================  ===========  =======================
+``layout``                 ``String``   Represents the desired Project panel layout. Note: The only known method for generating a valid layout string, is setting the Project panel as desired then using :ref:`project.getProjectPanelMetadata`.
+=========================  ===========  =======================
 
 **Returns**
 
@@ -879,17 +919,18 @@ Changes the specified scratch disk path to a new path.
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``newPath``                | New path value.                                   |
-+----------------------------+---------------------------------------------------+
-| ``whichScratchDiskPath``   | Must be one of the following:                     |
-|                            |  - ``ScratchDiskType.FirstVideoCaptureFolder``    |
-|                            |  - ``ScratchDiskType.FirstAudioPreviewFolder``    |
-|                            |  - ``ScratchDiskType.FirstAutoSaveFolder``        |
-|                            |  - ``ScratchDiskType.FirstCCLibrariesFolder``     |
-|                            |  - ``ScratchDiskType.FirstVideoCaptureFolder``    |
-|                            |  - ``ScratchDiskType.FirstAudioCaptureFolder``    |
-+----------------------------+---------------------------------------------------+
+=========================  ===========  =======================
+Argument                   Type         Description
+=========================  ===========  =======================
+``newPath``                ``String``   A new path.
+``whichScratchDiskPath``                Must be one of the following: 
+
+                                        - ``ScratchDiskType.FirstVideoCaptureFolder`` 
+                                        - ``ScratchDiskType.FirstAudioPreviewFolder``
+                                        - ``ScratchDiskType.FirstAutoSaveFolder`` 
+                                        - ``ScratchDiskType.FirstCCLibrariesFolder`` 
+                                        - ``ScratchDiskType.FirstAudioCaptureFolder``
+=========================  ===========  =======================
 
 **Returns**
 

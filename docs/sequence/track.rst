@@ -117,8 +117,8 @@ Methods
 Track.insertClip()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].insertClip(srcProjectItem, time)``
-|	``app.project.sequences[index].videoTracks[index].insertClip(srcProjectItem, time)``
+|	``app.project.sequences[index].audioTracks[index].insertClip(projectItem, time)``
+|	``app.project.sequences[index].videoTracks[index].insertClip(projectItem, time)``
 
 **Description**
 
@@ -126,7 +126,12 @@ Adds a 'clip' (media segment from a :ref:`projectItem`) to the track, at the spe
 
 **Parameters**
 
-A :ref:`projectItem` from which to get media, and the time at which to add it, in Ticks.
+================  ===================  =======================
+Argument          Type                 Description
+================  ===================  =======================
+``projectItem``   :ref:`projectItem`   A project item from which to get media.
+``time``          ``String``           The time at which to add project item, in **Ticks**.
+================  ===================  =======================
 
 **Returns**
 
@@ -161,8 +166,8 @@ Returns **true** if track is currently muted; **false** if not.
 Track.overwriteClip()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].overwriteClip(srcProjectItem, time)``
-|	``app.project.sequences[index].videoTracks[index].overwriteClip(srcProjectItem, time)``
+|	``app.project.sequences[index].audioTracks[index].overwriteClip(projectItem, time)``
+|	``app.project.sequences[index].videoTracks[index].overwriteClip(projectItem, time)``
 
 **Description**
 
@@ -170,7 +175,12 @@ Adds a 'clip' (media segment from a :ref:`projectItem`) to the track, at the spe
 
 **Parameters**
 
-A :ref:`projectItem` from which to get media, and the time at which to add it, in Ticks.
+================  ===================  =======================
+Argument          Type                 Description
+================  ===================  =======================
+``projectItem``   :ref:`projectItem`   A project item from which to get media.
+``time``          ``String``           The time at which to add project item, in **Ticks**.
+================  ===================  =======================
 
 **Returns**
 
@@ -192,7 +202,11 @@ Sets the mute state, of the track.
 
 **Parameters**
 
-Integer; if **1**, mute the track. If ``isMuted`` is **0**, the track will be unmuted.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``isMuted``       ``Integer``  If ``1``, mute the track. If ``0``, the track will be unmuted.
+================  ===========  =======================
 
 **Returns**
 

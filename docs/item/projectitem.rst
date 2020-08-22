@@ -187,7 +187,7 @@ Methods
 ProjectItem.attachProxy()
 *********************************************
 
-``app.project.rootItem.children[index].attachProxy(String newMediaPath, int isHiRes)``
+``app.project.rootItem.children[index].attachProxy(mediaPath, isHiRes)``
 
 **Description**
 
@@ -195,7 +195,13 @@ Attaches the media at ``newMediaPath`` to the project item, as either hi-res or 
 
 **Parameters**
 
-The path the the newly-assigned media (as String), and an **int** indicating whether the new media should be attached as the proxy (**0**) or high resolution (**1**) media.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``mediaPath``     ``String``   The path to the the newly-assigned media.
+``isHiRes``       ``Integer``  Whether the new media should be attached as the proxy ``0``, or high resolution ``1`` media.
+================  ===========  =======================
+
 
 **Returns**
 
@@ -250,7 +256,7 @@ Returns **true** if the project item permits a proxy to be attached; **false** i
 ProjectItem.changeMediaPath()
 *********************************************
 
-``app.project.rootItem.children[index].changeMediaPath(String newPath)``
+``app.project.rootItem.children[index].changeMediaPath(newPath)``
 
 **Description**
 
@@ -258,7 +264,11 @@ Updates the project item to point to a new media path.
 
 **Parameters**
 
-A String, representing the new path.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``newPath``       ``String``   A new path to the media file.
+================  ===========  =======================
 
 **Returns**
 
@@ -292,7 +302,7 @@ Returns ``0`` if successful.
 ProjectItem.createBin()
 *********************************************
 
-``app.project.rootItem.children[index].createBin(String nameOfNewBin)``
+``app.project.rootItem.children[index].createBin(name)``
 
 **Description**
 
@@ -300,7 +310,11 @@ Creates an empty bin, within the project item. Only works within bins.
 
 **Parameters**
 
-Name of new bin.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``name``          ``String``   A name of a new bin.
+================  ===========  =======================
 
 **Returns**
 
@@ -313,7 +327,7 @@ Returns **0** if creation of bin was successful.
 ProjectItem.createSmartBin()
 *********************************************
 
-``app.project.rootItem.children[index].createSmartBin(String nameOfNewBin, String queryString)``
+``app.project.rootItem.children[index].createSmartBin(name, queryString)``
 
 **Description**
 
@@ -321,7 +335,12 @@ Creates a search bin; only works for bin project items.
 
 **Parameters**
 
-Name of new bin. Query string for search.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``name``          ``String``   A name of a new bin.
+``queryString``   ``String``   Query string for search.
+================  ===========  =======================
 
 **Returns**
 
@@ -334,7 +353,7 @@ Returns **0** if creation if smart bin was successful.
 ProjectItem.createSubClip()
 *********************************************
 
-``app.project.rootItem.children[index].createSubClip(subclipName, startTime, endTime,hasHardBoundaries, takeAudio, takeVideo)``
+``app.project.rootItem.children[index].createSubClip(name, startTime, endTime, hasHardBoundaries, takeAudio, takeVideo)``
 
 **Description**
 
@@ -342,19 +361,16 @@ Creates a new project item for a sub-clip of the existing project item.
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``subclipName``            | Name of new subclip.                              |
-+----------------------------+---------------------------------------------------+
-| ``startTime``              | Start time of subclip, in **Ticks**.              |
-+----------------------------+---------------------------------------------------+
-| ``endTime``                | End time of subclip, in **Ticks**.                |
-+----------------------------+---------------------------------------------------+
-| ``hasHardBoundaries``      | 0 or 1; if 1, the user cannot extend in and out.  |
-+----------------------------+---------------------------------------------------+
-| ``takeVideo``              | 0 or 1; if 1, use video from source.              |
-+----------------------------+---------------------------------------------------+
-| ``takeAudio``              | 0 or 1; if 1, use video from source.              |
-+----------------------------+---------------------------------------------------+
+======================  ===========  =======================
+Argument                Type         Description
+======================  ===========  =======================
+``name``                ``String``   A name of a new subclip.
+``startTime``           ``String``   Start time of subclip, in **Ticks**. 
+``endTime``             ``String``   End time of subclip, in **Ticks**.
+``hasHardBoundaries``   ``Integer``  If ``1``, the user cannot extend `in` and `out`.
+``takeAudio``           ``Integer``  If ``1``, use video from source. 
+``takeVideo``           ``Integer``  If ``1``, use video from source. 
+======================  ===========  =======================
 
 **Returns**
 
@@ -396,11 +412,12 @@ Returns an array of project items, all of which reference the same media path.
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``pathToMatch``            | Path to match, as **String**.                     |
-+----------------------------+---------------------------------------------------+
-| ``ignoreSubClips``         | 0 or 1; if 1, no subclips will be returned.       |
-+----------------------------+---------------------------------------------------+
+===================  ===========  =======================
+Argument             Type         Description
+===================  ===========  =======================
+``pathToMatch``      ``String``   A path to match.
+``ignoreSubClips``   ``Integer``  If ``1``, no subclips will be returned. 
+===================  ===========  =======================
 
 **Returns**
 
@@ -582,7 +599,11 @@ Retrieves the current out point for specified media type.
 
 **Parameters**
 
-mediaType is an ``int``; pass ``1`` for video only, or ``2`` for audio only. If no ``mediaType`` is passed, function gets the out point for all media.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``mediaType``     ``Integer``  Pass ``1`` for video only, or ``2`` for audio only. If no ``mediaType`` is passed, function gets the out point for all media.
+================  ===========  =======================
 
 **Returns**
 
@@ -813,7 +834,11 @@ Changes name of bin. Only works on project items which are bins.
 
 **Parameters**
 
-New bin name.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``newName``       ``String``   A new bin name.
+================  ===========  =======================
 
 **Returns**
 
@@ -847,7 +872,7 @@ Returns **0** if the project item has successfully been made the target, for sub
 ProjectItem.setColorLabel()
 *********************************************
 
-``app.project.rootItem.children[index].setColorLabel(newLabelColor)``
+``app.project.rootItem.children[index].setColorLabel(labelColor)``
 
 **Description**
 
@@ -855,7 +880,11 @@ Sets the project item's color label.
 
 **Parameters**
 
-New label color; see :ref:`projectItem.getColorLabel`.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``labelColor``    ``Integer``  A label color; see :ref:`projectItem.getColorLabel`.
+================  ===========  =======================
 
 **Returns**
 
@@ -868,7 +897,7 @@ New label color; see :ref:`projectItem.getColorLabel`.
 ProjectItem.setFootageInterpretation()
 *********************************************
 
-``app.project.rootItem.children[index].setFootageInterpretation(newInterpretation)``
+``app.project.rootItem.children[index].setFootageInterpretation(interpretation)``
 
 **Description**
 
@@ -876,7 +905,11 @@ Returns a structure describing the current interpretation of the projectItem.
 
 **Parameters**
 
-A footage interpretation structure.
+===================  ===========  =======================
+Argument             Type         Description
+===================  ===========  =======================
+``interpretation``                A footage interpretation structure.
+===================  ===========  =======================
 
 **Returns**
 
@@ -889,7 +922,7 @@ A footage interpretation structure.
 ProjectItem.setInPoint()
 *********************************************
 
-``app.project.rootItem.children[index].setInPoint(timeInTicks, mediaType)``
+``app.project.rootItem.children[index].setInPoint(time, mediaType)``
 
 **Description**
 
@@ -897,7 +930,12 @@ Sets the in point to ``timeInTicks``, for specified media types.
 
 **Parameters**
 
-A :ref:`time`, and an ``int`` determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          ``String``   A time in **Ticks**.
+``mediaType``     ``Integer``  Determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
+================  ===========  =======================
 
 **Returns**
 
@@ -931,7 +969,7 @@ None.
 ProjectItem.setOutPoint()
 *********************************************
 
-``app.project.rootItem.children[index].setOutPoint(timeInTicks, mediaType)``
+``app.project.rootItem.children[index].setOutPoint(time, mediaType)``
 
 **Description**
 
@@ -939,7 +977,12 @@ Sets the out point to ``timeInTicks``, for specified media types.
 
 **Parameters**
 
-A :ref:`time`, and an ``int`` determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          ``String``   A time in **Ticks**.
+``mediaType``     ``Integer``  Determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
+================  ===========  =======================
 
 **Returns**
 
@@ -952,7 +995,7 @@ Returns ``0`` if successful.
 ProjectItem.setOverrideFrameRate()
 *********************************************
 
-``app.project.rootItem.children[index].setOverrideFrameRate(float newFrameRate)``
+``app.project.rootItem.children[index].setOverrideFrameRate(newFrameRate)``
 
 **Description**
 
@@ -960,7 +1003,11 @@ Sets the frame rate of the project item.
 
 **Parameters**
 
-**Float** representing the new frame rate.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``newFrameRate``  ``Float``    The new frame rate.
+================  ===========  =======================
 
 **Returns**
 
@@ -973,7 +1020,7 @@ Returns **0** if the frame rate has successfully been changed.
 ProjectItem.setOverridePixelAspectRatio()
 *********************************************
 
-``app.project.rootItem.children[index].setOverridePixelAspectRatio(int numerator, int denominator)``
+``app.project.rootItem.children[index].setOverridePixelAspectRatio(numerator, denominator)``
 
 **Description**
 
@@ -981,7 +1028,12 @@ Sets the pixel aspect ratio for the project item.
 
 **Parameters**
 
-Integers representing the new numerator and denominator.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``numerator``     ``Integer``  A new numerator.
+``denominator``   ``Integer``  A new denominator.
+================  ===========  =======================
 
 **Returns**
 
@@ -994,7 +1046,7 @@ Returns **0** if the aspect ratio has successfully been changed.
 ProjectItem.setProjectMetadata()
 *********************************************
 
-``app.project.rootItem.children[index].setProjectMetadata(String newPrivateProjectMetadata, arrayOfUpdatedFields)``
+``app.project.rootItem.children[index].setProjectMetadata(newMetadata, updatedFields)``
 
 **Description**
 
@@ -1002,7 +1054,12 @@ Sets the private project metadata associated with the project item.
 
 **Parameters**
 
-A String representing the new, serialized private project metadata, and an array containing the names of the fields to be updated.
+==============================  ===========  =======================
+Argument                        Type         Description
+==============================  ===========  =======================
+``newMetadata``                 ``String``   A new, serialized private project metadata.
+``updatedFields``               ``Array``    An array containing the names of the fields to be updated.
+==============================  ===========  =======================
 
 **Returns**
 
@@ -1036,7 +1093,7 @@ Undefined return value.
 ProjectItem.setStartTime()
 *********************************************
 
-``app.project.rootItem.children[index].setStartTime(timeInTicks)``
+``app.project.rootItem.children[index].setStartTime(time)``
 
 **Description**
 
@@ -1044,7 +1101,11 @@ Assigns a new start time to the project item
 
 **Parameters**
 
-New starting time, represented in ticks.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          ``String``   A new starting time, represented in **Ticks**.
+================  ===========  =======================
 
 **Returns**
 
@@ -1057,7 +1118,7 @@ Returns ``0`` if successful.
 ProjectItem.setXMPMetadata()
 *********************************************
 
-``app.project.rootItem.children[index].setXMPMetadata(newXMPAsString)``
+``app.project.rootItem.children[index].setXMPMetadata(newXMP)``
 
 **Description**
 
@@ -1065,7 +1126,11 @@ Sets the XMP metadata associated with the project item.
 
 **Parameters**
 
-A String representing the new, serialized XMP metadata.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``newXMP``        ``String``   A new, serialized XMP metadata.
+================  ===========  =======================
 
 **Returns**
 

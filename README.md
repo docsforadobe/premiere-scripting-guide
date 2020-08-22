@@ -89,3 +89,15 @@ To refer to the above anchor, you can use either:
 ```
 
 These will both search project-wide for the link. Any duplicates or malformed links will be reported upon build in your console window.
+
+### Parameters ###
+
+For consistency, please use the table below to defined function arguments and their types:
+
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``argument1``     ``type``     What it's all about
+``argument2``     ``type``     What it's all about
+``argument3``     ``type``     What it's all about
+================  ===========  =======================

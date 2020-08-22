@@ -272,17 +272,20 @@ Generates a new, auto-reframed sequence.
 
 **Parameters**
 
-+----------------------------+------------------------------------------------------------------------+
-| ``numerator``              | Numerator of desired frame aspect ratio.                               |
-+----------------------------+------------------------------------------------------------------------+
-| ``denominator``            | Denominator of desired frame aspect ratio.                             |
-+----------------------------+------------------------------------------------------------------------+
-| ``motionPreset``           | Valid values: `'slower'`, `'default'`, or `'faster'` motion.           |
-+----------------------------+------------------------------------------------------------------------+
-| ``newName``                | Name for newly-created sequence.                                       |
-+----------------------------+------------------------------------------------------------------------+
-| ``useNestedSequences``     | Boolean indicating whether to honor nested sequence.                   |
-+----------------------------+------------------------------------------------------------------------+
+=======================  ===========  =======================
+Argument                 Type         Description
+=======================  ===========  =======================
+``numerator``            ``Integer``  Numerator of desired frame aspect ratio.  
+``denominator``          ``Integer``  Denominator of desired frame aspect ratio.  
+``motionPreset``         ``String``   One of:
+
+                                      - "slower"
+                                      - "default"
+                                      - "faster"
+
+``newName``              ``String``   A name for a newly created sequence. 
+``useNestedSequences``   ``Boolean``  Whether to honor nested sequence. 
+=======================  ===========  =======================
 
 **Returns**
 
@@ -324,7 +327,11 @@ Creates a new sequence, which is a sub-sequence of the existing sequence.
 
 **Parameters**
 
-A ``Boolean`` indicating whether the new sequence should ignore the channel mapping present in the original sequence.
+=========================  ===========  =======================
+Argument                   Type         Description
+=========================  ===========  =======================
+``ignoreChannelMapping``   ``Boolean``  Whether the new sequence should ignore the channel mapping present in the original sequence.
+=========================  ===========  =======================
 
 **Returns**
 
@@ -345,7 +352,11 @@ Creates a new FCP XML representation of the sequence, and its constituent media.
 
 **Parameters**
 
-String ``outputPath`` specifying the output path for the new FCP XML file.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``outputPath``    ``String``   The output path for the new FCP XML file.
+================  ===========  =======================
 
 **Returns**
 
@@ -366,18 +377,17 @@ Renders the sequence to the specified output path, using the specified output pr
 
 **Parameters**
 
-+----------------------------+---------------------------------------------------+
-| ``outputPath``             | **String**, Name of property to be added.         |
-+----------------------------+---------------------------------------------------+
-| ``presetPath``             | **String**, Label of property to be added.        |
-+----------------------------+---------------------------------------------------+
-| ``workAreaType``           | Must be one of the following:                     |
-|                            |    - 0 ENCODE_ENTIRE                              |
-|                            |    - 1 ENCODE_IN_TO_OUT                           |
-|                            |    - 2 ENCODE_WORK_AREA                           |
-+----------------------------+---------------------------------------------------+
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``outputPath``    ``String``   An output path, to which to render the media.
+``presetPath``    ``String``   ???
+``workAreaType``               Must be one of the following:
 
-String ``outputPath`` specifying the output path, to which to render the media.
+                               - 0 ``ENCODE_ENTIRE``
+                               - 1 ``ENCODE_IN_TO_OUT``
+                               - 2 ``ENCODE_WORK_AREA``
+================  ===========  =======================
 
 **Returns**
 
@@ -398,7 +408,11 @@ Creates a new :ref:`project` containing only the given sequence, and its constit
 
 **Parameters**
 
-String ``outputPath`` specifying the output path for the new project.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``outputPath``    ``String``   The output path for the new project.
+================  ===========  =======================
 
 **Returns**
 
@@ -419,7 +433,11 @@ Retrieves the file extension associated with the current sequence.
 
 **Parameters**
 
-String ``outputPresetPath`` specifying the output preset to be used.
+====================  ===========  =======================
+Argument              Type         Description
+====================  ===========  =======================
+``outputPresetPath``  ``String``   The output preset to be used.
+====================  ===========  =======================
 
 **Returns**
 
@@ -524,7 +542,7 @@ Retrieves the current player position, in Ticks.
 
 **Parameters**
 
-None
+None.
 
 **Returns**
 
@@ -678,7 +696,7 @@ Returns ``true`` if analysis is complete.
 Sequence.performSceneEditDetectionOnSelection()
 *******************************************************************************************************
 
-``app.project.sequences[index].performSceneEditDetectionOnSelection(actionDesired, ApplyCutsToLinkedAudio, sensitivity)``
+``app.project.sequences[index].performSceneEditDetectionOnSelection(actionDesired, applyCutsToLinkedAudio, sensitivity)``
 
 **Description**
 
@@ -686,13 +704,20 @@ Performs cut detection on the sequence selection.
 
 **Parameters**
 
-+----------------------------+------------------------------------------------------------------------+
-| ``actionDesired``          | `'CreateMarkers'` or `'ApplyCuts'`.                                    |
-+----------------------------+------------------------------------------------------------------------+
-| ``ApplyCutsToLinkedAudio`` | Boolean.                                                               |
-+----------------------------+------------------------------------------------------------------------+
-| ``sensitivity``            | `'LowSensitivity'`, `'MediumSensitivity'`, or `'HighSensitivity'`.     |
-+----------------------------+------------------------------------------------------------------------+
+===========================  ===========  =======================
+Argument                     Type         Description
+===========================  ===========  =======================
+``actionDesired``            ``String``   One of:
+
+                                          - "CreateMarkers"
+                                          - "ApplyCuts"
+``applyCutsToLinkedAudio``   ``Boolean``  
+``sensitivity``              ``String``   One of:
+
+                                          - "LowSensitivity"
+                                          - "MediumSensitivity"
+                                          - "HighSensitivity"
+===========================  ===========  =======================
 
 **Returns**
 
@@ -705,7 +730,7 @@ Returns `true` if successful.
 Sequence.setInPoint()
 *********************************************
 
-``app.project.sequences[index].setInPoint(newTimeInTicks)``
+``app.project.sequences[index].setInPoint(time)``
 
 **Description**
 
@@ -713,7 +738,11 @@ Specifies a new sequence in point.
 
 **Parameters**
 
-An integer, **newTimeInTicks**.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          ``String``   A new time in **ticks**.
+================  ===========  =======================
 
 **Returns**
 
@@ -726,7 +755,7 @@ Returns **0** if successful.
 Sequence.setOutPoint()
 *********************************************
 
-``app.project.sequences[index].setOutPoint(newTimeInTicks)``
+``app.project.sequences[index].setOutPoint(time)``
 
 **Description**
 
@@ -734,7 +763,11 @@ Specifies a new sequence out point.
 
 **Parameters**
 
-An integer, **newTimeInTicks**.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          ``String``   A new time in **ticks**.
+================  ===========  =======================
 
 **Returns**
 
@@ -747,7 +780,7 @@ Returns **0** if successful.
 Sequence.setPlayerPosition()
 *********************************************
 
-``app.project.sequences[index].setPlayerPosition(newTimeInTicks)``
+``app.project.sequences[index].setPlayerPosition(time)``
 
 **Description**
 
@@ -755,7 +788,11 @@ Specifies a new player position, in Ticks, as a String.
 
 **Parameters**
 
-A String referenced the **newTimeInTicks**.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``time``          ``String``   A new time in **ticks**.
+================  ===========  =======================
 
 **Returns**
 
@@ -776,7 +813,11 @@ Sets the settings of the current sequence. *[Editorial: I apologize for any perc
 
 **Parameters**
 
-``sequenceSettings`` is a sequence settings structure, obtained via :ref:`sequence.getSettings() <sequence.getSettings>`.
+=====================  ===========  =======================
+Argument               Type         Description
+=====================  ===========  =======================
+``sequenceSettings``                A sequence settings structure, obtained via :ref:`Sequence.getSettings() <sequence.getSettings>`.
+=====================  ===========  =======================
 
 **Returns**
 
@@ -795,7 +836,11 @@ Set the starting time of the sequence.
 
 **Parameters**
 
-An integer, specifying the new zero point, in ticks, as a String.
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``newZeroPoint``  ``String``   The new zero point in **ticks**.
+================  ===========  =======================
 
 **Type**
 

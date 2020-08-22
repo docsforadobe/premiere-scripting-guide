@@ -128,7 +128,7 @@ Methods
 Marker.getColorByIndex()
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().getColorByIndex(markerIndex)``
+``app.project.activeSequence.getFirstMarker().getColorByIndex(index)``
 
 .. note::
 	This functionality was added in Adobe Premire Pro 13.x.
@@ -139,11 +139,11 @@ Gets the marker color index.
 
 **Parameters**
 
-===================   ==============================================
-
-``markerIndex``       Index of the marker to be read.
-
-===================   ==============================================
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``index``         ``Integer``  Index of the marker to be read.
+================  ===========  =======================
 
 **Returns**
 
@@ -218,13 +218,12 @@ Sets the marker color by index. Color indexies listed below.
 
 **Parameters**
 
-===================   ==============================================
-
-``colorIndex``        Index of the color to apply to the marker.
-
-``markerIndex``        Index of the marker to be set.
-
-===================   ==============================================
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``colorIndex``    ``Integer``  Index of the color to apply to the marker.
+``markerIndex``   ``Integer``  Index of the marker to be set.
+================  ===========  =======================
 
 **Returns**
 
