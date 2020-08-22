@@ -1,6 +1,6 @@
 .. highlight:: javascript
 
-.. AudioChannelMapping:
+.. _audioChannelMapping:
 
 AudioChannelMapping object
 ==========================
