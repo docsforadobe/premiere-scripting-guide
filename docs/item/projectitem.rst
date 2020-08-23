@@ -104,6 +104,19 @@ The name of the project item.
 
 String; read/write.
 
+**Example**
+
+Rename first project item.
+
+.. code:: javascript
+
+	var item = app.project.rootItem.children[0];
+	if (item) {
+		item.name = item.name + ', updated by PProPanel.';
+	} else {
+		alert('Could not rename project item');
+	}
+
 ----
 
 .. _projectItem.nodeId:

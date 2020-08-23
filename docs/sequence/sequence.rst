@@ -289,7 +289,30 @@ Argument                 Type         Description
 
 **Returns**
 
-Returns the new Sequence object, if successful; `0` if unsuccessful.
+Returns the new :ref:`sequence`, if successful; `0` if unsuccessful.
+
+**Example**
+
+.. code:: javascript
+
+    var sequence = app.project.activeSequence;
+    if (sequence) {
+        var numerator = 1;
+        var denominator = 1;
+        var motionPreset = 'default'; // 'default', 'faster', 'slower'
+        var newName = sequence.name + ', auto-reframed.';
+        var useNestedSequences	= false;
+
+        var newSequence = sequence.autoReframeSequence(numerator, denominator, motionPreset, newName, useNestedSequences);
+
+        if (newSequence) {
+            alert('Created reframed sequence: ' + newName + '.');
+        } else {
+            alert('Failed to create re-framed sequence: ' + newName + '.');
+        }
+    } else {
+        alert('No active sequence');
+    }
 
 ----
 

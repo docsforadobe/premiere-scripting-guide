@@ -689,7 +689,7 @@ Returns 1 if proxy enablement was changed.
 app.setExtensionPersistent()
 ************************************************
 
-``app.setExtensionPersistent(extensionID, persist)``
+``app.setExtensionPersistent(extensionID, persistent)``
 
 **Description**
 
@@ -701,12 +701,23 @@ Whether extension with the given extensionID persists, within this session.
 Argument          Type         Description
 ================  ===========  =======================
 ``extensionID``   ``String``   Which extension to modify.
-``persist``       ``Integer``  Pass ``1`` to keep extension in memory, ``0`` to allow unloading.
+``persistent``    ``Integer``  Pass ``1`` to keep extension in memory, ``0`` to allow unloading.
 ================  ===========  =======================
 
 **Returns**
 
 Returns **true** if successful. 
+
+**Example**
+
+.. code:: javascript
+
+	var extensionID = 'com.adobe.PProPanel';
+	// 0 - while testing (to enable rapid reload);
+	// 1 - for "Never unload me, even when not visible."
+	var persistent = 0;
+
+	app.setExtensionPersistent(extensionID, persistent);
 
 ----
 
@@ -715,7 +726,7 @@ Returns **true** if successful.
 app.setScratchDiskPath()
 *********************************************
 
-``app.setScratchDiskPath(path, whichScratchValueToSet)``
+``app.setScratchDiskPath(path, scratchDiskType)``
 
 **Description**
 
@@ -727,19 +738,28 @@ Specifies the path to be used for one of Premiere Pro's scratch disk paths.
 Argument                    Type         Description
 ==========================  ===========  =======================
 ``path``                    ``String``   The new path to be used.
-``whichScratchValueToSet``  ``type``     Must be one of the following: 
+``scratchDiskType``         ``Enum``     Enumerated value, must be one of the following: 
 
-                                         | ``FirstAudioCaptureFolder``
-                                         | ``FirstVideoCaptureFolder``
-                                         | ``FirstAudioPreviewFolder``
-                                         | ``FirstAutoSaveFolder``
-                                         | ``FirstCCLibrariesFolder``
+                                         - ``ScratchDiskType.FirstAudioCaptureFolder``
+                                         - ``ScratchDiskType.FirstVideoCaptureFolder``
+                                         - ``ScratchDiskType.FirstAudioPreviewFolder``
+                                         - ``ScratchDiskType.FirstAutoSaveFolder``
+                                         - ``ScratchDiskType.FirstCCLibrariesFolder``
 ==========================  ===========  =======================
 
 **Returns**
 
 Returns 'true' if successful.
 
+**Example**
+
+.. code:: javascript
+
+    var scratchPath = Folder.selectDialog('Choose new scratch disk folder');
+    if (scratchPath && scratchPath.exists) {
+        app.setScratchDiskPath(scratchPath.fsName, ScratchDiskType.FirstAutoSaveFolder);
+    }
+	
 ----
 
 .. _app.setSDKEventMessage:
