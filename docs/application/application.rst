@@ -269,6 +269,23 @@ Get a path to applications executable file.
 
 ----
 
+.. _app.production:
+
+app.production
+*********************************************
+
+``app.production``
+
+**Description**
+
+The currently active production.
+
+**Type**
+
+:ref:`production` if at least 1 production is open, ``null`` otherwise.
+
+----
+
 .. _app.project:
 
 app.project

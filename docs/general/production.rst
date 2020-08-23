@@ -1,6 +1,6 @@
 .. highlight:: javascript
 
-.. Production:
+.. _production:
 
 Production object
 ===================
