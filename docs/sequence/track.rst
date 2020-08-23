@@ -5,8 +5,8 @@
 Track object
 ===================
 
-|	``app.project.sequences[index].audioTracks[index]``
-|	``app.project.sequences[index].videoTracks[index]``
+|   ``app.project.sequences[index].audioTracks[index]``
+|   ``app.project.sequences[index].videoTracks[index]``
 
 **Description**
 
@@ -23,8 +23,8 @@ Attributes
 Track.clips
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].clips``
-|	``app.project.sequences[index].videoTracks[index].clips``
+|   ``app.project.sequences[index].audioTracks[index].clips``
+|   ``app.project.sequences[index].videoTracks[index].clips``
 
 **Description**
 
@@ -41,8 +41,8 @@ An array of :ref:`Track item <trackItem>` objects, contained within the track, i
 Track.id
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].id``
-|	``app.project.sequences[index].videoTracks[index].id``
+|   ``app.project.sequences[index].audioTracks[index].id``
+|   ``app.project.sequences[index].videoTracks[index].id``
 
 **Description**
 
@@ -59,8 +59,8 @@ Integer, read-only.
 Track.mediaType
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].mediaType``
-|	``app.project.sequences[index].videoTracks[index].mediaType``
+|   ``app.project.sequences[index].audioTracks[index].mediaType``
+|   ``app.project.sequences[index].videoTracks[index].mediaType``
 
 **Description**
 
@@ -77,8 +77,8 @@ String, read-only; valid values are ``Audio`` and ``Video``.
 Track.name
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].name``
-|	``app.project.sequences[index].videoTracks[index].name``
+|   ``app.project.sequences[index].audioTracks[index].name``
+|   ``app.project.sequences[index].videoTracks[index].name``
 
 **Description**
 
@@ -95,8 +95,8 @@ String; read-only.
 Track.transitions
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].transitions``
-|	``app.project.sequences[index].videoTracks[index].transitions``
+|   ``app.project.sequences[index].audioTracks[index].transitions``
+|   ``app.project.sequences[index].videoTracks[index].transitions``
 
 **Description**
 
@@ -117,8 +117,8 @@ Methods
 Track.insertClip()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].insertClip(projectItem, time)``
-|	``app.project.sequences[index].videoTracks[index].insertClip(projectItem, time)``
+|   ``app.project.sequences[index].audioTracks[index].insertClip(projectItem, time)``
+|   ``app.project.sequences[index].videoTracks[index].insertClip(projectItem, time)``
 
 **Description**
 
@@ -144,8 +144,8 @@ None.
 Track.isMuted()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].isMuted()``
-|	``app.project.sequences[index].videoTracks[index].isMuted()``
+|   ``app.project.sequences[index].audioTracks[index].isMuted()``
+|   ``app.project.sequences[index].videoTracks[index].isMuted()``
 
 **Description**
 
@@ -166,8 +166,8 @@ Returns **true** if track is currently muted; **false** if not.
 Track.overwriteClip()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].overwriteClip(projectItem, time)``
-|	``app.project.sequences[index].videoTracks[index].overwriteClip(projectItem, time)``
+|   ``app.project.sequences[index].audioTracks[index].overwriteClip(projectItem, time)``
+|   ``app.project.sequences[index].videoTracks[index].overwriteClip(projectItem, time)``
 
 **Description**
 
@@ -193,8 +193,8 @@ Returns ``true``.
 Track.setMute()
 *********************************************
 
-|	``app.project.sequences[index].audioTracks[index].setMute(isMuted)``
-|	``app.project.sequences[index].videoTracks[index].setMute(isMuted)``
+|   ``app.project.sequences[index].audioTracks[index].setMute(isMuted)``
+|   ``app.project.sequences[index].videoTracks[index].setMute(isMuted)``
 
 **Description**
 

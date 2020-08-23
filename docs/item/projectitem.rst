@@ -66,22 +66,22 @@ Returns an object, containing similar data
 
 .. code:: javascript
 
-	{
-		value: [
-			sRGB,
-			BT.601 (NTSC),
-			BT.601 (PAL),
-			BT.709,
-			BT.709 (Scene),
-			BT.2020,
-			BT.2020 (Scene),
-			BT.2100 PQ,
-			BT.2100 PQ (Scene),
-			BT.2100 HLG,
-			BT.2100 HLG (Scene),
-			DCDM XYZ,
-		]
-	};
+    {
+        value: [
+            sRGB,
+            BT.601 (NTSC),
+            BT.601 (PAL),
+            BT.709,
+            BT.709 (Scene),
+            BT.2020,
+            BT.2020 (Scene),
+            BT.2100 PQ,
+            BT.2100 PQ (Scene),
+            BT.2100 HLG,
+            BT.2100 HLG (Scene),
+            DCDM XYZ,
+        ]
+    };
 
 **Type**
 
@@ -110,12 +110,12 @@ Rename first project item.
 
 .. code:: javascript
 
-	var item = app.project.rootItem.children[0];
-	if (item) {
-		item.name = item.name + ', updated by PProPanel.';
-	} else {
-		alert('Could not rename project item');
-	}
+    var item = app.project.rootItem.children[0];
+    if (item) {
+        item.name = item.name + ', updated by PProPanel.';
+    } else {
+        alert('Could not rename project item');
+    }
 
 ----
 

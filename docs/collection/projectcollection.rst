@@ -5,12 +5,12 @@
 ProjectCollection object
 ################################################
 
-|	``app.projects``
-|	``app.production.projects``
+|   ``app.projects``
+|   ``app.production.projects``
 
 The ProjectCollection object represents a collection of :ref:`Project objects <project>`. 
 
-	ProjectCollection is a subclass of :ref:`collection`. All methods and attributes of Collection, in addition to those listed below, are available when working with ProjectCollection.
+    ProjectCollection is a subclass of :ref:`collection`. All methods and attributes of Collection, in addition to those listed below, are available when working with ProjectCollection.
 
 ----
 
@@ -23,8 +23,8 @@ Attributes
 ProjectCollection.numProjects
 *********************************************
 
-|	``app.projects.numProjects``
-|	``app.production.projects.numProjects``
+|   ``app.projects.numProjects``
+|   ``app.production.projects.numProjects``
 
 **Description**
 

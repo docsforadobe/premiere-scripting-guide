@@ -15,5 +15,5 @@ What's new and changed for scripting?
 ************************************************************************************************************************************
 
 - Scripting access to Marker colors:
-	- Added: :ref:`Marker.getColorByIndex`
-	- Added: :ref:`Marker.setColorByIndex`
+    - Added: :ref:`Marker.getColorByIndex`
+    - Added: :ref:`Marker.setColorByIndex`

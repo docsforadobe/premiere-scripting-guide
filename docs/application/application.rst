@@ -56,7 +56,7 @@ Get a build version of current application *(Adobe Premiere Pro version 14.3.1 (
 
 .. code:: javascript
 
-	parseInt(app.build); // 45
+    parseInt(app.build); // 45
 
 ----
 
@@ -98,7 +98,7 @@ Get a path to a currently active preference file
 
 .. code:: javascript
 
-	app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
+    app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 
 ----
 
@@ -123,7 +123,7 @@ Get a path to a currently active configuration folder
 
 .. code:: javascript
 
-	app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
+    app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 
 ----
 
@@ -148,7 +148,7 @@ Get a path to a currently active preference file
 
 .. code:: javascript
 
-	app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
+    app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 
 ----
 
@@ -173,7 +173,7 @@ Get a path to a currently active configuration folder
 
 .. code:: javascript
 
-	app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
+    app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 
 ----
 
@@ -198,7 +198,7 @@ Get a path to a Learn panel's directory
 
 .. code:: javascript
 
-	app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/
+    app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/
 
 ----
 
@@ -223,7 +223,7 @@ Get a path to a Learn panel's example projects' directory
 
 .. code:: javascript
 
-	app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/
+    app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/
 
 ----
 
@@ -265,7 +265,7 @@ Get a path to applications executable file.
 
 .. code:: javascript
 
-	app.path; // /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
+    app.path; // /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
 
 ----
 
@@ -409,7 +409,7 @@ Get a version of a current application *(Adobe Premiere Pro version 14.3.1 (Buil
 
 .. code:: javascript
 
-	app.version; // 14.3.1
+    app.version; // 14.3.1
 
 ----
 
@@ -484,20 +484,20 @@ Get a list of available workspaces.
 
 .. code:: javascript
 
-	app.getWorkspaces();
-	/* [
-		"All Panels",
-		"Assembly",
-		"Audio",
-		"Color",
-		"Editing",
-		"Effects",
-		"Graphics",
-		"Learning",
-		"Libraries",
-		"Metalogging",
-		"Production"
-	]; */
+    app.getWorkspaces();
+    /* [
+        "All Panels",
+        "Assembly",
+        "Audio",
+        "Color",
+        "Editing",
+        "Effects",
+        "Graphics",
+        "Learning",
+        "Libraries",
+        "Metalogging",
+        "Production"
+    ]; */
 
 ----
 
@@ -530,10 +530,10 @@ Test for valid project files
 
 .. code:: javascript
 
-	app.isDocument('~/Desktop/myProject.prproj'); // true
-	app.isDocument('~/Desktop/textFile.txt');     // false
-	app.isDocument('~/Desktop/footageFile.mov');  // false
-	app.isDocument('~/Desktop/imageFile.mov');    // false
+    app.isDocument('~/Desktop/myProject.prproj'); // true
+    app.isDocument('~/Desktop/textFile.txt');     // false
+    app.isDocument('~/Desktop/footageFile.mov');  // false
+    app.isDocument('~/Desktop/imageFile.mov');    // false
 
 ----
 
@@ -712,12 +712,12 @@ Returns **true** if successful.
 
 .. code:: javascript
 
-	var extensionID = 'com.adobe.PProPanel';
-	// 0 - while testing (to enable rapid reload);
-	// 1 - for "Never unload me, even when not visible."
-	var persistent = 0;
+    var extensionID = 'com.adobe.PProPanel';
+    // 0 - while testing (to enable rapid reload);
+    // 1 - for "Never unload me, even when not visible."
+    var persistent = 0;
 
-	app.setExtensionPersistent(extensionID, persistent);
+    app.setExtensionPersistent(extensionID, persistent);
 
 ----
 
@@ -759,7 +759,7 @@ Returns 'true' if successful.
     if (scratchPath && scratchPath.exists) {
         app.setScratchDiskPath(scratchPath.fsName, ScratchDiskType.FirstAutoSaveFolder);
     }
-	
+    
 ----
 
 .. _app.setSDKEventMessage:

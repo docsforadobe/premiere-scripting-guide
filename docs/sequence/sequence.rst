@@ -301,7 +301,7 @@ Returns the new :ref:`sequence`, if successful; `0` if unsuccessful.
         var denominator = 1;
         var motionPreset = 'default'; // 'default', 'faster', 'slower'
         var newName = sequence.name + ', auto-reframed.';
-        var useNestedSequences	= false;
+        var useNestedSequences  = false;
 
         var newSequence = sequence.autoReframeSequence(numerator, denominator, motionPreset, newName, useNestedSequences);
 

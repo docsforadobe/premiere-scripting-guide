@@ -9,7 +9,7 @@ MarkerCollection object
 
 The MarkerCollection object represents a collection of :ref:`Marker objects <marker>` in a :ref:`projectItem` and :ref:`sequence`. 
 
-	MarkerCollection is a subclass of :ref:`collection`. All methods and attributes of Collection, in addition to those listed below, are available when working with MarkerCollection.
+    MarkerCollection is a subclass of :ref:`collection`. All methods and attributes of Collection, in addition to those listed below, are available when working with MarkerCollection.
 
 ----
 

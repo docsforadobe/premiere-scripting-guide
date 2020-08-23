@@ -123,7 +123,7 @@ Get a path of a curently active project
 
 .. code:: javascript
 
-	app.project.path; // /Users/USERNAME/Desktop/Project.prproj
+    app.project.path; // /Users/USERNAME/Desktop/Project.prproj
 
 ----
 

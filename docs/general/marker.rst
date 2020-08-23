@@ -131,7 +131,7 @@ Marker.getColorByIndex()
 ``app.project.activeSequence.getFirstMarker().getColorByIndex(index)``
 
 .. note::
-	This functionality was added in Adobe Premire Pro 13.x.
+    This functionality was added in Adobe Premire Pro 13.x.
 
 **Description**
 
@@ -201,7 +201,7 @@ Marker.setColorByIndex()
 ``app.project.activeSequence.getFirstMarker().setColorByIndex(colorIndex, markerIndex)``
 
 .. note::
-	This functionality was added in Adobe Premire Pro 13.x.
+    This functionality was added in Adobe Premire Pro 13.x.
 
 **Description**
 
