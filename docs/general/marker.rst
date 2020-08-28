@@ -5,7 +5,7 @@
 Marker object
 ==========================
 
-``app.project.activeSequence.getFirstMarker()``
+``app.project.activeSequence.markers.getFirstMarker()``
 
 **Description**
 
@@ -22,7 +22,7 @@ Attributes
 Marker.comments
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().comments``
+``app.project.activeSequence.markers.getFirstMarker().comments``
 
 **Description**
 
@@ -39,7 +39,7 @@ String; read/write.
 Marker.end
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().end``
+``app.project.activeSequence.markers.getFirstMarker().end``
 
 **Description**
 
@@ -56,7 +56,7 @@ A :ref:`time` containing the value of the ending of the marker.
 Marker.guid
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().guid``
+``app.project.activeSequence.markers.getFirstMarker().guid``
 
 **Description**
 
@@ -73,7 +73,7 @@ String; read-only.
 Marker.name
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().name``
+``app.project.activeSequence.markers.getFirstMarker().name``
 
 **Description**
 
@@ -90,7 +90,7 @@ String; read/write.
 Marker.start
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().start``
+``app.project.activeSequence.markers.getFirstMarker().start``
 
 **Description**
 
@@ -107,7 +107,7 @@ A :ref:`time` containing the value of the beginning of the marker.
 Marker.type
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().type``
+``app.project.activeSequence.markers.getFirstMarker().type``
 
 **Description**
 
@@ -128,7 +128,7 @@ Methods
 Marker.getColorByIndex()
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().getColorByIndex(index)``
+``app.project.activeSequence.markers.getFirstMarker().getColorByIndex(index)``
 
 .. note::
     This functionality was added in Adobe Premire Pro 13.x.
@@ -156,7 +156,7 @@ Returns the color index as an ``Integer``.
 Marker.getWebLinkFrameTarget()
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().getWebLinkFrameTarget()``
+``app.project.activeSequence.markers.getFirstMarker().getWebLinkFrameTarget()``
 
 **Description**
 
@@ -177,7 +177,7 @@ Returns a ``String`` containing the frame target, or **0** if unsuccessful.
 Marker.getWebLinkURL()
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().getWebLinkURL()``
+``app.project.activeSequence.markers.getFirstMarker().getWebLinkURL()``
 
 **Description**
 
@@ -198,7 +198,7 @@ Returns a ``String`` containing the URL, or **0** if unsuccessful.
 Marker.setColorByIndex()
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().setColorByIndex(colorIndex, markerIndex)``
+``app.project.activeSequence.markers.getFirstMarker().setColorByIndex(colorIndex, markerIndex)``
 
 .. note::
     This functionality was added in Adobe Premire Pro 13.x.
@@ -236,7 +236,7 @@ Returns ``undefined``.
 Marker.setTypeAsChapter()
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().setTypeAsChapter()``
+``app.project.activeSequence.markers.getFirstMarker().setTypeAsChapter()``
 
 **Description**
 
@@ -257,7 +257,7 @@ Returns **0** if successful.
 Marker.setTypeAsComment()
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().setTypeAsComment()``
+``app.project.activeSequence.markers.getFirstMarker().setTypeAsComment()``
 
 **Description**
 
@@ -278,7 +278,7 @@ Returns **0** if successful.
 Marker.setTypeAsSegmentation()
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().setTypeAsSegmentation()``
+``app.project.activeSequence.markers.getFirstMarker().setTypeAsSegmentation()``
 
 **Description**
 
@@ -299,7 +299,7 @@ Returns **0** if successful.
 Marker.setTypeAsWebLink()
 *********************************************
 
-``app.project.activeSequence.getFirstMarker().setTypeAsWebLink()``
+``app.project.activeSequence.markers.getFirstMarker().setTypeAsWebLink()``
 
 **Description**
 
