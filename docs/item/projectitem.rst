@@ -277,11 +277,12 @@ Updates the project item to point to a new media path.
 
 **Parameters**
 
-================  ===========  =======================
-Argument          Type         Description
-================  ===========  =======================
-``newPath``       ``String``   A new path to the media file.
-================  ===========  =======================
+===================  ===========  =======================
+Argument             Type         Description
+===================  ===========  =======================
+``newPath``          ``String``   A new path to the media file.
+``overrideChecks``   ``Boolean``  Override any safety concerns.
+===================  ===========  =======================
 
 **Returns**
 
