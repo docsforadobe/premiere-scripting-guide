@@ -567,7 +567,7 @@ ProjectItem.getMarkers()
 
 **Description**
 
-Retrieves the :ref:`Marker <marker>` objects associated with this project item.
+Retrieves the :ref:`markerCollection` associated with this project item.
 
 **Parameters**
 
