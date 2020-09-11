@@ -332,7 +332,7 @@ Argument          Type         Description
 
 **Returns**
 
-Returns **0** if creation of bin was successful.
+Returns a project item representing the new bin if successful, or **0** if unsuccessful.
 
 ----
 
