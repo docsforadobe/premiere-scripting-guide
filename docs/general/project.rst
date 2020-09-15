@@ -740,7 +740,7 @@ Returns a :ref:`sequence`, or **0** if unsuccessful.
 Project.openSequence()
 *********************************************
 
-``app.project.openSequence(sequenceID)``
+``app.project.openSequence(sequence.sequenceID)``
 
 **Description**
 
@@ -748,11 +748,11 @@ Makes the :ref:`sequence` with the provided sequence ID, active. This will open 
 
 **Parameters**
 
-================  ==================  =======================
-Argument          Type                Description
-================  ==================  =======================
-``sequenceID``    :ref:`sequence.id`  A valid sequence ID that should be opened.
-================  ==================  =======================
+================  ===========================  =======================
+Argument          Type                         Description
+================  ===========================  =======================
+``sequenceID``    :ref:`sequence.sequenceID`   A valid sequence ID that should be opened.
+================  ===========================  =======================
 
 **Returns**
 
