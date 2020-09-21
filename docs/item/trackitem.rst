@@ -350,3 +350,53 @@ Argument          Type         Description
 **Returns**
 
 Returns **0** if successful.
+
+
+----
+
+.. _trackItem.getMatchName:
+
+TrackItem.getMatchName()
+*********************************************
+
+|   ``app.project.sequences[index].audioTracks[index].clips[index].getMatchName()``
+|   ``app.project.sequences[index].videoTracks[index].clips[index].getMatchName()``
+
+**Description**
+
+Retrieves the match name for the trackItem.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns the match name as a **String** if successful.
+
+----
+
+.. _trackItem.remove:
+
+TrackItem.remove()
+*********************************************
+
+|   ``app.project.sequences[index].audioTracks[index].clips[index].remove(inRipple, inAlignToVideo)``
+|   ``app.project.sequences[index].videoTracks[index].clips[index].remove(inRipple, inAlignToVideo)``
+
+**Description**
+
+Sets the selection state of the trackItem.
+
+**Parameters**
+
+==================  ============  =======================
+Argument            Type          Description
+==================  ============  =======================
+``inRipple``         ``Boolean``  If ``1``, later track items will be moved earlier, to fill the gap; if ``0``, later track items will remain in place.
+``inAlignToVideo``   ``Boolean``  If ``1``, Premiere Pro will align moved track items to the start of the nearest video frame.
+==================  ============  =======================
+
+**Returns**
+
+Returns **0** if successful.
