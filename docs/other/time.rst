@@ -9,7 +9,7 @@ Time object
 
 **Description**
 
-*add description here*
+An object representing a time. Internally, the time is computed in ``ticks``; there are 254016000000 ticks per second. That time can be accessed in different representations, including as a timecode string.
 
 ----
 
@@ -26,7 +26,7 @@ Time.seconds
 
 **Description**
 
-*add description here*
+The time value, expressed in seconds.
 
 **Type**
 
@@ -43,7 +43,7 @@ Time.ticks
 
 **Description**
 
-*add description here*
+The time value, expressed in ticks.
 
 **Type**
 
@@ -64,15 +64,52 @@ Time.getFormatted()
 
 **Description**
 
-*add description here*
+Returns the value of the ``Time`` passed, as a string, formatted in the specified display format.
 
 **Parameters**
 
-*add parameters here*
+===================  ===========  =======================
+Argument             Type         Description
+===================  ===========  =======================
+``frameRate``        ``String``   The frame rate to be used, for the String-based time value.
+``displayFormat``    ``int``      The display format to use. Will be one of the following:
+
+                                  TIMEDISPLAY_24Timecode				= 100;
+
+								  TIMEDISPLAY_25Timecode				= 101;
+
+								  TIMEDISPLAY_2997DropTimecode			= 102;
+
+								  TIMEDISPLAY_2997NonDropTimecode		= 103;
+
+								  TIMEDISPLAY_30Timecode				= 104;
+
+								  TIMEDISPLAY_50Timecode				= 105;
+
+								  TIMEDISPLAY_5994DropTimecode			= 106;
+
+								  TIMEDISPLAY_5994NonDropTimecode		= 107;
+
+								  TIMEDISPLAY_60Timecode				= 108;
+
+								  TIMEDISPLAY_Frames					= 109;
+
+								  TIMEDISPLAY_23976Timecode				= 110;
+
+								  TIMEDISPLAY_16mmFeetFrames			= 111;
+
+								  TIMEDISPLAY_35mmFeetFrames			= 112;
+
+								  TIMEDISPLAY_48Timecode				= 113;
+
+								  TIMEDISPLAY_AudioSamplesTimecode	    = 200;
+
+								  TIMEDISPLAY_AudioMsTimecode			= 201;
+===================  ===========  =======================
 
 **Returns**
 
-*add return value/type here*
+A ``String``.
 
 ----
 
@@ -81,16 +118,16 @@ Time.getFormatted()
 Time.setSecondsAsFraction()
 *********************************************
 
-``myTime.setSecondsAsFraction()``
+``myTime.setSecondsAsFraction(numerator, denominator)``
 
 **Description**
 
-*add description here*
+Sets the Time object to the result of dividing the numerator by the denominator.
 
 **Parameters**
 
-*add parameters here*
+Both the numerator and the denominator are ``ints``.
 
 **Returns**
 
-*add return value/type here*
+Boolean; ``true`` if successful.
