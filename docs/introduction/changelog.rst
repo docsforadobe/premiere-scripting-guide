@@ -11,7 +11,7 @@ What's new and changed for scripting?
 
 .. _Changelog.14.x:
 
-`Adobe Premiere Pro 14.x`_
+`Adobe Premiere Pro 14.0`_
 ************************************************************************************************************************************
 
 - Scripting access to Auto-Reframe:
