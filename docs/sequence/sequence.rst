@@ -333,7 +333,7 @@ None.
 
 **Returns**
 
-Returns a :ref:`sequence` if successful, **0** if not.
+Returns a boolean indicating whether the cloning was successful.
 
 ----
 
