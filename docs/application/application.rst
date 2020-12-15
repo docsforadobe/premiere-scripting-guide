@@ -848,3 +848,74 @@ None.
 **Returns**
 
 Returns **true** if trace was added.
+
+----
+
+.. _app.getProjectViewIDs:
+
+app.getProjectViewIDs()
+*********************************************
+
+``app.getProjectViewIDs()``
+
+**Description**
+
+Returns the view IDs of currently-open views, associated with any project.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+An array of view IDs; can be null.
+
+**Example**
+
+.. code:: javascript
+
+    var allViewIDs = app.getProjectViewIDs();
+    if (allViewIDs){
+        var firstOne = allViewIDs[0];
+    } else {
+        // No views open.
+    }
+
+----
+
+.. _app.getProjectFromViewID:
+
+app.getProjectFromViewID()
+*********************************************
+
+``app.getProjectFromViewID()``
+
+**Description**
+
+Returns the Project associated with the provided View ID.
+
+**Parameters**
+
+A View ID, obtained from `getProjectViewIDs`. 
+
+**Returns**
+
+A Project object, for the project associated with the provided View ID. Can be `null`.
+
+**Example**
+
+.. code:: javascript
+
+    var allViewIDs = app.getProjectViewIDs();
+    if (allViewIDs){
+        var firstOne = allViewIDs[0];
+        if (firstOne){
+            var thisProject = getProjectFromViewID(firstOne);
+            if (thisProject){
+                var name = thisProject.name;
+            } else {
+                // no project associated with that view ID.
+            }
+    } else {
+        // No views open.
+    }
