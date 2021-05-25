@@ -745,6 +745,7 @@ Argument                    Type         Description
                                          - ``ScratchDiskType.FirstAudioPreviewFolder``
                                          - ``ScratchDiskType.FirstAutoSaveFolder``
                                          - ``ScratchDiskType.FirstCCLibrariesFolder``
+                                         - ``ScratchDiskType.FirstCapsuleMediaFolder``
 ==========================  ===========  =======================
 
 **Returns**
