@@ -109,7 +109,7 @@ Argument          Type         Description
 
 **Returns**
 
-Returns 0 if successful.
+Returns ``true`` if successful.
 
 ----
 
