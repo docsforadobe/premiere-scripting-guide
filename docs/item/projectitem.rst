@@ -382,8 +382,8 @@ Argument                Type         Description
 ``startTime``           ``String``   Start time of subclip, in **Ticks**. 
 ``endTime``             ``String``   End time of subclip, in **Ticks**.
 ``hasHardBoundaries``   ``Integer``  If ``1``, the user cannot extend `in` and `out`.
-``takeAudio``           ``Integer``  If ``1``, use video from source. 
 ``takeVideo``           ``Integer``  If ``1``, use video from source. 
+``takeAudio``           ``Integer``  If ``1``, use audio from source.
 ======================  ===========  =======================
 
 **Returns**
@@ -508,8 +508,8 @@ A footage interpretation structure, or ``0`` if unsuccessful.
 | ``fieldType``              | Field type, one of the following:                          |
 |                            |    - -1 FIELDTYPE_DEFAULT                                  |
 |                            |    - 0 FIELDTYPE_PROGRESSIVE                               |
-|                            |    - 1 ALPHACHANNEL_UPPERFIRST                             |
-|                            |    - 2 ALPHACHANNEL_LOWERFIRST                             |
+|                            |    - 1 FIELDTYPE_UPPERFIRST                                |
+|                            |    - 2 FIELDTYPE_LOWERFIRST                                |
 +----------------------------+------------------------------------------------------------+
 | ``ignoreAlpha``            | ``true`` or ``false``.                                     |
 +----------------------------+------------------------------------------------------------+
@@ -927,7 +927,7 @@ Argument             Type         Description
 
 **Returns**
 
-``0`` if successful.
+``true`` if successful.
 
 ----
 
