@@ -740,8 +740,9 @@ Argument                    Type         Description
 ``path``                    ``String``   The new path to be used.
 ``scratchDiskType``         ``Enum``     Enumerated value, must be one of the following: 
 
-                                         - ``ScratchDiskType.FirstAudioCaptureFolder``
                                          - ``ScratchDiskType.FirstVideoCaptureFolder``
+                                         - ``ScratchDiskType.FirstAudioCaptureFolder``
+                                         - ``ScratchDiskType.FirstVideoPreviewFolder``
                                          - ``ScratchDiskType.FirstAudioPreviewFolder``
                                          - ``ScratchDiskType.FirstAutoSaveFolder``
                                          - ``ScratchDiskType.FirstCCLibrariesFolder``

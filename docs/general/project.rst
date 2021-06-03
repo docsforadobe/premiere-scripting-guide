@@ -923,14 +923,27 @@ Changes the specified scratch disk path to a new path.
 Argument                   Type         Description
 =========================  ===========  =======================
 ``newPath``                ``String``   A new path.
-``whichScratchDiskPath``                Must be one of the following: 
+``scratchDiskType``         ``Enum``     Enumerated value, must be one of the following: 
 
-                                        - ``ScratchDiskType.FirstVideoCaptureFolder`` 
-                                        - ``ScratchDiskType.FirstAudioPreviewFolder``
-                                        - ``ScratchDiskType.FirstAutoSaveFolder`` 
-                                        - ``ScratchDiskType.FirstCCLibrariesFolder`` 
-                                        - ``ScratchDiskType.FirstAudioCaptureFolder``
+                                         - ``ScratchDiskType.FirstVideoCaptureFolder``
+                                         - ``ScratchDiskType.FirstAudioCaptureFolder``
+                                         - ``ScratchDiskType.FirstVideoPreviewFolder``
+                                         - ``ScratchDiskType.FirstAudioPreviewFolder``
+                                         - ``ScratchDiskType.FirstAutoSaveFolder``
+                                         - ``ScratchDiskType.FirstCCLibrariesFolder``
+                                         - ``ScratchDiskType.FirstCapsuleMediaFolder``
 =========================  ===========  =======================
+
+
+
+- ``ScratchDiskType.FirstAudioCaptureFolder``
+- ``ScratchDiskType.FirstVideoPreviewFolder``
+- ``ScratchDiskType.FirstAudioPreviewFolder``
+- ``ScratchDiskType.FirstAutoSaveFolder``
+- ``ScratchDiskType.FirstCCLibrariesFolder``
+- ``ScratchDiskType.FirstCapsuleMediaFolder``
+
+
 
 **Returns**
 
