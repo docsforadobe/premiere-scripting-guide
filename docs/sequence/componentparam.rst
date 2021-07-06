@@ -419,6 +419,7 @@ Argument                 Type         Description
                                       - 6 ``kfInterpMode_Time``
                                       - 7 ``kfInterpMode_TimeTransitionStart``
                                       - 8 ``kfInterpMode_TimeTransitionEnd``
+``updateUI``			``boolean``	  whether to update UI afterward
 =======================  ===========  =======================
 
 **Returns**
