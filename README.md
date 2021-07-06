@@ -1,33 +1,35 @@
-# README #
+# Premiere Pro Scripting Guide
 
-This is a repo for the Premiere Scripting Guide. Things to note:
+This repo hosts the Premiere Pro Scripting Guide RST docs, linked into a http://readthedocs.io system hosted at https://ppro-scripting.docsforadobe.dev/
+
+Things to note:
 
 - `./index.html` is the main Table of Contents, and the root of the site. I've left in entries from the JS Tools Guide for reference on structure.
 - `./1 - Introduction/`
 	- Again, left here just for reference. I've left links in
 	- index.html in each subfolder will be the main page loaded for each 'chapter'
 
-### Building Locally ###
+---
+
+## Building Locally
 
 - Run `make html` in the project directory
 - The project will be built in a subfolder at `_build/html` where you can open index.html in a browser as expected
 - Any issues / warnings will be displayed in the console
 
+---
 
-### Contributing ###
+## Contributing
 
 This project uses reStructuredText for a reference on how to write reStructuredText check out this [quickref](http://docutils.sourceforge.net/docs/user/rst/quickref.html).
 
-
-### How to ###
-
+### How to
 
 #### Text
 
 ```
 **bold**, *italics*, ``code``
 ```
-
 
 #### Headers
 
@@ -45,7 +47,6 @@ h4
 ++
 ```
 
-
 #### Bullet lists
 
 ```
@@ -55,7 +56,6 @@ h4
     have the additional lines indented one more level
 - Bullet point
 ```
-
 
 #### Paragraphs
 
@@ -71,9 +71,7 @@ Header
 Paragraphs can start directly underneath headers, an empty line is not needed in that case.
 ```
 
-
 #### Links
-
 
 ##### Making an anchor:
 
@@ -90,14 +88,13 @@ To refer to the above anchor, you can use either:
 
 These will both search project-wide for the link. Any duplicates or malformed links will be reported upon build in your console window.
 
-### Parameters ###
+### Parameters
 
 For consistency, please use the table below to defined function arguments and their types:
 
-================  ===========  =======================
-Argument          Type         Description
-================  ===========  =======================
-``argument1``     ``type``     What it's all about
-``argument2``     ``type``     What it's all about
-``argument3``     ``type``     What it's all about
-================  ===========  =======================
+|   Argument    |   Type   |     Description     |
+| ------------- | -------- | ------------------- |
+| ``argument1`` | ``type`` | What it's all about |
+| ``argument2`` | ``type`` | What it's all about |
+| ``argument3`` | ``type`` | What it's all about |
+
