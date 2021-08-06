@@ -1,4 +1,3 @@
-.. highlight:: javascript
 
 .. _Application:
 
@@ -329,7 +328,7 @@ app.projects
 
 **Description**
 
-An array referencing all open projects; `numProjects` contains size.
+An array referencing all open projects; ``numProjects`` contains size.
 
 **Type**
 
@@ -819,7 +818,7 @@ Argument       Type        Description
 
 **Example**
 
-Activate `Editing` workspace.
+Activate ``Editing`` workspace.
 
 .. code:: javascript
 
@@ -898,11 +897,11 @@ Returns the Project associated with the provided View ID.
 
 **Parameters**
 
-A View ID, obtained from `getProjectViewIDs`. 
+A View ID, obtained from ``getProjectViewIDs``. 
 
 **Returns**
 
-A Project object, for the project associated with the provided View ID. Can be `null`.
+A Project object, for the project associated with the provided View ID. Can be ``null``.
 
 **Example**
 
@@ -921,3 +920,36 @@ A Project object, for the project associated with the provided View ID. Can be `
     } else {
         // No views open.
     }
+
+----
+
+.. _app.getProjectViewSelection:
+
+app.getProjectViewSelection()
+*********************************************
+
+``app.getProjectViewSelection()``
+
+**Description**
+
+Returns an array of projectItems selected, in the current active project view.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+An array of projectItems; can be null.
+
+**Example**
+
+.. code:: javascript
+
+    var selectedItems = app.getProjectViewSelection();
+    if (selectedItems){
+        var firstOne = selectedItems[0];
+    } else {
+        // No projectItems selected.
+    }
+
