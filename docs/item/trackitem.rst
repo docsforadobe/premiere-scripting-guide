@@ -252,11 +252,13 @@ Returns ``true`` if the trackitem is an adjustment layer; ``false`` if not.
 
 ----
 
-TrackItem.isReversed()
+.. _trackItem.isSpeedReversed():
+
+TrackItem.isSpeedReversed()()
 *********************************************
 
-|   ``app.project.sequences[index].audioTracks[index].clips[index].isReversed()``
-|   ``app.project.sequences[index].videoTracks[index].clips[index].isReversed()``
+|   ``app.project.sequences[index].audioTracks[index].clips[index].isSpeedReversed()()``
+|   ``app.project.sequences[index].videoTracks[index].clips[index].isSpeedReversed()()``
 
 **Description**
 
