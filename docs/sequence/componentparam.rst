@@ -1,4 +1,3 @@
-.. highlight:: javascript
 
 .. _componentParam:
 
@@ -17,8 +16,6 @@ The **component parameter** object represents a parameter associated with a comp
 ==========
 Attributes
 ==========
-
-.. _componentParam.displayName:
 
 ComponentParam.displayName
 *********************************************
@@ -400,13 +397,13 @@ ComponentParam.setInterpolationTypeAtKey()
 
 **Description**
 
-Specifies the interpolation typ to be assigned to the keyframe, at the specified time. Note: Can only be used with keyframeable parameter streams.
+Specifies the interpolation type to be assigned to the keyframe, at the specified time. Note: Can only be used with keyframeable parameter streams.
 
 **Parameters**
 
-=======================  ===========  =======================
+=======================  ===========  ===============================
 Argument                 Type         Description
-=======================  ===========  =======================
+=======================  ===========  ===============================
 ``time``                 :ref:`time`  A time  of keyframe to modify.
 ``interpretationType``   ``type``     Must be one of the following: 
 
@@ -419,8 +416,10 @@ Argument                 Type         Description
                                       - 6 ``kfInterpMode_Time``
                                       - 7 ``kfInterpMode_TimeTransitionStart``
                                       - 8 ``kfInterpMode_TimeTransitionEnd``
-``updateUI``			``boolean``	  whether to update UI afterward
-=======================  ===========  =======================
+
+ ``updateUI``            ``boolean``   Whether to update UI afterward.                                      
+
+=======================  ===========  ===============================
 
 **Returns**
 

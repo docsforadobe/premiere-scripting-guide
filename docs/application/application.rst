@@ -923,12 +923,12 @@ A Project object, for the project associated with the provided View ID. Can be `
 
 ----
 
-.. _app.getProjectViewSelection:
+.. _app.getCurrentProjectViewSelection:
 
-app.getProjectViewSelection()
+app.getCurrentProjectViewSelection()
 *********************************************
 
-``app.getProjectViewSelection()``
+``app.getCurrentProjectViewSelection()``
 
 **Description**
 
@@ -946,7 +946,7 @@ An array of projectItems; can be null.
 
 .. code:: javascript
 
-    var selectedItems = app.getProjectViewSelection();
+    var selectedItems = app.getCurrentProjectViewSelection();
     if (selectedItems){
         var firstOne = selectedItems[0];
     } else {

@@ -1,11 +1,24 @@
-.. highlight:: javascript
-
-.. _changelog:
 
 Changelog
 #########
 
 What's new and changed for scripting?
+
+----
+
+.. _Changelog.15.x:
+
+`Adobe Premiere Pro 15.4`_
+************************************************************************************************************************************
+
+- Access to the currently active project selection
+    - Added: :ref:`app.getCurrentProjectViewSelection`
+
+- New API to move a trackItem.
+    - Added: :ref:`trackItem.move`
+
+- New APIs to set the disabled state of a trackItem.
+    - Added: :ref:`trackItem.disabled`
 
 ----
 

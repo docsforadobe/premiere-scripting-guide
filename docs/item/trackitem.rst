@@ -1,5 +1,3 @@
-.. highlight:: javascript
-
 .. _trackItem:
 
 TrackItem object
@@ -18,8 +16,6 @@ The **trackItem** object represents an item on a video or audio track, within a 
 Attributes
 ==========
 
-.. _trackItem.components:
-
 TrackItem.components
 *********************************************
 
@@ -35,8 +31,6 @@ The components associated with this trackItem. This can include intrinsic transf
 :ref:`componentCollection`, read-only;
 
 ----
-
-.. _trackItem.duration:
 
 TrackItem.duration
 *********************************************
@@ -54,8 +48,6 @@ The duration of the trackItem.
 
 ----
 
-.. _trackItem.end:
-
 TrackItem.end
 *********************************************
 
@@ -71,8 +63,6 @@ The ending time of the trackItem. Note: This may differ, from the trackItem's ou
 :ref:`time`, read/write.
 
 ----
-
-.. _trackItem.inPoint:
 
 TrackItem.inPoint
 *********************************************
@@ -90,8 +80,6 @@ The in point for media, in this trackItem.
 
 ----
 
-.. _trackItem.matchName:
-
 TrackItem.matchName
 *********************************************
 
@@ -107,8 +95,6 @@ TrackItem.matchName
 String; read-only.
 
 ----
-
-.. _trackItem.mediaType:
 
 TrackItem.mediaType
 *********************************************
@@ -126,8 +112,6 @@ String, either **Audio** or **Video**.
 
 ----
 
-.. _trackItem.name:
-
 TrackItem.name
 *********************************************
 
@@ -143,8 +127,6 @@ The name of the track item.
 String; read/write.
 
 ----
-
-.. _trackItem.nodeId:
 
 TrackItem.nodeId
 *********************************************
@@ -162,8 +144,6 @@ String.
 
 ----
 
-.. _trackItem.outPoint:
-
 TrackItem.outPoint
 *********************************************
 
@@ -179,8 +159,6 @@ The out point for media, in this trackItem.
 :ref:`time`, read/write.
 
 ----
-
-.. _trackItem.projectItem:
 
 TrackItem.projectItem
 *********************************************
@@ -198,8 +176,6 @@ A :ref:`projectItem`.
 
 ----
 
-.. _trackItem.start:
-
 TrackItem.start
 *********************************************
 
@@ -215,8 +191,6 @@ The starting time of the trackItem. Note: This may differ, from the trackItem's 
 :ref:`time`, read/write.
 
 ----
-
-.. _trackItem.type:
 
 TrackItem.type
 *********************************************
@@ -238,8 +212,6 @@ Number, **1** means video, **2** means audio.
 Methods
 =======
 
-.. _trackItem.getSpeed:
-
 TrackItem.getSpeed()
 *********************************************
 
@@ -259,8 +231,6 @@ None.
 Returns the speed multiplier applied to the ``trackItem``, as a ``float``. No speed adjustment = ``1``.
 
 ----
-
-.. _trackItem.isAdjustmentLayer:
 
 TrackItem.isAdjustmentLayer()
 *********************************************
@@ -282,8 +252,6 @@ Returns ``true`` if the trackitem is an adjustment layer; ``false`` if not.
 
 ----
 
-.. _trackItem.isReversed:
-
 TrackItem.isReversed()
 *********************************************
 
@@ -304,8 +272,6 @@ Returns **1** if ``trackItem`` is reversed; **0** if not.
 
 ----
 
-.. _trackItem.isSelected:
-
 TrackItem.isSelected()
 *********************************************
 
@@ -325,8 +291,6 @@ None.
 Returns ``true`` if trackItem is selected; ``false`` if not.
 
 ----
-
-.. _trackItem.setSelected:
 
 TrackItem.setSelected()
 *********************************************
@@ -354,8 +318,6 @@ Returns **0** if successful.
 
 ----
 
-.. _trackItem.getMatchName:
-
 TrackItem.getMatchName()
 *********************************************
 
@@ -376,8 +338,6 @@ Returns the match name as a **String** if successful.
 
 ----
 
-.. _trackItem.remove:
-
 TrackItem.remove()
 *********************************************
 
@@ -396,6 +356,58 @@ Argument            Type          Description
 ``inRipple``         ``Boolean``  If ``1``, later track items will be moved earlier, to fill the gap; if ``0``, later track items will remain in place.
 ``inAlignToVideo``   ``Boolean``  If ``1``, Premiere Pro will align moved track items to the start of the nearest video frame.
 ==================  ============  =======================
+
+**Returns**
+
+Returns **0** if successful.
+
+----
+
+.. _trackItem.disabled:
+
+TrackItem.disabled()
+*********************************************
+
+|   ``app.project.sequences[index].audioTracks[index].clips[index].disabled(newDisableState)``
+|   ``app.project.sequences[index].videoTracks[index].clips[index].disabled(newDisableState)``
+
+**Description**
+
+Sets the disabled state of the trackItem.
+
+**Parameters**
+
+===================  ============  =======================
+Argument             Type          Description
+===================  ============  =======================
+``newDisableState``  ``Boolean``   If ``true``, this trackItem will be disabled; if ``false``, trackItem will be enabled.
+===================  ============  =======================
+
+**Returns**
+
+Returns **0** if successful.
+
+----
+
+.. _trackitem.move:
+
+TrackItem.move()
+*********************************************
+
+|   ``app.project.sequences[index].audioTracks[index].clips[index].move(newInPoint)``
+|   ``app.project.sequences[index].videoTracks[index].clips[index].move(newInPoint)``
+
+**Description**
+
+Moves the inPoint of the track item to a new time.
+
+**Parameters**
+
+===================  ============  =======================
+Argument             Type          Description
+===================  ============  =======================
+``newInPoint``       ``Time``      The time to which to move the track item's in point.
+===================  ============  =======================
 
 **Returns**
 
