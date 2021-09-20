@@ -367,15 +367,15 @@ Returns **0** if successful.
 
 .. _trackItem.disabled:
 
-TrackItem.disabled()
+TrackItem.disabled
 *********************************************
 
-|   ``app.project.sequences[index].audioTracks[index].clips[index].disabled(newDisableState)``
-|   ``app.project.sequences[index].videoTracks[index].clips[index].disabled(newDisableState)``
+|   ``app.project.sequences[index].audioTracks[index].clips[index].disabled``
+|   ``app.project.sequences[index].videoTracks[index].clips[index].disabled``
 
 **Description**
 
-Sets the disabled state of the trackItem.
+Sets the disabled state of the trackItem. Read/Write.
 
 **Parameters**
 
