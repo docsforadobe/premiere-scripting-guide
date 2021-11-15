@@ -408,7 +408,7 @@ Moves the inPoint of the track item to a new time.
 ===================  ============  =======================
 Argument             Type          Description
 ===================  ============  =======================
-``newInPoint``       ``Time``      The time to which to move the track item's in point.
+``newInPoint``       ``Time``      The time in seconds to shift the track item's start.
 ===================  ============  =======================
 
 **Returns**
