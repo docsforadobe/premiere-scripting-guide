@@ -479,6 +479,138 @@ None.
 
 ----
 
+.. _projectItem.getColorSpace:
+
+ProjectItem.getColorSpace()
+*********************************************
+
+``app.project.rootItem.children[index].getColorSpace()``
+
+**Description**
+
+Retrieves the project item's colorspace properties.
+
+**Parameters**
+None.
+
+**Returns**
+
+Returns an item's colorspace properties.
+
++------------+--------------------------+
+| item.      | - name.                  |
+|            | - transfer characteristic|
+|            | - primaries.             |
+|            | - matrix equation.       |
++------------+--------------------------+
+
+**Code Sample**
+
+this will write the above info to the Events panel.
+
+.. code:: javascript
+{
+var colorSpace = app.project.rootItem.children[0].getColorSpace()
+app.setSDKEventMessage("Color Space " + " = " + colorSpace.name, 'info');
+app.setSDKEventMessage("Transfer Characteristic " + " = " + colorSpace.transferCharacteristic, 'info');
+app.setSDKEventMessage("Color Primaries " + " = " + colorSpace.primaries, 'info');
+app.setSDKEventMessage("Matrix Equation " + " = " + colorSpace.matrixEquation, 'info');
+}
+
+----
+.. _projectItem.getOriginalColorSpace:
+
+ProjectItem.getOriginalColorSpace()
+*********************************************
+
+``app.project.rootItem.children[index].getOriginalColorSpace()``
+
+**Description**
+
+Retrieves the project item's colorspace properties .
+
+**Parameters**
+None.
+
+**Returns**
+
+Returns an item's colorspace properties if the properties have been overwritten.
+
++------------+------------------------------------+
+| item.      | - original name.                   |
+|            | - original transfer characteristic |
+|            | - original primaries.              |
+|            | - original matrix equation.        |
++------------+------------------------------------+
+
+**Code Sample**
+
+See ProjectItem.getColorSpace()
+
+----
+
+.. _projectItem.getEmbeddedLUTID:
+
+ProjectItem.getEmbeddedLUTID()
+*********************************************
+
+``app.project.rootItem.children[index].getEmbeddedLUTID()``
+
+**Description**
+
+Retrieves the project item's LUTID .
+
+**Parameters**
+None.
+
+**Returns**
+
+Returns an item's LUTID
+
+**Code Sample**
+
+Writes LUTID to Events panel.
+
+.. code:: javascript
+{
+var lutID = app.project.rootItem.children[0].getEmbeddedLUTID()
+app.setSDKEventMessage("LutID " + " = " + lutID, 'info');
+}
+
+----
+.. _projectItem.getInputLUTID:
+
+ProjectItem.getInputLUTID()
+*********************************************
+
+``app.project.rootItem.children[index].getInputLUTID()``
+
+**Description**
+
+Retrieves the project item's Input LUTID .
+
+**Parameters**
+None.
+
+**Returns**
+
+Returns an item's Input LUTID
+
+**Code Sample**
+
+Writes Input LUTID to Events panel.
+
+.. code:: javascript
+{
+var lutID = app.project.rootItem.children[0].getInputLUTID()
+
+app.setSDKEventMessage("Input LutID " + " = " + inputLutID, 'info');
+}
+
+----
+
+
+
 .. _projectItem.getFootageInterpretation:
 
 ProjectItem.getFootageInterpretation()
