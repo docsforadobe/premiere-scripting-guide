@@ -81,7 +81,7 @@ None.
 
 **Returns**
 
-Returns ``true`` if trackItem is selected; ``false`` if not.
+Returns ``true`` if keyframes are supported; ``false`` if not.
 
 ----
 
