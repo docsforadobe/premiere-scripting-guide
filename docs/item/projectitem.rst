@@ -479,6 +479,138 @@ None.
 
 ----
 
+.. _projectItem.getColorSpace:
+
+ProjectItem.getColorSpace()
+*********************************************
+
+``app.project.rootItem.children[index].getColorSpace()``
+
+**Description**
+
+Retrieves the project item's colorspace properties.
+
+**Parameters**
+None.
+
+**Returns**
+
+Returns an item's colorspace properties.
+
++------------+--------------------------+
+| item.      | - name.                  |
+|            | - transfer characteristic|
+|            | - primaries.             |
+|            | - matrix equation.       |
++------------+--------------------------+
+
+**Code Sample**
+
+this will write the above info to the Events panel.
+
+.. code:: javascript
+{
+var colorSpace = app.project.rootItem.children[0].getColorSpace()
+app.setSDKEventMessage("Color Space " + " = " + colorSpace.name, 'info');
+app.setSDKEventMessage("Transfer Characteristic " + " = " + colorSpace.transferCharacteristic, 'info');
+app.setSDKEventMessage("Color Primaries " + " = " + colorSpace.primaries, 'info');
+app.setSDKEventMessage("Matrix Equation " + " = " + colorSpace.matrixEquation, 'info');
+}
+
+----
+.. _projectItem.getOriginalColorSpace:
+
+ProjectItem.getOriginalColorSpace()
+*********************************************
+
+``app.project.rootItem.children[index].getOriginalColorSpace()``
+
+**Description**
+
+Retrieves the project item's colorspace properties .
+
+**Parameters**
+None.
+
+**Returns**
+
+Returns an item's colorspace properties if the properties have been overwritten.
+
++------------+------------------------------------+
+| item.      | - original name.                   |
+|            | - original transfer characteristic |
+|            | - original primaries.              |
+|            | - original matrix equation.        |
++------------+------------------------------------+
+
+**Code Sample**
+
+See ProjectItem.getColorSpace()
+
+----
+
+.. _projectItem.getEmbeddedLUTID:
+
+ProjectItem.getEmbeddedLUTID()
+*********************************************
+
+``app.project.rootItem.children[index].getEmbeddedLUTID()``
+
+**Description**
+
+Retrieves the project item's LUTID .
+
+**Parameters**
+None.
+
+**Returns**
+
+Returns an item's LUTID
+
+**Code Sample**
+
+Writes LUTID to Events panel.
+
+.. code:: javascript
+{
+var lutID = app.project.rootItem.children[0].getEmbeddedLUTID()
+app.setSDKEventMessage("LutID " + " = " + lutID, 'info');
+}
+
+----
+.. _projectItem.getInputLUTID:
+
+ProjectItem.getInputLUTID()
+*********************************************
+
+``app.project.rootItem.children[index].getInputLUTID()``
+
+**Description**
+
+Retrieves the project item's Input LUTID .
+
+**Parameters**
+None.
+
+**Returns**
+
+Returns an item's Input LUTID
+
+**Code Sample**
+
+Writes Input LUTID to Events panel.
+
+.. code:: javascript
+{
+var lutID = app.project.rootItem.children[0].getInputLUTID()
+
+app.setSDKEventMessage("Input LutID " + " = " + inputLutID, 'info');
+}
+
+----
+
+
+
 .. _projectItem.getFootageInterpretation:
 
 ProjectItem.getFootageInterpretation()
@@ -643,6 +775,40 @@ None.
 **Returns**
 
 A String containing all Premiere Pro private project metadata, serialized.
+
+----
+
+.. _ProjectItem.getProjectColumnsMetadata():
+
+ProjectItem.getProjectColumnsMetadata()
+*********************************************
+
+``app.project.rootItem.children[index].getProjectColumnsMetadata()``
+
+**Description**
+
+Returns a JSON string to the user with all the metadata from the current project view layout
+
+**Parameters**
+
+None.
+
+**Returns**
+A JSON string that can be parsed with JSON.parse() method in the Javascript layer. This generates a list of objects, each object representing a column. Each object will contain 4 key/value pairs: ColumnName, ColumnValue, ColumnID, ColumnPath.
+ColumnName and ColumnValue serve as informational key/value.
+ColumnID and ColumnPath can be used to modify that column via the method setProjectMetadata() or setXMPMetadata().
+
+For example:
+
+===================  ===========================================================  ========================
+Object               Value                                                        Description
+===================  ===========================================================  ========================
+``ColumnName``       ``Name``                                                     Name of the column
+``ColumnValue``      ``A014C003_180620_R205.mov``                                 Example of colummn value
+``ColumnID``         ``Column.Intrinsic.Name``                                    ID of the colummn
+``ColumnPath``       ``http://ns.adobe.com/premierePrivateProjectMetaData/1.0/``  Path of the column
+===================  ===========================================================  ========================
+
 
 ----
 
