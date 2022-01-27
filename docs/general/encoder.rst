@@ -11,6 +11,9 @@ Encoder object
 
 The **encoder** object represents Adobe Media Encoder, and is used for local rendering, outside of Premiere Pro.
 
+Warning: app.encoder is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in 22 and up.
+https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-encoder-14-3-1-15-0-15-1-15-2/m-p/12544488
+
 ----
 
 ==========
