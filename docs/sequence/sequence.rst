@@ -358,7 +358,7 @@ Argument                   Type         Description
 
 **Returns**
 
-Returns 0 if successful.
+Returns the newly-created sequence, or 0 if unsuccessful.
 
 ----
 
