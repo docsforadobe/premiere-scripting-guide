@@ -463,7 +463,7 @@ ComponentParam.setValue()
 
 **Description**
 
-Obtains the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
+Sets the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
 
 **Parameters**
 
