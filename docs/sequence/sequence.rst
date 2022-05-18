@@ -342,7 +342,7 @@ Returns a boolean indicating whether the cloning was successful.
 Sequence.createSubsequence()
 ***********************************************
 
-``app.project.sequences[index].createSubsequence(ignoreChannelMapping)``
+``app.project.sequences[index].createSubsequence(ignoreTrackTargeting)``
 
 **Description**
 
@@ -353,12 +353,12 @@ Creates a new sequence, which is a sub-sequence of the existing sequence.
 =========================  ===========  =======================
 Argument                   Type         Description
 =========================  ===========  =======================
-``ignoreChannelMapping``   ``Boolean``  Whether the new sequence should ignore the channel mapping present in the original sequence.
+``ignoreTrackTargeting``   ``Boolean``  Whether the new sequence should ignore the track targeting, in the original sequence.
 =========================  ===========  =======================
 
 **Returns**
 
-Returns 0 if successful.
+Returns the newly-created sequence, or 0 if unsuccessful.
 
 ----
 
@@ -714,12 +714,12 @@ Returns ``true`` if analysis is complete.
 
 ----
 
-.. _sequence.performSceneEditDetectionOnSelection:
+.. _sequence.performCutDetectionOnSelection:
 
-Sequence.performSceneEditDetectionOnSelection()
+Sequence.performCutDetectionOnSelection()
 *******************************************************************************************************
 
-``app.project.sequences[index].performSceneEditDetectionOnSelection(actionDesired, applyCutsToLinkedAudio, sensitivity)``
+``app.project.sequences[index].performCutDetectionOnSelection(actionDesired, applyCutsToLinkedAudio, sensitivity)``
 
 **Description**
 
