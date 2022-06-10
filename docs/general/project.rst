@@ -346,7 +346,7 @@ Argument                  Type               Description
 ``bitsPerSample``                            The bits per sample of audio output. 
 ``embedAudio``            ``Integer``        If ``1``, audio is embedded, if ``0``, external.
 ``audioFileFormat``       ``Integer``        ``0`` is AIFF, ``1`` is WAV.  
-``trimSources``           ``Integer``        If ``1``, trim audio files before export. 
+``trimSources``           ``Integer``        If ``1``, trim and re-encode media before export; ``0`` exports the entire file.
 ``handleFrames``          ``Integer``        The number of handle frames (from 0 to 1000).
 ``presetPath``            ``String``         A path to export preset (.epr) file. 
 ``renderAudioEffects``    ``Integer``        If ``1``, render audio effects before export.
