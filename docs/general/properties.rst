@@ -159,7 +159,7 @@ Properties.setProperty()
 
 **Description**
 
-Set property value.
+Set property value. NOTE: For any file paths to be used in Premiere Pro's preferences, a trailing path seperator is mandatory.
 
 **Parameters**
 
