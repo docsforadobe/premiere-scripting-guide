@@ -212,6 +212,33 @@ Number, **1** means video, **2** means audio.
 Methods
 =======
 
+TrackItem.getMGTComponent()
+*********************************************
+
+| ``app.project.sequences[index].videotracks[index].getMGTComponent``
+| ``app.project.sequences[index].audiotracks[index].getMGTComponent``
+
+**Description**
+Adds an After Effects Motion Graphics Template - a Mogrt - to the selected track at the specified time. 
+
+**Parameters**
+
+==================  ============  =======================
+Argument            Type          Description
+==================  ============  =======================
+``mogrtPath``       ``String``    Full path to a valid .mogrt, created in After Effects
+``targetTime``      ``String``    The time at which to insert the .mogrt, in ticks
+``vidTrackOffset``  ``Integer``   The offset from 0 (the first available track), on which to insert video from the .mogrt
+``audTrackOffset``  ``Integer``   The offset from 0 (the first available track), on which to insert audio from the .mogrt
+==================  ============  =======================
+
+**Returns**
+
+A Component object representing the parameters of the .mogrt, which the creator has exposed.
+
+
+----
+
 TrackItem.getSpeed()
 *********************************************
 
@@ -254,11 +281,11 @@ Returns ``true`` if the trackitem is an adjustment layer; ``false`` if not.
 
 .. _trackItem.isSpeedReversed():
 
-TrackItem.isSpeedReversed()()
+TrackItem.isSpeedReversed()mm
 *********************************************
 
-|   ``app.project.sequences[index].audioTracks[index].clips[index].isSpeedReversed()()``
-|   ``app.project.sequences[index].videoTracks[index].clips[index].isSpeedReversed()()``
+|   ``app.project.sequences[index].audioTracks[index].clips[index].isSpeedReversed()``
+|   ``app.project.sequences[index].videoTracks[index].clips[index].isSpeedReversed()``
 
 **Description**
 
@@ -408,7 +435,7 @@ Moves the inPoint of the track item to a new time.
 ===================  ============  =======================
 Argument             Type          Description
 ===================  ============  =======================
-``newInPoint``       ``Time``      The time in seconds to shift the track item's start.
+``newInPoint``       ``String``      A time object that represent the amount of time, in ticks, to shift the track item's start.
 ===================  ============  =======================
 
 **Returns**
