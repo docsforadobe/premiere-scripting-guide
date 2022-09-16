@@ -428,14 +428,14 @@ TrackItem.move()
 
 **Description**
 
-Moves the inPoint of the track item to a new time.
+Moves the inPoint of the track item to a new time, by shifting it by a number of seconds.
 
 **Parameters**
 
 ===================  ============  =======================
 Argument             Type          Description
 ===================  ============  =======================
-``newInPoint``       ``String``      A time object that represent the amount of time, in ticks, to shift the track item's start.
+``newInPoint``       ``Number``      A time object that represent the amount of time, in seconds, to shift the track item's start.
 ===================  ============  =======================
 
 **Returns**
