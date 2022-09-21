@@ -714,12 +714,12 @@ Returns ``true`` if analysis is complete.
 
 ----
 
-.. _sequence.performCutDetectionOnSelection:
+.. _sequence.performSceneEditDetectionOnSelection:
 
-Sequence.performCutDetectionOnSelection()
+Sequence.performSceneEditDetectionOnSelection()
 *******************************************************************************************************
 
-``app.project.sequences[index].performCutDetectionOnSelection(actionDesired, applyCutsToLinkedAudio, sensitivity)``
+``app.project.sequences[index].performSceneEditDetectionOnSelection(actionDesired, applyCutsToLinkedAudio, sensitivity)``
 
 **Description**
 
