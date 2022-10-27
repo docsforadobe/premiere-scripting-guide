@@ -714,6 +714,62 @@ Returns ``true`` if analysis is complete.
 
 ----
 
+
+Sequence.importMGT()
+*********************************************
+
+| ``app.project.sequences[index].videotracks[index].importMGT``
+| ``app.project.sequences[index].audiotracks[index].importMGT``
+
+**Description**
+
+Imports an After Effects Motion Graphics Template - a Mogrt - to the selected track at the specified time. 
+
+**Parameters**
+
+==================  ============  =======================
+Argument            Type          Description
+==================  ============  =======================
+``path``            ``String``    Full path to a valid .mogrt, created in After Effects
+``time``            ``String``    time at which to insert .mogrt, in ticks
+``vidTrackOffset``  ``Integer``   how many tracks from the zero-th video track, into which to insert .mogrt content
+``audTrackOffset``  ``Integer``   how many tracks from the zero-th audio track, into which to insert .mogrt content.
+==================  ============  =======================
+
+**Returns**
+
+A trackItem object.
+
+----
+
+Sequence.importMGTFromLibrary()
+*********************************************
+
+| ``app.project.sequences[index].videotracks[index].importMGTFromLibrary()``
+| ``app.project.sequences[index].audiotracks[index].importMGTFromLibrary()``
+
+**Description**
+
+Imports an After Effects Motion Graphics Template - a Mogrt - from the current PPro user's Creative Cloud Libraries, to the selected track at the specified time. 
+
+**Parameters**
+
+==================  ============  =======================
+Argument            Type          Description
+==================  ============  =======================
+``libraryName``      ``String``   name of Library (from the current PPro user's Creative Cloud Libraries)
+``mgtName``          ``String``   name of .mogrt within that library
+``time``             ``String``   time at which to insert .mogrt, in ticks
+``vidTrackOffset``  ``Integer``   how many tracks from the zero-th video track, into which to insert .mogrt content
+``audTrackOffset``  ``Integer``   how many tracks from the zero-th audio track, into which to insert .mogrt content.
+==================  ============  =======================
+
+**Returns**
+
+A trackItem object.
+
+----
+
 .. _sequence.performSceneEditDetectionOnSelection:
 
 Sequence.performSceneEditDetectionOnSelection()
