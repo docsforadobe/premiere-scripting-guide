@@ -316,6 +316,54 @@ Returns the new :ref:`sequence`, if successful; `0` if unsuccessful.
 
 ----
 
+.. _sequence.createCaptionTrack:
+
+Sequence.createCaptionTrack()
+*********************************************
+
+``app.project.activeSequence.createCaptionTrack(projectItem, 
+startAtTime, captionFormat)``
+
+**Description**
+
+Creates a caption track in the active sequence using caption data from a project item.
+
+**Parameters**
+
+=======================  ======================  =======================
+Argument                 Type                    Description
+=======================  ======================  =======================
+``projectItem``          ``ProjectItem object``  A captions source clip (e.g. .srt)
+``startAtTime``          ``Float``               Offset in seconds from start of sequence
+``captionFormat``        ``Constant``            (Optional, defaults to subtitle) Caption format of the new track (see table below). 
+=======================  ======================  =======================
+
+
+================  ================================
+Caption Format    Parameter
+================  ================================
+ Default          Sequence.CAPTION_FORMAT_SUBTITLE
+ CEA-608          Sequence.CAPTION_FORMAT_608
+ CEA-708          Sequence.CAPTION_FORMAT_708
+ Teletext         Sequence.CAPTION_FORMAT_TELETEXT
+ EBU Subtitle     Sequence.CAPTION_FORMAT_OPEN_EBU
+ OP-42            Sequence.CAPTION_FORMAT_OP42
+ OP-47            Sequence.CAPTION_FORMAT_OP47
+================  ================================
+
+**Returns**
+
+A boolean, true if successful.
+
+**Example**
+
+.. code:: javascript
+
+	var result = app.project.activeSequence.createCaptionTrack(projectItem, 0, Sequence.CAPTION_FORMAT_708);
+
+----
+
+
 .. _sequence.clone:
 
 Sequence.clone()
@@ -355,6 +403,7 @@ Argument                   Type         Description
 =========================  ===========  =======================
 ``ignoreTrackTargeting``   ``Boolean``  Whether the new sequence should ignore the track targeting, in the original sequence.
 =========================  ===========  =======================
+
 
 **Returns**
 
