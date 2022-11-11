@@ -339,17 +339,17 @@ Argument                 Type                    Description
 =======================  ======================  =======================
 
 
-================  ================================
-Caption Format    Parameter
-================  ================================
- Default          Sequence.CAPTION_FORMAT_SUBTITLE
- CEA-608          Sequence.CAPTION_FORMAT_608
- CEA-708          Sequence.CAPTION_FORMAT_708
- Teletext         Sequence.CAPTION_FORMAT_TELETEXT
- EBU Subtitle     Sequence.CAPTION_FORMAT_OPEN_EBU
- OP-42            Sequence.CAPTION_FORMAT_OP42
- OP-47            Sequence.CAPTION_FORMAT_OP47
-================  ================================
+===================  ================================
+Caption Format       Parameter
+===================  ================================
+ Subtitle (Default)  Sequence.CAPTION_FORMAT_SUBTITLE
+ CEA-608             Sequence.CAPTION_FORMAT_608
+ CEA-708             Sequence.CAPTION_FORMAT_708
+ Teletext            Sequence.CAPTION_FORMAT_TELETEXT
+ EBU Subtitle        Sequence.CAPTION_FORMAT_OPEN_EBU
+ OP-42               Sequence.CAPTION_FORMAT_OP42
+ OP-47               Sequence.CAPTION_FORMAT_OP47
+===================  ================================
 
 **Returns**
 
