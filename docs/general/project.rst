@@ -338,12 +338,12 @@ Exports an AAF file of the specified :ref:`sequence`, using the specified settin
 ========================  =================  =======================
 Argument                  Type               Description
 ========================  =================  =======================
-``sequence``              :ref:`sequence`    A sequence to export.
-``filePath``              ``String``         An output path for .aaf file. 
+``sequenceToExport``      :ref:`sequence`    A sequence to export.
+``outputPath``            ``String``         An output path for .aaf file. 
 ``mixdownVideo``          ``Integer``        If ``1``, render video before export. 
 ``explodeToMono``         ``Integer``        If ``1``, breaks out stereo tracks to mono.
-``sampleRate``                               The sample rate of output audio. 
-``bitsPerSample``                            The bits per sample of audio output. 
+``sampleRate``            ``Integer``        The sample rate of output audio. 
+``bitsPerSample``         ``Integer``        The bits per sample of audio output. 
 ``embedAudio``            ``Integer``        If ``1``, audio is embedded, if ``0``, external.
 ``audioFileFormat``       ``Integer``        ``0`` is AIFF, ``1`` is WAV.  
 ``trimSources``           ``Integer``        If ``1``, trim and re-encode media before export; ``0`` exports the entire file.
