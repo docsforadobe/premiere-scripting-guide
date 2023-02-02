@@ -71,7 +71,7 @@ Returns the value of the ``Time`` passed, as a string, formatted in the specifie
 ===================  ===========  =======================
 Argument             Type         Description
 ===================  ===========  =======================
-``frameRate``        ``Time``     Time object of the frame rate to be used.
+``frameRate``        ``Time``     Time object with a duration of a single frame of the frame rate to be used.
 ``displayFormat``    ``int``      The display format to use. Will be one of the following:
 
                                   TIMEDISPLAY_24Timecode				= 100;
