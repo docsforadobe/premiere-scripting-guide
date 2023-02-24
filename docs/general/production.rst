@@ -124,19 +124,24 @@ Returns **true** if successful.
 Production.getLocked()
 **************************
 
-``app.production.getLocked()``
+``app.production.getLocked(project)``
 
 **Description**
 
-Returns the current lock state of the Production.
+Returns the lock state of a single project within the Production.
 
 **Parameters**
 
-None.
+=======================  ===================  =======================
+Argument                 Type                 Description
+=======================  ===================  =======================
+``project``              ``Project object``   The project 
+=======================  ===================  =======================
+
 
 **Returns**
 
-Returns **true** if the Production is locked, **false** if it is unlocked.
+Returns **true** if the Project is locked, **false** if the Project is unlocked.
 
 ----
 
@@ -172,20 +177,21 @@ Returns **true** if successful.
 Production.setLocked()
 *********************************************
 
-``app.production.setLocked(locked)``
+``app.production.setLocked(project,locked)``
 
 **Description**
 
-Sets the lock state of the Production
+Sets the lock state of the specified project within the Production.
 
 **Parameters**
 
-================  ===========  =======================
-Argument          Type         Description
-================  ===========  =======================
-``locked``        ``Boolean``  Desired lock state.
-================  ===========  =======================
+================  ==================  =======================
+Argument          Type                Description
+================  ==================  =======================
+``project``       ``Project object``  The project
+``locked``        ``Boolean``         ``True`` for locked, ``false`` for unlocked.
+================  ==================  =======================
 
 **Returns**
 
-Returns **true** if successful.
+None.
