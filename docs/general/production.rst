@@ -194,4 +194,4 @@ Argument          Type                Description
 
 **Returns**
 
-None.
+Returns **true** if successful. 
