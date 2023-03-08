@@ -508,7 +508,8 @@ Returns an item's colorspace properties.
 
 this will write the above info to the Events panel.
 
-.. code:: javascript
+.. code-block:: javascript
+
 {
 var colorSpace = app.project.rootItem.children[0].getColorSpace()
 app.setSDKEventMessage("Color Space " + " = " + colorSpace.name, 'info');
@@ -547,9 +548,9 @@ Returns an item's colorspace properties if the properties have been overwritten.
 
 See ProjectItem.getColorSpace()
 
-----
-
+---------------------------------
 .. _projectItem.getEmbeddedLUTID:
+---------------------------------
 
 ProjectItem.getEmbeddedLUTID()
 *********************************************
@@ -571,14 +572,16 @@ Returns an item's LUTID
 
 Writes LUTID to Events panel.
 
-.. code:: javascript
+.. code-block:: javascript
+
 {
 var lutID = app.project.rootItem.children[0].getEmbeddedLUTID()
 app.setSDKEventMessage("LutID " + " = " + lutID, 'info');
 }
 
-----
+------------------------------
 .. _projectItem.getInputLUTID:
+------------------------------
 
 ProjectItem.getInputLUTID()
 *********************************************
@@ -600,7 +603,8 @@ Returns an item's Input LUTID
 
 Writes Input LUTID to Events panel.
 
-.. code:: javascript
+.. code-block:: javascript
+
 {
 var lutID = app.project.rootItem.children[0].getInputLUTID()
 

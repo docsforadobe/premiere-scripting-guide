@@ -117,8 +117,8 @@ Methods
 Track.insertClip()
 *********************************************
 
-|   ``app.project.sequences[index].audioTracks[index].insertClip(projectItem, time)``
-|   ``app.project.sequences[index].videoTracks[index].insertClip(projectItem, time)``
+|   ``app.project.sequences[index].audioTracks[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)``
+|   ``app.project.sequences[index].videoTracks[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)``
 
 **Description**
 
@@ -131,6 +131,8 @@ Argument          Type                 Description
 ================  ===================  =======================
 ``projectItem``   :ref:`projectItem`   A project item from which to get media.
 ``time``          ``String``           The time at which to add project item, in **Ticks**.
+``vTrackIndex``   ``int``              The (zero-based) track index, into which to insert video.
+``aTrackIndex``   ``int``              The (zero-based) track index, into which to insert audio.
 ================  ===================  =======================
 
 **Returns**
