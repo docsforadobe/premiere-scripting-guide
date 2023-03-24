@@ -162,7 +162,7 @@ Sequence.projectItem
 
 **Description**
 
-The :ref:`projectItem` associated with this sequence.
+The :ref:`projectItem` associated with this sequence. Note that not all sequences will have a `projectItem`, there may be sequences in a project that Premiere generates that are invisible to the user, these do not have `projectItem`s.
 
 **Type**
 
