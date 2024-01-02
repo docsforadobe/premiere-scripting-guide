@@ -405,15 +405,15 @@ Specifies the interpolation type to be assigned to the keyframe, at the specifie
 Argument                 Type         Description
 =======================  ===========  ===============================
 ``time``                 :ref:`time`  A time  of keyframe to modify.
-``interpretationType``   ``type``     Must be one of the following: 
+``interpolationType``   ``type``     Must be one of the following: 
 
-                                      - 0 ``kfInterpMode_Linear``
+                                      - 0 ``KF_Interp_Mode_Linear``
                                       - 1 ``kfInterpMode_EaseIn_Obsolete``
                                       - 2 ``kfInterpMode_EaseOut_Obsolete``
                                       - 3 ``kfInterpMode_EaseInEaseOut_Obsolete``
-                                      - 4 ``kfInterpMode_Hold``
-                                      - 5 ``kfInterpMode_Bezier``
-                                      - 6 ``kfInterpMode_Time``
+                                      - 4 ``KF_Interp_Mode_Hold``
+                                      - 5 ``KF_Interp_Mode_Bezier``
+                                      - 6 ``KF_Interp_Mode_Time``
                                       - 7 ``kfInterpMode_TimeTransitionStart``
                                       - 8 ``kfInterpMode_TimeTransitionEnd``
 
