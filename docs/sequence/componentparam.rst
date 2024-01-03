@@ -397,15 +397,16 @@ ComponentParam.setInterpolationTypeAtKey()
 
 **Description**
 
-Specifies the interpolation type to be assigned to the keyframe, at the specified time. Note: Can only be used with keyframeable parameter streams.
+Specifies the interpolation type to be assigned to the keyframe, at the specified time. Note: It Can only be used with keyframeable parameter streams.
 
 **Parameters**
+
 
 =======================  ===========  ===============================
 Argument                 Type         Description
 =======================  ===========  ===============================
 ``time``                 :ref:`time`  A time  of keyframe to modify.
-``interpolationType``   ``type``     Must be one of the following: 
+``interpolationType``    ``type``     Must be one of the following: 
 
                                       - 0 ``KF_Interp_Mode_Linear``
                                       - 1 ``kfInterpMode_EaseIn_Obsolete``
