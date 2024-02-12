@@ -453,7 +453,7 @@ Renders the sequence to the specified output path, using the specified output pr
 Argument          Type         Description
 ================  ===========  =======================
 ``outputPath``    ``String``   An output path, to which to render the media.
-``presetPath``    ``String``   ???
+``presetPath``    ``String``   Path to the preset file (.epr) which contains the encoding settings.
 ``workAreaType``               Must be one of the following:
 
                                - 0 ``ENCODE_ENTIRE``
