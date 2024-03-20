@@ -152,7 +152,7 @@ TrackItem.outPoint
 
 **Description**
 
-The out point set on the source clip for this trackItem. This is also the time trimmed from the clip's end (``TrackItem.end``), as seen in the timeline.
+The out point set on the source clip for this trackItem. This affects the time trimmed from the clip's end (``TrackItem.end``), as seen in the timeline.
 
 **Type**
 
