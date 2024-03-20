@@ -56,7 +56,7 @@ TrackItem.end
 
 **Description**
 
-The ending time of the trackItem. Note: This may differ, from the trackItem's out point.
+The absolute end time of the trackItem in the timeline. This does not consider the visible clip trimming (determined by ``TrackItem.inPoint`` and ``TrackItem.outPoint``). Note: This may differ, from the trackItem's out point.
 
 **Type**
 
@@ -72,7 +72,7 @@ TrackItem.inPoint
 
 **Description**
 
-The in point for media, in this trackItem.
+The in point set on the source clip for this trackItem. This is also the time trimmed from the clip's start (``TrackItem.start``), as seen in the timeline.
 
 **Type**
 
@@ -152,7 +152,7 @@ TrackItem.outPoint
 
 **Description**
 
-The out point for media, in this trackItem.
+The out point set on the source clip for this trackItem. This is also the time trimmed from the clip's end (``TrackItem.end``), as seen in the timeline.
 
 **Type**
 
@@ -184,7 +184,7 @@ TrackItem.start
 
 **Description**
 
-The starting time of the trackItem. Note: This may differ, from the trackItem's in point.
+The absolute start time of the trackItem, in the timeline. This does not consider the visible clip trimming (determined by ``TrackItem.inPoint`` and ``TrackItem.outPoint``). Note: This may differ, from the trackItem's in point.
 
 **Type**
 
