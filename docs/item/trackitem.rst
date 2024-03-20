@@ -184,7 +184,7 @@ TrackItem.start
 
 **Description**
 
-The absolute start time of the trackItem, in the timeline. This does not consider the visible clip trimming (determined by ``TrackItem.inPoint`` and ``TrackItem.outPoint``). Note: This may differ, from the trackItem's in point.
+The absolute start time of the trackItem in the timeline. This does not consider the visible clip trimming (determined by ``TrackItem.inPoint`` and ``TrackItem.outPoint``). Note: This may differ, from the trackItem's in point.
 
 **Type**
 
