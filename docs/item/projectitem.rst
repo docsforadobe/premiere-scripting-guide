@@ -358,7 +358,7 @@ Argument          Type         Description
 
 **Returns**
 
-Returns **0** if creation if smart bin was successful.
+Returns a projectItem representing the newly-created bin, if successful.
 
 ----
 
