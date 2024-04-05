@@ -56,7 +56,7 @@ TrackItem.end
 
 **Description**
 
-The ending time of the trackItem. Note: This may differ, from the trackItem's out point.
+The visible end time of the trackItem in the sequence, relative to the beginning of its corresponding sequence (NOT the sequence zero point). Note: This may differ from the trackItem's out point, which is relative to the source.
 
 **Type**
 
@@ -72,7 +72,7 @@ TrackItem.inPoint
 
 **Description**
 
-The in point for media, in this trackItem.
+The in point set on the source for this trackItem instance, relative to the beginning of the source.
 
 **Type**
 
@@ -152,7 +152,7 @@ TrackItem.outPoint
 
 **Description**
 
-The out point for media, in this trackItem.
+The out point set on the source for this trackItem instance, relative to the beginning of the source.
 
 **Type**
 
@@ -184,7 +184,7 @@ TrackItem.start
 
 **Description**
 
-The starting time of the trackItem. Note: This may differ, from the trackItem's in point.
+The visible start time of the trackItem in the sequence, relative to the beginning of its corresponding sequence (NOT the sequence zero point). Note: This may differ from the trackItem's in point, which is relative to the source.
 
 **Type**
 
