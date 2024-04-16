@@ -853,6 +853,52 @@ Returns `true` if successful.
 
 ----
 
+.. _sequence.isWorkAreaEnabled:
+
+Sequence.isWorkAreaEnabled()
+*********************************************
+
+``app.project.sequences[index].isWorkAreaEnabled()``
+
+**Description**
+
+Returns `true` if work area is enabled.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+A ``Boolean``.
+
+----
+
+.. _sequence.setWorkAreaEnabled:
+
+Sequence.setWorkAreaEnabled()
+*********************************************
+
+``app.project.sequences[index].setWorkAreaEnabled(enableState)``
+
+**Description**
+
+Sets the enabled state of the sequence work area.
+
+**Parameters**
+
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``enableState``   ``Boolean``  The desired state.
+================  ===========  =======================
+
+**Returns**
+
+Returns void.
+
+----
+
 .. _sequence.setInPoint:
 
 Sequence.setInPoint()
