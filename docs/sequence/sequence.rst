@@ -601,6 +601,193 @@ Returns a :ref:`time` representing the out point, in seconds.
 
 ----
 
+.. _sequence.getWorkAreaInPoint:
+
+Sequence.getWorkAreaInPoint()
+*********************************************
+
+``app.project.sequences[index].getWorkAreaInPoint()``
+
+**Description**
+
+Retrieves the current sequence work area in point.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a Real representing the work area in point, in seconds.
+
+----
+
+----
+
+.. _sequence.getWorkAreaInPointAsTime:
+
+Sequence.getWorkAreaInPointAsTime()
+*********************************************
+
+``app.project.sequences[index].getWorkAreaInPointAsTime()``
+
+**Description**
+
+Retrieves the current sequence work area in point.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a :ref:`time` representing the work area in point.
+
+----
+
+
+.. _sequence.getWorkAreaOutPoint:
+
+Sequence.getWorkAreaOutPoint()
+*********************************************
+
+``app.project.sequences[index].getWorkAreaOutPoint()``
+
+**Description**
+
+Retrieves the current sequence work area out point.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a Real representing the work area out point, in seconds.
+
+----
+
+.. _sequence.getWorkAreaOutPointAsTime:
+
+Sequence.getWorkAreaOutPointAsTime()
+*********************************************
+
+``app.project.sequences[index].getWorkAreaOutPointAsTime()``
+
+**Description**
+
+Retrieves the current sequence work area out point.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns a :ref:`time` representing the work area out point.
+
+----
+
+.. _sequence.setWorkAreaInPoint:
+
+Sequence.setWorkAreaInPoint()
+*********************************************
+
+``app.project.sequences[index].setWorkAreaInPoint(timeInSeconds)``
+
+**Description**
+
+Sets the current sequence work area in point.
+
+**Parameters**
+
+=================  ===========  =======================
+Argument           Type         Description
+=================  ===========  =======================
+``timeInSeconds``  ``Float``    A new time in **seconds**.
+=================  ===========  =======================
+
+**Returns**
+
+Returns void.
+
+----
+
+.. _sequence.setWorkAreaOutPoint:
+
+Sequence.setWorkAreaOutPoint()
+*********************************************
+
+``app.project.sequences[index].setWorkAreaOutPoint(timeInSeconds)``
+
+**Description**
+
+Sets the current sequence work area out point.
+
+**Parameters**
+
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``timeInSeconds`` ``Float``    A new time in **seconds**.
+================  ===========  =======================
+
+**Returns**
+
+Returns void.
+
+----
+
+.. _sequence.setWorkAreaInPointAsTime:
+
+Sequence.setWorkAreaInPointAsTime()
+*********************************************
+
+``app.project.sequences[index].setWorkAreaInPointAsTime(inPoint)``
+
+**Description**
+
+Sets the current sequence work area in point.
+
+**Parameters**
+
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``inPoint``       ``Time``     A new :ref:`time`.
+================  ===========  =======================
+
+**Returns**
+
+Returns void.
+
+----
+
+.. _sequence.setWorkAreaOutPointAsTime:
+
+Sequence.setWorkAreaOutPointAsTime()
+*********************************************
+
+``app.project.sequences[index].setWorkAreaOutPointAsTime(outPoint)``
+
+**Description**
+
+Sets the current sequence work area out point.
+
+**Parameters**
+
+================  ===========  =======================
+Argument          Type         Description
+================  ===========  =======================
+``outPoint``      ``Time``     A new :ref:`time`.
+================  ===========  =======================
+
+**Returns**
+
+Returns void.
+
+----
+
 .. _sequence.getPlayerPosition:
 
 Sequence.getPlayerPosition()
