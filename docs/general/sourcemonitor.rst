@@ -88,6 +88,29 @@ Returns a :ref:`time` containing the position of the Source monitor's current ti
 
 ----
 
+.. _sourceMonitor.ProjectItem():
+
+SourceMonitor.getProjectItem()
+*********************************************
+
+``app.sourceMonitor.getProjectItem()``
+
+**Description**
+
+Retrieves the project item corresponding to the media open in the Source monitor.
+
+**Parameters**
+
+None.
+
+**Returns**
+
+Returns projectItem if successful; null if not. 
+
+----
+
+
+
 .. _sourceMonitor.openFilePath:
 
 SourceMonitor.openFilePath()
