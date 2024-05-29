@@ -518,8 +518,9 @@ app.setSDKEventMessage("Color Primaries " + " = " + colorSpace.primaries, 'info'
 app.setSDKEventMessage("Matrix Equation " + " = " + colorSpace.matrixEquation, 'info');
 }
 
-----
+--------------------------------------
 .. _projectItem.getOriginalColorSpace:
+--------------------------------------
 
 ProjectItem.getOriginalColorSpace()
 *********************************************

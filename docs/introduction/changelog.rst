@@ -6,6 +6,13 @@ What's new and changed for scripting?
 
 ----
 
+.. _Changelog.23.x:
+
+`Adobe Premiere Pro 23.0`_
+************************************************************************************************************************************
+
+- Decision : No further changes or improvements to Premiere Pro's ExtendScript API are planned or scheduled. Any such changes will be reconsidered, once Premiere Pro moves to UXP-based extensibility.
+
 .. _Changelog.15.x:
 
 `Adobe Premiere Pro 15.4`_
