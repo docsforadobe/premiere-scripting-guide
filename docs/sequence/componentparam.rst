@@ -14,8 +14,10 @@ The **component parameter** object represents a parameter associated with a comp
 NOTE: 
 For a developer working across different localizations, it's possible to find the corresponding keys by comparing ZStrings.
 Below is an example between En and De. Here are the paths to the files:
-C:\Program Files\Adobe\Adobe Premiere Pro 2024\Dictionaries\de_DE\zdictionary_PPRO_de_DE.dat  ("...anti-flicker Filter")
-C:\Program Files\Adobe\Adobe Premiere Pro 2024\Dictionaries\en_US\zdictionary_PPRO_en_US.dat  ("...anti-Flimmer Filter")
+
+C:\Program Files\Adobe\Adobe Premiere Pro 2024\Dictionaries\de_DE\zdictionary_PPRO_de_DE.dat  ("...anti-Flimmer Filter")
+
+C:\Program Files\Adobe\Adobe Premiere Pro 2024\Dictionaries\en_US\zdictionary_PPRO_en_US.dat ("...anti-flicker Filter")
 
 ----
 
