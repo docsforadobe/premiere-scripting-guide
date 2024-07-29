@@ -1263,7 +1263,7 @@ Returns a boolean; ``true`` if successful.
 
 ----
 
-.. _sequence.setWorkAreaInPoint:
+.. _sequence.setWorkAreaOutPoint:
 
 Sequence.setWorkAreaOutPoint()
 ******************************
