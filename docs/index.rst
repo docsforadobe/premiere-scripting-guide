@@ -56,6 +56,16 @@ Welcome to the Premiere Pro Scripting Guide!
 
 .. toctree::
     :maxdepth: 2
+    :caption: qe
+
+    qe/qe
+    qe/qeea
+    qe/qecreativecloudidentity
+    qe/qeproject
+    qe/qesource
+
+.. toctree::
+    :maxdepth: 2
     :caption: Collection
 
     collection/collection
