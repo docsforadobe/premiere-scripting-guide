@@ -576,7 +576,7 @@ Creates a new .prproj :ref:`project`, at the specified path.
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``path``          ``String``   A full path to new project; a .prproj extension will be added, if necessary.
+``path``          ``String``   A full path to new project; a .prproj extension will *not* be added.
 ================  ===========  =======================
 
 **Returns**
