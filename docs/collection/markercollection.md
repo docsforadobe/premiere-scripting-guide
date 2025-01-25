@@ -46,9 +46,9 @@ Create a new [Marker object](../general/marker.md) on a project item or a sequen
 
 #### Parameters
 
-| Argument   | Type    | Description                                         |
-|------------|---------|-----------------------------------------------------|
-| `time`     | Float | A time, in seconds, where marker should be created. |
+| Argument | Type  |                     Description                     |
+| -------- | ----- | --------------------------------------------------- |
+| `time`   | Float | A time, in seconds, where marker should be created. |
 
 #### Returns
 
@@ -69,15 +69,15 @@ Remove a given marker object from a collection.
 
 #### Parameters
 
-| Argument   | Type                                         | Description                                |
-|------------|----------------------------------------------|--------------------------------------------|
-| `marker`   | [Marker object](../general/marker.md) | A marker object to remove from collection. |
+| Argument |                 Type                  |                Description                 |
+| -------- | ------------------------------------- | ------------------------------------------ |
+| `marker` | [Marker object](../general/marker.md) | A marker object to remove from collection. |
 
 #### Returns
 
 Boolean.
 
-**Examples**
+#### Examples
 
 Remove all markers from the active sequence
 
@@ -151,8 +151,8 @@ Get the next available marker, sorted by seconds, starting from a given one.
 
 #### Parameters
 
-| Argument        | Type                                         | Description                                             |
-|-----------------|----------------------------------------------|---------------------------------------------------------|
+|    Argument     |                 Type                  |                       Description                       |
+| --------------- | ------------------------------------- | ------------------------------------------------------- |
 | `currentMarker` | [Marker object](../general/marker.md) | A starting marker object, from which to get a next one. |
 
 #### Returns
@@ -174,8 +174,8 @@ Get the previous available marker, sorted by seconds, starting from a given one.
 
 #### Parameters
 
-| Argument        | Type                                         | Description                                                 |
-|-----------------|----------------------------------------------|-------------------------------------------------------------|
+|    Argument     |                 Type                  |                         Description                         |
+| --------------- | ------------------------------------- | ----------------------------------------------------------- |
 | `currentMarker` | [Marker object](../general/marker.md) | A starting marker object, from which to get a previous one. |
 
 #### Returns

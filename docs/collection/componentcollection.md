@@ -25,7 +25,7 @@
 
 #### Description
 
-*add a description*
+The number of items in a ComponentCollection.
 
 #### Type
 

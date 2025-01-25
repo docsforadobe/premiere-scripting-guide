@@ -441,9 +441,9 @@ Determines whether the file at path can be opened as a Premiere Pro [project](..
 
 #### Parameters
 
-| Parameter |  Type  |    Description    |
-| --------- | ------ | ----------------- |
-| `path`    | String | A path to a file. |
+| Argument |  Type  |    Description    |
+| -------- | ------ | ----------------- |
+| `path`   | String | A path to a file. |
 
 #### Returns
 
@@ -490,9 +490,9 @@ Creates a new .prproj [Project object](../general/project.md), at the specified 
 
 #### Parameters
 
-| Parameter |  Type  |                             Description                              |
-| --------- | ------ | -------------------------------------------------------------------- |
-| `path`    | String | A full path to new project; a .prproj extension will *not* be added. |
+| Argument |  Type  |                             Description                              |
+| -------- | ------ | -------------------------------------------------------------------- |
+| `path`   | String | A full path to new project; a .prproj extension will *not* be added. |
 
 #### Returns
 
@@ -510,7 +510,7 @@ Opens the file at the specified path, as a Premiere Pro [Project object](../gene
 
 #### Parameters
 
-|         Parameter          |  Type   |                           Description                           |
+|          Argument          |  Type   |                           Description                           |
 | -------------------------- | ------- | --------------------------------------------------------------- |
 | `path`                     | String  | Full path to the document to be opened.                         |
 | `suppressConversionDialog` | Boolean | Optional. Suppress project conversion dialog.                   |
@@ -534,7 +534,7 @@ Opens an FCP XML file as a Premiere Pro [Project object](../general/project.md) 
 
 #### Parameters
 
-| Parameter  |  Type  | Description |
+|  Argument  |  Type  | Description |
 | ---------- | ------ | ----------- |
 | `path`     | String |             |
 | `projPath` | String |             |
@@ -573,7 +573,7 @@ Determines whether proxy usage is currently enabled.
 
 #### Parameters
 
-| Parameter |  Type   |                Description                |
+| Argument  |  Type   |                Description                |
 | --------- | ------- | ----------------------------------------- |
 | `enabled` | Integer | `1` turns proxies on, `0` turns them off. |
 
@@ -593,7 +593,7 @@ Whether extension with the given extensionID persists, within this session.
 
 #### Parameters
 
-|   Parameter   |  Type   |                          Description                          |
+|   Argument    |  Type   |                          Description                          |
 | ------------- | ------- | ------------------------------------------------------------- |
 | `extensionID` | String  | Which extension to modify.                                    |
 | `persistent`  | Integer | Pass `1` to keep extension in memory, `0` to allow unloading. |
@@ -625,7 +625,7 @@ Specifies the path to be used for one of Premiere Pro's scratch disk paths.
 
 #### Parameters
 
-|     Parameter     |          Type          |                                                                                                                                                                                                    Description                                                                                                                                                                                                    |
+|     Argument      |          Type          |                                                                                                                                                                                                    Description                                                                                                                                                                                                    |
 | ----------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `path`            | String                 | The new path to be used.                                                                                                                                                                                                                                                                                                                                                                                          |
 | `scratchDiskType` | `ScratchDiskType` enum | Enumerated value, must be one of the following:<ul><li>`ScratchDiskType.FirstVideoCaptureFolder`</li><li>`ScratchDiskType.FirstAudioCaptureFolder`</li><li>`ScratchDiskType.FirstVideoPreviewFolder`</li><li>`ScratchDiskType.FirstAudioPreviewFolder`</li><li>`ScratchDiskType.FirstAutoSaveFolder`</li><li>`ScratchDiskType.FirstCCLibrariesFolder`</li><li>`ScratchDiskType.FirstCapsuleMediaFolder`</li></ul> |
@@ -655,7 +655,7 @@ Writes a string to Premiere Pro's Events panel.
 
 #### Parameters
 
-|  Parameter  |  Type  |                                 Description                                  |
+|  Argument   |  Type  |                                 Description                                  |
 | ----------- | ------ | ---------------------------------------------------------------------------- |
 | `message`   | String | A message to display.                                                        |
 | `decorator` | String | Decorator, one of:<ul><li>`info`</li><li>`warning`</li><li>`error`</li></ul> |
@@ -676,7 +676,7 @@ Set workspace as active. Use [app.getWorkspaces()](#appgetworkspaces) to get a l
 
 #### Parameters
 
-|  Parameter  |  Type  |        Description         |
+|  Argument   |  Type  |        Description         |
 | ----------- | ------ | -------------------------- |
 | `workspace` | String | The name of the workspace. |
 
