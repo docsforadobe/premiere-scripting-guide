@@ -285,7 +285,7 @@ Generates a new, auto-reframed sequence.
 
 #### Returns
 
-Returns the new [Sequence object](#sequence).
+Returns the new [Sequence object](#sequence-object).
 
 #### Example
 
@@ -403,7 +403,7 @@ Creates a new sequence, from the in point to the out point, which is a sub-seque
 
 #### Returns
 
-Returns the newly-created [Sequence object](#sequence).
+Returns the newly-created [Sequence object](#sequence-object).
 
 !!! note
     This is not the same as nesting. The newly-created sequence is not inserted back into the original sequence. To nest, see the example function below.
