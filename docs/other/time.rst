@@ -7,7 +7,7 @@ Time object
 
 ``myTime = new Time();``
 
-**Description**
+#### Description
 
 An object representing a time. Internally, the time is computed in ``ticks``; there are 254016000000 ticks per second. That time can be accessed in different representations, including as a timecode string.
 
@@ -24,11 +24,11 @@ Time.seconds
 
 ``myTime.seconds``
 
-**Description**
+#### Description
 
 The time value, expressed in seconds.
 
-**Type**
+#### Type
 
 Number.
 
@@ -41,11 +41,11 @@ Time.ticks
 
 ``myTime.ticks``
 
-**Description**
+#### Description
 
 The time value, expressed in ticks.
 
-**Type**
+#### Type
 
 String.
 
@@ -62,11 +62,11 @@ Time.getFormatted()
 
 ``myTime.getFormatted(frameRate, displayFormat)``
 
-**Description**
+#### Description
 
 Returns the value of the ``Time`` passed, as a string, formatted in the specified display format.
 
-**Parameters**
+#### Parameters
 
 ===================  ===========  =======================
 Argument             Type         Description
@@ -107,9 +107,9 @@ Argument             Type         Description
 								  TIMEDISPLAY_AudioMsTimecode			= 201;
 ===================  ===========  =======================
 
-**Returns**
+#### Returns
 
-A ``String``.
+A `String`.
 
 ----
 
@@ -120,14 +120,14 @@ Time.setSecondsAsFraction()
 
 ``myTime.setSecondsAsFraction(numerator, denominator)``
 
-**Description**
+#### Description
 
 Sets the Time object to the result of dividing the numerator by the denominator.
 
-**Parameters**
+#### Parameters
 
 Both the numerator and the denominator are ``ints``.
 
-**Returns**
+#### Returns
 
 Boolean; ``true`` if successful.

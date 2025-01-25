@@ -20,10 +20,10 @@ The TrackItemCollection object represents a collection of [TrackItem objects](..
 `app.project.sequences[index].videoTracks[index].clips.numItems`
 <br/>
 
-**Description**
+#### Description
 
 The total number of clips on a track.
 
-**Type**
+#### Type
 
 Integer, read-only.

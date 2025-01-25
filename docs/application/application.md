@@ -2,10 +2,11 @@
 
 `app`
 
-**Description**
+#### Description
 
 Provides access to objects and application settings within Premiere Pro.
-The single global object is always available by its name, **app**.
+
+The single global object is always available by its name, `app`.
 
 ---
 
@@ -15,11 +16,11 @@ The single global object is always available by its name, **app**.
 
 `app.anywhere`
 
-**Description**
+#### Description
 
 An [Anywhere object](../general/anywhere.md), providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).
 
-**Type**
+#### Type
 
 [Anywhere object](../general/anywhere.md).
 
@@ -29,19 +30,20 @@ An [Anywhere object](../general/anywhere.md), providing access to available Anyw
 
 `app.build`
 
-**Description**
+#### Description
 
 The number of the build of Premiere Pro being run.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Example**
+#### Example
 
-Get a build version of current application  *(Adobe Premiere Pro version 14.3.1 (Build 45))*
+Get a build version of current application.
 
-```javascript
+```js
+// in Adobe Premiere Pro version 14.3.1 (Build 45)...
 parseInt(app.build); // 45
 ```
 
@@ -51,14 +53,14 @@ parseInt(app.build); // 45
 
 `app.encoder`
 
-**Description**
+#### Description
 
 Provides access to Adobe Media Encoder (on the same system).
 
-Warning: app.encoder is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in 22 and up.
-[https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-encoder-14-3-1-15-0-15-1-15-2/m-p/12544488](https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-encoder-14-3-1-15-0-15-1-15-2/m-p/12544488)
+!!! warning
+    `app.encoder` is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in 22 and up. [See this discussion](https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-encoder-14-3-1-15-0-15-1-15-2/m-p/12544488).
 
-**Type**
+#### Type
 
 [Encoder object](../general/encoder.md).
 
@@ -68,19 +70,19 @@ Warning: app.encoder is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in
 
 `app.getAppPrefPath`
 
-**Description**
+#### Description
 
 The path containing the currently active "Adobe Premiere Pro Prefs" file.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Example**
+#### Example
 
 Get a path to a currently active preference file
 
-```javascript
+```js
 app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 ```
 
@@ -90,19 +92,19 @@ app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile
 
 `app.getAppSystemPrefPath`
 
-**Description**
+#### Description
 
 Premiere Pro's active configuration files, not specific to a given user.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Example**
+#### Example
 
 Get a path to a currently active configuration folder
 
-```javascript
+```js
 app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 ```
 
@@ -112,19 +114,19 @@ app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere P
 
 `app.getPProPrefPath`
 
-**Description**
+#### Description
 
 The path containing the currently active "Adobe Premiere Pro Prefs" file.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Example**
+#### Example
 
 Get a path to a currently active preference file
 
-```javascript
+```js
 app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 ```
 
@@ -134,19 +136,19 @@ app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profil
 
 `app.getPProSystemPrefPath`
 
-**Description**
+#### Description
 
 Premiere Pro's active configuration files, not specific to a given user.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Example**
+#### Example
 
 Get a path to a currently active configuration folder
 
-```javascript
+```js
 app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 ```
 
@@ -156,19 +158,19 @@ app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere 
 
 `app.learnPanelContentDirPath`
 
-**Description**
+#### Description
 
 Get the Learn panel's contents directory path.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Example**
+#### Example
 
 Get a path to a Learn panel's directory
 
-```javascript
+```js
 app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/
 ```
 
@@ -178,19 +180,19 @@ app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Pan
 
 `app.learnPanelExampleProjectDirPath`
 
-**Description**
+#### Description
 
 Get the Learn panel's example projects directory path.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Example**
+#### Example
 
 Get a path to a Learn panel's example projects' directory
 
-```javascript
+```js
 app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/
 ```
 
@@ -200,11 +202,11 @@ app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tu
 
 `app.metadata`
 
-**Description**
+#### Description
 
 Get applications Metadata object.
 
-**Type**
+#### Type
 
 [Metadata object](../general/metadata.md), read-only.
 
@@ -214,19 +216,19 @@ Get applications Metadata object.
 
 `app.path`
 
-**Description**
+#### Description
 
 Get a path to applications executable file.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Example**
+#### Example
 
 Get a path to applications executable file.
 
-```javascript
+```js
 app.path; // /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
 ```
 
@@ -236,11 +238,11 @@ app.path; // /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
 
 `app.production`
 
-**Description**
+#### Description
 
 The currently active production.
 
-**Type**
+#### Type
 
 [Production object](../general/production.md) if at least 1 production is open, `null` otherwise.
 
@@ -250,11 +252,11 @@ The currently active production.
 
 `app.project`
 
-**Description**
+#### Description
 
 The currently active project.
 
-**Type**
+#### Type
 
 [Project object](../general/project.md).
 
@@ -264,11 +266,11 @@ The currently active project.
 
 `app.projectManager`
 
-**Description**
+#### Description
 
 Provides access to project management functions within Premiere Pro.
 
-**Type**
+#### Type
 
 [ProjectManager object](../general/projectmanager.md).
 
@@ -278,11 +280,11 @@ Provides access to project management functions within Premiere Pro.
 
 `app.projects`
 
-**Description**
+#### Description
 
 An array referencing all open projects; `numProjects` contains size.
 
-**Type**
+#### Type
 
 [ProjectCollection object](../collection/projectcollection.md), read-only.
 
@@ -292,11 +294,11 @@ An array referencing all open projects; `numProjects` contains size.
 
 `app.properties`
 
-**Description**
+#### Description
 
 The properties object provides methods to access and modify preference values.
 
-**Type**
+#### Type
 
 [Properties object](../general/properties.md), read-only;
 
@@ -306,11 +308,11 @@ The properties object provides methods to access and modify preference values.
 
 `app.sourceMonitor`
 
-**Description**
+#### Description
 
 Provides access to [SourceMonitor object](../general/sourcemonitor.md).
 
-**Type**
+#### Type
 
 [SourceMonitor object](../general/sourcemonitor.md).
 
@@ -320,11 +322,11 @@ Provides access to [SourceMonitor object](../general/sourcemonitor.md).
 
 `app.userGuid`
 
-**Description**
+#### Description
 
 A unique identifier for the currently logged-in Creative Cloud user.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -334,19 +336,19 @@ String; read-only.
 
 `app.version`
 
-**Description**
+#### Description
 
 The version of Premiere Pro, providing the API.
 
-**Type**
+#### Type
 
 String; read-only.
 
-**Example**
+#### Example
 
 Get a version of a current application  *(Adobe Premiere Pro version 14.3.1 (Build 45))*
 
-```javascript
+```js
 app.version; // 14.3.1
 ```
 
@@ -358,17 +360,17 @@ app.version; // 14.3.1
 
 `app.enableQE()`
 
-**Description**
+#### Description
 
 Enables Premiere Pro's QE DOM.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Returns true if QE DOM was enabled.
+Returns `true` if QE DOM was enabled.
 
 ---
 
@@ -376,15 +378,15 @@ Returns true if QE DOM was enabled.
 
 `app.getEnableProxies()`
 
-**Description**
+#### Description
 
 Determines whether proxy usage is currently enabled.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns 1 if proxies are enabled, 0 of they are not.
 
@@ -394,23 +396,23 @@ Returns 1 if proxies are enabled, 0 of they are not.
 
 `app.getWorkspaces()`
 
-**Description**
+#### Description
 
 Obtains an array of available workspaces as Strings.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 `Array` if successful, `null` if unsuccessful.
 
-**Example**
+#### Example
 
 Get a list of available workspaces.
 
-```javascript
+```js
 app.getWorkspaces();
 /* [
     "All Panels",
@@ -433,25 +435,25 @@ app.getWorkspaces();
 
 `app.isDocument(path)`
 
-**Description**
+#### Description
 
 Determines whether the file at path can be opened as a Premiere Pro [project](../general/project.md).
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type     | Description       |
 |------------|----------|-------------------|
-| `path`     | `String` | A path to a file. |
+| `path`     | String | A path to a file. |
 
-**Returns**
+#### Returns
 
 Returns **true** if file can be opened as a Premiere Pro [project](../general/project.md).
 
-**Example**
+#### Example
 
 Test for valid project files
 
-```javascript
+```js
 app.isDocument('~/Desktop/myProject.prproj'); // true
 app.isDocument('~/Desktop/textFile.txt');     // false
 app.isDocument('~/Desktop/footageFile.mov');  // false
@@ -464,15 +466,15 @@ app.isDocument('~/Desktop/imageFile.mov');    // false
 
 `app.isDocumentOpen()`
 
-**Description**
+#### Description
 
 Determines whether there are any [projects](../general/project.md) currently open.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **true** if at least 1 project is open; otherwise **false**.
 
@@ -482,17 +484,17 @@ Returns **true** if at least 1 project is open; otherwise **false**.
 
 `app.newProject(path)`
 
-**Description**
+#### Description
 
 Creates a new .prproj [Project object](../general/project.md), at the specified path.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type     | Description                                                          |
 |------------|----------|----------------------------------------------------------------------|
-| `path`     | `String` | A full path to new project; a .prproj extension will *not* be added. |
+| `path`     | String | A full path to new project; a .prproj extension will *not* be added. |
 
-**Returns**
+#### Returns
 
 Returns **true** if successful.
 
@@ -502,21 +504,21 @@ Returns **true** if successful.
 
 `app.openDocument(path)`
 
-**Description**
+#### Description
 
 Opens the file at the specified path, as a Premiere Pro [Project object](../general/project.md).
 
-**Parameters**
+#### Parameters
 
 | Argument                   | Type      | Description                                                     |
 |----------------------------|-----------|-----------------------------------------------------------------|
-| `path`                     | `String`  | Full path to the document to be opened.                         |
-| `suppressConversionDialog` | `Boolean` | Optional. Suppress project conversion dialog.                   |
-| `bypassLocateFileDialog`   | `Boolean` | Optional. Bypass the locate file dialog.                        |
-| `bypassWarningDialog`      | `Boolean` | Optional. Bypass warning dialog.                                |
-| `doNotAddToMRUList`        | `Boolean` | Optional. Skip adding this file to the Most Recently Used List. |
+| `path`                     | String  | Full path to the document to be opened.                         |
+| `suppressConversionDialog` | Boolean | Optional. Suppress project conversion dialog.                   |
+| `bypassLocateFileDialog`   | Boolean | Optional. Bypass the locate file dialog.                        |
+| `bypassWarningDialog`      | Boolean | Optional. Bypass warning dialog.                                |
+| `doNotAddToMRUList`        | Boolean | Optional. Skip adding this file to the Most Recently Used List. |
 
-**Returns**
+#### Returns
 
 Returns **true** if file was successfully opened.
 
@@ -526,18 +528,18 @@ Returns **true** if file was successfully opened.
 
 `app.openFCPXML(path, projPath)`
 
-**Description**
+#### Description
 
 Opens an FCP XML file as a Premiere Pro [Project object](../general/project.md) (specified in projPath).
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type     | Description   |
 |------------|----------|---------------|
-| `path`     | `String` |               |
-| `projPath` | `String` |               |
+| `path`     | String |               |
+| `projPath` | String |               |
 
-**Returns**
+#### Returns
 
 Returns **true** if file was successfully opened as a Premiere Pro [Project object](../general/project.md).
 
@@ -547,15 +549,15 @@ Returns **true** if file was successfully opened as a Premiere Pro [Project obje
 
 `app.quit()`
 
-**Description**
+#### Description
 
 Quits Premiere Pro; user will be prompted to save any changes to [Project object](../general/project.md).
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Nothing.
 
@@ -565,17 +567,17 @@ Nothing.
 
 `app.setEnableProxies(enabled)`
 
-**Description**
+#### Description
 
 Determines whether proxy usage is currently enabled.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type      | Description                               |
 |------------|-----------|-------------------------------------------|
-| `enabled`  | `Integer` | `1` turns proxies on, `0` turns them off. |
+| `enabled`  | Integer | `1` turns proxies on, `0` turns them off. |
 
-**Returns**
+#### Returns
 
 Returns 1 if proxy enablement was changed.
 
@@ -585,24 +587,24 @@ Returns 1 if proxy enablement was changed.
 
 `app.setExtensionPersistent(extensionID, persistent)`
 
-**Description**
+#### Description
 
 Whether extension with the given extensionID persists, within this session.
 
-**Parameters**
+#### Parameters
 
 | Argument      | Type      | Description                                                   |
 |---------------|-----------|---------------------------------------------------------------|
-| `extensionID` | `String`  | Which extension to modify.                                    |
-| `persistent`  | `Integer` | Pass `1` to keep extension in memory, `0` to allow unloading. |
+| `extensionID` | String  | Which extension to modify.                                    |
+| `persistent`  | Integer | Pass `1` to keep extension in memory, `0` to allow unloading. |
 
-**Returns**
+#### Returns
 
 Returns **true** if successful.
 
-**Example**
+#### Example
 
-```javascript
+```js
 var extensionID = 'com.adobe.PProPanel';
 // 0 - while testing (to enable rapid reload);
 // 1 - for "Never unload me, even when not visible."
@@ -617,24 +619,24 @@ app.setExtensionPersistent(extensionID, persistent);
 
 `app.setScratchDiskPath(path, scratchDiskType)`
 
-**Description**
+#### Description
 
 Specifies the path to be used for one of Premiere Pro's scratch disk paths.
 
-**Parameters**
+#### Parameters
 
 | Argument          | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                     |
 |-------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `path`            | `String` | The new path to be used.                                                                                                                                                                                                                                                                                                                                                                        |
+| `path`            | String | The new path to be used.                                                                                                                                                                                                                                                                                                                                                                        |
 | `scratchDiskType` | `Enum`   | Enumerated value, must be one of the following:<br/><br/>- `ScratchDiskType.FirstVideoCaptureFolder`<br/>- `ScratchDiskType.FirstAudioCaptureFolder`<br/>- `ScratchDiskType.FirstVideoPreviewFolder`<br/>- `ScratchDiskType.FirstAudioPreviewFolder`<br/>- `ScratchDiskType.FirstAutoSaveFolder`<br/>- `ScratchDiskType.FirstCCLibrariesFolder`<br/>- `ScratchDiskType.FirstCapsuleMediaFolder` |
 
-**Returns**
+#### Returns
 
 Returns 'true' if successful.
 
-**Example**
+#### Example
 
-```javascript
+```js
 var scratchPath = Folder.selectDialog('Choose new scratch disk folder');
 if (scratchPath && scratchPath.exists) {
     app.setScratchDiskPath(scratchPath.fsName, ScratchDiskType.FirstAutoSaveFolder);
@@ -647,18 +649,18 @@ if (scratchPath && scratchPath.exists) {
 
 `app.setSDKEventMessage(message, decorator)`
 
-**Description**
+#### Description
 
 Writes a string to Premiere Pro's Events panel.
 
-**Parameters**
+#### Parameters
 
 | Argument    | Type     | Description                                                                                |
 |-------------|----------|--------------------------------------------------------------------------------------------|
-| `message`   | `String` | A message to display.                                                                      |
-| `decorator` | `String` | Decorator, one of:<br/><br/>`info`<br/><br/><br/>`warning`<br/><br/><br/>`error`<br/><br/> |
+| `message`   | String | A message to display.                                                                      |
+| `decorator` | String | Decorator, one of:<br/><br/>`info`<br/><br/><br/>`warning`<br/><br/><br/>`error`<br/><br/> |
 
-**Returns**
+#### Returns
 
 Returns 'true' if successful.
 
@@ -668,25 +670,25 @@ Returns 'true' if successful.
 
 `app.setWorkspace(workspace)`
 
-**Description**
+#### Description
 
 Set workspace as active. Use [app.getWorkspaces()](#appgetworkspaces) to get a list of all available workspaces.
 
-**Parameters**
+#### Parameters
 
 | Argument    | Type     | Description                |
 |-------------|----------|----------------------------|
-| `workspace` | `String` | The name of the workspace. |
+| `workspace` | String | The name of the workspace. |
 
-**Returns**
+#### Returns
 
-`Boolean`.
+Boolean.
 
-**Example**
+#### Example
 
 Activate `Editing` workspace.
 
-```javascript
+```js
 var workspace = 'Editing';
 if (app.setWorkspace(workspace)) {
     alert('Workspace changed to "' + workspace + '"');
@@ -701,15 +703,15 @@ if (app.setWorkspace(workspace)) {
 
 `app.trace()`
 
-**Description**
+#### Description
 
 Writes a string to Premiere Pro's debug console.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **true** if trace was added.
 
@@ -719,21 +721,21 @@ Returns **true** if trace was added.
 
 `app.getProjectViewIDs()`
 
-**Description**
+#### Description
 
 Returns the view IDs of currently-open views, associated with any project.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 An array of view IDs; can be null.
 
-**Example**
+#### Example
 
-```javascript
+```js
 var allViewIDs = app.getProjectViewIDs();
 if (allViewIDs){
     var firstOne = allViewIDs[0];
@@ -748,21 +750,21 @@ if (allViewIDs){
 
 `app.getProjectFromViewID()`
 
-**Description**
+#### Description
 
 Returns the Project associated with the provided View ID.
 
-**Parameters**
+#### Parameters
 
 A View ID, obtained from `getProjectViewIDs`.
 
-**Returns**
+#### Returns
 
 A Project object, for the project associated with the provided View ID. Can be `null`.
 
-**Example**
+#### Example
 
-```javascript
+```js
 var allViewIDs = app.getProjectViewIDs();
 if (allViewIDs){
     var firstOne = allViewIDs[0];
@@ -784,21 +786,21 @@ if (allViewIDs){
 
 `app.getCurrentProjectViewSelection()`
 
-**Description**
+#### Description
 
 Returns an array of projectItems selected, in the current active project view.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 An array of projectItems; can be null.
 
-**Example**
+#### Example
 
-```javascript
+```js
 var selectedItems = app.getCurrentProjectViewSelection();
 if (selectedItems){
     var firstOne = selectedItems[0];

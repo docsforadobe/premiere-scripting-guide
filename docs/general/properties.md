@@ -2,7 +2,7 @@
 
 `app.properties`
 
-**Description**
+#### Description
 
 *add description here*
 
@@ -20,15 +20,15 @@ None.
 
 `app.properties.clearProperty()`
 
-**Description**
+#### Description
 
 *add description here*
 
-**Parameters**
+#### Parameters
 
 *add parameters here*
 
-**Returns**
+#### Returns
 
 *add return value/type here*
 
@@ -38,21 +38,21 @@ None.
 
 `app.properties.doesPropertyExist(property)`
 
-**Description**
+#### Description
 
 Checks whether a given property exists in preferences.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type     | Description         |
 |------------|----------|---------------------|
-| `property` | `String` | A property to check |
+| `property` | String | A property to check |
 
-**Returns**
+#### Returns
 
-`Boolean`.
+Boolean.
 
-**Example**
+#### Example
 
 Check whether labels with indices 10 and 99 exist in preferences:
 
@@ -72,21 +72,21 @@ alert('Property "' + property + '" exists: ' + exists.toString());
 
 `app.properties.getProperty(property)`
 
-**Description**
+#### Description
 
 Returns a property value.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type     | Description                   |
 |------------|----------|-------------------------------|
-| `property` | `String` | A property to get a value for |
+| `property` | String | A property to get a value for |
 
-**Returns**
+#### Returns
 
-`String`.
+String.
 
-**Example**
+#### Example
 
 Get label name at a given index:
 
@@ -107,19 +107,19 @@ if (app.properties.doesPropertyExist(property)) {
 
 `app.properties.isPropertyReadOnly(property)`
 
-**Description**
+#### Description
 
-Checks whether a given property can be overwritten by the user. Returns false if such property does not exist.
+Checks whether a given property can be overwritten by the user. Returns `false` if such property does not exist.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type     | Description          |
 |------------|----------|----------------------|
-| `property` | `String` | A property to check. |
+| `property` | String | A property to check. |
 
-**Returns**
+#### Returns
 
-`Boolean`.
+Boolean.
 
 ---
 
@@ -127,24 +127,24 @@ Checks whether a given property can be overwritten by the user. Returns false if
 
 `app.properties.setProperty(property, value, persistent, createIfNotExist)`
 
-**Description**
+#### Description
 
 Set property value. NOTE: For any file paths to be used in Premiere Pro's preferences, a trailing path seperator is mandatory.
 
-**Parameters**
+#### Parameters
 
 | Argument           | Type      | Description                                      |
 |--------------------|-----------|--------------------------------------------------|
-| `property`         | `String`  | A property to create                             |
-| `value`            | `Any`     | A value for a property                           |
-| `persistent`       | `Boolean` | Whether if should be persistent between sessions |
-| `createIfNotExist` | `Boolean` | Should create, if such property does not exist   |
+| `property`         | String  | A property to create                             |
+| `value`            | Any     | A value for a property                           |
+| `persistent`       | Boolean | Whether if should be persistent between sessions |
+| `createIfNotExist` | Boolean | Should create, if such property does not exist   |
 
-**Returns**
+#### Returns
 
 `null`.
 
-**Example**
+#### Example
 
 Change label name:
 

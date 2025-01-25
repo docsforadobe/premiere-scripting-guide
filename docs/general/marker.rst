@@ -8,7 +8,7 @@ Marker object
 |   ``app.project.activeSequence.markers.getFirstMarker()``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker()``
 
-**Description**
+#### Description
 
 Both :ref:`Project items <projectItem>` and :ref:`sequences <sequence>` have associated **marker** objects, which represent their associated markers.
 
@@ -26,11 +26,11 @@ Marker.comments
 |   ``app.project.activeSequence.markers.getFirstMarker().comments``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().comments``
 
-**Description**
+#### Description
 
 The comments within the marker.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -44,11 +44,11 @@ Marker.end
 |   ``app.project.activeSequence.markers.getFirstMarker().end``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().end``
 
-**Description**
+#### Description
 
 A :ref:`time` containing the value of the ending of the marker.
 
-**Type**
+#### Type
 
 :ref:`time`; read/write.
 
@@ -62,11 +62,11 @@ Marker.guid
 |   ``app.project.activeSequence.markers.getFirstMarker().guid``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().guid``
 
-**Description**
+#### Description
 
 The unique identifier of the marker, created at time of instantiation.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -80,11 +80,11 @@ Marker.name
 |   ``app.project.activeSequence.markers.getFirstMarker().name``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().name``
 
-**Description**
+#### Description
 
 The name of the marker.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -98,11 +98,11 @@ Marker.start
 |   ``app.project.activeSequence.markers.getFirstMarker().start``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().start``
 
-**Description**
+#### Description
 
 A :ref:`time` containing the value of the beginning of the marker.
 
-**Type**
+#### Type
 
 :ref:`time`; read/write.
 
@@ -116,11 +116,11 @@ Marker.type
 |   ``app.project.activeSequence.markers.getFirstMarker().type``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().type``
 
-**Description**
+#### Description
 
 The type of marker; either "Comment", "Chapter", "Segmentation", or "WebLink". Note: Premiere Pro can import some marker types, which cannot be created from within Premiere Pro.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -141,21 +141,21 @@ Marker.getColorByIndex()
 .. note::
     This functionality was added in Adobe Premire Pro 13.x.
 
-**Description**
+#### Description
 
 Gets the marker color index.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``index``         ``Integer``  Index of the marker to be read.
+``index``         `Integer`  Index of the marker to be read.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
-Returns the color index as an ``Integer``.
+Returns the color index as an `Integer`.
 
 ----
 
@@ -167,17 +167,17 @@ Marker.getWebLinkFrameTarget()
 |   ``app.project.activeSequence.markers.getFirstMarker().getWebLinkFrameTarget()``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().getWebLinkFrameTarget()``
 
-**Description**
+#### Description
 
 Retrieves the frame target, from the marker's FrameTarget field.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Returns a ``String`` containing the frame target, or **0** if unsuccessful.
+Returns a `String` containing the frame target, or **0** if unsuccessful.
 
 ----
 
@@ -189,17 +189,17 @@ Marker.getWebLinkURL()
 |   ``app.project.activeSequence.markers.getFirstMarker().getWebLinkURL()``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().getWebLinkURL()``
 
-**Description**
+#### Description
 
 Retrieves the URL, from the marker's URL field.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Returns a ``String`` containing the URL, or **0** if unsuccessful.
+Returns a `String` containing the URL, or **0** if unsuccessful.
 
 ----
 
@@ -214,7 +214,7 @@ Marker.setColorByIndex()
 .. note::
     This functionality was added in Adobe Premire Pro 13.x.
 
-**Description**
+#### Description
 
 Sets the marker color by index. Color indexies listed below.
 
@@ -227,16 +227,16 @@ Sets the marker color by index. Color indexies listed below.
 * 6 = Blue
 * 7 = Cyan
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``colorIndex``    ``Integer``  Index of the color to apply to the marker.
-``markerIndex``   ``Integer``  Index of the marker to be set.
+``colorIndex``    `Integer`  Index of the color to apply to the marker.
+``markerIndex``   `Integer`  Index of the marker to be set.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns ``undefined``.
 
@@ -250,15 +250,15 @@ Marker.setTypeAsChapter()
 |   ``app.project.activeSequence.markers.getFirstMarker().setTypeAsChapter()``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().setTypeAsChapter()``
 
-**Description**
+#### Description
 
 Sets the type of the marker to "Chapter".
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -272,15 +272,15 @@ Marker.setTypeAsComment()
 |   ``app.project.activeSequence.markers.getFirstMarker().setTypeAsComment()``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().setTypeAsComment()``
 
-**Description**
+#### Description
 
 Sets the type of the marker to "Comment".
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -294,15 +294,15 @@ Marker.setTypeAsSegmentation()
 |   ``app.project.activeSequence.markers.getFirstMarker().setTypeAsSegmentation()``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().setTypeAsSegmentation()``
 
-**Description**
+#### Description
 
 Sets the type of the marker to "Segmentation".
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -316,14 +316,14 @@ Marker.setTypeAsWebLink()
 |   ``app.project.activeSequence.markers.getFirstMarker().setTypeAsWebLink()``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker().setTypeAsWebLink()``
 
-**Description**
+#### Description
 
 Sets the type of the marker to "WebLink".
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.

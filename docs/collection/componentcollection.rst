@@ -29,10 +29,10 @@ ComponentCollection.numItems
 |   ``app.project.sequences[index].audioTracks[index].clips[index].components.numItems``
 |   ``app.project.sequences[index].videoTracks[index].clips[index].components.numItems``
 
-**Description**
+#### Description
 
 *add a description*
 
-**Type**
+#### Type
 
 Integer, read-only.

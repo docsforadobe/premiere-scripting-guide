@@ -5,7 +5,7 @@
 `app.project.sequences[index].videoTracks[index]`
 <br/>
 
-**Description**
+#### Description
 
 The **Track** object represents a video or audio track, within a [Sequence object](sequence.md).
 
@@ -20,11 +20,11 @@ The **Track** object represents a video or audio track, within a [Sequence objec
 `app.project.sequences[index].videoTracks[index].clips`
 <br/>
 
-**Description**
+#### Description
 
 An array of [Track item](../item/trackitem.md) objects, contained within the track, in temporal order.
 
-**Type**
+#### Type
 
 [TrackItemCollection object](../collection/trackitemcollection.md), read-only;
 
@@ -37,11 +37,11 @@ An array of [Track item](../item/trackitem.md) objects, contained within the tra
 `app.project.sequences[index].videoTracks[index].id`
 <br/>
 
-**Description**
+#### Description
 
 This is the ordinal assigned to the track, upon creation.
 
-**Type**
+#### Type
 
 Integer, read-only.
 
@@ -54,11 +54,11 @@ Integer, read-only.
 `app.project.sequences[index].videoTracks[index].mediaType`
 <br/>
 
-**Description**
+#### Description
 
 The type of media, contained in this track.
 
-**Type**
+#### Type
 
 String, read-only; valid values are `Audio` and `Video`.
 
@@ -71,11 +71,11 @@ String, read-only; valid values are `Audio` and `Video`.
 `app.project.sequences[index].videoTracks[index].name`
 <br/>
 
-**Description**
+#### Description
 
 The name of the track.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -88,11 +88,11 @@ String; read-only.
 `app.project.sequences[index].videoTracks[index].transitions`
 <br/>
 
-**Description**
+#### Description
 
 An array of transitions objects, contained within the track, in temporal order.
 
-**Type**
+#### Type
 
 [TrackItemCollection object](../collection/trackitemcollection.md), read-only;
 
@@ -107,20 +107,20 @@ An array of transitions objects, contained within the track, in temporal order.
 `app.project.sequences[index].videoTracks[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)`
 <br/>
 
-**Description**
+#### Description
 
 Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)) to the track, at the specified time. Media will be inserted, at that time.
 
-**Parameters**
+#### Parameters
 
 | Argument      | Type                                                     | Description                                               |
 |---------------|----------------------------------------------------------|-----------------------------------------------------------|
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
-| `time`        | `String`                                                 | The time at which to add project item, in **Ticks**.      |
+| `time`        | String                                                 | The time at which to add project item, in **Ticks**.      |
 | `vTrackIndex` | `int`                                                    | The (zero-based) track index, into which to insert video. |
 | `aTrackIndex` | `int`                                                    | The (zero-based) track index, into which to insert audio. |
 
-**Returns**
+#### Returns
 
 None.
 
@@ -133,15 +133,15 @@ None.
 `app.project.sequences[index].videoTracks[index].isMuted()`
 <br/>
 
-**Description**
+#### Description
 
 Retrieves the current mute state, of the track.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **true** if track is currently muted; **false** if not.
 
@@ -154,18 +154,18 @@ Returns **true** if track is currently muted; **false** if not.
 `app.project.sequences[index].videoTracks[index].overwriteClip(projectItem, time)`
 <br/>
 
-**Description**
+#### Description
 
 Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)) to the track, at the specified time. This will overwrite any existing media, at that time.
 
-**Parameters**
+#### Parameters
 
 | Argument      | Type                                                     | Description                                          |
 |---------------|----------------------------------------------------------|------------------------------------------------------|
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.              |
-| `time`        | `String`                                                 | The time at which to add project item, in **Ticks**. |
+| `time`        | String                                                 | The time at which to add project item, in **Ticks**. |
 
-**Returns**
+#### Returns
 
 Returns `true`.
 
@@ -178,16 +178,16 @@ Returns `true`.
 `app.project.sequences[index].videoTracks[index].setMute(isMuted)`
 <br/>
 
-**Description**
+#### Description
 
 Sets the mute state, of the track.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type      | Description                                                |
 |------------|-----------|------------------------------------------------------------|
-| `isMuted`  | `Integer` | If `1`, mute the track. If `0`, the track will be unmuted. |
+| `isMuted`  | Integer | If `1`, mute the track. If `0`, the track will be unmuted. |
 
-**Returns**
+#### Returns
 
 Returns 0 if successful.

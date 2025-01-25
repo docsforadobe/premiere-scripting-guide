@@ -7,7 +7,7 @@ Anywhere object
 
 ``app.anywhere``
 
-**Description**
+#### Description
 
 The **anywhere** object represents any Adobe Anywhere or Team Projects servers available.
 
@@ -32,15 +32,15 @@ Anywhere.getAuthenticationToken()
 
 ``app.anywhere.getAuthenticationToken()``
 
-**Description**
+#### Description
 
 Retrieves an authentication token.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 A **String** containing the login token, or **0** if unsuccessful.
 
@@ -53,15 +53,15 @@ Anywhere.getCurrentEditingSessionActiveSequenceURL()
 
 ``app.anywhere.getCurrentEditingSessionActiveSequenceURL()``
 
-**Description**
+#### Description
 
 Retrieves the URL of the currently active sequence, within a production.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns a **String** containing the asset's URL, or **0** if unsuccessful (including if there is no active sequence, or if no editing session is opened).
 
@@ -74,15 +74,15 @@ Anywhere.getCurrentEditingSessionSelectionURL()
 
 ``app.anywhere.getCurrentEditingSessionSelectionURL()``
 
-**Description**
+#### Description
 
 Retrieves the URL of the currently selected single asset. Will fail if more or fewer than one item is selected.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns a **String** containing the asset's URL, or **0** if unsuccessful (including if more or fewre than one item is selected).
 
@@ -95,15 +95,15 @@ Anywhere.getCurrentEditingSessionURL()
 
 ``app.anywhere.getCurrentEditingSessionURL()``
 
-**Description**
+#### Description
 
 Retrieves the URL of the Production, currently being edited.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns a **String** containing the production's URL, or **0** if unsuccessful.
 
@@ -116,15 +116,15 @@ Anywhere.isProductionOpen()
 
 ``app.anywhere.isProductionOpen()``
 
-**Description**
+#### Description
 
 Retrieves whether an Anywhere or Team Projects production is currently open.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns ``true`` if a production is open; ``false`` if not.
 
@@ -137,15 +137,15 @@ Anywhere.listProductions()
 
 ``app.anywhere.listProductions()``
 
-**Description**
+#### Description
 
-Retrieves production names, available to the current user, on the current server. 
+Retrieves production names, available to the current user, on the current server.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns an Array of **Strings** containing the names of avialable productions, or 0 if unsuccessful.
 
@@ -158,19 +158,19 @@ Anywhere.openProduction()
 
 ``app.anywhere.openProduction(productionURL)``
 
-**Description**
+#### Description
 
 Opens the production at the specified URL.
 
-**Parameters**
+#### Parameters
 
 =================  ===========  =======================
 Argument           Type         Description
 =================  ===========  =======================
-``productionURL``  ``String``   The url of the production to open.
+``productionURL``  `String`   The url of the production to open.
 =================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -183,19 +183,19 @@ Anywhere.setAuthenticationToken()
 
 ``app.anywhere.setAuthenticationToken(token, emailAddress)``
 
-**Description**
+#### Description
 
 Logs the specified email address into the server, using the provided token.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``token``         ``String``   An authorization token.
-``emailAddress``  ``String``   The associated email address.
+``token``         `String`   An authorization token.
+``emailAddress``  `String`   The associated email address.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.

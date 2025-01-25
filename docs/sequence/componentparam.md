@@ -5,7 +5,7 @@
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index]`
 <br/>
 
-**Description**
+#### Description
 
 The **component parameter** object represents a parameter associated with a component, applied to a [TrackItem object](../item/trackitem.md).
 
@@ -28,11 +28,11 @@ C:Program FilesAdobeAdobe Premiere Pro 2024Dictionariesen_USzdictionary_PPRO_en_
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].displayName`
 <br/>
 
-**Description**
+#### Description
 
 The name of the component parameter, as it is displayed to the user. Localized.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -47,17 +47,17 @@ String; read-only.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].addKey(time)`
 <br/>
 
-**Description**
+#### Description
 
 Adds a keyframe to the component parameter stream, at the specified time. Note: This can only be set on parameters which support keyframing.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type                                 | Description                        |
 |------------|--------------------------------------|------------------------------------|
 | `time`     | [Time object](../other/time.md) | When the keyframe should be added. |
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -70,15 +70,15 @@ Returns **0** if successful.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].areKeyframesSupported()`
 <br/>
 
-**Description**
+#### Description
 
 Retrieves whether keyframes are supported, for this component parameter.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns `true` if keyframes are supported; `false` if not.
 
@@ -91,18 +91,18 @@ Returns `true` if keyframes are supported; `false` if not.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findNearestKey(timeToCheck, threshold)`
 <br/>
 
-**Description**
+#### Description
 
 Sets whether the component parameter varies, over time. Note: This can only be set on parameters which support keyframing.
 
-**Parameters**
+#### Parameters
 
 | Argument      | Type   | Description                                             |
 |---------------|--------|---------------------------------------------------------|
 | `timeToCheck` |        | Start search from a given time                          |
 | `threshold`   |        | A temporal distance, in either direction, in **ticks**. |
 
-**Returns**
+#### Returns
 
 Returns a **Time** value, indicating when the closest keyframe is.
 
@@ -115,17 +115,17 @@ Returns a **Time** value, indicating when the closest keyframe is.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findNextKey(timeToCheck)`
 <br/>
 
-**Description**
+#### Description
 
 Returns the keyframe temporally subsequent to the provided `timeToCheck`. Note: This can only be set on parameters which support keyframing.
 
-**Parameters**
+#### Parameters
 
 | Argument      | Type   | Description                     |
 |---------------|--------|---------------------------------|
 | `timeToCheck` |        | Start search from a given time. |
 
-**Returns**
+#### Returns
 
 Returns a **Time** value, indicating when the closest keyframe is, or **0** if there is no available subsequent keyframe.
 
@@ -138,17 +138,17 @@ Returns a **Time** value, indicating when the closest keyframe is, or **0** if t
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findPreviousKey(timeToCheck)`
 <br/>
 
-**Description**
+#### Description
 
 Returns the keyframe temporally previous to the provided `timeToCheck`. Note: This can only be set on parameters which support keyframing.
 
-**Parameters**
+#### Parameters
 
 | Argument      | Type   | Description                     |
 |---------------|--------|---------------------------------|
 | `timeToCheck` |        | Start search from a given time. |
 
-**Returns**
+#### Returns
 
 Returns a **Time** value, indicating when the closest keyframe is, or **0** if there is no available previous keyframe.
 
@@ -161,15 +161,15 @@ Returns a **Time** value, indicating when the closest keyframe is, or **0** if t
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getColorValue()`
 <br/>
 
-**Description**
+#### Description
 
 Obtains the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns a **Color** containing the values found in the component parameter stream, or **0** if unsuccessful.
 
@@ -182,15 +182,15 @@ Returns a **Color** containing the values found in the component parameter strea
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getKeys()`
 <br/>
 
-**Description**
+#### Description
 
 Returns an array of all keyframes on the `timeToCheck` component parameter. Note: This can only be set on parameters which support keyframing.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns an **Array** of **Time** values, indicating at what time each keyframe occurs, or **0** if no keyframes are available.
 
@@ -203,15 +203,15 @@ Returns an **Array** of **Time** values, indicating at what time each keyframe o
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getValue()`
 <br/>
 
-**Description**
+#### Description
 
 Obtains the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns the value of the component parameter stream; the return varies with stream type.
 
@@ -224,17 +224,17 @@ Returns the value of the component parameter stream; the return varies with stre
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getValueAtKey(time)`
 <br/>
 
-**Description**
+#### Description
 
 Retrieves the value of the component parameter stream, at the specified keyframe time. Note: Can only be used with keyframeable parameter streams.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type                                 | Description                                               |
 |------------|--------------------------------------|-----------------------------------------------------------|
 | `time`     | [Time object](../other/time.md) | A time from which the keyframe value should be retrieved. |
 
-**Returns**
+#### Returns
 
 Returns the value of the component parameter stream at `time`, or **0** if unsuccessful.
 
@@ -247,17 +247,17 @@ Returns the value of the component parameter stream at `time`, or **0** if unsuc
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getValueAtTime(time)`
 <br/>
 
-**Description**
+#### Description
 
 Retrieves the value of the component parameter stream, at the specified time. If the value is between two keyframes then interpolation takes place.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type                                 | Description                                               |
 |------------|--------------------------------------|-----------------------------------------------------------|
 | `time`     | [Time object](../other/time.md) | A time from which the keyframe value should be retrieved. |
 
-**Returns**
+#### Returns
 
 Returns the value of the component parameter stream at `time`, or **0** if unsuccessful.
 
@@ -270,15 +270,15 @@ Returns the value of the component parameter stream at `time`, or **0** if unsuc
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].isTimeVarying()`
 <br/>
 
-**Description**
+#### Description
 
 Retrieves whether the component parameter varies, over time.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns `true` if the parameter varies over time; `false` if not.
 
@@ -291,17 +291,17 @@ Returns `true` if the parameter varies over time; `false` if not.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].removeKey(time)`
 <br/>
 
-**Description**
+#### Description
 
 Removes a keyframe on the component parameter stream, at the specified time. Note: This can only be set on parameters which support keyframing.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type                                 | Description                                                   |
 |------------|--------------------------------------|---------------------------------------------------------------|
 | `time`     | [Time object](../other/time.md) | A time value, indicating when the keyframe should be removed. |
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -314,18 +314,18 @@ Returns **0** if successful.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].removeKeyRange(startTime, endTime)`
 <br/>
 
-**Description**
+#### Description
 
 Removes all keyframes from the component parameter stream, between the specified times. Note: This can only be set on parameters which support keyframing.
 
-**Parameters**
+#### Parameters
 
 | Argument    | Type                                 | Description                                                  |
 |-------------|--------------------------------------|--------------------------------------------------------------|
 | `startTime` | [Time object](../other/time.md) | At what times (inclusive) to begin the removal of keyframes. |
 | `endTime`   | [Time object](../other/time.md) | at what times to end the removal of keyframes.               |
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -338,21 +338,21 @@ Returns **0** if successful.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setColorValue(alpha, red, green, blue, updateUI)`
 <br/>
 
-**Description**
+#### Description
 
 Sets the values within a component parameter stream, representing a Color.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type      | Description                                                |
 |------------|-----------|------------------------------------------------------------|
-| `alpha`    | `Integer` | Alpha value.                                               |
-| `red`      | `Integer` | Red value.                                                 |
-| `green`    | `Integer` | Green value.                                               |
-| `blue`     | `Integer` | Blue value.                                                |
-| `updateUI` | `Integer` | Force to update UI after updating the value of the stream. |
+| `alpha`    | Integer | Alpha value.                                               |
+| `red`      | Integer | Red value.                                                 |
+| `green`    | Integer | Green value.                                               |
+| `blue`     | Integer | Blue value.                                                |
+| `updateUI` | Integer | Force to update UI after updating the value of the stream. |
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -365,19 +365,19 @@ Returns **0** if successful.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType)`
 <br/>
 
-**Description**
+#### Description
 
 Specifies the interpolation type to be assigned to the keyframe, at the specified time. Note: It Can only be used with keyframeable parameter streams.
 
-**Parameters**
+#### Parameters
 
 | Argument            | Type                                 | Description                                                                                                                                                                                                                                                                                                                                                                     |
 |---------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `time`              | [Time object](../other/time.md) | A time  of keyframe to modify.                                                                                                                                                                                                                                                                                                                                                  |
 | `interpolationType` | `type`                               | Must be one of the following:<br/><br/>- 0 `KF_Interp_Mode_Linear`<br/>- 1 `kfInterpMode_EaseIn_Obsolete`<br/>- 2 `kfInterpMode_EaseOut_Obsolete`<br/>- 3 `kfInterpMode_EaseInEaseOut_Obsolete`<br/>- 4 `KF_Interp_Mode_Hold`<br/>- 5 `KF_Interp_Mode_Bezier`<br/>- 6 `KF_Interp_Mode_Time`<br/>- 7 `kfInterpMode_TimeTransitionStart`<br/>- 8 `kfInterpMode_TimeTransitionEnd` |
-| `updateUI`          | `boolean`                            | Whether to update UI afterward.                                                                                                                                                                                                                                                                                                                                                 |
+| `updateUI`          | Boolean                            | Whether to update UI afterward.                                                                                                                                                                                                                                                                                                                                                 |
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -390,17 +390,17 @@ Returns **0** if successful.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setTimeVarying(varying)`
 <br/>
 
-**Description**
+#### Description
 
 Sets whether the component parameter varies, over time. Note: This can only be set on parameters which support keyframing.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type      | Description                                                               |
 |------------|-----------|---------------------------------------------------------------------------|
-| `varying`  | `Boolean` | If `true`, component parameter will vary over time; if `false`, it won't. |
+| `varying`  | Boolean | If `true`, component parameter will vary over time; if `false`, it won't. |
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -413,18 +413,18 @@ Returns **0** if successful.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValue(value, updateUI)`
 <br/>
 
-**Description**
+#### Description
 
 Sets the value of the component parameter stream. Note: This can only work on parameters which are not time-variant.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type      | Description                                                                           |
 |------------|-----------|---------------------------------------------------------------------------------------|
 | `value`    |           | Must be of the appropriate type for the component parameter stream.                   |
-| `updateUI` | `Integer` | If `1`, will force Premiere Pro to update UI, after updating the value of the stream. |
+| `updateUI` | Integer | If `1`, will force Premiere Pro to update UI, after updating the value of the stream. |
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -437,18 +437,18 @@ Returns **0** if successful.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValueAtKey(time, value, updateUI)`
 <br/>
 
-**Description**
+#### Description
 
 Sets the value of the component parameter stream, at the specified keyframe time. Note: Can only be used with keyframeable parameter streams.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type                                 | Description                                                                           |
 |------------|--------------------------------------|---------------------------------------------------------------------------------------|
 | `time`     | [Time object](../other/time.md) | A time at which the keyframe value should be set.                                     |
 | `value`    |                                      | A value to be set.                                                                    |
-| `updateUI` | `Integer`                            | If `1`, will force Premiere Pro to update UI, after updating the value of the stream. |
+| `updateUI` | Integer                            | If `1`, will force Premiere Pro to update UI, after updating the value of the stream. |
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.

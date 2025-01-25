@@ -20,11 +20,11 @@ The MarkerCollection object represents a collection of [Marker objects](../gener
 `app.project.rootItem.children[index].getMarkers().numMarkers`
 <br/>
 
-**Description**
+#### Description
 
 The count of marker objects in the project item or sequence.
 
-**Type**
+#### Type
 
 Integer, read-only.
 
@@ -39,17 +39,17 @@ Integer, read-only.
 `app.project.rootItem.children[index].getMarkers().createMarker(time)`
 <br/>
 
-**Description**
+#### Description
 
 Create a new [Marker object](../general/marker.md) on a project item or a sequence.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type    | Description                                         |
 |------------|---------|-----------------------------------------------------|
-| `time`     | `Float` | A time, in seconds, where marker should be created. |
+| `time`     | Float | A time, in seconds, where marker should be created. |
 
-**Returns**
+#### Returns
 
 [Marker object](../general/marker.md) if successful.
 
@@ -62,19 +62,19 @@ Create a new [Marker object](../general/marker.md) on a project item or a sequen
 `app.project.rootItem.children[index].getMarkers().deleteMarker(marker)`
 <br/>
 
-**Description**
+#### Description
 
 Remove a given marker object from a collection.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type                                         | Description                                |
 |------------|----------------------------------------------|--------------------------------------------|
 | `marker`   | [Marker object](../general/marker.md) | A marker object to remove from collection. |
 
-**Returns**
+#### Returns
 
-`Boolean`.
+Boolean.
 
 **Examples**
 
@@ -102,15 +102,15 @@ alert('Removed ' + count.toString() + ' markers');
 `app.project.rootItem.children[index].getMarkers().getFirstMarker()`
 <br/>
 
-**Description**
+#### Description
 
 Retrieve the first marker object, sorted by time in seconds, on a given project item or sequence.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 [Marker object](../general/marker.md) or `undefined`.
 
@@ -123,15 +123,15 @@ None.
 `app.project.rootItem.children[index].getMarkers().getLastMarker()`
 <br/>
 
-**Description**
+#### Description
 
 Retrieve the very last marker object, sorted by time in seconds, on a given project item or sequence.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 [Marker object](../general/marker.md) or `undefined`.
 
@@ -144,17 +144,17 @@ None.
 `app.project.rootItem.children[index].getMarkers().getNextMarker(currentMarker)`
 <br/>
 
-**Description**
+#### Description
 
 Get the next available marker, sorted by seconds, starting from a given one.
 
-**Parameters**
+#### Parameters
 
 | Argument        | Type                                         | Description                                             |
 |-----------------|----------------------------------------------|---------------------------------------------------------|
 | `currentMarker` | [Marker object](../general/marker.md) | A starting marker object, from which to get a next one. |
 
-**Returns**
+#### Returns
 
 [Marker object](../general/marker.md) or `undefined`.
 
@@ -167,16 +167,16 @@ Get the next available marker, sorted by seconds, starting from a given one.
 `app.project.rootItem.children[index].getMarkers().getPrevMarker(currentMarker)`
 <br/>
 
-**Description**
+#### Description
 
 Get the previous available marker, sorted by seconds, starting from a given one.
 
-**Parameters**
+#### Parameters
 
 | Argument        | Type                                         | Description                                                 |
 |-----------------|----------------------------------------------|-------------------------------------------------------------|
 | `currentMarker` | [Marker object](../general/marker.md) | A starting marker object, from which to get a previous one. |
 
-**Returns**
+#### Returns
 
 [Marker object](../general/marker.md) or `undefined`.

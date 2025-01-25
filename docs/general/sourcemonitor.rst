@@ -7,7 +7,7 @@ SourceMonitor object
 
 ``app.sourceMonitor``
 
-**Description**
+#### Description
 
 The Source object represents Premiere Pro's Source monitor.
 
@@ -32,15 +32,15 @@ SourceMonitor.closeAllClips()
 
 ``app.sourceMonitor.closeAllClips()``
 
-**Description**
+#### Description
 
 Closes all clips in the Source monitor.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -53,15 +53,15 @@ SourceMonitor.closeClip()
 
 ``app.sourceMonitor.closeClip()``
 
-**Description**
+#### Description
 
 Closes the front-most clip in the Source monitor.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -74,17 +74,17 @@ SourceMonitor.getPosition()
 
 ``app.sourceMonitor.getPosition()``
 
-**Description**
+#### Description
 
 Retrieves the position of the Source monitor's current time indicator.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Returns a :ref:`time` containing the position of the Source monitor's current time indicator. 
+Returns a :ref:`time` containing the position of the Source monitor's current time indicator.
 
 ----
 
@@ -95,17 +95,17 @@ SourceMonitor.getProjectItem()
 
 ``app.sourceMonitor.getProjectItem()``
 
-**Description**
+#### Description
 
 Retrieves the project item corresponding to the media open in the Source monitor.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Returns projectItem if successful; null if not. 
+Returns projectItem if successful; null if not.
 
 ----
 
@@ -118,19 +118,19 @@ SourceMonitor.openFilePath()
 
 ``app.sourceMonitor.openFilePath(path)``
 
-**Description**
+#### Description
 
 Open a file in the Source monitor.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``path``          ``String``   A path to the file to open.
+``path``          `String`   A path to the file to open.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns ``true`` if successful.
 
@@ -143,11 +143,11 @@ SourceMonitor.openProjectItem()
 
 ``app.sourceMonitor.openProjectItem(projectItem)``
 
-**Description**
+#### Description
 
 Open a project item in the Source monitor.
 
-**Parameters**
+#### Parameters
 
 ================  ==================  =======================
 Argument          Type                Description
@@ -155,7 +155,7 @@ Argument          Type                Description
 ``projectItem``   :ref:`projectItem`  A project item to open.
 ================  ==================  =======================
 
-**Returns**
+#### Returns
 
 Returns 0 if successful.
 
@@ -168,18 +168,18 @@ SourceMonitor.play()
 
 ``app.sourceMonitor.play(playbackSpeed)``
 
-**Description**
+#### Description
 
 Begins playing back the Source monitor, at the specified playback speed.
 
-**Parameters**
+#### Parameters
 
 ==================  ===========  =======================
 Argument            Type         Description
 ==================  ===========  =======================
-``playbackSpeed``   ``Float``    The playback speed.
+``playbackSpeed``   `Float`    The playback speed.
 ==================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns 0 if successful.

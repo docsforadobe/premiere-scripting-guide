@@ -14,10 +14,10 @@ The ProjectItemCollection object represents a collection of [ProjectItem objects
 
 `app.project.rootItem.children.numItems`
 
-**Description**
+#### Description
 
 The total number of items in the active project.
 
-**Type**
+#### Type
 
 Integer, read-only.

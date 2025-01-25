@@ -7,7 +7,7 @@ ProjectItem object
 
 ``app.project.rootItem.children[index]``
 
-**Description**
+#### Description
 
 Each item in a project is a **projectItem**, including the project root.
 
@@ -24,11 +24,11 @@ ProjectItem.children
 
 ``app.project.rootItem.children[index].children``
 
-**Description**
+#### Description
 
 An array of project items, contained within the specified project item.
 
-**Type**
+#### Type
 
 :ref:`projectItemCollection`, read-only.
 
@@ -41,11 +41,11 @@ ProjectItem.getAudioChannelMapping
 
 ``app.project.rootItem.children[index].getAudioChannelMapping``
 
-**Description**
+#### Description
 
 The audio channel mapping currently applied to this **projectItem**.
 
-**Type**
+#### Type
 
 An audioChannelMapping object.
 
@@ -58,7 +58,7 @@ ProjectItem.getOverrideColorSpaceList
 
 ``app.project.rootItem.children[index].getOverrideColorSpaceList``
 
-**Description**
+#### Description
 
 *Add a description*
 
@@ -83,7 +83,7 @@ Returns an object, containing similar data
         ]
     };
 
-**Type**
+#### Type
 
 Javascript Object.
 
@@ -96,15 +96,15 @@ ProjectItem.name
 
 ``app.project.rootItem.children[index].name``
 
-**Description**
+#### Description
 
 The name of the project item.
 
-**Type**
+#### Type
 
 String; read/write.
 
-**Example**
+#### Example
 
 Rename first project item.
 
@@ -126,13 +126,13 @@ ProjectItem.nodeId
 
 ``app.project.rootItem.children[index].nodeId``
 
-**Description**
+#### Description
 
 A unique ID assigned to the project item, upon its addition to the project.
 
 **NOTE**: Distinguish between references to the same source media.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -145,11 +145,11 @@ ProjectItem.teamProjectsAssetId
 
 ``app.project.rootItem.children[index].teamProjectsAssetId``
 
-**Description**
+#### Description
 
 The Team Projects Asset ID of the project item.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -162,13 +162,13 @@ ProjectItem.treePath
 
 ``app.project.rootItem.children[index].treePath``
 
-**Description**
+#### Description
 
 The current project location of the project item. Example:
 
     **\\ProjectName.prproj\\Media\\MXF\\filename.mxf**
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -181,11 +181,11 @@ ProjectItem.type
 
 ``app.project.rootItem.children[index].type``
 
-**Description**
+#### Description
 
 Will be **CLIP**, **BIN**, **ROOT**, or **FILE**.
 
-**Type**
+#### Type
 
 Enumerated value; read-only.
 
@@ -202,21 +202,21 @@ ProjectItem.attachProxy()
 
 ``app.project.rootItem.children[index].attachProxy(mediaPath, isHiRes)``
 
-**Description**
+#### Description
 
 Attaches the media at ``newMediaPath`` to the project item, as either hi-res or proxy media.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``mediaPath``     ``String``   The path to the the newly-assigned media.
-``isHiRes``       ``Integer``  Whether the new media should be attached as the proxy ``0``, or high resolution ``1`` media.
+``mediaPath``     `String`   The path to the the newly-assigned media.
+``isHiRes``       `Integer`  Whether the new media should be attached as the proxy ``0``, or high resolution ``1`` media.
 ================  ===========  =======================
 
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -229,15 +229,15 @@ ProjectItem.canChangeMediaPath()
 
 ``app.project.rootItem.children[index].canChangeMediaPath()``
 
-**Description**
+#### Description
 
 Returns **true** if Premiere Pro can change the path, associated with this project item; otherwise, returns **false**.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Boolean; **true** if media can be replaced, **false** if not.
 
@@ -250,15 +250,15 @@ ProjectItem.canProxy()
 
 ``app.project.rootItem.children[index].canProxy()``
 
-**Description**
+#### Description
 
 Indicates whether it's possible to attach a proxy, to this project item.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **true** if the project item permits a proxy to be attached; **false** if not.
 
@@ -271,20 +271,20 @@ ProjectItem.changeMediaPath()
 
 ``app.project.rootItem.children[index].changeMediaPath(newPath)``
 
-**Description**
+#### Description
 
 Updates the project item to point to a new media path.
 
-**Parameters**
+#### Parameters
 
 ===================  ===========  =======================
 Argument             Type         Description
 ===================  ===========  =======================
-``newPath``          ``String``   A new path to the media file.
-``overrideChecks``   ``Boolean``  Override any safety concerns.
+``newPath``          `String`   A new path to the media file.
+``overrideChecks``   `Boolean`  Override any safety concerns.
 ===================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns **0** if replacement was successful.
 
@@ -297,15 +297,15 @@ ProjectItem.clearOutPoint()
 
 ``app.project.rootItem.children[index].clearOutPoint()``
 
-**Description**
+#### Description
 
 Clears any assigned out point; the project item will then start at ``startTime``.
 
-**Parameters**
+#### Parameters
 
 None
 
-**Returns**
+#### Returns
 
 Returns ``0`` if successful.
 
@@ -318,19 +318,19 @@ ProjectItem.createBin()
 
 ``app.project.rootItem.children[index].createBin(name)``
 
-**Description**
+#### Description
 
 Creates an empty bin, within the project item. Only works within bins.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``name``          ``String``   A name of a new bin.
+``name``          `String`   A name of a new bin.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns a project item representing the new bin if successful, or **0** if unsuccessful.
 
@@ -343,20 +343,20 @@ ProjectItem.createSmartBin()
 
 ``app.project.rootItem.children[index].createSmartBin(name, queryString)``
 
-**Description**
+#### Description
 
 Creates a search bin; only works for bin project items.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``name``          ``String``   A name of a new bin.
-``queryString``   ``String``   Query string for search.
+``name``          `String`   A name of a new bin.
+``queryString``   `String`   Query string for search.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns a projectItem representing the newly-created bin, if successful.
 
@@ -369,24 +369,24 @@ ProjectItem.createSubClip()
 
 ``app.project.rootItem.children[index].createSubClip(name, startTime, endTime, hasHardBoundaries, takeAudio, takeVideo)``
 
-**Description**
+#### Description
 
 Creates a new project item for a sub-clip of the existing project item.
 
-**Parameters**
+#### Parameters
 
 ======================  ===========  =======================
 Argument                Type         Description
 ======================  ===========  =======================
-``name``                ``String``   A name of a new subclip.
-``startTime``           ``String``   Start time of subclip, in **Ticks**. 
-``endTime``             ``String``   End time of subclip, in **Ticks**.
-``hasHardBoundaries``   ``Integer``  If ``1``, the user cannot extend `in` and `out`.
-``takeVideo``           ``Integer``  If ``1``, use video from source. 
-``takeAudio``           ``Integer``  If ``1``, use audio from source.
+``name``                `String`   A name of a new subclip.
+``startTime``           `String`   Start time of subclip, in **Ticks**.
+``endTime``             `String`   End time of subclip, in **Ticks**.
+``hasHardBoundaries``   `Integer`  If ``1``, the user cannot extend `in` and `out`.
+``takeVideo``           `Integer`  If ``1``, use video from source.
+``takeAudio``           `Integer`  If ``1``, use audio from source.
 ======================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns a project item representing the new subclip, or 0 if creation failed.
 
@@ -399,15 +399,15 @@ ProjectItem.deleteBin()
 
 ``app.project.rootItem.children[index].deleteBin()``
 
-**Description**
+#### Description
 
 Deletes a bin, **AND ALL ITS CONTENTS**, from the project.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if deletion was successful.
 
@@ -420,20 +420,20 @@ ProjectItem.findItemsMatchingMediaPath()
 
 ``app.project.rootItem.children[index].findItemsMatchingMediaPath(pathToMatch, ignoreSubClips)``
 
-**Description**
+#### Description
 
 Returns an array of project items, all of which reference the same media path.
 
-**Parameters**
+#### Parameters
 
 ===================  ===========  =======================
 Argument             Type         Description
 ===================  ===========  =======================
-``pathToMatch``      ``String``   A path to match.
-``ignoreSubClips``   ``Integer``  If ``1``, no subclips will be returned. 
+``pathToMatch``      `String`   A path to match.
+``ignoreSubClips``   `Integer`  If ``1``, no subclips will be returned.
 ===================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns an array of project items, or **0** if no project items matching the ``matchPath`` were found.
 
@@ -446,15 +446,15 @@ ProjectItem.getColorLabel()
 
 ``app.project.rootItem.children[index].getColorLabel()``
 
-**Description**
+#### Description
 
 Retrieves the project item's color label.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 ``Number``, one of
 
@@ -486,14 +486,14 @@ ProjectItem.getColorSpace()
 
 ``app.project.rootItem.children[index].getColorSpace()``
 
-**Description**
+#### Description
 
 Retrieves the project item's colorspace properties.
 
-**Parameters**
+#### Parameters
 None.
 
-**Returns**
+#### Returns
 
 Returns an item's colorspace properties.
 
@@ -527,14 +527,14 @@ ProjectItem.getOriginalColorSpace()
 
 ``app.project.rootItem.children[index].getOriginalColorSpace()``
 
-**Description**
+#### Description
 
 Retrieves the project item's colorspace properties .
 
-**Parameters**
+#### Parameters
 None.
 
-**Returns**
+#### Returns
 
 Returns an item's colorspace properties if the properties have been overwritten.
 
@@ -558,14 +558,14 @@ ProjectItem.getEmbeddedLUTID()
 
 ``app.project.rootItem.children[index].getEmbeddedLUTID()``
 
-**Description**
+#### Description
 
 Retrieves the project item's LUTID .
 
-**Parameters**
+#### Parameters
 None.
 
-**Returns**
+#### Returns
 
 Returns an item's LUTID
 
@@ -589,14 +589,14 @@ ProjectItem.getInputLUTID()
 
 ``app.project.rootItem.children[index].getInputLUTID()``
 
-**Description**
+#### Description
 
 Retrieves the project item's Input LUTID .
 
-**Parameters**
+#### Parameters
 None.
 
-**Returns**
+#### Returns
 
 Returns an item's Input LUTID
 
@@ -623,15 +623,15 @@ ProjectItem.getFootageInterpretation()
 
 ``app.project.rootItem.children[index].getFootageInterpretation()``
 
-**Description**
+#### Description
 
 Returns a structure describing the current interpretation of the projectItem.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 A footage interpretation structure, or ``0`` if unsuccessful.
 
@@ -681,15 +681,15 @@ ProjectItem.getInPoint()
 
 ``app.project.rootItem.children[index].getInPoint()``
 
-**Description**
+#### Description
 
 Obtains the current project item in point.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 A :ref:`time`, containing the in point.
 
@@ -702,15 +702,15 @@ ProjectItem.getMarkers()
 
 ``app.project.rootItem.children[index].getMarkers()``
 
-**Description**
+#### Description
 
 Retrieves the :ref:`markerCollection` associated with this project item.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 :ref:`markerCollection`, read-only;
 
@@ -723,15 +723,15 @@ ProjectItem.getMediaPath()
 
 ``app.project.rootItem.children[index].getMediaPath()``
 
-**Description**
+#### Description
 
 Returns the path associated with the project item's media, as a String. **NOTE**: This only works for atomic media; this call cannot provide meaningful paths for media which has no actual path (which will be the case for any media generated by synthetic importers, like Premiere Pro's own Universal Counting Leader). Also, for image sequences, only the path to the first image in the sequence will be returned.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 A String containing the path to the media associate with the project item.
 
@@ -744,19 +744,19 @@ ProjectItem.getOutPoint()
 
 ``app.project.rootItem.children[index].getOutPoint(mediaType)``
 
-**Description**
+#### Description
 
 Retrieves the current out point for specified media type.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``mediaType``     ``Integer``  Pass ``1`` for video only, or ``2`` for audio only. If no ``mediaType`` is passed, function gets the out point for all media.
+``mediaType``     `Integer`  Pass ``1`` for video only, or ``2`` for audio only. If no ``mediaType`` is passed, function gets the out point for all media.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns a :ref:`time`.
 
@@ -769,15 +769,15 @@ ProjectItem.getProjectMetadata()
 
 ``app.project.rootItem.children[index].getProjectMetadata()``
 
-**Description**
+#### Description
 
 Retrieves metadata associated with the project item. Distinct from media XMP.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 A String containing all Premiere Pro private project metadata, serialized.
 
@@ -790,15 +790,15 @@ ProjectItem.getProjectColumnsMetadata()
 
 ``app.project.rootItem.children[index].getProjectColumnsMetadata()``
 
-**Description**
+#### Description
 
 Returns a JSON string to the user with all the metadata from the current project view layout
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 A JSON string that can be parsed with JSON.parse() method in the Javascript layer. This generates a list of objects, each object representing a column. Each object will contain 4 key/value pairs: ColumnName, ColumnValue, ColumnID, ColumnPath.
 ColumnName and ColumnValue serve as informational key/value.
 ColumnID and ColumnPath can be used to modify that column via the method setProjectMetadata() or setXMPMetadata().
@@ -824,15 +824,15 @@ ProjectItem.getProxyPath()
 
 ``app.project.rootItem.children[index].getProxyPath()``
 
-**Description**
+#### Description
 
 Retrieves the path to the proxy media associated with this project item.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns the path (as **String**) to the proxy media associated with the proxy item, or **0** if none is found.
 
@@ -845,15 +845,15 @@ ProjectItem.getXMPMetadata()
 
 ``app.project.rootItem.children[index].getXMPMetadata()``
 
-**Description**
+#### Description
 
 Retrieves the XMP metadata associated with the project item, as a String.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 A String containing all XMP metadata, serialized.
 
@@ -866,15 +866,15 @@ ProjectItem.hasProxy()
 
 ``app.project.rootItem.children[index].hasProxy()``
 
-**Description**
+#### Description
 
 Indicates whether a proxy has already been attached, to the project item.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **true** if the project item has a proxy attached; **false** if not.
 
@@ -887,17 +887,17 @@ ProjectItem.isMergedClip()
 
 ``app.project.rootItem.children[index].isMergedClip()``
 
-**Description**
+#### Description
 
 Indicates whether the project item refers to a merged clip.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Returns ``true`` if the project item is a merged clip, ``false`` if it isn't. 
+Returns ``true`` if the project item is a merged clip, ``false`` if it isn't.
 
 ----
 
@@ -908,17 +908,17 @@ ProjectItem.isMulticamClip()
 
 ``app.project.rootItem.children[index].isMulticamClip()``
 
-**Description**
+#### Description
 
 Indicates whether the project item refers to a multicam clip.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Returns ``true`` if the project item is a multicam clip, ``false`` if it isn't. 
+Returns ``true`` if the project item is a multicam clip, ``false`` if it isn't.
 
 ----
 
@@ -929,15 +929,15 @@ ProjectItem.isOffline()
 
 ``app.project.rootItem.children[index].isOffline()``
 
-**Description**
+#### Description
 
 Returns a Boolean indicating whether the project item is offline.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Boolean, ``true`` if offline.
 
@@ -950,15 +950,15 @@ ProjectItem.isSequence()
 
 ``app.project.rootItem.children[index].isSequence()``
 
-**Description**
+#### Description
 
 Indicates whether the project item refers to a :ref:`sequence`.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns ``true`` if the project item is a :ref:`sequence`, or a multicam clip, or a merged clip. Returns ``false`` if it isn't any of those.
 
@@ -971,15 +971,15 @@ ProjectItem.moveBin()
 
 ``app.project.rootItem.children[index].moveBin(newParentBinProjectItem)``
 
-**Description**
+#### Description
 
 Moves the projectItem into a new parent bin.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if move was successful.
 
@@ -992,15 +992,15 @@ ProjectItem.refreshMedia()
 
 ``app.project.rootItem.children[index].refreshMedia()``
 
-**Description**
+#### Description
 
 Forces Premiere Pro to update its representation of the media associated with the project item. If the media was previously off-line, this can cause it to become online (if previously missing media has become available).
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 An array of markers associated with the project item, or **0** if there are no markers.
 
@@ -1013,19 +1013,19 @@ ProjectItem.renameBin()
 
 ``app.project.rootItem.children[index].renameBin(newName)``
 
-**Description**
+#### Description
 
 Changes name of bin. Only works on project items which are bins.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``newName``       ``String``   A new bin name.
+``newName``       `String`   A new bin name.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns **0** if renaming bin was successful.
 
@@ -1038,15 +1038,15 @@ ProjectItem.select()
 
 ``app.project.rootItem.children[index].select()``
 
-**Description**
+#### Description
 
 Sets the project item (which must be a bin), as the target for subsequent imports into the project.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if the project item has successfully been made the target, for subsequent imports.
 
@@ -1059,19 +1059,19 @@ ProjectItem.setColorLabel()
 
 ``app.project.rootItem.children[index].setColorLabel(labelColor)``
 
-**Description**
+#### Description
 
 Sets the project item's color label.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``labelColor``    ``Integer``  A label color; see :ref:`projectItem.getColorLabel`.
+``labelColor``    `Integer`  A label color; see :ref:`projectItem.getColorLabel`.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 0 if successful.
 
@@ -1084,11 +1084,11 @@ ProjectItem.setFootageInterpretation()
 
 ``app.project.rootItem.children[index].setFootageInterpretation(interpretation)``
 
-**Description**
+#### Description
 
 Returns a structure describing the current interpretation of the projectItem.
 
-**Parameters**
+#### Parameters
 
 ===================  ===========  =======================
 Argument             Type         Description
@@ -1096,7 +1096,7 @@ Argument             Type         Description
 ``interpretation``                A footage interpretation structure.
 ===================  ===========  =======================
 
-**Returns**
+#### Returns
 
 ``true`` if successful.
 
@@ -1109,20 +1109,20 @@ ProjectItem.setInPoint()
 
 ``app.project.rootItem.children[index].setInPoint(time, mediaType)``
 
-**Description**
+#### Description
 
-Sets the in point to ``timeInTicks``, for specified media types. 
+Sets the in point to ``timeInTicks``, for specified media types.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``time``          ``String``   A time in **Ticks**.
-``mediaType``     ``Integer``  Determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
+``time``          `String`   A time in **Ticks**.
+``mediaType``     `Integer`  Determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns ``0`` if successful.
 
@@ -1135,15 +1135,15 @@ ProjectItem.setOffline()
 
 ``app.project.rootItem.children[index].setOffline()``
 
-**Description**
+#### Description
 
 Makes the project item offline.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 ``true`` if successful.
 
@@ -1156,20 +1156,20 @@ ProjectItem.setOutPoint()
 
 ``app.project.rootItem.children[index].setOutPoint(time, mediaType)``
 
-**Description**
+#### Description
 
-Sets the out point to ``timeInTicks``, for specified media types. 
+Sets the out point to ``timeInTicks``, for specified media types.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``time``          ``String``   A time in **Ticks**.
-``mediaType``     ``Integer``  Determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
+``time``          `String`   A time in **Ticks**.
+``mediaType``     `Integer`  Determining which media type to affect; pass ``1`` for video only, ``2`` for audio only, or ``4`` for all media types.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns ``0`` if successful.
 
@@ -1182,19 +1182,19 @@ ProjectItem.setOverrideFrameRate()
 
 ``app.project.rootItem.children[index].setOverrideFrameRate(newFrameRate)``
 
-**Description**
+#### Description
 
 Sets the frame rate of the project item.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``newFrameRate``  ``Float``    The new frame rate.
+``newFrameRate``  `Float`    The new frame rate.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns **0** if the frame rate has successfully been changed.
 
@@ -1207,20 +1207,20 @@ ProjectItem.setOverridePixelAspectRatio()
 
 ``app.project.rootItem.children[index].setOverridePixelAspectRatio(numerator, denominator)``
 
-**Description**
+#### Description
 
 Sets the pixel aspect ratio for the project item.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``numerator``     ``Integer``  A new numerator.
-``denominator``   ``Integer``  A new denominator.
+``numerator``     `Integer`  A new numerator.
+``denominator``   `Integer`  A new denominator.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns **0** if the aspect ratio has successfully been changed.
 
@@ -1233,20 +1233,20 @@ ProjectItem.setProjectMetadata()
 
 ``app.project.rootItem.children[index].setProjectMetadata(newMetadata, updatedFields)``
 
-**Description**
+#### Description
 
 Sets the private project metadata associated with the project item.
 
-**Parameters**
+#### Parameters
 
 ==============================  ===========  =======================
 Argument                        Type         Description
 ==============================  ===========  =======================
-``newMetadata``                 ``String``   A new, serialized private project metadata.
+``newMetadata``                 `String`   A new, serialized private project metadata.
 ``updatedFields``               ``Array``    An array containing the names of the fields to be updated.
 ==============================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns 0 if update was successful.
 
@@ -1259,15 +1259,15 @@ ProjectItem.setScaleToFrameSize()
 
 ``app.project.rootItem.children[index].setScaleToFrameSize()``
 
-**Description**
+#### Description
 
 Turns on scaling to frame size, for when media from this project item is inserted into a sequence.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Undefined return value.
 
@@ -1280,19 +1280,19 @@ ProjectItem.setStartTime()
 
 ``app.project.rootItem.children[index].setStartTime(time)``
 
-**Description**
+#### Description
 
 Assigns a new start time to the project item
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``time``          ``String``   A new starting time, represented in **Ticks**.
+``time``          `String`   A new starting time, represented in **Ticks**.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns ``0`` if successful.
 
@@ -1305,19 +1305,19 @@ ProjectItem.setXMPMetadata()
 
 ``app.project.rootItem.children[index].setXMPMetadata(newXMP)``
 
-**Description**
+#### Description
 
 Sets the XMP metadata associated with the project item.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``newXMP``        ``String``   A new, serialized XMP metadata.
+``newXMP``        `String`   A new, serialized XMP metadata.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 Returns 0 if update was successful.
 
@@ -1330,15 +1330,15 @@ ProjectItem.startTime()
 
 ``app.project.rootItem.children[index].startTime()``
 
-**Description**
+#### Description
 
 Returns a :ref:`time`, representing start time.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 :ref:`time`.
 
@@ -1351,10 +1351,10 @@ ProjectItem.videoComponents()
 
 ``app.project.rootItem.children[index].videoComponents()``
 
-**Description**
+#### Description
 
 Video components for the 'Master Clip' of this project item.
 
-**Type**
+#### Type
 
 :ref:`componentCollection`, read-only.

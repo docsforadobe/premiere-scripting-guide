@@ -20,10 +20,10 @@ The TrackCollection object represents a collection of [Track objects](../sequenc
 `app.project.sequences[index].videoTracks.numTracks`
 <br/>
 
-**Description**
+#### Description
 
 The total number of tracks in the sequence.
 
-**Type**
+#### Type
 
 Integer, read-only.

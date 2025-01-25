@@ -5,7 +5,7 @@
 `app.project.sequences[index].videoTracks[index].clips[index].components[index]`
 <br/>
 
-**Description**
+#### Description
 
 The **component** object represents something which has been added or applied to a trackItem.
 
@@ -20,11 +20,11 @@ The **component** object represents something which has been added or applied to
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].displayName`
 <br/>
 
-**Description**
+#### Description
 
 The name of the component, as it is displayed to the user. Localized.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -37,11 +37,11 @@ String; read-only.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].matchName`
 <br/>
 
-**Description**
+#### Description
 
 The name of the component, as it is loaded from disk; used to uniquely identify effect plug-ins.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -54,10 +54,10 @@ String; read-only.
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties`
 <br/>
 
-**Description**
+#### Description
 
 The properties of the component in question; typically, these are effect parameters.
 
-**Type**
+#### Type
 
 Array of components, read-only; (ComponentParamCollection object).

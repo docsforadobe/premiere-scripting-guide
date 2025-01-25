@@ -7,7 +7,7 @@ Metadata object
 
 ``app.metadata``
 
-**Description**
+#### Description
 
 *add description here*
 
@@ -24,11 +24,11 @@ Metadata.getMetadata
 
 ``app.metadata.getMetadata``
 
-**Description**
+#### Description
 
 *add description here*
 
-**Type**
+#### Type
 
 String.
 
@@ -45,15 +45,15 @@ Metadata.addMarker()
 
 ``app.metadata.addMarker()``
 
-**Description**
+#### Description
 
 *add description here*
 
-**Parameters**
+#### Parameters
 
 *add parameters here*
 
-**Returns**
+#### Returns
 
 *add return value/type here*
 
@@ -66,15 +66,15 @@ Metadata.deleteMarker()
 
 ``app.metadata.deleteMarker()``
 
-**Description**
+#### Description
 
 *add description here*
 
-**Parameters**
+#### Parameters
 
 *add parameters here*
 
-**Returns**
+#### Returns
 
 *add return value/type here*
 
@@ -87,15 +87,15 @@ Metadata.setMarkerData()
 
 ``app.metadata.setMarkerData()``
 
-**Description**
+#### Description
 
 *add description here*
 
-**Parameters**
+#### Parameters
 
 *add parameters here*
 
-**Returns**
+#### Returns
 
 *add return value/type here*
 
@@ -108,15 +108,15 @@ Metadata.setMetadataValue()
 
 ``app.metadata.setMetadataValue()``
 
-**Description**
+#### Description
 
 *add description here*
 
-**Parameters**
+#### Parameters
 
 *add parameters here*
 
-**Returns**
+#### Returns
 
 *add return value/type here*
 
@@ -129,14 +129,14 @@ Metadata.updateMarker()
 
 ``app.metadata.updateMarker()``
 
-**Description**
+#### Description
 
 *add description here*
 
-**Parameters**
+#### Parameters
 
 *add parameters here*
 
-**Returns**
+#### Returns
 
 *add return value/type here*

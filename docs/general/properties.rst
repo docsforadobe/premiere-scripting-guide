@@ -7,7 +7,7 @@ Properties object
 
 ``app.properties``
 
-**Description**
+#### Description
 
 *add description here*
 
@@ -32,15 +32,15 @@ Properties.clearProperty()
 
 ``app.properties.clearProperty()``
 
-**Description**
+#### Description
 
 *add description here*
 
-**Parameters**
+#### Parameters
 
 *add parameters here*
 
-**Returns**
+#### Returns
 
 *add return value/type here*
 
@@ -53,23 +53,23 @@ Properties.doesPropertyExist()
 
 ``app.properties.doesPropertyExist(property)``
 
-**Description**
+#### Description
 
 Checks whether a given property exists in preferences.
 
-**Parameters**
+#### Parameters
 
 ============  ==========  ===================
 Argument      Type        Description
 ============  ==========  ===================
-``property``  ``String``  A property to check
+``property``  `String`  A property to check
 ============  ==========  ===================
 
-**Returns**
+#### Returns
 
-``Boolean``.
+`Boolean`.
 
-**Example**
+#### Example
 
 Check whether labels with indices 10 and 99 exist in preferences:
 
@@ -92,23 +92,23 @@ Properties.getProperty()
 
 ``app.properties.getProperty(property)``
 
-**Description**
+#### Description
 
 Returns a property value.
 
-**Parameters**
+#### Parameters
 
 ============  ==========  =============================
 Argument      Type        Description
 ============  ==========  =============================
-``property``  ``String``  A property to get a value for
+``property``  `String`  A property to get a value for
 ============  ==========  =============================
 
-**Returns**
+#### Returns
 
-``String``.
+`String`.
 
-**Example**
+#### Example
 
 Get label name at a given index:
 
@@ -132,21 +132,21 @@ Properties.isPropertyReadOnly()
 
 ``app.properties.isPropertyReadOnly(property)``
 
-**Description**
+#### Description
 
 Checks whether a given property can be overwritten by the user. Returns `false` if such property does not exist.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``property``      ``String``   A property to check.
+``property``      `String`   A property to check.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
-``Boolean``.
+`Boolean`.
 
 ----
 
@@ -157,26 +157,26 @@ Properties.setProperty()
 
 ``app.properties.setProperty(property, value, persistent, createIfNotExist)``
 
-**Description**
+#### Description
 
 Set property value. NOTE: For any file paths to be used in Premiere Pro's preferences, a trailing path seperator is mandatory.
 
-**Parameters**
+#### Parameters
 
 ====================  ===========  ================================================
 Argument              Type         Description
 ====================  ===========  ================================================
-``property``          ``String``   A property to create
-``value``             ``Any``      A value for a property
-``persistent``        ``Boolean``  Whether if should be persistent between sessions
-``createIfNotExist``  ``Boolean``  Should create, if such property does not exist
+``property``          `String`   A property to create
+``value``             `Any`      A value for a property
+``persistent``        `Boolean`  Whether if should be persistent between sessions
+``createIfNotExist``  `Boolean`  Should create, if such property does not exist
 ====================  ===========  ================================================
 
-**Returns**
+#### Returns
 
 ``null``.
 
-**Example**
+#### Example
 
 Change label name:
 
@@ -184,7 +184,7 @@ Change label name:
 
     var labelIndex = 0;
     var property = 'BE.Prefs.LabelNamesX.' + labelIndex;
-    
+
     var newValue = 'Changed via Script';
     var persistent = true;
     var createIfNotExist = true;

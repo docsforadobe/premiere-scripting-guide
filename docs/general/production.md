@@ -2,7 +2,7 @@
 
 `app.production`
 
-**Description**
+#### Description
 
 The Production object lets ExtendScript access and manipulate productions, insert projects, create new projects and bins, and move existing Production projects to Trash.
 
@@ -14,11 +14,11 @@ The Production object lets ExtendScript access and manipulate productions, inser
 
 `app.production.name`
 
-**Description**
+#### Description
 
 The name of the production.
 
-**Type**
+#### Type
 
 String.
 
@@ -28,11 +28,11 @@ String.
 
 `app.production.path`
 
-**Description**
+#### Description
 
 The path to the Production folder.
 
-**Type**
+#### Type
 
 String.
 
@@ -42,11 +42,11 @@ String.
 
 `app.production.projects`
 
-**Description**
+#### Description
 
 An array of the projects containined within the Production, which are currently open. Does not include non-open projects.
 
-**Type**
+#### Type
 
 [ProjectCollection object](../collection/projectcollection.md), read-only.
 
@@ -58,18 +58,18 @@ An array of the projects containined within the Production, which are currently 
 
 `app.production.addProject(srcProjectPath, destProjectPath)`
 
-**Description**
+#### Description
 
 Copies a project from some other location, into the Production directory.
 
-**Parameters**
+#### Parameters
 
 | Argument          | Type     | Description                           |
 |-------------------|----------|---------------------------------------|
-| `srcProjectPath`  | `String` | A path to the source project.         |
-| `destProjectPath` | `String` | A destination path for added project. |
+| `srcProjectPath`  | String | A path to the source project.         |
+| `destProjectPath` | String | A destination path for added project. |
 
-**Returns**
+#### Returns
 
 Returns **true** if successful.
 
@@ -79,15 +79,15 @@ Returns **true** if successful.
 
 `app.production.close()`
 
-**Description**
+#### Description
 
 Closes the Production, and all open projects from within that Production.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **true** if successful.
 
@@ -97,17 +97,17 @@ Returns **true** if successful.
 
 `app.production.getLocked(project)`
 
-**Description**
+#### Description
 
 Returns the lock state of a single project within the Production.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type             | Description   |
 |------------|------------------|---------------|
 | `project`  | `Project object` | The project   |
 
-**Returns**
+#### Returns
 
 Returns **true** if the Project is locked, **false** if the Project is unlocked.
 
@@ -117,19 +117,19 @@ Returns **true** if the Project is locked, **false** if the Project is unlocked.
 
 `app.production.moveToTrash(projectOrFolderPath, suppressUI, saveProject)`
 
-**Description**
+#### Description
 
 Moves the specified path ("bin") or .prproj into the Production's Trash folder.
 
-**Parameters**
+#### Parameters
 
 | Argument              | Type      | Description                                  |
 |-----------------------|-----------|----------------------------------------------|
-| `projectOrFolderPath` | `String`  | A path to the source project.                |
-| `suppressUI`          | `Boolean` | Whether to suppress any resultant dialogues. |
-| `saveProject`         | `Boolean` | Whether to save the project(s) first.        |
+| `projectOrFolderPath` | String  | A path to the source project.                |
+| `suppressUI`          | Boolean | Whether to suppress any resultant dialogues. |
+| `saveProject`         | Boolean | Whether to save the project(s) first.        |
 
-**Returns**
+#### Returns
 
 Returns **true** if successful.
 
@@ -139,17 +139,17 @@ Returns **true** if successful.
 
 `app.production.setLocked(project,locked)`
 
-**Description**
+#### Description
 
 Sets the lock state of the specified project within the Production.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type             | Description                              |
 |------------|------------------|------------------------------------------|
 | `project`  | `Project object` | The project                              |
-| `locked`   | `Boolean`        | `True` for locked, `false` for unlocked. |
+| `locked`   | Boolean        | `True` for locked, `false` for unlocked. |
 
-**Returns**
+#### Returns
 
 Returns **true** if successful.

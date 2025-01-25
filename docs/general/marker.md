@@ -5,7 +5,7 @@
 `app.project.rootItem.children[index].getMarkers().getFirstMarker()`
 <br/>
 
-**Description**
+#### Description
 
 Both [Project items](../item/projectitem.md) and [sequences](../sequence/sequence.md) have associated **marker** objects, which represent their associated markers.
 
@@ -20,11 +20,11 @@ Both [Project items](../item/projectitem.md) and [sequences](../sequence/sequenc
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().comments`
 <br/>
 
-**Description**
+#### Description
 
 The comments within the marker.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -37,11 +37,11 @@ String; read/write.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().end`
 <br/>
 
-**Description**
+#### Description
 
 A [Time object](../other/time.md) containing the value of the ending of the marker.
 
-**Type**
+#### Type
 
 [Time object](../other/time.md); read/write.
 
@@ -54,11 +54,11 @@ A [Time object](../other/time.md) containing the value of the ending of the mark
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().guid`
 <br/>
 
-**Description**
+#### Description
 
 The unique identifier of the marker, created at time of instantiation.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -71,11 +71,11 @@ String; read-only.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().name`
 <br/>
 
-**Description**
+#### Description
 
 The name of the marker.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -88,11 +88,11 @@ String; read/write.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().start`
 <br/>
 
-**Description**
+#### Description
 
 A [Time object](../other/time.md) containing the value of the beginning of the marker.
 
-**Type**
+#### Type
 
 [Time object](../other/time.md); read/write.
 
@@ -105,11 +105,11 @@ A [Time object](../other/time.md) containing the value of the beginning of the m
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().type`
 <br/>
 
-**Description**
+#### Description
 
 The type of marker; either "Comment", "Chapter", "Segmentation", or "WebLink". Note: Premiere Pro can import some marker types, which cannot be created from within Premiere Pro.
 
-**Type**
+#### Type
 
 String; read-only.
 
@@ -127,19 +127,19 @@ String; read-only.
 !!! note
     This functionality was added in Adobe Premire Pro 13.x.
 
-**Description**
+#### Description
 
 Gets the marker color index.
 
-**Parameters**
+#### Parameters
 
 | Argument   | Type      | Description                     |
 |------------|-----------|---------------------------------|
-| `index`    | `Integer` | Index of the marker to be read. |
+| `index`    | Integer | Index of the marker to be read. |
 
-**Returns**
+#### Returns
 
-Returns the color index as an `Integer`.
+Returns the color index as an Integer.
 
 ---
 
@@ -150,17 +150,17 @@ Returns the color index as an `Integer`.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().getWebLinkFrameTarget()`
 <br/>
 
-**Description**
+#### Description
 
 Retrieves the frame target, from the marker's FrameTarget field.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Returns a `String` containing the frame target, or **0** if unsuccessful.
+Returns a String containing the frame target, or **0** if unsuccessful.
 
 ---
 
@@ -171,17 +171,17 @@ Returns a `String` containing the frame target, or **0** if unsuccessful.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().getWebLinkURL()`
 <br/>
 
-**Description**
+#### Description
 
 Retrieves the URL, from the marker's URL field.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
-Returns a `String` containing the URL, or **0** if unsuccessful.
+Returns a String containing the URL, or **0** if unsuccessful.
 
 ---
 
@@ -195,7 +195,7 @@ Returns a `String` containing the URL, or **0** if unsuccessful.
 !!! note
     This functionality was added in Adobe Premire Pro 13.x.
 
-**Description**
+#### Description
 
 Sets the marker color by index. Color indexies listed below.
 
@@ -208,14 +208,14 @@ Sets the marker color by index. Color indexies listed below.
 * 6 = Blue
 * 7 = Cyan
 
-**Parameters**
+#### Parameters
 
 | Argument      | Type      | Description                                |
 |---------------|-----------|--------------------------------------------|
-| `colorIndex`  | `Integer` | Index of the color to apply to the marker. |
-| `markerIndex` | `Integer` | Index of the marker to be set.             |
+| `colorIndex`  | Integer | Index of the color to apply to the marker. |
+| `markerIndex` | Integer | Index of the marker to be set.             |
 
-**Returns**
+#### Returns
 
 Returns `undefined`.
 
@@ -228,15 +228,15 @@ Returns `undefined`.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().setTypeAsChapter()`
 <br/>
 
-**Description**
+#### Description
 
 Sets the type of the marker to "Chapter".
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -249,15 +249,15 @@ Returns **0** if successful.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().setTypeAsComment()`
 <br/>
 
-**Description**
+#### Description
 
 Sets the type of the marker to "Comment".
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -270,15 +270,15 @@ Returns **0** if successful.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().setTypeAsSegmentation()`
 <br/>
 
-**Description**
+#### Description
 
 Sets the type of the marker to "Segmentation".
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.
 
@@ -291,14 +291,14 @@ Returns **0** if successful.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().setTypeAsWebLink()`
 <br/>
 
-**Description**
+#### Description
 
 Sets the type of the marker to "WebLink".
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 Returns **0** if successful.

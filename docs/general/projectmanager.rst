@@ -7,7 +7,7 @@ ProjectManager object
 
 ``app.projectManager.options``
 
-**Description**
+#### Description
 
 The ProjectManager object exposes Premiere Pro's Project Manager, for project consolidation, transfer and transcoding.
 
@@ -24,11 +24,11 @@ ProjectManager.affectedSequences
 
 ``app.projectManager.options.affectedSequences``
 
-**Description**
+#### Description
 
 An `Array` of :ref:`Sequence <sequence>` objects, to be exported.
 
-**Type**
+#### Type
 
 Array; read/write.
 
@@ -41,7 +41,7 @@ ProjectManager.clipTranscoderOption
 
 ``app.projectManager.options.clipTranscoderOption``
 
-**Description**
+#### Description
 
 The specified setting for clip transcode. Value will be one of the following:
 
@@ -53,7 +53,7 @@ The specified setting for clip transcode. Value will be one of the following:
 | ``CLIP_TRANSCODE_MATCH_SEQUENCE`` | Must be one of the following:                     |
 +----------------------------+----------------------------------------------------------+
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -66,7 +66,7 @@ ProjectManager.clipTransferOption
 
 ``app.projectManager.options.clipTransferOption``
 
-**Description**
+#### Description
 
 The specified setting for clip transfer. Value will be one of the following:
 
@@ -85,11 +85,11 @@ ProjectManager.convertAECompsToClips
 
 ``app.projectManager.options.convertAECompsToClips``
 
-**Description**
+#### Description
 
 If `true`, render dynamically-linked After Effects compositions to new media (using specified output preset).
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -102,11 +102,11 @@ ProjectManager.convertImageSequencesToClips
 
 ``app.projectManager.options.convertImageSequencesToClips``
 
-**Description**
+#### Description
 
 If `true`, transcode image sequences to new media (using specified output preset).
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -119,11 +119,11 @@ ProjectManager.convertSyntheticsToClips
 
 ``app.projectManager.options.convertSyntheticsToClips``
 
-**Description**
+#### Description
 
 If `true`, transcode clips from synthetic importers to new media (using specified output preset).
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -136,11 +136,11 @@ ProjectManager.copyToPreventAlphaLoss
 
 ``app.projectManager.options.copyToPreventAlphaLoss``
 
-**Description**
+#### Description
 
 If `true`, includes any available alpha information into transcoded media.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -153,11 +153,11 @@ ProjectManager.destinationPath
 
 ``app.projectManager.options.destinationPath``
 
-**Description**
+#### Description
 
 The path to which to export the project and media.
 
-**Type**
+#### Type
 
 String; read/write.
 
@@ -170,11 +170,11 @@ ProjectManager.encoderPresetFilePath
 
 ``app.projectManager.options.encoderPresetFilePath``
 
-**Description**
+#### Description
 
 The path to the output preset (.epr file) to be used.
 
-**Type**
+#### Type
 
 String; read-write.
 
@@ -187,11 +187,11 @@ ProjectManager.excludeUnused
 
 ``app.projectManager.options.excludeUnused``
 
-**Description**
+#### Description
 
 If non-zero, exclude unused project items from the exported project.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -204,11 +204,11 @@ ProjectManager.handleFrameCount
 
 ``app.projectManager.options.handleFrameCount``
 
-**Description**
+#### Description
 
 How many frames of 'handle' footage (before and after the in and out points) of media, to include.
 
-**Type**
+#### Type
 
 Integer; read/write.
 
@@ -221,11 +221,11 @@ ProjectManager.includeAllSequences
 
 ``app.projectManager.options.includeAllSequences``
 
-**Description**
+#### Description
 
 If `true`, export all :ref:`Sequences <sequence>` in the exported project.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -238,11 +238,11 @@ ProjectManager.includeConformedAudio
 
 ``app.projectManager.options.includeConformedAudio``
 
-**Description**
+#### Description
 
 If `true`, include conformed audio files with exported project.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -255,11 +255,11 @@ ProjectManager.includePreviews
 
 ``app.projectManager.options.includePreviews``
 
-**Description**
+#### Description
 
 If `true`, include rendered preview files with exported project.
 
-**Type**
+#### Type
 
 Boolean; read/write.
 
@@ -272,10 +272,10 @@ ProjectManager.renameMedia
 
 ``app.projectManager.options.renameMedia``
 
-**Description**
+#### Description
 
 If `true`, perform renaming as part of the export process.
 
-**Type**
+#### Type
 
 Boolean; read/write.

@@ -20,10 +20,10 @@ The ProjectCollection object represents a collection of [Project objects](../gen
 `app.production.projects.numProjects`
 <br/>
 
-**Description**
+#### Description
 
 The total number of projects and productions found in the Project panel.
 
-**Type**
+#### Type
 
 Integer, read-only.

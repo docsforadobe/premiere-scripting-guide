@@ -24,10 +24,10 @@
 `app.project.sequences[index].videoTracks[index].clips[index].components.numItems`
 <br/>
 
-**Description**
+#### Description
 
 *add a description*
 
-**Type**
+#### Type
 
 Integer, read-only.

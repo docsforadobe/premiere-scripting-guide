@@ -14,10 +14,10 @@ The SequenceCollection object represents a collection of all the  [Sequence obje
 
 `app.project.sequences.numSequences`
 
-**Description**
+#### Description
 
 The total number of sequences in the active project.
 
-**Type**
+#### Type
 
 Integer, read-only.

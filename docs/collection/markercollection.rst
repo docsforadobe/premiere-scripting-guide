@@ -8,7 +8,7 @@ MarkerCollection object
 |   ``app.project.sequences[index].markers``
 |   ``app.project.rootItem.children[index].getMarkers()``
 
-The MarkerCollection object represents a collection of :ref:`Marker objects <marker>` in a :ref:`projectItem` and :ref:`sequence`. 
+The MarkerCollection object represents a collection of :ref:`Marker objects <marker>` in a :ref:`projectItem` and :ref:`sequence`.
 
     MarkerCollection is a subclass of :ref:`collection`. All methods and attributes of Collection, in addition to those listed below, are available when working with MarkerCollection.
 
@@ -26,11 +26,11 @@ MarkerCollection.numMarkers
 |   ``app.project.sequences[index].markers.numMarkers``
 |   ``app.project.rootItem.children[index].getMarkers().numMarkers``
 
-**Description**
+#### Description
 
 The count of marker objects in the project item or sequence.
 
-**Type**
+#### Type
 
 Integer, read-only.
 
@@ -48,19 +48,19 @@ MarkerCollection.createMarker()
 |   ``app.project.sequences[index].markers.createMarker(time)``
 |   ``app.project.rootItem.children[index].getMarkers().createMarker(time)``
 
-**Description**
+#### Description
 
 Create a new :ref:`marker` on a project item or a sequence.
 
-**Parameters**
+#### Parameters
 
 ================  ===========  =======================
 Argument          Type         Description
 ================  ===========  =======================
-``time``          ``Float``    A time, in seconds, where marker should be created.
+``time``          `Float`    A time, in seconds, where marker should be created.
 ================  ===========  =======================
 
-**Returns**
+#### Returns
 
 :ref:`marker` if successful.
 
@@ -74,11 +74,11 @@ MarkerCollection.deleteMarker()
 |   ``app.project.sequences[index].markers.deleteMarker(marker)``
 |   ``app.project.rootItem.children[index].getMarkers().deleteMarker(marker)``
 
-**Description**
+#### Description
 
 Remove a given marker object from a collection.
 
-**Parameters**
+#### Parameters
 
 ================  =============  =======================
 Argument          Type           Description
@@ -86,9 +86,9 @@ Argument          Type           Description
 ``marker``        :ref:`marker`  A marker object to remove from collection.
 ================  =============  =======================
 
-**Returns**
+#### Returns
 
-``Boolean``.
+`Boolean`.
 
 **Examples**
 
@@ -117,15 +117,15 @@ MarkerCollection.getFirstMarker()
 |   ``app.project.sequences[index].markers.getFirstMarker()``
 |   ``app.project.rootItem.children[index].getMarkers().getFirstMarker()``
 
-**Description**
+#### Description
 
 Retrieve the first marker object, sorted by time in seconds, on a given project item or sequence.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 :ref:`marker` or ``undefined``.
 
@@ -139,15 +139,15 @@ MarkerCollection.getLastMarker()
 |   ``app.project.sequences[index].markers.getLastMarker()``
 |   ``app.project.rootItem.children[index].getMarkers().getLastMarker()``
 
-**Description**
+#### Description
 
 Retrieve the very last marker object, sorted by time in seconds, on a given project item or sequence.
 
-**Parameters**
+#### Parameters
 
 None.
 
-**Returns**
+#### Returns
 
 :ref:`marker` or ``undefined``.
 
@@ -161,11 +161,11 @@ MarkerCollection.getNextMarker()
 |   ``app.project.sequences[index].markers.getNextMarker(currentMarker)``
 |   ``app.project.rootItem.children[index].getMarkers().getNextMarker(currentMarker)``
 
-**Description**
+#### Description
 
 Get the next available marker, sorted by seconds, starting from a given one.
 
-**Parameters**
+#### Parameters
 
 ==================  =============  =======================
 Argument            Type           Description
@@ -173,7 +173,7 @@ Argument            Type           Description
 ``currentMarker``   :ref:`marker`  A starting marker object, from which to get a next one.
 ==================  =============  =======================
 
-**Returns**
+#### Returns
 
 :ref:`marker` or ``undefined``.
 
@@ -187,11 +187,11 @@ MarkerCollection.getPrevMarker()
 |   ``app.project.sequences[index].markers.getPrevMarker(currentMarker)``
 |   ``app.project.rootItem.children[index].getMarkers().getPrevMarker(currentMarker)``
 
-**Description**
+#### Description
 
 Get the previous available marker, sorted by seconds, starting from a given one.
 
-**Parameters**
+#### Parameters
 
 ==================  =============  =======================
 Argument            Type           Description
@@ -199,6 +199,6 @@ Argument            Type           Description
 ``currentMarker``   :ref:`marker`  A starting marker object, from which to get a previous one.
 ==================  =============  =======================
 
-**Returns**
+#### Returns
 
 :ref:`marker` or ``undefined``.
