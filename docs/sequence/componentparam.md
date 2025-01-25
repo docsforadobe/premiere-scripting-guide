@@ -9,13 +9,12 @@
 
 The **component parameter** object represents a parameter associated with a component, applied to a [TrackItem object](../item/trackitem.md).
 
-NOTE:
-For a developer working across different localizations, it's possible to find the corresponding keys by comparing ZStrings.
-Below is an example between En and De. Here are the paths to the files:
+!!! note
+    For a developer working across different localizations, it's possible to find the corresponding keys by comparing ZStrings.
 
-C:Program FilesAdobeAdobe Premiere Pro 2024Dictionariesde_DEzdictionary_PPRO_de_DE.dat  ("…anti-Flimmer Filter")
-
-C:Program FilesAdobeAdobe Premiere Pro 2024Dictionariesen_USzdictionary_PPRO_en_US.dat ("…anti-flicker Filter")
+    Below is an example between En and De. Here are the paths to the files:
+    `C:\Program Files\Adobe\Adobe Premiere Pro 2024\Dictionaries\de_DE\zdictionary_PPRO_de_DE.dat` - ("…anti-Flimmer Filter")
+    `C:\Program Files\Adobe\Adobe Premiere Pro 2024\Dictionaries\en_DE\zdictionary_PPRO_en_US.dat` - ("…anti-flicker Filter")
 
 ---
 
@@ -53,9 +52,9 @@ Adds a keyframe to the component parameter stream, at the specified time. Note: 
 
 #### Parameters
 
-| Argument   | Type                                 | Description                        |
-|------------|--------------------------------------|------------------------------------|
-| `time`     | [Time object](../other/time.md) | When the keyframe should be added. |
+| Argument |              Type               |            Description             |
+| -------- | ------------------------------- | ---------------------------------- |
+| `time`   | [Time object](../other/time.md) | When the keyframe should be added. |
 
 #### Returns
 
@@ -97,14 +96,14 @@ Sets whether the component parameter varies, over time. Note: This can only be s
 
 #### Parameters
 
-| Argument      | Type   | Description                                             |
-|---------------|--------|---------------------------------------------------------|
-| `timeToCheck` |        | Start search from a given time                          |
-| `threshold`   |        | A temporal distance, in either direction, in **ticks**. |
+|   Argument    |  Type   |                       Description                       |
+| ------------- | ------- | ------------------------------------------------------- |
+| `timeToCheck` |         | Start search from a given time                          |
+| `threshold`   | Integer | A temporal distance, in either direction, in **ticks**. |
 
 #### Returns
 
-Returns a **Time** value, indicating when the closest keyframe is.
+Returns a Time value, indicating when the closest keyframe is.
 
 ---
 
@@ -121,13 +120,13 @@ Returns the keyframe temporally subsequent to the provided `timeToCheck`. Note: 
 
 #### Parameters
 
-| Argument      | Type   | Description                     |
-|---------------|--------|---------------------------------|
-| `timeToCheck` |        | Start search from a given time. |
+|   Argument    | Type |           Description           |
+| ------------- | ---- | ------------------------------- |
+| `timeToCheck` |      | Start search from a given time. |
 
 #### Returns
 
-Returns a **Time** value, indicating when the closest keyframe is, or `0` if there is no available subsequent keyframe.
+Returns a Time value, indicating when the closest keyframe is, or `0` if there is no available subsequent keyframe.
 
 ---
 
@@ -144,13 +143,13 @@ Returns the keyframe temporally previous to the provided `timeToCheck`. Note: Th
 
 #### Parameters
 
-| Argument      | Type   | Description                     |
-|---------------|--------|---------------------------------|
-| `timeToCheck` |        | Start search from a given time. |
+|   Argument    | Type |           Description           |
+| ------------- | ---- | ------------------------------- |
+| `timeToCheck` |      | Start search from a given time. |
 
 #### Returns
 
-Returns a **Time** value, indicating when the closest keyframe is, or `0` if there is no available previous keyframe.
+Returns a Time value, indicating when the closest keyframe is, or `0` if there is no available previous keyframe.
 
 ---
 
@@ -171,7 +170,7 @@ None.
 
 #### Returns
 
-Returns a **Color** containing the values found in the component parameter stream, or `0` if unsuccessful.
+Returns a Color containing the values found in the component parameter stream, or `0` if unsuccessful.
 
 ---
 
@@ -192,7 +191,7 @@ None.
 
 #### Returns
 
-Returns an **Array** of **Time** values, indicating at what time each keyframe occurs, or `0` if no keyframes are available.
+Returns an array of Time values, indicating at what time each keyframe occurs, or `0` if no keyframes are available.
 
 ---
 
@@ -230,9 +229,9 @@ Retrieves the value of the component parameter stream, at the specified keyframe
 
 #### Parameters
 
-| Argument   | Type                                 | Description                                               |
-|------------|--------------------------------------|-----------------------------------------------------------|
-| `time`     | [Time object](../other/time.md) | A time from which the keyframe value should be retrieved. |
+| Argument |              Type               |                        Description                        |
+| -------- | ------------------------------- | --------------------------------------------------------- |
+| `time`   | [Time object](../other/time.md) | A time from which the keyframe value should be retrieved. |
 
 #### Returns
 
@@ -253,9 +252,9 @@ Retrieves the value of the component parameter stream, at the specified time. If
 
 #### Parameters
 
-| Argument   | Type                                 | Description                                               |
-|------------|--------------------------------------|-----------------------------------------------------------|
-| `time`     | [Time object](../other/time.md) | A time from which the keyframe value should be retrieved. |
+| Argument |              Type               |                        Description                        |
+| -------- | ------------------------------- | --------------------------------------------------------- |
+| `time`   | [Time object](../other/time.md) | A time from which the keyframe value should be retrieved. |
 
 #### Returns
 
@@ -297,9 +296,9 @@ Removes a keyframe on the component parameter stream, at the specified time. Not
 
 #### Parameters
 
-| Argument   | Type                                 | Description                                                   |
-|------------|--------------------------------------|---------------------------------------------------------------|
-| `time`     | [Time object](../other/time.md) | A time value, indicating when the keyframe should be removed. |
+| Argument |              Type               |                          Description                          |
+| -------- | ------------------------------- | ------------------------------------------------------------- |
+| `time`   | [Time object](../other/time.md) | A time value, indicating when the keyframe should be removed. |
 
 #### Returns
 
@@ -320,10 +319,10 @@ Removes all keyframes from the component parameter stream, between the specified
 
 #### Parameters
 
-| Argument    | Type                                 | Description                                                  |
-|-------------|--------------------------------------|--------------------------------------------------------------|
-| `startTime` | [Time object](../other/time.md) | At what times (inclusive) to begin the removal of keyframes. |
-| `endTime`   | [Time object](../other/time.md) | at what times to end the removal of keyframes.               |
+|  Argument   |              Type               |                       Description                        |
+| ----------- | ------------------------------- | -------------------------------------------------------- |
+| `startTime` | [Time object](../other/time.md) | The times (inclusive) to begin the removal of keyframes. |
+| `endTime`   | [Time object](../other/time.md) | The times to end the removal of keyframes.               |
 
 #### Returns
 
@@ -344,13 +343,13 @@ Sets the values within a component parameter stream, representing a Color.
 
 #### Parameters
 
-| Argument   | Type      | Description                                                |
-|------------|-----------|------------------------------------------------------------|
-| `alpha`    | Integer | Alpha value.                                               |
-| `red`      | Integer | Red value.                                                 |
-| `green`    | Integer | Green value.                                               |
-| `blue`     | Integer | Blue value.                                                |
-| `updateUI` | Integer | Force to update UI after updating the value of the stream. |
+|  Argument  |  Type   |                                      Description                                      |
+| ---------- | ------- | ------------------------------------------------------------------------------------- |
+| `alpha`    | Integer | Alpha value.                                                                          |
+| `red`      | Integer | Red value.                                                                            |
+| `green`    | Integer | Green value.                                                                          |
+| `blue`     | Integer | Blue value.                                                                           |
+| `updateUI` | Integer | If `1`, will force Premiere Pro to update UI, after updating the value of the stream. |
 
 #### Returns
 
@@ -360,9 +359,9 @@ Returns `0` if successful.
 
 ### ComponentParam.setInterpolationTypeAtKey()
 
-`app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType)`
+`app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType, [updateUI])`
 <br/>
-`app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType)`
+`app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType, [updateUI])`
 <br/>
 
 #### Description
@@ -371,11 +370,11 @@ Specifies the interpolation type to be assigned to the keyframe, at the specifie
 
 #### Parameters
 
-| Argument            | Type                                 | Description                                                                                                                                                                                                                                                                                                                                                                     |
-|---------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `time`              | [Time object](../other/time.md) | A time  of keyframe to modify.                                                                                                                                                                                                                                                                                                                                                  |
-| `interpolationType` | `type`                               | Must be one of the following:<br/><br/>- `0` - `KF_Interp_Mode_Linear`<br/>- `1` - `kfInterpMode_EaseIn_Obsolete`<br/>- `2` - `kfInterpMode_EaseOut_Obsolete`<br/>- `3` - `kfInterpMode_EaseInEaseOut_Obsolete`<br/>- `4` - `KF_Interp_Mode_Hold`<br/>- `5` - `KF_Interp_Mode_Bezier`<br/>- `6` - `KF_Interp_Mode_Time`<br/>- `7` - `kfInterpMode_TimeTransitionStart`<br/>- `8` - `kfInterpMode_TimeTransitionEnd` |
-| `updateUI`          | Boolean                            | Whether to update UI afterward.                                                                                                                                                                                                                                                                                                                                                 |
+|      Argument       |              Type               |                                                                                                                                                                                                     Description                                                                                                                                                                                                     |
+| ------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `time`              | [Time object](../other/time.md) | A time of keyframe to modify.                                                                                                                                                                                                                                                                                                                                                                                       |
+| `interpolationType` | `type`                          | One of:<ul><li>`0` - `KF_Interp_Mode_Linear`</li><li>`1` - `kfInterpMode_EaseIn_Obsolete`</li><li>`2` - `kfInterpMode_EaseOut_Obsolete`</li><li>`3` - `kfInterpMode_EaseInEaseOut_Obsolete`</li><li>`4` - `KF_Interp_Mode_Hold`</li><li>`5` - `KF_Interp_Mode_Bezier`</li><li>`6` - `KF_Interp_Mode_Time`</li><li>`7` - `kfInterpMode_TimeTransitionStart`</li><li>`8` - `kfInterpMode_TimeTransitionEnd`</li></ul> |
+| `updateUI`          | Boolean                         | Whether to update UI afterward.                                                                                                                                                                                                                                                                                                                                                                                     |
 
 #### Returns
 
@@ -396,9 +395,9 @@ Sets whether the component parameter varies, over time. Note: This can only be s
 
 #### Parameters
 
-| Argument   | Type      | Description                                                               |
-|------------|-----------|---------------------------------------------------------------------------|
-| `varying`  | Boolean | If `true`, component parameter will vary over time; if `false`, it won't. |
+| Argument  |  Type   |                                Description                                |
+| --------- | ------- | ------------------------------------------------------------------------- |
+| `varying` | Boolean | If `true`, component parameter will vary over time; if `false`, it won't. |
 
 #### Returns
 
@@ -419,9 +418,9 @@ Sets the value of the component parameter stream. Note: This can only work on pa
 
 #### Parameters
 
-| Argument   | Type      | Description                                                                           |
-|------------|-----------|---------------------------------------------------------------------------------------|
-| `value`    |           | Must be of the appropriate type for the component parameter stream.                   |
+|  Argument  |  Type   |                                      Description                                      |
+| ---------- | ------- | ------------------------------------------------------------------------------------- |
+| `value`    |         | Must be of the appropriate type for the component parameter stream.                   |
 | `updateUI` | Integer | If `1`, will force Premiere Pro to update UI, after updating the value of the stream. |
 
 #### Returns
@@ -443,11 +442,11 @@ Sets the value of the component parameter stream, at the specified keyframe time
 
 #### Parameters
 
-| Argument   | Type                                 | Description                                                                           |
-|------------|--------------------------------------|---------------------------------------------------------------------------------------|
+|  Argument  |              Type               |                                      Description                                      |
+| ---------- | ------------------------------- | ------------------------------------------------------------------------------------- |
 | `time`     | [Time object](../other/time.md) | A time at which the keyframe value should be set.                                     |
-| `value`    |                                      | A value to be set.                                                                    |
-| `updateUI` | Integer                            | If `1`, will force Premiere Pro to update UI, after updating the value of the stream. |
+| `value`    |                                 | A value to be set.                                                                    |
+| `updateUI` | Integer                         | If `1`, will force Premiere Pro to update UI, after updating the value of the stream. |
 
 #### Returns
 

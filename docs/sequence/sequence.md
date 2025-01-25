@@ -24,9 +24,8 @@ Set this attribute with the [Sequence.setSettings()](#sequencesetsettings) metho
 
 An enumerated value; read/write. One of:
 
-| `200`   | Audio Samples   |
-|---------|-----------------|
-| `201`   | Milliseconds    |
+- `200` - Audio Samples
+- `201` - Milliseconds
 
 ---
 
@@ -50,7 +49,7 @@ An array of audio [Track](track.md) objects in the sequence.
 
 #### Description
 
-The time, in **ticks**, of the end of the sequence.
+The time, in ticks, of the end of the sequence.
 
 #### Type
 
@@ -96,14 +95,16 @@ Integer; read-only.
 
 #### Description
 
-This is the ordinal assigned to the sequence upon creation. If this is the thirty-third sequence created within the project during a given Premiere Pro session, this value will be `33`
+This is the ordinal assigned to the sequence upon creation.
+
+If this is the thirty-third sequence created within the project during a given Premiere Pro session, this value will be `33`.
+
+!!! note
+    In testing, this attribute seems unstable and produces unreliable results. Recommend using [Sequence.sequenceID](#sequencesequenceid) instead.
 
 #### Type
 
 Integer, read-only.
-
-!!! note
-    In testing, this attribute seems unstable and produces unreliable results. Recommend using [Sequence.sequenceID](#sequencesequenceid) instead.
 
 ---
 
@@ -143,12 +144,12 @@ String; read/write.
 
 The [ProjectItem object](../item/projectitem.md) associated with the sequence.
 
+!!! note
+    Not all sequences will have a `projectItem`. There may be sequences in a project that Premiere generates that are invisible to the user, these do not have `projectItems`
+
 #### Type
 
 [ProjectItem object](../item/projectitem.md); read-only.
-
-!!! note
-    Not all sequences will have a `projectItem`. There may be sequences in a project that Premiere generates that are invisible to the user, these do not have `projectItems`
 
 ---
 
@@ -172,7 +173,7 @@ String; read-only.
 
 #### Description
 
-The number of **ticks** per frame in the sequence. Converted to seconds, this is commonly referred to as the frame duration of the sequence.
+The number of ticks per frame in the sequence. Converted to seconds, this is commonly referred to as the frame duration of the sequence.
 
 #### Type
 
@@ -194,21 +195,20 @@ Set this attribute with the [Sequence.setSettings()](#sequencesetsettings) metho
 
 An enumerated value; read/write. One of:
 
-| `100`   | 24 Timecode             |
-|---------|-------------------------|
-| `101`   | 25 Timecode             |
-| `102`   | 29.97 Drop Timecode     |
-| `103`   | 29.97 Non-Drop Timecode |
-| `104`   | 30 Timecode             |
-| `105`   | 50 Timecode             |
-| `106`   | 59.94 Drop Timecode     |
-| `107`   | 59.94 Non-Drop Timecode |
-| `108`   | 60 Timecode             |
-| `109`   | Frames                  |
-| `110`   | 23.976 Timecode         |
-| `111`   | 16mm Feet + Frames      |
-| `112`   | 35mm Feet + Frames      |
-| `113`   | 48 Timecode             |
+- `100` - 24 Timecode
+- `101` - 25 Timecode
+- `102` - 29.97 Drop Timecode
+- `103` - 29.97 Non-Drop Timecode
+- `104` - 30 Timecode
+- `105` - 50 Timecode
+- `106` - 59.94 Drop Timecode
+- `107` - 59.94 Non-Drop Timecode
+- `108` - 60 Timecode
+- `109` - Frames
+- `110` - 23.976 Timecode
+- `111` - 16mm Feet + Frames
+- `112` - 35mm Feet + Frames
+- `113` - 48 Timecode
 
 ---
 
@@ -232,7 +232,7 @@ An array of video [Track](track.md) objects in the sequence.
 
 #### Description
 
-The starting time, in **ticks**, of the sequence.
+The starting time, in ticks, of the sequence.
 
 Set this attribute with the [Sequence.setZeroPoint()](#sequencesetzeropoint) method.
 
@@ -254,8 +254,8 @@ Attaches a custom property, and its value, to the sequence. This property is vis
 
 #### Parameters
 
-| Argument        | Type     | Description               |
-|-----------------|----------|---------------------------|
+|    Argument     |  Type  |        Description        |
+| --------------- | ------ | ------------------------- |
 | `propertyID`    | String | ID of custom property.    |
 | `propertyValue` | String | Value of custom property. |
 
@@ -275,17 +275,17 @@ Generates a new, auto-reframed sequence.
 
 #### Parameters
 
-| Argument             | Type      | Description                                |
-|----------------------|-----------|--------------------------------------------|
-| `numerator`          | Integer | Numerator of desired frame aspect ratio.   |
-| `denominator`        | Integer | Denominator of desired frame aspect ratio. |
-| `motionPreset`       | String  | One of: `slower`, `default` or `faster`    |
-| `newName`            | String  | A name for a newly created sequence.       |
-| `useNestedSequences` | Boolean | Whether to honor nested sequence.          |
+|       Argument       |  Type   |                             Description                              |
+| -------------------- | ------- | -------------------------------------------------------------------- |
+| `numerator`          | Integer | Numerator of desired frame aspect ratio.                             |
+| `denominator`        | Integer | Denominator of desired frame aspect ratio.                           |
+| `motionPreset`       | String  | One of:<ul><li>`slower`</li><li>`default`</li><li>`faster`</li></ul> |
+| `newName`            | String  | A name for a newly created sequence.                                 |
+| `useNestedSequences` | Boolean | Whether to honor nested sequence.                                    |
 
 #### Returns
 
-Returns the new [Sequence object](#sequence-object).
+The new [Sequence object](#sequence-object).
 
 #### Example
 
@@ -326,7 +326,7 @@ None.
 
 #### Returns
 
-Returns a boolean; `true` if successful.
+Boolean; `true` if successful.
 
 ---
 
@@ -344,14 +344,13 @@ None.
 
 #### Returns
 
-Returns a boolean; `true` if successful.
+Boolean; `true` if successful.
 
 ---
 
 ### Sequence.createCaptionTrack()
 
-`app.project.sequences[index].createCaptionTrack(projectItem,
-startAtTime, captionFormat)`
+`app.project.sequences[index].createCaptionTrack(projectItem, startAtTime, [captionFormat])`
 
 #### Description
 
@@ -359,21 +358,11 @@ Creates a caption track in the sequence using caption data from a [ProjectItem o
 
 #### Parameters
 
-| Argument        | Type                                                     | Description                                                                                          |
-|-----------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| `projectItem`   | [ProjectItem object](../item/projectitem.md) | A captions source clip (e.g. .srt)                                                                   |
-| `startAtTime`   | Float                                                  | Offset in seconds from start of sequence                                                             |
-| `captionFormat` | `Constant`                                               | Caption format of the new track (see below). Optional, default is `Sequence.CAPTION_FORMAT_SUBTITLE` |
-
-| `captionFormat`                    | Description   |
-|------------------------------------|---------------|
-| `Sequence.CAPTION_FORMAT_SUBTITLE` | Subtitle      |
-| `Sequence.CAPTION_FORMAT_608`      | CEA-608       |
-| `Sequence.CAPTION_FORMAT_708`      | CEA-708       |
-| `Sequence.CAPTION_FORMAT_TELETEXT` | Teletext      |
-| `Sequence.CAPTION_FORMAT_OPEN_EBU` | EBU Subtitle  |
-| `Sequence.CAPTION_FORMAT_OP42`     | OP-42         |
-| `Sequence.CAPTION_FORMAT_OP47`     | OP-47         |
+|    Argument     |                     Type                     |                                                                                                                                                                                                                                  Description                                                                                                                                                                                                                                   |
+| --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| `projectItem`   | [ProjectItem object](../item/projectitem.md) | A captions source clip (e.g. .srt)                                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| `startAtTime`   | Float                                        | Offset in seconds from start of sequence                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| `captionFormat` | `Sequence.CAPTION_FORMAT_` enum              | Caption format of the new track. Optional, default is `Sequence.CAPTION_FORMAT_SUBTITLE`. One of:<ul><li>`Sequence.CAPTION_FORMAT_SUBTITLE` - Subtitle</li><li>`Sequence.CAPTION_FORMAT_608` - CEA-608</li><li>`Sequence.CAPTION_FORMAT_708` - CEA-708</li><li>`Sequence.CAPTION_FORMAT_TELETEXT` - Teletext</li><li>`Sequence.CAPTION_FORMAT_OPEN_EBU` - EBU Subtitle</li><li>`Sequence.CAPTION_FORMAT_OP42` - OP-42</li><li>`Sequence.CAPTION_FORMAT_OP47` - OP-47</li></ul> |
 
 #### Returns
 
@@ -389,7 +378,7 @@ app.project.activeSequence.createCaptionTrack(projectItem, 0, Sequence.CAPTION_F
 
 ### Sequence.createSubsequence()
 
-`app.project.sequences[index].createSubsequence(ignoreTrackTargeting)`
+`app.project.sequences[index].createSubsequence([ignoreTrackTargeting])`
 
 #### Description
 
@@ -397,8 +386,8 @@ Creates a new sequence, from the in point to the out point, which is a sub-seque
 
 #### Parameters
 
-| Argument               | Type      | Description                                                                                                        |
-|------------------------|-----------|--------------------------------------------------------------------------------------------------------------------|
+|        Argument        |  Type   |                                                    Description                                                     |
+| ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
 | `ignoreTrackTargeting` | Boolean | Whether the new sequence should ignore the track targeting, in the original sequence. Optional, default is `false` |
 
 #### Returns
@@ -449,8 +438,8 @@ Creates a new FCP XML representation of the sequence and its constituent media.
 
 #### Parameters
 
-| Argument     | Type     | Description                               |
-|--------------|----------|-------------------------------------------|
+|   Argument   |  Type  |                Description                |
+| ------------ | ------ | ----------------------------------------- |
 | `outputPath` | String | The output path for the new FCP XML file. |
 
 #### Returns
@@ -469,17 +458,11 @@ Renders the sequence to the specified output path, using the specified output pr
 
 #### Parameters
 
-| Argument       | Type      | Description                                                               |
-|----------------|-----------|---------------------------------------------------------------------------|
-| `outputPath`   | String  | An output path, to which to render the media.                             |
-| `presetPath`   | String  | Path to the preset file (.epr file) which contains the encoding settings. |
-| `workAreaType` | Integer | The work area type to be rendered (see below).                            |
-
-| `workAreaType`   | Description                                           |
-|------------------|-------------------------------------------------------|
-| `0`              | Renders the entire sequence.                          |
-| `1`              | Renders between the in and out point of the sequence. |
-| `2`              | Renders the work area of the sequence.                |
+|    Argument    |  Type   |                                                                                                             Description                                                                                                             |
+| -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `outputPath`   | String  | An output path, to which to render the media.                                                                                                                                                                                       |
+| `presetPath`   | String  | Path to the preset file (.epr file) which contains the encoding settings.                                                                                                                                                           |
+| `workAreaType` | Integer | The work area type to be rendered (see below). One of:<ul><li>`0` - Renders the entire sequence.</li><li>`1` - Renders between the in and out point of the sequence.</li><li>`2` - Renders the work area of the sequence.</li></ul> |
 
 #### Returns
 
@@ -497,8 +480,8 @@ Creates a new [Project object](../general/project.md) containing only the given 
 
 #### Parameters
 
-| Argument     | Type     | Description                          |
-|--------------|----------|--------------------------------------|
+|   Argument   |  Type  |             Description              |
+| ------------ | ------ | ------------------------------------ |
 | `outputPath` | String | The output path for the new project. |
 
 #### Returns
@@ -517,8 +500,8 @@ Retrieves the file extension associated with the specified output preset (.epr f
 
 #### Parameters
 
-| Argument           | Type     | Description                   |
-|--------------------|----------|-------------------------------|
+|      Argument      |  Type  |          Description          |
+| ------------------ | ------ | ----------------------------- |
 | `outputPresetPath` | String | The output preset to be used. |
 
 #### Returns
@@ -605,7 +588,7 @@ Returns a [Time object](../other/time.md).
 
 #### Description
 
-Retrieves the position of the CTI (Current Time Indicator), in **ticks**.
+Retrieves the position of the CTI (Current Time Indicator), in ticks.
 
 #### Parameters
 
@@ -651,30 +634,30 @@ None.
 
 Returns an object; a sequence settings structure.
 
-| Property                                                                                                                                                         | Type                                                                                                                                                  | Possible Values                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Description                                                                                                                                                            |
-|------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `audioChannelCount`                                                                                                                                              | Integer                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Number of audio channels in the sequence.                                                                                                                              |
-| `audioChannelType`<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                                                                                   | Integer<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                                                                                 | `0` Mono<br/><br/><br/>`1` Stereo<br/><br/><br/>`2` 5.1<br/><br/><br/>`3` Multichannel<br/><br/><br/>`4` 4 Channel<br/><br/><br/>`5` 8 Channel<br/><br/>                                                                                                                                                                                                                                                                                                                                                         | Audio channel type.<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                                                                                        |
-| `audioDisplayFormat`<br/><br/><br/><br/>                                                                                                                         | Integer<br/><br/><br/><br/>                                                                                                                         | `200` Audio Samples<br/><br/><br/>`201` Milliseconds<br/><br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Audio timecode display format.<br/><br/><br/><br/>                                                                                                                     |
-| `audioSampleRate`                                                                                                                                                | [Time object](../other/time.md)                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Audio sample rate.                                                                                                                                                     |
-| `autoToneMapEnabled`                                                                                                                                             | Boolean                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Whether Auto Tone Map Media is checked.                                                                                                                                |
-| `compositeLinearColor`                                                                                                                                           | Boolean                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Whether sequence is composited in linear color.                                                                                                                        |
-| `editingMode`                                                                                                                                                    | String                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | The GUID of the editing mode.                                                                                                                                          |
-| `maximumBitDepth`                                                                                                                                                | Boolean                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Whether sequence is composited at maximum depth.                                                                                                                       |
-| `maximumRenderQuality`                                                                                                                                           | Boolean                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Whether sequence is rendered at maximum quality.                                                                                                                       |
-| `previewCodec`                                                                                                                                                   | String                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Four character code of preview codec in use.                                                                                                                           |
-| `previewFrameWidth`                                                                                                                                              | Integer                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Width of preview frame.                                                                                                                                                |
-| `previewFrameHeight`                                                                                                                                             | Integer                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Height of preview frame.                                                                                                                                               |
-| `previewFileFormat`                                                                                                                                              | Integer                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Path to the output preset (.epr file) being used for preview file rendering.                                                                                           |
-| `videoDisplayFormat`<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> | Integer<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> | `100` 24 Timecode<br/><br/><br/>`101` 25 Timecode<br/><br/><br/>`102` 29.97 Drop Timecode<br/><br/><br/>`103` 29.97 Non-Drop Timecode<br/><br/><br/>`104` 30 Timecode<br/><br/><br/>`105` 50 Timecode<br/><br/><br/>`106` 59.94 Drop Timecode<br/><br/><br/>`107` 59.94 Non-Drop Timecode<br/><br/><br/>`108` 60 Timecode<br/><br/><br/>`109` Frames<br/><br/><br/>`110` 23.976 Timecode<br/><br/><br/>`111` 16mm Feet + Frames<br/><br/><br/>`112` 35mm Feet + Frames<br/><br/><br/>`113` 48 Timecode<br/><br/> | Video time display format.<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/> |
-| `videoFieldType`<br/><br/><br/><br/><br/><br/><br/><br/>                                                                                                         | Integer<br/><br/><br/><br/><br/><br/><br/><br/>                                                                                                     | `-1` Default<br/><br/><br/>`0` No Fields (Progressive Scan)<br/><br/><br/>`1` Upper Field First<br/><br/><br/>`2` Lower Field First<br/><br/>                                                                                                                                                                                                                                                                                                                                                                    | Video field type.<br/><br/><br/><br/><br/><br/><br/><br/>                                                                                                              |
-| `videoFrameHeight`                                                                                                                                               | Integer                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Height of sequence video frame.                                                                                                                                        |
-| `videoFrameWidth`                                                                                                                                                | Integer                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Width of sequence video frame.                                                                                                                                         |
-| `videoPixelAspectRatio`                                                                                                                                          | String                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Pixel aspect ratio.                                                                                                                                                    |
-| `vrHorzCapturedView`                                                                                                                                             | Integer                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | The horizontal captured view, in degrees, for VR.                                                                                                                      |
-| `vrVertCapturedView`                                                                                                                                             | Integer                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | The vertical captured view, in degrees, for VR.                                                                                                                        |
-| `vrLayout`<br/><br/><br/><br/><br/><br/>                                                                                                                         | Integer<br/><br/><br/><br/><br/><br/>                                                                                                               | `0` Monoscopic<br/><br/><br/>`1` Stereoscopic - Over/Under<br/><br/><br/>`2` Stereoscopic - Side by Side<br/><br/>                                                                                                                                                                                                                                                                                                                                                                                               | The layout of footage in use, for VR.<br/><br/><br/><br/><br/><br/>                                                                                                    |
-| `vrProjection`<br/><br/><br/><br/>                                                                                                                               | Integer<br/><br/><br/><br/>                                                                                                                         | `0` None<br/><br/><br/>`1` Equirectangular<br/><br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                             | The projection type in use, for VR footage.<br/><br/><br/><br/>                                                                                                        |
+|        Property         |              Type               |                                                                                                                                                                                                                            Possible Values                                                                                                                                                                                                                             |                                 Description                                  |
+| ----------------------- | ------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------- |
+| `audioChannelCount`     | Integer                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Number of audio channels in the sequence.                                    |
+| `audioChannelType`      | Integer                         | <ul><li>`0` - Mono</li><li>`1` - Stereo</li><li>`2` - 5.1</li><li>`3` - Multichannel</li><li>`4` - 4 Channel</li><li>`5` - 8 Channel</li></ul>                                                                                                                                                                                                                                                                                                                         | Audio channel type.                                                          |
+| `audioDisplayFormat`    | Integer                         | <ul><li>`200` - Audio Samples</li><li>`201` - Milliseconds</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                   | Audio timecode display format.                                               |
+| `audioSampleRate`       | [Time object](../other/time.md) |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Audio sample rate.                                                           |
+| `autoToneMapEnabled`    | Boolean                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Whether Auto Tone Map Media is checked.                                      |
+| `compositeLinearColor`  | Boolean                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Whether sequence is composited in linear color.                              |
+| `editingMode`           | String                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | The GUID of the editing mode.                                                |
+| `maximumBitDepth`       | Boolean                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Whether sequence is composited at maximum depth.                             |
+| `maximumRenderQuality`  | Boolean                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Whether sequence is rendered at maximum quality.                             |
+| `previewCodec`          | String                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Four character code of preview codec in use.                                 |
+| `previewFrameWidth`     | Integer                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Width of preview frame.                                                      |
+| `previewFrameHeight`    | Integer                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Height of preview frame.                                                     |
+| `previewFileFormat`     | Integer                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Path to the output preset (.epr file) being used for preview file rendering. |
+| `videoDisplayFormat`    | Integer                         | <ul><li>`100` - 24 Timecode</li><li>`101` - 25 Timecode</li><li>`102` - 29.97 Drop Timecode</li><li>`103` - 29.97 Non-Drop Timecode</li><li>`104` - 30 Timecode</li><li>`105` - 50 Timecode</li><li>`106` - 59.94 Drop Timecode</li><li>`107` - 59.94 Non-Drop Timecode</li><li>`108` - 60 Timecode</li><li>`109` - Frames</li><li>`110` - 23.976 Timecode</li><li>`111` - 16mm Feet + Frames</li><li>`112` - 35mm Feet + Frames</li><li>`113` - 48 Timecode</li></ul> | Video time display format.                                                   |
+| `videoFieldType`        | Integer                         | <ul><li>`-1` - Default</li><li>`0` - No Fields (Progressive Scan)</li><li>`1` - Upper Field First</li><li>`2` - Lower Field First</li></ul>                                                                                                                                                                                                                                                                                                                            | Video field type.                                                            |
+| `videoFrameHeight`      | Integer                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Height of sequence video frame.                                              |
+| `videoFrameWidth`       | Integer                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Width of sequence video frame.                                               |
+| `videoPixelAspectRatio` | String                          |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | Pixel aspect ratio.                                                          |
+| `vrHorzCapturedView`    | Integer                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | The horizontal captured view, in degrees, for VR.                            |
+| `vrVertCapturedView`    | Integer                         |                                                                                                                                                                                                                                                                                                                                                                                                                                                                        | The vertical captured view, in degrees, for VR.                              |
+| `vrLayout`              | Integer                         | <ul><li>`0` - Monoscopic</li><li>`1` - Stereoscopic - Over/Under</li><li>`2` - Stereoscopic - Side by Side</li></ul>                                                                                                                                                                                                                                                                                                                                                   | The layout of footage in use, for VR.                                        |
+| `vrProjection`          | Integer                         | <ul><li>`0` - None</li><li>`1` - Equirectangular</li></ul>                                                                                                                                                                                                                                                                                                                                                                                                             | The projection type in use, for VR footage.                                  |
 
 ---
 
@@ -684,7 +667,7 @@ Returns an object; a sequence settings structure.
 
 #### Description
 
-Retrieves the current sequence work area in point, in **seconds**.
+Retrieves the current sequence work area in point, in seconds.
 
 #### Parameters
 
@@ -760,10 +743,10 @@ Imports a MOGRT, or an After Effects Motion Graphics Template, to the specified 
 
 #### Parameters
 
-| Argument         | Type      | Description                                                                        |
-|------------------|-----------|------------------------------------------------------------------------------------|
+|     Argument     |  Type   |                                    Description                                     |
+| ---------------- | ------- | ---------------------------------------------------------------------------------- |
 | `path`           | String  | Full path to a valid MOGRT (.mogrt file), created in After Effects.                |
-| `time`           | String  | The time at which to insert .mogrt, in **ticks**.                                  |
+| `time`           | String  | The time at which to insert .mogrt, in ticks.                                      |
 | `vidTrackOffset` | Integer | How many tracks from the zero-th video track, into which to insert .mogrt content. |
 | `audTrackOffset` | Integer | How many tracks from the zero-th audio track, into which to insert .mogrt content. |
 
@@ -783,11 +766,11 @@ Imports a MOGRT, or an After Effects Motion Graphics Template, from the current 
 
 #### Parameters
 
-| Argument         | Type      | Description                                                                        |
-|------------------|-----------|------------------------------------------------------------------------------------|
+|     Argument     |  Type   |                                    Description                                     |
+| ---------------- | ------- | ---------------------------------------------------------------------------------- |
 | `libraryName`    | String  | The name of Library (from the current PPro user's Creative Cloud Libraries).       |
 | `mgtName`        | String  | The name of .mogrt within that library.                                            |
-| `time`           | String  | The time at which to insert .mogrt, in **ticks**.                                  |
+| `time`           | String  | The time at which to insert .mogrt, in ticks.                                      |
 | `vidTrackOffset` | Integer | How many tracks from the zero-th video track, into which to insert .mogrt content. |
 | `audTrackOffset` | Integer | How many tracks from the zero-th audio track, into which to insert .mogrt content. |
 
@@ -807,12 +790,12 @@ Inserts a clip into the sequence, on the specified video and audio tracks, at th
 
 #### Parameters
 
-| Argument      | Type                                                     | Description                                               |
-|---------------|----------------------------------------------------------|-----------------------------------------------------------|
+|   Argument    |                     Type                     |                        Description                        |
+| ------------- | -------------------------------------------- | --------------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
-| `time`        | String                                                 | The time at which to add project item, in **seconds**.    |
-| `vTrackIndex` | Integer                                                | The (zero-based) track index, into which to insert video. |
-| `aTrackIndex` | Integer                                                | The (zero-based) track index, into which to insert audio. |
+| `time`        | String                                       | The time at which to add project item, in seconds.        |
+| `vTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert video. |
+| `aTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert audio. |
 
 #### Returns
 
@@ -887,12 +870,12 @@ Inserts a clip into the sequence, **overwriting existing clips**, on the specifi
 
 #### Parameters
 
-| Argument      | Type                                                     | Description                                               |
-|---------------|----------------------------------------------------------|-----------------------------------------------------------|
+|   Argument    |                     Type                     |                        Description                        |
+| ------------- | -------------------------------------------- | --------------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
-| `time`        | String                                                 | The time at which to add project item, in **seconds**.    |
-| `vTrackIndex` | Integer                                                | The (zero-based) track index, into which to insert video. |
-| `aTrackIndex` | Integer                                                | The (zero-based) track index, into which to insert audio. |
+| `time`        | String                                       | The time at which to add project item, in seconds.        |
+| `vTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert video. |
+| `aTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert audio. |
 
 #### Returns
 
@@ -910,11 +893,11 @@ Performs cut detection on the sequence selection.
 
 #### Parameters
 
-| Argument                 | Type      | Description                                                        |
-|--------------------------|-----------|--------------------------------------------------------------------|
-| `actionDesired`          | String  | One of: `CreateMarkers` or `ApplyCuts`                             |
-| `applyCutsToLinkedAudio` | Boolean | Whether to apply detected cuts on linked audio.                    |
-| `sensitivity`            | String  | One of: `LowSensitivity`, `MediumSensitivity` or `HighSensitivity` |
+|         Argument         |  Type   |                                           Description                                           |
+| ------------------------ | ------- | ----------------------------------------------------------------------------------------------- |
+| `actionDesired`          | String  | One of:<ul><li>`CreateMarkers`</li><li>`ApplyCuts`</li></ul>                                    |
+| `applyCutsToLinkedAudio` | Boolean | Whether to apply detected cuts on linked audio.                                                 |
+| `sensitivity`            | String  | One of:<ul><li>`LowSensitivity`</li><li>`MediumSensitivity`</li><li>`HighSensitivity`</li></ul> |
 
 #### Returns
 
@@ -932,9 +915,9 @@ Sets a new sequence in point.
 
 #### Parameters
 
-| Argument   | Type                                              | Description                |
-|------------|---------------------------------------------------|----------------------------|
-| `time`     | Integer or [Time object](../other/time.md) | A new time in **seconds**. |
+| Argument |                    Type                    |      Description       |
+| -------- | ------------------------------------------ | ---------------------- |
+| `time`   | Integer or [Time object](../other/time.md) | A new time in seconds. |
 
 #### Returns
 
@@ -952,9 +935,9 @@ Sets a new sequence out point.
 
 #### Parameters
 
-| Argument   | Type                                              | Description                |
-|------------|---------------------------------------------------|----------------------------|
-| `time`     | Integer or [Time object](../other/time.md) | A new time in **seconds**. |
+| Argument |                    Type                    |      Description       |
+| -------- | ------------------------------------------ | ---------------------- |
+| `time`   | Integer or [Time object](../other/time.md) | A new time in seconds. |
 
 #### Returns
 
@@ -972,9 +955,9 @@ Sets the position of the CTI (Current Time Indicator) in the sequence.
 
 #### Parameters
 
-| Argument   | Type     | Description              |
-|------------|----------|--------------------------|
-| `time`     | String | A new time in **ticks**. |
+| Argument |  Type  |     Description      |
+| -------- | ------ | -------------------- |
+| `time`   | String | A new time in ticks. |
 
 #### Returns
 
@@ -992,8 +975,8 @@ Sets the settings of the current sequence.  *[Editorial: I apologize for any per
 
 #### Parameters
 
-| Argument           | Type     | Description                                                                               |
-|--------------------|----------|-------------------------------------------------------------------------------------------|
+|      Argument      |   Type   |                                       Description                                        |
+| ------------------ | -------- | ---------------------------------------------------------------------------------------- |
 | `sequenceSettings` | `Object` | A sequence settings object, obtained via [Sequence.getSettings()](#sequencegetsettings). |
 
 #### Returns
@@ -1012,9 +995,9 @@ Sets a new sequence work area in point.
 
 #### Parameters
 
-| Argument   | Type                                              | Description                |
-|------------|---------------------------------------------------|----------------------------|
-| `time`     | Integer or [Time object](../other/time.md) | A new time in **seconds**. |
+| Argument |                    Type                    |      Description       |
+| -------- | ------------------------------------------ | ---------------------- |
+| `time`   | Integer or [Time object](../other/time.md) | A new time in seconds. |
 
 #### Returns
 
@@ -1032,9 +1015,9 @@ Sets a new sequence work area out point.
 
 #### Parameters
 
-| Argument   | Type                                              | Description                |
-|------------|---------------------------------------------------|----------------------------|
-| `time`     | Integer or [Time object](../other/time.md) | A new time in **seconds**. |
+| Argument |                    Type                    |      Description       |
+| -------- | ------------------------------------------ | ---------------------- |
+| `time`   | Integer or [Time object](../other/time.md) | A new time in seconds. |
 
 #### Returns
 
@@ -1070,9 +1053,9 @@ Set the starting time of the sequence.
 
 #### Parameters
 
-| Argument       | Type     | Description                      |
-|----------------|----------|----------------------------------|
-| `newZeroPoint` | String | The new zero point in **ticks**. |
+|    Argument    |  Type  |         Description          |
+| -------------- | ------ | ---------------------------- |
+| `newZeroPoint` | String | The new zero point in ticks. |
 
 #### Returns
 

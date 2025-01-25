@@ -7,7 +7,7 @@
 
 #### Description
 
-The **component** object represents something which has been added or applied to a trackItem.
+The Component object represents something which has been added or applied to a trackItem.
 
 ---
 

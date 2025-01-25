@@ -60,7 +60,10 @@ The type of media, contained in this track.
 
 #### Type
 
-String, read-only; valid values are `Audio` and `Video`.
+String, read-only. One of:
+
+- `Audio`
+- `Video`
 
 ---
 
@@ -116,7 +119,7 @@ Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)
 |   Argument    |                     Type                     |                        Description                        |
 | ------------- | -------------------------------------------- | --------------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
-| `time`        | String                                       | The time at which to add project item, in **Ticks**.      |
+| `time`        | String                                       | The time at which to add project item, in Ticks.          |
 | `vTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert video. |
 | `aTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert audio. |
 
@@ -160,10 +163,10 @@ Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)
 
 #### Parameters
 
-|   Argument    |                     Type                     |                     Description                      |
-| ------------- | -------------------------------------------- | ---------------------------------------------------- |
-| `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.              |
-| `time`        | String                                       | The time at which to add project item, in **Ticks**. |
+|   Argument    |                     Type                     |                   Description                    |
+| ------------- | -------------------------------------------- | ------------------------------------------------ |
+| `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.          |
+| `time`        | String                                       | The time at which to add project item, in Ticks. |
 
 #### Returns
 
