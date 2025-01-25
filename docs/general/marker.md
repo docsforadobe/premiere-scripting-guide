@@ -124,8 +124,8 @@ String; read-only.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().getColorByIndex(index)`
 <br/>
 
-#### NOTE
-This functionality was added in Adobe Premire Pro 13.x.
+!!! note
+    This functionality was added in Adobe Premire Pro 13.x.
 
 **Description**
 
@@ -192,8 +192,8 @@ Returns a `String` containing the URL, or **0** if unsuccessful.
 `app.project.rootItem.children[index].getMarkers().getFirstMarker().setColorByIndex(colorIndex, markerIndex)`
 <br/>
 
-#### NOTE
-This functionality was added in Adobe Premire Pro 13.x.
+!!! note
+    This functionality was added in Adobe Premire Pro 13.x.
 
 **Description**
 

@@ -2,8 +2,8 @@
 
 Premiere Pro provides an ExtendScript API, allowing for the access and manipulation of most project elements, including metadata, exporting and rendering options.
 
-#### NOTE
-This document does not teach ExtendScript, ExtendScript debugging, or other development techniques. It focuses on the Premiere Pro ExtendScript API and the execution context for scripts.
+!!! note
+    This document does not teach ExtendScript, ExtendScript debugging, or other development techniques. It focuses on the Premiere Pro ExtendScript API and the execution context for scripts.
 
 While initially incomplete and intended only for internal testing, the Premiere Pro ExtendScript API has been growing steadily for many years. As of 12.1.1 (the current release, as of this writing), the API offers thorough access to (and, often, control over) all project elements, as well as application settings.
 

@@ -102,8 +102,8 @@ This is the ordinal assigned to the sequence upon creation. If this is the thirt
 
 Integer, read-only.
 
-#### NOTE
-In testing, this attribute seems unstable and produces unreliable results. Recommend using [Sequence.sequenceID](#sequence-sequenceid) instead.
+!!! note
+    In testing, this attribute seems unstable and produces unreliable results. Recommend using [Sequence.sequenceID](#sequence-sequenceid) instead.
 
 ---
 
@@ -147,8 +147,8 @@ The [ProjectItem object](../item/projectitem.md#projectitem) associated with the
 
 [ProjectItem object](../item/projectitem.md#projectitem); read-only.
 
-#### NOTE
-Not all sequences will have a `projectItem`. There may be sequences in a project that Premiere generates that are invisible to the user, these do not have `projectItems`
+!!! note
+    Not all sequences will have a `projectItem`. There may be sequences in a project that Premiere generates that are invisible to the user, these do not have `projectItems`
 
 ---
 
@@ -405,8 +405,8 @@ Creates a new sequence, from the in point to the out point, which is a sub-seque
 
 Returns the newly-created [Sequence object](#sequence).
 
-#### NOTE
-This is not the same as nesting. The newly-created sequence is not inserted back into the original sequence. To nest, see the example function below.
+!!! note
+    This is not the same as nesting. The newly-created sequence is not inserted back into the original sequence. To nest, see the example function below.
 
 **Example**
 
@@ -846,8 +846,8 @@ Returns a boolean.
 
 Returns whether or not the sequence work area bar is enabled.
 
-#### NOTE
-The work area bar is disabled by default. To enable it, check ‘Work Area Bar’ in the sequence hamburger menu.
+!!! note
+    The work area bar is disabled by default. To enable it, check ‘Work Area Bar’ in the sequence hamburger menu.
 
 **Parameters**
 
