@@ -119,7 +119,7 @@ Returns **true** if the Project is locked, **false** if the Project is unlocked.
 
 **Description**
 
-Moves the specified path (“bin”) or .prproj into the Production’s Trash folder.
+Moves the specified path ("bin") or .prproj into the Production's Trash folder.
 
 **Parameters**
 

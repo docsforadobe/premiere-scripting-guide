@@ -56,7 +56,7 @@ The duration of the trackItem.
 
 **Description**
 
-The visible end time of the trackItem in the sequence, relative to the beginning of its corresponding sequence (NOT the sequence zero point). Note: This may differ from the trackItem’s out point, which is relative to the source.
+The visible end time of the trackItem in the sequence, relative to the beginning of its corresponding sequence (NOT the sequence zero point). Note: This may differ from the trackItem's out point, which is relative to the source.
 
 **Type**
 
@@ -192,7 +192,7 @@ A [ProjectItem object](projectitem.md#projectitem).
 
 **Description**
 
-The visible start time of the trackItem in the sequence, relative to the beginning of its corresponding sequence (NOT the sequence zero point). Note: This may differ from the trackItem’s in point, which is relative to the source.
+The visible start time of the trackItem in the sequence, relative to the beginning of its corresponding sequence (NOT the sequence zero point). Note: This may differ from the trackItem's in point, which is relative to the source.
 
 **Type**
 
@@ -435,7 +435,7 @@ Moves the inPoint of the track item to a new time, by shifting it by a number of
 
 | Argument     | Type     | Description                                                                                   |
 |--------------|----------|-----------------------------------------------------------------------------------------------|
-| `newInPoint` | `Number` | A time object that represent the amount of time, in seconds, to shift the track item’s start. |
+| `newInPoint` | `Number` | A time object that represent the amount of time, in seconds, to shift the track item's start. |
 
 **Returns**
 

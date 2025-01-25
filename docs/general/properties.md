@@ -129,7 +129,7 @@ Checks whether a given property can be overwritten by the user. Returns false if
 
 **Description**
 
-Set property value. NOTE: For any file paths to be used in Premiere Pro’s preferences, a trailing path seperator is mandatory.
+Set property value. NOTE: For any file paths to be used in Premiere Pro's preferences, a trailing path seperator is mandatory.
 
 **Parameters**
 

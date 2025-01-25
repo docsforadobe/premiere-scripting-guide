@@ -70,7 +70,7 @@ Warning: app.encoder is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in
 
 **Description**
 
-The path containing the currently active “Adobe Premiere Pro Prefs” file.
+The path containing the currently active "Adobe Premiere Pro Prefs" file.
 
 **Type**
 
@@ -92,7 +92,7 @@ app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile
 
 **Description**
 
-Premiere Pro’s active configuration files, not specific to a given user.
+Premiere Pro's active configuration files, not specific to a given user.
 
 **Type**
 
@@ -114,7 +114,7 @@ app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere P
 
 **Description**
 
-The path containing the currently active “Adobe Premiere Pro Prefs” file.
+The path containing the currently active "Adobe Premiere Pro Prefs" file.
 
 **Type**
 
@@ -136,7 +136,7 @@ app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profil
 
 **Description**
 
-Premiere Pro’s active configuration files, not specific to a given user.
+Premiere Pro's active configuration files, not specific to a given user.
 
 **Type**
 
@@ -158,7 +158,7 @@ app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere 
 
 **Description**
 
-Get the Learn panel’s contents directory path.
+Get the Learn panel's contents directory path.
 
 **Type**
 
@@ -166,7 +166,7 @@ String; read-only.
 
 **Example**
 
-Get a path to a Learn panel’s directory
+Get a path to a Learn panel's directory
 
 ```javascript
 app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/
@@ -180,7 +180,7 @@ app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Pan
 
 **Description**
 
-Get the Learn panel’s example projects directory path.
+Get the Learn panel's example projects directory path.
 
 **Type**
 
@@ -188,7 +188,7 @@ String; read-only.
 
 **Example**
 
-Get a path to a Learn panel’s example projects’ directory
+Get a path to a Learn panel's example projects' directory
 
 ```javascript
 app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/
@@ -360,7 +360,7 @@ app.version; // 14.3.1
 
 **Description**
 
-Enables Premiere Pro’s QE DOM.
+Enables Premiere Pro's QE DOM.
 
 **Parameters**
 
@@ -619,7 +619,7 @@ app.setExtensionPersistent(extensionID, persistent);
 
 **Description**
 
-Specifies the path to be used for one of Premiere Pro’s scratch disk paths.
+Specifies the path to be used for one of Premiere Pro's scratch disk paths.
 
 **Parameters**
 
@@ -630,7 +630,7 @@ Specifies the path to be used for one of Premiere Pro’s scratch disk paths.
 
 **Returns**
 
-Returns ‘true’ if successful.
+Returns 'true' if successful.
 
 **Example**
 
@@ -649,7 +649,7 @@ if (scratchPath && scratchPath.exists) {
 
 **Description**
 
-Writes a string to Premiere Pro’s Events panel.
+Writes a string to Premiere Pro's Events panel.
 
 **Parameters**
 
@@ -660,7 +660,7 @@ Writes a string to Premiere Pro’s Events panel.
 
 **Returns**
 
-Returns ‘true’ if successful.
+Returns 'true' if successful.
 
 ---
 
@@ -703,7 +703,7 @@ if (app.setWorkspace(workspace)) {
 
 **Description**
 
-Writes a string to Premiere Pro’s debug console.
+Writes a string to Premiere Pro's debug console.
 
 **Parameters**
 

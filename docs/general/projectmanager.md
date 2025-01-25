@@ -4,7 +4,7 @@
 
 **Description**
 
-The ProjectManager object exposes Premiere Pro’s Project Manager, for project consolidation, transfer and transcoding.
+The ProjectManager object exposes Premiere Pro's Project Manager, for project consolidation, transfer and transcoding.
 
 ---
 
@@ -161,7 +161,7 @@ Boolean; read/write.
 
 **Description**
 
-How many frames of ‘handle’ footage (before and after the in and out points) of media, to include.
+How many frames of 'handle' footage (before and after the in and out points) of media, to include.
 
 **Type**
 

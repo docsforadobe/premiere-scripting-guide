@@ -109,7 +109,7 @@ An array of transitions objects, contained within the track, in temporal order.
 
 **Description**
 
-Adds a ‘clip’ (media segment from a [ProjectItem object](../item/projectitem.md#projectitem)) to the track, at the specified time. Media will be inserted, at that time.
+Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md#projectitem)) to the track, at the specified time. Media will be inserted, at that time.
 
 **Parameters**
 
@@ -156,7 +156,7 @@ Returns **true** if track is currently muted; **false** if not.
 
 **Description**
 
-Adds a ‘clip’ (media segment from a [ProjectItem object](../item/projectitem.md#projectitem)) to the track, at the specified time. This will overwrite any existing media, at that time.
+Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md#projectitem)) to the track, at the specified time. This will overwrite any existing media, at that time.
 
 **Parameters**
 

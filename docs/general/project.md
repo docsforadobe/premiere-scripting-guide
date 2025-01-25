@@ -108,7 +108,7 @@ app.project.path; // /Users/USERNAME/Desktop/Project.prproj
 
 **Description**
 
-A [ProjectItem object](../item/projectitem.md#projectitem) representing the “root” of the project.
+A [ProjectItem object](../item/projectitem.md#projectitem) representing the "root" of the project.
 
 **Type**
 
@@ -138,7 +138,7 @@ The sequences within the project.
 
 **Description**
 
-Adds a new field of the specified type to Premiere Pro’s private project metadata schema.
+Adds a new field of the specified type to Premiere Pro's private project metadata schema.
 
 **Parameters**
 
@@ -181,7 +181,7 @@ Returns **0** if successful.
 
 **Description**
 
-Invokes Premiere Pro’s “Consolidate Duplicate Footage” functionality, as available from the UI.
+Invokes Premiere Pro's "Consolidate Duplicate Footage" functionality, as available from the UI.
 
 **Parameters**
 
@@ -331,7 +331,7 @@ Exports an OMF file of the specified [Sequence object](../sequence/sequence.md#s
 | `audioFileFormat`   | `Integer`                                           | `0` is AIFF, `1` is WAV.                     |
 | `trimAudioFiles`    | `Integer`                                           | `1` means yes, trim audio files.             |
 | `handleFrames`      | `Integer`                                           | Number of handle frames (from 0 to 1000).    |
-| `includePan`        | `Integer`                                           | `1` means include pan info; `0` means don’t. |
+| `includePan`        | `Integer`                                           | `1` means include pan info; `0` means don't. |
 
 **Returns**
 
@@ -351,7 +351,7 @@ Exports the currently active [Sequence object](../sequence/sequence.md#sequence)
 
 | Argument               | Type     | Description                                                                                                                                              |
 |------------------------|----------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `exportControllerName` | `String` | The name of the Export Controller plug-in to be used. To use the Premiere Pro SDK example Export Controller, the value would be “SDK Export Controller”. |
+| `exportControllerName` | `String` | The name of the Export Controller plug-in to be used. To use the Premiere Pro SDK example Export Controller, the value would be "SDK Export Controller". |
 
 **Returns**
 

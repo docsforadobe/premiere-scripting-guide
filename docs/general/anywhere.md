@@ -48,7 +48,7 @@ None.
 
 **Returns**
 
-Returns a **String** containing the asset’s URL, or **0** if unsuccessful (including if there is no active sequence, or if no editing session is opened).
+Returns a **String** containing the asset's URL, or **0** if unsuccessful (including if there is no active sequence, or if no editing session is opened).
 
 ---
 
@@ -66,7 +66,7 @@ None.
 
 **Returns**
 
-Returns a **String** containing the asset’s URL, or **0** if unsuccessful (including if more or fewre than one item is selected).
+Returns a **String** containing the asset's URL, or **0** if unsuccessful (including if more or fewre than one item is selected).
 
 ---
 
@@ -84,7 +84,7 @@ None.
 
 **Returns**
 
-Returns a **String** containing the production’s URL, or **0** if unsuccessful.
+Returns a **String** containing the production's URL, or **0** if unsuccessful.
 
 ---
 

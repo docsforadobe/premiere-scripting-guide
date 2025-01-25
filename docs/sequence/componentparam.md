@@ -10,12 +10,12 @@
 The **component parameter** object represents a parameter associated with a component, applied to a [TrackItem object](../item/trackitem.md#trackitem).
 
 NOTE:
-For a developer working across different localizations, it’s possible to find the corresponding keys by comparing ZStrings.
+For a developer working across different localizations, it's possible to find the corresponding keys by comparing ZStrings.
 Below is an example between En and De. Here are the paths to the files:
 
-C:Program FilesAdobeAdobe Premiere Pro 2024Dictionariesde_DEzdictionary_PPRO_de_DE.dat  (”…anti-Flimmer Filter”)
+C:Program FilesAdobeAdobe Premiere Pro 2024Dictionariesde_DEzdictionary_PPRO_de_DE.dat  ("…anti-Flimmer Filter")
 
-C:Program FilesAdobeAdobe Premiere Pro 2024Dictionariesen_USzdictionary_PPRO_en_US.dat (”…anti-flicker Filter”)
+C:Program FilesAdobeAdobe Premiere Pro 2024Dictionariesen_USzdictionary_PPRO_en_US.dat ("…anti-flicker Filter")
 
 ---
 
@@ -398,7 +398,7 @@ Sets whether the component parameter varies, over time. Note: This can only be s
 
 | Argument   | Type      | Description                                                               |
 |------------|-----------|---------------------------------------------------------------------------|
-| `varying`  | `Boolean` | If `true`, component parameter will vary over time; if `false`, it won’t. |
+| `varying`  | `Boolean` | If `true`, component parameter will vary over time; if `false`, it won't. |
 
 **Returns**
 

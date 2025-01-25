@@ -4,7 +4,7 @@
 
 **Description**
 
-The Source object represents Premiere Pro’s Source monitor.
+The Source object represents Premiere Pro's Source monitor.
 
 ---
 
@@ -58,7 +58,7 @@ Returns **0** if successful.
 
 **Description**
 
-Retrieves the position of the Source monitor’s current time indicator.
+Retrieves the position of the Source monitor's current time indicator.
 
 **Parameters**
 
@@ -66,7 +66,7 @@ None.
 
 **Returns**
 
-Returns a [Time object](../other/time.md#time) containing the position of the Source monitor’s current time indicator.
+Returns a [Time object](../other/time.md#time) containing the position of the Source monitor's current time indicator.
 
 ---
 

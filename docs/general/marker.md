@@ -107,7 +107,7 @@ A [Time object](../other/time.md#time) containing the value of the beginning of 
 
 **Description**
 
-The type of marker; either “Comment”, “Chapter”, “Segmentation”, or “WebLink”. Note: Premiere Pro can import some marker types, which cannot be created from within Premiere Pro.
+The type of marker; either "Comment", "Chapter", "Segmentation", or "WebLink". Note: Premiere Pro can import some marker types, which cannot be created from within Premiere Pro.
 
 **Type**
 
@@ -152,7 +152,7 @@ Returns the color index as an `Integer`.
 
 **Description**
 
-Retrieves the frame target, from the marker’s FrameTarget field.
+Retrieves the frame target, from the marker's FrameTarget field.
 
 **Parameters**
 
@@ -173,7 +173,7 @@ Returns a `String` containing the frame target, or **0** if unsuccessful.
 
 **Description**
 
-Retrieves the URL, from the marker’s URL field.
+Retrieves the URL, from the marker's URL field.
 
 **Parameters**
 
@@ -230,7 +230,7 @@ Returns `undefined`.
 
 **Description**
 
-Sets the type of the marker to “Chapter”.
+Sets the type of the marker to "Chapter".
 
 **Parameters**
 
@@ -251,7 +251,7 @@ Returns **0** if successful.
 
 **Description**
 
-Sets the type of the marker to “Comment”.
+Sets the type of the marker to "Comment".
 
 **Parameters**
 
@@ -272,7 +272,7 @@ Returns **0** if successful.
 
 **Description**
 
-Sets the type of the marker to “Segmentation”.
+Sets the type of the marker to "Segmentation".
 
 **Parameters**
 
@@ -293,7 +293,7 @@ Returns **0** if successful.
 
 **Description**
 
-Sets the type of the marker to “WebLink”.
+Sets the type of the marker to "WebLink".
 
 **Parameters**
 

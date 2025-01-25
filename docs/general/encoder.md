@@ -129,7 +129,7 @@ Determines whether embedded XMP metadata, will be output.
 
 Returns **0** if successful.
 
-Note: Premiere Pro and Adobe Media Encoder will output sidecar XMP for some file formats, and embed XMP for most. The applications make this determination based on numerous factors, and there is no API control to “force” sidecar or embedded output, for formats which normally use “the other approach”.
+Note: Premiere Pro and Adobe Media Encoder will output sidecar XMP for some file formats, and embed XMP for most. The applications make this determination based on numerous factors, and there is no API control to "force" sidecar or embedded output, for formats which normally use "the other approach".
 
 ---
 

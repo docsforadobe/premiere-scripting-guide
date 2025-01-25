@@ -9,10 +9,10 @@ While initially incomplete and intended only for internal testing, the Premiere 
 
 ## Example code
 
-The PProPanel sample exercises Premiere Pro’s ExtendScript API: [https://github.com/Adobe-CEP/Samples/tree/master/PProPanel](https://github.com/Adobe-CEP/Samples/tree/master/PProPanel).
+The PProPanel sample exercises Premiere Pro's ExtendScript API: [https://github.com/Adobe-CEP/Samples/tree/master/PProPanel](https://github.com/Adobe-CEP/Samples/tree/master/PProPanel).
 
 ## Development and debugging tools
 
-ExtendScript Toolkit (ESTK) is longer updated by Adobe; the recommended debugging environment for ExtendScript is  Microsoft Visual Studio Code, with Adobe’s ExtendScript debugging extension:
+ExtendScript Toolkit (ESTK) is longer updated by Adobe; the recommended debugging environment for ExtendScript is  Microsoft Visual Studio Code, with Adobe's ExtendScript debugging extension:
 
 [https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug](https://marketplace.visualstudio.com/items?itemName=Adobe.extendscript-debug)

@@ -4,7 +4,7 @@
 
 **Description**
 
-The **Sequence** object represents sequences of media, or ‘timelines’, in Premiere Pro.
+The **Sequence** object represents sequences of media, or 'timelines', in Premiere Pro.
 
 ---
 
@@ -779,13 +779,13 @@ Returns a [TrackItem object](../item/trackitem.md#trackitem).
 
 **Description**
 
-Imports a MOGRT, or an After Effects Motion Graphics Template, from the current Premiere Pro user’s Creative Cloud Libraries, to the specified video or audio track, at the specified time.
+Imports a MOGRT, or an After Effects Motion Graphics Template, from the current Premiere Pro user's Creative Cloud Libraries, to the specified video or audio track, at the specified time.
 
 **Parameters**
 
 | Argument         | Type      | Description                                                                        |
 |------------------|-----------|------------------------------------------------------------------------------------|
-| `libraryName`    | `String`  | The name of Library (from the current PPro user’s Creative Cloud Libraries).       |
+| `libraryName`    | `String`  | The name of Library (from the current PPro user's Creative Cloud Libraries).       |
 | `mgtName`        | `String`  | The name of .mogrt within that library.                                            |
 | `time`           | `String`  | The time at which to insert .mogrt, in **ticks**.                                  |
 | `vidTrackOffset` | `Integer` | How many tracks from the zero-th video track, into which to insert .mogrt content. |
@@ -847,7 +847,7 @@ Returns a boolean.
 Returns whether or not the sequence work area bar is enabled.
 
 !!! note
-    The work area bar is disabled by default. To enable it, check ‘Work Area Bar’ in the sequence hamburger menu.
+    The work area bar is disabled by default. To enable it, check 'Work Area Bar' in the sequence hamburger menu.
 
 **Parameters**
 
