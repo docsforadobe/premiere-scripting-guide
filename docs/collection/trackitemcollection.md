@@ -7,7 +7,8 @@
 
 The TrackItemCollection object represents a collection of [TrackItem objects](../item/trackitem.md) on a track.
 
-> TrackItemCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with TrackItemCollection.
+!!! info
+    TrackItemCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with TrackItemCollection.
 
 ---
 

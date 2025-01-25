@@ -136,9 +136,9 @@ String; read-only.
 
 #### Description
 
-The current project location of the project item. Example:
+The current project location of the project item.
 
-> **\\ProjectName.prproj\\Media\\MXF\\filename.mxf**
+Example: `\\ProjectName.prproj\\Media\\MXF\\filename.mxf`
 
 #### Type
 

@@ -7,7 +7,8 @@
 
 The MarkerCollection object represents a collection of [Marker objects](../general/marker.md) in a [ProjectItem object](../item/projectitem.md) and [Sequence object](../sequence/sequence.md).
 
-> MarkerCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with MarkerCollection.
+!!! info
+    MarkerCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with MarkerCollection.
 
 ---
 

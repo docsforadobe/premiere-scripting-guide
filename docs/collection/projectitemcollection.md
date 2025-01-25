@@ -4,7 +4,8 @@
 
 The ProjectItemCollection object represents a collection of [ProjectItem objects](../item/projectitem.md) in an active project.
 
-> ProjectItemCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with ProjectItemCollection.
+!!! info
+    ProjectItemCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with ProjectItemCollection.
 
 ---
 
