@@ -1,8 +1,6 @@
-_build/
-_testing/
-
-\.DS_Store
-
-*.doctree
-
-*.pickle
+*.sublime-project
+*.sublime-workspace
+.DS_Store
+.vscode/
+site/
+venv/
