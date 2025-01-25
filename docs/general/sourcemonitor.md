@@ -1,5 +1,3 @@
-<a id="sourcemonitor"></a>
-
 # SourceMonitor object
 
 `app.sourceMonitor`
@@ -17,8 +15,6 @@ None.
 ---
 
 ## Methods
-
-<a id="sourcemonitor-closeallclips"></a>
 
 ### SourceMonitor.closeAllClips()
 
@@ -38,8 +34,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="sourcemonitor-closeclip"></a>
-
 ### SourceMonitor.closeClip()
 
 `app.sourceMonitor.closeClip()`
@@ -57,8 +51,6 @@ None.
 Returns **0** if successful.
 
 ---
-
-<a id="sourcemonitor-getposition"></a>
 
 ### SourceMonitor.getPosition()
 
@@ -78,8 +70,6 @@ Returns a [Time object](../other/time.md#time) containing the position of the So
 
 ---
 
-<a id="sourcemonitor-projectitem"></a>
-
 ### SourceMonitor.getProjectItem()
 
 `app.sourceMonitor.getProjectItem()`
@@ -97,8 +87,6 @@ None.
 Returns projectItem if successful; null if not.
 
 ---
-
-<a id="sourcemonitor-openfilepath"></a>
 
 ### SourceMonitor.openFilePath()
 
@@ -120,8 +108,6 @@ Returns `true` if successful.
 
 ---
 
-<a id="sourcemonitor-openprojectitem"></a>
-
 ### SourceMonitor.openProjectItem()
 
 `app.sourceMonitor.openProjectItem(projectItem)`
@@ -141,8 +127,6 @@ Open a project item in the Source monitor.
 Returns 0 if successful.
 
 ---
-
-<a id="sourcemonitor-play"></a>
 
 ### SourceMonitor.play()
 

@@ -1,5 +1,3 @@
-<a id="projectmanager"></a>
-
 # ProjectManager object
 
 `app.projectManager.options`
@@ -11,8 +9,6 @@ The ProjectManager object exposes Premiere Pro’s Project Manager, for project 
 ---
 
 ## Attributes
-
-<a id="projectmanager-affectedsequences"></a>
 
 ### ProjectManager.affectedSequences
 
@@ -27,8 +23,6 @@ An Array of [Sequence](../sequence/sequence.md#sequence) objects, to be exported
 Array; read/write.
 
 ---
-
-<a id="projectmanager-cliptranscoderoption"></a>
 
 ### ProjectManager.clipTranscoderOption
 
@@ -49,8 +43,6 @@ String; read/write.
 
 ---
 
-<a id="projectmanager-cliptransferoption"></a>
-
 ### ProjectManager.clipTransferOption
 
 `app.projectManager.options.clipTransferOption`
@@ -64,8 +56,6 @@ The specified setting for clip transfer. Value will be one of the following:
 | `CLIP_TRANSFER_TRANSCODE` | Transcode to default output format. |
 
 ---
-
-<a id="projectmanager-convertaecompstoclips"></a>
 
 ### ProjectManager.convertAECompsToClips
 
@@ -81,8 +71,6 @@ Boolean; read/write.
 
 ---
 
-<a id="projectmanager-convertimagesequencestoclips"></a>
-
 ### ProjectManager.convertImageSequencesToClips
 
 `app.projectManager.options.convertImageSequencesToClips`
@@ -96,8 +84,6 @@ If true, transcode image sequences to new media (using specified output preset).
 Boolean; read/write.
 
 ---
-
-<a id="projectmanager-convertsyntheticstoclips"></a>
 
 ### ProjectManager.convertSyntheticsToClips
 
@@ -113,8 +99,6 @@ Boolean; read/write.
 
 ---
 
-<a id="projectmanager-copytopreventalphaloss"></a>
-
 ### ProjectManager.copyToPreventAlphaLoss
 
 `app.projectManager.options.copyToPreventAlphaLoss`
@@ -128,8 +112,6 @@ If true, includes any available alpha information into transcoded media.
 Boolean; read/write.
 
 ---
-
-<a id="projectmanager-destinationpath"></a>
 
 ### ProjectManager.destinationPath
 
@@ -145,8 +127,6 @@ String; read/write.
 
 ---
 
-<a id="projectmanager-encoderpresetfilepath"></a>
-
 ### ProjectManager.encoderPresetFilePath
 
 `app.projectManager.options.encoderPresetFilePath`
@@ -160,8 +140,6 @@ The path to the output preset (.epr file) to be used.
 String; read-write.
 
 ---
-
-<a id="projectmanager-excludeunused"></a>
 
 ### ProjectManager.excludeUnused
 
@@ -177,8 +155,6 @@ Boolean; read/write.
 
 ---
 
-<a id="projectmanager-handleframecount"></a>
-
 ### ProjectManager.handleFrameCount
 
 `app.projectManager.options.handleFrameCount`
@@ -192,8 +168,6 @@ How many frames of ‘handle’ footage (before and after the in and out points)
 Integer; read/write.
 
 ---
-
-<a id="projectmanager-includeallsequences"></a>
 
 ### ProjectManager.includeAllSequences
 
@@ -209,8 +183,6 @@ Boolean; read/write.
 
 ---
 
-<a id="projectmanager-includeconformedaudio"></a>
-
 ### ProjectManager.includeConformedAudio
 
 `app.projectManager.options.includeConformedAudio`
@@ -225,8 +197,6 @@ Boolean; read/write.
 
 ---
 
-<a id="projectmanager-includepreviews"></a>
-
 ### ProjectManager.includePreviews
 
 `app.projectManager.options.includePreviews`
@@ -240,8 +210,6 @@ If true, include rendered preview files with exported project.
 Boolean; read/write.
 
 ---
-
-<a id="projectmanager-renamemedia"></a>
 
 ### ProjectManager.renameMedia
 

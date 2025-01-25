@@ -1,5 +1,3 @@
-<a id="production"></a>
-
 # Production object
 
 `app.production`
@@ -11,8 +9,6 @@ The Production object lets ExtendScript access and manipulate productions, inser
 ---
 
 ## Attributes
-
-<a id="production-name"></a>
 
 ### Production.name
 
@@ -28,8 +24,6 @@ String.
 
 ---
 
-<a id="production-path"></a>
-
 ### Production.path
 
 `app.production.path`
@@ -43,8 +37,6 @@ The path to the Production folder.
 String.
 
 ---
-
-<a id="production-projects"></a>
 
 ### Production.projects
 
@@ -61,8 +53,6 @@ An array of the projects containined within the Production, which are currently 
 ---
 
 ## Methods
-
-<a id="production-addproject"></a>
 
 ### Production.addProject()
 
@@ -85,8 +75,6 @@ Returns **true** if successful.
 
 ---
 
-<a id="production-close"></a>
-
 ### Production.close()
 
 `app.production.close()`
@@ -104,8 +92,6 @@ None.
 Returns **true** if successful.
 
 ---
-
-<a id="production-getlocked"></a>
 
 ### Production.getLocked()
 
@@ -126,8 +112,6 @@ Returns the lock state of a single project within the Production.
 Returns **true** if the Project is locked, **false** if the Project is unlocked.
 
 ---
-
-<a id="production-movetotrash"></a>
 
 ### Production.moveToTrash()
 
@@ -150,8 +134,6 @@ Moves the specified path (“bin”) or .prproj into the Production’s Trash fo
 Returns **true** if successful.
 
 ---
-
-<a id="production-setlocked"></a>
 
 ### Production.setLocked()
 

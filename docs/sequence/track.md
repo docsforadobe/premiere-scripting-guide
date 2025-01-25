@@ -1,5 +1,3 @@
-<a id="track"></a>
-
 # Track object
 
 `app.project.sequences[index].audioTracks[index]`
@@ -14,8 +12,6 @@ The **Track** object represents a video or audio track, within a [Sequence objec
 ---
 
 ## Attributes
-
-<a id="track-clips"></a>
 
 ### Track.clips
 
@@ -34,8 +30,6 @@ An array of [Track item](../item/trackitem.md#trackitem) objects, contained with
 
 ---
 
-<a id="track-id"></a>
-
 ### Track.id
 
 `app.project.sequences[index].audioTracks[index].id`
@@ -52,8 +46,6 @@ This is the ordinal assigned to the track, upon creation.
 Integer, read-only.
 
 ---
-
-<a id="track-mediatype"></a>
 
 ### Track.mediaType
 
@@ -72,8 +64,6 @@ String, read-only; valid values are `Audio` and `Video`.
 
 ---
 
-<a id="track-name"></a>
-
 ### Track.name
 
 `app.project.sequences[index].audioTracks[index].name`
@@ -90,8 +80,6 @@ The name of the track.
 String; read-only.
 
 ---
-
-<a id="track-transitions"></a>
 
 ### Track.transitions
 
@@ -111,8 +99,6 @@ An array of transitions objects, contained within the track, in temporal order.
 ---
 
 ## Methods
-
-<a id="track-insertclip"></a>
 
 ### Track.insertClip()
 
@@ -140,8 +126,6 @@ None.
 
 ---
 
-<a id="track-ismuted"></a>
-
 ### Track.isMuted()
 
 `app.project.sequences[index].audioTracks[index].isMuted()`
@@ -162,8 +146,6 @@ None.
 Returns **true** if track is currently muted; **false** if not.
 
 ---
-
-<a id="track-overwriteclip"></a>
 
 ### Track.overwriteClip()
 
@@ -188,8 +170,6 @@ Adds a ‘clip’ (media segment from a [ProjectItem object](../item/projectitem
 Returns `true`.
 
 ---
-
-<a id="track-setmute"></a>
 
 ### Track.setMute()
 

@@ -1,5 +1,3 @@
-<a id="componentcollection"></a>
-
 # ComponentCollection object
 
 `app.project.rootItem.children[index].videoComponents()`
@@ -16,8 +14,6 @@
 ---
 
 ## Attributes
-
-<a id="componentcollection-numitems"></a>
 
 ### ComponentCollection.numItems
 

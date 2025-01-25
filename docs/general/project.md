@@ -1,5 +1,3 @@
-<a id="project"></a>
-
 # Project object
 
 `app.project`
@@ -11,8 +9,6 @@ Represents a Premiere Pro project. As of Premiere Pro 12.0, multiple projects ma
 ---
 
 ## Attributes
-
-<a id="project-activesequence"></a>
 
 ### Project.activeSequence
 
@@ -28,8 +24,6 @@ a [Sequence object](../sequence/sequence.md#sequence), or `0` if no sequence is 
 
 ---
 
-<a id="project-cloudprojectlocalid"></a>
-
 ### Project.cloudProjectlocalID
 
 `app.project.cloudProjectlocalID`
@@ -43,8 +37,6 @@ The ID of cloud project.
 String; read/only.
 
 ---
-
-<a id="project-documentid"></a>
 
 ### Project.documentID
 
@@ -60,8 +52,6 @@ String; read-only.
 
 ---
 
-<a id="project-iscloudproject"></a>
-
 ### Project.isCloudProject
 
 `app.project.isCloudProject`
@@ -76,8 +66,6 @@ Boolean; read-only.
 
 ---
 
-<a id="project-name"></a>
-
 ### Project.name
 
 `app.project.name`
@@ -91,8 +79,6 @@ The name of the project.
 String; read-only.
 
 ---
-
-<a id="project-path"></a>
 
 ### Project.path
 
@@ -116,8 +102,6 @@ app.project.path; // /Users/USERNAME/Desktop/Project.prproj
 
 ---
 
-<a id="project-rootitem"></a>
-
 ### Project.rootItem
 
 `app.project.rootItem`
@@ -131,8 +115,6 @@ A [ProjectItem object](../item/projectitem.md#projectitem) representing the “r
 A [ProjectItem object](../item/projectitem.md#projectitem); this will always be of type `ProjectItemType_BIN`.
 
 ---
-
-<a id="project-sequences"></a>
 
 ### Project.sequences
 
@@ -149,8 +131,6 @@ The sequences within the project.
 ---
 
 ## Methods
-
-<a id="project-addpropertytoprojectmetadataschema"></a>
 
 ### Project.addPropertyToProjectMetadataSchema()
 
@@ -174,8 +154,6 @@ Returns **true** if successful, **undefined** if unsuccessful.
 
 ---
 
-<a id="project-closedocument"></a>
-
 ### Project.closeDocument()
 
 `app.project.closeDocument(saveFirst, promptIfDirty)`
@@ -197,8 +175,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="project-consolidateduplicates"></a>
-
 ### Project.consolidateDuplicates()
 
 `app.project.consolidateDuplicates()`
@@ -216,8 +192,6 @@ None.
 Returns  **0** if successful.
 
 ---
-
-<a id="project-createnewsequence"></a>
 
 ### Project.createNewSequence()
 
@@ -239,8 +213,6 @@ Creates a new [Sequence object](../sequence/sequence.md#sequence) with the speci
 Returns a [Sequence object](../sequence/sequence.md#sequence) if creation was successful, or **0** if unsuccessful.
 
 ---
-
-<a id="project-createnewsequencefromclips"></a>
 
 ### Project.createNewSequenceFromClips()
 
@@ -264,8 +236,6 @@ Returns the newly-created [Sequence object](../sequence/sequence.md#sequence) if
 
 ---
 
-<a id="project-deletesequence"></a>
-
 ### Project.deleteSequence()
 
 `app.project.deleteSequence(sequence)`
@@ -285,8 +255,6 @@ Deletes the specified [Sequence object](../sequence/sequence.md#sequence) from t
 Returns true if successful, false if unsuccessful.
 
 ---
-
-<a id="project-exportaaf"></a>
 
 ### Project.exportAAF()
 
@@ -321,8 +289,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="project-exportfinalcutproxml"></a>
-
 ### Project.exportFinalCutProXML()
 
 `app.project.exportFinalCutProXML(outputPath, suppressUI)`
@@ -343,8 +309,6 @@ Exports an FCP XML representation of the entire project, to the specified output
 Returns 0 if successful.
 
 ---
-
-<a id="project-exportomf"></a>
 
 ### Project.exportOMF()
 
@@ -375,8 +339,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="project-exporttimeline"></a>
-
 ### Project.exportTimeline()
 
 `app.project.exportTimeline(exportControllerName)`
@@ -397,8 +359,6 @@ Returns **0** if successful, or an error code if not.
 
 ---
 
-<a id="project-getgraphicswhiteluminance"></a>
-
 ### Project.getGraphicsWhiteLuminance()
 
 `app.project.getGraphicsWhiteLuminance();`
@@ -416,8 +376,6 @@ None.
 Returns the currently selected graphics white value.
 
 ---
-
-<a id="project-getinsertionbin"></a>
 
 ### Project.getInsertionBin()
 
@@ -437,8 +395,6 @@ Returns a [ProjectItem object](../item/projectitem.md#projectitem) if successful
 
 ---
 
-<a id="project-getprojectpanelmetadata"></a>
-
 ### Project.getProjectPanelMetadata()
 
 `app.project.getProjectPanelMetadata()`
@@ -456,8 +412,6 @@ None.
 Returns a **String** representing the current Project panel layout, or **0** if unsuccessful.
 
 ---
-
-<a id="project-getsharedlocation"></a>
 
 ### Project.getSharedLocation()
 
@@ -477,8 +431,6 @@ Returns a **String** containing the path.
 
 ---
 
-<a id="project-getsupportedgraphicswhiteluminances"></a>
-
 ### Project.getSupportedGraphicsWhiteLuminances()
 
 `app.project.getSupportedGraphicsWhiteLuminances();`
@@ -496,8 +448,6 @@ None.
 Returns an array of graphics white settings supported by the project; Currently it returns (100, 203, 300)
 
 ---
-
-<a id="project-importaecomps"></a>
 
 ### Project.importAEComps()
 
@@ -521,8 +471,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="project-importallaecomps"></a>
-
 ### Project.importAllAEComps()
 
 `app.project.importAllAEComps(path, targetBin)`
@@ -543,8 +491,6 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 Returns **0** if successful.
 
 ---
-
-<a id="project-importfiles"></a>
 
 ### Project.importFiles()
 
@@ -569,8 +515,6 @@ Returns **true** if successful, **false** if not.
 
 ---
 
-<a id="project-importsequences"></a>
-
 ### Project.importSequences()
 
 `app.project.importSequences(path, sequenceIDs)`
@@ -592,8 +536,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="project-issharedlocationcopyenabled"></a>
-
 ### Project.isSharedLocationCopyEnabled()
 
 `app.project.isSharedLocationCopyEnabled()`
@@ -611,8 +553,6 @@ None.
 Returns  **true** if copying is enabled; **false** if not.
 
 ---
-
-<a id="project-newbarsandtone"></a>
 
 ### Project.newBarsAndTone()
 
@@ -640,8 +580,6 @@ Returns a [ProjectItem object](../item/projectitem.md#projectitem) for the new b
 
 ---
 
-<a id="project-newsequence"></a>
-
 ### Project.newSequence()
 
 `app.project.newSequence(name, pathToSequencePreset)`
@@ -663,8 +601,6 @@ Returns a [Sequence object](../sequence/sequence.md#sequence), or **0** if unsuc
 
 ---
 
-<a id="project-opensequence"></a>
-
 ### Project.openSequence()
 
 `app.project.openSequence(sequence.sequenceID)`
@@ -684,8 +620,6 @@ Makes the [Sequence object](../sequence/sequence.md#sequence) with the provided 
 Returns **true** if successful, **false** if not.
 
 ---
-
-<a id="project-pausegrowing"></a>
 
 ### Project.pauseGrowing()
 
@@ -707,8 +641,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="project-save"></a>
-
 ### Project.save()
 
 `app.project.save()`
@@ -726,8 +658,6 @@ None.
 Returns **0** if successful.
 
 ---
-
-<a id="project-saveas"></a>
 
 ### Project.saveAs()
 
@@ -749,8 +679,6 @@ Returns **0** if successful, or an error code if not.
 
 ---
 
-<a id="project-setenabletranscodeoningest"></a>
-
 ### Project.setEnableTranscodeOnIngest()
 
 `app.project.setEnableTranscodeOnIngest(state);`
@@ -770,8 +698,6 @@ Controls the enablement of transcode-upon-ingest behavior, for the given project
 Returns **true** if successful.
 
 ---
-
-<a id="project-setgraphicswhiteluminance"></a>
 
 ### Project.setGraphicsWhiteLuminance()
 
@@ -793,8 +719,6 @@ Returns true if successful.
 
 ---
 
-<a id="project-setprojectpanelmetadata"></a>
-
 ### Project.setProjectPanelMetadata()
 
 `app.project.setProjectPanelMetadata(layout)`
@@ -814,8 +738,6 @@ Returns the current layout of the Project panel.
 Returns  **0** if unsuccessful.
 
 ---
-
-<a id="project-setscratchdiskpath"></a>
 
 ### Project.setScratchDiskPath()
 

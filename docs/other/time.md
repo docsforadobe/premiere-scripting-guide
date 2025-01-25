@@ -1,5 +1,3 @@
-<a id="time"></a>
-
 # Time object
 
 `myTime = new Time();`
@@ -11,8 +9,6 @@ An object representing a time. Internally, the time is computed in `ticks`; ther
 ---
 
 ## Attributes
-
-<a id="time-seconds"></a>
 
 ### Time.seconds
 
@@ -27,8 +23,6 @@ The time value, expressed in seconds.
 Number.
 
 ---
-
-<a id="time-ticks"></a>
 
 ### Time.ticks
 
@@ -45,8 +39,6 @@ String.
 ---
 
 ## Methods
-
-<a id="time-getformatted"></a>
 
 ### Time.getFormatted()
 
@@ -68,8 +60,6 @@ Returns the value of the `Time` passed, as a string, formatted in the specified 
 A `String`.
 
 ---
-
-<a id="time-setsecondsasfraction"></a>
 
 ### Time.setSecondsAsFraction()
 

@@ -1,5 +1,3 @@
-<a id="metadata"></a>
-
 # Metadata object
 
 `app.metadata`
@@ -11,8 +9,6 @@
 ---
 
 ## Attributes
-
-<a id="metadata-getmetadata"></a>
 
 ### Metadata.getMetadata
 
@@ -29,8 +25,6 @@ String.
 ---
 
 ## Methods
-
-<a id="metadata-addmarker"></a>
 
 ### Metadata.addMarker()
 
@@ -50,8 +44,6 @@ String.
 
 ---
 
-<a id="metadata-deletemarker"></a>
-
 ### Metadata.deleteMarker()
 
 `app.metadata.deleteMarker()`
@@ -69,8 +61,6 @@ String.
 *add return value/type here*
 
 ---
-
-<a id="metadata-setmarkerdata"></a>
 
 ### Metadata.setMarkerData()
 
@@ -90,8 +80,6 @@ String.
 
 ---
 
-<a id="metadata-setmetadatavalue"></a>
-
 ### Metadata.setMetadataValue()
 
 `app.metadata.setMetadataValue()`
@@ -109,8 +97,6 @@ String.
 *add return value/type here*
 
 ---
-
-<a id="metadata-updatemarker"></a>
 
 ### Metadata.updateMarker()
 

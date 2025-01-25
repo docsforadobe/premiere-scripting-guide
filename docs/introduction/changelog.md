@@ -4,13 +4,9 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-23-x"></a>
-
 ## [Adobe Premiere Pro 23.0]()
 
 - Decision : No further changes or improvements to Premiere Pro’s ExtendScript API are planned or scheduled. Any such changes will be reconsidered, once Premiere Pro moves to UXP-based extensibility.
-
-<a id="changelog-15-x"></a>
 
 ## [Adobe Premiere Pro 15.4]()
 
@@ -23,14 +19,10 @@ What’s new and changed for scripting?
 
 ---
 
-<a id="changelog-14-x"></a>
-
 ## [Adobe Premiere Pro 14.0]()
 
 - Scripting access to Auto-Reframe:
   : - Added: [Sequence.autoReframeSequence()](../sequence/sequence.md#sequence-autoreframesequence)
-
-<a id="changelog-13-x"></a>
 
 ## [Adobe Premiere Pro 13.x]()
 

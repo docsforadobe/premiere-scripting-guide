@@ -1,5 +1,3 @@
-<a id="projectitemcollection"></a>
-
 # ProjectItemCollection object
 
 `app.project.rootItem.children`
@@ -11,8 +9,6 @@ The ProjectItemCollection object represents a collection of [ProjectItem objects
 ---
 
 ## Attributes
-
-<a id="projectitemcollection-numitems"></a>
 
 ### ProjectItemCollection.numItems
 

@@ -1,5 +1,3 @@
-<a id="properties"></a>
-
 # Properties object
 
 `app.properties`
@@ -18,8 +16,6 @@ None.
 
 ## Methods
 
-<a id="properties-clearproperty"></a>
-
 ### Properties.clearProperty()
 
 `app.properties.clearProperty()`
@@ -37,8 +33,6 @@ None.
 *add return value/type here*
 
 ---
-
-<a id="properties-doespropertyexist"></a>
 
 ### Properties.doesPropertyExist()
 
@@ -73,8 +67,6 @@ alert('Property "' + property + '" exists: ' + exists.toString());
 ```
 
 ---
-
-<a id="properties-getproperty"></a>
 
 ### Properties.getProperty()
 
@@ -111,8 +103,6 @@ if (app.properties.doesPropertyExist(property)) {
 
 ---
 
-<a id="properties-ispropertyreadonly"></a>
-
 ### Properties.isPropertyReadOnly()
 
 `app.properties.isPropertyReadOnly(property)`
@@ -132,8 +122,6 @@ Checks whether a given property can be overwritten by the user. Returns false if
 `Boolean`.
 
 ---
-
-<a id="properties-setproperty"></a>
 
 ### Properties.setProperty()
 

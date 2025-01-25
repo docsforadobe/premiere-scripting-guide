@@ -1,5 +1,3 @@
-<a id="sequencecollection"></a>
-
 # SequenceCollection object
 
 `app.project.sequences`
@@ -11,8 +9,6 @@ The SequenceCollection object represents a collection of all the  [Sequence obje
 ---
 
 ## Attributes
-
-<a id="projectcollection-numsequences"></a>
 
 ### SequenceCollection.numSequences
 

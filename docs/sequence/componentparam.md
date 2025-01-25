@@ -1,5 +1,3 @@
-<a id="componentparam"></a>
-
 # ComponentParam object
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index]`
@@ -42,8 +40,6 @@ String; read-only.
 
 ## Methods
 
-<a id="componentparam-addkey"></a>
-
 ### ComponentParam.addKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].addKey(time)`
@@ -67,8 +63,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="componentparam-arekeyframessupported"></a>
-
 ### ComponentParam.areKeyframesSupported()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].areKeyframesSupported()`
@@ -89,8 +83,6 @@ None.
 Returns `true` if keyframes are supported; `false` if not.
 
 ---
-
-<a id="componentparam-findnearestkey"></a>
 
 ### ComponentParam.findNearestKey()
 
@@ -116,8 +108,6 @@ Returns a **Time** value, indicating when the closest keyframe is.
 
 ---
 
-<a id="componentparam-findnextkey"></a>
-
 ### ComponentParam.findNextKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].findNextKey(timeToCheck)`
@@ -140,8 +130,6 @@ Returns the keyframe temporally subsequent to the provided `timeToCheck`. Note: 
 Returns a **Time** value, indicating when the closest keyframe is, or **0** if there is no available subsequent keyframe.
 
 ---
-
-<a id="componentparam-findpreviouskey"></a>
 
 ### ComponentParam.findPreviousKey()
 
@@ -166,8 +154,6 @@ Returns a **Time** value, indicating when the closest keyframe is, or **0** if t
 
 ---
 
-<a id="componentparam-getcolorvalue"></a>
-
 ### ComponentParam.getColorValue()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getColorValue()`
@@ -188,8 +174,6 @@ None.
 Returns a **Color** containing the values found in the component parameter stream, or **0** if unsuccessful.
 
 ---
-
-<a id="componentparam-getkeys"></a>
 
 ### ComponentParam.getKeys()
 
@@ -212,8 +196,6 @@ Returns an **Array** of **Time** values, indicating at what time each keyframe o
 
 ---
 
-<a id="componentparam-getvalue"></a>
-
 ### ComponentParam.getValue()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getValue()`
@@ -234,8 +216,6 @@ None.
 Returns the value of the component parameter stream; the return varies with stream type.
 
 ---
-
-<a id="componentparam-getvalueatkey"></a>
 
 ### ComponentParam.getValueAtKey()
 
@@ -260,8 +240,6 @@ Returns the value of the component parameter stream at `time`, or **0** if unsuc
 
 ---
 
-<a id="componentparam-getvalueattime"></a>
-
 ### ComponentParam.getValueAtTime()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getValueAtTime(time)`
@@ -285,8 +263,6 @@ Returns the value of the component parameter stream at `time`, or **0** if unsuc
 
 ---
 
-<a id="componentparam-istimevarying"></a>
-
 ### ComponentParam.isTimeVarying()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].isTimeVarying()`
@@ -307,8 +283,6 @@ None.
 Returns `true` if the parameter varies over time; `false` if not.
 
 ---
-
-<a id="componentparam-removekey"></a>
 
 ### ComponentParam.removeKey()
 
@@ -333,8 +307,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="componentparam-removekeyrange"></a>
-
 ### ComponentParam.removeKeyRange()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].removeKeyRange(startTime, endTime)`
@@ -358,8 +330,6 @@ Removes all keyframes from the component parameter stream, between the specified
 Returns **0** if successful.
 
 ---
-
-<a id="componentparam-setcolorvalue"></a>
 
 ### ComponentParam.setColorValue()
 
@@ -388,8 +358,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="componentparam-setinterpolationtypeatkey"></a>
-
 ### ComponentParam.setInterpolationTypeAtKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType)`
@@ -415,8 +383,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="componentparam-settimevarying"></a>
-
 ### ComponentParam.setTimeVarying()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setTimeVarying(varying)`
@@ -439,8 +405,6 @@ Sets whether the component parameter varies, over time. Note: This can only be s
 Returns **0** if successful.
 
 ---
-
-<a id="componentparam-setvalue"></a>
 
 ### ComponentParam.setValue()
 
@@ -465,8 +429,6 @@ Sets the value of the component parameter stream. Note: This can only work on pa
 Returns **0** if successful.
 
 ---
-
-<a id="componentparam-setvalueatkey"></a>
 
 ### ComponentParam.setValueAtKey()
 

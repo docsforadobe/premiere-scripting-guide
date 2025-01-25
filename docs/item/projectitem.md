@@ -1,5 +1,3 @@
-<a id="projectitem"></a>
-
 # ProjectItem object
 
 `app.project.rootItem.children[index]`
@@ -11,8 +9,6 @@ Each item in a project is a **projectItem**, including the project root.
 ---
 
 ## Attributes
-
-<a id="projectitem-children"></a>
 
 ### ProjectItem.children
 
@@ -28,8 +24,6 @@ An array of project items, contained within the specified project item.
 
 ---
 
-<a id="projectitem-getaudiochannelmapping"></a>
-
 ### ProjectItem.getAudioChannelMapping
 
 `app.project.rootItem.children[index].getAudioChannelMapping`
@@ -43,8 +37,6 @@ The audio channel mapping currently applied to this **projectItem**.
 An audioChannelMapping object.
 
 ---
-
-<a id="projectitem-getoverridecolorspacelist"></a>
 
 ### ProjectItem.getOverrideColorSpaceList
 
@@ -81,8 +73,6 @@ Javascript Object.
 
 ---
 
-<a id="projectitem-name"></a>
-
 ### ProjectItem.name
 
 `app.project.rootItem.children[index].name`
@@ -110,8 +100,6 @@ if (item) {
 
 ---
 
-<a id="projectitem-nodeid"></a>
-
 ### ProjectItem.nodeId
 
 `app.project.rootItem.children[index].nodeId`
@@ -128,8 +116,6 @@ String; read-only.
 
 ---
 
-<a id="projectitem-teamprojectsassetid"></a>
-
 ### ProjectItem.teamProjectsAssetId
 
 `app.project.rootItem.children[index].teamProjectsAssetId`
@@ -143,8 +129,6 @@ The Team Projects Asset ID of the project item.
 String; read-only.
 
 ---
-
-<a id="projectitem-treepath"></a>
 
 ### ProjectItem.treePath
 
@@ -162,8 +146,6 @@ String; read-only.
 
 ---
 
-<a id="projectitem-type"></a>
-
 ### ProjectItem.type
 
 `app.project.rootItem.children[index].type`
@@ -179,8 +161,6 @@ Enumerated value; read-only.
 ---
 
 ## Methods
-
-<a id="projectitem-attachproxy"></a>
 
 ### ProjectItem.attachProxy()
 
@@ -203,8 +183,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="projectitem-canchangemediapath"></a>
-
 ### ProjectItem.canChangeMediaPath()
 
 `app.project.rootItem.children[index].canChangeMediaPath()`
@@ -223,8 +201,6 @@ Boolean; **true** if media can be replaced, **false** if not.
 
 ---
 
-<a id="projectitem-canproxy"></a>
-
 ### ProjectItem.canProxy()
 
 `app.project.rootItem.children[index].canProxy()`
@@ -242,8 +218,6 @@ None.
 Returns **true** if the project item permits a proxy to be attached; **false** if not.
 
 ---
-
-<a id="projectitem-changemediapath"></a>
 
 ### ProjectItem.changeMediaPath()
 
@@ -266,8 +240,6 @@ Returns **0** if replacement was successful.
 
 ---
 
-<a id="projectitem-clearoutpoint"></a>
-
 ### ProjectItem.clearOutPoint()
 
 `app.project.rootItem.children[index].clearOutPoint()`
@@ -285,8 +257,6 @@ None
 Returns `0` if successful.
 
 ---
-
-<a id="projectitem-createbin"></a>
 
 ### ProjectItem.createBin()
 
@@ -308,8 +278,6 @@ Returns a project item representing the new bin if successful, or **0** if unsuc
 
 ---
 
-<a id="projectitem-createsmartbin"></a>
-
 ### ProjectItem.createSmartBin()
 
 `app.project.rootItem.children[index].createSmartBin(name, queryString)`
@@ -330,8 +298,6 @@ Creates a search bin; only works for bin project items.
 Returns a projectItem representing the newly-created bin, if successful.
 
 ---
-
-<a id="projectitem-createsubclip"></a>
 
 ### ProjectItem.createSubClip()
 
@@ -358,8 +324,6 @@ Returns a project item representing the new subclip, or 0 if creation failed.
 
 ---
 
-<a id="projectitem-deletebin"></a>
-
 ### ProjectItem.deleteBin()
 
 `app.project.rootItem.children[index].deleteBin()`
@@ -377,8 +341,6 @@ None.
 Returns **0** if deletion was successful.
 
 ---
-
-<a id="projectitem-finditemsmatchingmediapath"></a>
 
 ### ProjectItem.findItemsMatchingMediaPath()
 
@@ -401,8 +363,6 @@ Returns an array of project items, or **0** if no project items matching the `ma
 
 ---
 
-<a id="projectitem-getcolorlabel"></a>
-
 ### ProjectItem.getColorLabel()
 
 `app.project.rootItem.children[index].getColorLabel()`
@@ -423,8 +383,6 @@ None.
 |--------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 
 ---
-
-<a id="projectitem-getcolorspace"></a>
 
 ### ProjectItem.getColorSpace()
 
@@ -544,8 +502,6 @@ app.setSDKEventMessage(“Input LutID “ + “ = “ + inputLutID, ‘info’);
 
 ---
 
-<a id="projectitem-getfootageinterpretation"></a>
-
 ### ProjectItem.getFootageInterpretation()
 
 `app.project.rootItem.children[index].getFootageInterpretation()`
@@ -577,8 +533,6 @@ A footage interpretation structure, or `0` if unsuccessful.
 
 ---
 
-<a id="projectitem-getinpoint"></a>
-
 ### ProjectItem.getInPoint()
 
 `app.project.rootItem.children[index].getInPoint()`
@@ -596,8 +550,6 @@ None.
 A [Time object](../other/time.md#time), containing the in point.
 
 ---
-
-<a id="projectitem-getmarkers"></a>
 
 ### ProjectItem.getMarkers()
 
@@ -617,8 +569,6 @@ None.
 
 ---
 
-<a id="projectitem-getmediapath"></a>
-
 ### ProjectItem.getMediaPath()
 
 `app.project.rootItem.children[index].getMediaPath()`
@@ -636,8 +586,6 @@ None.
 A String containing the path to the media associate with the project item.
 
 ---
-
-<a id="projectitem-getoutpoint"></a>
 
 ### ProjectItem.getOutPoint()
 
@@ -659,8 +607,6 @@ Returns a [Time object](../other/time.md#time).
 
 ---
 
-<a id="projectitem-getprojectmetadata"></a>
-
 ### ProjectItem.getProjectMetadata()
 
 `app.project.rootItem.children[index].getProjectMetadata()`
@@ -678,8 +624,6 @@ None.
 A String containing all Premiere Pro private project metadata, serialized.
 
 ---
-
-<a id="projectitem-getprojectcolumnsmetadata"></a>
 
 ### ProjectItem.getProjectColumnsMetadata()
 
@@ -709,8 +653,6 @@ For example:
 
 ---
 
-<a id="projectitem-getproxypath"></a>
-
 ### ProjectItem.getProxyPath()
 
 `app.project.rootItem.children[index].getProxyPath()`
@@ -728,8 +670,6 @@ None.
 Returns the path (as **String**) to the proxy media associated with the proxy item, or **0** if none is found.
 
 ---
-
-<a id="projectitem-getxmpmetadata"></a>
 
 ### ProjectItem.getXMPMetadata()
 
@@ -749,8 +689,6 @@ A String containing all XMP metadata, serialized.
 
 ---
 
-<a id="projectitem-hasproxy"></a>
-
 ### ProjectItem.hasProxy()
 
 `app.project.rootItem.children[index].hasProxy()`
@@ -768,8 +706,6 @@ None.
 Returns **true** if the project item has a proxy attached; **false** if not.
 
 ---
-
-<a id="projectitem-ismergedclip"></a>
 
 ### ProjectItem.isMergedClip()
 
@@ -789,8 +725,6 @@ Returns `true` if the project item is a merged clip, `false` if it isn’t.
 
 ---
 
-<a id="projectitem-ismulticamclip"></a>
-
 ### ProjectItem.isMulticamClip()
 
 `app.project.rootItem.children[index].isMulticamClip()`
@@ -808,8 +742,6 @@ None.
 Returns `true` if the project item is a multicam clip, `false` if it isn’t.
 
 ---
-
-<a id="projectitem-isoffline"></a>
 
 ### ProjectItem.isOffline()
 
@@ -829,8 +761,6 @@ Boolean, `true` if offline.
 
 ---
 
-<a id="projectitem-issequence"></a>
-
 ### ProjectItem.isSequence()
 
 `app.project.rootItem.children[index].isSequence()`
@@ -848,8 +778,6 @@ None.
 Returns `true` if the project item is a [Sequence object](../sequence/sequence.md#sequence), or a multicam clip, or a merged clip. Returns `false` if it isn’t any of those.
 
 ---
-
-<a id="projectitem-movebin"></a>
 
 ### ProjectItem.moveBin()
 
@@ -869,8 +797,6 @@ Returns **0** if move was successful.
 
 ---
 
-<a id="projectitem-refreshmedia"></a>
-
 ### ProjectItem.refreshMedia()
 
 `app.project.rootItem.children[index].refreshMedia()`
@@ -888,8 +814,6 @@ None.
 An array of markers associated with the project item, or **0** if there are no markers.
 
 ---
-
-<a id="projectitem-renamebin"></a>
 
 ### ProjectItem.renameBin()
 
@@ -911,8 +835,6 @@ Returns **0** if renaming bin was successful.
 
 ---
 
-<a id="projectitem-select"></a>
-
 ### ProjectItem.select()
 
 `app.project.rootItem.children[index].select()`
@@ -930,8 +852,6 @@ None.
 Returns **0** if the project item has successfully been made the target, for subsequent imports.
 
 ---
-
-<a id="projectitem-setcolorlabel"></a>
 
 ### ProjectItem.setColorLabel()
 
@@ -953,8 +873,6 @@ Sets the project item’s color label.
 
 ---
 
-<a id="projectitem-setfootageinterpretation"></a>
-
 ### ProjectItem.setFootageInterpretation()
 
 `app.project.rootItem.children[index].setFootageInterpretation(interpretation)`
@@ -974,8 +892,6 @@ Returns a structure describing the current interpretation of the projectItem.
 `true` if successful.
 
 ---
-
-<a id="projectitem-setinpoint"></a>
 
 ### ProjectItem.setInPoint()
 
@@ -998,8 +914,6 @@ Returns `0` if successful.
 
 ---
 
-<a id="projectitem-setoffline"></a>
-
 ### ProjectItem.setOffline()
 
 `app.project.rootItem.children[index].setOffline()`
@@ -1017,8 +931,6 @@ None.
 `true` if successful.
 
 ---
-
-<a id="projectitem-setoutpoint"></a>
 
 ### ProjectItem.setOutPoint()
 
@@ -1041,8 +953,6 @@ Returns `0` if successful.
 
 ---
 
-<a id="projectitem-setoverrideframerate"></a>
-
 ### ProjectItem.setOverrideFrameRate()
 
 `app.project.rootItem.children[index].setOverrideFrameRate(newFrameRate)`
@@ -1062,8 +972,6 @@ Sets the frame rate of the project item.
 Returns **0** if the frame rate has successfully been changed.
 
 ---
-
-<a id="projectitem-setoverridepixelaspectratio"></a>
 
 ### ProjectItem.setOverridePixelAspectRatio()
 
@@ -1086,8 +994,6 @@ Returns **0** if the aspect ratio has successfully been changed.
 
 ---
 
-<a id="projectitem-setprojectmetadata"></a>
-
 ### ProjectItem.setProjectMetadata()
 
 `app.project.rootItem.children[index].setProjectMetadata(newMetadata, updatedFields)`
@@ -1109,8 +1015,6 @@ Returns 0 if update was successful.
 
 ---
 
-<a id="projectitem-setscaletoframesize"></a>
-
 ### ProjectItem.setScaleToFrameSize()
 
 `app.project.rootItem.children[index].setScaleToFrameSize()`
@@ -1128,8 +1032,6 @@ None.
 Undefined return value.
 
 ---
-
-<a id="projectitem-setstarttime"></a>
 
 ### ProjectItem.setStartTime()
 
@@ -1151,8 +1053,6 @@ Returns `0` if successful.
 
 ---
 
-<a id="projectitem-setxmpmetadata"></a>
-
 ### ProjectItem.setXMPMetadata()
 
 `app.project.rootItem.children[index].setXMPMetadata(newXMP)`
@@ -1173,8 +1073,6 @@ Returns 0 if update was successful.
 
 ---
 
-<a id="projectitem-starttime"></a>
-
 ### ProjectItem.startTime()
 
 `app.project.rootItem.children[index].startTime()`
@@ -1192,8 +1090,6 @@ None.
 [Time object](../other/time.md#time).
 
 ---
-
-<a id="projectitem-videocomponents"></a>
 
 ### ProjectItem.videoComponents()
 

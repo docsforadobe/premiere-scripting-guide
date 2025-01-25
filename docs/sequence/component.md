@@ -1,5 +1,3 @@
-<a id="component"></a>
-
 # Component object
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index]`
@@ -14,8 +12,6 @@ The **component** object represents something which has been added or applied to
 ---
 
 ## Attributes
-
-<a id="component-displayname"></a>
 
 ### Component.displayName
 
@@ -34,8 +30,6 @@ String; read-only.
 
 ---
 
-<a id="component-matchname"></a>
-
 ### Component.matchName
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].matchName`
@@ -52,8 +46,6 @@ The name of the component, as it is loaded from disk; used to uniquely identify 
 String; read-only.
 
 ---
-
-<a id="component-properties"></a>
 
 ### Component.properties
 

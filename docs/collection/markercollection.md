@@ -1,5 +1,3 @@
-<a id="markercollection"></a>
-
 # MarkerCollection object
 
 `app.project.sequences[index].markers`
@@ -14,8 +12,6 @@ The MarkerCollection object represents a collection of [Marker objects](../gener
 ---
 
 ## Attributes
-
-<a id="markercollection-nummarkers"></a>
 
 ### MarkerCollection.numMarkers
 
@@ -35,8 +31,6 @@ Integer, read-only.
 ---
 
 ## Methods
-
-<a id="markercollection-createmarker"></a>
 
 ### MarkerCollection.createMarker()
 
@@ -60,8 +54,6 @@ Create a new [Marker object](../general/marker.md#marker) on a project item or a
 [Marker object](../general/marker.md#marker) if successful.
 
 ---
-
-<a id="markercollection-deletemarker"></a>
 
 ### MarkerCollection.deleteMarker()
 
@@ -103,8 +95,6 @@ alert('Removed ' + count.toString() + ' markers');
 
 ---
 
-<a id="markercollection-getfirstmarker"></a>
-
 ### MarkerCollection.getFirstMarker()
 
 `app.project.sequences[index].markers.getFirstMarker()`
@@ -126,8 +116,6 @@ None.
 
 ---
 
-<a id="markercollection-getlastmarker"></a>
-
 ### MarkerCollection.getLastMarker()
 
 `app.project.sequences[index].markers.getLastMarker()`
@@ -148,8 +136,6 @@ None.
 [Marker object](../general/marker.md#marker) or `undefined`.
 
 ---
-
-<a id="markercollection-getnextmarker"></a>
 
 ### MarkerCollection.getNextMarker()
 
@@ -173,8 +159,6 @@ Get the next available marker, sorted by seconds, starting from a given one.
 [Marker object](../general/marker.md#marker) or `undefined`.
 
 ---
-
-<a id="markercollection-getprevmarker"></a>
 
 ### MarkerCollection.getPrevMarker()
 

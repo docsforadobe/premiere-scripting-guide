@@ -1,5 +1,3 @@
-<a id="application"></a>
-
 # Application object
 
 `app`
@@ -12,8 +10,6 @@ The single global object is always available by its name, **app**.
 ---
 
 ## Attributes
-
-<a id="app-anywhere"></a>
 
 ### app.anywhere
 
@@ -28,8 +24,6 @@ An [Anywhere object](../general/anywhere.md#anywhere), providing access to avail
 [Anywhere object](../general/anywhere.md#anywhere).
 
 ---
-
-<a id="app-build"></a>
 
 ### app.build
 
@@ -53,8 +47,6 @@ parseInt(app.build); // 45
 
 ---
 
-<a id="app-encoder"></a>
-
 ### app.encoder
 
 `app.encoder`
@@ -71,8 +63,6 @@ Warning: app.encoder is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in
 [Encoder object](../general/encoder.md#encoder).
 
 ---
-
-<a id="app-getappprefpath"></a>
 
 ### app.getAppPrefPath
 
@@ -96,8 +86,6 @@ app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile
 
 ---
 
-<a id="app-getappsystemprefpath"></a>
-
 ### app.getAppSystemPrefPath
 
 `app.getAppSystemPrefPath`
@@ -119,8 +107,6 @@ app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere P
 ```
 
 ---
-
-<a id="app-getpproprefpath"></a>
 
 ### app.getPProPrefPath
 
@@ -144,8 +130,6 @@ app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profil
 
 ---
 
-<a id="app-getpprosystemprefpath"></a>
-
 ### app.getPProSystemPrefPath
 
 `app.getPProSystemPrefPath`
@@ -167,8 +151,6 @@ app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere 
 ```
 
 ---
-
-<a id="app-learnpanelcontentdirpath"></a>
 
 ### app.learnPanelContentDirPath
 
@@ -192,8 +174,6 @@ app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Pan
 
 ---
 
-<a id="app-learnpanelexampleprojectdirpath"></a>
-
 ### app.learnPanelExampleProjectDirPath
 
 `app.learnPanelExampleProjectDirPath`
@@ -216,8 +196,6 @@ app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tu
 
 ---
 
-<a id="app-metadata"></a>
-
 ### app.metadata
 
 `app.metadata`
@@ -231,8 +209,6 @@ Get applications Metadata object.
 [Metadata object](../general/metadata.md#metadata), read-only.
 
 ---
-
-<a id="app-path"></a>
 
 ### app.path
 
@@ -256,8 +232,6 @@ app.path; // /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
 
 ---
 
-<a id="app-production"></a>
-
 ### app.production
 
 `app.production`
@@ -271,8 +245,6 @@ The currently active production.
 [Production object](../general/production.md#production) if at least 1 production is open, `null` otherwise.
 
 ---
-
-<a id="app-project"></a>
 
 ### app.project
 
@@ -288,8 +260,6 @@ The currently active project.
 
 ---
 
-<a id="app-projectmanager"></a>
-
 ### app.projectManager
 
 `app.projectManager`
@@ -303,8 +273,6 @@ Provides access to project management functions within Premiere Pro.
 [ProjectManager object](../general/projectmanager.md#projectmanager).
 
 ---
-
-<a id="app-projects"></a>
 
 ### app.projects
 
@@ -320,8 +288,6 @@ An array referencing all open projects; `numProjects` contains size.
 
 ---
 
-<a id="app-properties"></a>
-
 ### app.properties
 
 `app.properties`
@@ -335,8 +301,6 @@ The properties object provides methods to access and modify preference values.
 [Properties object](../general/properties.md#properties), read-only;
 
 ---
-
-<a id="app-sourcemonitor"></a>
 
 ### app.sourceMonitor
 
@@ -352,8 +316,6 @@ Provides access to [SourceMonitor object](../general/sourcemonitor.md#sourcemoni
 
 ---
 
-<a id="app-userguid"></a>
-
 ### app.userGuid
 
 `app.userGuid`
@@ -367,8 +329,6 @@ A unique identifier for the currently logged-in Creative Cloud user.
 String; read-only.
 
 ---
-
-<a id="app-version"></a>
 
 ### app.version
 
@@ -394,8 +354,6 @@ app.version; // 14.3.1
 
 ## Methods
 
-<a id="app-enableqe"></a>
-
 ### app.enableQE()
 
 `app.enableQE()`
@@ -414,8 +372,6 @@ Returns true if QE DOM was enabled.
 
 ---
 
-<a id="app-getenableproxies"></a>
-
 ### app.getEnableProxies()
 
 `app.getEnableProxies()`
@@ -433,8 +389,6 @@ None.
 Returns 1 if proxies are enabled, 0 of they are not.
 
 ---
-
-<a id="app-getworkspaces"></a>
 
 ### app.getWorkspaces()
 
@@ -475,8 +429,6 @@ app.getWorkspaces();
 
 ---
 
-<a id="app-isdocument"></a>
-
 ### app.isDocument()
 
 `app.isDocument(path)`
@@ -508,8 +460,6 @@ app.isDocument('~/Desktop/imageFile.mov');    // false
 
 ---
 
-<a id="app-isdocumentopen"></a>
-
 ### app.isDocumentOpen()
 
 `app.isDocumentOpen()`
@@ -527,8 +477,6 @@ None.
 Returns **true** if at least 1 project is open; otherwise **false**.
 
 ---
-
-<a id="app-newproject"></a>
 
 ### app.newProject()
 
@@ -549,8 +497,6 @@ Creates a new .prproj [Project object](../general/project.md#project), at the sp
 Returns **true** if successful.
 
 ---
-
-<a id="app-opendocument"></a>
 
 ### app.openDocument()
 
@@ -576,8 +522,6 @@ Returns **true** if file was successfully opened.
 
 ---
 
-<a id="app-openfcpxml"></a>
-
 ### app.openFCPXML()
 
 `app.openFCPXML(path, projPath)`
@@ -599,8 +543,6 @@ Returns **true** if file was successfully opened as a Premiere Pro [Project obje
 
 ---
 
-<a id="app-quit"></a>
-
 ### app.quit()
 
 `app.quit()`
@@ -618,8 +560,6 @@ None.
 Nothing.
 
 ---
-
-<a id="app-setenableproxies"></a>
 
 ### app.setEnableProxies()
 
@@ -640,8 +580,6 @@ Determines whether proxy usage is currently enabled.
 Returns 1 if proxy enablement was changed.
 
 ---
-
-<a id="app-setextensionpersistent"></a>
 
 ### app.setExtensionPersistent()
 
@@ -675,8 +613,6 @@ app.setExtensionPersistent(extensionID, persistent);
 
 ---
 
-<a id="app-setscratchdiskpath"></a>
-
 ### app.setScratchDiskPath()
 
 `app.setScratchDiskPath(path, scratchDiskType)`
@@ -707,8 +643,6 @@ if (scratchPath && scratchPath.exists) {
 
 ---
 
-<a id="app-setsdkeventmessage"></a>
-
 ### app.setSDKEventMessage()
 
 `app.setSDKEventMessage(message, decorator)`
@@ -729,8 +663,6 @@ Writes a string to Premiere Pro’s Events panel.
 Returns ‘true’ if successful.
 
 ---
-
-<a id="app-setworkspace"></a>
 
 ### app.setWorkspace()
 
@@ -765,8 +697,6 @@ if (app.setWorkspace(workspace)) {
 
 ---
 
-<a id="app-trace"></a>
-
 ### app.trace()
 
 `app.trace()`
@@ -784,8 +714,6 @@ None.
 Returns **true** if trace was added.
 
 ---
-
-<a id="app-getprojectviewids"></a>
 
 ### app.getProjectViewIDs()
 
@@ -815,8 +743,6 @@ if (allViewIDs){
 ```
 
 ---
-
-<a id="app-getprojectfromviewid"></a>
 
 ### app.getProjectFromViewID()
 
@@ -853,8 +779,6 @@ if (allViewIDs){
 ```
 
 ---
-
-<a id="app-getcurrentprojectviewselection"></a>
 
 ### app.getCurrentProjectViewSelection()
 

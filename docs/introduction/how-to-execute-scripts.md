@@ -1,5 +1,3 @@
-<a id="how-to-execute-scripts"></a>
-
 # How to Execute ExtendScript in Premiere Pro
 
 Executing scripts from within CEP panels is the recommended approach.

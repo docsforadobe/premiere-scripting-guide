@@ -1,5 +1,3 @@
-<a id="projectcollection"></a>
-
 # ProjectCollection object
 
 `app.projects`
@@ -14,8 +12,6 @@ The ProjectCollection object represents a collection of [Project objects](../gen
 ---
 
 ## Attributes
-
-<a id="projectcollection-numprojects"></a>
 
 ### ProjectCollection.numProjects
 

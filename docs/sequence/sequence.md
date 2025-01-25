@@ -1,5 +1,3 @@
-<a id="sequence"></a>
-
 # Sequence object
 
 `app.project.sequences[index]`
@@ -11,8 +9,6 @@ The **Sequence** object represents sequences of media, or ‘timelines’, in Pr
 ---
 
 ## Attributes
-
-<a id="sequence-audiodisplayformat"></a>
 
 ### Sequence.audioDisplayFormat
 
@@ -34,8 +30,6 @@ An enumerated value; read/write. One of:
 
 ---
 
-<a id="sequence-audiotracks"></a>
-
 ### Sequence.audioTracks
 
 `app.project.sequences[index].audioTracks`
@@ -50,8 +44,6 @@ An array of audio [Track](track.md#track) objects in the sequence.
 
 ---
 
-<a id="sequence-end"></a>
-
 ### Sequence.end
 
 `app.project.sequences[index].end`
@@ -65,8 +57,6 @@ The time, in **ticks**, of the end of the sequence.
 String; read-only.
 
 ---
-
-<a id="sequence-framesizehorizontal"></a>
 
 ### Sequence.frameSizeHorizontal
 
@@ -84,8 +74,6 @@ Integer; read-only.
 
 ---
 
-<a id="sequence-framesizevertical"></a>
-
 ### Sequence.frameSizeVertical
 
 `app.project.sequences[index].frameSizeVertical`
@@ -101,8 +89,6 @@ Set this attribute with the [Sequence.setSettings()](#sequence-setsettings) meth
 Integer; read-only.
 
 ---
-
-<a id="sequence-id"></a>
 
 ### Sequence.id
 
@@ -121,8 +107,6 @@ In testing, this attribute seems unstable and produces unreliable results. Recom
 
 ---
 
-<a id="sequence-markers"></a>
-
 ### Sequence.markers
 
 `app.project.sequences[index].markers`
@@ -137,8 +121,6 @@ An array of [Marker](../general/marker.md#marker) objects in the sequence.
 
 ---
 
-<a id="sequence-name"></a>
-
 ### Sequence.name
 
 `app.project.sequences[index].name`
@@ -152,8 +134,6 @@ The name of the sequence.
 String; read/write.
 
 ---
-
-<a id="sequence-projectitem"></a>
 
 ### Sequence.projectItem
 
@@ -172,8 +152,6 @@ Not all sequences will have a `projectItem`. There may be sequences in a project
 
 ---
 
-<a id="sequence-sequenceid"></a>
-
 ### Sequence.sequenceID
 
 `app.project.sequences[index].sequenceID`
@@ -188,8 +166,6 @@ String; read-only.
 
 ---
 
-<a id="sequence-timebase"></a>
-
 ### Sequence.timebase
 
 `app.project.sequences[index].timebase`
@@ -203,8 +179,6 @@ The number of **ticks** per frame in the sequence. Converted to seconds, this is
 String; read-only.
 
 ---
-
-<a id="sequence-videodisplayformat"></a>
 
 ### Sequence.videoDisplayFormat
 
@@ -238,8 +212,6 @@ An enumerated value; read/write. One of:
 
 ---
 
-<a id="sequence-videotracks"></a>
-
 ### Sequence.videoTracks
 
 `app.project.sequences[index].videoTracks`
@@ -253,8 +225,6 @@ An array of video [Track](track.md#track) objects in the sequence.
 [TrackCollection object](../collection/trackcollection.md#trackcollection); read-only.
 
 ---
-
-<a id="sequence-zeropoint"></a>
 
 ### Sequence.zeroPoint
 
@@ -273,8 +243,6 @@ String; read-only.
 ---
 
 ## Methods
-
-<a id="sequence-attachcustomproperty"></a>
 
 ### Sequence.attachCustomProperty()
 
@@ -296,8 +264,6 @@ Attaches a custom property, and its value, to the sequence. This property is vis
 Returns a boolean; `true` if successful.
 
 ---
-
-<a id="sequence-autoreframesequence"></a>
 
 ### Sequence.autoReframeSequence()
 
@@ -346,8 +312,6 @@ if (sequence) {
 
 ---
 
-<a id="sequence-clone"></a>
-
 ### Sequence.clone()
 
 `app.project.sequences[index].clone()`
@@ -366,8 +330,6 @@ Returns a boolean; `true` if successful.
 
 ---
 
-<a id="sequence-close"></a>
-
 ### Sequence.close()
 
 `app.project.sequences[index].close()`
@@ -385,8 +347,6 @@ None.
 Returns a boolean; `true` if successful.
 
 ---
-
-<a id="sequence-createcaptiontrack"></a>
 
 ### Sequence.createCaptionTrack()
 
@@ -426,8 +386,6 @@ app.project.activeSequence.createCaptionTrack(projectItem, 0, Sequence.CAPTION_F
 ```
 
 ---
-
-<a id="sequence-createsubsequence"></a>
 
 ### Sequence.createSubsequence()
 
@@ -481,8 +439,6 @@ function nestSelection() {
 
 ---
 
-<a id="sequence-exportasfinalcutproxml"></a>
-
 ### Sequence.exportAsFinalCutProXML()
 
 `app.project.sequences[index].exportAsFinalCutProXML(outputPath)`
@@ -502,8 +458,6 @@ Creates a new FCP XML representation of the sequence and its constituent media.
 Returns a boolean; `true` if successful.
 
 ---
-
-<a id="sequence-exportasmediadirect"></a>
 
 ### Sequence.exportAsMediaDirect()
 
@@ -533,8 +487,6 @@ Returns a boolean; `true` if successful.
 
 ---
 
-<a id="sequence-exportasproject"></a>
-
 ### Sequence.exportAsProject()
 
 `app.project.sequences[index].exportAsProject(outputPath)`
@@ -554,8 +506,6 @@ Creates a new [Project object](../general/project.md#project) containing only th
 Returns a boolean; `true` if successful.
 
 ---
-
-<a id="sequence-getexportfileextension"></a>
 
 ### Sequence.getExportFileExtension()
 
@@ -577,8 +527,6 @@ Returns a string.
 
 ---
 
-<a id="sequence-getinpoint"></a>
-
 ### Sequence.getInPoint()
 
 `app.project.sequences[index].getInPoint()`
@@ -596,8 +544,6 @@ None.
 Returns a string.
 
 ---
-
-<a id="sequence-getinpointastime"></a>
 
 ### Sequence.getInPointAsTime()
 
@@ -617,8 +563,6 @@ Returns a [Time object](../other/time.md#time).
 
 ---
 
-<a id="sequence-getoutpoint"></a>
-
 ### Sequence.getOutPoint()
 
 `app.project.sequences[index].getOutPoint()`
@@ -636,8 +580,6 @@ None.
 Returns a string.
 
 ---
-
-<a id="sequence-getoutpointastime"></a>
 
 ### Sequence.getOutPointAsTime()
 
@@ -657,8 +599,6 @@ Returns a [Time object](../other/time.md#time).
 
 ---
 
-<a id="sequence-getplayerposition"></a>
-
 ### Sequence.getPlayerPosition()
 
 `app.project.sequences[index].getPlayerPosition()`
@@ -677,8 +617,6 @@ Returns a [Time object](../other/time.md#time).
 
 ---
 
-<a id="sequence-getselection"></a>
-
 ### Sequence.getSelection()
 
 `app.project.sequences[index].getSelection()`
@@ -696,8 +634,6 @@ None.
 Returns a [TrackItemCollection object](../collection/trackitemcollection.md#trackitemcollection).
 
 ---
-
-<a id="sequence-getsettings"></a>
 
 ### Sequence.getSettings()
 
@@ -742,8 +678,6 @@ Returns an object; a sequence settings structure.
 
 ---
 
-<a id="sequence-getworkareainpoint"></a>
-
 ### Sequence.getWorkAreaInPoint()
 
 `app.project.sequences[index].getWorkAreaInPoint()`
@@ -761,8 +695,6 @@ None.
 Returns a string.
 
 ---
-
-<a id="sequence-getworkareainpointastime"></a>
 
 ### Sequence.getWorkAreaInPointAsTime()
 
@@ -782,8 +714,6 @@ Returns a [Time object](../other/time.md#time).
 
 ---
 
-<a id="sequence-getworkareaoutpoint"></a>
-
 ### Sequence.getWorkAreaOutPoint()
 
 `app.project.sequences[index].getWorkAreaOutPoint()`
@@ -802,8 +732,6 @@ Returns a string.
 
 ---
 
-<a id="sequence-getworkareaoutpointastime"></a>
-
 ### Sequence.getWorkAreaOutPointAsTime()
 
 `app.project.sequences[index].getWorkAreaOutPointAsTime()`
@@ -821,8 +749,6 @@ None.
 Returns a [Time object](../other/time.md#time).
 
 ---
-
-<a id="sequence-importmgt"></a>
 
 ### Sequence.importMGT()
 
@@ -846,8 +772,6 @@ Imports a MOGRT, or an After Effects Motion Graphics Template, to the specified 
 Returns a [TrackItem object](../item/trackitem.md#trackitem).
 
 ---
-
-<a id="sequence-importmgtfromlibrary"></a>
 
 ### Sequence.importMGTFromLibrary()
 
@@ -873,8 +797,6 @@ Returns a [TrackItem object](../item/trackitem.md#trackitem).
 
 ---
 
-<a id="sequence-insertclip"></a>
-
 ### Sequence.insertClip()
 
 `app.project.sequences[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)`
@@ -898,8 +820,6 @@ Returns a boolean; `true` if successful.
 
 ---
 
-<a id="sequence-isdoneanalyzingforvideoeffects"></a>
-
 ### Sequence.isDoneAnalyzingForVideoEffects()
 
 `app.project.sequences[index].isDoneAnalyzingForVideoEffects()`
@@ -917,8 +837,6 @@ None.
 Returns a boolean.
 
 ---
-
-<a id="sequence-isworkareaenabled"></a>
 
 ### Sequence.isWorkAreaEnabled()
 
@@ -941,8 +859,6 @@ Returns a boolean.
 
 ---
 
-<a id="sequence-linkselection"></a>
-
 ### Sequence.linkSelection()
 
 `app.project.sequences[index].linkSelection()`
@@ -960,8 +876,6 @@ None.
 Returns a boolean; `true` if successful.
 
 ---
-
-<a id="sequence-overwriteclip"></a>
 
 ### Sequence.overwriteClip()
 
@@ -986,8 +900,6 @@ Returns a boolean; `true` if successful.
 
 ---
 
-<a id="sequence-performsceneeditdetectiononselection"></a>
-
 ### Sequence.performSceneEditDetectionOnSelection()
 
 `app.project.sequences[index].performSceneEditDetectionOnSelection(actionDesired, applyCutsToLinkedAudio, sensitivity)`
@@ -1010,8 +922,6 @@ Returns a boolean; `true` if successful.
 
 ---
 
-<a id="sequence-setinpoint"></a>
-
 ### Sequence.setInPoint()
 
 `app.project.sequences[index].setInPoint(time)`
@@ -1031,8 +941,6 @@ Sets a new sequence in point.
 Null.
 
 ---
-
-<a id="sequence-setoutpoint"></a>
 
 ### Sequence.setOutPoint()
 
@@ -1054,8 +962,6 @@ Null.
 
 ---
 
-<a id="sequence-setplayerposition"></a>
-
 ### Sequence.setPlayerPosition()
 
 `app.project.sequences[index].setPlayerPosition(time)`
@@ -1075,8 +981,6 @@ Sets the position of the CTI (Current Time Indicator) in the sequence.
 Returns a boolean; `true` if successful.
 
 ---
-
-<a id="sequence-setsettings"></a>
 
 ### Sequence.setSettings()
 
@@ -1098,8 +1002,6 @@ Returns a boolean; `true` if successful.
 
 ---
 
-<a id="sequence-setworkareainpoint"></a>
-
 ### Sequence.setWorkAreaInPoint()
 
 `app.project.sequences[index].setWorkAreaInPoint(time)`
@@ -1119,8 +1021,6 @@ Sets a new sequence work area in point.
 Returns a boolean; `true` if successful.
 
 ---
-
-<a id="sequence-setworkareaoutpoint"></a>
 
 ### Sequence.setWorkAreaOutPoint()
 
@@ -1142,8 +1042,6 @@ Returns a boolean; `true` if successful.
 
 ---
 
-<a id="sequence-unlinkselection"></a>
-
 ### Sequence.unlinkSelection()
 
 `app.project.sequences[index].unlinkSelection()`
@@ -1161,8 +1059,6 @@ None.
 Returns a boolean; `true` if successful.
 
 ---
-
-<a id="sequence-setzeropoint"></a>
 
 ### Sequence.setZeroPoint()
 

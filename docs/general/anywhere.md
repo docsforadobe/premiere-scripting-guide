@@ -1,5 +1,3 @@
-<a id="anywhere"></a>
-
 # Anywhere object
 
 `app.anywhere`
@@ -17,8 +15,6 @@ None.
 ---
 
 ## Methods
-
-<a id="anywhere-getauthenticationtoken"></a>
 
 ### Anywhere.getAuthenticationToken()
 
@@ -38,8 +34,6 @@ A **String** containing the login token, or **0** if unsuccessful.
 
 ---
 
-<a id="anywhere-getcurrenteditingsessionactivesequenceurl"></a>
-
 ### Anywhere.getCurrentEditingSessionActiveSequenceURL()
 
 `app.anywhere.getCurrentEditingSessionActiveSequenceURL()`
@@ -57,8 +51,6 @@ None.
 Returns a **String** containing the asset’s URL, or **0** if unsuccessful (including if there is no active sequence, or if no editing session is opened).
 
 ---
-
-<a id="anywhere-getcurrenteditingsessionselectionurl"></a>
 
 ### Anywhere.getCurrentEditingSessionSelectionURL()
 
@@ -78,8 +70,6 @@ Returns a **String** containing the asset’s URL, or **0** if unsuccessful (inc
 
 ---
 
-<a id="anywhere-getcurrenteditingsessionurl"></a>
-
 ### Anywhere.getCurrentEditingSessionURL()
 
 `app.anywhere.getCurrentEditingSessionURL()`
@@ -97,8 +87,6 @@ None.
 Returns a **String** containing the production’s URL, or **0** if unsuccessful.
 
 ---
-
-<a id="anywhere-isproductionopen"></a>
 
 ### Anywhere.isProductionOpen()
 
@@ -118,8 +106,6 @@ Returns `true` if a production is open; `false` if not.
 
 ---
 
-<a id="anywhere-listproductions"></a>
-
 ### Anywhere.listProductions()
 
 `app.anywhere.listProductions()`
@@ -137,8 +123,6 @@ None.
 Returns an Array of **Strings** containing the names of avialable productions, or 0 if unsuccessful.
 
 ---
-
-<a id="anywhere-openproduction"></a>
 
 ### Anywhere.openProduction()
 
@@ -159,8 +143,6 @@ Opens the production at the specified URL.
 Returns **0** if successful.
 
 ---
-
-<a id="anywhere-setauthenticationtoken"></a>
 
 ### Anywhere.setAuthenticationToken()
 

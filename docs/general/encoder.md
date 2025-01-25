@@ -1,5 +1,3 @@
-<a id="encoder"></a>
-
 # Encoder object
 
 `app.encoder`
@@ -20,8 +18,6 @@ None.
 ---
 
 ## Methods
-
-<a id="encoder-encodefile"></a>
 
 ### Encoder.encodeFile()
 
@@ -49,8 +45,6 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 
 ---
 
-<a id="encoder-encodeprojectitem"></a>
-
 ### Encoder.encodeProjectItem()
 
 `app.encoder.encodeProjectItem(projectItem, outputPath, presetPath, workArea, removeUponCompletion)`
@@ -74,8 +68,6 @@ Makes Adobe Media Encoder render (optionally, a specified range from) the specif
 Returns a job ID as a **String**, for the render job added to the AME queue, or **0** if unsuccessful.
 
 ---
-
-<a id="encoder-encodesequence"></a>
 
 ### Encoder.encodeSequence()
 
@@ -101,8 +93,6 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 
 ---
 
-<a id="encoder-launchencoder"></a>
-
 ### Encoder.launchEncoder()
 
 `app.encoder.launchEncoder()`
@@ -120,8 +110,6 @@ None.
 Returns **0** if successful.
 
 ---
-
-<a id="encoder-setembeddedxmpenabled"></a>
 
 ### Encoder.setEmbeddedXMPEnabled()
 
@@ -145,8 +133,6 @@ Note: Premiere Pro and Adobe Media Encoder will output sidecar XMP for some file
 
 ---
 
-<a id="encoder-setsidecarxmpenabled"></a>
-
 ### Encoder.setSidecarXMPEnabled()
 
 `app.encoder.setSidecarXMPEnabled(enabled)`
@@ -166,8 +152,6 @@ Determines whether a sidecar file containing XMP metadata, will be output.
 Returns **0** if successful.
 
 ---
-
-<a id="encoder-startbatch"></a>
 
 ### Encoder.startBatch()
 

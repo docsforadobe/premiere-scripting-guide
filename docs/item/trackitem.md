@@ -1,5 +1,3 @@
-<a id="trackitem"></a>
-
 # TrackItem object
 
 `app.project.sequences[index].audioTracks[index].clips[index]`
@@ -288,8 +286,6 @@ Returns `true` if the trackitem is an adjustment layer; `false` if not.
 
 ---
 
-<a id="trackitem-isspeedreversed"></a>
-
 ### TrackItem.isSpeedReversed()mm
 
 `app.project.sequences[index].audioTracks[index].clips[index].isSpeedReversed()`
@@ -401,8 +397,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="trackitem-disabled"></a>
-
 ### TrackItem.disabled
 
 `app.project.sequences[index].audioTracks[index].clips[index].disabled`
@@ -425,8 +419,6 @@ Sets the disabled state of the trackItem. Read/Write.
 Returns **0** if successful.
 
 ---
-
-<a id="trackitem-move"></a>
 
 ### TrackItem.move()
 

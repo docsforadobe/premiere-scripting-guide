@@ -1,5 +1,3 @@
-<a id="marker"></a>
-
 # Marker object
 
 `app.project.activeSequence.markers.getFirstMarker()`
@@ -14,8 +12,6 @@ Both [Project items](../item/projectitem.md#projectitem) and [sequences](../sequ
 ---
 
 ## Attributes
-
-<a id="marker-comments"></a>
 
 ### Marker.comments
 
@@ -34,8 +30,6 @@ String; read/write.
 
 ---
 
-<a id="marker-end"></a>
-
 ### Marker.end
 
 `app.project.activeSequence.markers.getFirstMarker().end`
@@ -52,8 +46,6 @@ A [Time object](../other/time.md#time) containing the value of the ending of the
 [Time object](../other/time.md#time); read/write.
 
 ---
-
-<a id="marker-guid"></a>
 
 ### Marker.guid
 
@@ -72,8 +64,6 @@ String; read-only.
 
 ---
 
-<a id="marker-name"></a>
-
 ### Marker.name
 
 `app.project.activeSequence.markers.getFirstMarker().name`
@@ -91,8 +81,6 @@ String; read/write.
 
 ---
 
-<a id="marker-start"></a>
-
 ### Marker.start
 
 `app.project.activeSequence.markers.getFirstMarker().start`
@@ -109,8 +97,6 @@ A [Time object](../other/time.md#time) containing the value of the beginning of 
 [Time object](../other/time.md#time); read/write.
 
 ---
-
-<a id="marker-type"></a>
 
 ### Marker.type
 
@@ -130,8 +116,6 @@ String; read-only.
 ---
 
 ## Methods
-
-<a id="marker-getcolorbyindex"></a>
 
 ### Marker.getColorByIndex()
 
@@ -159,8 +143,6 @@ Returns the color index as an `Integer`.
 
 ---
 
-<a id="marker-getweblinkframetarget"></a>
-
 ### Marker.getWebLinkFrameTarget()
 
 `app.project.activeSequence.markers.getFirstMarker().getWebLinkFrameTarget()`
@@ -182,8 +164,6 @@ Returns a `String` containing the frame target, or **0** if unsuccessful.
 
 ---
 
-<a id="marker-getweblinkurl"></a>
-
 ### Marker.getWebLinkURL()
 
 `app.project.activeSequence.markers.getFirstMarker().getWebLinkURL()`
@@ -204,8 +184,6 @@ None.
 Returns a `String` containing the URL, or **0** if unsuccessful.
 
 ---
-
-<a id="marker-setcolorbyindex"></a>
 
 ### Marker.setColorByIndex()
 
@@ -243,8 +221,6 @@ Returns `undefined`.
 
 ---
 
-<a id="marker-settypeaschapter"></a>
-
 ### Marker.setTypeAsChapter()
 
 `app.project.activeSequence.markers.getFirstMarker().setTypeAsChapter()`
@@ -265,8 +241,6 @@ None.
 Returns **0** if successful.
 
 ---
-
-<a id="marker-settypeascomment"></a>
 
 ### Marker.setTypeAsComment()
 
@@ -289,8 +263,6 @@ Returns **0** if successful.
 
 ---
 
-<a id="marker-settypeassegmentation"></a>
-
 ### Marker.setTypeAsSegmentation()
 
 `app.project.activeSequence.markers.getFirstMarker().setTypeAsSegmentation()`
@@ -311,8 +283,6 @@ None.
 Returns **0** if successful.
 
 ---
-
-<a id="marker-settypeasweblink"></a>
 
 ### Marker.setTypeAsWebLink()
 

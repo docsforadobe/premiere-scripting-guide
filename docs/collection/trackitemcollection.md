@@ -1,5 +1,3 @@
-<a id="trackitemcollection"></a>
-
 # TrackItemCollection object
 
 `app.project.sequences[index].audioTracks[index].clips`
@@ -14,8 +12,6 @@ The TrackItemCollection object represents a collection of [TrackItem objects](..
 ---
 
 ## Attributes
-
-<a id="trackitemcollection-numitems"></a>
 
 ### TrackItemCollection.numItems
 

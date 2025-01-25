@@ -1,5 +1,3 @@
-<a id="audiochannelmapping"></a>
-
 # AudioChannelMapping object
 
 `app.project.rootItem.children[index].getAudioChannelMapping`
@@ -12,8 +10,6 @@ The AudioChannelMapping object defines the audio channel mapping applied to a gi
 
 ## Attributes
 
-<a id="audiochannelmapping-audiochannelstype"></a>
-
 ### AudioChannelMapping.audioChannelsType
 
 `app.project.rootItem.children[index].getAudioChannelMapping.audioChannelsType`
@@ -23,8 +19,6 @@ The AudioChannelMapping object defines the audio channel mapping applied to a gi
 The type of the audio contained in this channel. Will be 0, 1 or 2, corresponding to `AUDIOCHANNELTYPE_Mono`, `AUDIOCHANNELTYPE_Stereo`, or `AUDIOCHANNELTYPE_51`.
 
 ---
-
-<a id="audiochannelmapping-audioclipsnumber"></a>
 
 ### AudioChannelMapping.audioClipsNumber
 
@@ -37,8 +31,6 @@ The number of audio clips associated with this audio channel.
 ---
 
 ## Methods
-
-<a id="audiochannelmapping-setmappingforchannel"></a>
 
 ### AudioChannelMapping.setMappingForChannel()
 

@@ -1,5 +1,3 @@
-<a id="trackcollection"></a>
-
 # TrackCollection object
 
 `app.project.sequences[index].audioTracks`
@@ -14,8 +12,6 @@ The TrackCollection object represents a collection of [Track objects](../sequenc
 ---
 
 ## Attributes
-
-<a id="trackcollection-numtracks"></a>
 
 ### TrackCollection.numTracks
 
