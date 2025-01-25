@@ -462,7 +462,7 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 |  Argument   |                     Type                     |                             Description                             |
 | ----------- | -------------------------------------------- | ------------------------------------------------------------------- |
 | `path`      | String                                       | A path to the After Effects .aep project file.                      |
-| `compNames` | `Array`                                      | Names of compositions within the specified project, to be imported. |
+| `compNames` | Array of strings                             | Names of compositions within the specified project, to be imported. |
 | `targetBin` | [ProjectItem object](../item/projectitem.md) | Optional. The destination bin for this import.                      |
 
 #### Returns
@@ -504,7 +504,7 @@ Imports media from the specified file paths.
 
 |         Argument         |                     Type                     |                                  Description                                   |
 | ------------------------ | -------------------------------------------- | ------------------------------------------------------------------------------ |
-| `filePaths`              | Array                                        | An array of the file paths to be imported.                                     |
+| `filePaths`              | Array of strings                             | An array of the file paths to be imported.                                     |
 | `suppressUI`             | Boolean                                      | Whether warning dialogs should be suppressed.                                  |
 | `targetBin`              | [ProjectItem object](../item/projectitem.md) | The bin into which the files should be imported.                               |
 | `importAsNumberedStills` | Boolean                                      | Whether the file paths should be interpreted as a sequence of numbered stills. |

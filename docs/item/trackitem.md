@@ -7,7 +7,7 @@
 
 #### Description
 
-The **trackItem** object represents an item on a video or audio track, within a [Sequence object](../sequence/sequence.md).
+The TrackItem object represents an item on a video or audio track, within a [Sequence object](../sequence/sequence.md).
 
 ---
 
@@ -56,7 +56,10 @@ The duration of the trackItem.
 
 #### Description
 
-The visible end time of the trackItem in the sequence, relative to the beginning of its corresponding sequence (NOT the sequence zero point). Note: This may differ from the trackItem's out point, which is relative to the source.
+The visible end time of the trackItem in the sequence, relative to the beginning of its corresponding sequence (NOT the sequence zero point).
+
+!!! note
+    This may differ from the trackItem's out point, which is relative to the source.
 
 #### Type
 
@@ -158,7 +161,7 @@ String.
 
 #### Description
 
-The out point set on the source for this trackItem instance, relative to the beginning of the source.
+The out point set on the source for this TrackItem instance, relative to the beginning of the source.
 
 #### Type
 
@@ -227,12 +230,13 @@ Number, **1** means video, **2** means audio.
 <br/>
 
 #### Description
+
 Adds an After Effects Motion Graphics Template - a Mogrt - to the selected track at the specified time.
 
 #### Parameters
 
-| Argument         | Type      | Description                                                                             |
-|------------------|-----------|-----------------------------------------------------------------------------------------|
+|     Argument     |  Type   |                                       Description                                       |
+| ---------------- | ------- | --------------------------------------------------------------------------------------- |
 | `mogrtPath`      | String  | Full path to a valid .mogrt, created in After Effects                                   |
 | `targetTime`     | String  | The time at which to insert the .mogrt, in ticks                                        |
 | `vidTrackOffset` | Integer | The offset from 0 (the first available track), on which to insert video from the .mogrt |
@@ -253,7 +257,7 @@ A Component object representing the parameters of the .mogrt, which the creator 
 
 #### Description
 
-Returns the speed multiplier applied to the `trackItem`.
+Returns the speed multiplier applied to the TrackItem.
 
 #### Parameters
 
@@ -261,7 +265,7 @@ None.
 
 #### Returns
 
-Returns the speed multiplier applied to the `trackItem`, as a Float. No speed adjustment = `1`.
+Returns the speed multiplier applied to the TrackItem, as a Float. No speed adjustment = `1`.
 
 ---
 
@@ -274,7 +278,7 @@ Returns the speed multiplier applied to the `trackItem`, as a Float. No speed ad
 
 #### Description
 
-Returns wheter the `trackItem` is an adjustment layer.
+Returns wheter the TrackItem is an adjustment layer.
 
 #### Parameters
 
@@ -303,7 +307,7 @@ None.
 
 #### Returns
 
-Returns **1** if `trackItem` is reversed; `0` if not.
+Returns `1` if TrackItem is reversed; `0` if not.
 
 ---
 
@@ -341,8 +345,8 @@ Sets the selection state of the trackItem.
 
 #### Parameters
 
-| Argument   | Type      | Description                                                                   |
-|------------|-----------|-------------------------------------------------------------------------------|
+|  Argument  |  Type   |                                  Description                                  |
+| ---------- | ------- | ----------------------------------------------------------------------------- |
 | `state`    | Integer | If `1`, the track item will be selected; if `0`, it will be deselected.       |
 | `updateUI` | Integer | If `1`, the Premiere Pro UI will be updated after this function call is made. |
 
@@ -386,8 +390,8 @@ Sets the selection state of the trackItem.
 
 #### Parameters
 
-| Argument         | Type      | Description                                                                                                       |
-|------------------|-----------|-------------------------------------------------------------------------------------------------------------------|
+|     Argument     |  Type   |                                                    Description                                                    |
+| ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
 | `inRipple`       | Boolean | If `1`, later track items will be moved earlier, to fill the gap; if `0`, later track items will remain in place. |
 | `inAlignToVideo` | Boolean | If `1`, Premiere Pro will align moved track items to the start of the nearest video frame.                        |
 
@@ -406,13 +410,13 @@ Returns `0` if successful.
 
 #### Description
 
-Sets the disabled state of the trackItem. Read/Write.
+Sets the disabled state of the TrackItem. Read/Write.
 
 #### Parameters
 
-| Argument          | Type      | Description                                                                        |
-|-------------------|-----------|------------------------------------------------------------------------------------|
-| `newDisableState` | Boolean | If `true`, this trackItem will be disabled; if `false`, trackItem will be enabled. |
+|     Argument      |  Type   |                                    Description                                     |
+| ----------------- | ------- | ---------------------------------------------------------------------------------- |
+| `newDisableState` | Boolean | If `true`, this TrackItem will be disabled; if `false`, TrackItem will be enabled. |
 
 #### Returns
 
@@ -433,9 +437,9 @@ Moves the inPoint of the track item to a new time, by shifting it by a number of
 
 #### Parameters
 
-| Argument     | Type     | Description                                                                                   |
-|--------------|----------|-----------------------------------------------------------------------------------------------|
-| `newInPoint` | `Number` | A time object that represent the amount of time, in seconds, to shift the track item's start. |
+|   Argument   |              Type               |                                          Description                                          |
+| ------------ | ------------------------------- | --------------------------------------------------------------------------------------------- |
+| `newInPoint` | [Time object](../other/time.md) | A Time object that represent the amount of time, in seconds, to shift the track item's start. |
 
 #### Returns
 
