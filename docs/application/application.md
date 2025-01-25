@@ -388,7 +388,7 @@ None.
 
 #### Returns
 
-Returns 1 if proxies are enabled, 0 of they are not.
+Returns `1` if proxies are enabled, `0` if they are not.
 
 ---
 

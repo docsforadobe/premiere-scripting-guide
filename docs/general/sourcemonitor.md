@@ -30,7 +30,7 @@ None.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -48,7 +48,7 @@ None.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -124,7 +124,7 @@ Open a project item in the Source monitor.
 
 #### Returns
 
-Returns 0 if successful.
+Returns `0` if successful.
 
 ---
 
@@ -144,4 +144,4 @@ Begins playing back the Source monitor, at the specified playback speed.
 
 #### Returns
 
-Returns 0 if successful.
+Returns `0` if successful.

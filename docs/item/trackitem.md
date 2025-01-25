@@ -303,7 +303,7 @@ None.
 
 #### Returns
 
-Returns **1** if `trackItem` is reversed; **0** if not.
+Returns **1** if `trackItem` is reversed; `0` if not.
 
 ---
 
@@ -348,7 +348,7 @@ Sets the selection state of the trackItem.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -369,7 +369,7 @@ None.
 
 #### Returns
 
-Returns the match name as a **String** if successful.
+Returns the match name as a String if successful.
 
 ---
 
@@ -393,7 +393,7 @@ Sets the selection state of the trackItem.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -416,7 +416,7 @@ Sets the disabled state of the trackItem. Read/Write.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -439,4 +439,4 @@ Moves the inPoint of the track item to a new time, by shifting it by a number of
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.

@@ -44,8 +44,8 @@ Checks whether a given property exists in preferences.
 
 #### Parameters
 
-| Argument   | Type     | Description         |
-|------------|----------|---------------------|
+|  Argument  |  Type  |     Description     |
+| ---------- | ------ | ------------------- |
 | `property` | String | A property to check |
 
 #### Returns
@@ -78,8 +78,8 @@ Returns a property value.
 
 #### Parameters
 
-| Argument   | Type     | Description                   |
-|------------|----------|-------------------------------|
+|  Argument  |  Type  |          Description          |
+| ---------- | ------ | ----------------------------- |
 | `property` | String | A property to get a value for |
 
 #### Returns
@@ -113,8 +113,8 @@ Checks whether a given property can be overwritten by the user. Returns `false` 
 
 #### Parameters
 
-| Argument   | Type     | Description          |
-|------------|----------|----------------------|
+|  Argument  |  Type  |     Description      |
+| ---------- | ------ | -------------------- |
 | `property` | String | A property to check. |
 
 #### Returns
@@ -129,12 +129,15 @@ Boolean.
 
 #### Description
 
-Set property value. NOTE: For any file paths to be used in Premiere Pro's preferences, a trailing path seperator is mandatory.
+Set property value.
+
+!!! note
+    For any file paths to be used in Premiere Pro's preferences, a trailing path seperator is mandatory.
 
 #### Parameters
 
-| Argument           | Type      | Description                                      |
-|--------------------|-----------|--------------------------------------------------|
+|      Argument      |  Type   |                   Description                    |
+| ------------------ | ------- | ------------------------------------------------ |
 | `property`         | String  | A property to create                             |
 | `value`            | Any     | A value for a property                           |
 | `persistent`       | Boolean | Whether if should be persistent between sessions |
@@ -142,7 +145,7 @@ Set property value. NOTE: For any file paths to be used in Premiere Pro's prefer
 
 #### Returns
 
-`null`.
+`null`
 
 #### Example
 

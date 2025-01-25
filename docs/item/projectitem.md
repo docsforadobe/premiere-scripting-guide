@@ -179,7 +179,7 @@ Attaches the media at `newMediaPath` to the project item, as either hi-res or pr
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -236,7 +236,7 @@ Updates the project item to point to a new media path.
 
 #### Returns
 
-Returns **0** if replacement was successful.
+Returns `0` if replacement was successful.
 
 ---
 
@@ -274,7 +274,7 @@ Creates an empty bin, within the project item. Only works within bins.
 
 #### Returns
 
-Returns a project item representing the new bin if successful, or **0** if unsuccessful.
+Returns a project item representing the new bin if successful, or `0` if unsuccessful.
 
 ---
 
@@ -338,7 +338,7 @@ None.
 
 #### Returns
 
-Returns **0** if deletion was successful.
+Returns `0` if deletion was successful.
 
 ---
 
@@ -359,7 +359,7 @@ Returns an array of project items, all of which reference the same media path.
 
 #### Returns
 
-Returns an array of project items, or **0** if no project items matching the `matchPath` were found.
+Returns an array of project items, or `0` if no project items matching the `matchPath` were found.
 
 ---
 
@@ -667,7 +667,7 @@ None.
 
 #### Returns
 
-Returns the path (as **String**) to the proxy media associated with the proxy item, or **0** if none is found.
+Returns the path (as String) to the proxy media associated with the proxy item, or `0` if none is found.
 
 ---
 
@@ -793,7 +793,7 @@ None.
 
 #### Returns
 
-Returns **0** if move was successful.
+Returns `0` if move was successful.
 
 ---
 
@@ -811,7 +811,7 @@ None.
 
 #### Returns
 
-An array of markers associated with the project item, or **0** if there are no markers.
+An array of markers associated with the project item, or `0` if there are no markers.
 
 ---
 
@@ -831,7 +831,7 @@ Changes name of bin. Only works on project items which are bins.
 
 #### Returns
 
-Returns **0** if renaming bin was successful.
+Returns `0` if renaming bin was successful.
 
 ---
 
@@ -849,7 +849,7 @@ None.
 
 #### Returns
 
-Returns **0** if the project item has successfully been made the target, for subsequent imports.
+Returns `0` if the project item has successfully been made the target, for subsequent imports.
 
 ---
 
@@ -869,7 +869,7 @@ Sets the project item's color label.
 
 #### Returns
 
-0 if successful.
+`0` if successful.
 
 ---
 
@@ -969,7 +969,7 @@ Sets the frame rate of the project item.
 
 #### Returns
 
-Returns **0** if the frame rate has successfully been changed.
+Returns `0` if the frame rate has successfully been changed.
 
 ---
 
@@ -990,7 +990,7 @@ Sets the pixel aspect ratio for the project item.
 
 #### Returns
 
-Returns **0** if the aspect ratio has successfully been changed.
+Returns `0` if the aspect ratio has successfully been changed.
 
 ---
 
@@ -1011,7 +1011,7 @@ Sets the private project metadata associated with the project item.
 
 #### Returns
 
-Returns 0 if update was successful.
+Returns `0` if update was successful.
 
 ---
 
@@ -1069,7 +1069,7 @@ Sets the XMP metadata associated with the project item.
 
 #### Returns
 
-Returns 0 if update was successful.
+Returns `0` if update was successful.
 
 ---
 

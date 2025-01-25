@@ -4,7 +4,7 @@
 
 #### Description
 
-The **anywhere** object represents any Adobe Anywhere or Team Projects servers available.
+The `Anywhere` object represents any Adobe Anywhere or Team Projects servers available.
 
 ---
 
@@ -30,7 +30,7 @@ None.
 
 #### Returns
 
-A **String** containing the login token, or **0** if unsuccessful.
+A String containing the login token, or `0` if unsuccessful.
 
 ---
 
@@ -48,7 +48,7 @@ None.
 
 #### Returns
 
-Returns a **String** containing the asset's URL, or **0** if unsuccessful (including if there is no active sequence, or if no editing session is opened).
+Returns a String containing the asset's URL, or `0` if unsuccessful (including if there is no active sequence, or if no editing session is opened).
 
 ---
 
@@ -66,7 +66,7 @@ None.
 
 #### Returns
 
-Returns a **String** containing the asset's URL, or **0** if unsuccessful (including if more or fewre than one item is selected).
+Returns a String containing the asset's URL, or `0` if unsuccessful (including if more or fewre than one item is selected).
 
 ---
 
@@ -84,7 +84,7 @@ None.
 
 #### Returns
 
-Returns a **String** containing the production's URL, or **0** if unsuccessful.
+Returns a String containing the production's URL, or `0` if unsuccessful.
 
 ---
 
@@ -120,7 +120,7 @@ None.
 
 #### Returns
 
-Returns an Array of **Strings** containing the names of avialable productions, or 0 if unsuccessful.
+Returns an Array of Strings containing the names of avialable productions, or `0` if unsuccessful.
 
 ---
 
@@ -134,13 +134,13 @@ Opens the production at the specified URL.
 
 #### Parameters
 
-| Argument        | Type     | Description                        |
-|-----------------|----------|------------------------------------|
+|    Argument     |  Type  |            Description             |
+| --------------- | ------ | ---------------------------------- |
 | `productionURL` | String | The url of the production to open. |
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -154,11 +154,11 @@ Logs the specified email address into the server, using the provided token.
 
 #### Parameters
 
-| Argument       | Type     | Description                   |
-|----------------|----------|-------------------------------|
+|    Argument    |  Type  |          Description          |
+| -------------- | ------ | ----------------------------- |
 | `token`        | String | An authorization token.       |
 | `emailAddress` | String | The associated email address. |
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.

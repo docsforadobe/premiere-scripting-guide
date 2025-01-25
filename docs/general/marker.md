@@ -7,7 +7,7 @@
 
 #### Description
 
-Both [Project items](../item/projectitem.md) and [sequences](../sequence/sequence.md) have associated **marker** objects, which represent their associated markers.
+Both [Project items](../item/projectitem.md) and [sequences](../sequence/sequence.md) have associated Marker objects, which represent their associated markers.
 
 ---
 
@@ -107,7 +107,15 @@ A [Time object](../other/time.md) containing the value of the beginning of the m
 
 #### Description
 
-The type of marker; either "Comment", "Chapter", "Segmentation", or "WebLink". Note: Premiere Pro can import some marker types, which cannot be created from within Premiere Pro.
+The type of marker, one of:
+
+- `"Comment"`
+- `"Chapter"`
+- `"Segmentation"`
+- `"WebLink"`
+
+!!! note
+    Premiere Pro can import some marker types which cannot be created from within Premiere Pro.
 
 #### Type
 
@@ -160,7 +168,7 @@ None.
 
 #### Returns
 
-Returns a String containing the frame target, or **0** if unsuccessful.
+Returns a String containing the frame target, or `0` if unsuccessful.
 
 ---
 
@@ -181,7 +189,7 @@ None.
 
 #### Returns
 
-Returns a String containing the URL, or **0** if unsuccessful.
+Returns a String containing the URL, or `0` if unsuccessful.
 
 ---
 
@@ -197,16 +205,16 @@ Returns a String containing the URL, or **0** if unsuccessful.
 
 #### Description
 
-Sets the marker color by index. Color indexies listed below.
+Sets the marker color by index. Color indices listed below.
 
-* 0 = Green
-* 1 = Red
-* 2 = Purple
-* 3 = Orange
-* 4 = Yellow
-* 5 = White
-* 6 = Blue
-* 7 = Cyan
+- `0` = Green
+- `1` = Red
+- `2` = Purple
+- `3` = Orange
+- `4` = Yellow
+- `5` = White
+- `6` = Blue
+- `7` = Cyan
 
 #### Parameters
 
@@ -238,7 +246,7 @@ None.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -259,7 +267,7 @@ None.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -280,7 +288,7 @@ None.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -301,4 +309,4 @@ None.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.

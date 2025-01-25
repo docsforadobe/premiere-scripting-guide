@@ -1,6 +1,6 @@
 # Time object
 
-`myTime = new Time();`
+`myTime = new Time()`
 
 #### Description
 

@@ -64,8 +64,8 @@ Copies a project from some other location, into the Production directory.
 
 #### Parameters
 
-| Argument          | Type     | Description                           |
-|-------------------|----------|---------------------------------------|
+|     Argument      |  Type  |              Description              |
+| ----------------- | ------ | ------------------------------------- |
 | `srcProjectPath`  | String | A path to the source project.         |
 | `destProjectPath` | String | A destination path for added project. |
 
@@ -103,9 +103,9 @@ Returns the lock state of a single project within the Production.
 
 #### Parameters
 
-| Argument   | Type             | Description   |
-|------------|------------------|---------------|
-| `project`  | `Project object` | The project   |
+| Argument  |              Type              | Description |
+| --------- | ------------------------------ | ----------- |
+| `project` | [Project object](./project.md) | The project |
 
 #### Returns
 
@@ -123,8 +123,8 @@ Moves the specified path ("bin") or .prproj into the Production's Trash folder.
 
 #### Parameters
 
-| Argument              | Type      | Description                                  |
-|-----------------------|-----------|----------------------------------------------|
+|       Argument        |  Type   |                 Description                  |
+| --------------------- | ------- | -------------------------------------------- |
 | `projectOrFolderPath` | String  | A path to the source project.                |
 | `suppressUI`          | Boolean | Whether to suppress any resultant dialogues. |
 | `saveProject`         | Boolean | Whether to save the project(s) first.        |
@@ -145,10 +145,10 @@ Sets the lock state of the specified project within the Production.
 
 #### Parameters
 
-| Argument   | Type             | Description                              |
-|------------|------------------|------------------------------------------|
-| `project`  | `Project object` | The project                              |
-| `locked`   | Boolean        | `True` for locked, `false` for unlocked. |
+| Argument  |       Type       |               Description                |
+| --------- | ---------------- | ---------------------------------------- |
+| `project` | `Project object` | The project                              |
+| `locked`  | Boolean          | `True` for locked, `false` for unlocked. |
 
 #### Returns
 

@@ -32,10 +32,9 @@ Array; read/write.
 
 The specified setting for clip transcode. Value will be one of the following:
 
-| `CLIP_TRANSCODE_MATCH_PRESET`                                   | Transcode using the specified preset.   |
-|-----------------------------------------------------------------|-----------------------------------------|
-| `CLIP_TRANSCODE_MATCH_CLIPS`                                    | Match the clips                         |
-| `CLIP_TRANSCODE_MATCH_SEQUENCE` | Must be one of the following: |                                         |
+- `CLIP_TRANSCODE_MATCH_PRESET` - Transcode using the specified preset.
+- `CLIP_TRANSCODE_MATCH_CLIPS` - Match the clips
+- `CLIP_TRANSCODE_MATCH_SEQUENCE` - Match the sequence
 
 #### Type
 
@@ -51,9 +50,8 @@ String; read/write.
 
 The specified setting for clip transfer. Value will be one of the following:
 
-| `CLIP_TRANSFER_COPY`      | Copy entire source media.           |
-|---------------------------|-------------------------------------|
-| `CLIP_TRANSFER_TRANSCODE` | Transcode to default output format. |
+- `CLIP_TRANSFER_COPY`      - Copy entire source media.
+- `CLIP_TRANSFER_TRANSCODE` - Transcode to default output format.
 
 ---
 

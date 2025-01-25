@@ -190,4 +190,4 @@ Sets the mute state, of the track.
 
 #### Returns
 
-Returns 0 if successful.
+Returns `0` if successful.

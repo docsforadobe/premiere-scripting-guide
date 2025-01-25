@@ -59,7 +59,7 @@ Adds a keyframe to the component parameter stream, at the specified time. Note: 
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -127,7 +127,7 @@ Returns the keyframe temporally subsequent to the provided `timeToCheck`. Note: 
 
 #### Returns
 
-Returns a **Time** value, indicating when the closest keyframe is, or **0** if there is no available subsequent keyframe.
+Returns a **Time** value, indicating when the closest keyframe is, or `0` if there is no available subsequent keyframe.
 
 ---
 
@@ -150,7 +150,7 @@ Returns the keyframe temporally previous to the provided `timeToCheck`. Note: Th
 
 #### Returns
 
-Returns a **Time** value, indicating when the closest keyframe is, or **0** if there is no available previous keyframe.
+Returns a **Time** value, indicating when the closest keyframe is, or `0` if there is no available previous keyframe.
 
 ---
 
@@ -171,7 +171,7 @@ None.
 
 #### Returns
 
-Returns a **Color** containing the values found in the component parameter stream, or **0** if unsuccessful.
+Returns a **Color** containing the values found in the component parameter stream, or `0` if unsuccessful.
 
 ---
 
@@ -192,7 +192,7 @@ None.
 
 #### Returns
 
-Returns an **Array** of **Time** values, indicating at what time each keyframe occurs, or **0** if no keyframes are available.
+Returns an **Array** of **Time** values, indicating at what time each keyframe occurs, or `0` if no keyframes are available.
 
 ---
 
@@ -236,7 +236,7 @@ Retrieves the value of the component parameter stream, at the specified keyframe
 
 #### Returns
 
-Returns the value of the component parameter stream at `time`, or **0** if unsuccessful.
+Returns the value of the component parameter stream at `time`, or `0` if unsuccessful.
 
 ---
 
@@ -259,7 +259,7 @@ Retrieves the value of the component parameter stream, at the specified time. If
 
 #### Returns
 
-Returns the value of the component parameter stream at `time`, or **0** if unsuccessful.
+Returns the value of the component parameter stream at `time`, or `0` if unsuccessful.
 
 ---
 
@@ -303,7 +303,7 @@ Removes a keyframe on the component parameter stream, at the specified time. Not
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -327,7 +327,7 @@ Removes all keyframes from the component parameter stream, between the specified
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -354,7 +354,7 @@ Sets the values within a component parameter stream, representing a Color.
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -374,12 +374,12 @@ Specifies the interpolation type to be assigned to the keyframe, at the specifie
 | Argument            | Type                                 | Description                                                                                                                                                                                                                                                                                                                                                                     |
 |---------------------|--------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `time`              | [Time object](../other/time.md) | A time  of keyframe to modify.                                                                                                                                                                                                                                                                                                                                                  |
-| `interpolationType` | `type`                               | Must be one of the following:<br/><br/>- 0 `KF_Interp_Mode_Linear`<br/>- 1 `kfInterpMode_EaseIn_Obsolete`<br/>- 2 `kfInterpMode_EaseOut_Obsolete`<br/>- 3 `kfInterpMode_EaseInEaseOut_Obsolete`<br/>- 4 `KF_Interp_Mode_Hold`<br/>- 5 `KF_Interp_Mode_Bezier`<br/>- 6 `KF_Interp_Mode_Time`<br/>- 7 `kfInterpMode_TimeTransitionStart`<br/>- 8 `kfInterpMode_TimeTransitionEnd` |
+| `interpolationType` | `type`                               | Must be one of the following:<br/><br/>- `0` - `KF_Interp_Mode_Linear`<br/>- `1` - `kfInterpMode_EaseIn_Obsolete`<br/>- `2` - `kfInterpMode_EaseOut_Obsolete`<br/>- `3` - `kfInterpMode_EaseInEaseOut_Obsolete`<br/>- `4` - `KF_Interp_Mode_Hold`<br/>- `5` - `KF_Interp_Mode_Bezier`<br/>- `6` - `KF_Interp_Mode_Time`<br/>- `7` - `kfInterpMode_TimeTransitionStart`<br/>- `8` - `kfInterpMode_TimeTransitionEnd` |
 | `updateUI`          | Boolean                            | Whether to update UI afterward.                                                                                                                                                                                                                                                                                                                                                 |
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -402,7 +402,7 @@ Sets whether the component parameter varies, over time. Note: This can only be s
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -426,7 +426,7 @@ Sets the value of the component parameter stream. Note: This can only work on pa
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
 
 ---
 
@@ -451,4 +451,4 @@ Sets the value of the component parameter stream, at the specified keyframe time
 
 #### Returns
 
-Returns **0** if successful.
+Returns `0` if successful.
