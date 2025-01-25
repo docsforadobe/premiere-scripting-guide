@@ -143,7 +143,7 @@ None.
 
 #### Returns
 
-Returns **true** if track is currently muted; **false** if not.
+Returns `true` if track is currently muted; `false` if not.
 
 ---
 

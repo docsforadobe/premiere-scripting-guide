@@ -189,7 +189,7 @@ Returns **0** if successful.
 
 #### Description
 
-Returns **true** if Premiere Pro can change the path, associated with this project item; otherwise, returns **false**.
+Returns `true` if Premiere Pro can change the path, associated with this project item; otherwise, returns `false`.
 
 #### Parameters
 
@@ -197,7 +197,7 @@ None.
 
 #### Returns
 
-Boolean; **true** if media can be replaced, **false** if not.
+Boolean; `true` if media can be replaced, `false` if not.
 
 ---
 
@@ -215,7 +215,7 @@ None.
 
 #### Returns
 
-Returns **true** if the project item permits a proxy to be attached; **false** if not.
+Returns `true` if the project item permits a proxy to be attached; `false` if not.
 
 ---
 
@@ -703,7 +703,7 @@ None.
 
 #### Returns
 
-Returns **true** if the project item has a proxy attached; **false** if not.
+Returns `true` if the project item has a proxy attached; `false` if not.
 
 ---
 

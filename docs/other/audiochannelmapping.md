@@ -49,4 +49,4 @@ Maps a source channel to the specified channel index.
 
 #### Returns
 
-Returns **true** if successful, **false** if that mapping is unsupported.
+Returns `true` if successful, `false` if that mapping is unsupported.

@@ -71,7 +71,7 @@ Copies a project from some other location, into the Production directory.
 
 #### Returns
 
-Returns **true** if successful.
+Returns `true` if successful.
 
 ---
 
@@ -89,7 +89,7 @@ None.
 
 #### Returns
 
-Returns **true** if successful.
+Returns `true` if successful.
 
 ---
 
@@ -109,7 +109,7 @@ Returns the lock state of a single project within the Production.
 
 #### Returns
 
-Returns **true** if the Project is locked, **false** if the Project is unlocked.
+Returns `true` if the Project is locked, `false` if the Project is unlocked.
 
 ---
 
@@ -131,7 +131,7 @@ Moves the specified path ("bin") or .prproj into the Production's Trash folder.
 
 #### Returns
 
-Returns **true** if successful.
+Returns `true` if successful.
 
 ---
 
@@ -152,4 +152,4 @@ Sets the lock state of the specified project within the Production.
 
 #### Returns
 
-Returns **true** if successful.
+Returns `true` if successful.

@@ -150,7 +150,7 @@ Adds a new field of the specified type to Premiere Pro's private project metadat
 
 #### Returns
 
-Returns **true** if successful, **undefined** if unsuccessful.
+Returns `true` if successful, **undefined** if unsuccessful.
 
 ---
 
@@ -511,7 +511,7 @@ Imports media from the specified file paths.
 
 #### Returns
 
-Returns **true** if successful, **false** if not.
+Returns `true` if successful, `false` if not.
 
 ---
 
@@ -550,7 +550,7 @@ None.
 
 #### Returns
 
-Returns  **true** if copying is enabled; **false** if not.
+Returns  `true` if copying is enabled; `false` if not.
 
 ---
 
@@ -617,7 +617,7 @@ Makes the [Sequence object](../sequence/sequence.md) with the provided sequence 
 
 #### Returns
 
-Returns **true** if successful, **false** if not.
+Returns `true` if successful, `false` if not.
 
 ---
 
@@ -695,7 +695,7 @@ Controls the enablement of transcode-upon-ingest behavior, for the given project
 
 #### Returns
 
-Returns **true** if successful.
+Returns `true` if successful.
 
 ---
 

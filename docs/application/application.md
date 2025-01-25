@@ -406,7 +406,7 @@ None.
 
 #### Returns
 
-`Array` if successful, `null` if unsuccessful.
+Array of strings if successful, `null` if unsuccessful.
 
 #### Example
 
@@ -441,13 +441,13 @@ Determines whether the file at path can be opened as a Premiere Pro [project](..
 
 #### Parameters
 
-| Argument   | Type     | Description       |
-|------------|----------|-------------------|
-| `path`     | String | A path to a file. |
+| Parameter |  Type  |    Description    |
+| --------- | ------ | ----------------- |
+| `path`    | String | A path to a file. |
 
 #### Returns
 
-Returns **true** if file can be opened as a Premiere Pro [project](../general/project.md).
+Returns `true` if file can be opened as a Premiere Pro [project](../general/project.md).
 
 #### Example
 
@@ -476,7 +476,7 @@ None.
 
 #### Returns
 
-Returns **true** if at least 1 project is open; otherwise **false**.
+Returns `true` if at least 1 project is open; otherwise `false`.
 
 ---
 
@@ -490,19 +490,19 @@ Creates a new .prproj [Project object](../general/project.md), at the specified 
 
 #### Parameters
 
-| Argument   | Type     | Description                                                          |
-|------------|----------|----------------------------------------------------------------------|
-| `path`     | String | A full path to new project; a .prproj extension will *not* be added. |
+| Parameter |  Type  |                             Description                              |
+| --------- | ------ | -------------------------------------------------------------------- |
+| `path`    | String | A full path to new project; a .prproj extension will *not* be added. |
 
 #### Returns
 
-Returns **true** if successful.
+Returns `true` if successful.
 
 ---
 
 ### app.openDocument()
 
-`app.openDocument(path)`
+`app.openDocument(path, [suppressConversionDialog], [bypassLocateFileDialog], [bypassWarningDialog], [doNotAddToMRUList])`
 
 #### Description
 
@@ -510,8 +510,8 @@ Opens the file at the specified path, as a Premiere Pro [Project object](../gene
 
 #### Parameters
 
-| Argument                   | Type      | Description                                                     |
-|----------------------------|-----------|-----------------------------------------------------------------|
+|         Parameter          |  Type   |                           Description                           |
+| -------------------------- | ------- | --------------------------------------------------------------- |
 | `path`                     | String  | Full path to the document to be opened.                         |
 | `suppressConversionDialog` | Boolean | Optional. Suppress project conversion dialog.                   |
 | `bypassLocateFileDialog`   | Boolean | Optional. Bypass the locate file dialog.                        |
@@ -520,7 +520,7 @@ Opens the file at the specified path, as a Premiere Pro [Project object](../gene
 
 #### Returns
 
-Returns **true** if file was successfully opened.
+Returns `true` if file was successfully opened.
 
 ---
 
@@ -534,14 +534,14 @@ Opens an FCP XML file as a Premiere Pro [Project object](../general/project.md) 
 
 #### Parameters
 
-| Argument   | Type     | Description   |
-|------------|----------|---------------|
-| `path`     | String |               |
-| `projPath` | String |               |
+| Parameter  |  Type  | Description |
+| ---------- | ------ | ----------- |
+| `path`     | String |             |
+| `projPath` | String |             |
 
 #### Returns
 
-Returns **true** if file was successfully opened as a Premiere Pro [Project object](../general/project.md).
+Returns `true` if file was successfully opened as a Premiere Pro [Project object](../general/project.md).
 
 ---
 
@@ -573,13 +573,13 @@ Determines whether proxy usage is currently enabled.
 
 #### Parameters
 
-| Argument   | Type      | Description                               |
-|------------|-----------|-------------------------------------------|
-| `enabled`  | Integer | `1` turns proxies on, `0` turns them off. |
+| Parameter |  Type   |                Description                |
+| --------- | ------- | ----------------------------------------- |
+| `enabled` | Integer | `1` turns proxies on, `0` turns them off. |
 
 #### Returns
 
-Returns 1 if proxy enablement was changed.
+Returns `1` if proxy enablement was changed.
 
 ---
 
@@ -593,14 +593,14 @@ Whether extension with the given extensionID persists, within this session.
 
 #### Parameters
 
-| Argument      | Type      | Description                                                   |
-|---------------|-----------|---------------------------------------------------------------|
+|   Parameter   |  Type   |                          Description                          |
+| ------------- | ------- | ------------------------------------------------------------- |
 | `extensionID` | String  | Which extension to modify.                                    |
 | `persistent`  | Integer | Pass `1` to keep extension in memory, `0` to allow unloading. |
 
 #### Returns
 
-Returns **true** if successful.
+Returns `true` if successful.
 
 #### Example
 
@@ -625,14 +625,14 @@ Specifies the path to be used for one of Premiere Pro's scratch disk paths.
 
 #### Parameters
 
-| Argument          | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                     |
-|-------------------|----------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `path`            | String | The new path to be used.                                                                                                                                                                                                                                                                                                                                                                        |
-| `scratchDiskType` | `Enum`   | Enumerated value, must be one of the following:<br/><br/>- `ScratchDiskType.FirstVideoCaptureFolder`<br/>- `ScratchDiskType.FirstAudioCaptureFolder`<br/>- `ScratchDiskType.FirstVideoPreviewFolder`<br/>- `ScratchDiskType.FirstAudioPreviewFolder`<br/>- `ScratchDiskType.FirstAutoSaveFolder`<br/>- `ScratchDiskType.FirstCCLibrariesFolder`<br/>- `ScratchDiskType.FirstCapsuleMediaFolder` |
+|     Parameter     |          Type          |                                                                                                                                                                                                    Description                                                                                                                                                                                                    |
+| ----------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `path`            | String                 | The new path to be used.                                                                                                                                                                                                                                                                                                                                                                                          |
+| `scratchDiskType` | `ScratchDiskType` enum | Enumerated value, must be one of the following:<ul><li>`ScratchDiskType.FirstVideoCaptureFolder`</li><li>`ScratchDiskType.FirstAudioCaptureFolder`</li><li>`ScratchDiskType.FirstVideoPreviewFolder`</li><li>`ScratchDiskType.FirstAudioPreviewFolder`</li><li>`ScratchDiskType.FirstAutoSaveFolder`</li><li>`ScratchDiskType.FirstCCLibrariesFolder`</li><li>`ScratchDiskType.FirstCapsuleMediaFolder`</li></ul> |
 
 #### Returns
 
-Returns 'true' if successful.
+Returns `true` if successful.
 
 #### Example
 
@@ -655,14 +655,14 @@ Writes a string to Premiere Pro's Events panel.
 
 #### Parameters
 
-| Argument    | Type     | Description                                                                                |
-|-------------|----------|--------------------------------------------------------------------------------------------|
-| `message`   | String | A message to display.                                                                      |
-| `decorator` | String | Decorator, one of:<br/><br/>`info`<br/><br/><br/>`warning`<br/><br/><br/>`error`<br/><br/> |
+|  Parameter  |  Type  |                                 Description                                  |
+| ----------- | ------ | ---------------------------------------------------------------------------- |
+| `message`   | String | A message to display.                                                        |
+| `decorator` | String | Decorator, one of:<ul><li>`info`</li><li>`warning`</li><li>`error`</li></ul> |
 
 #### Returns
 
-Returns 'true' if successful.
+Returns `true` if successful.
 
 ---
 
@@ -676,8 +676,8 @@ Set workspace as active. Use [app.getWorkspaces()](#appgetworkspaces) to get a l
 
 #### Parameters
 
-| Argument    | Type     | Description                |
-|-------------|----------|----------------------------|
+|  Parameter  |  Type  |        Description         |
+| ----------- | ------ | -------------------------- |
 | `workspace` | String | The name of the workspace. |
 
 #### Returns
@@ -686,7 +686,7 @@ Boolean.
 
 #### Example
 
-Activate `Editing` workspace.
+Activate "Editing" workspace.
 
 ```js
 var workspace = 'Editing';
@@ -713,7 +713,7 @@ None.
 
 #### Returns
 
-Returns **true** if trace was added.
+Returns `true` if trace was added.
 
 ---
 
@@ -752,7 +752,7 @@ if (allViewIDs){
 
 #### Description
 
-Returns the Project associated with the provided View ID.
+Returns the [Project](../general/project.md) associated with the provided View ID.
 
 #### Parameters
 
@@ -760,7 +760,7 @@ A View ID, obtained from `getProjectViewIDs`.
 
 #### Returns
 
-A Project object, for the project associated with the provided View ID. Can be `null`.
+A [Project](../general/project.md) object, for the project associated with the provided View ID. Can be `null`.
 
 #### Example
 
@@ -788,7 +788,7 @@ if (allViewIDs){
 
 #### Description
 
-Returns an array of projectItems selected, in the current active project view.
+Returns an array of [ProjectItems](../item/projectitem.md) selected, in the current active project view.
 
 #### Parameters
 
@@ -796,7 +796,7 @@ None.
 
 #### Returns
 
-An array of projectItems; can be null.
+An array of [ProjectItems](../item/projectitem.md); can be null.
 
 #### Example
 
