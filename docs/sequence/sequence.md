@@ -18,7 +18,7 @@ The **Sequence** object represents sequences of media, or 'timelines', in Premie
 
 The audio display format of the sequence.
 
-Set this attribute with the [Sequence.setSettings()](#sequence-setsettings) method.
+Set this attribute with the [Sequence.setSettings()](#sequencesetsettings) method.
 
 **Type**
 
@@ -66,7 +66,7 @@ String; read-only.
 
 The horizontal frame size, or width, of the sequence.
 
-Set this attribute with the [Sequence.setSettings()](#sequence-setsettings) method.
+Set this attribute with the [Sequence.setSettings()](#sequencesetsettings) method.
 
 **Type**
 
@@ -82,7 +82,7 @@ Integer; read-only.
 
 The vertical frame size, or height, of the sequence.
 
-Set this attribute with the [Sequence.setSettings()](#sequence-setsettings) method.
+Set this attribute with the [Sequence.setSettings()](#sequencesetsettings) method.
 
 **Type**
 
@@ -103,7 +103,7 @@ This is the ordinal assigned to the sequence upon creation. If this is the thirt
 Integer, read-only.
 
 !!! note
-    In testing, this attribute seems unstable and produces unreliable results. Recommend using [Sequence.sequenceID](#sequence-sequenceid) instead.
+    In testing, this attribute seems unstable and produces unreliable results. Recommend using [Sequence.sequenceID](#sequencesequenceid) instead.
 
 ---
 
@@ -188,7 +188,7 @@ String; read-only.
 
 The video display format of the sequence.
 
-Set this attribute with the [Sequence.setSettings()](#sequence-setsettings) method.
+Set this attribute with the [Sequence.setSettings()](#sequencesetsettings) method.
 
 **Type**
 
@@ -234,7 +234,7 @@ An array of video [Track](track.md#track) objects in the sequence.
 
 The starting time, in **ticks**, of the sequence.
 
-Set this attribute with the [Sequence.setZeroPoint()](#sequence-setzeropoint) method.
+Set this attribute with the [Sequence.setZeroPoint()](#sequencesetzeropoint) method.
 
 **Type**
 
@@ -994,7 +994,7 @@ Sets the settings of the current sequence.  *[Editorial: I apologize for any per
 
 | Argument           | Type     | Description                                                                               |
 |--------------------|----------|-------------------------------------------------------------------------------------------|
-| `sequenceSettings` | `Object` | A sequence settings object, obtained via [Sequence.getSettings()](#sequence-getsettings). |
+| `sequenceSettings` | `Object` | A sequence settings object, obtained via [Sequence.getSettings()](#sequencegetsettings). |
 
 **Returns**
 

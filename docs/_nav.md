@@ -4,13 +4,13 @@
 
 * [Introduction](introduction/index.md)
 * [Changelog](introduction/changelog.md)
-  * [Adobe Premiere Pro 23.0](introduction/changelog.md#adobe-premiere-pro-23-0)
-  * [Adobe Premiere Pro 15.4](introduction/changelog.md#adobe-premiere-pro-15-4)
-  * [Adobe Premiere Pro 14.0](introduction/changelog.md#adobe-premiere-pro-14-0)
-  * [Adobe Premiere Pro 13.x](introduction/changelog.md#adobe-premiere-pro-13-x)
+  * [Adobe Premiere Pro 23.0](introduction/changelog.md#adobepremiere-pro-23-0)
+  * [Adobe Premiere Pro 15.4](introduction/changelog.md#adobepremiere-pro-15-4)
+  * [Adobe Premiere Pro 14.0](introduction/changelog.md#adobepremiere-pro-14-0)
+  * [Adobe Premiere Pro 13.x](introduction/changelog.md#adobepremiere-pro-13-x)
 * [Overview](introduction/extendscript-overview.md)
-  * [Example code](introduction/extendscript-overview.md#example-code)
-  * [Development and debugging tools](introduction/extendscript-overview.md#development-and-debugging-tools)
+  * [Example code](introduction/extendscript-overview.md#examplecode)
+  * [Development and debugging tools](introduction/extendscript-overview.md#developmentand-debugging-tools)
 * [How to Execute ExtendScript in Premiere Pro](introduction/how-to-execute-scripts.md)
 
 # Application

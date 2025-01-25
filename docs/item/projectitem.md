@@ -865,7 +865,7 @@ Sets the project item's color label.
 
 | Argument     | Type      | Description                                                                   |
 |--------------|-----------|-------------------------------------------------------------------------------|
-| `labelColor` | `Integer` | A label color; see [ProjectItem.getColorLabel()](#projectitem-getcolorlabel). |
+| `labelColor` | `Integer` | A label color; see [ProjectItem.getColorLabel()](#projectitemgetcolorlabel). |
 
 **Returns**
 

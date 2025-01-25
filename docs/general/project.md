@@ -613,7 +613,7 @@ Makes the [Sequence object](../sequence/sequence.md#sequence) with the provided 
 
 | Argument     | Type                                                               | Description                                |
 |--------------|--------------------------------------------------------------------|--------------------------------------------|
-| `sequenceID` | [Sequence.sequenceID](../sequence/sequence.md#sequence-sequenceid) | A valid sequence ID that should be opened. |
+| `sequenceID` | [Sequence.sequenceID](../sequence/sequence.md#sequencesequenceid) | A valid sequence ID that should be opened. |
 
 **Returns**
 
@@ -711,7 +711,7 @@ Sets the current graphics white luminance value, for this project.
 
 | Argument   | Type      | Description                                                                                                                                      |
 |------------|-----------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| `value`    | `Integer` | The value to be used; must be a value provided by [Project.getSupportedGraphicsWhiteLuminances()](#project-getsupportedgraphicswhiteluminances). |
+| `value`    | `Integer` | The value to be used; must be a value provided by [Project.getSupportedGraphicsWhiteLuminances()](#projectgetsupportedgraphicswhiteluminances). |
 
 **Returns**
 
@@ -731,7 +731,7 @@ Returns the current layout of the Project panel.
 
 | Argument   | Type     | Description                                                                                                                                                                                                                              |
 |------------|----------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `layout`   | `String` | Represents the desired Project panel layout. Note: The only known method for generating a valid layout string, is setting the Project panel as desired then using [Project.getProjectPanelMetadata()](#project-getprojectpanelmetadata). |
+| `layout`   | `String` | Represents the desired Project panel layout. Note: The only known method for generating a valid layout string, is setting the Project panel as desired then using [Project.getProjectPanelMetadata()](#projectgetprojectpanelmetadata). |
 
 **Returns**
 

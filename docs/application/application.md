@@ -670,7 +670,7 @@ Returns 'true' if successful.
 
 **Description**
 
-Set workspace as active. Use [app.getWorkspaces()](#app-getworkspaces) to get a list of all available workspaces.
+Set workspace as active. Use [app.getWorkspaces()](#appgetworkspaces) to get a list of all available workspaces.
 
 **Parameters**
 
