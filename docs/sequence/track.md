@@ -113,12 +113,12 @@ Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)
 
 #### Parameters
 
-| Argument      | Type                                                     | Description                                               |
-|---------------|----------------------------------------------------------|-----------------------------------------------------------|
+|   Argument    |                     Type                     |                        Description                        |
+| ------------- | -------------------------------------------- | --------------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
-| `time`        | String                                                 | The time at which to add project item, in **Ticks**.      |
-| `vTrackIndex` | `int`                                                    | The (zero-based) track index, into which to insert video. |
-| `aTrackIndex` | `int`                                                    | The (zero-based) track index, into which to insert audio. |
+| `time`        | String                                       | The time at which to add project item, in **Ticks**.      |
+| `vTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert video. |
+| `aTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert audio. |
 
 #### Returns
 
@@ -160,10 +160,10 @@ Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)
 
 #### Parameters
 
-| Argument      | Type                                                     | Description                                          |
-|---------------|----------------------------------------------------------|------------------------------------------------------|
+|   Argument    |                     Type                     |                     Description                      |
+| ------------- | -------------------------------------------- | ---------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.              |
-| `time`        | String                                                 | The time at which to add project item, in **Ticks**. |
+| `time`        | String                                       | The time at which to add project item, in **Ticks**. |
 
 #### Returns
 
@@ -184,9 +184,9 @@ Sets the mute state, of the track.
 
 #### Parameters
 
-| Argument   | Type      | Description                                                |
-|------------|-----------|------------------------------------------------------------|
-| `isMuted`  | Integer | If `1`, mute the track. If `0`, the track will be unmuted. |
+| Argument  |  Type   |                        Description                         |
+| --------- | ------- | ---------------------------------------------------------- |
+| `isMuted` | Integer | If `1`, mute the track. If `0`, the track will be unmuted. |
 
 #### Returns
 
