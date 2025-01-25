@@ -7,7 +7,7 @@
 
 #### Description
 
-The **component parameter** object represents a parameter associated with a component, applied to a [TrackItem object](../item/trackitem.md).
+The ComponentParam object represents a parameter associated with a component, applied to a [TrackItem object](../item/trackitem.md).
 
 !!! note
     For a developer working across different localizations, it's possible to find the corresponding keys by comparing ZStrings.
@@ -96,10 +96,10 @@ Sets whether the component parameter varies, over time. Note: This can only be s
 
 #### Parameters
 
-|   Argument    |  Type   |                       Description                       |
-| ------------- | ------- | ------------------------------------------------------- |
-| `timeToCheck` |         | Start search from a given time                          |
-| `threshold`   | Integer | A temporal distance, in either direction, in **ticks**. |
+|   Argument    |  Type   |                     Description                     |
+| ------------- | ------- | --------------------------------------------------- |
+| `timeToCheck` |         | Start search from a given time                      |
+| `threshold`   | Integer | A temporal distance, in either direction, in ticks. |
 
 #### Returns
 

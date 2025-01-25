@@ -30,7 +30,7 @@ An array of project items, contained within the specified project item.
 
 #### Description
 
-The audio channel mapping currently applied to this **projectItem**.
+The audio channel mapping currently applied to this ProjectItem.
 
 #### Type
 
@@ -318,8 +318,8 @@ Creates a new project item for a sub-clip of the existing project item.
 |      Argument       |  Type   |                Description                 |
 | ------------------- | ------- | ------------------------------------------ |
 | `name`              | String  | A name of a new subclip.                   |
-| `startTime`         | String  | Start time of subclip, in Ticks.           |
-| `endTime`           | String  | End time of subclip, in Ticks.             |
+| `startTime`         | String  | Start time of subclip, in ticks.           |
+| `endTime`           | String  | End time of subclip, in ticks.             |
 | `hasHardBoundaries` | Integer | If `1`, the user cannot extend in and out. |
 | `takeVideo`         | Integer | If `1`, use video from source.             |
 | `takeAudio`         | Integer | If `1`, use audio from source.             |
@@ -930,7 +930,7 @@ Sets the in point to `timeInTicks`, for specified media types.
 
 |  Argument   |  Type   |                                                   Description                                                    |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
-| `time`      | String  | A time in **Ticks**.                                                                                             |
+| `time`      | String  | A time in ticks.                                                                                                 |
 | `mediaType` | Integer | Determining which media type to affect; pass `1` for video only, `2` for audio only, or `4` for all media types. |
 
 #### Returns
@@ -969,7 +969,7 @@ Sets the out point to `timeInTicks`, for specified media types.
 
 |  Argument   |  Type   |                                                   Description                                                    |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
-| `time`      | String  | A time in **Ticks**.                                                                                             |
+| `time`      | String  | A time in ticks.                                                                                                 |
 | `mediaType` | Integer | Determining which media type to affect; pass `1` for video only, `2` for audio only, or `4` for all media types. |
 
 #### Returns
@@ -1068,9 +1068,9 @@ Assigns a new start time to the project item
 
 #### Parameters
 
-| Argument |  Type  |                  Description                   |
-| -------- | ------ | ---------------------------------------------- |
-| `time`   | String | A new starting time, represented in **Ticks**. |
+| Argument |  Type  |                Description                 |
+| -------- | ------ | ------------------------------------------ |
+| `time`   | String | A new starting time, represented in ticks. |
 
 #### Returns
 

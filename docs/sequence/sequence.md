@@ -4,7 +4,7 @@
 
 #### Description
 
-The **Sequence** object represents sequences of media, or 'timelines', in Premiere Pro.
+The Sequence object represents sequences of media, or 'timelines', in Premiere Pro.
 
 ---
 
@@ -866,7 +866,7 @@ Returns a boolean; `true` if successful.
 
 #### Description
 
-Inserts a clip into the sequence, **overwriting existing clips**, on the specified video and audio tracks, at the specified time.
+Inserts a clip into the sequence, *overwriting existing clips*, on the specified video and audio tracks, at the specified time.
 
 #### Parameters
 

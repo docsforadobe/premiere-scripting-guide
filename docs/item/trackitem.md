@@ -114,7 +114,10 @@ The mediaType of media provided by this trackItem.
 
 #### Type
 
-String, either **Audio** or **Video**.
+String, one of:
+
+- `"Audio"`
+- `"Video"`
 
 ---
 
@@ -216,7 +219,7 @@ The type of media provided by this trackItem.
 
 #### Type
 
-Number, **1** means video, **2** means audio.
+Number, `1` means video, `2` means audio.
 
 ---
 

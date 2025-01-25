@@ -7,7 +7,7 @@
 
 #### Description
 
-The **Track** object represents a video or audio track, within a [Sequence object](sequence.md).
+The Track object represents a video or audio track, within a [Sequence object](sequence.md).
 
 ---
 
@@ -119,7 +119,7 @@ Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)
 |   Argument    |                     Type                     |                        Description                        |
 | ------------- | -------------------------------------------- | --------------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
-| `time`        | String                                       | The time at which to add project item, in Ticks.          |
+| `time`        | String                                       | The time at which to add project item, in ticks.          |
 | `vTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert video. |
 | `aTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert audio. |
 
@@ -166,7 +166,7 @@ Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)
 |   Argument    |                     Type                     |                   Description                    |
 | ------------- | -------------------------------------------- | ------------------------------------------------ |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.          |
-| `time`        | String                                       | The time at which to add project item, in Ticks. |
+| `time`        | String                                       | The time at which to add project item, in ticks. |
 
 #### Returns
 
