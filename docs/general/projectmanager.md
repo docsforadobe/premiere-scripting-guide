@@ -16,7 +16,7 @@ The ProjectManager object exposes Premiere Pro's Project Manager, for project co
 
 **Description**
 
-An Array of [Sequence](../sequence/sequence.md#sequence) objects, to be exported.
+An Array of [Sequence](../sequence/sequence.md) objects, to be exported.
 
 **Type**
 
@@ -175,7 +175,7 @@ Integer; read/write.
 
 **Description**
 
-If true, export all [Sequences](../sequence/sequence.md#sequence) in the exported project.
+If true, export all [Sequences](../sequence/sequence.md) in the exported project.
 
 **Type**
 

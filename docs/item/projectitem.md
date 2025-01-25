@@ -20,7 +20,7 @@ An array of project items, contained within the specified project item.
 
 **Type**
 
-[ProjectItemCollection object](../collection/projectitemcollection.md#projectitemcollection), read-only.
+[ProjectItemCollection object](../collection/projectitemcollection.md), read-only.
 
 ---
 
@@ -547,7 +547,7 @@ None.
 
 **Returns**
 
-A [Time object](../other/time.md#time), containing the in point.
+A [Time object](../other/time.md), containing the in point.
 
 ---
 
@@ -557,7 +557,7 @@ A [Time object](../other/time.md#time), containing the in point.
 
 **Description**
 
-Retrieves the [MarkerCollection object](../collection/markercollection.md#markercollection) associated with this project item.
+Retrieves the [MarkerCollection object](../collection/markercollection.md) associated with this project item.
 
 **Parameters**
 
@@ -565,7 +565,7 @@ None.
 
 **Returns**
 
-[MarkerCollection object](../collection/markercollection.md#markercollection), read-only;
+[MarkerCollection object](../collection/markercollection.md), read-only;
 
 ---
 
@@ -603,7 +603,7 @@ Retrieves the current out point for specified media type.
 
 **Returns**
 
-Returns a [Time object](../other/time.md#time).
+Returns a [Time object](../other/time.md).
 
 ---
 
@@ -767,7 +767,7 @@ Boolean, `true` if offline.
 
 **Description**
 
-Indicates whether the project item refers to a [Sequence object](../sequence/sequence.md#sequence).
+Indicates whether the project item refers to a [Sequence object](../sequence/sequence.md).
 
 **Parameters**
 
@@ -775,7 +775,7 @@ None.
 
 **Returns**
 
-Returns `true` if the project item is a [Sequence object](../sequence/sequence.md#sequence), or a multicam clip, or a merged clip. Returns `false` if it isn't any of those.
+Returns `true` if the project item is a [Sequence object](../sequence/sequence.md), or a multicam clip, or a merged clip. Returns `false` if it isn't any of those.
 
 ---
 
@@ -1079,7 +1079,7 @@ Returns 0 if update was successful.
 
 **Description**
 
-Returns a [Time object](../other/time.md#time), representing start time.
+Returns a [Time object](../other/time.md), representing start time.
 
 **Parameters**
 
@@ -1087,7 +1087,7 @@ None.
 
 **Returns**
 
-[Time object](../other/time.md#time).
+[Time object](../other/time.md).
 
 ---
 
@@ -1101,4 +1101,4 @@ Video components for the 'Master Clip' of this project item.
 
 **Type**
 
-[ComponentCollection object](../collection/componentcollection.md#componentcollection), read-only.
+[ComponentCollection object](../collection/componentcollection.md), read-only.

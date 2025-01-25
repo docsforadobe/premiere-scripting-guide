@@ -5,9 +5,9 @@
 `app.project.rootItem.children[index].getMarkers()`
 <br/>
 
-The MarkerCollection object represents a collection of [Marker objects](../general/marker.md#marker) in a [ProjectItem object](../item/projectitem.md#projectitem) and [Sequence object](../sequence/sequence.md#sequence).
+The MarkerCollection object represents a collection of [Marker objects](../general/marker.md) in a [ProjectItem object](../item/projectitem.md) and [Sequence object](../sequence/sequence.md).
 
-> MarkerCollection is a subclass of [Collection object](collection.md#collection). All methods and attributes of Collection, in addition to those listed below, are available when working with MarkerCollection.
+> MarkerCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with MarkerCollection.
 
 ---
 
@@ -41,7 +41,7 @@ Integer, read-only.
 
 **Description**
 
-Create a new [Marker object](../general/marker.md#marker) on a project item or a sequence.
+Create a new [Marker object](../general/marker.md) on a project item or a sequence.
 
 **Parameters**
 
@@ -51,7 +51,7 @@ Create a new [Marker object](../general/marker.md#marker) on a project item or a
 
 **Returns**
 
-[Marker object](../general/marker.md#marker) if successful.
+[Marker object](../general/marker.md) if successful.
 
 ---
 
@@ -70,7 +70,7 @@ Remove a given marker object from a collection.
 
 | Argument   | Type                                         | Description                                |
 |------------|----------------------------------------------|--------------------------------------------|
-| `marker`   | [Marker object](../general/marker.md#marker) | A marker object to remove from collection. |
+| `marker`   | [Marker object](../general/marker.md) | A marker object to remove from collection. |
 
 **Returns**
 
@@ -112,7 +112,7 @@ None.
 
 **Returns**
 
-[Marker object](../general/marker.md#marker) or `undefined`.
+[Marker object](../general/marker.md) or `undefined`.
 
 ---
 
@@ -133,7 +133,7 @@ None.
 
 **Returns**
 
-[Marker object](../general/marker.md#marker) or `undefined`.
+[Marker object](../general/marker.md) or `undefined`.
 
 ---
 
@@ -152,11 +152,11 @@ Get the next available marker, sorted by seconds, starting from a given one.
 
 | Argument        | Type                                         | Description                                             |
 |-----------------|----------------------------------------------|---------------------------------------------------------|
-| `currentMarker` | [Marker object](../general/marker.md#marker) | A starting marker object, from which to get a next one. |
+| `currentMarker` | [Marker object](../general/marker.md) | A starting marker object, from which to get a next one. |
 
 **Returns**
 
-[Marker object](../general/marker.md#marker) or `undefined`.
+[Marker object](../general/marker.md) or `undefined`.
 
 ---
 
@@ -175,8 +175,8 @@ Get the previous available marker, sorted by seconds, starting from a given one.
 
 | Argument        | Type                                         | Description                                                 |
 |-----------------|----------------------------------------------|-------------------------------------------------------------|
-| `currentMarker` | [Marker object](../general/marker.md#marker) | A starting marker object, from which to get a previous one. |
+| `currentMarker` | [Marker object](../general/marker.md) | A starting marker object, from which to get a previous one. |
 
 **Returns**
 
-[Marker object](../general/marker.md#marker) or `undefined`.
+[Marker object](../general/marker.md) or `undefined`.

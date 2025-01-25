@@ -9,7 +9,7 @@
 
 *add a description*
 
-> ComponentCollection is a subclass of [Collection object](collection.md#collection). All methods and attributes of Collection, in addition to those listed below, are available when working with ComponentCollection.
+> ComponentCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with ComponentCollection.
 
 ---
 

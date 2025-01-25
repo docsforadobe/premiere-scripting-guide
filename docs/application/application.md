@@ -17,11 +17,11 @@ The single global object is always available by its name, **app**.
 
 **Description**
 
-An [Anywhere object](../general/anywhere.md#anywhere), providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).
+An [Anywhere object](../general/anywhere.md), providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).
 
 **Type**
 
-[Anywhere object](../general/anywhere.md#anywhere).
+[Anywhere object](../general/anywhere.md).
 
 ---
 
@@ -60,7 +60,7 @@ Warning: app.encoder is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in
 
 **Type**
 
-[Encoder object](../general/encoder.md#encoder).
+[Encoder object](../general/encoder.md).
 
 ---
 
@@ -206,7 +206,7 @@ Get applications Metadata object.
 
 **Type**
 
-[Metadata object](../general/metadata.md#metadata), read-only.
+[Metadata object](../general/metadata.md), read-only.
 
 ---
 
@@ -242,7 +242,7 @@ The currently active production.
 
 **Type**
 
-[Production object](../general/production.md#production) if at least 1 production is open, `null` otherwise.
+[Production object](../general/production.md) if at least 1 production is open, `null` otherwise.
 
 ---
 
@@ -256,7 +256,7 @@ The currently active project.
 
 **Type**
 
-[Project object](../general/project.md#project).
+[Project object](../general/project.md).
 
 ---
 
@@ -270,7 +270,7 @@ Provides access to project management functions within Premiere Pro.
 
 **Type**
 
-[ProjectManager object](../general/projectmanager.md#projectmanager).
+[ProjectManager object](../general/projectmanager.md).
 
 ---
 
@@ -284,7 +284,7 @@ An array referencing all open projects; `numProjects` contains size.
 
 **Type**
 
-[ProjectCollection object](../collection/projectcollection.md#projectcollection), read-only.
+[ProjectCollection object](../collection/projectcollection.md), read-only.
 
 ---
 
@@ -298,7 +298,7 @@ The properties object provides methods to access and modify preference values.
 
 **Type**
 
-[Properties object](../general/properties.md#properties), read-only;
+[Properties object](../general/properties.md), read-only;
 
 ---
 
@@ -308,11 +308,11 @@ The properties object provides methods to access and modify preference values.
 
 **Description**
 
-Provides access to [SourceMonitor object](../general/sourcemonitor.md#sourcemonitor).
+Provides access to [SourceMonitor object](../general/sourcemonitor.md).
 
 **Type**
 
-[SourceMonitor object](../general/sourcemonitor.md#sourcemonitor).
+[SourceMonitor object](../general/sourcemonitor.md).
 
 ---
 
@@ -435,7 +435,7 @@ app.getWorkspaces();
 
 **Description**
 
-Determines whether the file at path can be opened as a Premiere Pro [project](../general/project.md#project).
+Determines whether the file at path can be opened as a Premiere Pro [project](../general/project.md).
 
 **Parameters**
 
@@ -445,7 +445,7 @@ Determines whether the file at path can be opened as a Premiere Pro [project](..
 
 **Returns**
 
-Returns **true** if file can be opened as a Premiere Pro [project](../general/project.md#project).
+Returns **true** if file can be opened as a Premiere Pro [project](../general/project.md).
 
 **Example**
 
@@ -466,7 +466,7 @@ app.isDocument('~/Desktop/imageFile.mov');    // false
 
 **Description**
 
-Determines whether there are any [projects](../general/project.md#project) currently open.
+Determines whether there are any [projects](../general/project.md) currently open.
 
 **Parameters**
 
@@ -484,7 +484,7 @@ Returns **true** if at least 1 project is open; otherwise **false**.
 
 **Description**
 
-Creates a new .prproj [Project object](../general/project.md#project), at the specified path.
+Creates a new .prproj [Project object](../general/project.md), at the specified path.
 
 **Parameters**
 
@@ -504,7 +504,7 @@ Returns **true** if successful.
 
 **Description**
 
-Opens the file at the specified path, as a Premiere Pro [Project object](../general/project.md#project).
+Opens the file at the specified path, as a Premiere Pro [Project object](../general/project.md).
 
 **Parameters**
 
@@ -528,7 +528,7 @@ Returns **true** if file was successfully opened.
 
 **Description**
 
-Opens an FCP XML file as a Premiere Pro [Project object](../general/project.md#project) (specified in projPath).
+Opens an FCP XML file as a Premiere Pro [Project object](../general/project.md) (specified in projPath).
 
 **Parameters**
 
@@ -539,7 +539,7 @@ Opens an FCP XML file as a Premiere Pro [Project object](../general/project.md#p
 
 **Returns**
 
-Returns **true** if file was successfully opened as a Premiere Pro [Project object](../general/project.md#project).
+Returns **true** if file was successfully opened as a Premiere Pro [Project object](../general/project.md).
 
 ---
 
@@ -549,7 +549,7 @@ Returns **true** if file was successfully opened as a Premiere Pro [Project obje
 
 **Description**
 
-Quits Premiere Pro; user will be prompted to save any changes to [Project object](../general/project.md#project).
+Quits Premiere Pro; user will be prompted to save any changes to [Project object](../general/project.md).
 
 **Parameters**
 

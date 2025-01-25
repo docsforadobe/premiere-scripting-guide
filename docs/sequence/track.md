@@ -7,7 +7,7 @@
 
 **Description**
 
-The **Track** object represents a video or audio track, within a [Sequence object](sequence.md#sequence).
+The **Track** object represents a video or audio track, within a [Sequence object](sequence.md).
 
 ---
 
@@ -22,11 +22,11 @@ The **Track** object represents a video or audio track, within a [Sequence objec
 
 **Description**
 
-An array of [Track item](../item/trackitem.md#trackitem) objects, contained within the track, in temporal order.
+An array of [Track item](../item/trackitem.md) objects, contained within the track, in temporal order.
 
 **Type**
 
-[TrackItemCollection object](../collection/trackitemcollection.md#trackitemcollection), read-only;
+[TrackItemCollection object](../collection/trackitemcollection.md), read-only;
 
 ---
 
@@ -94,7 +94,7 @@ An array of transitions objects, contained within the track, in temporal order.
 
 **Type**
 
-[TrackItemCollection object](../collection/trackitemcollection.md#trackitemcollection), read-only;
+[TrackItemCollection object](../collection/trackitemcollection.md), read-only;
 
 ---
 
@@ -109,13 +109,13 @@ An array of transitions objects, contained within the track, in temporal order.
 
 **Description**
 
-Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md#projectitem)) to the track, at the specified time. Media will be inserted, at that time.
+Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)) to the track, at the specified time. Media will be inserted, at that time.
 
 **Parameters**
 
 | Argument      | Type                                                     | Description                                               |
 |---------------|----------------------------------------------------------|-----------------------------------------------------------|
-| `projectItem` | [ProjectItem object](../item/projectitem.md#projectitem) | A project item from which to get media.                   |
+| `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
 | `time`        | `String`                                                 | The time at which to add project item, in **Ticks**.      |
 | `vTrackIndex` | `int`                                                    | The (zero-based) track index, into which to insert video. |
 | `aTrackIndex` | `int`                                                    | The (zero-based) track index, into which to insert audio. |
@@ -156,13 +156,13 @@ Returns **true** if track is currently muted; **false** if not.
 
 **Description**
 
-Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md#projectitem)) to the track, at the specified time. This will overwrite any existing media, at that time.
+Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)) to the track, at the specified time. This will overwrite any existing media, at that time.
 
 **Parameters**
 
 | Argument      | Type                                                     | Description                                          |
 |---------------|----------------------------------------------------------|------------------------------------------------------|
-| `projectItem` | [ProjectItem object](../item/projectitem.md#projectitem) | A project item from which to get media.              |
+| `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.              |
 | `time`        | `String`                                                 | The time at which to add project item, in **Ticks**. |
 
 **Returns**

@@ -51,13 +51,13 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 
 **Description**
 
-Makes Adobe Media Encoder render (optionally, a specified range from) the specified [ProjectItem object](../item/projectitem.md#projectitem), with the specified settings.
+Makes Adobe Media Encoder render (optionally, a specified range from) the specified [ProjectItem object](../item/projectitem.md), with the specified settings.
 
 **Parameters**
 
 | Argument               | Type                                                     | Description                                                                                                                     |
 |------------------------|----------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| `projectItem`          | [ProjectItem object](../item/projectitem.md#projectitem) | A project item to render.                                                                                                       |
+| `projectItem`          | [ProjectItem object](../item/projectitem.md) | A project item to render.                                                                                                       |
 | `outputPath`           | `String`                                                 | A path to an output file.                                                                                                       |
 | `presetPath`           | `String`                                                 | A path to a preset (.epr) file.                                                                                                 |
 | `workArea`             | `Integer`                                                | Integer denoting work area to be used:<br/><br/>- 0 - `ENCODE_ENTIRE`<br/>- 1 - `ENCODE_IN_TO_OUT`<br/>- 2 - `ENCODE_WORK_AREA` |
@@ -75,13 +75,13 @@ Returns a job ID as a **String**, for the render job added to the AME queue, or 
 
 **Description**
 
-Makes Adobe Media Encoder render the specified [Sequence object](../sequence/sequence.md#sequence), with the specified settings.
+Makes Adobe Media Encoder render the specified [Sequence object](../sequence/sequence.md), with the specified settings.
 
 **Parameters**
 
 | Argument               | Type                                                | Description                                                                                                                     |
 |------------------------|-----------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------|
-| `sequence`             | [Sequence object](../sequence/sequence.md#sequence) | A sequence to render.                                                                                                           |
+| `sequence`             | [Sequence object](../sequence/sequence.md) | A sequence to render.                                                                                                           |
 | `outputPath`           | `String`                                            | A path to an output file.                                                                                                       |
 | `presetPath`           | `String`                                            | A path to a preset (.epr) file.                                                                                                 |
 | `workArea`             | `Integer`                                           | Integer denoting work area to be used:<br/><br/>- 0 - `ENCODE_ENTIRE`<br/>- 1 - `ENCODE_IN_TO_OUT`<br/>- 2 - `ENCODE_WORK_AREA` |

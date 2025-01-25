@@ -4,7 +4,7 @@
 
 **Description**
 
-The AudioChannelMapping object defines the audio channel mapping applied to a given [ProjectItem object](../item/projectitem.md#projectitem).
+The AudioChannelMapping object defines the audio channel mapping applied to a given [ProjectItem object](../item/projectitem.md).
 
 ---
 

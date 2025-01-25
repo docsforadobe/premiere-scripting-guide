@@ -66,7 +66,7 @@ None.
 
 **Returns**
 
-Returns a [Time object](../other/time.md#time) containing the position of the Source monitor's current time indicator.
+Returns a [Time object](../other/time.md) containing the position of the Source monitor's current time indicator.
 
 ---
 
@@ -120,7 +120,7 @@ Open a project item in the Source monitor.
 
 | Argument      | Type                                                     | Description             |
 |---------------|----------------------------------------------------------|-------------------------|
-| `projectItem` | [ProjectItem object](../item/projectitem.md#projectitem) | A project item to open. |
+| `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item to open. |
 
 **Returns**
 

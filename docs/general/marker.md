@@ -7,7 +7,7 @@
 
 **Description**
 
-Both [Project items](../item/projectitem.md#projectitem) and [sequences](../sequence/sequence.md#sequence) have associated **marker** objects, which represent their associated markers.
+Both [Project items](../item/projectitem.md) and [sequences](../sequence/sequence.md) have associated **marker** objects, which represent their associated markers.
 
 ---
 
@@ -39,11 +39,11 @@ String; read/write.
 
 **Description**
 
-A [Time object](../other/time.md#time) containing the value of the ending of the marker.
+A [Time object](../other/time.md) containing the value of the ending of the marker.
 
 **Type**
 
-[Time object](../other/time.md#time); read/write.
+[Time object](../other/time.md); read/write.
 
 ---
 
@@ -90,11 +90,11 @@ String; read/write.
 
 **Description**
 
-A [Time object](../other/time.md#time) containing the value of the beginning of the marker.
+A [Time object](../other/time.md) containing the value of the beginning of the marker.
 
 **Type**
 
-[Time object](../other/time.md#time); read/write.
+[Time object](../other/time.md); read/write.
 
 ---
 

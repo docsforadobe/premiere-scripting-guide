@@ -4,13 +4,13 @@ Like an array, a collection associates a set of objects or values as a logical g
 
 ## Objects
 
-- [ComponentCollection object](componentcollection.md#componentcollection) - *todo*.
-- [MarkerCollection object](markercollection.md#markercollection) - a collection of the [Marker objects](../general/marker.md#marker) in a [ProjectItem object](../item/projectitem.md#projectitem) and [Sequence object](../sequence/sequence.md#sequence).
-- [ProjectCollection object](projectcollection.md#projectcollection) - a collection of [Project objects](../general/project.md#project).
-- [ProjectItemCollection object](projectitemcollection.md#projectitemcollection) - a collection of [ProjectItem objects](../item/projectitem.md#projectitem).
-- [SequenceCollection object](sequencecollection.md#sequencecollection) - a collection of  [Sequence objects](../sequence/sequence.md#sequence).
-- [TrackCollection object](trackcollection.md#trackcollection) - a collection of [Track objects](../sequence/track.md#track).
-- [TrackItemCollection object](trackitemcollection.md#trackitemcollection) - a collection of [TrackItem objects](../item/trackitem.md#trackitem).
+- [ComponentCollection object](componentcollection.md) - *todo*.
+- [MarkerCollection object](markercollection.md) - a collection of the [Marker objects](../general/marker.md) in a [ProjectItem object](../item/projectitem.md) and [Sequence object](../sequence/sequence.md).
+- [ProjectCollection object](projectcollection.md) - a collection of [Project objects](../general/project.md).
+- [ProjectItemCollection object](projectitemcollection.md) - a collection of [ProjectItem objects](../item/projectitem.md).
+- [SequenceCollection object](sequencecollection.md) - a collection of  [Sequence objects](../sequence/sequence.md).
+- [TrackCollection object](trackcollection.md) - a collection of [Track objects](../sequence/track.md).
+- [TrackItemCollection object](trackitemcollection.md) - a collection of [TrackItem objects](../item/trackitem.md).
 
 ---
 

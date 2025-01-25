@@ -5,9 +5,9 @@
 `app.project.sequences[index].videoTracks[index].clips`
 <br/>
 
-The TrackItemCollection object represents a collection of [TrackItem objects](../item/trackitem.md#trackitem) on a track.
+The TrackItemCollection object represents a collection of [TrackItem objects](../item/trackitem.md) on a track.
 
-> TrackItemCollection is a subclass of [Collection object](collection.md#collection). All methods and attributes of Collection, in addition to those listed below, are available when working with TrackItemCollection.
+> TrackItemCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with TrackItemCollection.
 
 ---
 

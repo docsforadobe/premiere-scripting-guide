@@ -48,7 +48,7 @@ An array of the projects containined within the Production, which are currently 
 
 **Type**
 
-[ProjectCollection object](../collection/projectcollection.md#projectcollection), read-only.
+[ProjectCollection object](../collection/projectcollection.md), read-only.
 
 ---
 

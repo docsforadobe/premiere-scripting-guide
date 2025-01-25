@@ -7,7 +7,7 @@
 
 **Description**
 
-The **trackItem** object represents an item on a video or audio track, within a [Sequence object](../sequence/sequence.md#sequence).
+The **trackItem** object represents an item on a video or audio track, within a [Sequence object](../sequence/sequence.md).
 
 ---
 
@@ -26,7 +26,7 @@ The components associated with this trackItem. This can include intrinsic transf
 
 **Type**
 
-[ComponentCollection object](../collection/componentcollection.md#componentcollection), read-only;
+[ComponentCollection object](../collection/componentcollection.md), read-only;
 
 ---
 
@@ -43,7 +43,7 @@ The duration of the trackItem.
 
 **Type**
 
-[Time object](../other/time.md#time), read-only.
+[Time object](../other/time.md), read-only.
 
 ---
 
@@ -60,7 +60,7 @@ The visible end time of the trackItem in the sequence, relative to the beginning
 
 **Type**
 
-[Time object](../other/time.md#time), read/write.
+[Time object](../other/time.md), read/write.
 
 ---
 
@@ -77,7 +77,7 @@ The in point set on the source for this trackItem instance, relative to the begi
 
 **Type**
 
-[Time object](../other/time.md#time), read/write.
+[Time object](../other/time.md), read/write.
 
 ---
 
@@ -162,7 +162,7 @@ The out point set on the source for this trackItem instance, relative to the beg
 
 **Type**
 
-[Time object](../other/time.md#time), read/write.
+[Time object](../other/time.md), read/write.
 
 ---
 
@@ -175,11 +175,11 @@ The out point set on the source for this trackItem instance, relative to the beg
 
 **Description**
 
-The [ProjectItem object](projectitem.md#projectitem) from which the media is being drawn.
+The [ProjectItem object](projectitem.md) from which the media is being drawn.
 
 **Type**
 
-A [ProjectItem object](projectitem.md#projectitem).
+A [ProjectItem object](projectitem.md).
 
 ---
 
@@ -196,7 +196,7 @@ The visible start time of the trackItem in the sequence, relative to the beginni
 
 **Type**
 
-[Time object](../other/time.md#time), read/write.
+[Time object](../other/time.md), read/write.
 
 ---
 

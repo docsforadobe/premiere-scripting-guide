@@ -5,9 +5,9 @@
 `app.project.sequences[index].videoTracks`
 <br/>
 
-The TrackCollection object represents a collection of [Track objects](../sequence/track.md#track) in a sequence.
+The TrackCollection object represents a collection of [Track objects](../sequence/track.md) in a sequence.
 
-> TrackCollection is a subclass of [Collection object](collection.md#collection). All methods and attributes of Collection, in addition to those listed below, are available when working with TrackCollection.
+> TrackCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with TrackCollection.
 
 ---
 

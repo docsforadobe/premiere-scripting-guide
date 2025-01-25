@@ -36,11 +36,11 @@ An enumerated value; read/write. One of:
 
 **Description**
 
-An array of audio [Track](track.md#track) objects in the sequence.
+An array of audio [Track](track.md) objects in the sequence.
 
 **Type**
 
-[TrackCollection object](../collection/trackcollection.md#trackcollection); read-only.
+[TrackCollection object](../collection/trackcollection.md); read-only.
 
 ---
 
@@ -113,11 +113,11 @@ Integer, read-only.
 
 **Description**
 
-An array of [Marker](../general/marker.md#marker) objects in the sequence.
+An array of [Marker](../general/marker.md) objects in the sequence.
 
 **Type**
 
-[MarkerCollection object](../collection/markercollection.md#markercollection), read-only;
+[MarkerCollection object](../collection/markercollection.md), read-only;
 
 ---
 
@@ -141,11 +141,11 @@ String; read/write.
 
 **Description**
 
-The [ProjectItem object](../item/projectitem.md#projectitem) associated with the sequence.
+The [ProjectItem object](../item/projectitem.md) associated with the sequence.
 
 **Type**
 
-[ProjectItem object](../item/projectitem.md#projectitem); read-only.
+[ProjectItem object](../item/projectitem.md); read-only.
 
 !!! note
     Not all sequences will have a `projectItem`. There may be sequences in a project that Premiere generates that are invisible to the user, these do not have `projectItems`
@@ -218,11 +218,11 @@ An enumerated value; read/write. One of:
 
 **Description**
 
-An array of video [Track](track.md#track) objects in the sequence.
+An array of video [Track](track.md) objects in the sequence.
 
 **Type**
 
-[TrackCollection object](../collection/trackcollection.md#trackcollection); read-only.
+[TrackCollection object](../collection/trackcollection.md); read-only.
 
 ---
 
@@ -355,13 +355,13 @@ startAtTime, captionFormat)`
 
 **Description**
 
-Creates a caption track in the sequence using caption data from a [ProjectItem object](../item/projectitem.md#projectitem).
+Creates a caption track in the sequence using caption data from a [ProjectItem object](../item/projectitem.md).
 
 **Parameters**
 
 | Argument        | Type                                                     | Description                                                                                          |
 |-----------------|----------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| `projectItem`   | [ProjectItem object](../item/projectitem.md#projectitem) | A captions source clip (e.g. .srt)                                                                   |
+| `projectItem`   | [ProjectItem object](../item/projectitem.md) | A captions source clip (e.g. .srt)                                                                   |
 | `startAtTime`   | `Float`                                                  | Offset in seconds from start of sequence                                                             |
 | `captionFormat` | `Constant`                                               | Caption format of the new track (see below). Optional, default is `Sequence.CAPTION_FORMAT_SUBTITLE` |
 
@@ -493,7 +493,7 @@ Returns a boolean; `true` if successful.
 
 **Description**
 
-Creates a new [Project object](../general/project.md#project) containing only the given sequence and its constituent media.
+Creates a new [Project object](../general/project.md) containing only the given sequence and its constituent media.
 
 **Parameters**
 
@@ -559,7 +559,7 @@ None.
 
 **Returns**
 
-Returns a [Time object](../other/time.md#time).
+Returns a [Time object](../other/time.md).
 
 ---
 
@@ -595,7 +595,7 @@ None.
 
 **Returns**
 
-Returns a [Time object](../other/time.md#time).
+Returns a [Time object](../other/time.md).
 
 ---
 
@@ -613,7 +613,7 @@ None.
 
 **Returns**
 
-Returns a [Time object](../other/time.md#time).
+Returns a [Time object](../other/time.md).
 
 ---
 
@@ -623,7 +623,7 @@ Returns a [Time object](../other/time.md#time).
 
 **Description**
 
-An array of [Track item](../item/trackitem.md#trackitem) objects, of the selected clips in the sequence, in temporal order.
+An array of [Track item](../item/trackitem.md) objects, of the selected clips in the sequence, in temporal order.
 
 **Parameters**
 
@@ -631,7 +631,7 @@ None.
 
 **Returns**
 
-Returns a [TrackItemCollection object](../collection/trackitemcollection.md#trackitemcollection).
+Returns a [TrackItemCollection object](../collection/trackitemcollection.md).
 
 ---
 
@@ -656,7 +656,7 @@ Returns an object; a sequence settings structure.
 | `audioChannelCount`                                                                                                                                              | `Integer`                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Number of audio channels in the sequence.                                                                                                                              |
 | `audioChannelType`<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                                                                                   | `Integer`<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                                                                                 | `0` Mono<br/><br/><br/>`1` Stereo<br/><br/><br/>`2` 5.1<br/><br/><br/>`3` Multichannel<br/><br/><br/>`4` 4 Channel<br/><br/><br/>`5` 8 Channel<br/><br/>                                                                                                                                                                                                                                                                                                                                                         | Audio channel type.<br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>                                                                                        |
 | `audioDisplayFormat`<br/><br/><br/><br/>                                                                                                                         | `Integer`<br/><br/><br/><br/>                                                                                                                         | `200` Audio Samples<br/><br/><br/>`201` Milliseconds<br/><br/>                                                                                                                                                                                                                                                                                                                                                                                                                                                   | Audio timecode display format.<br/><br/><br/><br/>                                                                                                                     |
-| `audioSampleRate`                                                                                                                                                | [Time object](../other/time.md#time)                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Audio sample rate.                                                                                                                                                     |
+| `audioSampleRate`                                                                                                                                                | [Time object](../other/time.md)                                                                                                                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Audio sample rate.                                                                                                                                                     |
 | `autoToneMapEnabled`                                                                                                                                             | `Boolean`                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Whether Auto Tone Map Media is checked.                                                                                                                                |
 | `compositeLinearColor`                                                                                                                                           | `Boolean`                                                                                                                                             |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Whether sequence is composited in linear color.                                                                                                                        |
 | `editingMode`                                                                                                                                                    | `String`                                                                                                                                              |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | The GUID of the editing mode.                                                                                                                                          |
@@ -710,7 +710,7 @@ None.
 
 **Returns**
 
-Returns a [Time object](../other/time.md#time).
+Returns a [Time object](../other/time.md).
 
 ---
 
@@ -746,7 +746,7 @@ None.
 
 **Returns**
 
-Returns a [Time object](../other/time.md#time).
+Returns a [Time object](../other/time.md).
 
 ---
 
@@ -769,7 +769,7 @@ Imports a MOGRT, or an After Effects Motion Graphics Template, to the specified 
 
 **Returns**
 
-Returns a [TrackItem object](../item/trackitem.md#trackitem).
+Returns a [TrackItem object](../item/trackitem.md).
 
 ---
 
@@ -793,7 +793,7 @@ Imports a MOGRT, or an After Effects Motion Graphics Template, from the current 
 
 **Returns**
 
-Returns a [TrackItem object](../item/trackitem.md#trackitem).
+Returns a [TrackItem object](../item/trackitem.md).
 
 ---
 
@@ -809,7 +809,7 @@ Inserts a clip into the sequence, on the specified video and audio tracks, at th
 
 | Argument      | Type                                                     | Description                                               |
 |---------------|----------------------------------------------------------|-----------------------------------------------------------|
-| `projectItem` | [ProjectItem object](../item/projectitem.md#projectitem) | A project item from which to get media.                   |
+| `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
 | `time`        | `String`                                                 | The time at which to add project item, in **seconds**.    |
 | `vTrackIndex` | `Integer`                                                | The (zero-based) track index, into which to insert video. |
 | `aTrackIndex` | `Integer`                                                | The (zero-based) track index, into which to insert audio. |
@@ -889,7 +889,7 @@ Inserts a clip into the sequence, **overwriting existing clips**, on the specifi
 
 | Argument      | Type                                                     | Description                                               |
 |---------------|----------------------------------------------------------|-----------------------------------------------------------|
-| `projectItem` | [ProjectItem object](../item/projectitem.md#projectitem) | A project item from which to get media.                   |
+| `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
 | `time`        | `String`                                                 | The time at which to add project item, in **seconds**.    |
 | `vTrackIndex` | `Integer`                                                | The (zero-based) track index, into which to insert video. |
 | `aTrackIndex` | `Integer`                                                | The (zero-based) track index, into which to insert audio. |
@@ -934,7 +934,7 @@ Sets a new sequence in point.
 
 | Argument   | Type                                              | Description                |
 |------------|---------------------------------------------------|----------------------------|
-| `time`     | `Integer` or [Time object](../other/time.md#time) | A new time in **seconds**. |
+| `time`     | `Integer` or [Time object](../other/time.md) | A new time in **seconds**. |
 
 **Returns**
 
@@ -954,7 +954,7 @@ Sets a new sequence out point.
 
 | Argument   | Type                                              | Description                |
 |------------|---------------------------------------------------|----------------------------|
-| `time`     | `Integer` or [Time object](../other/time.md#time) | A new time in **seconds**. |
+| `time`     | `Integer` or [Time object](../other/time.md) | A new time in **seconds**. |
 
 **Returns**
 
@@ -1014,7 +1014,7 @@ Sets a new sequence work area in point.
 
 | Argument   | Type                                              | Description                |
 |------------|---------------------------------------------------|----------------------------|
-| `time`     | `Integer` or [Time object](../other/time.md#time) | A new time in **seconds**. |
+| `time`     | `Integer` or [Time object](../other/time.md) | A new time in **seconds**. |
 
 **Returns**
 
@@ -1034,7 +1034,7 @@ Sets a new sequence work area out point.
 
 | Argument   | Type                                              | Description                |
 |------------|---------------------------------------------------|----------------------------|
-| `time`     | `Integer` or [Time object](../other/time.md#time) | A new time in **seconds**. |
+| `time`     | `Integer` or [Time object](../other/time.md) | A new time in **seconds**. |
 
 **Returns**
 

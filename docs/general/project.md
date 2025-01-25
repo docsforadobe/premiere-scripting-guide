@@ -16,11 +16,11 @@ Represents a Premiere Pro project. As of Premiere Pro 12.0, multiple projects ma
 
 **Description**
 
-The currently active [Sequence object](../sequence/sequence.md#sequence), within the project.
+The currently active [Sequence object](../sequence/sequence.md), within the project.
 
 **Type**
 
-a [Sequence object](../sequence/sequence.md#sequence), or `0` if no sequence is currently active.
+a [Sequence object](../sequence/sequence.md), or `0` if no sequence is currently active.
 
 ---
 
@@ -108,11 +108,11 @@ app.project.path; // /Users/USERNAME/Desktop/Project.prproj
 
 **Description**
 
-A [ProjectItem object](../item/projectitem.md#projectitem) representing the "root" of the project.
+A [ProjectItem object](../item/projectitem.md) representing the "root" of the project.
 
 **Type**
 
-A [ProjectItem object](../item/projectitem.md#projectitem); this will always be of type `ProjectItemType_BIN`.
+A [ProjectItem object](../item/projectitem.md); this will always be of type `ProjectItemType_BIN`.
 
 ---
 
@@ -126,7 +126,7 @@ The sequences within the project.
 
 **Type**
 
-[SequenceCollection object](../collection/sequencecollection.md#sequencecollection), read-only.
+[SequenceCollection object](../collection/sequencecollection.md), read-only.
 
 ---
 
@@ -199,7 +199,7 @@ Returns  **0** if successful.
 
 **Description**
 
-Creates a new [Sequence object](../sequence/sequence.md#sequence) with the specified ID.
+Creates a new [Sequence object](../sequence/sequence.md) with the specified ID.
 
 **Parameters**
 
@@ -210,7 +210,7 @@ Creates a new [Sequence object](../sequence/sequence.md#sequence) with the speci
 
 **Returns**
 
-Returns a [Sequence object](../sequence/sequence.md#sequence) if creation was successful, or **0** if unsuccessful.
+Returns a [Sequence object](../sequence/sequence.md) if creation was successful, or **0** if unsuccessful.
 
 ---
 
@@ -220,19 +220,19 @@ Returns a [Sequence object](../sequence/sequence.md#sequence) if creation was su
 
 **Description**
 
-Creates a new [Sequence object](../sequence/sequence.md#sequence) with the given name, in the specified destination bin, and sequentially inserts project items into it.
+Creates a new [Sequence object](../sequence/sequence.md) with the given name, in the specified destination bin, and sequentially inserts project items into it.
 
 **Parameters**
 
 | Argument              | Type                                                                 | Description                                             |
 |-----------------------|----------------------------------------------------------------------|---------------------------------------------------------|
 | `sequenceName`        | `String`                                                             | Optional. A name for a new sequence.                    |
-| `arrayOfProjectItems` | `Array` of [ProjectItem](../item/projectitem.md#projectitem) objects | An array of project items to be inserted into sequence. |
-| `destinationBin`      | [ProjectItem object](../item/projectitem.md#projectitem)             | Optional. A bin to contain sequence.                    |
+| `arrayOfProjectItems` | `Array` of [ProjectItem](../item/projectitem.md) objects | An array of project items to be inserted into sequence. |
+| `destinationBin`      | [ProjectItem object](../item/projectitem.md)             | Optional. A bin to contain sequence.                    |
 
 **Returns**
 
-Returns the newly-created [Sequence object](../sequence/sequence.md#sequence) if successful; 0 if unsuccessful.
+Returns the newly-created [Sequence object](../sequence/sequence.md) if successful; 0 if unsuccessful.
 
 ---
 
@@ -242,13 +242,13 @@ Returns the newly-created [Sequence object](../sequence/sequence.md#sequence) if
 
 **Description**
 
-Deletes the specified [Sequence object](../sequence/sequence.md#sequence) from the project.
+Deletes the specified [Sequence object](../sequence/sequence.md) from the project.
 
 **Parameters**
 
 | Argument   | Type                                                | Description           |
 |------------|-----------------------------------------------------|-----------------------|
-| `sequence` | [Sequence object](../sequence/sequence.md#sequence) | A sequence to delete. |
+| `sequence` | [Sequence object](../sequence/sequence.md) | A sequence to delete. |
 
 **Returns**
 
@@ -262,13 +262,13 @@ Returns true if successful, false if unsuccessful.
 
 **Description**
 
-Exports an AAF file of the specified [Sequence object](../sequence/sequence.md#sequence), using the specified settings.
+Exports an AAF file of the specified [Sequence object](../sequence/sequence.md), using the specified settings.
 
 **Parameters**
 
 | Argument               | Type                                                | Description                                                                  |
 |------------------------|-----------------------------------------------------|------------------------------------------------------------------------------|
-| `sequenceToExport`     | [Sequence object](../sequence/sequence.md#sequence) | A sequence to export.                                                        |
+| `sequenceToExport`     | [Sequence object](../sequence/sequence.md) | A sequence to export.                                                        |
 | `outputPath`           | `String`                                            | An output path for .aaf file.                                                |
 | `mixdownVideo`         | `Integer`                                           | If `1`, render video before export.                                          |
 | `explodeToMono`        | `Integer`                                           | If `1`, breaks out stereo tracks to mono.                                    |
@@ -316,13 +316,13 @@ Returns 0 if successful.
 
 **Description**
 
-Exports an OMF file of the specified [Sequence object](../sequence/sequence.md#sequence), using the specified settings.
+Exports an OMF file of the specified [Sequence object](../sequence/sequence.md), using the specified settings.
 
 **Parameters**
 
 | Argument            | Type                                                | Description                                  |
 |---------------------|-----------------------------------------------------|----------------------------------------------|
-| `sequence`          | [Sequence object](../sequence/sequence.md#sequence) | The sequence to be output.                   |
+| `sequence`          | [Sequence object](../sequence/sequence.md) | The sequence to be output.                   |
 | `filePath`          | `String`                                            | An output path for .omf file.                |
 | `omfTitle`          | `String`                                            | The title of the OMF.                        |
 | `sampleRate`        |                                                     | The sample rate of output audio.             |
@@ -345,7 +345,7 @@ Returns **0** if successful.
 
 **Description**
 
-Exports the currently active [Sequence object](../sequence/sequence.md#sequence), using an Export Controller plug-in with the specified name.
+Exports the currently active [Sequence object](../sequence/sequence.md), using an Export Controller plug-in with the specified name.
 
 **Parameters**
 
@@ -383,7 +383,7 @@ Returns the currently selected graphics white value.
 
 **Description**
 
-Returns a [ProjectItem object](../item/projectitem.md#projectitem) referencing the bin into which import will occur.
+Returns a [ProjectItem object](../item/projectitem.md) referencing the bin into which import will occur.
 
 **Parameters**
 
@@ -391,7 +391,7 @@ None.
 
 **Returns**
 
-Returns a [ProjectItem object](../item/projectitem.md#projectitem) if successful, **0** if not.
+Returns a [ProjectItem object](../item/projectitem.md) if successful, **0** if not.
 
 ---
 
@@ -463,7 +463,7 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 |-------------|----------------------------------------------------------|---------------------------------------------------------------------|
 | `path`      | `String`                                                 | A path to the After Effects .aep project file.                      |
 | `compNames` | `Array`                                                  | Names of compositions within the specified project, to be imported. |
-| `targetBin` | [ProjectItem object](../item/projectitem.md#projectitem) | Optional. The destination bin for this import.                      |
+| `targetBin` | [ProjectItem object](../item/projectitem.md) | Optional. The destination bin for this import.                      |
 
 **Returns**
 
@@ -484,7 +484,7 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 | Argument    | Type                                                     | Description                                    |
 |-------------|----------------------------------------------------------|------------------------------------------------|
 | `path`      | `String`                                                 | A path to After Effects .aep project file.     |
-| `targetBin` | [ProjectItem object](../item/projectitem.md#projectitem) | Optional. The destination bin for this import. |
+| `targetBin` | [ProjectItem object](../item/projectitem.md) | Optional. The destination bin for this import. |
 
 **Returns**
 
@@ -506,7 +506,7 @@ Imports media from the specified file paths.
 |--------------------------|----------------------------------------------------------|--------------------------------------------------------------------------------|
 | `filePaths`              | `Array`                                                  | An array of the file paths to be imported.                                     |
 | `suppressUI`             | `Boolean`                                                | Whether warning dialogs should be suppressed.                                  |
-| `targetBin`              | [ProjectItem object](../item/projectitem.md#projectitem) | The bin into which the files should be imported.                               |
+| `targetBin`              | [ProjectItem object](../item/projectitem.md) | The bin into which the files should be imported.                               |
 | `importAsNumberedStills` | `Boolean`                                                | Whether the file paths should be interpreted as a sequence of numbered stills. |
 
 **Returns**
@@ -521,7 +521,7 @@ Returns **true** if successful, **false** if not.
 
 **Description**
 
-Imports an array of [sequence](../sequence/sequence.md#sequence) objects (with specified sequenceIDs), from the specified project, into the current project.
+Imports an array of [sequence](../sequence/sequence.md) objects (with specified sequenceIDs), from the specified project, into the current project.
 
 **Parameters**
 
@@ -560,7 +560,7 @@ Returns  **true** if copying is enabled; **false** if not.
 
 **Description**
 
-Creates a new [Sequence object](../sequence/sequence.md#sequence) with the given name, based on the specified preset (.sqpreset file).
+Creates a new [Sequence object](../sequence/sequence.md) with the given name, based on the specified preset (.sqpreset file).
 
 **Parameters**
 
@@ -576,7 +576,7 @@ Creates a new [Sequence object](../sequence/sequence.md#sequence) with the given
 
 **Returns**
 
-Returns a [ProjectItem object](../item/projectitem.md#projectitem) for the new bars and tone, or **0** if unsuccessful.
+Returns a [ProjectItem object](../item/projectitem.md) for the new bars and tone, or **0** if unsuccessful.
 
 ---
 
@@ -586,7 +586,7 @@ Returns a [ProjectItem object](../item/projectitem.md#projectitem) for the new b
 
 **Description**
 
-Creates a new [Sequence object](../sequence/sequence.md#sequence) with the given name, based on the specified preset (.sqpreset file).
+Creates a new [Sequence object](../sequence/sequence.md) with the given name, based on the specified preset (.sqpreset file).
 
 **Parameters**
 
@@ -597,7 +597,7 @@ Creates a new [Sequence object](../sequence/sequence.md#sequence) with the given
 
 **Returns**
 
-Returns a [Sequence object](../sequence/sequence.md#sequence), or **0** if unsuccessful.
+Returns a [Sequence object](../sequence/sequence.md), or **0** if unsuccessful.
 
 ---
 
@@ -607,7 +607,7 @@ Returns a [Sequence object](../sequence/sequence.md#sequence), or **0** if unsuc
 
 **Description**
 
-Makes the [Sequence object](../sequence/sequence.md#sequence) with the provided sequence ID, active. This will open the sequence in the Timeline panel.
+Makes the [Sequence object](../sequence/sequence.md) with the provided sequence ID, active. This will open the sequence in the Timeline panel.
 
 **Parameters**
 
