@@ -9,6 +9,8 @@ What's new and changed for scripting?
 !!! warning
     Decision: No further changes or improvements to Premiere Pro's ExtendScript API are planned or scheduled. Any such changes will be reconsidered, once Premiere Pro moves to UXP-based extensibility.
 
+---
+
 ## Adobe Premiere Pro 15.4
 
 - Access to the currently active project selection
@@ -24,6 +26,8 @@ What's new and changed for scripting?
 
 - Scripting access to Auto-Reframe:
     - Added: [Sequence.autoReframeSequence()](../sequence/sequence.md#sequenceautoreframesequence)
+
+---
 
 ## Adobe Premiere Pro 13.x
 
