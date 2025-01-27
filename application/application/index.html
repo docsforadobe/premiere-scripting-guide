@@ -1,0 +1,3044 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+        <link rel="canonical" href="https://ppro-scripting.docsforadobe.dev/application/application/">
+      
+      
+        <link rel="prev" href="../../introduction/how-to-execute-scripts/">
+      
+      
+        <link rel="next" href="../../general/anywhere/">
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.5.50">
+    
+    
+      
+        <title>Application object - Premiere Pro Scripting Guide</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.a40c8224.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings1.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings2.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings3.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings4.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings5.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-enum-headings6.css">
+    
+      <link rel="stylesheet" href="../../css/print-site.css">
+    
+      <link rel="stylesheet" href="../../css/print-site-material.css">
+    
+      <link rel="stylesheet" href="https://docsforadobe.dev/_global/global.css">
+    
+      <link rel="stylesheet" href="https://docsforadobe.dev/_global/global-syntax-highlight.css">
+    
+      <link rel="stylesheet" href="../../_static/extra.css">
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#application-object" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+        <aside class="md-banner">
+          <div class="md-banner__inner md-grid md-typeset">
+            
+              <button class="md-banner__button md-icon" aria-label="Don't show this again">
+                
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+              </button>
+            
+            
+  Welcome to the new scripting guide!
+
+  This is a work in progress.
+
+  Please provide all feedback via
+  <a ref="me" href="https://github.com/orgs/docsforadobe/discussions">
+    <span class="twemoji">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M1.75 1h8.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 10.25 10H7.061l-2.574 2.573A1.458 1.458 0 0 1 2 11.543V10h-.25A1.75 1.75 0 0 1 0 8.25v-5.5C0 1.784.784 1 1.75 1M1.5 2.75v5.5c0 .138.112.25.25.25h1a.75.75 0 0 1 .75.75v2.19l2.72-2.72a.75.75 0 0 1 .53-.22h3.5a.25.25 0 0 0 .25-.25v-5.5a.25.25 0 0 0-.25-.25h-8.5a.25.25 0 0 0-.25.25m13 2a.25.25 0 0 0-.25-.25h-.5a.75.75 0 0 1 0-1.5h.5c.966 0 1.75.784 1.75 1.75v5.5A1.75 1.75 0 0 1 14.25 12H14v1.543a1.458 1.458 0 0 1-2.487 1.03L9.22 12.28a.749.749 0 0 1 .326-1.275.75.75 0 0 1 .734.215l2.22 2.22v-2.19a.75.75 0 0 1 .75-.75h1a.25.25 0 0 0 .25-.25Z"/></svg>
+    </span>
+    <strong>the org's discussion forum</strong>
+  </a>.
+
+          </div>
+          
+            <script>var el=document.querySelector("[data-md-component=announce]");if(el){var content=el.querySelector(".md-typeset");__md_hash(content.innerHTML)===__md_get("__announce")&&(el.hidden=!0)}</script>
+          
+        </aside>
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="https://docsforadobe.dev" title="Premiere Pro Scripting Guide" class="md-header__button md-logo" aria-label="Premiere Pro Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Premiere Pro Scripting Guide
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Application object
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: dark)" data-md-color-scheme="slate" data-md-color-primary="black" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_0">
+    
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 18c-.89 0-1.74-.2-2.5-.55C11.56 16.5 13 14.42 13 12s-1.44-4.5-3.5-5.45C10.26 6.2 11.11 6 12 6a6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="(prefers-color-scheme: light)" data-md-color-scheme="default" data-md-color-primary="white" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_0" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a4 4 0 0 0-4 4 4 4 0 0 0 4 4 4 4 0 0 0 4-4 4 4 0 0 0-4-4m0 10a6 6 0 0 1-6-6 6 6 0 0 1 6-6 6 6 0 0 1 6 6 6 6 0 0 1-6 6m8-9.31V4h-4.69L12 .69 8.69 4H4v4.69L.69 12 4 15.31V20h4.69L12 23.31 15.31 20H20v-4.69L23.31 12z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/docsforadobe/premiere-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    premiere-scripting-guide
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="https://docsforadobe.dev" title="Premiere Pro Scripting Guide" class="md-nav__button md-logo" aria-label="Premiere Pro Scripting Guide" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Premiere Pro Scripting Guide
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/docsforadobe/premiere-scripting-guide/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2024 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81"/></svg>
+  </div>
+  <div class="md-source__repository">
+    premiere-scripting-guide
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Home
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" >
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Introduction
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Introduction
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/extendscript-overview/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Overview
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/changelog/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Changelog
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../introduction/how-to-execute-scripts/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    How to Execute ExtendScript in Premiere Pro
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Application
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Application
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Application object
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Application object
+  </span>
+  
+
+      </a>
+      
+        
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#appanywhere" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.anywhere
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appbuild" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.build
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appencoder" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.encoder
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetappprefpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getAppPrefPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetappsystemprefpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getAppSystemPrefPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetpproprefpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getPProPrefPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetpprosystemprefpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getPProSystemPrefPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#applearnpanelcontentdirpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.learnPanelContentDirPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#applearnpanelexampleprojectdirpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.learnPanelExampleProjectDirPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appmetadata" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.metadata
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#apppath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.path
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appproduction" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.production
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.project
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appprojectmanager" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.projectManager
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appprojects" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.projects
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appproperties" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.properties
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsourcemonitor" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.sourceMonitor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appuserguid" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.userGuid
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appversion" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.version
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#appenableqe" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.enableQE()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetenableproxies" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getEnableProxies()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetworkspaces" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getWorkspaces()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appisdocument" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.isDocument()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appisdocumentopen" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.isDocumentOpen()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appnewproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.newProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appopendocument" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.openDocument()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appopenfcpxml" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.openFCPXML()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appquit" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.quit()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetenableproxies" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setEnableProxies()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetextensionpersistent" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setExtensionPersistent()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetscratchdiskpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setScratchDiskPath()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetsdkeventmessage" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setSDKEventMessage()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetworkspace" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setWorkspace()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#apptrace" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.trace()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetprojectviewids" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getProjectViewIDs()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetprojectfromviewid" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getProjectFromViewID()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetcurrentprojectviewselection" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getCurrentProjectViewSelection()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    General
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            General
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/anywhere/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Anywhere object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/encoder/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Encoder object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/marker/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Marker object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/metadata/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Metadata object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/production/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Production object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/project/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Project object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/projectmanager/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProjectManager object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/properties/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Properties object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../general/sourcemonitor/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SourceMonitor object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Item
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            Item
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/projectitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProjectItem object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../item/trackitem/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TrackItem object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Sequence
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            Sequence
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sequence/component/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Component object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sequence/componentparam/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComponentParam object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sequence/sequence/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sequence object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../sequence/track/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Track object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Other
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            Other
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/audiochannelmapping/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    AudioChannelMapping object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../other/time/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Time object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8" >
+        
+          
+          <label class="md-nav__link" for="__nav_8" id="__nav_8_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Collection
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_8_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8">
+            <span class="md-nav__icon md-icon"></span>
+            Collection
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collection/collection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Collection object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collection/componentcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ComponentCollection object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collection/markercollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarkerCollection object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collection/projectcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProjectCollection object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collection/projectitemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ProjectItemCollection object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collection/sequencecollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    SequenceCollection object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collection/trackcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TrackCollection object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../collection/trackitemcollection/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    TrackItemCollection object
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+  
+
+<nav class="md-nav md-nav--secondary" aria-label="Page Contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Page Contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+	<a href="#attributes" class="md-nav__link">
+		<span class="md-ellipsis">
+			Attributes
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Attributes">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#appanywhere" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.anywhere
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appbuild" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.build
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appencoder" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.encoder
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetappprefpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getAppPrefPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetappsystemprefpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getAppSystemPrefPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetpproprefpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getPProPrefPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetpprosystemprefpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getPProSystemPrefPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#applearnpanelcontentdirpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.learnPanelContentDirPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#applearnpanelexampleprojectdirpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.learnPanelExampleProjectDirPath
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appmetadata" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.metadata
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#apppath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.path
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appproduction" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.production
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.project
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appprojectmanager" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.projectManager
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appprojects" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.projects
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appproperties" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.properties
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsourcemonitor" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.sourceMonitor
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appuserguid" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.userGuid
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appversion" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.version
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+        <li class="md-nav__item">
+	<a href="#methods" class="md-nav__link">
+		<span class="md-ellipsis">
+			Methods
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+		<nav class="md-nav" aria-label="Methods">
+			<ul class="md-nav__list">
+				
+				
+					<li class="md-nav__item">
+	<a href="#appenableqe" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.enableQE()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetenableproxies" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getEnableProxies()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetworkspaces" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getWorkspaces()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appisdocument" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.isDocument()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appisdocumentopen" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.isDocumentOpen()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appnewproject" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.newProject()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appopendocument" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.openDocument()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appopenfcpxml" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.openFCPXML()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appquit" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.quit()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetenableproxies" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setEnableProxies()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetextensionpersistent" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setExtensionPersistent()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetscratchdiskpath" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setScratchDiskPath()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetsdkeventmessage" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setSDKEventMessage()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appsetworkspace" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.setWorkspace()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#apptrace" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.trace()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetprojectviewids" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getProjectViewIDs()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetprojectfromviewid" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getProjectFromViewID()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
+	<a href="#appgetcurrentprojectviewselection" class="md-nav__link">
+		<span class="md-ellipsis">
+			app.getCurrentProjectViewSelection()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+			</ul>
+		</nav>
+	
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+    <a href="https://github.com/docsforadobe/premiere-scripting-guide/edit/master/docs/application/application.md" title="Edit this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/docsforadobe/premiere-scripting-guide/raw/master/docs/application/application.md" title="View source of this page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
+    </a>
+  
+
+
+<h1 id="application-object">Application object<a class="headerlink" href="#application-object" title="Permanent link">&para;</a></h1>
+<p><code>app</code></p>
+<h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
+<p>Provides access to objects and application settings within Premiere Pro.</p>
+<p>The single global object is always available by its name, <code>app</code>.</p>
+<hr />
+<h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
+<h3 id="appanywhere">app.anywhere<a class="headerlink" href="#appanywhere" title="Permanent link">&para;</a></h3>
+<p><code>app.anywhere</code></p>
+<h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
+<p>An <a href="../../general/anywhere/">Anywhere object</a>, providing access to available Anywhere servers. Only available when running in Anywhere configuration (discontinued).</p>
+<h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
+<p><a href="../../general/anywhere/">Anywhere object</a>.</p>
+<hr />
+<h3 id="appbuild">app.build<a class="headerlink" href="#appbuild" title="Permanent link">&para;</a></h3>
+<p><code>app.build</code></p>
+<h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
+<p>The number of the build of Premiere Pro being run.</p>
+<h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<h4 id="example">Example<a class="headerlink" href="#example" title="Permanent link">&para;</a></h4>
+<p>Get a build version of current application.</p>
+<div class="highlight"><pre><span></span><code><span class="c1">// in Adobe Premiere Pro version 14.3.1 (Build 45)...</span>
+<span class="nb">parseInt</span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">build</span><span class="p">);</span><span class="w"> </span><span class="c1">// 45</span>
+</code></pre></div>
+<hr />
+<h3 id="appencoder">app.encoder<a class="headerlink" href="#appencoder" title="Permanent link">&para;</a></h3>
+<p><code>app.encoder</code></p>
+<h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
+<p>Provides access to Adobe Media Encoder (on the same system).</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p><code>app.encoder</code> is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in 22 and up. <a href="https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-encoder-14-3-1-15-0-15-1-15-2/m-p/12544488">See this discussion</a>.</p>
+</div>
+<h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
+<p><a href="../../general/encoder/">Encoder object</a>.</p>
+<hr />
+<h3 id="appgetappprefpath">app.getAppPrefPath<a class="headerlink" href="#appgetappprefpath" title="Permanent link">&para;</a></h3>
+<p><code>app.getAppPrefPath</code></p>
+<h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
+<p>The path containing the currently active "Adobe Premiere Pro Prefs" file.</p>
+<h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
+<p>Get a path to a currently active preference file</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">getAppPrefPath</span><span class="p">;</span><span class="w"> </span><span class="c1">// /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/</span>
+</code></pre></div>
+<hr />
+<h3 id="appgetappsystemprefpath">app.getAppSystemPrefPath<a class="headerlink" href="#appgetappsystemprefpath" title="Permanent link">&para;</a></h3>
+<p><code>app.getAppSystemPrefPath</code></p>
+<h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
+<p>Premiere Pro's active configuration files, not specific to a given user.</p>
+<h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<h4 id="example_2">Example<a class="headerlink" href="#example_2" title="Permanent link">&para;</a></h4>
+<p>Get a path to a currently active configuration folder</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">getAppSystemPrefPath</span><span class="p">;</span><span class="w"> </span><span class="c1">// /Library/Application Support/Adobe/Adobe Premiere Pro 2020/</span>
+</code></pre></div>
+<hr />
+<h3 id="appgetpproprefpath">app.getPProPrefPath<a class="headerlink" href="#appgetpproprefpath" title="Permanent link">&para;</a></h3>
+<p><code>app.getPProPrefPath</code></p>
+<h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
+<p>The path containing the currently active "Adobe Premiere Pro Prefs" file.</p>
+<h4 id="type_5">Type<a class="headerlink" href="#type_5" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
+<p>Get a path to a currently active preference file</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">getPProPrefPath</span><span class="p">;</span><span class="w"> </span><span class="c1">// /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/</span>
+</code></pre></div>
+<hr />
+<h3 id="appgetpprosystemprefpath">app.getPProSystemPrefPath<a class="headerlink" href="#appgetpprosystemprefpath" title="Permanent link">&para;</a></h3>
+<p><code>app.getPProSystemPrefPath</code></p>
+<h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
+<p>Premiere Pro's active configuration files, not specific to a given user.</p>
+<h4 id="type_6">Type<a class="headerlink" href="#type_6" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
+<p>Get a path to a currently active configuration folder</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">getPProSystemPrefPath</span><span class="p">;</span><span class="w"> </span><span class="c1">// /Library/Application Support/Adobe/Adobe Premiere Pro 2020/</span>
+</code></pre></div>
+<hr />
+<h3 id="applearnpanelcontentdirpath">app.learnPanelContentDirPath<a class="headerlink" href="#applearnpanelcontentdirpath" title="Permanent link">&para;</a></h3>
+<p><code>app.learnPanelContentDirPath</code></p>
+<h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
+<p>Get the Learn panel's contents directory path.</p>
+<h4 id="type_7">Type<a class="headerlink" href="#type_7" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<h4 id="example_5">Example<a class="headerlink" href="#example_5" title="Permanent link">&para;</a></h4>
+<p>Get a path to a Learn panel's directory</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">learnPanelContentDirPath</span><span class="p">;</span><span class="w"> </span><span class="c1">// /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/</span>
+</code></pre></div>
+<hr />
+<h3 id="applearnpanelexampleprojectdirpath">app.learnPanelExampleProjectDirPath<a class="headerlink" href="#applearnpanelexampleprojectdirpath" title="Permanent link">&para;</a></h3>
+<p><code>app.learnPanelExampleProjectDirPath</code></p>
+<h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
+<p>Get the Learn panel's example projects directory path.</p>
+<h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<h4 id="example_6">Example<a class="headerlink" href="#example_6" title="Permanent link">&para;</a></h4>
+<p>Get a path to a Learn panel's example projects' directory</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">learnPanelExampleProjectDirPath</span><span class="p">;</span><span class="w"> </span><span class="c1">// /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/</span>
+</code></pre></div>
+<hr />
+<h3 id="appmetadata">app.metadata<a class="headerlink" href="#appmetadata" title="Permanent link">&para;</a></h3>
+<p><code>app.metadata</code></p>
+<h4 id="description_10">Description<a class="headerlink" href="#description_10" title="Permanent link">&para;</a></h4>
+<p>Get applications Metadata object.</p>
+<h4 id="type_9">Type<a class="headerlink" href="#type_9" title="Permanent link">&para;</a></h4>
+<p><a href="../../general/metadata/">Metadata object</a>, read-only.</p>
+<hr />
+<h3 id="apppath">app.path<a class="headerlink" href="#apppath" title="Permanent link">&para;</a></h3>
+<p><code>app.path</code></p>
+<h4 id="description_11">Description<a class="headerlink" href="#description_11" title="Permanent link">&para;</a></h4>
+<p>Get a path to applications executable file.</p>
+<h4 id="type_10">Type<a class="headerlink" href="#type_10" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<h4 id="example_7">Example<a class="headerlink" href="#example_7" title="Permanent link">&para;</a></h4>
+<p>Get a path to applications executable file.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">path</span><span class="p">;</span><span class="w"> </span><span class="c1">// /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/</span>
+</code></pre></div>
+<hr />
+<h3 id="appproduction">app.production<a class="headerlink" href="#appproduction" title="Permanent link">&para;</a></h3>
+<p><code>app.production</code></p>
+<h4 id="description_12">Description<a class="headerlink" href="#description_12" title="Permanent link">&para;</a></h4>
+<p>The currently active production.</p>
+<h4 id="type_11">Type<a class="headerlink" href="#type_11" title="Permanent link">&para;</a></h4>
+<p><a href="../../general/production/">Production object</a> if at least 1 production is open, <code>null</code> otherwise.</p>
+<hr />
+<h3 id="appproject">app.project<a class="headerlink" href="#appproject" title="Permanent link">&para;</a></h3>
+<p><code>app.project</code></p>
+<h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
+<p>The currently active project.</p>
+<h4 id="type_12">Type<a class="headerlink" href="#type_12" title="Permanent link">&para;</a></h4>
+<p><a href="../../general/project/">Project object</a>.</p>
+<hr />
+<h3 id="appprojectmanager">app.projectManager<a class="headerlink" href="#appprojectmanager" title="Permanent link">&para;</a></h3>
+<p><code>app.projectManager</code></p>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<p>Provides access to project management functions within Premiere Pro.</p>
+<h4 id="type_13">Type<a class="headerlink" href="#type_13" title="Permanent link">&para;</a></h4>
+<p><a href="../../general/projectmanager/">ProjectManager object</a>.</p>
+<hr />
+<h3 id="appprojects">app.projects<a class="headerlink" href="#appprojects" title="Permanent link">&para;</a></h3>
+<p><code>app.projects</code></p>
+<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
+<p>An array referencing all open projects; <code>numProjects</code> contains size.</p>
+<h4 id="type_14">Type<a class="headerlink" href="#type_14" title="Permanent link">&para;</a></h4>
+<p><a href="../../collection/projectcollection/">ProjectCollection object</a>, read-only.</p>
+<hr />
+<h3 id="appproperties">app.properties<a class="headerlink" href="#appproperties" title="Permanent link">&para;</a></h3>
+<p><code>app.properties</code></p>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<p>The properties object provides methods to access and modify preference values.</p>
+<h4 id="type_15">Type<a class="headerlink" href="#type_15" title="Permanent link">&para;</a></h4>
+<p><a href="../../general/properties/">Properties object</a>, read-only;</p>
+<hr />
+<h3 id="appsourcemonitor">app.sourceMonitor<a class="headerlink" href="#appsourcemonitor" title="Permanent link">&para;</a></h3>
+<p><code>app.sourceMonitor</code></p>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<p>Provides access to <a href="../../general/sourcemonitor/">SourceMonitor object</a>.</p>
+<h4 id="type_16">Type<a class="headerlink" href="#type_16" title="Permanent link">&para;</a></h4>
+<p><a href="../../general/sourcemonitor/">SourceMonitor object</a>.</p>
+<hr />
+<h3 id="appuserguid">app.userGuid<a class="headerlink" href="#appuserguid" title="Permanent link">&para;</a></h3>
+<p><code>app.userGuid</code></p>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<p>A unique identifier for the currently logged-in Creative Cloud user.</p>
+<h4 id="type_17">Type<a class="headerlink" href="#type_17" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<hr />
+<h3 id="appversion">app.version<a class="headerlink" href="#appversion" title="Permanent link">&para;</a></h3>
+<p><code>app.version</code></p>
+<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
+<p>The version of Premiere Pro, providing the API.</p>
+<h4 id="type_18">Type<a class="headerlink" href="#type_18" title="Permanent link">&para;</a></h4>
+<p>String; read-only.</p>
+<h4 id="example_8">Example<a class="headerlink" href="#example_8" title="Permanent link">&para;</a></h4>
+<p>Get a version of a current application  <em>(Adobe Premiere Pro version 14.3.1 (Build 45))</em></p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span><span class="w"> </span><span class="c1">// 14.3.1</span>
+</code></pre></div>
+<hr />
+<h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
+<h3 id="appenableqe">app.enableQE()<a class="headerlink" href="#appenableqe" title="Permanent link">&para;</a></h3>
+<p><code>app.enableQE()</code></p>
+<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
+<p>Enables Premiere Pro's QE DOM.</p>
+<h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns">Returns<a class="headerlink" href="#returns" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if QE DOM was enabled.</p>
+<hr />
+<h3 id="appgetenableproxies">app.getEnableProxies()<a class="headerlink" href="#appgetenableproxies" title="Permanent link">&para;</a></h3>
+<p><code>app.getEnableProxies()</code></p>
+<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
+<p>Determines whether proxy usage is currently enabled.</p>
+<h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_1">Returns<a class="headerlink" href="#returns_1" title="Permanent link">&para;</a></h4>
+<p>Returns <code>1</code> if proxies are enabled, <code>0</code> if they are not.</p>
+<hr />
+<h3 id="appgetworkspaces">app.getWorkspaces()<a class="headerlink" href="#appgetworkspaces" title="Permanent link">&para;</a></h3>
+<p><code>app.getWorkspaces()</code></p>
+<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
+<p>Obtains an array of available workspaces as Strings.</p>
+<h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_2">Returns<a class="headerlink" href="#returns_2" title="Permanent link">&para;</a></h4>
+<p>Array of strings if successful, <code>null</code> if unsuccessful.</p>
+<h4 id="example_9">Example<a class="headerlink" href="#example_9" title="Permanent link">&para;</a></h4>
+<p>Get a list of available workspaces.</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">getWorkspaces</span><span class="p">();</span>
+<span class="cm">/* [</span>
+<span class="cm">    &quot;All Panels&quot;,</span>
+<span class="cm">    &quot;Assembly&quot;,</span>
+<span class="cm">    &quot;Audio&quot;,</span>
+<span class="cm">    &quot;Color&quot;,</span>
+<span class="cm">    &quot;Editing&quot;,</span>
+<span class="cm">    &quot;Effects&quot;,</span>
+<span class="cm">    &quot;Graphics&quot;,</span>
+<span class="cm">    &quot;Learning&quot;,</span>
+<span class="cm">    &quot;Libraries&quot;,</span>
+<span class="cm">    &quot;Metalogging&quot;,</span>
+<span class="cm">    &quot;Production&quot;</span>
+<span class="cm">]; */</span>
+</code></pre></div>
+<hr />
+<h3 id="appisdocument">app.isDocument()<a class="headerlink" href="#appisdocument" title="Permanent link">&para;</a></h3>
+<p><code>app.isDocument(path)</code></p>
+<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<p>Determines whether the file at path can be opened as a Premiere Pro <a href="../../general/project/">project</a>.</p>
+<h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>String</td>
+<td>A path to a file.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if file can be opened as a Premiere Pro <a href="../../general/project/">project</a>.</p>
+<h4 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h4>
+<p>Test for valid project files</p>
+<div class="highlight"><pre><span></span><code><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">&#39;~/Desktop/myProject.prproj&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">&#39;~/Desktop/textFile.txt&#39;</span><span class="p">);</span><span class="w">     </span><span class="c1">// false</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">&#39;~/Desktop/footageFile.mov&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// false</span>
+<span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">&#39;~/Desktop/imageFile.mov&#39;</span><span class="p">);</span><span class="w">    </span><span class="c1">// false</span>
+</code></pre></div>
+<hr />
+<h3 id="appisdocumentopen">app.isDocumentOpen()<a class="headerlink" href="#appisdocumentopen" title="Permanent link">&para;</a></h3>
+<p><code>app.isDocumentOpen()</code></p>
+<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
+<p>Determines whether there are any <a href="../../general/project/">projects</a> currently open.</p>
+<h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if at least 1 project is open; otherwise <code>false</code>.</p>
+<hr />
+<h3 id="appnewproject">app.newProject()<a class="headerlink" href="#appnewproject" title="Permanent link">&para;</a></h3>
+<p><code>app.newProject(path)</code></p>
+<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
+<p>Creates a new .prproj <a href="../../general/project/">Project object</a>, at the specified path.</p>
+<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>String</td>
+<td>A full path to new project; a .prproj extension will <em>not</em> be added.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if successful.</p>
+<hr />
+<h3 id="appopendocument">app.openDocument()<a class="headerlink" href="#appopendocument" title="Permanent link">&para;</a></h3>
+<p><code>app.openDocument(path, [suppressConversionDialog], [bypassLocateFileDialog], [bypassWarningDialog], [doNotAddToMRUList])</code></p>
+<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
+<p>Opens the file at the specified path, as a Premiere Pro <a href="../../general/project/">Project object</a>.</p>
+<h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>String</td>
+<td>Full path to the document to be opened.</td>
+</tr>
+<tr>
+<td><code>suppressConversionDialog</code></td>
+<td>Boolean</td>
+<td>Optional. Suppress project conversion dialog.</td>
+</tr>
+<tr>
+<td><code>bypassLocateFileDialog</code></td>
+<td>Boolean</td>
+<td>Optional. Bypass the locate file dialog.</td>
+</tr>
+<tr>
+<td><code>bypassWarningDialog</code></td>
+<td>Boolean</td>
+<td>Optional. Bypass warning dialog.</td>
+</tr>
+<tr>
+<td><code>doNotAddToMRUList</code></td>
+<td>Boolean</td>
+<td>Optional. Skip adding this file to the Most Recently Used List.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if file was successfully opened.</p>
+<hr />
+<h3 id="appopenfcpxml">app.openFCPXML()<a class="headerlink" href="#appopenfcpxml" title="Permanent link">&para;</a></h3>
+<p><code>app.openFCPXML(path, projPath)</code></p>
+<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
+<p>Opens an FCP XML file as a Premiere Pro <a href="../../general/project/">Project object</a> (specified in projPath).</p>
+<h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>String</td>
+<td></td>
+</tr>
+<tr>
+<td><code>projPath</code></td>
+<td>String</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if file was successfully opened as a Premiere Pro <a href="../../general/project/">Project object</a>.</p>
+<hr />
+<h3 id="appquit">app.quit()<a class="headerlink" href="#appquit" title="Permanent link">&para;</a></h3>
+<p><code>app.quit()</code></p>
+<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
+<p>Quits Premiere Pro; user will be prompted to save any changes to <a href="../../general/project/">Project object</a>.</p>
+<h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">&para;</a></h4>
+<p>Nothing.</p>
+<hr />
+<h3 id="appsetenableproxies">app.setEnableProxies()<a class="headerlink" href="#appsetenableproxies" title="Permanent link">&para;</a></h3>
+<p><code>app.setEnableProxies(enabled)</code></p>
+<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
+<p>Determines whether proxy usage is currently enabled.</p>
+<h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>enabled</code></td>
+<td>Integer</td>
+<td><code>1</code> turns proxies on, <code>0</code> turns them off.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">&para;</a></h4>
+<p>Returns <code>1</code> if proxy enablement was changed.</p>
+<hr />
+<h3 id="appsetextensionpersistent">app.setExtensionPersistent()<a class="headerlink" href="#appsetextensionpersistent" title="Permanent link">&para;</a></h3>
+<p><code>app.setExtensionPersistent(extensionID, persistent)</code></p>
+<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
+<p>Whether extension with the given extensionID persists, within this session.</p>
+<h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>extensionID</code></td>
+<td>String</td>
+<td>Which extension to modify.</td>
+</tr>
+<tr>
+<td><code>persistent</code></td>
+<td>Integer</td>
+<td>Pass <code>1</code> to keep extension in memory, <code>0</code> to allow unloading.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if successful.</p>
+<h4 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">extensionID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;com.adobe.PProPanel&#39;</span><span class="p">;</span>
+<span class="c1">// 0 - while testing (to enable rapid reload);</span>
+<span class="c1">// 1 - for &quot;Never unload me, even when not visible.&quot;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">persistent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+
+<span class="nx">app</span><span class="p">.</span><span class="nx">setExtensionPersistent</span><span class="p">(</span><span class="nx">extensionID</span><span class="p">,</span><span class="w"> </span><span class="nx">persistent</span><span class="p">);</span>
+</code></pre></div>
+<hr />
+<h3 id="appsetscratchdiskpath">app.setScratchDiskPath()<a class="headerlink" href="#appsetscratchdiskpath" title="Permanent link">&para;</a></h3>
+<p><code>app.setScratchDiskPath(path, scratchDiskType)</code></p>
+<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
+<p>Specifies the path to be used for one of Premiere Pro's scratch disk paths.</p>
+<h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>path</code></td>
+<td>String</td>
+<td>The new path to be used.</td>
+</tr>
+<tr>
+<td><code>scratchDiskType</code></td>
+<td><code>ScratchDiskType</code> enum</td>
+<td>Enumerated value, must be one of the following:<ul><li><code>ScratchDiskType.FirstVideoCaptureFolder</code></li><li><code>ScratchDiskType.FirstAudioCaptureFolder</code></li><li><code>ScratchDiskType.FirstVideoPreviewFolder</code></li><li><code>ScratchDiskType.FirstAudioPreviewFolder</code></li><li><code>ScratchDiskType.FirstAutoSaveFolder</code></li><li><code>ScratchDiskType.FirstCCLibrariesFolder</code></li><li><code>ScratchDiskType.FirstCapsuleMediaFolder</code></li></ul></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if successful.</p>
+<h4 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">scratchPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Folder</span><span class="p">.</span><span class="nx">selectDialog</span><span class="p">(</span><span class="s1">&#39;Choose new scratch disk folder&#39;</span><span class="p">);</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">scratchPath</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">scratchPath</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">setScratchDiskPath</span><span class="p">(</span><span class="nx">scratchPath</span><span class="p">.</span><span class="nx">fsName</span><span class="p">,</span><span class="w"> </span><span class="nx">ScratchDiskType</span><span class="p">.</span><span class="nx">FirstAutoSaveFolder</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="appsetsdkeventmessage">app.setSDKEventMessage()<a class="headerlink" href="#appsetsdkeventmessage" title="Permanent link">&para;</a></h3>
+<p><code>app.setSDKEventMessage(message, decorator)</code></p>
+<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
+<p>Writes a string to Premiere Pro's Events panel.</p>
+<h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>message</code></td>
+<td>String</td>
+<td>A message to display.</td>
+</tr>
+<tr>
+<td><code>decorator</code></td>
+<td>String</td>
+<td>Decorator, one of:<ul><li><code>info</code></li><li><code>warning</code></li><li><code>error</code></li></ul></td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_12">Returns<a class="headerlink" href="#returns_12" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if successful.</p>
+<hr />
+<h3 id="appsetworkspace">app.setWorkspace()<a class="headerlink" href="#appsetworkspace" title="Permanent link">&para;</a></h3>
+<p><code>app.setWorkspace(workspace)</code></p>
+<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
+<p>Set workspace as active. Use <a href="#appgetworkspaces">app.getWorkspaces()</a> to get a list of all available workspaces.</p>
+<h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">&para;</a></h4>
+<table>
+<thead>
+<tr>
+<th>Argument</th>
+<th>Type</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>workspace</code></td>
+<td>String</td>
+<td>The name of the workspace.</td>
+</tr>
+</tbody>
+</table>
+<h4 id="returns_13">Returns<a class="headerlink" href="#returns_13" title="Permanent link">&para;</a></h4>
+<p>Boolean.</p>
+<h4 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h4>
+<p>Activate "Editing" workspace.</p>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Editing&#39;</span><span class="p">;</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">setWorkspace</span><span class="p">(</span><span class="nx">workspace</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Workspace changed to &quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&#39;</span><span class="p">);</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Could not set &quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; workspace&#39;</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="apptrace">app.trace()<a class="headerlink" href="#apptrace" title="Permanent link">&para;</a></h3>
+<p><code>app.trace()</code></p>
+<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
+<p>Writes a string to Premiere Pro's debug console.</p>
+<h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">&para;</a></h4>
+<p>Returns <code>true</code> if trace was added.</p>
+<hr />
+<h3 id="appgetprojectviewids">app.getProjectViewIDs()<a class="headerlink" href="#appgetprojectviewids" title="Permanent link">&para;</a></h3>
+<p><code>app.getProjectViewIDs()</code></p>
+<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
+<p>Returns the view IDs of currently-open views, associated with any project.</p>
+<h4 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_15">Returns<a class="headerlink" href="#returns_15" title="Permanent link">&para;</a></h4>
+<p>An array of view IDs; can be null.</p>
+<h4 id="example_14">Example<a class="headerlink" href="#example_14" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">getProjectViewIDs</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allViewIDs</span><span class="p">){</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// No views open.</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="appgetprojectfromviewid">app.getProjectFromViewID()<a class="headerlink" href="#appgetprojectfromviewid" title="Permanent link">&para;</a></h3>
+<p><code>app.getProjectFromViewID()</code></p>
+<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
+<p>Returns the <a href="../../general/project/">Project</a> associated with the provided View ID.</p>
+<h4 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">&para;</a></h4>
+<p>A View ID, obtained from <code>getProjectViewIDs</code>.</p>
+<h4 id="returns_16">Returns<a class="headerlink" href="#returns_16" title="Permanent link">&para;</a></h4>
+<p>A <a href="../../general/project/">Project</a> object, for the project associated with the provided View ID. Can be <code>null</code>.</p>
+<h4 id="example_15">Example<a class="headerlink" href="#example_15" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">getProjectViewIDs</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allViewIDs</span><span class="p">){</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">firstOne</span><span class="p">){</span>
+<span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">thisProject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getProjectFromViewID</span><span class="p">(</span><span class="nx">firstOne</span><span class="p">);</span>
+<span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">thisProject</span><span class="p">){</span>
+<span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">thisProject</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+<span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">            </span><span class="c1">// no project associated with that view ID.</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// No views open.</span>
+<span class="p">}</span>
+</code></pre></div>
+<hr />
+<h3 id="appgetcurrentprojectviewselection">app.getCurrentProjectViewSelection()<a class="headerlink" href="#appgetcurrentprojectviewselection" title="Permanent link">&para;</a></h3>
+<p><code>app.getCurrentProjectViewSelection()</code></p>
+<h4 id="description_37">Description<a class="headerlink" href="#description_37" title="Permanent link">&para;</a></h4>
+<p>Returns an array of <a href="../../item/projectitem/">ProjectItems</a> selected, in the current active project view.</p>
+<h4 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">&para;</a></h4>
+<p>None.</p>
+<h4 id="returns_17">Returns<a class="headerlink" href="#returns_17" title="Permanent link">&para;</a></h4>
+<p>An array of <a href="../../item/projectitem/">ProjectItems</a>; can be null.</p>
+<h4 id="example_16">Example<a class="headerlink" href="#example_16" title="Permanent link">&para;</a></h4>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">selectedItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">getCurrentProjectViewSelection</span><span class="p">();</span>
+<span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">selectedItems</span><span class="p">){</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">selectedItems</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+<span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="c1">// No projectItems selected.</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+
+
+
+
+
+  
+    
+  
+  
+
+
+  <aside class="md-source-file">
+    
+      
+  <span class="md-source-file__fact">
+    <span class="md-icon" title="Last update">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
+    </span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2025</span>
+  </span>
+
+    
+    
+    
+    
+  </aside>
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      All content is copyright Adobe Systems Incorporated.
+    </div>
+  
+  
+    Made with
+    <a
+      href="https://squidfunk.github.io/mkdocs-material/"
+      target="_blank" rel="noopener"
+    >
+      Material for MkDocs
+    </a>
+  
+</div>
+
+<!-- Print button -->
+<div class="md-copyright">
+  
+  <a href="../../print_page/" title="Print Site" class="md-content__button md-icon">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M18 3H6v4h12m1 5a1 1 0 0 1-1-1 1 1 0 0 1 1-1 1 1 0 0 1 1 1 1 1 0 0 1-1 1m-3 7H8v-5h8m3-6H5a3 3 0 0 0-3 3v6h4v4h12v-4h4v-6a3 3 0 0 0-3-3"/></svg>
+  </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    <script id="__config" type="application/json">{"base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.f8cc74c7.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.60a45f97.min.js"></script>
+      
+        <script src="../../js/print-site.js"></script>
+      
+    
+  </body>
+</html>
