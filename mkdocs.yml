@@ -1,0 +1,109 @@
+# Site metadata
+site_name: Premiere Pro Scripting Guide
+site_url: https://ppro-scripting.docsforadobe.dev/
+repo_url: https://github.com/docsforadobe/premiere-scripting-guide/
+repo_name: "premiere-scripting-guide"
+
+# Customize navigation
+nav:
+    - Home: index.md
+    - Introduction:
+        - Overview: introduction/extendscript-overview.md
+        - Changelog: introduction/changelog.md
+        - How to Execute ExtendScript in Premiere Pro: introduction/how-to-execute-scripts.md
+    - Application:
+        - Application object: application/application.md
+    - General:
+        - Anywhere object: general/anywhere.md
+        - Encoder object: general/encoder.md
+        - Marker object: general/marker.md
+        - Metadata object: general/metadata.md
+        - Production object: general/production.md
+        - Project object: general/project.md
+        - ProjectManager object: general/projectmanager.md
+        - Properties object: general/properties.md
+        - SourceMonitor object: general/sourcemonitor.md
+    - Item:
+        - ProjectItem object: item/projectitem.md
+        - TrackItem object: item/trackitem.md
+    - Sequence:
+        - Component object: sequence/component.md
+        - ComponentParam object: sequence/componentparam.md
+        - Sequence object: sequence/sequence.md
+        - Track object: sequence/track.md
+    - Other:
+        - AudioChannelMapping object: other/audiochannelmapping.md
+        - Time object: other/time.md
+    - Collection:
+        - Collection object: collection/collection.md
+        - ComponentCollection object: collection/componentcollection.md
+        - MarkerCollection object: collection/markercollection.md
+        - ProjectCollection object: collection/projectcollection.md
+        - ProjectItemCollection object: collection/projectitemcollection.md
+        - SequenceCollection object: collection/sequencecollection.md
+        - TrackCollection object: collection/trackcollection.md
+        - TrackItemCollection object: collection/trackitemcollection.md
+
+
+# Do not touch below-- shared for all docs
+
+copyright: All content is copyright Adobe Systems Incorporated.
+
+extra:
+    homepage: https://docsforadobe.dev
+
+theme:
+    name: material
+    custom_dir: overrides
+    features:
+        - announce.dismiss
+        - content.action.edit
+        - content.action.view
+        - search.highlight
+        - search.suggest
+        - toc.follow
+    palette:
+        # Palette toggle for dark mode
+        - media: "(prefers-color-scheme: dark)"
+          primary: black
+          scheme: slate
+          toggle:
+              icon: material/brightness-4
+              name: Switch to light mode
+
+        # Palette toggle for light mode
+        - media: "(prefers-color-scheme: light)"
+          primary: white
+          scheme: default
+          toggle:
+              icon: material/brightness-7
+              name: Switch to dark mode
+
+extra_css:
+    # CSS shared between the whole org
+    - https://docsforadobe.dev/_global/global.css
+    - https://docsforadobe.dev/_global/global-syntax-highlight.css
+
+    # CSS specific to this file
+    - _static/extra.css
+
+markdown_extensions:
+    - admonition
+    - pymdownx.superfences
+    - toc:
+        title: Page Contents
+        permalink: true
+        toc_depth: 3
+
+plugins:
+    - git-revision-date-localized
+    - search:
+        separator: '[\s\-,\.:!=\[\]()"/]+'
+
+    # Note: print-site must be last!
+    - print-site:
+        add_cover_page: true
+        add_print_site_banner: true
+        cover_page_template: "overrides/templates/print_site_cover_page.tpl"
+        print_page_title: "Offline Docs"
+        print_site_banner_template: "overrides/templates/print_site_banner.tpl"

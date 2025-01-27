@@ -1,0 +1,30 @@
+# TrackCollection object
+
+`app.project.sequences[index].audioTracks`
+<br/>
+`app.project.sequences[index].videoTracks`
+<br/>
+
+The TrackCollection object represents a collection of [Track objects](../sequence/track.md) in a sequence.
+
+!!! info
+    TrackCollection is a subclass of [Collection object](collection.md). All methods and attributes of Collection, in addition to those listed below, are available when working with TrackCollection.
+
+---
+
+## Attributes
+
+### TrackCollection.numTracks
+
+`app.project.sequences[index].audioTracks.numTracks`
+<br/>
+`app.project.sequences[index].videoTracks.numTracks`
+<br/>
+
+#### Description
+
+The total number of tracks in the sequence.
+
+#### Type
+
+Integer, read-only.
