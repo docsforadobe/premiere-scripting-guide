@@ -1,4 +1,1 @@
-mkdocs
-mkdocs-material
-mkdocs-git-revision-date-localized-plugin
-mkdocs-print-site-plugin
+-r docs/_global/requirements.txt
