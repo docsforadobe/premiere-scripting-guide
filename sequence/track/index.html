@@ -1665,39 +1665,31 @@
 
 
 <h1 id="track-object">Track object<a class="headerlink" href="#track-object" title="Permanent link">&para;</a></h1>
-<p><code>app.project.sequences[index].audioTracks[index]</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index]</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index]</code></p>
+<p><code>app.project.sequences[index].videoTracks[index]</code></p>
 <h4 id="description">Description<a class="headerlink" href="#description" title="Permanent link">&para;</a></h4>
 <p>The Track object represents a video or audio track, within a <a href="../sequence/">Sequence object</a>.</p>
 <hr />
 <h2 id="attributes">Attributes<a class="headerlink" href="#attributes" title="Permanent link">&para;</a></h2>
 <h3 id="trackclips">Track.clips<a class="headerlink" href="#trackclips" title="Permanent link">&para;</a></h3>
-<p><code>app.project.sequences[index].audioTracks[index].clips</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index].clips</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index].clips</code></p>
+<p><code>app.project.sequences[index].videoTracks[index].clips</code></p>
 <h4 id="description_1">Description<a class="headerlink" href="#description_1" title="Permanent link">&para;</a></h4>
 <p>An array of <a href="../../item/trackitem/">Track item</a> objects, contained within the track, in temporal order.</p>
 <h4 id="type">Type<a class="headerlink" href="#type" title="Permanent link">&para;</a></h4>
 <p><a href="../../collection/trackitemcollection/">TrackItemCollection object</a>, read-only;</p>
 <hr />
 <h3 id="trackid">Track.id<a class="headerlink" href="#trackid" title="Permanent link">&para;</a></h3>
-<p><code>app.project.sequences[index].audioTracks[index].id</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index].id</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index].id</code></p>
+<p><code>app.project.sequences[index].videoTracks[index].id</code></p>
 <h4 id="description_2">Description<a class="headerlink" href="#description_2" title="Permanent link">&para;</a></h4>
 <p>This is the ordinal assigned to the track, upon creation.</p>
 <h4 id="type_1">Type<a class="headerlink" href="#type_1" title="Permanent link">&para;</a></h4>
 <p>Integer, read-only.</p>
 <hr />
 <h3 id="trackmediatype">Track.mediaType<a class="headerlink" href="#trackmediatype" title="Permanent link">&para;</a></h3>
-<p><code>app.project.sequences[index].audioTracks[index].mediaType</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index].mediaType</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index].mediaType</code></p>
+<p><code>app.project.sequences[index].videoTracks[index].mediaType</code></p>
 <h4 id="description_3">Description<a class="headerlink" href="#description_3" title="Permanent link">&para;</a></h4>
 <p>The type of media, contained in this track.</p>
 <h4 id="type_2">Type<a class="headerlink" href="#type_2" title="Permanent link">&para;</a></h4>
@@ -1708,20 +1700,16 @@
 </ul>
 <hr />
 <h3 id="trackname">Track.name<a class="headerlink" href="#trackname" title="Permanent link">&para;</a></h3>
-<p><code>app.project.sequences[index].audioTracks[index].name</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index].name</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index].name</code></p>
+<p><code>app.project.sequences[index].videoTracks[index].name</code></p>
 <h4 id="description_4">Description<a class="headerlink" href="#description_4" title="Permanent link">&para;</a></h4>
 <p>The name of the track.</p>
 <h4 id="type_3">Type<a class="headerlink" href="#type_3" title="Permanent link">&para;</a></h4>
 <p>String; read-only.</p>
 <hr />
 <h3 id="tracktransitions">Track.transitions<a class="headerlink" href="#tracktransitions" title="Permanent link">&para;</a></h3>
-<p><code>app.project.sequences[index].audioTracks[index].transitions</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index].transitions</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index].transitions</code></p>
+<p><code>app.project.sequences[index].videoTracks[index].transitions</code></p>
 <h4 id="description_5">Description<a class="headerlink" href="#description_5" title="Permanent link">&para;</a></h4>
 <p>An array of transitions objects, contained within the track, in temporal order.</p>
 <h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
@@ -1729,10 +1717,8 @@
 <hr />
 <h2 id="methods">Methods<a class="headerlink" href="#methods" title="Permanent link">&para;</a></h2>
 <h3 id="trackinsertclip">Track.insertClip()<a class="headerlink" href="#trackinsertclip" title="Permanent link">&para;</a></h3>
-<p><code>app.project.sequences[index].audioTracks[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)</code></p>
+<p><code>app.project.sequences[index].videoTracks[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)</code></p>
 <h4 id="description_6">Description<a class="headerlink" href="#description_6" title="Permanent link">&para;</a></h4>
 <p>Adds a 'clip' (media segment from a <a href="../../item/projectitem/">ProjectItem object</a>) to the track, at the specified time. Media will be inserted, at that time.</p>
 <h4 id="parameters">Parameters<a class="headerlink" href="#parameters" title="Permanent link">&para;</a></h4>
@@ -1771,10 +1757,8 @@
 <p>None.</p>
 <hr />
 <h3 id="trackismuted">Track.isMuted()<a class="headerlink" href="#trackismuted" title="Permanent link">&para;</a></h3>
-<p><code>app.project.sequences[index].audioTracks[index].isMuted()</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index].isMuted()</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index].isMuted()</code></p>
+<p><code>app.project.sequences[index].videoTracks[index].isMuted()</code></p>
 <h4 id="description_7">Description<a class="headerlink" href="#description_7" title="Permanent link">&para;</a></h4>
 <p>Retrieves the current mute state, of the track.</p>
 <h4 id="parameters_1">Parameters<a class="headerlink" href="#parameters_1" title="Permanent link">&para;</a></h4>
@@ -1783,10 +1767,8 @@
 <p>Returns <code>true</code> if track is currently muted; <code>false</code> if not.</p>
 <hr />
 <h3 id="trackoverwriteclip">Track.overwriteClip()<a class="headerlink" href="#trackoverwriteclip" title="Permanent link">&para;</a></h3>
-<p><code>app.project.sequences[index].audioTracks[index].overwriteClip(projectItem, time)</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index].overwriteClip(projectItem, time)</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index].overwriteClip(projectItem, time)</code></p>
+<p><code>app.project.sequences[index].videoTracks[index].overwriteClip(projectItem, time)</code></p>
 <h4 id="description_8">Description<a class="headerlink" href="#description_8" title="Permanent link">&para;</a></h4>
 <p>Adds a 'clip' (media segment from a <a href="../../item/projectitem/">ProjectItem object</a>) to the track, at the specified time. This will overwrite any existing media, at that time.</p>
 <h4 id="parameters_2">Parameters<a class="headerlink" href="#parameters_2" title="Permanent link">&para;</a></h4>
@@ -1815,10 +1797,8 @@
 <p>Returns <code>true</code>.</p>
 <hr />
 <h3 id="tracksetmute">Track.setMute()<a class="headerlink" href="#tracksetmute" title="Permanent link">&para;</a></h3>
-<p><code>app.project.sequences[index].audioTracks[index].setMute(isMuted)</code>
-<br/>
-<code>app.project.sequences[index].videoTracks[index].setMute(isMuted)</code>
-<br/></p>
+<p><code>app.project.sequences[index].audioTracks[index].setMute(isMuted)</code></p>
+<p><code>app.project.sequences[index].videoTracks[index].setMute(isMuted)</code></p>
 <h4 id="description_9">Description<a class="headerlink" href="#description_9" title="Permanent link">&para;</a></h4>
 <p>Sets the mute state, of the track.</p>
 <h4 id="parameters_3">Parameters<a class="headerlink" href="#parameters_3" title="Permanent link">&para;</a></h4>
@@ -1860,7 +1840,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">January 25, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">February 10, 2025</span>
   </span>
 
     
