@@ -1,9 +1,9 @@
 # TrackItem object
 
 `app.project.sequences[index].audioTracks[index].clips[index]`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index]`
-<br/>
+
 
 #### Description
 
@@ -16,9 +16,9 @@ The TrackItem object represents an item on a video or audio track, within a [Seq
 ### TrackItem.components
 
 `app.project.sequences[index].audioTracks[index].clips[index].components`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components`
-<br/>
+
 
 #### Description
 
@@ -33,9 +33,9 @@ The components associated with this trackItem. This can include intrinsic transf
 ### TrackItem.duration
 
 `app.project.sequences[index].audioTracks[index].clips[index].duration`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].duration`
-<br/>
+
 
 #### Description
 
@@ -50,9 +50,9 @@ The duration of the trackItem.
 ### TrackItem.end
 
 `app.project.sequences[index].audioTracks[index].clips[index].end`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].end`
-<br/>
+
 
 #### Description
 
@@ -70,9 +70,9 @@ The visible end time of the trackItem in the sequence, relative to the beginning
 ### TrackItem.inPoint
 
 `app.project.sequences[index].audioTracks[index].clips[index].inPoint`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].inPoint`
-<br/>
+
 
 #### Description
 
@@ -87,9 +87,9 @@ The in point set on the source for this trackItem instance, relative to the begi
 ### TrackItem.matchName
 
 `app.project.sequences[index].audioTracks[index].clips[index].matchName`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].matchName`
-<br/>
+
 
 #### Description
 
@@ -104,9 +104,9 @@ String; read-only.
 ### TrackItem.mediaType
 
 `app.project.sequences[index].audioTracks[index].clips[index].mediaType`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].mediaType`
-<br/>
+
 
 #### Description
 
@@ -124,9 +124,9 @@ String, one of:
 ### TrackItem.name
 
 `app.project.sequences[index].audioTracks[index].clips[index].name`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].name`
-<br/>
+
 
 #### Description
 
@@ -141,9 +141,9 @@ String; read/write.
 ### TrackItem.nodeId
 
 `app.project.sequences[index].audioTracks[index].clips[index].nodeId`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].nodeId`
-<br/>
+
 
 #### Description
 
@@ -158,9 +158,9 @@ String.
 ### TrackItem.outPoint
 
 `app.project.sequences[index].audioTracks[index].clips[index].outPoint`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].outPoint`
-<br/>
+
 
 #### Description
 
@@ -175,9 +175,9 @@ The out point set on the source for this TrackItem instance, relative to the beg
 ### TrackItem.projectItem
 
 `app.project.sequences[index].audioTracks[index].clips[index].projectItem`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].projectItem`
-<br/>
+
 
 #### Description
 
@@ -192,9 +192,9 @@ A [ProjectItem object](projectitem.md).
 ### TrackItem.start
 
 `app.project.sequences[index].audioTracks[index].clips[index].start`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].start`
-<br/>
+
 
 #### Description
 
@@ -209,9 +209,9 @@ The visible start time of the trackItem in the sequence, relative to the beginni
 ### TrackItem.type
 
 `app.project.sequences[index].audioTracks[index].clips[index].type`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].type`
-<br/>
+
 
 #### Description
 
@@ -228,9 +228,9 @@ Number, `1` means video, `2` means audio.
 ### TrackItem.getMGTComponent()
 
 `app.project.sequences[index].videotracks[index].getMGTComponent`
-<br/>
+
 `app.project.sequences[index].audiotracks[index].getMGTComponent`
-<br/>
+
 
 #### Description
 
@@ -254,9 +254,9 @@ A Component object representing the parameters of the .mogrt, which the creator 
 ### TrackItem.getSpeed()
 
 `app.project.sequences[index].audioTracks[index].clips[index].getSpeed()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].getSpeed()`
-<br/>
+
 
 #### Description
 
@@ -275,9 +275,9 @@ Returns the speed multiplier applied to the TrackItem, as a Float. No speed adju
 ### TrackItem.isAdjustmentLayer()
 
 `app.project.sequences[index].audioTracks[index].clips[index].isAdjustmentLayer()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].isAdjustmentLayer()`
-<br/>
+
 
 #### Description
 
@@ -296,9 +296,9 @@ Returns `true` if the trackitem is an adjustment layer; `false` if not.
 ### TrackItem.isSpeedReversed()mm
 
 `app.project.sequences[index].audioTracks[index].clips[index].isSpeedReversed()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].isSpeedReversed()`
-<br/>
+
 
 #### Description
 
@@ -317,9 +317,9 @@ Returns `1` if TrackItem is reversed; `0` if not.
 ### TrackItem.isSelected()
 
 `app.project.sequences[index].audioTracks[index].clips[index].isSelected()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].isSelected()`
-<br/>
+
 
 #### Description
 
@@ -338,9 +338,9 @@ Returns `true` if trackItem is selected; `false` if not.
 ### TrackItem.setSelected()
 
 `app.project.sequences[index].audioTracks[index].clips[index].setSelected(state, updateUI)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].setSelected(state, updateUI)`
-<br/>
+
 
 #### Description
 
@@ -362,9 +362,9 @@ Returns `0` if successful.
 ### TrackItem.getMatchName()
 
 `app.project.sequences[index].audioTracks[index].clips[index].getMatchName()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].getMatchName()`
-<br/>
+
 
 #### Description
 
@@ -383,9 +383,9 @@ Returns the match name as a String if successful.
 ### TrackItem.remove()
 
 `app.project.sequences[index].audioTracks[index].clips[index].remove(inRipple, inAlignToVideo)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].remove(inRipple, inAlignToVideo)`
-<br/>
+
 
 #### Description
 
@@ -407,9 +407,9 @@ Returns `0` if successful.
 ### TrackItem.disabled
 
 `app.project.sequences[index].audioTracks[index].clips[index].disabled`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].disabled`
-<br/>
+
 
 #### Description
 
@@ -430,9 +430,9 @@ Returns `0` if successful.
 ### TrackItem.move()
 
 `app.project.sequences[index].audioTracks[index].clips[index].move(newInPoint)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].move(newInPoint)`
-<br/>
+
 
 #### Description
 

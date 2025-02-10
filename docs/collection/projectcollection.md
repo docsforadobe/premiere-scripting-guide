@@ -1,9 +1,9 @@
 # ProjectCollection object
 
 `app.projects`
-<br/>
+
 `app.production.projects`
-<br/>
+
 
 The ProjectCollection object represents a collection of [Project objects](../general/project.md).
 
@@ -17,9 +17,9 @@ The ProjectCollection object represents a collection of [Project objects](../gen
 ### ProjectCollection.numProjects
 
 `app.projects.numProjects`
-<br/>
+
 `app.production.projects.numProjects`
-<br/>
+
 
 #### Description
 

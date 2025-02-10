@@ -1,9 +1,9 @@
 # Component object
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index]`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index]`
-<br/>
+
 
 #### Description
 
@@ -16,9 +16,9 @@ The Component object represents something which has been added or applied to a t
 ### Component.displayName
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].displayName`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].displayName`
-<br/>
+
 
 #### Description
 
@@ -33,9 +33,9 @@ String; read-only.
 ### Component.matchName
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].matchName`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].matchName`
-<br/>
+
 
 #### Description
 
@@ -50,9 +50,9 @@ String; read-only.
 ### Component.properties
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties`
-<br/>
+
 
 #### Description
 

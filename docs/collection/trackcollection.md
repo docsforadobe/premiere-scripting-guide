@@ -1,9 +1,9 @@
 # TrackCollection object
 
 `app.project.sequences[index].audioTracks`
-<br/>
+
 `app.project.sequences[index].videoTracks`
-<br/>
+
 
 The TrackCollection object represents a collection of [Track objects](../sequence/track.md) in a sequence.
 
@@ -17,9 +17,9 @@ The TrackCollection object represents a collection of [Track objects](../sequenc
 ### TrackCollection.numTracks
 
 `app.project.sequences[index].audioTracks.numTracks`
-<br/>
+
 `app.project.sequences[index].videoTracks.numTracks`
-<br/>
+
 
 #### Description
 

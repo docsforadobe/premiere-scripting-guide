@@ -1,9 +1,9 @@
 # MarkerCollection object
 
 `app.project.sequences[index].markers`
-<br/>
+
 `app.project.rootItem.children[index].getMarkers()`
-<br/>
+
 
 The MarkerCollection object represents a collection of [Marker objects](../general/marker.md) in a [ProjectItem object](../item/projectitem.md) and [Sequence object](../sequence/sequence.md).
 
@@ -17,9 +17,9 @@ The MarkerCollection object represents a collection of [Marker objects](../gener
 ### MarkerCollection.numMarkers
 
 `app.project.sequences[index].markers.numMarkers`
-<br/>
+
 `app.project.rootItem.children[index].getMarkers().numMarkers`
-<br/>
+
 
 #### Description
 
@@ -36,9 +36,9 @@ Integer, read-only.
 ### MarkerCollection.createMarker()
 
 `app.project.sequences[index].markers.createMarker(time)`
-<br/>
+
 `app.project.rootItem.children[index].getMarkers().createMarker(time)`
-<br/>
+
 
 #### Description
 
@@ -59,9 +59,9 @@ Create a new [Marker object](../general/marker.md) on a project item or a sequen
 ### MarkerCollection.deleteMarker()
 
 `app.project.sequences[index].markers.deleteMarker(marker)`
-<br/>
+
 `app.project.rootItem.children[index].getMarkers().deleteMarker(marker)`
-<br/>
+
 
 #### Description
 
@@ -99,9 +99,9 @@ alert('Removed ' + count.toString() + ' markers');
 ### MarkerCollection.getFirstMarker()
 
 `app.project.sequences[index].markers.getFirstMarker()`
-<br/>
+
 `app.project.rootItem.children[index].getMarkers().getFirstMarker()`
-<br/>
+
 
 #### Description
 
@@ -120,9 +120,9 @@ None.
 ### MarkerCollection.getLastMarker()
 
 `app.project.sequences[index].markers.getLastMarker()`
-<br/>
+
 `app.project.rootItem.children[index].getMarkers().getLastMarker()`
-<br/>
+
 
 #### Description
 
@@ -141,9 +141,9 @@ None.
 ### MarkerCollection.getNextMarker()
 
 `app.project.sequences[index].markers.getNextMarker(currentMarker)`
-<br/>
+
 `app.project.rootItem.children[index].getMarkers().getNextMarker(currentMarker)`
-<br/>
+
 
 #### Description
 
@@ -164,9 +164,9 @@ Get the next available marker, sorted by seconds, starting from a given one.
 ### MarkerCollection.getPrevMarker()
 
 `app.project.sequences[index].markers.getPrevMarker(currentMarker)`
-<br/>
+
 `app.project.rootItem.children[index].getMarkers().getPrevMarker(currentMarker)`
-<br/>
+
 
 #### Description
 

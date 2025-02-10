@@ -1,9 +1,9 @@
 # TrackItemCollection object
 
 `app.project.sequences[index].audioTracks[index].clips`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips`
-<br/>
+
 
 The TrackItemCollection object represents a collection of [TrackItem objects](../item/trackitem.md) on a track.
 
@@ -17,9 +17,9 @@ The TrackItemCollection object represents a collection of [TrackItem objects](..
 ### TrackItemCollection.numItems
 
 `app.project.sequences[index].audioTracks[index].clips.numItems`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips.numItems`
-<br/>
+
 
 #### Description
 

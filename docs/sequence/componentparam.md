@@ -1,9 +1,9 @@
 # ComponentParam object
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index]`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index]`
-<br/>
+
 
 #### Description
 
@@ -23,9 +23,9 @@ The ComponentParam object represents a parameter associated with a component, ap
 ### ComponentParam.displayName
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].displayName`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].displayName`
-<br/>
+
 
 #### Description
 
@@ -42,9 +42,9 @@ String; read-only.
 ### ComponentParam.addKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].addKey(time)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].addKey(time)`
-<br/>
+
 
 #### Description
 
@@ -65,9 +65,9 @@ Returns `0` if successful.
 ### ComponentParam.areKeyframesSupported()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].areKeyframesSupported()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].areKeyframesSupported()`
-<br/>
+
 
 #### Description
 
@@ -86,9 +86,9 @@ Returns `true` if keyframes are supported; `false` if not.
 ### ComponentParam.findNearestKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].findNearestKey(timeToCheck, threshold)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findNearestKey(timeToCheck, threshold)`
-<br/>
+
 
 #### Description
 
@@ -110,9 +110,9 @@ Returns a Time value, indicating when the closest keyframe is.
 ### ComponentParam.findNextKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].findNextKey(timeToCheck)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findNextKey(timeToCheck)`
-<br/>
+
 
 #### Description
 
@@ -133,9 +133,9 @@ Returns a Time value, indicating when the closest keyframe is, or `0` if there i
 ### ComponentParam.findPreviousKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].findPreviousKey(timeToCheck)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].findPreviousKey(timeToCheck)`
-<br/>
+
 
 #### Description
 
@@ -156,9 +156,9 @@ Returns a Time value, indicating when the closest keyframe is, or `0` if there i
 ### ComponentParam.getColorValue()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getColorValue()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getColorValue()`
-<br/>
+
 
 #### Description
 
@@ -177,9 +177,9 @@ Returns a Color containing the values found in the component parameter stream, o
 ### ComponentParam.getKeys()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getKeys()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getKeys()`
-<br/>
+
 
 #### Description
 
@@ -198,9 +198,9 @@ Returns an array of Time values, indicating at what time each keyframe occurs, o
 ### ComponentParam.getValue()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getValue()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getValue()`
-<br/>
+
 
 #### Description
 
@@ -219,9 +219,9 @@ Returns the value of the component parameter stream; the return varies with stre
 ### ComponentParam.getValueAtKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getValueAtKey(time)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getValueAtKey(time)`
-<br/>
+
 
 #### Description
 
@@ -242,9 +242,9 @@ Returns the value of the component parameter stream at `time`, or `0` if unsucce
 ### ComponentParam.getValueAtTime()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].getValueAtTime(time)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].getValueAtTime(time)`
-<br/>
+
 
 #### Description
 
@@ -265,9 +265,9 @@ Returns the value of the component parameter stream at `time`, or `0` if unsucce
 ### ComponentParam.isTimeVarying()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].isTimeVarying()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].isTimeVarying()`
-<br/>
+
 
 #### Description
 
@@ -286,9 +286,9 @@ Returns `true` if the parameter varies over time; `false` if not.
 ### ComponentParam.removeKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].removeKey(time)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].removeKey(time)`
-<br/>
+
 
 #### Description
 
@@ -309,9 +309,9 @@ Returns `0` if successful.
 ### ComponentParam.removeKeyRange()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].removeKeyRange(startTime, endTime)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].removeKeyRange(startTime, endTime)`
-<br/>
+
 
 #### Description
 
@@ -333,9 +333,9 @@ Returns `0` if successful.
 ### ComponentParam.setColorValue()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setColorValue(alpha, red, green, blue, updateUI)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setColorValue(alpha, red, green, blue, updateUI)`
-<br/>
+
 
 #### Description
 
@@ -360,9 +360,9 @@ Returns `0` if successful.
 ### ComponentParam.setInterpolationTypeAtKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType, [updateUI])`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setInterpolationTypeAtKey(time, interpretationType, [updateUI])`
-<br/>
+
 
 #### Description
 
@@ -385,9 +385,9 @@ Returns `0` if successful.
 ### ComponentParam.setTimeVarying()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setTimeVarying(varying)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setTimeVarying(varying)`
-<br/>
+
 
 #### Description
 
@@ -408,9 +408,9 @@ Returns `0` if successful.
 ### ComponentParam.setValue()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setValue(value, updateUI)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValue(value, updateUI)`
-<br/>
+
 
 #### Description
 
@@ -432,9 +432,9 @@ Returns `0` if successful.
 ### ComponentParam.setValueAtKey()
 
 `app.project.sequences[index].audioTracks[index].clips[index].components[index].properties[index].setValueAtKey(time, value, updateUI)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips[index].components[index].properties[index].setValueAtKey(time, value, updateUI)`
-<br/>
+
 
 #### Description
 

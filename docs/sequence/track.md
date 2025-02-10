@@ -1,9 +1,9 @@
 # Track object
 
 `app.project.sequences[index].audioTracks[index]`
-<br/>
+
 `app.project.sequences[index].videoTracks[index]`
-<br/>
+
 
 #### Description
 
@@ -16,9 +16,9 @@ The Track object represents a video or audio track, within a [Sequence object](s
 ### Track.clips
 
 `app.project.sequences[index].audioTracks[index].clips`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].clips`
-<br/>
+
 
 #### Description
 
@@ -33,9 +33,9 @@ An array of [Track item](../item/trackitem.md) objects, contained within the tra
 ### Track.id
 
 `app.project.sequences[index].audioTracks[index].id`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].id`
-<br/>
+
 
 #### Description
 
@@ -50,9 +50,9 @@ Integer, read-only.
 ### Track.mediaType
 
 `app.project.sequences[index].audioTracks[index].mediaType`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].mediaType`
-<br/>
+
 
 #### Description
 
@@ -70,9 +70,9 @@ String, read-only. One of:
 ### Track.name
 
 `app.project.sequences[index].audioTracks[index].name`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].name`
-<br/>
+
 
 #### Description
 
@@ -87,9 +87,9 @@ String; read-only.
 ### Track.transitions
 
 `app.project.sequences[index].audioTracks[index].transitions`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].transitions`
-<br/>
+
 
 #### Description
 
@@ -106,9 +106,9 @@ An array of transitions objects, contained within the track, in temporal order.
 ### Track.insertClip()
 
 `app.project.sequences[index].audioTracks[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].insertClip(projectItem, time, vTrackIndex, aTrackIndex)`
-<br/>
+
 
 #### Description
 
@@ -132,9 +132,9 @@ None.
 ### Track.isMuted()
 
 `app.project.sequences[index].audioTracks[index].isMuted()`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].isMuted()`
-<br/>
+
 
 #### Description
 
@@ -153,9 +153,9 @@ Returns `true` if track is currently muted; `false` if not.
 ### Track.overwriteClip()
 
 `app.project.sequences[index].audioTracks[index].overwriteClip(projectItem, time)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].overwriteClip(projectItem, time)`
-<br/>
+
 
 #### Description
 
@@ -177,9 +177,9 @@ Returns `true`.
 ### Track.setMute()
 
 `app.project.sequences[index].audioTracks[index].setMute(isMuted)`
-<br/>
+
 `app.project.sequences[index].videoTracks[index].setMute(isMuted)`
-<br/>
+
 
 #### Description
 
