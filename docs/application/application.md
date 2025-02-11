@@ -83,7 +83,8 @@ String; read-only.
 Get a path to a currently active preference file
 
 ```js
-app.getAppPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
+app.getAppPrefPath;
+// /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 ```
 
 ---
@@ -105,7 +106,8 @@ String; read-only.
 Get a path to a currently active configuration folder
 
 ```js
-app.getAppSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
+app.getAppSystemPrefPath;
+// /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 ```
 
 ---
@@ -127,7 +129,8 @@ String; read-only.
 Get a path to a currently active preference file
 
 ```js
-app.getPProPrefPath; // /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
+app.getPProPrefPath;
+// /Users/USERNAME/Documents/Adobe/Premiere Pro/14.0/Profile-USERNAME/
 ```
 
 ---
@@ -149,7 +152,8 @@ String; read-only.
 Get a path to a currently active configuration folder
 
 ```js
-app.getPProSystemPrefPath; // /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
+app.getPProSystemPrefPath;
+// /Library/Application Support/Adobe/Adobe Premiere Pro 2020/
 ```
 
 ---
@@ -171,7 +175,8 @@ String; read-only.
 Get a path to a Learn panel's directory
 
 ```js
-app.learnPanelContentDirPath; // /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/
+app.learnPanelContentDirPath;
+// /Users/Shared/Adobe/Premiere Pro 2020/Learn Panel/
 ```
 
 ---
@@ -193,7 +198,8 @@ String; read-only.
 Get a path to a Learn panel's example projects' directory
 
 ```js
-app.learnPanelExampleProjectDirPath; // /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/
+app.learnPanelExampleProjectDirPath;
+// /Users/Shared/Adobe/Premiere Pro/14.0/Tutorial/Going Home project/
 ```
 
 ---
@@ -229,7 +235,8 @@ String; read-only.
 Get a path to applications executable file.
 
 ```js
-app.path; // /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
+app.path;
+// /Applications/Adobe Premiere Pro 2020/Adobe Premiere Pro 2020.app/
 ```
 
 ---
@@ -625,10 +632,22 @@ Specifies the path to be used for one of Premiere Pro's scratch disk paths.
 
 #### Parameters
 
-|     Parameter     |          Type          |                                                                                                                                                                                                    Description                                                                                                                                                                                                    |
-| ----------------- | ---------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `path`            | String                 | The new path to be used.                                                                                                                                                                                                                                                                                                                                                                                          |
-| `scratchDiskType` | `ScratchDiskType` enum | Enumerated value, must be one of the following:<ul><li>`ScratchDiskType.FirstVideoCaptureFolder`</li><li>`ScratchDiskType.FirstAudioCaptureFolder`</li><li>`ScratchDiskType.FirstVideoPreviewFolder`</li><li>`ScratchDiskType.FirstAudioPreviewFolder`</li><li>`ScratchDiskType.FirstAutoSaveFolder`</li><li>`ScratchDiskType.FirstCCLibrariesFolder`</li><li>`ScratchDiskType.FirstCapsuleMediaFolder`</li></ul> |
+
++-------------------+------------------------+-------------------------------------------------+
+|     Parameter     |          Type          |                   Description                   |
++===================+========================+=================================================+
+| `path`            | String                 | The new path to be used.                        |
++-------------------+------------------------+-------------------------------------------------+
+| `scratchDiskType` | `ScratchDiskType` enum | Enumerated value, must be one of the following: |
+|                   |                        |                                                 |
+|                   |                        | - `ScratchDiskType.FirstVideoCaptureFolder`     |
+|                   |                        | - `ScratchDiskType.FirstAudioCaptureFolder`     |
+|                   |                        | - `ScratchDiskType.FirstVideoPreviewFolder`     |
+|                   |                        | - `ScratchDiskType.FirstAudioPreviewFolder`     |
+|                   |                        | - `ScratchDiskType.FirstAutoSaveFolder`         |
+|                   |                        | - `ScratchDiskType.FirstCCLibrariesFolder`      |
+|                   |                        | - `ScratchDiskType.FirstCapsuleMediaFolder`     |
++-------------------+------------------------+-------------------------------------------------+
 
 #### Returns
 
@@ -655,10 +674,17 @@ Writes a string to Premiere Pro's Events panel.
 
 #### Parameters
 
-|  Parameter  |  Type  |                                 Description                                  |
-| ----------- | ------ | ---------------------------------------------------------------------------- |
-| `message`   | String | A message to display.                                                        |
-| `decorator` | String | Decorator, one of:<ul><li>`info`</li><li>`warning`</li><li>`error`</li></ul> |
++-------------+--------+-----------------------+
+|  Parameter  |  Type  |      Description      |
++=============+========+=======================+
+| `message`   | String | A message to display. |
++-------------+--------+-----------------------+
+| `decorator` | String | Decorator, one of:    |
+|             |        |                       |
+|             |        | - `info`              |
+|             |        | - `warning`           |
+|             |        | - `error`             |
++-------------+--------+-----------------------+
 
 #### Returns
 

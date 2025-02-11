@@ -142,11 +142,20 @@ Adds a new field of the specified type to Premiere Pro's private project metadat
 
 #### Parameters
 
-|    Parameter    |  Type   |                                                         Description                                                          |
-| --------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
-| `propertyName`  | String  | A name of property to be added.                                                                                              |
-| `propertyLabel` | String  | A label of property to be added.                                                                                             |
-| `propertyType`  | Integer | Must be one of the following:<ul><li>`0` - Integer</li><li>`1` - `Real`</li><li>`2` - String</li><li>`3` - Boolean</li></ul> |
++-----------------+---------+----------------------------------+
+|    Parameter    |  Type   |           Description            |
++=================+=========+==================================+
+| `propertyName`  | String  | A name of property to be added.  |
++-----------------+---------+----------------------------------+
+| `propertyLabel` | String  | A label of property to be added. |
++-----------------+---------+----------------------------------+
+| `propertyType`  | Integer | Must be one of the following:    |
+|                 |         |                                  |
+|                 |         | - `0` - Integer                  |
+|                 |         | - `1` - `Real`                   |
+|                 |         | - `2` - String                   |
+|                 |         | - `3` - Boolean                  |
++-----------------+---------+----------------------------------+
 
 #### Returns
 
@@ -749,10 +758,27 @@ Changes the specified scratch disk path to a new path.
 
 #### Parameters
 
-|     Parameter     |          Type          |                                                                                                                                                                                                                                                                                                                                    Description                                                                                                                                                                                                                                                                                                                                    |
-| ----------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `newPath`         | String                 | A new path.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
-| `scratchDiskType` | `ScratchDiskType` enum | One of: <ul><li>`ScratchDiskType.FirstVideoCaptureFolder`</li><li>`ScratchDiskType.FirstAudioCaptureFolder`</li><li>`ScratchDiskType.FirstVideoPreviewFolder`</li><li>`ScratchDiskType.FirstAudioPreviewFolder`</li><li>`ScratchDiskType.FirstAutoSaveFolder`</li><li>`ScratchDiskType.FirstCCLibrariesFolder`</li><li>`ScratchDiskType.FirstCapsuleMediaFolder`</li><li>`ScratchDiskType.FirstAudioCaptureFolder`</li><li>`ScratchDiskType.FirstVideoPreviewFolder`</li><li>`ScratchDiskType.FirstAudioPreviewFolder`</li><li>`ScratchDiskType.FirstAutoSaveFolder`</li><li>`ScratchDiskType.FirstCCLibrariesFolder`</li><li>`ScratchDiskType.FirstCapsuleMediaFolder`</li></ul> |
++-------------------+------------------------+---------------------------------------------+
+|     Parameter     |          Type          |                 Description                 |
++===================+========================+=============================================+
+| `newPath`         | String                 | A new path.                                 |
++-------------------+------------------------+---------------------------------------------+
+| `scratchDiskType` | `ScratchDiskType` enum | One of:                                     |
+|                   |                        |                                             |
+|                   |                        | - `ScratchDiskType.FirstVideoCaptureFolder` |
+|                   |                        | - `ScratchDiskType.FirstAudioCaptureFolder` |
+|                   |                        | - `ScratchDiskType.FirstVideoPreviewFolder` |
+|                   |                        | - `ScratchDiskType.FirstAudioPreviewFolder` |
+|                   |                        | - `ScratchDiskType.FirstAutoSaveFolder`     |
+|                   |                        | - `ScratchDiskType.FirstCCLibrariesFolder`  |
+|                   |                        | - `ScratchDiskType.FirstCapsuleMediaFolder` |
+|                   |                        | - `ScratchDiskType.FirstAudioCaptureFolder` |
+|                   |                        | - `ScratchDiskType.FirstVideoPreviewFolder` |
+|                   |                        | - `ScratchDiskType.FirstAudioPreviewFolder` |
+|                   |                        | - `ScratchDiskType.FirstAutoSaveFolder`     |
+|                   |                        | - `ScratchDiskType.FirstCCLibrariesFolder`  |
+|                   |                        | - `ScratchDiskType.FirstCapsuleMediaFolder` |
++-------------------+------------------------+---------------------------------------------+
 
 #### Returns
 

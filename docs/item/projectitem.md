@@ -533,19 +533,48 @@ None.
 
 A footage interpretation structure, or `0` if unsuccessful.
 
-|         Property          |  Type   |                                                                                    Possible Values                                                                                     | Description |
-| ------------------------- | ------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------- |
-| `alphaUsage`              | Integer | Alpha, will be one of:<ul><li>`0` - `ALPHACHANNEL_NONE`</li><li>`1` - `ALPHACHANNEL_STRAIGHT`</li><li>`2` - `ALPHACHANNEL_PREMULTIPLIED`</li><li>`3` - `ALPHACHANNEL_IGNORE`</li></ul> |             |
-| `fieldType`               | Integer | Field type, one of:<ul><li>`-1` - `FIELDTYPE_DEFAULT`</li><li>`0` - `FIELDTYPE_PROGRESSIVE`</li><li>`1` - `FIELDTYPE_UPPERFIRST`</li><li>`2` - `FIELDTYPE_LOWERFIRST`</li></ul>        |             |
-| `ignoreAlpha`             | Boolean | `true` or `false`.                                                                                                                                                                     |             |
-| `invertAlpha`             | Boolean | `true` or `false`.                                                                                                                                                                     |             |
-| `frameRate`               | Float   | Frame rate as floating point value.                                                                                                                                                    |             |
-| `pixelAspectRatio`        | Float   | Pixel aspect ratio as floating point value.                                                                                                                                            |             |
-| `removePulldown`          | Boolean | `true` or `false`.                                                                                                                                                                     |             |
-| `vrConformProjectionType` | Integer | The projection type in use, for VR footage. One of<ul><li>`0` - `VR_CONFORM_PROJECTION_NONE`</li><li>`1` - `VR_CONFORM_PROJECTION_EQUIRECTANGULAR`</li></ul>                           |             |
-| `vrLayoutType`            | Integer | The layout of footage in use, for VR. One of<ul><li>`0` - `VR_LAYOUT_MONOSCOPIC`</li><li>`1` - `VR_LAYOUT_STEREO_OVER_UNDER`</li><li>`2` - `VR_LAYOUT_STEREO_SIDE_BY_SIDE`</li></ul>   |             |
-| `vrHorizontalView`        | String  | The horizontal view in use, for VR footage.                                                                                                                                            |             |
-| `vrVerticalView`          | String  | The vertical view in use, for VR footage.                                                                                                                                              |             |
++---------------------------+---------+----------------------------------------------------+
+|         Property          |  Type   |                    Description                     |
++===========================+=========+====================================================+
+| `alphaUsage`              | Integer | Alpha, will be one of:                             |
+|                           |         |                                                    |
+|                           |         | - `0` - `ALPHACHANNEL_NONE`                        |
+|                           |         | - `1` - `ALPHACHANNEL_STRAIGHT`                    |
+|                           |         | - `2` - `ALPHACHANNEL_PREMULTIPLIED`               |
+|                           |         | - `3` - `ALPHACHANNEL_IGNORE`                      |
++---------------------------+---------+----------------------------------------------------+
+| `fieldType`               | Integer | Field type, one of:                                |
+|                           |         |                                                    |
+|                           |         | - `-1` - `FIELDTYPE_DEFAULT`                       |
+|                           |         | - `0` - `FIELDTYPE_PROGRESSIVE`                    |
+|                           |         | - `1` - `FIELDTYPE_UPPERFIRST`                     |
+|                           |         | - `2` - `FIELDTYPE_LOWERFIRST`                     |
++---------------------------+---------+----------------------------------------------------+
+| `ignoreAlpha`             | Boolean | `true` or `false`.                                 |
++---------------------------+---------+----------------------------------------------------+
+| `invertAlpha`             | Boolean | `true` or `false`.                                 |
++---------------------------+---------+----------------------------------------------------+
+| `frameRate`               | Float   | Frame rate as floating point value.                |
++---------------------------+---------+----------------------------------------------------+
+| `pixelAspectRatio`        | Float   | Pixel aspect ratio as floating point value.        |
++---------------------------+---------+----------------------------------------------------+
+| `removePulldown`          | Boolean | `true` or `false`.                                 |
++---------------------------+---------+----------------------------------------------------+
+| `vrConformProjectionType` | Integer | The projection type in use, for VR footage. One of |
+|                           |         |                                                    |
+|                           |         | - `0` - `VR_CONFORM_PROJECTION_NONE`               |
+|                           |         | - `1` - `VR_CONFORM_PROJECTION_EQUIRECTANGULAR`    |
++---------------------------+---------+----------------------------------------------------+
+| `vrLayoutType`            | Integer | The layout of footage in use, for VR. One of       |
+|                           |         |                                                    |
+|                           |         | - `0` - `VR_LAYOUT_MONOSCOPIC`                     |
+|                           |         | - `1` - `VR_LAYOUT_STEREO_OVER_UNDER`              |
+|                           |         | - `2` - `VR_LAYOUT_STEREO_SIDE_BY_SIDE`            |
++---------------------------+---------+----------------------------------------------------+
+| `vrHorizontalView`        | String  | The horizontal view in use, for VR footage.        |
++---------------------------+---------+----------------------------------------------------+
+| `vrVerticalView`          | String  | The vertical view in use, for VR footage.          |
++---------------------------+---------+----------------------------------------------------+
 
 ---
 
@@ -618,9 +647,13 @@ Retrieves the current out point for specified media type.
 
 #### Parameters
 
-|  Parameter  |  Type   |                                                       Description                                                       |
-| ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
-| `mediaType` | Integer | Pass `1` for video only, or `2` for audio only. If no `mediaType` is passed, function gets the out point for all media. |
++-------------+---------+-------------------------------------------------------------------------+
+|  Parameter  |  Type   |                               Description                               |
++=============+=========+=========================================================================+
+| `mediaType` | Integer | Pass `1` for video only, or `2` for audio only.                         |
+|             |         |                                                                         |
+|             |         | If no `mediaType` is passed, function gets the out point for all media. |
++-------------+---------+-------------------------------------------------------------------------+
 
 #### Returns
 
@@ -662,19 +695,19 @@ None.
 
 A JSON string that can be parsed with JSON.parse() method in the Javascript layer.
 
-This generates a list of objects, each object representing a column. Each object will contain 4 key/value pairs: ColumnName, ColumnValue, ColumnID, ColumnPath.
+This generates a list of objects, each object representing a column. Each object will contain 4 key/value pairs: `ColumnName`, `ColumnValue`, `ColumnID`, `ColumnPath`.
 
-- ColumnName and ColumnValue serve as informational key/value.
-- ColumnID and ColumnPath can be used to modify that column via the method setProjectMetadata() or setXMPMetadata().
+- `ColumnName` and `ColumnValue` serve as informational key/value.
+- `ColumnID` and `ColumnPath` can be used to modify that column via the method [setProjectMetadata()](#projectitemsetprojectmetadata) or [setXMPMetadata()](#projectitemsetxmpmetadata).
 
 For example:
 
-|    Object     |                           Value                           |       Description        |
-| ------------- | --------------------------------------------------------- | ------------------------ |
-| `ColumnName`  | `Name`                                                    | Name of the column       |
-| `ColumnValue` | `A014C003_180620_R205.mov`                                | Example of colummn value |
-| `ColumnID`    | `Column.Intrinsic.Name`                                   | ID of the colummn        |
-| `ColumnPath`  | `http://ns.adobe.com/premierePrivateProjectMetaData/1.0/` | Path of the column       |
+|      Key      |                            Value                            |       Description        |
+| ------------- | ----------------------------------------------------------- | ------------------------ |
+| `ColumnName`  | `"Name"`                                                    | Name of the column       |
+| `ColumnValue` | `"A014C003_180620_R205.mov"`                                | Example of colummn value |
+| `ColumnID`    | `"Column.Intrinsic.Name"`                                   | ID of the colummn        |
+| `ColumnPath`  | `"http://ns.adobe.com/premierePrivateProjectMetaData/1.0/"` | Path of the column       |
 
 ---
 

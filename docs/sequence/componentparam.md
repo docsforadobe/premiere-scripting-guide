@@ -370,11 +370,25 @@ Specifies the interpolation type to be assigned to the keyframe, at the specifie
 
 #### Parameters
 
-|      Parameter      |              Type               |                                                                                                                                                                                                     Description                                                                                                                                                                                                     |
-| ------------------- | ------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `time`              | [Time object](../other/time.md) | A time of keyframe to modify.                                                                                                                                                                                                                                                                                                                                                                                       |
-| `interpolationType` | `type`                          | One of:<ul><li>`0` - `KF_Interp_Mode_Linear`</li><li>`1` - `kfInterpMode_EaseIn_Obsolete`</li><li>`2` - `kfInterpMode_EaseOut_Obsolete`</li><li>`3` - `kfInterpMode_EaseInEaseOut_Obsolete`</li><li>`4` - `KF_Interp_Mode_Hold`</li><li>`5` - `KF_Interp_Mode_Bezier`</li><li>`6` - `KF_Interp_Mode_Time`</li><li>`7` - `kfInterpMode_TimeTransitionStart`</li><li>`8` - `kfInterpMode_TimeTransitionEnd`</li></ul> |
-| `updateUI`          | Boolean                         | Whether to update UI afterward.                                                                                                                                                                                                                                                                                                                                                                                     |
++---------------------+---------------------------------+-----------------------------------------------+
+|      Parameter      |              Type               |                  Description                  |
++=====================+=================================+===============================================+
+| `time`              | [Time object](../other/time.md) | A time of keyframe to modify.                 |
++---------------------+---------------------------------+-----------------------------------------------+
+| `interpolationType` | Interpolation Type Enum         | One of:                                       |
+|                     |                                 |                                               |
+|                     |                                 | - `0` - `KF_Interp_Mode_Linear`               |
+|                     |                                 | - `1` - `kfInterpMode_EaseIn_Obsolete`        |
+|                     |                                 | - `2` - `kfInterpMode_EaseOut_Obsolete`       |
+|                     |                                 | - `3` - `kfInterpMode_EaseInEaseOut_Obsolete` |
+|                     |                                 | - `4` - `KF_Interp_Mode_Hold`                 |
+|                     |                                 | - `5` - `KF_Interp_Mode_Bezier`               |
+|                     |                                 | - `6` - `KF_Interp_Mode_Time`                 |
+|                     |                                 | - `7` - `kfInterpMode_TimeTransitionStart`    |
+|                     |                                 | - `8` - `kfInterpMode_TimeTransitionEnd`      |
++---------------------+---------------------------------+-----------------------------------------------+
+| `updateUI`          | Boolean                         | Whether to update UI afterward.               |
++---------------------+---------------------------------+-----------------------------------------------+
 
 #### Returns
 
