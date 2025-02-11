@@ -178,7 +178,7 @@ Attaches the media at `newMediaPath` to the project item, as either hi-res or pr
 
 #### Parameters
 
-|  Argument   |  Type   |                                       Description                                        |
+|  Parameter  |  Type   |                                       Description                                        |
 | ----------- | ------- | ---------------------------------------------------------------------------------------- |
 | `mediaPath` | String  | The path to the the newly-assigned media.                                                |
 | `isHiRes`   | Integer | Whether the new media should be attached as the proxy `0`, or high resolution `1` media. |
@@ -235,7 +235,7 @@ Updates the project item to point to a new media path.
 
 #### Parameters
 
-|     Argument     |  Type   |          Description          |
+|    Parameter     |  Type   |          Description          |
 | ---------------- | ------- | ----------------------------- |
 | `newPath`        | String  | A new path to the media file. |
 | `overrideChecks` | Boolean | Override any safety concerns. |
@@ -274,9 +274,9 @@ Creates an empty bin, within the project item. Only works within bins.
 
 #### Parameters
 
-| Argument |  Type  |     Description      |
-| -------- | ------ | -------------------- |
-| `name`   | String | A name of a new bin. |
+| Parameter |  Type  |     Description      |
+| --------- | ------ | -------------------- |
+| `name`    | String | A name of a new bin. |
 
 #### Returns
 
@@ -294,7 +294,7 @@ Creates a search bin; only works for bin project items.
 
 #### Parameters
 
-|   Argument    |  Type  |       Description        |
+|   Parameter   |  Type  |       Description        |
 | ------------- | ------ | ------------------------ |
 | `name`        | String | A name of a new bin.     |
 | `queryString` | String | Query string for search. |
@@ -315,7 +315,7 @@ Creates a new project item for a sub-clip of the existing project item.
 
 #### Parameters
 
-|      Argument       |  Type   |                Description                 |
+|      Parameter      |  Type   |                Description                 |
 | ------------------- | ------- | ------------------------------------------ |
 | `name`              | String  | A name of a new subclip.                   |
 | `startTime`         | String  | Start time of subclip, in ticks.           |
@@ -358,7 +358,7 @@ Returns an array of project items, all of which reference the same media path.
 
 #### Parameters
 
-|     Argument     |  Type   |              Description              |
+|    Parameter     |  Type   |              Description              |
 | ---------------- | ------- | ------------------------------------- |
 | `pathToMatch`    | String  | A path to match.                      |
 | `ignoreSubClips` | Integer | If `1`, no subclips will be returned. |
@@ -618,7 +618,7 @@ Retrieves the current out point for specified media type.
 
 #### Parameters
 
-|  Argument   |  Type   |                                                       Description                                                       |
+|  Parameter  |  Type   |                                                       Description                                                       |
 | ----------- | ------- | ----------------------------------------------------------------------------------------------------------------------- |
 | `mediaType` | Integer | Pass `1` for video only, or `2` for audio only. If no `mediaType` is passed, function gets the out point for all media. |
 
@@ -850,7 +850,7 @@ Changes name of bin. Only works on project items which are bins.
 
 #### Parameters
 
-| Argument  |  Type  |   Description   |
+| Parameter |  Type  |   Description   |
 | --------- | ------ | --------------- |
 | `newName` | String | A new bin name. |
 
@@ -888,7 +888,7 @@ Sets the project item's color label.
 
 #### Parameters
 
-|   Argument   |  Type   |                                 Description                                  |
+|  Parameter   |  Type   |                                 Description                                  |
 | ------------ | ------- | ---------------------------------------------------------------------------- |
 | `labelColor` | Integer | A label color; see [ProjectItem.getColorLabel()](#projectitemgetcolorlabel). |
 
@@ -908,7 +908,7 @@ Returns a structure describing the current interpretation of the projectItem.
 
 #### Parameters
 
-|     Argument     | Type |             Description             |
+|    Parameter     | Type |             Description             |
 | ---------------- | ---- | ----------------------------------- |
 | `interpretation` |      | A footage interpretation structure. |
 
@@ -928,7 +928,7 @@ Sets the in point to `timeInTicks`, for specified media types.
 
 #### Parameters
 
-|  Argument   |  Type   |                                                   Description                                                    |
+|  Parameter  |  Type   |                                                   Description                                                    |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | `time`      | String  | A time in ticks.                                                                                                 |
 | `mediaType` | Integer | Determining which media type to affect; pass `1` for video only, `2` for audio only, or `4` for all media types. |
@@ -967,7 +967,7 @@ Sets the out point to `timeInTicks`, for specified media types.
 
 #### Parameters
 
-|  Argument   |  Type   |                                                   Description                                                    |
+|  Parameter  |  Type   |                                                   Description                                                    |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
 | `time`      | String  | A time in ticks.                                                                                                 |
 | `mediaType` | Integer | Determining which media type to affect; pass `1` for video only, `2` for audio only, or `4` for all media types. |
@@ -988,7 +988,7 @@ Sets the frame rate of the project item.
 
 #### Parameters
 
-|    Argument    | Type  |     Description     |
+|   Parameter    | Type  |     Description     |
 | -------------- | ----- | ------------------- |
 | `newFrameRate` | Float | The new frame rate. |
 
@@ -1008,7 +1008,7 @@ Sets the pixel aspect ratio for the project item.
 
 #### Parameters
 
-|   Argument    |  Type   |    Description     |
+|   Parameter   |  Type   |    Description     |
 | ------------- | ------- | ------------------ |
 | `numerator`   | Integer | A new numerator.   |
 | `denominator` | Integer | A new denominator. |
@@ -1029,7 +1029,7 @@ Sets the private project metadata associated with the project item.
 
 #### Parameters
 
-|    Argument     |       Type       |                        Description                         |
+|    Parameter    |       Type       |                        Description                         |
 | --------------- | ---------------- | ---------------------------------------------------------- |
 | `newMetadata`   | String           | A new, serialized private project metadata.                |
 | `updatedFields` | Array of strings | An array containing the names of the fields to be updated. |
@@ -1068,9 +1068,9 @@ Assigns a new start time to the project item
 
 #### Parameters
 
-| Argument |  Type  |                Description                 |
-| -------- | ------ | ------------------------------------------ |
-| `time`   | String | A new starting time, represented in ticks. |
+| Parameter |  Type  |                Description                 |
+| --------- | ------ | ------------------------------------------ |
+| `time`    | String | A new starting time, represented in ticks. |
 
 #### Returns
 
@@ -1088,9 +1088,9 @@ Sets the XMP metadata associated with the project item.
 
 #### Parameters
 
-| Argument |  Type  |           Description           |
-| -------- | ------ | ------------------------------- |
-| `newXMP` | String | A new, serialized XMP metadata. |
+| Parameter |  Type  |           Description           |
+| --------- | ------ | ------------------------------- |
+| `newXMP`  | String | A new, serialized XMP metadata. |
 
 #### Returns
 

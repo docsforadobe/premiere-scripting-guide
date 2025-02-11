@@ -42,7 +42,7 @@ Maps a source channel to the specified channel index.
 
 #### Parameters
 
-|       Argument       |  Type   |              Description              |
+|      Parameter       |  Type   |              Description              |
 | -------------------- | ------- | ------------------------------------- |
 | `channelIndex`       | Integer | The index of a channel to be mapped.  |
 | `sourceChannelIndex` | Integer | The index of a source channel to map. |

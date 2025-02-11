@@ -116,7 +116,7 @@ Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)
 
 #### Parameters
 
-|   Argument    |                     Type                     |                        Description                        |
+|   Parameter   |                     Type                     |                        Description                        |
 | ------------- | -------------------------------------------- | --------------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
 | `time`        | String                                       | The time at which to add project item, in ticks.          |
@@ -163,7 +163,7 @@ Adds a 'clip' (media segment from a [ProjectItem object](../item/projectitem.md)
 
 #### Parameters
 
-|   Argument    |                     Type                     |                   Description                    |
+|   Parameter   |                     Type                     |                   Description                    |
 | ------------- | -------------------------------------------- | ------------------------------------------------ |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.          |
 | `time`        | String                                       | The time at which to add project item, in ticks. |
@@ -187,7 +187,7 @@ Sets the mute state, of the track.
 
 #### Parameters
 
-| Argument  |  Type   |                        Description                         |
+| Parameter |  Type   |                        Description                         |
 | --------- | ------- | ---------------------------------------------------------- |
 | `isMuted` | Integer | If `1`, mute the track. If `0`, the track will be unmuted. |
 

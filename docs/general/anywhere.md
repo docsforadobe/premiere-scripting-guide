@@ -134,7 +134,7 @@ Opens the production at the specified URL.
 
 #### Parameters
 
-|    Argument     |  Type  |            Description             |
+|    Parameter    |  Type  |            Description             |
 | --------------- | ------ | ---------------------------------- |
 | `productionURL` | String | The url of the production to open. |
 
@@ -154,7 +154,7 @@ Logs the specified email address into the server, using the provided token.
 
 #### Parameters
 
-|    Argument    |  Type  |          Description          |
+|   Parameter    |  Type  |          Description          |
 | -------------- | ------ | ----------------------------- |
 | `token`        | String | An authorization token.       |
 | `emailAddress` | String | The associated email address. |

@@ -64,7 +64,7 @@ Copies a project from some other location, into the Production directory.
 
 #### Parameters
 
-|     Argument      |  Type  |              Description              |
+|     Parameter     |  Type  |              Description              |
 | ----------------- | ------ | ------------------------------------- |
 | `srcProjectPath`  | String | A path to the source project.         |
 | `destProjectPath` | String | A destination path for added project. |
@@ -103,7 +103,7 @@ Returns the lock state of a single project within the Production.
 
 #### Parameters
 
-| Argument  |              Type              | Description |
+| Parameter |              Type              | Description |
 | --------- | ------------------------------ | ----------- |
 | `project` | [Project object](./project.md) | The project |
 
@@ -123,7 +123,7 @@ Moves the specified path ("bin") or .prproj into the Production's Trash folder.
 
 #### Parameters
 
-|       Argument        |  Type   |                 Description                  |
+|       Parameter       |  Type   |                 Description                  |
 | --------------------- | ------- | -------------------------------------------- |
 | `projectOrFolderPath` | String  | A path to the source project.                |
 | `suppressUI`          | Boolean | Whether to suppress any resultant dialogues. |
@@ -145,7 +145,7 @@ Sets the lock state of the specified project within the Production.
 
 #### Parameters
 
-| Argument  |       Type       |               Description                |
+| Parameter |       Type       |               Description                |
 | --------- | ---------------- | ---------------------------------------- |
 | `project` | `Project object` | The project                              |
 | `locked`  | Boolean          | `True` for locked, `false` for unlocked. |

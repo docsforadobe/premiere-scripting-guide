@@ -238,7 +238,7 @@ Adds an After Effects Motion Graphics Template - a Mogrt - to the selected track
 
 #### Parameters
 
-|     Argument     |  Type   |                                       Description                                       |
+|    Parameter     |  Type   |                                       Description                                       |
 | ---------------- | ------- | --------------------------------------------------------------------------------------- |
 | `mogrtPath`      | String  | Full path to a valid .mogrt, created in After Effects                                   |
 | `targetTime`     | String  | The time at which to insert the .mogrt, in ticks                                        |
@@ -348,7 +348,7 @@ Sets the selection state of the trackItem.
 
 #### Parameters
 
-|  Argument  |  Type   |                                  Description                                  |
+| Parameter  |  Type   |                                  Description                                  |
 | ---------- | ------- | ----------------------------------------------------------------------------- |
 | `state`    | Integer | If `1`, the track item will be selected; if `0`, it will be deselected.       |
 | `updateUI` | Integer | If `1`, the Premiere Pro UI will be updated after this function call is made. |
@@ -393,7 +393,7 @@ Sets the selection state of the trackItem.
 
 #### Parameters
 
-|     Argument     |  Type   |                                                    Description                                                    |
+|    Parameter     |  Type   |                                                    Description                                                    |
 | ---------------- | ------- | ----------------------------------------------------------------------------------------------------------------- |
 | `inRipple`       | Boolean | If `1`, later track items will be moved earlier, to fill the gap; if `0`, later track items will remain in place. |
 | `inAlignToVideo` | Boolean | If `1`, Premiere Pro will align moved track items to the start of the nearest video frame.                        |
@@ -417,7 +417,7 @@ Sets the disabled state of the TrackItem. Read/Write.
 
 #### Parameters
 
-|     Argument      |  Type   |                                    Description                                     |
+|     Parameter     |  Type   |                                    Description                                     |
 | ----------------- | ------- | ---------------------------------------------------------------------------------- |
 | `newDisableState` | Boolean | If `true`, this TrackItem will be disabled; if `false`, TrackItem will be enabled. |
 
@@ -440,7 +440,7 @@ Moves the inPoint of the track item to a new time, by shifting it by a number of
 
 #### Parameters
 
-|   Argument   |              Type               |                                          Description                                          |
+|  Parameter   |              Type               |                                          Description                                          |
 | ------------ | ------------------------------- | --------------------------------------------------------------------------------------------- |
 | `newInPoint` | [Time object](../other/time.md) | A Time object that represent the amount of time, in seconds, to shift the track item's start. |
 

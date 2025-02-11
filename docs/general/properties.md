@@ -44,7 +44,7 @@ Checks whether a given property exists in preferences.
 
 #### Parameters
 
-|  Argument  |  Type  |     Description     |
+| Parameter  |  Type  |     Description     |
 | ---------- | ------ | ------------------- |
 | `property` | String | A property to check |
 
@@ -78,7 +78,7 @@ Returns a property value.
 
 #### Parameters
 
-|  Argument  |  Type  |          Description          |
+| Parameter  |  Type  |          Description          |
 | ---------- | ------ | ----------------------------- |
 | `property` | String | A property to get a value for |
 
@@ -113,7 +113,7 @@ Checks whether a given property can be overwritten by the user. Returns `false` 
 
 #### Parameters
 
-|  Argument  |  Type  |     Description      |
+| Parameter  |  Type  |     Description      |
 | ---------- | ------ | -------------------- |
 | `property` | String | A property to check. |
 
@@ -136,7 +136,7 @@ Set property value.
 
 #### Parameters
 
-|      Argument      |  Type   |                   Description                    |
+|     Parameter      |  Type   |                   Description                    |
 | ------------------ | ------- | ------------------------------------------------ |
 | `property`         | String  | A property to create                             |
 | `value`            | Any     | A value for a property                           |

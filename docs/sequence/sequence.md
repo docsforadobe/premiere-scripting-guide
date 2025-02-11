@@ -254,7 +254,7 @@ Attaches a custom property, and its value, to the sequence. This property is vis
 
 #### Parameters
 
-|    Argument     |  Type  |        Description        |
+|    Parameter    |  Type  |        Description        |
 | --------------- | ------ | ------------------------- |
 | `propertyID`    | String | ID of custom property.    |
 | `propertyValue` | String | Value of custom property. |
@@ -275,7 +275,7 @@ Generates a new, auto-reframed sequence.
 
 #### Parameters
 
-|       Argument       |  Type   |                             Description                              |
+|      Parameter       |  Type   |                             Description                              |
 | -------------------- | ------- | -------------------------------------------------------------------- |
 | `numerator`          | Integer | Numerator of desired frame aspect ratio.                             |
 | `denominator`        | Integer | Denominator of desired frame aspect ratio.                           |
@@ -358,7 +358,7 @@ Creates a caption track in the sequence using caption data from a [ProjectItem o
 
 #### Parameters
 
-|    Argument     |                     Type                     |                                                                                                                                                                                                                                  Description                                                                                                                                                                                                                                   |
+|    Parameter    |                     Type                     |                                                                                                                                                                                                                                  Description                                                                                                                                                                                                                                   |
 | --------------- | -------------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | `projectItem`   | [ProjectItem object](../item/projectitem.md) | A captions source clip (e.g. .srt)                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | `startAtTime`   | Float                                        | Offset in seconds from start of sequence                                                                                                                                                                                                                                                                                                                                                                                                                                       |
@@ -386,7 +386,7 @@ Creates a new sequence, from the in point to the out point, which is a sub-seque
 
 #### Parameters
 
-|        Argument        |  Type   |                                                    Description                                                     |
+|       Parameter        |  Type   |                                                    Description                                                     |
 | ---------------------- | ------- | ------------------------------------------------------------------------------------------------------------------ |
 | `ignoreTrackTargeting` | Boolean | Whether the new sequence should ignore the track targeting, in the original sequence. Optional, default is `false` |
 
@@ -438,7 +438,7 @@ Creates a new FCP XML representation of the sequence and its constituent media.
 
 #### Parameters
 
-|   Argument   |  Type  |                Description                |
+|  Parameter   |  Type  |                Description                |
 | ------------ | ------ | ----------------------------------------- |
 | `outputPath` | String | The output path for the new FCP XML file. |
 
@@ -458,7 +458,7 @@ Renders the sequence to the specified output path, using the specified output pr
 
 #### Parameters
 
-|    Argument    |  Type   |                                                                                                             Description                                                                                                             |
+|   Parameter    |  Type   |                                                                                                             Description                                                                                                             |
 | -------------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `outputPath`   | String  | An output path, to which to render the media.                                                                                                                                                                                       |
 | `presetPath`   | String  | Path to the preset file (.epr file) which contains the encoding settings.                                                                                                                                                           |
@@ -480,7 +480,7 @@ Creates a new [Project object](../general/project.md) containing only the given 
 
 #### Parameters
 
-|   Argument   |  Type  |             Description              |
+|  Parameter   |  Type  |             Description              |
 | ------------ | ------ | ------------------------------------ |
 | `outputPath` | String | The output path for the new project. |
 
@@ -500,7 +500,7 @@ Retrieves the file extension associated with the specified output preset (.epr f
 
 #### Parameters
 
-|      Argument      |  Type  |          Description          |
+|     Parameter      |  Type  |          Description          |
 | ------------------ | ------ | ----------------------------- |
 | `outputPresetPath` | String | The output preset to be used. |
 
@@ -743,7 +743,7 @@ Imports a MOGRT, or an After Effects Motion Graphics Template, to the specified 
 
 #### Parameters
 
-|     Argument     |  Type   |                                    Description                                     |
+|    Parameter     |  Type   |                                    Description                                     |
 | ---------------- | ------- | ---------------------------------------------------------------------------------- |
 | `path`           | String  | Full path to a valid MOGRT (.mogrt file), created in After Effects.                |
 | `time`           | String  | The time at which to insert .mogrt, in ticks.                                      |
@@ -766,7 +766,7 @@ Imports a MOGRT, or an After Effects Motion Graphics Template, from the current 
 
 #### Parameters
 
-|     Argument     |  Type   |                                    Description                                     |
+|    Parameter     |  Type   |                                    Description                                     |
 | ---------------- | ------- | ---------------------------------------------------------------------------------- |
 | `libraryName`    | String  | The name of Library (from the current PPro user's Creative Cloud Libraries).       |
 | `mgtName`        | String  | The name of .mogrt within that library.                                            |
@@ -790,7 +790,7 @@ Inserts a clip into the sequence, on the specified video and audio tracks, at th
 
 #### Parameters
 
-|   Argument    |                     Type                     |                        Description                        |
+|   Parameter   |                     Type                     |                        Description                        |
 | ------------- | -------------------------------------------- | --------------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
 | `time`        | String                                       | The time at which to add project item, in seconds.        |
@@ -870,7 +870,7 @@ Inserts a clip into the sequence, *overwriting existing clips*, on the specified
 
 #### Parameters
 
-|   Argument    |                     Type                     |                        Description                        |
+|   Parameter   |                     Type                     |                        Description                        |
 | ------------- | -------------------------------------------- | --------------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
 | `time`        | String                                       | The time at which to add project item, in seconds.        |
@@ -893,7 +893,7 @@ Performs cut detection on the sequence selection.
 
 #### Parameters
 
-|         Argument         |  Type   |                                           Description                                           |
+|        Parameter         |  Type   |                                           Description                                           |
 | ------------------------ | ------- | ----------------------------------------------------------------------------------------------- |
 | `actionDesired`          | String  | One of:<ul><li>`CreateMarkers`</li><li>`ApplyCuts`</li></ul>                                    |
 | `applyCutsToLinkedAudio` | Boolean | Whether to apply detected cuts on linked audio.                                                 |
@@ -915,9 +915,9 @@ Sets a new sequence in point.
 
 #### Parameters
 
-| Argument |                    Type                    |      Description       |
-| -------- | ------------------------------------------ | ---------------------- |
-| `time`   | Integer or [Time object](../other/time.md) | A new time in seconds. |
+| Parameter |                    Type                    |      Description       |
+| --------- | ------------------------------------------ | ---------------------- |
+| `time`    | Integer or [Time object](../other/time.md) | A new time in seconds. |
 
 #### Returns
 
@@ -935,9 +935,9 @@ Sets a new sequence out point.
 
 #### Parameters
 
-| Argument |                    Type                    |      Description       |
-| -------- | ------------------------------------------ | ---------------------- |
-| `time`   | Integer or [Time object](../other/time.md) | A new time in seconds. |
+| Parameter |                    Type                    |      Description       |
+| --------- | ------------------------------------------ | ---------------------- |
+| `time`    | Integer or [Time object](../other/time.md) | A new time in seconds. |
 
 #### Returns
 
@@ -955,9 +955,9 @@ Sets the position of the CTI (Current Time Indicator) in the sequence.
 
 #### Parameters
 
-| Argument |  Type  |     Description      |
-| -------- | ------ | -------------------- |
-| `time`   | String | A new time in ticks. |
+| Parameter |  Type  |     Description      |
+| --------- | ------ | -------------------- |
+| `time`    | String | A new time in ticks. |
 
 #### Returns
 
@@ -975,7 +975,7 @@ Sets the settings of the current sequence.  *[Editorial: I apologize for any per
 
 #### Parameters
 
-|      Argument      |   Type   |                                       Description                                        |
+|     Parameter      |   Type   |                                       Description                                        |
 | ------------------ | -------- | ---------------------------------------------------------------------------------------- |
 | `sequenceSettings` | `Object` | A sequence settings object, obtained via [Sequence.getSettings()](#sequencegetsettings). |
 
@@ -995,9 +995,9 @@ Sets a new sequence work area in point.
 
 #### Parameters
 
-| Argument |                    Type                    |      Description       |
-| -------- | ------------------------------------------ | ---------------------- |
-| `time`   | Integer or [Time object](../other/time.md) | A new time in seconds. |
+| Parameter |                    Type                    |      Description       |
+| --------- | ------------------------------------------ | ---------------------- |
+| `time`    | Integer or [Time object](../other/time.md) | A new time in seconds. |
 
 #### Returns
 
@@ -1015,9 +1015,9 @@ Sets a new sequence work area out point.
 
 #### Parameters
 
-| Argument |                    Type                    |      Description       |
-| -------- | ------------------------------------------ | ---------------------- |
-| `time`   | Integer or [Time object](../other/time.md) | A new time in seconds. |
+| Parameter |                    Type                    |      Description       |
+| --------- | ------------------------------------------ | ---------------------- |
+| `time`    | Integer or [Time object](../other/time.md) | A new time in seconds. |
 
 #### Returns
 
@@ -1053,7 +1053,7 @@ Set the starting time of the sequence.
 
 #### Parameters
 
-|    Argument    |  Type  |         Description          |
+|   Parameter    |  Type  |         Description          |
 | -------------- | ------ | ---------------------------- |
 | `newZeroPoint` | String | The new zero point in ticks. |
 

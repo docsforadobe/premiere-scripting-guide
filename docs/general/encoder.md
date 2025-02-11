@@ -29,7 +29,7 @@ Makes Adobe Media Encoder render (optionally, a specified range from) the specif
 
 #### Parameters
 
-|        Argument        |              Type               |                                                                   Description                                                                   |
+|       Parameter        |              Type               |                                                                   Description                                                                   |
 | ---------------------- | ------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | `filePath`             | String                          | A path to a file to render.                                                                                                                     |
 | `outputPath`           | String                          | A path to an output file.                                                                                                                       |
@@ -55,7 +55,7 @@ Makes Adobe Media Encoder render (optionally, a specified range from) the specif
 
 #### Parameters
 
-|        Argument        |                     Type                     |                                                                   Description                                                                   |
+|       Parameter        |                     Type                     |                                                                   Description                                                                   |
 | ---------------------- | -------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
 | `projectItem`          | [ProjectItem object](../item/projectitem.md) | A project item to render.                                                                                                                       |
 | `outputPath`           | String                                       | A path to an output file.                                                                                                                       |
@@ -79,13 +79,13 @@ Makes Adobe Media Encoder render the specified [Sequence object](../sequence/seq
 
 #### Parameters
 
-|        Argument        |                    Type                    |                                                           Description                                                           |
-| ---------------------- | ------------------------------------------ | ------------------------------------------------------------------------------------------------------------------------------- |
-| `sequence`             | [Sequence object](../sequence/sequence.md) | A sequence to render.                                                                                                           |
-| `outputPath`           | String                                     | A path to an output file.                                                                                                       |
-| `presetPath`           | String                                     | A path to a preset (.epr) file.                                                                                                 |
-| `workArea`             | Integer                                      | Integer denoting work area to be used:<ul><li>`0` - `ENCODE_ENTIRE`</li><li>`1` - `ENCODE_IN_TO_OUT`</li><li>`2` - `ENCODE_WORK_AREA`</li></ul> |
-| `removeUponCompletion` | Integer                                    | If `1`, job will be removed once complete.                                                                                      |
+|       Parameter        |                    Type                    |                                                                   Description                                                                   |
+| ---------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `sequence`             | [Sequence object](../sequence/sequence.md) | A sequence to render.                                                                                                                           |
+| `outputPath`           | String                                     | A path to an output file.                                                                                                                       |
+| `presetPath`           | String                                     | A path to a preset (.epr) file.                                                                                                                 |
+| `workArea`             | Integer                                    | Integer denoting work area to be used:<ul><li>`0` - `ENCODE_ENTIRE`</li><li>`1` - `ENCODE_IN_TO_OUT`</li><li>`2` - `ENCODE_WORK_AREA`</li></ul> |
+| `removeUponCompletion` | Integer                                    | If `1`, job will be removed once complete.                                                                                                      |
 
 #### Returns
 
@@ -121,7 +121,7 @@ Determines whether embedded XMP metadata, will be output.
 
 #### Parameters
 
-| Argument  |  Type   |                    Description                     |
+| Parameter |  Type   |                    Description                     |
 | --------- | ------- | -------------------------------------------------- |
 | `enabled` | Integer | Pass `1` to enable sidecar output, `0` to disable. |
 
@@ -146,7 +146,7 @@ Determines whether a sidecar file containing XMP metadata, will be output.
 
 #### Parameters
 
-| Argument  |  Type   |                    Description                     |
+| Parameter |  Type   |                    Description                     |
 | --------- | ------- | -------------------------------------------------- |
 | `enabled` | Integer | Pass `1` to enable sidecar output, `0` to disable. |
 

@@ -142,7 +142,7 @@ Adds a new field of the specified type to Premiere Pro's private project metadat
 
 #### Parameters
 
-|    Argument     |  Type   |                                                         Description                                                          |
+|    Parameter    |  Type   |                                                         Description                                                          |
 | --------------- | ------- | ---------------------------------------------------------------------------------------------------------------------------- |
 | `propertyName`  | String  | A name of property to be added.                                                                                              |
 | `propertyLabel` | String  | A label of property to be added.                                                                                             |
@@ -164,7 +164,7 @@ Closes this project.
 
 #### Parameters
 
-|    Argument     |  Type   |                               Description                               |
+|    Parameter    |  Type   |                               Description                               |
 | --------------- | ------- | ----------------------------------------------------------------------- |
 | `saveFirst`     | Integer | If `1`, the project will be saved before closing.                       |
 | `promptIfDirty` | Integer | If `1`, the user will be asked whether they want to save changes first. |
@@ -203,7 +203,7 @@ Creates a new [Sequence object](../sequence/sequence.md) with the specified ID.
 
 #### Parameters
 
-|    Argument    |  Type  |                  Description                   |
+|   Parameter    |  Type  |                  Description                   |
 | -------------- | ------ | ---------------------------------------------- |
 | `sequenceName` | String | A name of a sequence.                          |
 | `sequenceID`   | String | An uniquely identifying ID for a new sequence. |
@@ -224,7 +224,7 @@ Creates a new [Sequence object](../sequence/sequence.md) with the given name, in
 
 #### Parameters
 
-|       Argument        |                          Type                          |                       Description                       |
+|       Parameter       |                          Type                          |                       Description                       |
 | --------------------- | ------------------------------------------------------ | ------------------------------------------------------- |
 | `sequenceName`        | String                                                 | Optional. A name for a new sequence.                    |
 | `arrayOfProjectItems` | Array of [ProjectItem objects](../item/projectitem.md) | An array of project items to be inserted into sequence. |
@@ -246,7 +246,7 @@ Deletes the specified [Sequence object](../sequence/sequence.md) from the projec
 
 #### Parameters
 
-|  Argument  |                    Type                    |      Description      |
+| Parameter  |                    Type                    |      Description      |
 | ---------- | ------------------------------------------ | --------------------- |
 | `sequence` | [Sequence object](../sequence/sequence.md) | A sequence to delete. |
 
@@ -266,7 +266,7 @@ Exports an AAF file of the specified [Sequence object](../sequence/sequence.md),
 
 #### Parameters
 
-|        Argument        |                    Type                    |                                 Description                                  |
+|       Parameter        |                    Type                    |                                 Description                                  |
 | ---------------------- | ------------------------------------------ | ---------------------------------------------------------------------------- |
 | `sequenceToExport`     | [Sequence object](../sequence/sequence.md) | A sequence to export.                                                        |
 | `outputPath`           | String                                     | An output path for .aaf file.                                                |
@@ -299,7 +299,7 @@ Exports an FCP XML representation of the entire project, to the specified output
 
 #### Parameters
 
-|   Argument   |  Type   |                           Description                           |
+|  Parameter   |  Type   |                           Description                           |
 | ------------ | ------- | --------------------------------------------------------------- |
 | `outputPath` | String  | An output path for .xml file.                                   |
 | `suppressUI` | Integer | If `1`, no warnings or alerts will be shown, during the export. |
@@ -320,7 +320,7 @@ Exports an OMF file of the specified [Sequence object](../sequence/sequence.md),
 
 #### Parameters
 
-|      Argument       |                    Type                    |                 Description                  |
+|      Parameter      |                    Type                    |                 Description                  |
 | ------------------- | ------------------------------------------ | -------------------------------------------- |
 | `sequence`          | [Sequence object](../sequence/sequence.md) | The sequence to be output.                   |
 | `filePath`          | String                                     | An output path for .omf file.                |
@@ -349,7 +349,7 @@ Exports the currently active [Sequence object](../sequence/sequence.md), using a
 
 #### Parameters
 
-|        Argument        |  Type  |                                                                       Description                                                                        |
+|       Parameter        |  Type  |                                                                       Description                                                                        |
 | ---------------------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `exportControllerName` | String | The name of the Export Controller plug-in to be used. To use the Premiere Pro SDK example Export Controller, the value would be "SDK Export Controller". |
 
@@ -459,7 +459,7 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 
 #### Parameters
 
-|  Argument   |                     Type                     |                             Description                             |
+|  Parameter  |                     Type                     |                             Description                             |
 | ----------- | -------------------------------------------- | ------------------------------------------------------------------- |
 | `path`      | String                                       | A path to the After Effects .aep project file.                      |
 | `compNames` | Array of strings                             | Names of compositions within the specified project, to be imported. |
@@ -481,7 +481,7 @@ Imports specified Compositions (by name) from the containing After Effects .aep 
 
 #### Parameters
 
-|  Argument   |                     Type                     |                  Description                   |
+|  Parameter  |                     Type                     |                  Description                   |
 | ----------- | -------------------------------------------- | ---------------------------------------------- |
 | `path`      | String                                       | A path to After Effects .aep project file.     |
 | `targetBin` | [ProjectItem object](../item/projectitem.md) | Optional. The destination bin for this import. |
@@ -502,7 +502,7 @@ Imports media from the specified file paths.
 
 #### Parameters
 
-|         Argument         |                     Type                     |                                  Description                                   |
+|        Parameter         |                     Type                     |                                  Description                                   |
 | ------------------------ | -------------------------------------------- | ------------------------------------------------------------------------------ |
 | `filePaths`              | Array of strings                             | An array of the file paths to be imported.                                     |
 | `suppressUI`             | Boolean                                      | Whether warning dialogs should be suppressed.                                  |
@@ -525,7 +525,7 @@ Imports an array of [sequence](../sequence/sequence.md) objects (with specified 
 
 #### Parameters
 
-|   Argument    |  Type  |             Description             |
+|   Parameter   |  Type  |             Description             |
 | ------------- | ------ | ----------------------------------- |
 | `path`        | String | A path to a project file.           |
 | `sequenceIDs` | Array  | An array of sequence IDs to import. |
@@ -564,7 +564,7 @@ Creates a new [Sequence object](../sequence/sequence.md) with the given name, ba
 
 #### Parameters
 
-|     Argument      |  Type   |            Description             |
+|     Parameter     |  Type   |            Description             |
 | ----------------- | ------- | ---------------------------------- |
 | `width`           | Integer |                                    |
 | `height`          | Integer |                                    |
@@ -590,7 +590,7 @@ Creates a new [Sequence object](../sequence/sequence.md) with the given name, ba
 
 #### Parameters
 
-|        Argument        |  Type  |            Description             |
+|       Parameter        |  Type  |            Description             |
 | ---------------------- | ------ | ---------------------------------- |
 | `name`                 | String | Name for a new sequence.           |
 | `pathToSequencePreset` | String | A path to a preset .sqpreset file. |
@@ -611,7 +611,7 @@ Makes the [Sequence object](../sequence/sequence.md) with the provided sequence 
 
 #### Parameters
 
-|   Argument   |                               Type                                |                Description                 |
+|  Parameter   |                               Type                                |                Description                 |
 | ------------ | ----------------------------------------------------------------- | ------------------------------------------ |
 | `sequenceID` | [Sequence.sequenceID](../sequence/sequence.md#sequencesequenceid) | A valid sequence ID that should be opened. |
 
@@ -631,9 +631,9 @@ Pauses (and resumes) growing file capture.
 
 #### Parameters
 
-| Argument |  Type   |            Description             |
-| -------- | ------- | ---------------------------------- |
-| `pause`  | Integer | If `1`, growing files are enabled. |
+| Parameter |  Type   |            Description             |
+| --------- | ------- | ---------------------------------- |
+| `pause`   | Integer | If `1`, growing files are enabled. |
 
 #### Returns
 
@@ -669,9 +669,9 @@ Exports the current project to a new unique file path, opens the project from th
 
 #### Parameters
 
-| Argument |  Type  |      Description      |
-| -------- | ------ | --------------------- |
-| `path`   | String | A path to a new file. |
+| Parameter |  Type  |      Description      |
+| --------- | ------ | --------------------- |
+| `path`    | String | A path to a new file. |
 
 #### Returns
 
@@ -689,9 +689,9 @@ Controls the enablement of transcode-upon-ingest behavior, for the given project
 
 #### Parameters
 
-| Argument |  Type   |    Description     |
-| -------- | ------- | ------------------ |
-| `state`  | Boolean | The desired state. |
+| Parameter |  Type   |    Description     |
+| --------- | ------- | ------------------ |
+| `state`   | Boolean | The desired state. |
 
 #### Returns
 
@@ -709,9 +709,9 @@ Sets the current graphics white luminance value, for this project.
 
 #### Parameters
 
-| Argument |  Type   |                                                                   Description                                                                   |
-| -------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
-| `value`  | Integer | The value to be used; must be a value provided by [Project.getSupportedGraphicsWhiteLuminances()](#projectgetsupportedgraphicswhiteluminances). |
+| Parameter |  Type   |                                                                   Description                                                                   |
+| --------- | ------- | ----------------------------------------------------------------------------------------------------------------------------------------------- |
+| `value`   | Integer | The value to be used; must be a value provided by [Project.getSupportedGraphicsWhiteLuminances()](#projectgetsupportedgraphicswhiteluminances). |
 
 #### Returns
 
@@ -729,9 +729,9 @@ Returns the current layout of the Project panel.
 
 #### Parameters
 
-| Argument |  Type  |                                                                                                               Description                                                                                                               |
-| -------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| `layout` | String | Represents the desired Project panel layout. Note: The only known method for generating a valid layout string, is setting the Project panel as desired then using [Project.getProjectPanelMetadata()](#projectgetprojectpanelmetadata). |
+| Parameter |  Type  |                                                                                                               Description                                                                                                               |
+| --------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `layout`  | String | Represents the desired Project panel layout. Note: The only known method for generating a valid layout string, is setting the Project panel as desired then using [Project.getProjectPanelMetadata()](#projectgetprojectpanelmetadata). |
 
 #### Returns
 
@@ -749,7 +749,7 @@ Changes the specified scratch disk path to a new path.
 
 #### Parameters
 
-|     Argument      |          Type          |                                                                                                                                                                                                                                                                                                                                    Description                                                                                                                                                                                                                                                                                                                                    |
+|     Parameter     |          Type          |                                                                                                                                                                                                                                                                                                                                    Description                                                                                                                                                                                                                                                                                                                                    |
 | ----------------- | ---------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `newPath`         | String                 | A new path.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 | `scratchDiskType` | `ScratchDiskType` enum | One of: <ul><li>`ScratchDiskType.FirstVideoCaptureFolder`</li><li>`ScratchDiskType.FirstAudioCaptureFolder`</li><li>`ScratchDiskType.FirstVideoPreviewFolder`</li><li>`ScratchDiskType.FirstAudioPreviewFolder`</li><li>`ScratchDiskType.FirstAutoSaveFolder`</li><li>`ScratchDiskType.FirstCCLibrariesFolder`</li><li>`ScratchDiskType.FirstCapsuleMediaFolder`</li><li>`ScratchDiskType.FirstAudioCaptureFolder`</li><li>`ScratchDiskType.FirstVideoPreviewFolder`</li><li>`ScratchDiskType.FirstAudioPreviewFolder`</li><li>`ScratchDiskType.FirstAutoSaveFolder`</li><li>`ScratchDiskType.FirstCCLibrariesFolder`</li><li>`ScratchDiskType.FirstCapsuleMediaFolder`</li></ul> |
