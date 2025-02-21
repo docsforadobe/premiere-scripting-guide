@@ -883,7 +883,7 @@ Inserts a clip into the sequence, on the specified video and audio tracks, at th
 |   Parameter   |                     Type                     |                        Description                        |
 | ------------- | -------------------------------------------- | --------------------------------------------------------- |
 | `projectItem` | [ProjectItem object](../item/projectitem.md) | A project item from which to get media.                   |
-| `time`        | String                                       | The time at which to add project item, in seconds.        |
+| `time`        | Time                                       | The time at which to add project item.        |
 | `vTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert video. |
 | `aTrackIndex` | Integer                                      | The (zero-based) track index, into which to insert audio. |
 
