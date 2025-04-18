@@ -13,7 +13,7 @@ Adobe wants your integration to succeed; please don't hesitate to [contact us](m
 
 ## 3rd Party Scripting is Moving to UXP
 
-Before you go any further, though, know that Adobe is moving away from Extendscript, and to UXP - Unified Extensibility Platform. The API and a sample panel can be found here [Premiere Pro UXP API] (https://developer.adobe.com/premiere-pro/uxp/)
+Before you go any further, though, know that Adobe is moving away from Extendscript, and to UXP - Unified Extensibility Platform. Have a look at the [API Documentation](https://developer.adobe.com/premiere-pro/uxp/), and [sample plugins](https://github.com/AdobeDocs/uxp-premiere-pro-samples/)
 
 Although Extendscript will be supported at least through the end of 2025, no updates will be made to the API. 
 ## Navigating the Guide
