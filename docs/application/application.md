@@ -58,7 +58,7 @@ parseInt(app.build); // 45
 Provides access to Adobe Media Encoder (on the same system).
 
 !!! warning
-    `app.encoder` is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in 22 and up. [See this discussion](https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-encoder-14-3-1-15-0-15-1-15-2/m-p/12544488).
+`app.encoder` is broken on Premiere Pro 14.3.1 - 15 on Mac only. Fixed in 22 and up. [See this discussion](https://community.adobe.com/t5/premiere-pro-discussions/missing-the-object-app-encoder-14-3-1-15-0-15-1-15-2/m-p/12544488).
 
 #### Type
 
@@ -353,7 +353,7 @@ String; read-only.
 
 #### Example
 
-Get a version of a current application  *(Adobe Premiere Pro version 14.3.1 (Build 45))*
+Get a version of a current application _(Adobe Premiere Pro version 14.3.1 (Build 45))_
 
 ```js
 app.version; // 14.3.1
@@ -448,7 +448,7 @@ Determines whether the file at path can be opened as a Premiere Pro [project](..
 
 #### Parameters
 
-| Parameter |  Type  |    Description    |
+| Parameter | Type   | Description       |
 | --------- | ------ | ----------------- |
 | `path`    | String | A path to a file. |
 
@@ -461,10 +461,10 @@ Returns `true` if file can be opened as a Premiere Pro [project](../general/proj
 Test for valid project files
 
 ```js
-app.isDocument('~/Desktop/myProject.prproj'); // true
-app.isDocument('~/Desktop/textFile.txt');     // false
-app.isDocument('~/Desktop/footageFile.mov');  // false
-app.isDocument('~/Desktop/imageFile.mov');    // false
+app.isDocument("~/Desktop/myProject.prproj"); // true
+app.isDocument("~/Desktop/textFile.txt"); // false
+app.isDocument("~/Desktop/footageFile.mov"); // false
+app.isDocument("~/Desktop/imageFile.mov"); // false
 ```
 
 ---
@@ -497,9 +497,9 @@ Creates a new .prproj [Project object](../general/project.md), at the specified 
 
 #### Parameters
 
-| Parameter |  Type  |                             Description                              |
+| Parameter | Type   | Description                                                          |
 | --------- | ------ | -------------------------------------------------------------------- |
-| `path`    | String | A full path to new project; a .prproj extension will *not* be added. |
+| `path`    | String | A full path to new project; a .prproj extension will _not_ be added. |
 
 #### Returns
 
@@ -517,7 +517,7 @@ Opens the file at the specified path, as a Premiere Pro [Project object](../gene
 
 #### Parameters
 
-|         Parameter          |  Type   |                           Description                           |
+| Parameter                  | Type    | Description                                                     |
 | -------------------------- | ------- | --------------------------------------------------------------- |
 | `path`                     | String  | Full path to the document to be opened.                         |
 | `suppressConversionDialog` | Boolean | Optional. Suppress project conversion dialog.                   |
@@ -541,7 +541,7 @@ Opens an FCP XML file as a Premiere Pro [Project object](../general/project.md) 
 
 #### Parameters
 
-| Parameter  |  Type  | Description |
+| Parameter  | Type   | Description |
 | ---------- | ------ | ----------- |
 | `path`     | String |             |
 | `projPath` | String |             |
@@ -580,7 +580,7 @@ Determines whether proxy usage is currently enabled.
 
 #### Parameters
 
-| Parameter |  Type   |                Description                |
+| Parameter | Type    | Description                               |
 | --------- | ------- | ----------------------------------------- |
 | `enabled` | Integer | `1` turns proxies on, `0` turns them off. |
 
@@ -600,7 +600,7 @@ Whether extension with the given extensionID persists, within this session.
 
 #### Parameters
 
-|   Parameter   |  Type   |                          Description                          |
+| Parameter     | Type    | Description                                                   |
 | ------------- | ------- | ------------------------------------------------------------- |
 | `extensionID` | String  | Which extension to modify.                                    |
 | `persistent`  | Integer | Pass `1` to keep extension in memory, `0` to allow unloading. |
@@ -612,7 +612,7 @@ Returns `true` if successful.
 #### Example
 
 ```js
-var extensionID = 'com.adobe.PProPanel';
+var extensionID = "com.adobe.PProPanel";
 // 0 - while testing (to enable rapid reload);
 // 1 - for "Never unload me, even when not visible."
 var persistent = 0;
@@ -632,21 +632,20 @@ Specifies the path to be used for one of Premiere Pro's scratch disk paths.
 
 #### Parameters
 
-
 +-------------------+------------------------+-------------------------------------------------+
-|     Parameter     |          Type          |                   Description                   |
+| Parameter | Type | Description |
 +===================+========================+=================================================+
-| `path`            | String                 | The new path to be used.                        |
+| `path` | String | The new path to be used. |
 +-------------------+------------------------+-------------------------------------------------+
 | `scratchDiskType` | `ScratchDiskType` enum | Enumerated value, must be one of the following: |
-|                   |                        |                                                 |
-|                   |                        | - `ScratchDiskType.FirstVideoCaptureFolder`     |
-|                   |                        | - `ScratchDiskType.FirstAudioCaptureFolder`     |
-|                   |                        | - `ScratchDiskType.FirstVideoPreviewFolder`     |
-|                   |                        | - `ScratchDiskType.FirstAudioPreviewFolder`     |
-|                   |                        | - `ScratchDiskType.FirstAutoSaveFolder`         |
-|                   |                        | - `ScratchDiskType.FirstCCLibrariesFolder`      |
-|                   |                        | - `ScratchDiskType.FirstCapsuleMediaFolder`     |
+| | | |
+| | | - `ScratchDiskType.FirstVideoCaptureFolder` |
+| | | - `ScratchDiskType.FirstAudioCaptureFolder` |
+| | | - `ScratchDiskType.FirstVideoPreviewFolder` |
+| | | - `ScratchDiskType.FirstAudioPreviewFolder` |
+| | | - `ScratchDiskType.FirstAutoSaveFolder` |
+| | | - `ScratchDiskType.FirstCCLibrariesFolder` |
+| | | - `ScratchDiskType.FirstCapsuleMediaFolder` |
 +-------------------+------------------------+-------------------------------------------------+
 
 #### Returns
@@ -656,9 +655,12 @@ Returns `true` if successful.
 #### Example
 
 ```js
-var scratchPath = Folder.selectDialog('Choose new scratch disk folder');
+var scratchPath = Folder.selectDialog("Choose new scratch disk folder");
 if (scratchPath && scratchPath.exists) {
-    app.setScratchDiskPath(scratchPath.fsName, ScratchDiskType.FirstAutoSaveFolder);
+  app.setScratchDiskPath(
+    scratchPath.fsName,
+    ScratchDiskType.FirstAutoSaveFolder
+  );
 }
 ```
 
@@ -675,15 +677,15 @@ Writes a string to Premiere Pro's Events panel.
 #### Parameters
 
 +-------------+--------+-----------------------+
-|  Parameter  |  Type  |      Description      |
+| Parameter | Type | Description |
 +=============+========+=======================+
-| `message`   | String | A message to display. |
+| `message` | String | A message to display. |
 +-------------+--------+-----------------------+
-| `decorator` | String | Decorator, one of:    |
-|             |        |                       |
-|             |        | - `info`              |
-|             |        | - `warning`           |
-|             |        | - `error`             |
+| `decorator` | String | Decorator, one of: |
+| | | |
+| | | - `info` |
+| | | - `warning` |
+| | | - `error` |
 +-------------+--------+-----------------------+
 
 #### Returns
@@ -702,7 +704,7 @@ Set workspace as active. Use [app.getWorkspaces()](#appgetworkspaces) to get a l
 
 #### Parameters
 
-|  Parameter  |  Type  |        Description         |
+| Parameter   | Type   | Description                |
 | ----------- | ------ | -------------------------- |
 | `workspace` | String | The name of the workspace. |
 
@@ -715,11 +717,11 @@ Boolean.
 Activate "Editing" workspace.
 
 ```js
-var workspace = 'Editing';
+var workspace = "Editing";
 if (app.setWorkspace(workspace)) {
-    alert('Workspace changed to "' + workspace + '"');
+  alert('Workspace changed to "' + workspace + '"');
 } else {
-    alert('Could not set "' + workspace + '" workspace');
+  alert('Could not set "' + workspace + '" workspace');
 }
 ```
 
@@ -763,10 +765,10 @@ An array of view IDs; can be null.
 
 ```js
 var allViewIDs = app.getProjectViewIDs();
-if (allViewIDs){
-    var firstOne = allViewIDs[0];
+if (allViewIDs) {
+  var firstOne = allViewIDs[0];
 } else {
-    // No views open.
+  // No views open.
 }
 ```
 
@@ -828,9 +830,35 @@ An array of [ProjectItems](../item/projectitem.md); can be null.
 
 ```js
 var selectedItems = app.getCurrentProjectViewSelection();
-if (selectedItems){
-    var firstOne = selectedItems[0];
+if (selectedItems) {
+  var firstOne = selectedItems[0];
 } else {
-    // No projectItems selected.
+  // No projectItems selected.
 }
 ```
+
+---
+
+### app.broadcastPrefsChanged()
+
+`app.broadcastPrefsChanged()`
+
+#### Description
+
+Notifies Application that preferences have changed.
+
+#### Parameters
+
+String ID of the preference that changed. (currently only listens to "BE::PreferencesScratchDisksChanged")
+
+#### Returns
+
+Returns `true` if update was successful.
+
+#### Example
+
+```js
+app.broadcastPrefsChanged("BE::PreferencesScratchDisksChanged");
+```
+
+---
