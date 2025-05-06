@@ -834,3 +834,27 @@ if (selectedItems){
     // No projectItems selected.
 }
 ```
+
+---
+
+### app.broadcastPrefsChanged()
+
+`app.broadcastPrefsChanged()`
+
+#### Description
+
+Notifies Application that preferences have changed.
+
+#### Parameters
+
+String ID of the preference that changed. (currently only listens to "BE::PreferencesScratchDisksChanged")
+
+#### Returns
+
+Returns `true` if update was successful.
+
+#### Example
+
+```js
+app.broadcastPrefsChanged("BE::PreferencesScratchDisksChanged");
+```
