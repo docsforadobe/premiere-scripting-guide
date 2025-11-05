@@ -89,6 +89,24 @@ app.getAppPrefPath;
 
 ---
 
+### app.bind
+
+`app.bind`
+
+#### Description
+
+Registers the specified function to get called, when a given event is sent.
+
+#### Type
+
+Boolean; returns ```true``` if successful.
+
+```js
+var success	= app.bind("onActiveSequenceStructureChanged", myActiveSequenceStructureChangedFxn);
+```
+
+---
+
 ### app.getAppSystemPrefPath
 
 `app.getAppSystemPrefPath`
