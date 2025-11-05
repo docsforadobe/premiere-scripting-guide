@@ -1029,6 +1029,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#projectitemclearinpoint" class="md-nav__link">
+		<span class="md-ellipsis">
+			ProjectItem.clearInPoint()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#projectitemclearoutpoint" class="md-nav__link">
 		<span class="md-ellipsis">
 			ProjectItem.clearOutPoint()
@@ -2289,6 +2302,19 @@
 				
 				
 					<li class="md-nav__item">
+	<a href="#projectitemclearinpoint" class="md-nav__link">
+		<span class="md-ellipsis">
+			ProjectItem.clearInPoint()
+		</span>
+	</a>
+
+	<!-- Table of contents list -->
+	
+</li>
+				
+				
+				
+					<li class="md-nav__item">
 	<a href="#projectitemclearoutpoint" class="md-nav__link">
 		<span class="md-ellipsis">
 			ProjectItem.clearOutPoint()
@@ -3047,20 +3073,29 @@
 <h4 id="returns_3">Returns<a class="headerlink" href="#returns_3" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if replacement was successful.</p>
 <hr />
-<h3 id="projectitemclearoutpoint">ProjectItem.clearOutPoint()<a class="headerlink" href="#projectitemclearoutpoint" title="Permanent link">&para;</a></h3>
-<p><code>app.project.rootItem.children[index].clearOutPoint()</code></p>
+<h3 id="projectitemclearinpoint">ProjectItem.clearInPoint()<a class="headerlink" href="#projectitemclearinpoint" title="Permanent link">&para;</a></h3>
+<p><code>app.project.rootItem.children[index].clearInPoint()</code></p>
 <h4 id="description_13">Description<a class="headerlink" href="#description_13" title="Permanent link">&para;</a></h4>
-<p>Clears any assigned out point; the project item will then start at <code>startTime</code>.</p>
+<p>Clears any assigned in point; the project item will then start at <code>startTime</code>.</p>
 <h4 id="parameters_4">Parameters<a class="headerlink" href="#parameters_4" title="Permanent link">&para;</a></h4>
 <p>None</p>
 <h4 id="returns_4">Returns<a class="headerlink" href="#returns_4" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if successful.</p>
 <hr />
+<h3 id="projectitemclearoutpoint">ProjectItem.clearOutPoint()<a class="headerlink" href="#projectitemclearoutpoint" title="Permanent link">&para;</a></h3>
+<p><code>app.project.rootItem.children[index].clearOutPoint()</code></p>
+<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<p>Clears any assigned out point; the project item will then start at <code>startTime</code>.</p>
+<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
+<p>None</p>
+<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
+<p>Returns <code>0</code> if successful.</p>
+<hr />
 <h3 id="projectitemcreatebin">ProjectItem.createBin()<a class="headerlink" href="#projectitemcreatebin" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].createBin(name)</code></p>
-<h4 id="description_14">Description<a class="headerlink" href="#description_14" title="Permanent link">&para;</a></h4>
+<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
 <p>Creates an empty bin, within the project item. Only works within bins.</p>
-<h4 id="parameters_5">Parameters<a class="headerlink" href="#parameters_5" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3077,14 +3112,14 @@
 </tr>
 </tbody>
 </table>
-<h4 id="returns_5">Returns<a class="headerlink" href="#returns_5" title="Permanent link">&para;</a></h4>
+<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
 <p>Returns a project item representing the new bin if successful, or <code>0</code> if unsuccessful.</p>
 <hr />
 <h3 id="projectitemcreatesmartbin">ProjectItem.createSmartBin()<a class="headerlink" href="#projectitemcreatesmartbin" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].createSmartBin(name, queryString)</code></p>
-<h4 id="description_15">Description<a class="headerlink" href="#description_15" title="Permanent link">&para;</a></h4>
+<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
 <p>Creates a search bin; only works for bin project items.</p>
-<h4 id="parameters_6">Parameters<a class="headerlink" href="#parameters_6" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3106,14 +3141,14 @@
 </tr>
 </tbody>
 </table>
-<h4 id="returns_6">Returns<a class="headerlink" href="#returns_6" title="Permanent link">&para;</a></h4>
+<h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">&para;</a></h4>
 <p>Returns a projectItem representing the newly-created bin, if successful.</p>
 <hr />
 <h3 id="projectitemcreatesubclip">ProjectItem.createSubClip()<a class="headerlink" href="#projectitemcreatesubclip" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].createSubClip(name, startTime, endTime, hasHardBoundaries, takeAudio, takeVideo)</code></p>
-<h4 id="description_16">Description<a class="headerlink" href="#description_16" title="Permanent link">&para;</a></h4>
+<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
 <p>Creates a new project item for a sub-clip of the existing project item.</p>
-<h4 id="parameters_7">Parameters<a class="headerlink" href="#parameters_7" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3155,23 +3190,23 @@
 </tr>
 </tbody>
 </table>
-<h4 id="returns_7">Returns<a class="headerlink" href="#returns_7" title="Permanent link">&para;</a></h4>
+<h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">&para;</a></h4>
 <p>Returns a project item representing the new subclip, or 0 if creation failed.</p>
 <hr />
 <h3 id="projectitemdeletebin">ProjectItem.deleteBin()<a class="headerlink" href="#projectitemdeletebin" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].deleteBin()</code></p>
-<h4 id="description_17">Description<a class="headerlink" href="#description_17" title="Permanent link">&para;</a></h4>
+<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
 <p>Deletes a bin and all its contents from the project.</p>
-<h4 id="parameters_8">Parameters<a class="headerlink" href="#parameters_8" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_8">Returns<a class="headerlink" href="#returns_8" title="Permanent link">&para;</a></h4>
+<h4 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if deletion was successful.</p>
 <hr />
 <h3 id="projectitemfinditemsmatchingmediapath">ProjectItem.findItemsMatchingMediaPath()<a class="headerlink" href="#projectitemfinditemsmatchingmediapath" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].findItemsMatchingMediaPath(pathToMatch, ignoreSubClips)</code></p>
-<h4 id="description_18">Description<a class="headerlink" href="#description_18" title="Permanent link">&para;</a></h4>
+<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
 <p>Returns an array of project items, all of which reference the same media path.</p>
-<h4 id="parameters_9">Parameters<a class="headerlink" href="#parameters_9" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3193,16 +3228,16 @@
 </tr>
 </tbody>
 </table>
-<h4 id="returns_9">Returns<a class="headerlink" href="#returns_9" title="Permanent link">&para;</a></h4>
+<h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">&para;</a></h4>
 <p>Returns an array of project items, or <code>0</code> if no project items matching the <code>matchPath</code> were found.</p>
 <hr />
 <h3 id="projectitemgetcolorlabel">ProjectItem.getColorLabel()<a class="headerlink" href="#projectitemgetcolorlabel" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getColorLabel()</code></p>
-<h4 id="description_19">Description<a class="headerlink" href="#description_19" title="Permanent link">&para;</a></h4>
+<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
 <p>Retrieves the project item's color label.</p>
-<h4 id="parameters_10">Parameters<a class="headerlink" href="#parameters_10" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">&para;</a></h4>
+<h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">&para;</a></h4>
 <p>Integer, one of:</p>
 <ul>
 <li><code>0</code> = Violet</li>
@@ -3225,11 +3260,11 @@
 <hr />
 <h3 id="projectitemgetcolorspace">ProjectItem.getColorSpace()<a class="headerlink" href="#projectitemgetcolorspace" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getColorSpace()</code></p>
-<h4 id="description_20">Description<a class="headerlink" href="#description_20" title="Permanent link">&para;</a></h4>
+<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
 <p>Retrieves the project item's colorspace properties.</p>
-<h4 id="parameters_11">Parameters<a class="headerlink" href="#parameters_11" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">&para;</a></h4>
+<h4 id="returns_12">Returns<a class="headerlink" href="#returns_12" title="Permanent link">&para;</a></h4>
 <p>Returns an item's colorspace properties, an object consisting of:</p>
 <ul>
 <li><code>name</code></li>
@@ -3248,11 +3283,11 @@
 <hr />
 <h3 id="projectitemgetoriginalcolorspace">ProjectItem.getOriginalColorSpace()<a class="headerlink" href="#projectitemgetoriginalcolorspace" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getOriginalColorSpace()</code></p>
-<h4 id="description_21">Description<a class="headerlink" href="#description_21" title="Permanent link">&para;</a></h4>
+<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
 <p>Retrieves the project item's colorspace properties .</p>
-<h4 id="parameters_12">Parameters<a class="headerlink" href="#parameters_12" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_12">Returns<a class="headerlink" href="#returns_12" title="Permanent link">&para;</a></h4>
+<h4 id="returns_13">Returns<a class="headerlink" href="#returns_13" title="Permanent link">&para;</a></h4>
 <p>Returns an item's colorspace properties, an object consisting of:</p>
 <ul>
 <li><code>name</code></li>
@@ -3265,11 +3300,11 @@
 <hr />
 <h3 id="projectitemgetembeddedlutid">ProjectItem.getEmbeddedLUTID()<a class="headerlink" href="#projectitemgetembeddedlutid" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getEmbeddedLUTID()</code></p>
-<h4 id="description_22">Description<a class="headerlink" href="#description_22" title="Permanent link">&para;</a></h4>
+<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
 <p>Retrieves the project item's LUTID .</p>
-<h4 id="parameters_13">Parameters<a class="headerlink" href="#parameters_13" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_13">Returns<a class="headerlink" href="#returns_13" title="Permanent link">&para;</a></h4>
+<h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">&para;</a></h4>
 <p>Returns an item's LUTID</p>
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
 <p>Writes LUTID to Events panel.</p>
@@ -3279,11 +3314,11 @@
 <hr />
 <h3 id="projectitemgetinputlutid">ProjectItem.getInputLUTID()<a class="headerlink" href="#projectitemgetinputlutid" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getInputLUTID()</code></p>
-<h4 id="description_23">Description<a class="headerlink" href="#description_23" title="Permanent link">&para;</a></h4>
+<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
 <p>Retrieves the project item's Input LUTID .</p>
-<h4 id="parameters_14">Parameters<a class="headerlink" href="#parameters_14" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_14">Returns<a class="headerlink" href="#returns_14" title="Permanent link">&para;</a></h4>
+<h4 id="returns_15">Returns<a class="headerlink" href="#returns_15" title="Permanent link">&para;</a></h4>
 <p>Returns an item's Input LUTID</p>
 <h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
 <p>Writes Input LUTID to Events panel.</p>
@@ -3293,11 +3328,11 @@
 <hr />
 <h3 id="projectitemgetfootageinterpretation">ProjectItem.getFootageInterpretation()<a class="headerlink" href="#projectitemgetfootageinterpretation" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getFootageInterpretation()</code></p>
-<h4 id="description_24">Description<a class="headerlink" href="#description_24" title="Permanent link">&para;</a></h4>
+<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
 <p>Returns a structure describing the current interpretation of the projectItem.</p>
-<h4 id="parameters_15">Parameters<a class="headerlink" href="#parameters_15" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_15">Returns<a class="headerlink" href="#returns_15" title="Permanent link">&para;</a></h4>
+<h4 id="returns_16">Returns<a class="headerlink" href="#returns_16" title="Permanent link">&para;</a></h4>
 <p>A footage interpretation structure, or <code>0</code> if unsuccessful.</p>
 <table>
 <thead>
@@ -3491,41 +3526,41 @@
 <hr />
 <h3 id="projectitemgetinpoint">ProjectItem.getInPoint()<a class="headerlink" href="#projectitemgetinpoint" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getInPoint()</code></p>
-<h4 id="description_25">Description<a class="headerlink" href="#description_25" title="Permanent link">&para;</a></h4>
+<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
 <p>Obtains the current project item in point.</p>
-<h4 id="parameters_16">Parameters<a class="headerlink" href="#parameters_16" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_16">Returns<a class="headerlink" href="#returns_16" title="Permanent link">&para;</a></h4>
+<h4 id="returns_17">Returns<a class="headerlink" href="#returns_17" title="Permanent link">&para;</a></h4>
 <p>A <a href="../../other/time/">Time object</a>, containing the in point.</p>
 <hr />
 <h3 id="projectitemgetmarkers">ProjectItem.getMarkers()<a class="headerlink" href="#projectitemgetmarkers" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getMarkers()</code></p>
-<h4 id="description_26">Description<a class="headerlink" href="#description_26" title="Permanent link">&para;</a></h4>
+<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
 <p>Retrieves the <a href="../../collection/markercollection/">MarkerCollection object</a> associated with this project item.</p>
-<h4 id="parameters_17">Parameters<a class="headerlink" href="#parameters_17" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_18">Parameters<a class="headerlink" href="#parameters_18" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_17">Returns<a class="headerlink" href="#returns_17" title="Permanent link">&para;</a></h4>
+<h4 id="returns_18">Returns<a class="headerlink" href="#returns_18" title="Permanent link">&para;</a></h4>
 <p><a href="../../collection/markercollection/">MarkerCollection object</a>, read-only;</p>
 <hr />
 <h3 id="projectitemgetmediapath">ProjectItem.getMediaPath()<a class="headerlink" href="#projectitemgetmediapath" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getMediaPath()</code></p>
-<h4 id="description_27">Description<a class="headerlink" href="#description_27" title="Permanent link">&para;</a></h4>
+<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
 <p>Returns the path associated with the project item's media, as a String.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>This only works for atomic media; this call cannot provide meaningful paths for media which has no actual path (which will be the case for any media generated by synthetic importers, like Premiere Pro's own Universal Counting Leader).</p>
 <p>Also, for image sequences, only the path to the first image in the sequence will be returned.</p>
 </div>
-<h4 id="parameters_18">Parameters<a class="headerlink" href="#parameters_18" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_19">Parameters<a class="headerlink" href="#parameters_19" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_18">Returns<a class="headerlink" href="#returns_18" title="Permanent link">&para;</a></h4>
+<h4 id="returns_19">Returns<a class="headerlink" href="#returns_19" title="Permanent link">&para;</a></h4>
 <p>A String containing the path to the media associate with the project item.</p>
 <hr />
 <h3 id="projectitemgetoutpoint">ProjectItem.getOutPoint()<a class="headerlink" href="#projectitemgetoutpoint" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getOutPoint(mediaType)</code></p>
-<h4 id="description_28">Description<a class="headerlink" href="#description_28" title="Permanent link">&para;</a></h4>
+<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
 <p>Retrieves the current out point for specified media type.</p>
-<h4 id="parameters_19">Parameters<a class="headerlink" href="#parameters_19" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_20">Parameters<a class="headerlink" href="#parameters_20" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3560,25 +3595,25 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_19">Returns<a class="headerlink" href="#returns_19" title="Permanent link">&para;</a></h4>
+<h4 id="returns_20">Returns<a class="headerlink" href="#returns_20" title="Permanent link">&para;</a></h4>
 <p>Returns a <a href="../../other/time/">Time object</a>.</p>
 <hr />
 <h3 id="projectitemgetprojectmetadata">ProjectItem.getProjectMetadata()<a class="headerlink" href="#projectitemgetprojectmetadata" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getProjectMetadata()</code></p>
-<h4 id="description_29">Description<a class="headerlink" href="#description_29" title="Permanent link">&para;</a></h4>
+<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
 <p>Retrieves metadata associated with the project item. Distinct from media XMP.</p>
-<h4 id="parameters_20">Parameters<a class="headerlink" href="#parameters_20" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_21">Parameters<a class="headerlink" href="#parameters_21" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_20">Returns<a class="headerlink" href="#returns_20" title="Permanent link">&para;</a></h4>
+<h4 id="returns_21">Returns<a class="headerlink" href="#returns_21" title="Permanent link">&para;</a></h4>
 <p>A String containing all Premiere Pro private project metadata, serialized.</p>
 <hr />
 <h3 id="projectitemgetprojectcolumnsmetadata">ProjectItem.getProjectColumnsMetadata()<a class="headerlink" href="#projectitemgetprojectcolumnsmetadata" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getProjectColumnsMetadata()</code></p>
-<h4 id="description_30">Description<a class="headerlink" href="#description_30" title="Permanent link">&para;</a></h4>
+<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
 <p>Returns a JSON string to the user with all the metadata from the current project view layout</p>
-<h4 id="parameters_21">Parameters<a class="headerlink" href="#parameters_21" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_22">Parameters<a class="headerlink" href="#parameters_22" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_21">Returns<a class="headerlink" href="#returns_21" title="Permanent link">&para;</a></h4>
+<h4 id="returns_22">Returns<a class="headerlink" href="#returns_22" title="Permanent link">&para;</a></h4>
 <p>A JSON string that can be parsed with JSON.parse() method in the Javascript layer.</p>
 <p>This generates a list of objects, each object representing a column. Each object will contain 4 key/value pairs: <code>ColumnName</code>, <code>ColumnValue</code>, <code>ColumnID</code>, <code>ColumnPath</code>.</p>
 <ul>
@@ -3620,90 +3655,90 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 <hr />
 <h3 id="projectitemgetproxypath">ProjectItem.getProxyPath()<a class="headerlink" href="#projectitemgetproxypath" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getProxyPath()</code></p>
-<h4 id="description_31">Description<a class="headerlink" href="#description_31" title="Permanent link">&para;</a></h4>
+<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
 <p>Retrieves the path to the proxy media associated with this project item.</p>
-<h4 id="parameters_22">Parameters<a class="headerlink" href="#parameters_22" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_23">Parameters<a class="headerlink" href="#parameters_23" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_22">Returns<a class="headerlink" href="#returns_22" title="Permanent link">&para;</a></h4>
+<h4 id="returns_23">Returns<a class="headerlink" href="#returns_23" title="Permanent link">&para;</a></h4>
 <p>Returns the path (as String) to the proxy media associated with the proxy item, or <code>0</code> if none is found.</p>
 <hr />
 <h3 id="projectitemgetxmpmetadata">ProjectItem.getXMPMetadata()<a class="headerlink" href="#projectitemgetxmpmetadata" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].getXMPMetadata()</code></p>
-<h4 id="description_32">Description<a class="headerlink" href="#description_32" title="Permanent link">&para;</a></h4>
+<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
 <p>Retrieves the XMP metadata associated with the project item, as a String.</p>
-<h4 id="parameters_23">Parameters<a class="headerlink" href="#parameters_23" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_24">Parameters<a class="headerlink" href="#parameters_24" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_23">Returns<a class="headerlink" href="#returns_23" title="Permanent link">&para;</a></h4>
+<h4 id="returns_24">Returns<a class="headerlink" href="#returns_24" title="Permanent link">&para;</a></h4>
 <p>A String containing all XMP metadata, serialized.</p>
 <hr />
 <h3 id="projectitemhasproxy">ProjectItem.hasProxy()<a class="headerlink" href="#projectitemhasproxy" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].hasProxy()</code></p>
-<h4 id="description_33">Description<a class="headerlink" href="#description_33" title="Permanent link">&para;</a></h4>
+<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
 <p>Indicates whether a proxy has already been attached, to the project item.</p>
-<h4 id="parameters_24">Parameters<a class="headerlink" href="#parameters_24" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_25">Parameters<a class="headerlink" href="#parameters_25" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_24">Returns<a class="headerlink" href="#returns_24" title="Permanent link">&para;</a></h4>
+<h4 id="returns_25">Returns<a class="headerlink" href="#returns_25" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if the project item has a proxy attached; <code>false</code> if not.</p>
 <hr />
 <h3 id="projectitemismergedclip">ProjectItem.isMergedClip()<a class="headerlink" href="#projectitemismergedclip" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].isMergedClip()</code></p>
-<h4 id="description_34">Description<a class="headerlink" href="#description_34" title="Permanent link">&para;</a></h4>
+<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
 <p>Indicates whether the project item refers to a merged clip.</p>
-<h4 id="parameters_25">Parameters<a class="headerlink" href="#parameters_25" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_26">Parameters<a class="headerlink" href="#parameters_26" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_25">Returns<a class="headerlink" href="#returns_25" title="Permanent link">&para;</a></h4>
+<h4 id="returns_26">Returns<a class="headerlink" href="#returns_26" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if the project item is a merged clip, <code>false</code> if it isn't.</p>
 <hr />
 <h3 id="projectitemismulticamclip">ProjectItem.isMulticamClip()<a class="headerlink" href="#projectitemismulticamclip" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].isMulticamClip()</code></p>
-<h4 id="description_35">Description<a class="headerlink" href="#description_35" title="Permanent link">&para;</a></h4>
+<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
 <p>Indicates whether the project item refers to a multicam clip.</p>
-<h4 id="parameters_26">Parameters<a class="headerlink" href="#parameters_26" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_27">Parameters<a class="headerlink" href="#parameters_27" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_26">Returns<a class="headerlink" href="#returns_26" title="Permanent link">&para;</a></h4>
+<h4 id="returns_27">Returns<a class="headerlink" href="#returns_27" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if the project item is a multicam clip, <code>false</code> if it isn't.</p>
 <hr />
 <h3 id="projectitemisoffline">ProjectItem.isOffline()<a class="headerlink" href="#projectitemisoffline" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].isOffline()</code></p>
-<h4 id="description_36">Description<a class="headerlink" href="#description_36" title="Permanent link">&para;</a></h4>
+<h4 id="description_37">Description<a class="headerlink" href="#description_37" title="Permanent link">&para;</a></h4>
 <p>Returns a Boolean indicating whether the project item is offline.</p>
-<h4 id="parameters_27">Parameters<a class="headerlink" href="#parameters_27" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_28">Parameters<a class="headerlink" href="#parameters_28" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_27">Returns<a class="headerlink" href="#returns_27" title="Permanent link">&para;</a></h4>
+<h4 id="returns_28">Returns<a class="headerlink" href="#returns_28" title="Permanent link">&para;</a></h4>
 <p>Boolean, <code>true</code> if offline.</p>
 <hr />
 <h3 id="projectitemissequence">ProjectItem.isSequence()<a class="headerlink" href="#projectitemissequence" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].isSequence()</code></p>
-<h4 id="description_37">Description<a class="headerlink" href="#description_37" title="Permanent link">&para;</a></h4>
+<h4 id="description_38">Description<a class="headerlink" href="#description_38" title="Permanent link">&para;</a></h4>
 <p>Indicates whether the project item refers to a <a href="../../sequence/sequence/">Sequence object</a>.</p>
-<h4 id="parameters_28">Parameters<a class="headerlink" href="#parameters_28" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_29">Parameters<a class="headerlink" href="#parameters_29" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_28">Returns<a class="headerlink" href="#returns_28" title="Permanent link">&para;</a></h4>
+<h4 id="returns_29">Returns<a class="headerlink" href="#returns_29" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if the project item is a <a href="../../sequence/sequence/">Sequence object</a>, or a multicam clip, or a merged clip. Returns <code>false</code> if it isn't any of those.</p>
 <hr />
 <h3 id="projectitemmovebin">ProjectItem.moveBin()<a class="headerlink" href="#projectitemmovebin" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].moveBin(newParentBinProjectItem)</code></p>
-<h4 id="description_38">Description<a class="headerlink" href="#description_38" title="Permanent link">&para;</a></h4>
+<h4 id="description_39">Description<a class="headerlink" href="#description_39" title="Permanent link">&para;</a></h4>
 <p>Moves the projectItem into a new parent bin.</p>
-<h4 id="parameters_29">Parameters<a class="headerlink" href="#parameters_29" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_30">Parameters<a class="headerlink" href="#parameters_30" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_29">Returns<a class="headerlink" href="#returns_29" title="Permanent link">&para;</a></h4>
+<h4 id="returns_30">Returns<a class="headerlink" href="#returns_30" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if move was successful.</p>
 <hr />
 <h3 id="projectitemrefreshmedia">ProjectItem.refreshMedia()<a class="headerlink" href="#projectitemrefreshmedia" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].refreshMedia()</code></p>
-<h4 id="description_39">Description<a class="headerlink" href="#description_39" title="Permanent link">&para;</a></h4>
+<h4 id="description_40">Description<a class="headerlink" href="#description_40" title="Permanent link">&para;</a></h4>
 <p>Forces Premiere Pro to update its representation of the media associated with the project item. If the media was previously off-line, this can cause it to become online (if previously missing media has become available).</p>
-<h4 id="parameters_30">Parameters<a class="headerlink" href="#parameters_30" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_31">Parameters<a class="headerlink" href="#parameters_31" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_30">Returns<a class="headerlink" href="#returns_30" title="Permanent link">&para;</a></h4>
+<h4 id="returns_31">Returns<a class="headerlink" href="#returns_31" title="Permanent link">&para;</a></h4>
 <p>An array of markers associated with the project item, or <code>0</code> if there are no markers.</p>
 <hr />
 <h3 id="projectitemrenamebin">ProjectItem.renameBin()<a class="headerlink" href="#projectitemrenamebin" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].renameBin(newName)</code></p>
-<h4 id="description_40">Description<a class="headerlink" href="#description_40" title="Permanent link">&para;</a></h4>
+<h4 id="description_41">Description<a class="headerlink" href="#description_41" title="Permanent link">&para;</a></h4>
 <p>Changes name of bin. Only works on project items which are bins.</p>
-<h4 id="parameters_31">Parameters<a class="headerlink" href="#parameters_31" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_32">Parameters<a class="headerlink" href="#parameters_32" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3720,23 +3755,23 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_31">Returns<a class="headerlink" href="#returns_31" title="Permanent link">&para;</a></h4>
+<h4 id="returns_32">Returns<a class="headerlink" href="#returns_32" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if renaming bin was successful.</p>
 <hr />
 <h3 id="projectitemselect">ProjectItem.select()<a class="headerlink" href="#projectitemselect" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].select()</code></p>
-<h4 id="description_41">Description<a class="headerlink" href="#description_41" title="Permanent link">&para;</a></h4>
+<h4 id="description_42">Description<a class="headerlink" href="#description_42" title="Permanent link">&para;</a></h4>
 <p>Sets the project item (which must be a bin), as the target for subsequent imports into the project.</p>
-<h4 id="parameters_32">Parameters<a class="headerlink" href="#parameters_32" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_33">Parameters<a class="headerlink" href="#parameters_33" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_32">Returns<a class="headerlink" href="#returns_32" title="Permanent link">&para;</a></h4>
+<h4 id="returns_33">Returns<a class="headerlink" href="#returns_33" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if the project item has successfully been made the target, for subsequent imports.</p>
 <hr />
 <h3 id="projectitemsetcolorlabel">ProjectItem.setColorLabel()<a class="headerlink" href="#projectitemsetcolorlabel" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].setColorLabel(labelColor)</code></p>
-<h4 id="description_42">Description<a class="headerlink" href="#description_42" title="Permanent link">&para;</a></h4>
+<h4 id="description_43">Description<a class="headerlink" href="#description_43" title="Permanent link">&para;</a></h4>
 <p>Sets the project item's color label.</p>
-<h4 id="parameters_33">Parameters<a class="headerlink" href="#parameters_33" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_34">Parameters<a class="headerlink" href="#parameters_34" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3753,14 +3788,14 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_33">Returns<a class="headerlink" href="#returns_33" title="Permanent link">&para;</a></h4>
+<h4 id="returns_34">Returns<a class="headerlink" href="#returns_34" title="Permanent link">&para;</a></h4>
 <p><code>0</code> if successful.</p>
 <hr />
 <h3 id="projectitemsetfootageinterpretation">ProjectItem.setFootageInterpretation()<a class="headerlink" href="#projectitemsetfootageinterpretation" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].setFootageInterpretation(interpretation)</code></p>
-<h4 id="description_43">Description<a class="headerlink" href="#description_43" title="Permanent link">&para;</a></h4>
+<h4 id="description_44">Description<a class="headerlink" href="#description_44" title="Permanent link">&para;</a></h4>
 <p>Returns a structure describing the current interpretation of the projectItem.</p>
-<h4 id="parameters_34">Parameters<a class="headerlink" href="#parameters_34" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_35">Parameters<a class="headerlink" href="#parameters_35" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3777,14 +3812,14 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_34">Returns<a class="headerlink" href="#returns_34" title="Permanent link">&para;</a></h4>
+<h4 id="returns_35">Returns<a class="headerlink" href="#returns_35" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if successful.</p>
 <hr />
 <h3 id="projectitemsetinpoint">ProjectItem.setInPoint()<a class="headerlink" href="#projectitemsetinpoint" title="Permanent link">&para;</a></h3>
-<p><code>app.project.rootItem.children[index].setInPoint(time, mediaType)</code></p>
-<h4 id="description_44">Description<a class="headerlink" href="#description_44" title="Permanent link">&para;</a></h4>
-<p>Sets the in point to <code>timeInTicks</code>, for specified media types.</p>
-<h4 id="parameters_35">Parameters<a class="headerlink" href="#parameters_35" title="Permanent link">&para;</a></h4>
+<p><code>app.project.rootItem.children[index].setInPoint(seconds, mediaType)</code></p>
+<h4 id="description_45">Description<a class="headerlink" href="#description_45" title="Permanent link">&para;</a></h4>
+<p>Sets the in point to <code>seconds</code>, for specified media types.</p>
+<h4 id="parameters_36">Parameters<a class="headerlink" href="#parameters_36" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3795,8 +3830,8 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </thead>
 <tbody>
 <tr>
-<td><code>time</code></td>
-<td>String</td>
+<td><code>seconds</code></td>
+<td>Integer</td>
 <td>A time in ticks.</td>
 </tr>
 <tr>
@@ -3806,23 +3841,23 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_35">Returns<a class="headerlink" href="#returns_35" title="Permanent link">&para;</a></h4>
+<h4 id="returns_36">Returns<a class="headerlink" href="#returns_36" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if successful.</p>
 <hr />
 <h3 id="projectitemsetoffline">ProjectItem.setOffline()<a class="headerlink" href="#projectitemsetoffline" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].setOffline()</code></p>
-<h4 id="description_45">Description<a class="headerlink" href="#description_45" title="Permanent link">&para;</a></h4>
+<h4 id="description_46">Description<a class="headerlink" href="#description_46" title="Permanent link">&para;</a></h4>
 <p>Makes the project item offline.</p>
-<h4 id="parameters_36">Parameters<a class="headerlink" href="#parameters_36" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_37">Parameters<a class="headerlink" href="#parameters_37" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_36">Returns<a class="headerlink" href="#returns_36" title="Permanent link">&para;</a></h4>
+<h4 id="returns_37">Returns<a class="headerlink" href="#returns_37" title="Permanent link">&para;</a></h4>
 <p><code>true</code> if successful.</p>
 <hr />
 <h3 id="projectitemsetoutpoint">ProjectItem.setOutPoint()<a class="headerlink" href="#projectitemsetoutpoint" title="Permanent link">&para;</a></h3>
-<p><code>app.project.rootItem.children[index].setOutPoint(time, mediaType)</code></p>
-<h4 id="description_46">Description<a class="headerlink" href="#description_46" title="Permanent link">&para;</a></h4>
-<p>Sets the out point to <code>timeInTicks</code>, for specified media types.</p>
-<h4 id="parameters_37">Parameters<a class="headerlink" href="#parameters_37" title="Permanent link">&para;</a></h4>
+<p><code>app.project.rootItem.children[index].setOutPoint(seconds, mediaType)</code></p>
+<h4 id="description_47">Description<a class="headerlink" href="#description_47" title="Permanent link">&para;</a></h4>
+<p>Sets the out point to <code>seconds</code>, for specified media types.</p>
+<h4 id="parameters_38">Parameters<a class="headerlink" href="#parameters_38" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3833,9 +3868,9 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </thead>
 <tbody>
 <tr>
-<td><code>time</code></td>
-<td>String</td>
-<td>A time in ticks.</td>
+<td><code>seconds</code></td>
+<td>Integer</td>
+<td>A time in seconds.</td>
 </tr>
 <tr>
 <td><code>mediaType</code></td>
@@ -3844,14 +3879,14 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_37">Returns<a class="headerlink" href="#returns_37" title="Permanent link">&para;</a></h4>
+<h4 id="returns_38">Returns<a class="headerlink" href="#returns_38" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if successful.</p>
 <hr />
 <h3 id="projectitemsetoverrideframerate">ProjectItem.setOverrideFrameRate()<a class="headerlink" href="#projectitemsetoverrideframerate" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].setOverrideFrameRate(newFrameRate)</code></p>
-<h4 id="description_47">Description<a class="headerlink" href="#description_47" title="Permanent link">&para;</a></h4>
+<h4 id="description_48">Description<a class="headerlink" href="#description_48" title="Permanent link">&para;</a></h4>
 <p>Sets the frame rate of the project item.</p>
-<h4 id="parameters_38">Parameters<a class="headerlink" href="#parameters_38" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_39">Parameters<a class="headerlink" href="#parameters_39" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3868,14 +3903,14 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_38">Returns<a class="headerlink" href="#returns_38" title="Permanent link">&para;</a></h4>
+<h4 id="returns_39">Returns<a class="headerlink" href="#returns_39" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if the frame rate has successfully been changed.</p>
 <hr />
 <h3 id="projectitemsetoverridepixelaspectratio">ProjectItem.setOverridePixelAspectRatio()<a class="headerlink" href="#projectitemsetoverridepixelaspectratio" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].setOverridePixelAspectRatio(numerator, denominator)</code></p>
-<h4 id="description_48">Description<a class="headerlink" href="#description_48" title="Permanent link">&para;</a></h4>
+<h4 id="description_49">Description<a class="headerlink" href="#description_49" title="Permanent link">&para;</a></h4>
 <p>Sets the pixel aspect ratio for the project item.</p>
-<h4 id="parameters_39">Parameters<a class="headerlink" href="#parameters_39" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_40">Parameters<a class="headerlink" href="#parameters_40" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3897,14 +3932,14 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_39">Returns<a class="headerlink" href="#returns_39" title="Permanent link">&para;</a></h4>
+<h4 id="returns_40">Returns<a class="headerlink" href="#returns_40" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if the aspect ratio has successfully been changed.</p>
 <hr />
 <h3 id="projectitemsetprojectmetadata">ProjectItem.setProjectMetadata()<a class="headerlink" href="#projectitemsetprojectmetadata" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].setProjectMetadata(newMetadata, updatedFields)</code></p>
-<h4 id="description_49">Description<a class="headerlink" href="#description_49" title="Permanent link">&para;</a></h4>
+<h4 id="description_50">Description<a class="headerlink" href="#description_50" title="Permanent link">&para;</a></h4>
 <p>Sets the private project metadata associated with the project item.</p>
-<h4 id="parameters_40">Parameters<a class="headerlink" href="#parameters_40" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_41">Parameters<a class="headerlink" href="#parameters_41" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3926,23 +3961,23 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_40">Returns<a class="headerlink" href="#returns_40" title="Permanent link">&para;</a></h4>
+<h4 id="returns_41">Returns<a class="headerlink" href="#returns_41" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if update was successful.</p>
 <hr />
 <h3 id="projectitemsetscaletoframesize">ProjectItem.setScaleToFrameSize()<a class="headerlink" href="#projectitemsetscaletoframesize" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].setScaleToFrameSize()</code></p>
-<h4 id="description_50">Description<a class="headerlink" href="#description_50" title="Permanent link">&para;</a></h4>
+<h4 id="description_51">Description<a class="headerlink" href="#description_51" title="Permanent link">&para;</a></h4>
 <p>Turns on scaling to frame size, for when media from this project item is inserted into a sequence.</p>
-<h4 id="parameters_41">Parameters<a class="headerlink" href="#parameters_41" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_42">Parameters<a class="headerlink" href="#parameters_42" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_41">Returns<a class="headerlink" href="#returns_41" title="Permanent link">&para;</a></h4>
+<h4 id="returns_42">Returns<a class="headerlink" href="#returns_42" title="Permanent link">&para;</a></h4>
 <p>Undefined return value.</p>
 <hr />
 <h3 id="projectitemsetstarttime">ProjectItem.setStartTime()<a class="headerlink" href="#projectitemsetstarttime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].setStartTime(time)</code></p>
-<h4 id="description_51">Description<a class="headerlink" href="#description_51" title="Permanent link">&para;</a></h4>
+<h4 id="description_52">Description<a class="headerlink" href="#description_52" title="Permanent link">&para;</a></h4>
 <p>Assigns a new start time to the project item</p>
-<h4 id="parameters_42">Parameters<a class="headerlink" href="#parameters_42" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_43">Parameters<a class="headerlink" href="#parameters_43" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3959,14 +3994,14 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_42">Returns<a class="headerlink" href="#returns_42" title="Permanent link">&para;</a></h4>
+<h4 id="returns_43">Returns<a class="headerlink" href="#returns_43" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if successful.</p>
 <hr />
 <h3 id="projectitemsetxmpmetadata">ProjectItem.setXMPMetadata()<a class="headerlink" href="#projectitemsetxmpmetadata" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].setXMPMetadata(newXMP)</code></p>
-<h4 id="description_52">Description<a class="headerlink" href="#description_52" title="Permanent link">&para;</a></h4>
+<h4 id="description_53">Description<a class="headerlink" href="#description_53" title="Permanent link">&para;</a></h4>
 <p>Sets the XMP metadata associated with the project item.</p>
-<h4 id="parameters_43">Parameters<a class="headerlink" href="#parameters_43" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_44">Parameters<a class="headerlink" href="#parameters_44" title="Permanent link">&para;</a></h4>
 <table>
 <thead>
 <tr>
@@ -3983,21 +4018,21 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
 </tr>
 </tbody>
 </table>
-<h4 id="returns_43">Returns<a class="headerlink" href="#returns_43" title="Permanent link">&para;</a></h4>
+<h4 id="returns_44">Returns<a class="headerlink" href="#returns_44" title="Permanent link">&para;</a></h4>
 <p>Returns <code>0</code> if update was successful.</p>
 <hr />
 <h3 id="projectitemstarttime">ProjectItem.startTime()<a class="headerlink" href="#projectitemstarttime" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].startTime()</code></p>
-<h4 id="description_53">Description<a class="headerlink" href="#description_53" title="Permanent link">&para;</a></h4>
+<h4 id="description_54">Description<a class="headerlink" href="#description_54" title="Permanent link">&para;</a></h4>
 <p>Returns a <a href="../../other/time/">Time object</a>, representing start time.</p>
-<h4 id="parameters_44">Parameters<a class="headerlink" href="#parameters_44" title="Permanent link">&para;</a></h4>
+<h4 id="parameters_45">Parameters<a class="headerlink" href="#parameters_45" title="Permanent link">&para;</a></h4>
 <p>None.</p>
-<h4 id="returns_44">Returns<a class="headerlink" href="#returns_44" title="Permanent link">&para;</a></h4>
+<h4 id="returns_45">Returns<a class="headerlink" href="#returns_45" title="Permanent link">&para;</a></h4>
 <p><a href="../../other/time/">Time object</a>.</p>
 <hr />
 <h3 id="projectitemvideocomponents">ProjectItem.videoComponents()<a class="headerlink" href="#projectitemvideocomponents" title="Permanent link">&para;</a></h3>
 <p><code>app.project.rootItem.children[index].videoComponents()</code></p>
-<h4 id="description_54">Description<a class="headerlink" href="#description_54" title="Permanent link">&para;</a></h4>
+<h4 id="description_55">Description<a class="headerlink" href="#description_55" title="Permanent link">&para;</a></h4>
 <p>Video components for the 'Master Clip' of this project item.</p>
 <h4 id="type_8">Type<a class="headerlink" href="#type_8" title="Permanent link">&para;</a></h4>
 <p><a href="../../collection/componentcollection/">ComponentCollection object</a>, read-only.</p>
@@ -4021,7 +4056,7 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1zM12.5 7v5.2l4 2.4-1 1L11 13V7zM11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="February 11, 2025 15:04:12 UTC">February 11, 2025</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date" title="November 5, 2025 19:53:17 UTC">November 5, 2025</span>
   </span>
 
     
