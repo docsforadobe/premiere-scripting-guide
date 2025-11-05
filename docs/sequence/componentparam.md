@@ -58,7 +58,7 @@ Adds a keyframe to the component parameter stream, at the specified time. Note: 
 
 #### Returns
 
-Returns `0` if successful.
+Returns `0` if successful; can throw an "Unknown error" exception when used on non-color properties.
 
 ---
 
