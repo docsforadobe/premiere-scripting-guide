@@ -41,6 +41,8 @@ String; read/write.
 
 A [Time object](../other/time.md) containing the value of the ending of the marker.
 
+NOTE: To set the time value for the end of a marker, pass a Seconds value, not a complete replacement ```Time```.
+
 #### Type
 
 [Time object](../other/time.md); read/write.

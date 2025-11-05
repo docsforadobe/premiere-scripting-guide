@@ -246,6 +246,23 @@ Returns `0` if replacement was successful.
 
 ---
 
+### ProjectItem.clearInPoint()
+
+`app.project.rootItem.children[index].clearInPoint()`
+
+#### Description
+
+Clears any assigned in point; the project item will then start at `startTime`.
+
+#### Parameters
+
+None
+
+#### Returns
+
+Returns `0` if successful.
+
+---
 ### ProjectItem.clearOutPoint()
 
 `app.project.rootItem.children[index].clearOutPoint()`
@@ -953,17 +970,17 @@ Returns a structure describing the current interpretation of the projectItem.
 
 ### ProjectItem.setInPoint()
 
-`app.project.rootItem.children[index].setInPoint(time, mediaType)`
+`app.project.rootItem.children[index].setInPoint(seconds, mediaType)`
 
 #### Description
 
-Sets the in point to `timeInTicks`, for specified media types.
+Sets the in point to `seconds`, for specified media types.
 
 #### Parameters
 
 |  Parameter  |  Type   |                                                   Description                                                    |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
-| `time`      | String  | A time in ticks.                                                                                                 |
+| `seconds`      | Integer  | A time in ticks.                                                                                                 |
 | `mediaType` | Integer | Determining which media type to affect; pass `1` for video only, `2` for audio only, or `4` for all media types. |
 
 #### Returns
@@ -992,17 +1009,17 @@ None.
 
 ### ProjectItem.setOutPoint()
 
-`app.project.rootItem.children[index].setOutPoint(time, mediaType)`
+`app.project.rootItem.children[index].setOutPoint(seconds, mediaType)`
 
 #### Description
 
-Sets the out point to `timeInTicks`, for specified media types.
+Sets the out point to `seconds`, for specified media types.
 
 #### Parameters
 
 |  Parameter  |  Type   |                                                   Description                                                    |
 | ----------- | ------- | ---------------------------------------------------------------------------------------------------------------- |
-| `time`      | String  | A time in ticks.                                                                                                 |
+| `seconds`      | Integer  | A time in seconds.                                                                                                 |
 | `mediaType` | Integer | Determining which media type to affect; pass `1` for video only, `2` for audio only, or `4` for all media types. |
 
 #### Returns
