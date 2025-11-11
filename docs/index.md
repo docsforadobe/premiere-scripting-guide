@@ -5,17 +5,18 @@ hide:
 
 # Premiere Pro Scripting Guide
 
-This reference is a public compendium of information about the methods and members available via the API.
+This reference is a public compendium of information about the methods and members available via the ExtendScript API.
 
-Premiere Pro provides an ExtendScript-based API, allowing for broad control of the entire application. ExtendScript can access and manipulation of most project elements, including metadata, exporting and rendering options.
+Premiere Pro's ExtendScript-based API allows for broad control of the entire application. ExtendScript can access and manipulate most project elements, including metadata, exporting and rendering options.
 
-Adobe wants your integration to succeed; please don't hesitate to [contact us](mailto:dmcsween@adobe.com?subject=API_Question_From_Docs) with questions, problems, or feature requests.
+Adobe wants your integration to succeed; please don't hesitate to [contact us](mailto:bbb@adobe.com?subject=ExtendScript_API_Question_From_Docs) with questions, problems, or feature requests.
 
-## 3rd Party Scripting is Moving to UXP
+## 3rd Party Scripting has moved to UXP
 
-Before you go any further, though, know that Adobe is moving away from Extendscript, and to UXP - Unified Extensibility Platform. Have a look at the [API Documentation](https://developer.adobe.com/premiere-pro/uxp/), and [sample plugins](https://github.com/AdobeDocs/uxp-premiere-pro-samples/)
+As of November 2025, Premiere Pro has moved to extensibility based on UXP; Unified Extensibility Platform. Have a look at the [API Documentation](https://developer.adobe.com/premiere-pro/uxp/), and [sample plugins](https://github.com/AdobeDocs/uxp-premiere-pro-samples/)
 
-Although Extendscript will be supported at least through the end of 2025, no updates will be made to the API. 
+ExtendScript-based integrations are still supported, and the plan is for them to remain so, through September 2026.
+
 ## Navigating the Guide
 
 If you're not sure where to start, take a look at the [Overview](./introduction/extendscript-overview.md) for how scripting works in Premiere Pro, or the [Changelog](./introduction/changelog.md) for updates to the scripting API over time.
