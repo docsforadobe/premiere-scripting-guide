@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -2756,7 +2756,7 @@
 <p>Registers the specified function to get called, when a given event is sent.</p>
 <h4 id="type_4">Type<a class="headerlink" href="#type_4" title="Permanent link">&para;</a></h4>
 <p>Boolean; returns <code>true</code> if successful.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">&quot;onActiveSequenceStructureChanged&quot;</span><span class="p">,</span><span class="w"> </span><span class="nx">myActiveSequenceStructureChangedFxn</span><span class="p">);</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">success</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">bind</span><span class="p">(</span><span class="s2">"onActiveSequenceStructureChanged"</span><span class="p">,</span><span class="w"> </span><span class="nx">myActiveSequenceStructureChangedFxn</span><span class="p">);</span>
 </span></code></pre></div>
 <hr />
 <h3 id="appgetappsystemprefpath">app.getAppSystemPrefPath<a class="headerlink" href="#appgetappsystemprefpath" title="Permanent link">&para;</a></h3>
@@ -2929,17 +2929,17 @@
 <p>Get a list of available workspaces.</p>
 <div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><span class="nx">app</span><span class="p">.</span><span class="nx">getWorkspaces</span><span class="p">();</span>
 </span><span id="__span-10-2"><span class="cm">/* [</span>
-</span><span id="__span-10-3"><span class="cm">    &quot;All Panels&quot;,</span>
-</span><span id="__span-10-4"><span class="cm">    &quot;Assembly&quot;,</span>
-</span><span id="__span-10-5"><span class="cm">    &quot;Audio&quot;,</span>
-</span><span id="__span-10-6"><span class="cm">    &quot;Color&quot;,</span>
-</span><span id="__span-10-7"><span class="cm">    &quot;Editing&quot;,</span>
-</span><span id="__span-10-8"><span class="cm">    &quot;Effects&quot;,</span>
-</span><span id="__span-10-9"><span class="cm">    &quot;Graphics&quot;,</span>
-</span><span id="__span-10-10"><span class="cm">    &quot;Learning&quot;,</span>
-</span><span id="__span-10-11"><span class="cm">    &quot;Libraries&quot;,</span>
-</span><span id="__span-10-12"><span class="cm">    &quot;Metalogging&quot;,</span>
-</span><span id="__span-10-13"><span class="cm">    &quot;Production&quot;</span>
+</span><span id="__span-10-3"><span class="cm">    "All Panels",</span>
+</span><span id="__span-10-4"><span class="cm">    "Assembly",</span>
+</span><span id="__span-10-5"><span class="cm">    "Audio",</span>
+</span><span id="__span-10-6"><span class="cm">    "Color",</span>
+</span><span id="__span-10-7"><span class="cm">    "Editing",</span>
+</span><span id="__span-10-8"><span class="cm">    "Effects",</span>
+</span><span id="__span-10-9"><span class="cm">    "Graphics",</span>
+</span><span id="__span-10-10"><span class="cm">    "Learning",</span>
+</span><span id="__span-10-11"><span class="cm">    "Libraries",</span>
+</span><span id="__span-10-12"><span class="cm">    "Metalogging",</span>
+</span><span id="__span-10-13"><span class="cm">    "Production"</span>
 </span><span id="__span-10-14"><span class="cm">]; */</span>
 </span></code></pre></div>
 <hr />
@@ -2968,10 +2968,10 @@
 <p>Returns <code>true</code> if file can be opened as a Premiere Pro <a href="../../general/project/">project</a>.</p>
 <h4 id="example_10">Example<a class="headerlink" href="#example_10" title="Permanent link">&para;</a></h4>
 <p>Test for valid project files</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">&#39;~/Desktop/myProject.prproj&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</span><span id="__span-11-2"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">&#39;~/Desktop/textFile.txt&#39;</span><span class="p">);</span><span class="w">     </span><span class="c1">// false</span>
-</span><span id="__span-11-3"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">&#39;~/Desktop/footageFile.mov&#39;</span><span class="p">);</span><span class="w">  </span><span class="c1">// false</span>
-</span><span id="__span-11-4"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">&#39;~/Desktop/imageFile.mov&#39;</span><span class="p">);</span><span class="w">    </span><span class="c1">// false</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/myProject.prproj'</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-11-2"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/textFile.txt'</span><span class="p">);</span><span class="w">     </span><span class="c1">// false</span>
+</span><span id="__span-11-3"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/footageFile.mov'</span><span class="p">);</span><span class="w">  </span><span class="c1">// false</span>
+</span><span id="__span-11-4"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/imageFile.mov'</span><span class="p">);</span><span class="w">    </span><span class="c1">// false</span>
 </span></code></pre></div>
 <hr />
 <h3 id="appisdocumentopen">app.isDocumentOpen()<a class="headerlink" href="#appisdocumentopen" title="Permanent link">&para;</a></h3>
@@ -3142,9 +3142,9 @@
 <h4 id="returns_10">Returns<a class="headerlink" href="#returns_10" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if successful.</p>
 <h4 id="example_11">Example<a class="headerlink" href="#example_11" title="Permanent link">&para;</a></h4>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><span class="kd">var</span><span class="w"> </span><span class="nx">extensionID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;com.adobe.PProPanel&#39;</span><span class="p">;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><span class="kd">var</span><span class="w"> </span><span class="nx">extensionID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'com.adobe.PProPanel'</span><span class="p">;</span>
 </span><span id="__span-12-2"><span class="c1">// 0 - while testing (to enable rapid reload);</span>
-</span><span id="__span-12-3"><span class="c1">// 1 - for &quot;Never unload me, even when not visible.&quot;</span>
+</span><span id="__span-12-3"><span class="c1">// 1 - for "Never unload me, even when not visible."</span>
 </span><span id="__span-12-4"><span class="kd">var</span><span class="w"> </span><span class="nx">persistent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
 </span><span id="__span-12-5">
 </span><span id="__span-12-6"><span class="nx">app</span><span class="p">.</span><span class="nx">setExtensionPersistent</span><span class="p">(</span><span class="nx">extensionID</span><span class="p">,</span><span class="w"> </span><span class="nx">persistent</span><span class="p">);</span>
@@ -3221,7 +3221,7 @@
 <h4 id="returns_11">Returns<a class="headerlink" href="#returns_11" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if successful.</p>
 <h4 id="example_12">Example<a class="headerlink" href="#example_12" title="Permanent link">&para;</a></h4>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><span class="kd">var</span><span class="w"> </span><span class="nx">scratchPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Folder</span><span class="p">.</span><span class="nx">selectDialog</span><span class="p">(</span><span class="s1">&#39;Choose new scratch disk folder&#39;</span><span class="p">);</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><span class="kd">var</span><span class="w"> </span><span class="nx">scratchPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Folder</span><span class="p">.</span><span class="nx">selectDialog</span><span class="p">(</span><span class="s1">'Choose new scratch disk folder'</span><span class="p">);</span>
 </span><span id="__span-13-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">scratchPath</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">scratchPath</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-13-3"><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">setScratchDiskPath</span><span class="p">(</span><span class="nx">scratchPath</span><span class="p">.</span><span class="nx">fsName</span><span class="p">,</span><span class="w"> </span><span class="nx">ScratchDiskType</span><span class="p">.</span><span class="nx">FirstAutoSaveFolder</span><span class="p">);</span>
 </span><span id="__span-13-4"><span class="p">}</span>
@@ -3311,11 +3311,11 @@
 <p>Boolean.</p>
 <h4 id="example_13">Example<a class="headerlink" href="#example_13" title="Permanent link">&para;</a></h4>
 <p>Activate "Editing" workspace.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><span class="kd">var</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;Editing&#39;</span><span class="p">;</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><span class="kd">var</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Editing'</span><span class="p">;</span>
 </span><span id="__span-14-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">setWorkspace</span><span class="p">(</span><span class="nx">workspace</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-14-3"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Workspace changed to &quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot;&#39;</span><span class="p">);</span>
+</span><span id="__span-14-3"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Workspace changed to "'</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'"'</span><span class="p">);</span>
 </span><span id="__span-14-4"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-14-5"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Could not set &quot;&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;&quot; workspace&#39;</span><span class="p">);</span>
+</span><span id="__span-14-5"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Could not set "'</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'" workspace'</span><span class="p">);</span>
 </span><span id="__span-14-6"><span class="p">}</span>
 </span></code></pre></div>
 <hr />
@@ -3395,7 +3395,7 @@
 <h4 id="returns_18">Returns<a class="headerlink" href="#returns_18" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if update was successful.</p>
 <h4 id="example_17">Example<a class="headerlink" href="#example_17" title="Permanent link">&para;</a></h4>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-18-1"><span class="nx">app</span><span class="p">.</span><span class="nx">broadcastPrefsChanged</span><span class="p">(</span><span class="s2">&quot;BE::PreferencesScratchDisksChanged&quot;</span><span class="p">);</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-18-1"><span class="nx">app</span><span class="p">.</span><span class="nx">broadcastPrefsChanged</span><span class="p">(</span><span class="s2">"BE::PreferencesScratchDisksChanged"</span><span class="p">);</span>
 </span></code></pre></div>
 
 
@@ -3483,10 +3483,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       

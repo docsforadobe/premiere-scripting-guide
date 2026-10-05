@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -3172,9 +3172,9 @@
 <p>Rename first project item.</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-1-1"><span class="kd">var</span><span class="w"> </span><span class="nx">item</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">rootItem</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
 </span><span id="__span-1-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">item</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-3"><span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;, updated by PProPanel.&#39;</span><span class="p">;</span>
+</span><span id="__span-1-3"><span class="w">    </span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">item</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">', updated by PProPanel.'</span><span class="p">;</span>
 </span><span id="__span-1-4"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-1-5"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Could not rename project item&#39;</span><span class="p">);</span>
+</span><span id="__span-1-5"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Could not rename project item'</span><span class="p">);</span>
 </span><span id="__span-1-6"><span class="p">}</span>
 </span></code></pre></div>
 <hr />
@@ -3496,10 +3496,10 @@
 <h4 id="example_1">Example<a class="headerlink" href="#example_1" title="Permanent link">&para;</a></h4>
 <p>this will write the above info to the Events panel.</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-2-1"><span class="kd">var</span><span class="w"> </span><span class="nx">colorSpace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">rootItem</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">getColorSpace</span><span class="p">()</span>
-</span><span id="__span-2-2"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">&quot;Color Space &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">colorSpace</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">);</span>
-</span><span id="__span-2-3"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">&quot;Transfer Characteristic &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">colorSpace</span><span class="p">.</span><span class="nx">transferCharacteristic</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">);</span>
-</span><span id="__span-2-4"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">&quot;Color Primaries &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">colorSpace</span><span class="p">.</span><span class="nx">primaries</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">);</span>
-</span><span id="__span-2-5"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">&quot;Matrix Equation &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">colorSpace</span><span class="p">.</span><span class="nx">matrixEquation</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">);</span>
+</span><span id="__span-2-2"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">"Color Space "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">colorSpace</span><span class="p">.</span><span class="nx">name</span><span class="p">,</span><span class="w"> </span><span class="s1">'info'</span><span class="p">);</span>
+</span><span id="__span-2-3"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">"Transfer Characteristic "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">colorSpace</span><span class="p">.</span><span class="nx">transferCharacteristic</span><span class="p">,</span><span class="w"> </span><span class="s1">'info'</span><span class="p">);</span>
+</span><span id="__span-2-4"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">"Color Primaries "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">colorSpace</span><span class="p">.</span><span class="nx">primaries</span><span class="p">,</span><span class="w"> </span><span class="s1">'info'</span><span class="p">);</span>
+</span><span id="__span-2-5"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">"Matrix Equation "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">colorSpace</span><span class="p">.</span><span class="nx">matrixEquation</span><span class="p">,</span><span class="w"> </span><span class="s1">'info'</span><span class="p">);</span>
 </span></code></pre></div>
 <hr />
 <h3 id="projectitemgetoriginalcolorspace">ProjectItem.getOriginalColorSpace()<a class="headerlink" href="#projectitemgetoriginalcolorspace" title="Permanent link">&para;</a></h3>
@@ -3530,7 +3530,7 @@
 <h4 id="example_3">Example<a class="headerlink" href="#example_3" title="Permanent link">&para;</a></h4>
 <p>Writes LUTID to Events panel.</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-3-1"><span class="kd">var</span><span class="w"> </span><span class="nx">lutID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">rootItem</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">getEmbeddedLUTID</span><span class="p">()</span>
-</span><span id="__span-3-2"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">&quot;LutID &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">lutID</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">);</span>
+</span><span id="__span-3-2"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">"LutID "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">lutID</span><span class="p">,</span><span class="w"> </span><span class="s1">'info'</span><span class="p">);</span>
 </span></code></pre></div>
 <hr />
 <h3 id="projectitemgetinputlutid">ProjectItem.getInputLUTID()<a class="headerlink" href="#projectitemgetinputlutid" title="Permanent link">&para;</a></h3>
@@ -3544,7 +3544,7 @@
 <h4 id="example_4">Example<a class="headerlink" href="#example_4" title="Permanent link">&para;</a></h4>
 <p>Writes Input LUTID to Events panel.</p>
 <div class="language-javascript highlight"><pre><span></span><code><span id="__span-4-1"><span class="kd">var</span><span class="w"> </span><span class="nx">lutID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">project</span><span class="p">.</span><span class="nx">rootItem</span><span class="p">.</span><span class="nx">children</span><span class="p">[</span><span class="mf">0</span><span class="p">].</span><span class="nx">getInputLUTID</span><span class="p">()</span>
-</span><span id="__span-4-2"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">&quot;Input LutID &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot; = &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">inputLutID</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;info&#39;</span><span class="p">);</span>
+</span><span id="__span-4-2"><span class="nx">app</span><span class="p">.</span><span class="nx">setSDKEventMessage</span><span class="p">(</span><span class="s2">"Input LutID "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">" = "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">inputLutID</span><span class="p">,</span><span class="w"> </span><span class="s1">'info'</span><span class="p">);</span>
 </span></code></pre></div>
 <hr />
 <h3 id="projectitemgetfootageinterpretation">ProjectItem.getFootageInterpretation()<a class="headerlink" href="#projectitemgetfootageinterpretation" title="Permanent link">&para;</a></h3>
@@ -4343,10 +4343,10 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       

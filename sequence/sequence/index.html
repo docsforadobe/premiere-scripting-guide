@@ -21,7 +21,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.0">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
     
     
       
@@ -29,7 +29,7 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.618322db.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.ec1eaa64.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
@@ -3277,19 +3277,19 @@
 </span><span id="__span-0-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">sequence</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 </span><span id="__span-0-3"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">numerator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
 </span><span id="__span-0-4"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">denominator</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">1</span><span class="p">;</span>
-</span><span id="__span-0-5"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">motionPreset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;default&#39;</span><span class="p">;</span><span class="w"> </span><span class="c1">// &#39;default&#39;, &#39;faster&#39;, &#39;slower&#39;</span>
-</span><span id="__span-0-6"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">newName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sequence</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;, auto-reframed.&#39;</span><span class="p">;</span>
+</span><span id="__span-0-5"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">motionPreset</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'default'</span><span class="p">;</span><span class="w"> </span><span class="c1">// 'default', 'faster', 'slower'</span>
+</span><span id="__span-0-6"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">newName</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sequence</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">', auto-reframed.'</span><span class="p">;</span>
 </span><span id="__span-0-7"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">useNestedSequences</span><span class="w">  </span><span class="o">=</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span>
 </span><span id="__span-0-8">
 </span><span id="__span-0-9"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">newSequence</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">sequence</span><span class="p">.</span><span class="nx">autoReframeSequence</span><span class="p">(</span><span class="nx">numerator</span><span class="p">,</span><span class="w"> </span><span class="nx">denominator</span><span class="p">,</span><span class="w"> </span><span class="nx">motionPreset</span><span class="p">,</span><span class="w"> </span><span class="nx">newName</span><span class="p">,</span><span class="w"> </span><span class="nx">useNestedSequences</span><span class="p">);</span>
 </span><span id="__span-0-10">
 </span><span id="__span-0-11"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">newSequence</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-12"><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Created reframed sequence: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">newName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.&#39;</span><span class="p">);</span>
+</span><span id="__span-0-12"><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Created reframed sequence: '</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">newName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'.'</span><span class="p">);</span>
 </span><span id="__span-0-13"><span class="w">    </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-14"><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;Failed to create re-framed sequence: &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">newName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;.&#39;</span><span class="p">);</span>
+</span><span id="__span-0-14"><span class="w">        </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Failed to create re-framed sequence: '</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">newName</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'.'</span><span class="p">);</span>
 </span><span id="__span-0-15"><span class="w">    </span><span class="p">}</span>
 </span><span id="__span-0-16"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-0-17"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;No active sequence&#39;</span><span class="p">);</span>
+</span><span id="__span-0-17"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'No active sequence'</span><span class="p">);</span>
 </span><span id="__span-0-18"><span class="p">}</span>
 </span></code></pre></div>
 <hr />
@@ -4594,10 +4594,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.7a47a382.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.e71a0d61.min.js"></script>
+      <script src="../../assets/javascripts/bundle.d7400e89.min.js"></script>
       
         <script src="../../js/print-site.js"></script>
       
