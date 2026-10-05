@@ -15,7 +15,7 @@ Adobe wants your integration to succeed; please don't hesitate to [contact us](m
 
 As of November 2025, Premiere Pro has moved to extensibility based on UXP; Unified Extensibility Platform. Have a look at the [API Documentation](https://developer.adobe.com/premiere-pro/uxp/), and [sample plugins](https://github.com/AdobeDocs/uxp-premiere-pro-samples/)
 
-ExtendScript-based integrations are still supported, and the plan is for them to remain so, through September 2026.
+ExtendScript-based integrations are still supported, and Adobe currently has no plan or schedule for removing ExtendScript, which will not be removed as part of any CEP removal.
 
 ## Navigating the Guide
 
