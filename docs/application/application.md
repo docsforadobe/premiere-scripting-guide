@@ -349,11 +349,49 @@ Provides access to [SourceMonitor object](../general/sourcemonitor.md).
 
 #### Description
 
-A unique identifier for the currently logged-in Creative Cloud user.
+A unique identifier for the currently logged-in Creative Cloud user. It changes if Adobe merges the user's accounts; see [app.userIdentity](#appuseridentity).
 
 #### Type
 
 String; read-only.
+
+---
+
+### app.userIdentity
+
+`app.userIdentity`
+
+#### Description
+
+The signed-in Creative Cloud user's current ID, plus the IDs they had before Adobe merged their accounts.
+
+When Adobe merges a user's accounts (Connected Enterprise), the user gets a new ID, so [app.userGuid](#appuserguid) changes. Use `legacyIds` to find data your extension saved under the user's earlier IDs.
+
+The object has two properties:
+
+- `userId` (String): the same value as [app.userGuid](#appuserguid).
+- `legacyIds` (Array of Strings): the user's earlier IDs, in the same format as `app.userGuid`. It's empty for most users. It can also be empty for a few seconds after sign-in, while Premiere Pro fetches the IDs, so read `app.userIdentity` when you need it instead of saving it at startup.
+
+Each read returns a new object, so changing it has no effect.
+
+`app.userIdentity` is `null` very early during startup, before licensing finishes. It's available in Premiere Pro 27.1 and later; in earlier versions it's `undefined`, so fall back to `app.userGuid`.
+
+!!! note
+    `legacyIds` helps you find the user's own saved data. It isn't proof of identity, so don't use it on its own to grant licenses or paid features; check those on your own server.
+
+#### Type
+
+Object; read-only.
+
+#### Example
+
+Get every ID the user's data might be saved under.
+
+```js
+var identity = app.userIdentity;
+var ids = identity ? [identity.userId].concat(identity.legacyIds) : [app.userGuid];
+// Look up your saved data for each ID in ids.
+```
 
 ---
 
