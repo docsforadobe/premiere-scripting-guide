@@ -17,7 +17,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.7">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.1">
     
     
       
@@ -25,10 +25,10 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.ec1eaa64.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2391,25 +2391,50 @@
 <h3 id="application-application-appuserguid">app.userGuid<a class="headerlink" href="#application-application-appuserguid" title="Permanent link">&para;</a></h3>
 <p><code>app.userGuid</code></p>
 <h4 id="application-application-description_19">Description<a class="headerlink" href="#application-application-description_19" title="Permanent link">&para;</a></h4>
-<p>A unique identifier for the currently logged-in Creative Cloud user.</p>
+<p>A unique identifier for the currently logged-in Creative Cloud user. It changes if Adobe merges the user's accounts; see <a href="#application-application-appuseridentity">app.userIdentity</a>.</p>
 <h4 id="application-application-type_18">Type<a class="headerlink" href="#application-application-type_18" title="Permanent link">&para;</a></h4>
 <p>String; read-only.</p>
 <hr />
+<h3 id="application-application-appuseridentity">app.userIdentity<a class="headerlink" href="#application-application-appuseridentity" title="Permanent link">&para;</a></h3>
+<p><code>app.userIdentity</code></p>
+<h4 id="application-application-description_20">Description<a class="headerlink" href="#application-application-description_20" title="Permanent link">&para;</a></h4>
+<p>The signed-in Creative Cloud user's current ID, plus the IDs they had before Adobe merged their accounts.</p>
+<p>When Adobe merges a user's accounts (Connected Enterprise), the user gets a new ID, so <a href="#application-application-appuserguid">app.userGuid</a> changes. Use <code>legacyIds</code> to find data your extension saved under the user's earlier IDs.</p>
+<p>The object has two properties:</p>
+<ul>
+<li><code>userId</code> (String): the same value as <a href="#application-application-appuserguid">app.userGuid</a>.</li>
+<li><code>legacyIds</code> (Array of Strings): the user's earlier IDs, in the same format as <code>app.userGuid</code>. It's empty for most users. It can also be empty for a few seconds after sign-in, while Premiere Pro fetches the IDs, so read <code>app.userIdentity</code> when you need it instead of saving it at startup.</li>
+</ul>
+<p>Each read returns a new object, so changing it has no effect.</p>
+<p><code>app.userIdentity</code> is <code>null</code> very early during startup, before licensing finishes. It's available in Premiere Pro 27.1 and later; in earlier versions it's <code>undefined</code>, so fall back to <code>app.userGuid</code>.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><code>legacyIds</code> helps you find the user's own saved data. It isn't proof of identity, so don't use it on its own to grant licenses or paid features; check those on your own server.</p>
+</div>
+<h4 id="application-application-type_19">Type<a class="headerlink" href="#application-application-type_19" title="Permanent link">&para;</a></h4>
+<p>Object; read-only.</p>
+<h4 id="application-application-example_8">Example<a class="headerlink" href="#application-application-example_8" title="Permanent link">&para;</a></h4>
+<p>Get every ID the user's data might be saved under.</p>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><span class="kd">var</span><span class="w"> </span><span class="nx">identity</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">userIdentity</span><span class="p">;</span>
+</span><span id="__span-9-2"><span class="kd">var</span><span class="w"> </span><span class="nx">ids</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">identity</span><span class="w"> </span><span class="o">?</span><span class="w"> </span><span class="p">[</span><span class="nx">identity</span><span class="p">.</span><span class="nx">userId</span><span class="p">].</span><span class="nx">concat</span><span class="p">(</span><span class="nx">identity</span><span class="p">.</span><span class="nx">legacyIds</span><span class="p">)</span><span class="w"> </span><span class="o">:</span><span class="w"> </span><span class="p">[</span><span class="nx">app</span><span class="p">.</span><span class="nx">userGuid</span><span class="p">];</span>
+</span><span id="__span-9-3"><span class="c1">// Look up your saved data for each ID in ids.</span>
+</span></code></pre></div>
+<hr />
 <h3 id="application-application-appversion">app.version<a class="headerlink" href="#application-application-appversion" title="Permanent link">&para;</a></h3>
 <p><code>app.version</code></p>
-<h4 id="application-application-description_20">Description<a class="headerlink" href="#application-application-description_20" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_21">Description<a class="headerlink" href="#application-application-description_21" title="Permanent link">&para;</a></h4>
 <p>The version of Premiere Pro, providing the API.</p>
-<h4 id="application-application-type_19">Type<a class="headerlink" href="#application-application-type_19" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-type_20">Type<a class="headerlink" href="#application-application-type_20" title="Permanent link">&para;</a></h4>
 <p>String; read-only.</p>
-<h4 id="application-application-example_8">Example<a class="headerlink" href="#application-application-example_8" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-example_9">Example<a class="headerlink" href="#application-application-example_9" title="Permanent link">&para;</a></h4>
 <p>Get a version of a current application  <em>(Adobe Premiere Pro version 14.3.1 (Build 45))</em></p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-9-1"><span class="nx">app</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span><span class="w"> </span><span class="c1">// 14.3.1</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><span class="nx">app</span><span class="p">.</span><span class="nx">version</span><span class="p">;</span><span class="w"> </span><span class="c1">// 14.3.1</span>
 </span></code></pre></div>
 <hr />
 <h2 id="application-application-methods">Methods<a class="headerlink" href="#application-application-methods" title="Permanent link">&para;</a></h2>
 <h3 id="application-application-appenableqe">app.enableQE()<a class="headerlink" href="#application-application-appenableqe" title="Permanent link">&para;</a></h3>
 <p><code>app.enableQE()</code></p>
-<h4 id="application-application-description_21">Description<a class="headerlink" href="#application-application-description_21" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_22">Description<a class="headerlink" href="#application-application-description_22" title="Permanent link">&para;</a></h4>
 <p>Enables Premiere Pro's QE DOM.</p>
 <h4 id="application-application-parameters">Parameters<a class="headerlink" href="#application-application-parameters" title="Permanent link">&para;</a></h4>
 <p>None.</p>
@@ -2418,7 +2443,7 @@
 <hr />
 <h3 id="application-application-appgetenableproxies">app.getEnableProxies()<a class="headerlink" href="#application-application-appgetenableproxies" title="Permanent link">&para;</a></h3>
 <p><code>app.getEnableProxies()</code></p>
-<h4 id="application-application-description_22">Description<a class="headerlink" href="#application-application-description_22" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_23">Description<a class="headerlink" href="#application-application-description_23" title="Permanent link">&para;</a></h4>
 <p>Determines whether proxy usage is currently enabled.</p>
 <h4 id="application-application-parameters_1">Parameters<a class="headerlink" href="#application-application-parameters_1" title="Permanent link">&para;</a></h4>
 <p>None.</p>
@@ -2427,33 +2452,33 @@
 <hr />
 <h3 id="application-application-appgetworkspaces">app.getWorkspaces()<a class="headerlink" href="#application-application-appgetworkspaces" title="Permanent link">&para;</a></h3>
 <p><code>app.getWorkspaces()</code></p>
-<h4 id="application-application-description_23">Description<a class="headerlink" href="#application-application-description_23" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_24">Description<a class="headerlink" href="#application-application-description_24" title="Permanent link">&para;</a></h4>
 <p>Obtains an array of available workspaces as Strings.</p>
 <h4 id="application-application-parameters_2">Parameters<a class="headerlink" href="#application-application-parameters_2" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="application-application-returns_2">Returns<a class="headerlink" href="#application-application-returns_2" title="Permanent link">&para;</a></h4>
 <p>Array of strings if successful, <code>null</code> if unsuccessful.</p>
-<h4 id="application-application-example_9">Example<a class="headerlink" href="#application-application-example_9" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-example_10">Example<a class="headerlink" href="#application-application-example_10" title="Permanent link">&para;</a></h4>
 <p>Get a list of available workspaces.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-10-1"><span class="nx">app</span><span class="p">.</span><span class="nx">getWorkspaces</span><span class="p">();</span>
-</span><span id="__span-10-2"><span class="cm">/* [</span>
-</span><span id="__span-10-3"><span class="cm">    "All Panels",</span>
-</span><span id="__span-10-4"><span class="cm">    "Assembly",</span>
-</span><span id="__span-10-5"><span class="cm">    "Audio",</span>
-</span><span id="__span-10-6"><span class="cm">    "Color",</span>
-</span><span id="__span-10-7"><span class="cm">    "Editing",</span>
-</span><span id="__span-10-8"><span class="cm">    "Effects",</span>
-</span><span id="__span-10-9"><span class="cm">    "Graphics",</span>
-</span><span id="__span-10-10"><span class="cm">    "Learning",</span>
-</span><span id="__span-10-11"><span class="cm">    "Libraries",</span>
-</span><span id="__span-10-12"><span class="cm">    "Metalogging",</span>
-</span><span id="__span-10-13"><span class="cm">    "Production"</span>
-</span><span id="__span-10-14"><span class="cm">]; */</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><span class="nx">app</span><span class="p">.</span><span class="nx">getWorkspaces</span><span class="p">();</span>
+</span><span id="__span-11-2"><span class="cm">/* [</span>
+</span><span id="__span-11-3"><span class="cm">    "All Panels",</span>
+</span><span id="__span-11-4"><span class="cm">    "Assembly",</span>
+</span><span id="__span-11-5"><span class="cm">    "Audio",</span>
+</span><span id="__span-11-6"><span class="cm">    "Color",</span>
+</span><span id="__span-11-7"><span class="cm">    "Editing",</span>
+</span><span id="__span-11-8"><span class="cm">    "Effects",</span>
+</span><span id="__span-11-9"><span class="cm">    "Graphics",</span>
+</span><span id="__span-11-10"><span class="cm">    "Learning",</span>
+</span><span id="__span-11-11"><span class="cm">    "Libraries",</span>
+</span><span id="__span-11-12"><span class="cm">    "Metalogging",</span>
+</span><span id="__span-11-13"><span class="cm">    "Production"</span>
+</span><span id="__span-11-14"><span class="cm">]; */</span>
 </span></code></pre></div>
 <hr />
 <h3 id="application-application-appisdocument">app.isDocument()<a class="headerlink" href="#application-application-appisdocument" title="Permanent link">&para;</a></h3>
 <p><code>app.isDocument(path)</code></p>
-<h4 id="application-application-description_24">Description<a class="headerlink" href="#application-application-description_24" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_25">Description<a class="headerlink" href="#application-application-description_25" title="Permanent link">&para;</a></h4>
 <p>Determines whether the file at path can be opened as a Premiere Pro <a href="#general-project">project</a>.</p>
 <h4 id="application-application-parameters_3">Parameters<a class="headerlink" href="#application-application-parameters_3" title="Permanent link">&para;</a></h4>
 <table>
@@ -2474,17 +2499,17 @@
 </table>
 <h4 id="application-application-returns_3">Returns<a class="headerlink" href="#application-application-returns_3" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if file can be opened as a Premiere Pro <a href="#general-project">project</a>.</p>
-<h4 id="application-application-example_10">Example<a class="headerlink" href="#application-application-example_10" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-example_11">Example<a class="headerlink" href="#application-application-example_11" title="Permanent link">&para;</a></h4>
 <p>Test for valid project files</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-11-1"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/myProject.prproj'</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
-</span><span id="__span-11-2"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/textFile.txt'</span><span class="p">);</span><span class="w">     </span><span class="c1">// false</span>
-</span><span id="__span-11-3"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/footageFile.mov'</span><span class="p">);</span><span class="w">  </span><span class="c1">// false</span>
-</span><span id="__span-11-4"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/imageFile.mov'</span><span class="p">);</span><span class="w">    </span><span class="c1">// false</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/myProject.prproj'</span><span class="p">);</span><span class="w"> </span><span class="c1">// true</span>
+</span><span id="__span-12-2"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/textFile.txt'</span><span class="p">);</span><span class="w">     </span><span class="c1">// false</span>
+</span><span id="__span-12-3"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/footageFile.mov'</span><span class="p">);</span><span class="w">  </span><span class="c1">// false</span>
+</span><span id="__span-12-4"><span class="nx">app</span><span class="p">.</span><span class="nx">isDocument</span><span class="p">(</span><span class="s1">'~/Desktop/imageFile.mov'</span><span class="p">);</span><span class="w">    </span><span class="c1">// false</span>
 </span></code></pre></div>
 <hr />
 <h3 id="application-application-appisdocumentopen">app.isDocumentOpen()<a class="headerlink" href="#application-application-appisdocumentopen" title="Permanent link">&para;</a></h3>
 <p><code>app.isDocumentOpen()</code></p>
-<h4 id="application-application-description_25">Description<a class="headerlink" href="#application-application-description_25" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_26">Description<a class="headerlink" href="#application-application-description_26" title="Permanent link">&para;</a></h4>
 <p>Determines whether there are any <a href="#general-project">projects</a> currently open.</p>
 <h4 id="application-application-parameters_4">Parameters<a class="headerlink" href="#application-application-parameters_4" title="Permanent link">&para;</a></h4>
 <p>None.</p>
@@ -2493,7 +2518,7 @@
 <hr />
 <h3 id="application-application-appnewproject">app.newProject()<a class="headerlink" href="#application-application-appnewproject" title="Permanent link">&para;</a></h3>
 <p><code>app.newProject(path)</code></p>
-<h4 id="application-application-description_26">Description<a class="headerlink" href="#application-application-description_26" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_27">Description<a class="headerlink" href="#application-application-description_27" title="Permanent link">&para;</a></h4>
 <p>Creates a new .prproj <a href="#general-project">Project object</a>, at the specified path.</p>
 <h4 id="application-application-parameters_5">Parameters<a class="headerlink" href="#application-application-parameters_5" title="Permanent link">&para;</a></h4>
 <table>
@@ -2517,7 +2542,7 @@
 <hr />
 <h3 id="application-application-appopendocument">app.openDocument()<a class="headerlink" href="#application-application-appopendocument" title="Permanent link">&para;</a></h3>
 <p><code>app.openDocument(path, [suppressConversionDialog], [bypassLocateFileDialog], [bypassWarningDialog], [doNotAddToMRUList])</code></p>
-<h4 id="application-application-description_27">Description<a class="headerlink" href="#application-application-description_27" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_28">Description<a class="headerlink" href="#application-application-description_28" title="Permanent link">&para;</a></h4>
 <p>Opens the file at the specified path, as a Premiere Pro <a href="#general-project">Project object</a>.</p>
 <h4 id="application-application-parameters_6">Parameters<a class="headerlink" href="#application-application-parameters_6" title="Permanent link">&para;</a></h4>
 <table>
@@ -2561,7 +2586,7 @@
 <hr />
 <h3 id="application-application-appopenfcpxml">app.openFCPXML()<a class="headerlink" href="#application-application-appopenfcpxml" title="Permanent link">&para;</a></h3>
 <p><code>app.openFCPXML(path, projPath)</code></p>
-<h4 id="application-application-description_28">Description<a class="headerlink" href="#application-application-description_28" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_29">Description<a class="headerlink" href="#application-application-description_29" title="Permanent link">&para;</a></h4>
 <p>Opens an FCP XML file as a Premiere Pro <a href="#general-project">Project object</a> (specified in projPath).</p>
 <h4 id="application-application-parameters_7">Parameters<a class="headerlink" href="#application-application-parameters_7" title="Permanent link">&para;</a></h4>
 <table>
@@ -2590,7 +2615,7 @@
 <hr />
 <h3 id="application-application-appquit">app.quit()<a class="headerlink" href="#application-application-appquit" title="Permanent link">&para;</a></h3>
 <p><code>app.quit()</code></p>
-<h4 id="application-application-description_29">Description<a class="headerlink" href="#application-application-description_29" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_30">Description<a class="headerlink" href="#application-application-description_30" title="Permanent link">&para;</a></h4>
 <p>Quits Premiere Pro; user will be prompted to save any changes to <a href="#general-project">Project object</a>.</p>
 <h4 id="application-application-parameters_8">Parameters<a class="headerlink" href="#application-application-parameters_8" title="Permanent link">&para;</a></h4>
 <p>None.</p>
@@ -2599,7 +2624,7 @@
 <hr />
 <h3 id="application-application-appsetenableproxies">app.setEnableProxies()<a class="headerlink" href="#application-application-appsetenableproxies" title="Permanent link">&para;</a></h3>
 <p><code>app.setEnableProxies(enabled)</code></p>
-<h4 id="application-application-description_30">Description<a class="headerlink" href="#application-application-description_30" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_31">Description<a class="headerlink" href="#application-application-description_31" title="Permanent link">&para;</a></h4>
 <p>Determines whether proxy usage is currently enabled.</p>
 <h4 id="application-application-parameters_9">Parameters<a class="headerlink" href="#application-application-parameters_9" title="Permanent link">&para;</a></h4>
 <table>
@@ -2623,7 +2648,7 @@
 <hr />
 <h3 id="application-application-appsetextensionpersistent">app.setExtensionPersistent()<a class="headerlink" href="#application-application-appsetextensionpersistent" title="Permanent link">&para;</a></h3>
 <p><code>app.setExtensionPersistent(extensionID, persistent)</code></p>
-<h4 id="application-application-description_31">Description<a class="headerlink" href="#application-application-description_31" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_32">Description<a class="headerlink" href="#application-application-description_32" title="Permanent link">&para;</a></h4>
 <p>Whether extension with the given extensionID persists, within this session.</p>
 <h4 id="application-application-parameters_10">Parameters<a class="headerlink" href="#application-application-parameters_10" title="Permanent link">&para;</a></h4>
 <table>
@@ -2649,18 +2674,18 @@
 </table>
 <h4 id="application-application-returns_10">Returns<a class="headerlink" href="#application-application-returns_10" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if successful.</p>
-<h4 id="application-application-example_11">Example<a class="headerlink" href="#application-application-example_11" title="Permanent link">&para;</a></h4>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-12-1"><span class="kd">var</span><span class="w"> </span><span class="nx">extensionID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'com.adobe.PProPanel'</span><span class="p">;</span>
-</span><span id="__span-12-2"><span class="c1">// 0 - while testing (to enable rapid reload);</span>
-</span><span id="__span-12-3"><span class="c1">// 1 - for "Never unload me, even when not visible."</span>
-</span><span id="__span-12-4"><span class="kd">var</span><span class="w"> </span><span class="nx">persistent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
-</span><span id="__span-12-5">
-</span><span id="__span-12-6"><span class="nx">app</span><span class="p">.</span><span class="nx">setExtensionPersistent</span><span class="p">(</span><span class="nx">extensionID</span><span class="p">,</span><span class="w"> </span><span class="nx">persistent</span><span class="p">);</span>
+<h4 id="application-application-example_12">Example<a class="headerlink" href="#application-application-example_12" title="Permanent link">&para;</a></h4>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><span class="kd">var</span><span class="w"> </span><span class="nx">extensionID</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'com.adobe.PProPanel'</span><span class="p">;</span>
+</span><span id="__span-13-2"><span class="c1">// 0 - while testing (to enable rapid reload);</span>
+</span><span id="__span-13-3"><span class="c1">// 1 - for "Never unload me, even when not visible."</span>
+</span><span id="__span-13-4"><span class="kd">var</span><span class="w"> </span><span class="nx">persistent</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span>
+</span><span id="__span-13-5">
+</span><span id="__span-13-6"><span class="nx">app</span><span class="p">.</span><span class="nx">setExtensionPersistent</span><span class="p">(</span><span class="nx">extensionID</span><span class="p">,</span><span class="w"> </span><span class="nx">persistent</span><span class="p">);</span>
 </span></code></pre></div>
 <hr />
 <h3 id="application-application-appsetscratchdiskpath">app.setScratchDiskPath()<a class="headerlink" href="#application-application-appsetscratchdiskpath" title="Permanent link">&para;</a></h3>
 <p><code>app.setScratchDiskPath(path, scratchDiskType)</code></p>
-<h4 id="application-application-description_32">Description<a class="headerlink" href="#application-application-description_32" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_33">Description<a class="headerlink" href="#application-application-description_33" title="Permanent link">&para;</a></h4>
 <p>Specifies the path to be used for one of Premiere Pro's scratch disk paths.</p>
 <h4 id="application-application-parameters_11">Parameters<a class="headerlink" href="#application-application-parameters_11" title="Permanent link">&para;</a></h4>
 <table>
@@ -2728,16 +2753,16 @@
 </table>
 <h4 id="application-application-returns_11">Returns<a class="headerlink" href="#application-application-returns_11" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if successful.</p>
-<h4 id="application-application-example_12">Example<a class="headerlink" href="#application-application-example_12" title="Permanent link">&para;</a></h4>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-13-1"><span class="kd">var</span><span class="w"> </span><span class="nx">scratchPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Folder</span><span class="p">.</span><span class="nx">selectDialog</span><span class="p">(</span><span class="s1">'Choose new scratch disk folder'</span><span class="p">);</span>
-</span><span id="__span-13-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">scratchPath</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">scratchPath</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-13-3"><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">setScratchDiskPath</span><span class="p">(</span><span class="nx">scratchPath</span><span class="p">.</span><span class="nx">fsName</span><span class="p">,</span><span class="w"> </span><span class="nx">ScratchDiskType</span><span class="p">.</span><span class="nx">FirstAutoSaveFolder</span><span class="p">);</span>
-</span><span id="__span-13-4"><span class="p">}</span>
+<h4 id="application-application-example_13">Example<a class="headerlink" href="#application-application-example_13" title="Permanent link">&para;</a></h4>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><span class="kd">var</span><span class="w"> </span><span class="nx">scratchPath</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">Folder</span><span class="p">.</span><span class="nx">selectDialog</span><span class="p">(</span><span class="s1">'Choose new scratch disk folder'</span><span class="p">);</span>
+</span><span id="__span-14-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">scratchPath</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nx">scratchPath</span><span class="p">.</span><span class="nx">exists</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-14-3"><span class="w">    </span><span class="nx">app</span><span class="p">.</span><span class="nx">setScratchDiskPath</span><span class="p">(</span><span class="nx">scratchPath</span><span class="p">.</span><span class="nx">fsName</span><span class="p">,</span><span class="w"> </span><span class="nx">ScratchDiskType</span><span class="p">.</span><span class="nx">FirstAutoSaveFolder</span><span class="p">);</span>
+</span><span id="__span-14-4"><span class="p">}</span>
 </span></code></pre></div>
 <hr />
 <h3 id="application-application-appsetsdkeventmessage">app.setSDKEventMessage()<a class="headerlink" href="#application-application-appsetsdkeventmessage" title="Permanent link">&para;</a></h3>
 <p><code>app.setSDKEventMessage(message, decorator)</code></p>
-<h4 id="application-application-description_33">Description<a class="headerlink" href="#application-application-description_33" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_34">Description<a class="headerlink" href="#application-application-description_34" title="Permanent link">&para;</a></h4>
 <p>Writes a string to Premiere Pro's Events panel.</p>
 <h4 id="application-application-parameters_12">Parameters<a class="headerlink" href="#application-application-parameters_12" title="Permanent link">&para;</a></h4>
 <table>
@@ -2796,7 +2821,7 @@
 <hr />
 <h3 id="application-application-appsetworkspace">app.setWorkspace()<a class="headerlink" href="#application-application-appsetworkspace" title="Permanent link">&para;</a></h3>
 <p><code>app.setWorkspace(workspace)</code></p>
-<h4 id="application-application-description_34">Description<a class="headerlink" href="#application-application-description_34" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_35">Description<a class="headerlink" href="#application-application-description_35" title="Permanent link">&para;</a></h4>
 <p>Set workspace as active. Use <a href="#application-application-appgetworkspaces">app.getWorkspaces()</a> to get a list of all available workspaces.</p>
 <h4 id="application-application-parameters_13">Parameters<a class="headerlink" href="#application-application-parameters_13" title="Permanent link">&para;</a></h4>
 <table>
@@ -2817,19 +2842,19 @@
 </table>
 <h4 id="application-application-returns_13">Returns<a class="headerlink" href="#application-application-returns_13" title="Permanent link">&para;</a></h4>
 <p>Boolean.</p>
-<h4 id="application-application-example_13">Example<a class="headerlink" href="#application-application-example_13" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-example_14">Example<a class="headerlink" href="#application-application-example_14" title="Permanent link">&para;</a></h4>
 <p>Activate "Editing" workspace.</p>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-14-1"><span class="kd">var</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Editing'</span><span class="p">;</span>
-</span><span id="__span-14-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">setWorkspace</span><span class="p">(</span><span class="nx">workspace</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-14-3"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Workspace changed to "'</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'"'</span><span class="p">);</span>
-</span><span id="__span-14-4"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-14-5"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Could not set "'</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'" workspace'</span><span class="p">);</span>
-</span><span id="__span-14-6"><span class="p">}</span>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><span class="kd">var</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'Editing'</span><span class="p">;</span>
+</span><span id="__span-15-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">app</span><span class="p">.</span><span class="nx">setWorkspace</span><span class="p">(</span><span class="nx">workspace</span><span class="p">))</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-3"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Workspace changed to "'</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'"'</span><span class="p">);</span>
+</span><span id="__span-15-4"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-15-5"><span class="w">    </span><span class="nx">alert</span><span class="p">(</span><span class="s1">'Could not set "'</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">workspace</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">'" workspace'</span><span class="p">);</span>
+</span><span id="__span-15-6"><span class="p">}</span>
 </span></code></pre></div>
 <hr />
 <h3 id="application-application-apptrace">app.trace()<a class="headerlink" href="#application-application-apptrace" title="Permanent link">&para;</a></h3>
 <p><code>app.trace()</code></p>
-<h4 id="application-application-description_35">Description<a class="headerlink" href="#application-application-description_35" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_36">Description<a class="headerlink" href="#application-application-description_36" title="Permanent link">&para;</a></h4>
 <p>Writes a string to Premiere Pro's debug console.</p>
 <h4 id="application-application-parameters_14">Parameters<a class="headerlink" href="#application-application-parameters_14" title="Permanent link">&para;</a></h4>
 <p>None.</p>
@@ -2838,72 +2863,72 @@
 <hr />
 <h3 id="application-application-appgetprojectviewids">app.getProjectViewIDs()<a class="headerlink" href="#application-application-appgetprojectviewids" title="Permanent link">&para;</a></h3>
 <p><code>app.getProjectViewIDs()</code></p>
-<h4 id="application-application-description_36">Description<a class="headerlink" href="#application-application-description_36" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_37">Description<a class="headerlink" href="#application-application-description_37" title="Permanent link">&para;</a></h4>
 <p>Returns the view IDs of currently-open views, associated with any project.</p>
 <h4 id="application-application-parameters_15">Parameters<a class="headerlink" href="#application-application-parameters_15" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="application-application-returns_15">Returns<a class="headerlink" href="#application-application-returns_15" title="Permanent link">&para;</a></h4>
 <p>An array of view IDs; can be null.</p>
-<h4 id="application-application-example_14">Example<a class="headerlink" href="#application-application-example_14" title="Permanent link">&para;</a></h4>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-15-1"><span class="kd">var</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">getProjectViewIDs</span><span class="p">();</span>
-</span><span id="__span-15-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allViewIDs</span><span class="p">){</span>
-</span><span id="__span-15-3"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
-</span><span id="__span-15-4"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-15-5"><span class="w">    </span><span class="c1">// No views open.</span>
-</span><span id="__span-15-6"><span class="p">}</span>
+<h4 id="application-application-example_15">Example<a class="headerlink" href="#application-application-example_15" title="Permanent link">&para;</a></h4>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><span class="kd">var</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">getProjectViewIDs</span><span class="p">();</span>
+</span><span id="__span-16-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allViewIDs</span><span class="p">){</span>
+</span><span id="__span-16-3"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-16-4"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-16-5"><span class="w">    </span><span class="c1">// No views open.</span>
+</span><span id="__span-16-6"><span class="p">}</span>
 </span></code></pre></div>
 <hr />
 <h3 id="application-application-appgetprojectfromviewid">app.getProjectFromViewID()<a class="headerlink" href="#application-application-appgetprojectfromviewid" title="Permanent link">&para;</a></h3>
 <p><code>app.getProjectFromViewID()</code></p>
-<h4 id="application-application-description_37">Description<a class="headerlink" href="#application-application-description_37" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_38">Description<a class="headerlink" href="#application-application-description_38" title="Permanent link">&para;</a></h4>
 <p>Returns the <a href="#general-project">Project</a> associated with the provided View ID.</p>
 <h4 id="application-application-parameters_16">Parameters<a class="headerlink" href="#application-application-parameters_16" title="Permanent link">&para;</a></h4>
 <p>A View ID, obtained from <code>getProjectViewIDs</code>.</p>
 <h4 id="application-application-returns_16">Returns<a class="headerlink" href="#application-application-returns_16" title="Permanent link">&para;</a></h4>
 <p>A <a href="#general-project">Project</a> object, for the project associated with the provided View ID. Can be <code>null</code>.</p>
-<h4 id="application-application-example_15">Example<a class="headerlink" href="#application-application-example_15" title="Permanent link">&para;</a></h4>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-16-1"><span class="kd">var</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">getProjectViewIDs</span><span class="p">();</span>
-</span><span id="__span-16-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allViewIDs</span><span class="p">){</span>
-</span><span id="__span-16-3"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
-</span><span id="__span-16-4"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">firstOne</span><span class="p">){</span>
-</span><span id="__span-16-5"><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">thisProject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getProjectFromViewID</span><span class="p">(</span><span class="nx">firstOne</span><span class="p">);</span>
-</span><span id="__span-16-6"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">thisProject</span><span class="p">){</span>
-</span><span id="__span-16-7"><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">thisProject</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
-</span><span id="__span-16-8"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-16-9"><span class="w">            </span><span class="c1">// no project associated with that view ID.</span>
-</span><span id="__span-16-10"><span class="w">        </span><span class="p">}</span>
-</span><span id="__span-16-11"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-16-12"><span class="w">    </span><span class="c1">// No views open.</span>
-</span><span id="__span-16-13"><span class="p">}</span>
+<h4 id="application-application-example_16">Example<a class="headerlink" href="#application-application-example_16" title="Permanent link">&para;</a></h4>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-17-1"><span class="kd">var</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">getProjectViewIDs</span><span class="p">();</span>
+</span><span id="__span-17-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">allViewIDs</span><span class="p">){</span>
+</span><span id="__span-17-3"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">allViewIDs</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-17-4"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">firstOne</span><span class="p">){</span>
+</span><span id="__span-17-5"><span class="w">        </span><span class="kd">var</span><span class="w"> </span><span class="nx">thisProject</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">getProjectFromViewID</span><span class="p">(</span><span class="nx">firstOne</span><span class="p">);</span>
+</span><span id="__span-17-6"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">thisProject</span><span class="p">){</span>
+</span><span id="__span-17-7"><span class="w">            </span><span class="kd">var</span><span class="w"> </span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">thisProject</span><span class="p">.</span><span class="nx">name</span><span class="p">;</span>
+</span><span id="__span-17-8"><span class="w">        </span><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-9"><span class="w">            </span><span class="c1">// no project associated with that view ID.</span>
+</span><span id="__span-17-10"><span class="w">        </span><span class="p">}</span>
+</span><span id="__span-17-11"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-17-12"><span class="w">    </span><span class="c1">// No views open.</span>
+</span><span id="__span-17-13"><span class="p">}</span>
 </span></code></pre></div>
 <hr />
 <h3 id="application-application-appgetcurrentprojectviewselection">app.getCurrentProjectViewSelection()<a class="headerlink" href="#application-application-appgetcurrentprojectviewselection" title="Permanent link">&para;</a></h3>
 <p><code>app.getCurrentProjectViewSelection()</code></p>
-<h4 id="application-application-description_38">Description<a class="headerlink" href="#application-application-description_38" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_39">Description<a class="headerlink" href="#application-application-description_39" title="Permanent link">&para;</a></h4>
 <p>Returns an array of <a href="#item-projectitem">ProjectItems</a> selected, in the current active project view.</p>
 <h4 id="application-application-parameters_17">Parameters<a class="headerlink" href="#application-application-parameters_17" title="Permanent link">&para;</a></h4>
 <p>None.</p>
 <h4 id="application-application-returns_17">Returns<a class="headerlink" href="#application-application-returns_17" title="Permanent link">&para;</a></h4>
 <p>An array of <a href="#item-projectitem">ProjectItems</a>; can be null.</p>
-<h4 id="application-application-example_16">Example<a class="headerlink" href="#application-application-example_16" title="Permanent link">&para;</a></h4>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-17-1"><span class="kd">var</span><span class="w"> </span><span class="nx">selectedItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">getCurrentProjectViewSelection</span><span class="p">();</span>
-</span><span id="__span-17-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">selectedItems</span><span class="p">){</span>
-</span><span id="__span-17-3"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">selectedItems</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
-</span><span id="__span-17-4"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
-</span><span id="__span-17-5"><span class="w">    </span><span class="c1">// No projectItems selected.</span>
-</span><span id="__span-17-6"><span class="p">}</span>
+<h4 id="application-application-example_17">Example<a class="headerlink" href="#application-application-example_17" title="Permanent link">&para;</a></h4>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-18-1"><span class="kd">var</span><span class="w"> </span><span class="nx">selectedItems</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">app</span><span class="p">.</span><span class="nx">getCurrentProjectViewSelection</span><span class="p">();</span>
+</span><span id="__span-18-2"><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="nx">selectedItems</span><span class="p">){</span>
+</span><span id="__span-18-3"><span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">firstOne</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">selectedItems</span><span class="p">[</span><span class="mf">0</span><span class="p">];</span>
+</span><span id="__span-18-4"><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-18-5"><span class="w">    </span><span class="c1">// No projectItems selected.</span>
+</span><span id="__span-18-6"><span class="p">}</span>
 </span></code></pre></div>
 <hr />
 <h3 id="application-application-appbroadcastprefschanged">app.broadcastPrefsChanged()<a class="headerlink" href="#application-application-appbroadcastprefschanged" title="Permanent link">&para;</a></h3>
 <p><code>app.broadcastPrefsChanged()</code></p>
-<h4 id="application-application-description_39">Description<a class="headerlink" href="#application-application-description_39" title="Permanent link">&para;</a></h4>
+<h4 id="application-application-description_40">Description<a class="headerlink" href="#application-application-description_40" title="Permanent link">&para;</a></h4>
 <p>Notifies Application that preferences have changed.</p>
 <h4 id="application-application-parameters_18">Parameters<a class="headerlink" href="#application-application-parameters_18" title="Permanent link">&para;</a></h4>
 <p>String ID of the preference that changed. (currently only listens to "BE::PreferencesScratchDisksChanged")</p>
 <h4 id="application-application-returns_18">Returns<a class="headerlink" href="#application-application-returns_18" title="Permanent link">&para;</a></h4>
 <p>Returns <code>true</code> if update was successful.</p>
-<h4 id="application-application-example_17">Example<a class="headerlink" href="#application-application-example_17" title="Permanent link">&para;</a></h4>
-<div class="language-js highlight"><pre><span></span><code><span id="__span-18-1"><span class="nx">app</span><span class="p">.</span><span class="nx">broadcastPrefsChanged</span><span class="p">(</span><span class="s2">"BE::PreferencesScratchDisksChanged"</span><span class="p">);</span>
+<h4 id="application-application-example_18">Example<a class="headerlink" href="#application-application-example_18" title="Permanent link">&para;</a></h4>
+<div class="language-js highlight"><pre><span></span><code><span id="__span-19-1"><span class="nx">app</span><span class="p">.</span><span class="nx">broadcastPrefsChanged</span><span class="p">(</span><span class="s2">"BE::PreferencesScratchDisksChanged"</span><span class="p">);</span>
 </span></code></pre></div></section></section>
                     <section class='print-page md-section' id='section-4' heading-number='4'>
                         <h1>General<a class='headerlink' href='#section-4' title='Permanent link'></a>
@@ -9526,10 +9551,10 @@ If no <code>mediaType</code> is passed, function gets the out point for all medi
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "/", "features": ["announce.dismiss", "content.action.edit", "content.action.view", "content.code.copy", "search.highlight", "search.suggest", "toc.follow"], "search": "../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7400e89.min.js"></script>
+      <script src="../assets/javascripts/bundle.a5f9d56c.min.js"></script>
       
         <script src="../js/print-site.js"></script>
       
